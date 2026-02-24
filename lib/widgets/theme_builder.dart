@@ -5,6 +5,7 @@ import 'package:dynamic_color/dynamic_color.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/utils/color_value.dart';
 
 class ThemeBuilder extends StatefulWidget {
@@ -92,8 +93,11 @@ class ThemeController extends State<ThemeBuilder> {
     return Provider(
       create: (_) => this,
       child: DynamicColorBuilder(
-        builder: (light, _) =>
-            widget.builder(context, themeMode, primaryColor ?? light?.primary),
+        builder: (_, __) => widget.builder(
+          context,
+          themeMode,
+          primaryColor ?? Color(AppSettings.colorSchemeSeedInt.value),
+        ),
       ),
     );
   }

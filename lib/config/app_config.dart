@@ -13,10 +13,10 @@ abstract class AppConfig {
   static const bool hideTypingUsernames = false;
 
   static const String inviteLinkPrefix = 'https://matrix.to/#/';
-  static const String deepLinkPrefix = 'im.fluffychat://chat/';
+  static const String deepLinkPrefix = 'de.jumikk.chat://chat/';
   static const String schemePrefix = 'matrix:';
   static const String pushNotificationsChannelId = 'fluffychat_push';
-  static const String pushNotificationsAppId = 'chat.fluffy.fluffychat';
+  static const String pushNotificationsAppId = 'de.jumikk.chat';
   static const double borderRadius = 18.0;
   static const double columnWidth = 360.0;
 
@@ -29,8 +29,8 @@ abstract class AppConfig {
       'https://fluffy.chat/faq/#how_do_i_find_other_users';
   static const String howDoIGetStickersTutorial =
       'https://fluffy.chat/faq/#how_do_i_get_stickers';
-  static const String appId = 'im.fluffychat.FluffyChat';
-  static const String appOpenUrlScheme = 'im.fluffychat';
+  static const String appId = 'de.jumikk.chat.JuMiKKChat';
+  static const String appOpenUrlScheme = 'de.jumikk.chat';
 
   static const String sourceCodeUrl =
       'https://github.com/krille-chan/fluffychat';
