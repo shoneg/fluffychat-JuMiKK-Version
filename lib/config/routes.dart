@@ -17,6 +17,7 @@ import 'package:fluffychat/pages/chat_members/chat_members.dart';
 import 'package:fluffychat/pages/chat_permissions_settings/chat_permissions_settings.dart';
 import 'package:fluffychat/pages/chat_search/chat_search_page.dart';
 import 'package:fluffychat/pages/device_settings/device_settings.dart';
+import 'package:fluffychat/pages/homeserver_picker/default_login_redirect.dart';
 import 'package:fluffychat/pages/homeserver_picker/homeserver_picker.dart';
 import 'package:fluffychat/pages/invitation_selection/invitation_selection.dart';
 import 'package:fluffychat/pages/login/login.dart';
@@ -69,17 +70,32 @@ abstract class AppRoutes {
       pageBuilder: (context, state) => defaultPageBuilder(
         context,
         state,
-        const HomeserverPicker(addMultiAccount: false),
+        const DefaultLoginRedirect(),
       ),
       redirect: loggedInRedirect,
       routes: [
         GoRoute(
-          path: 'login',
+          path: 'manual',
           pageBuilder: (context, state) => defaultPageBuilder(
             context,
             state,
-            Login(client: state.extra as Client),
+            const HomeserverPicker(addMultiAccount: false),
           ),
+          redirect: loggedInRedirect,
+        ),
+        GoRoute(
+          path: 'login',
+          pageBuilder: (context, state) {
+            final client = state.extra;
+            if (client is! Client) {
+              return defaultPageBuilder(
+                context,
+                state,
+                const HomeserverPicker(addMultiAccount: false),
+              );
+            }
+            return defaultPageBuilder(context, state, Login(client: client));
+          },
           redirect: loggedInRedirect,
         ),
       ],
