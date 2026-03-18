@@ -93,7 +93,7 @@ class ThemeController extends State<ThemeBuilder> {
     return Provider(
       create: (_) => this,
       child: DynamicColorBuilder(
-        builder: (_, __) => widget.builder(
+        builder: (_, _) => widget.builder(
           context,
           themeMode,
           primaryColor ?? Color(AppSettings.colorSchemeSeedInt.value),
