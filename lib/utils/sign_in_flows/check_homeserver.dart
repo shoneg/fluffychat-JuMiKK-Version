@@ -2,8 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
+import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/sign_in/view_model/model/public_homeserver_data.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
@@ -47,10 +49,10 @@ Future<void> connectToHomeserverFlow(
       if (consent != OkCancelResult.ok) return;
     }
 
-    if (authMetadata != null) {
+    if (authMetadata != null && AppSettings.enableMatrixNativeOIDC.value) {
       await oidcLoginFlow(client, context, signUp);
     } else if (supportsSso) {
-      await ssoLoginFlow(client, context, signUp);
+      await ssoLoginFlow(client, context, signUp, loginFlows);
     } else {
       if (signUp && regLink != null) {
         await launchUrlString(regLink);
@@ -65,10 +67,14 @@ Future<void> connectToHomeserverFlow(
       return;
     }
 
+    await AppSettings.defaultHomeserver.setItem(homeserverInput);
+
     if (context.mounted) {
       setState(AsyncSnapshot.withData(ConnectionState.done, true));
+      context.go('/backup');
     }
   } catch (e, s) {
+    Logs().w('Unable to login', e, s);
     setState(AsyncSnapshot.withError(ConnectionState.done, e, s));
     if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(

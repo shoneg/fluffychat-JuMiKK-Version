@@ -34,6 +34,8 @@ Future<void> showMemberActionsPopupMenu({
     Offset.zero & overlay.size,
   );
 
+  const defaultPowerLevels = {0, 50, 100, 9007199254740991};
+
   final action = await showMenu<_MemberActions>(
     context: context,
     position: position,
@@ -43,42 +45,18 @@ Future<void> showMemberActionsPopupMenu({
         child: Row(
           spacing: 12.0,
           children: [
-            Avatar(
-              name: displayname,
-              mxContent: user.avatarUrl,
-              presenceUserId: user.id,
-              presenceBackgroundColor: theme.colorScheme.surfaceContainer,
-            ),
-            Column(
-              mainAxisSize: .min,
-              crossAxisAlignment: .start,
-              children: [
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 128),
-                  child: Text(
-                    displayname,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.labelLarge,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 128),
-                  child: Text(
-                    user.id,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 10),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
+            Avatar(name: displayname, size: 30, mxContent: user.avatarUrl),
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 200),
+              child: Text(
+                displayname,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),
       ),
-      const PopupMenuDivider(),
       if (onMention != null)
         PopupMenuItem(
           value: _MemberActions.mention,
@@ -101,31 +79,71 @@ Future<void> showMemberActionsPopupMenu({
             ],
           ),
         ),
-      PopupMenuItem(
-        enabled: user.room.canChangePowerLevel && user.canChangeUserPowerLevel,
-        value: _MemberActions.setRole,
-        child: Row(
-          children: [
-            const Icon(Icons.admin_panel_settings_outlined),
-            const SizedBox(width: 18),
-            Column(
-              mainAxisSize: .min,
-              crossAxisAlignment: .start,
+      if (user.canChangeUserPowerLevel) ...[
+        if (user.powerLevel < 100)
+          PopupMenuItem(
+            value: _MemberActions.makeAdmin,
+            child: Row(
               children: [
-                Text(L10n.of(context).chatPermissions),
-                Text(
-                  user.powerLevel < 50
-                      ? L10n.of(context).userLevel(user.powerLevel)
-                      : user.powerLevel < 100
-                      ? L10n.of(context).moderatorLevel(user.powerLevel)
-                      : L10n.of(context).adminLevel(user.powerLevel),
-                  style: const TextStyle(fontSize: 10),
-                ),
+                const Icon(Icons.admin_panel_settings_outlined),
+                const SizedBox(width: 18),
+                Text(L10n.of(context).makeAdmin),
               ],
             ),
-          ],
+          ),
+        if (user.powerLevel < 50)
+          PopupMenuItem(
+            value: _MemberActions.makeModerator,
+            child: Row(
+              children: [
+                const Icon(Icons.add_moderator_outlined),
+                const SizedBox(width: 18),
+                Text(L10n.of(context).makeModerator),
+              ],
+            ),
+          ),
+        if (user.powerLevel >= 100)
+          PopupMenuItem(
+            value: _MemberActions.removeAdmin,
+            child: Row(
+              children: [
+                const Icon(Icons.remove_moderator_outlined),
+                const SizedBox(width: 18),
+                Text(L10n.of(context).removeAdminRights),
+              ],
+            ),
+          )
+        else if (user.powerLevel >= 50)
+          PopupMenuItem(
+            value: _MemberActions.removeModerator,
+            child: Row(
+              children: [
+                const Icon(Icons.remove_moderator_outlined),
+                const SizedBox(width: 18),
+                Text(L10n.of(context).removeModeratorRights),
+              ],
+            ),
+          ),
+      ],
+      if (user.canChangeUserPowerLevel ||
+          !defaultPowerLevels.contains(user.powerLevel))
+        PopupMenuItem(
+          value: _MemberActions.setPowerLevel,
+          enabled: user.canChangeUserPowerLevel,
+          child: Row(
+            children: [
+              const Icon(Icons.manage_accounts_outlined),
+              const SizedBox(width: 18),
+              Text(
+                user.canChangeUserPowerLevel
+                    ? L10n.of(context).setPowerLevel
+                    : L10n.of(context).powerLevel,
+              ),
+              if (!defaultPowerLevels.contains(user.powerLevel))
+                Text(' (${user.powerLevel})'),
+            ],
+          ),
         ),
-      ),
       if (user.canKick)
         PopupMenuItem(
           value: _MemberActions.kick,
@@ -197,7 +215,7 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.mention:
       onMention?.call();
       return;
-    case _MemberActions.setRole:
+    case _MemberActions.setPowerLevel:
       final power = await showPermissionChooser(
         context,
         currentLevel: user.powerLevel,
@@ -298,13 +316,48 @@ Future<void> showMemberActionsPopupMenu({
           future: () => user.unban(),
         );
       }
+    case _MemberActions.makeAdmin:
+      if (user.room.ownPowerLevel <= 100) {
+        final consent = await showOkCancelAlertDialog(
+          context: context,
+          title: L10n.of(context).areYouSure,
+          message: L10n.of(context).makeAdminDescription,
+        );
+        if (consent != OkCancelResult.ok) return;
+        if (!context.mounted) return;
+      }
+      await showFutureLoadingDialog(
+        context: context,
+        future: () => user.setPower(100),
+      );
+    case _MemberActions.makeModerator:
+      await showFutureLoadingDialog(
+        context: context,
+        future: () => user.setPower(50),
+      );
+    case _MemberActions.removeAdmin:
+    case _MemberActions.removeModerator:
+      final defaultUserLevel =
+          user.room
+              .getState(EventTypes.RoomPowerLevels)
+              ?.content
+              .tryGet<int>('users_default') ??
+          0;
+      await showFutureLoadingDialog(
+        context: context,
+        future: () => user.setPower(defaultUserLevel),
+      );
   }
 }
 
 enum _MemberActions {
   info,
   mention,
-  setRole,
+  setPowerLevel,
+  makeAdmin,
+  makeModerator,
+  removeAdmin,
+  removeModerator,
   kick,
   ban,
   approve,

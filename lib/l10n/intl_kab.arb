@@ -2,10 +2,7 @@
     "@@locale": "kab",
     "repeatPassword": "Ales awal n uɛeddi",
     "notAnImage": "Mačči d afaylu n tugna.",
-    "setCustomPermissionLevel": "Sbadu aswir yugnen n usireg",
     "ignoreUser": "Zgel aseqdac",
-    "setPermissionsLevelDescription": "Ma ulac aɣilif fren tamlilt i yettusbadun ddaw-a neɣ sekcem aswir n usireg yugnen gar 0 akked 100.",
-    "normalUser": "Aseqdac amagnu",
     "remove": "Kkes",
     "@remove": {
         "type": "String",
@@ -69,7 +66,6 @@
             }
         }
     },
-    "addChatDescription": "Rnu aglam n udiwenni...",
     "addToSpace": "Rnu ɣer tallunt",
     "admin": "Anedbal",
     "@admin": {
@@ -179,11 +175,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "botMessages": "Iznan n iṛubuten",
-    "@botMessages": {
-        "type": "String",
-        "placeholders": {}
-    },
     "cancel": "Sefsex",
     "@cancel": {
         "type": "String",
@@ -280,7 +271,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "chatHasBeenAddedToThisSpace": "Adiwenni yettwarna ɣer tallunt-agi",
     "chats": "Idiwenniyen",
     "@chats": {
         "type": "String",
@@ -396,33 +386,6 @@
             }
         }
     },
-    "dateWithoutYear": "{day}-{month}",
-    "@dateWithoutYear": {
-        "type": "String",
-        "placeholders": {
-            "month": {
-                "type": "String"
-            },
-            "day": {
-                "type": "String"
-            }
-        }
-    },
-    "dateWithYear": "{day}-{month}-{year}",
-    "@dateWithYear": {
-        "type": "String",
-        "placeholders": {
-            "year": {
-                "type": "String"
-            },
-            "month": {
-                "type": "String"
-            },
-            "day": {
-                "type": "String"
-            }
-        }
-    },
     "deactivateAccountWarning": "Ayagi ad yekkes armed i umiḍan-ik·im n useqdac. Aya ur yezmir ara ad yettwasefsex. Tetḥeqqeḍ s tidet?",
     "@deactivateAccountWarning": {
         "type": "String",
@@ -465,11 +428,6 @@
     },
     "directChats": "Idiwenniyen Usriden",
     "@directChats": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "allRooms": "Akk Igrawen Usriden",
-    "@allRooms": {
         "type": "String",
         "placeholders": {}
     },
@@ -524,11 +482,6 @@
         "placeholders": {}
     },
     "homeserver": "Aqeddac agejdan",
-    "enterYourHomeserver": "Sekcem Aqeddac-ik·im agejdan",
-    "@enterYourHomeserver": {
-        "type": "String",
-        "placeholders": {}
-    },
     "errorObtainingLocation": "Tuccḍa deg wawway n yideg: {error}",
     "@errorObtainingLocation": {
         "type": "String",
@@ -570,11 +523,6 @@
     },
     "fromTheInvitation": "Seg tinubga",
     "@fromTheInvitation": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "goToTheNewRoom": "Ddu ɣer texxamt tamaynut",
-    "@goToTheNewRoom": {
         "type": "String",
         "placeholders": {}
     },
@@ -627,11 +575,6 @@
     },
     "invitedUsersOnly": "Iseqdacen kan yettwaɛerḍen",
     "@invitedUsersOnly": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inviteForMe": "Snubget i nekk",
-    "@inviteForMe": {
         "type": "String",
         "placeholders": {}
     },
@@ -702,11 +645,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "license": "Turagt",
-    "@license": {
-        "type": "String",
-        "placeholders": {}
-    },
     "lightTheme": "Aceɛlal",
     "@lightTheme": {
         "type": "String",
@@ -723,10 +661,6 @@
     },
     "dehydrate": "Sifeḍ tiɣimit akked usfaḍ n yibenk",
     "dehydrateWarning": "Tigawt-agi ur tezmir ara ad tettwasefsex. Tḥeqqeq belli tesseklaseḍ afaylu n weḥraz.",
-    "dehydrateTor": "Iseqdacen TOR: Sifeḍ tiɣimit",
-    "dehydrateTorLong": "I iseqdacen TOR, yettusemter ad tsifeḍ tɣimit send ad tmedleḍ asfaylu.",
-    "hydrateTor": "Iseqdacen TOR: Akter n tɣimit usifeḍ",
-    "hydrateTorLong": "Tsifḍeḍ tiɣimit-ik·im taneggarut deg TOR? kter-it-id s wudem arurad u kemmel adiwenni.",
     "hydrate": "Err-d seg ufaylu n weḥraz",
     "loadingPleaseWait": "Asali... Ttxil-k·m arǧu.",
     "@loadingPleaseWait": {
@@ -871,11 +805,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "memberChanges": "Ibeddilen n iɛeggalen",
-    "@memberChanges": {
-        "type": "String",
-        "placeholders": {}
-    },
     "mention": "Abdar",
     "@mention": {
         "type": "String",
@@ -975,11 +904,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "notificationsEnabledForThisAccount": "Ilɣa remden i umiḍan-agi",
-    "@notificationsEnabledForThisAccount": {
-        "type": "String",
-        "placeholders": {}
-    },
     "numUsersTyping": "{count} n iseqdacen la yettarun…",
     "@numUsersTyping": {
         "type": "String",
@@ -1036,17 +960,10 @@
         "type": "String",
         "placeholders": {}
     },
-    "hideMemberChangesInPublicChats": "Ffer isenfal n iɛeggalen deg udiwenni azayez",
     "overview": "Taskant",
-    "notifyMeFor": "Seɛlem-iyi-d ɣef",
     "passwordRecoverySettings": "Iɣewwaṛen n tririt n wawal n uɛeddi",
     "passwordRecovery": "Tiririt n wawal n uɛeddi",
     "@passwordRecovery": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "people": "Imdanen",
-    "@people": {
         "type": "String",
         "placeholders": {}
     },
@@ -1063,11 +980,6 @@
                 "type": "String"
             }
         }
-    },
-    "pleaseChoose": "Ttxil-k·m fren",
-    "@pleaseChoose": {
-        "type": "String",
-        "placeholders": {}
     },
     "pleaseChooseAPasscode": "Ttxil-k·m fren tangalt n uɛeddi",
     "@pleaseChooseAPasscode": {
@@ -1204,11 +1116,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "wallpaper": "Tugna n ugdil:",
-    "@wallpaper": {
-        "type": "String",
-        "placeholders": {}
-    },
     "warning": "Ɣur-k·m!",
     "@warning": {
         "type": "String",
@@ -1280,18 +1187,7 @@
     "sender": "Amazan",
     "openGallery": "Ldi timidelt",
     "removeFromSpace": "Kkes seg tallunt",
-    "addToSpaceDescription": "Fren tallunt akken ad ternuḍ adiwenni-a.",
     "start": "Senker",
-    "publish": "Suffeɣ-d",
-    "videoWithSize": "Avidyu ({size})",
-    "@videoWithSize": {
-        "type": "String",
-        "placeholders": {
-            "size": {
-                "type": "String"
-            }
-        }
-    },
     "openChat": "Ldi Adiwenni",
     "markAsRead": "Creḍ amzun yettwaɣṛa",
     "reportUser": "Cetki aseqdac",
@@ -1327,11 +1223,6 @@
             }
         }
     },
-    "removeDevice": "Kkes ibenk",
-    "@removeDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
     "unbanFromChat": "Kkes agdal seg udiwenni",
     "@unbanFromChat": {
         "type": "String",
@@ -1352,28 +1243,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "confirm": "Sentem",
-    "@confirm": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "connect": "Qqen",
-    "@connect": {
-        "type": "String",
-        "placeholders": {}
-    },
     "contactHasBeenInvitedToTheGroup": "Anermis yettwaɛreḍ ɣer ugraw",
     "@contactHasBeenInvitedToTheGroup": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "containsDisplayName": "Igber askan n yisem",
-    "@containsDisplayName": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "containsUserName": "Igber isem n useqdac",
-    "@containsUserName": {
         "type": "String",
         "placeholders": {}
     },
@@ -1402,7 +1273,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "inviteContactToGroupQuestion": "Tebɣiḍ ad d-ɛerḍeḍ {contact} ɣer udiwenni \"{groupName}\"?",
     "inviteContactToGroup": "Snubg anermis ɣer {groupName}",
     "@inviteContactToGroup": {
         "type": "String",
@@ -1432,11 +1302,6 @@
     },
     "id": "Asulay",
     "@id": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "identity": "Tamagit",
-    "@identity": {
         "type": "String",
         "placeholders": {}
     },
@@ -1502,21 +1367,12 @@
         "type": "String",
         "placeholders": {}
     },
-    "openVideoCamera": "Ldi takamiṛat i tvidyut",
-    "@openVideoCamera": {
-        "type": "String",
-        "placeholders": {}
-    },
     "moreEvents": "Ugar n ineḍruyen",
     "declineInvitation": "Agi tinnubga",
     "noMessagesYet": "Ulac iznan akka tura",
     "longPressToRecordVoiceMessage": "Asiti aɣezzfan i usekles n yizen n taɣect.",
     "pause": "Serǧu",
     "resume": "Kemmel",
-    "newSubSpace": "Tallunt tanaddawt tamaynut",
-    "moveToDifferentSpace": "Smutti ɣer tallunt yemgaraden",
-    "moveUp": "Ddu d asawen",
-    "moveDown": "Ddu d akessar",
     "removeFromSpaceDescription": "Adiwenni ad yettwakkes seg tallunt maca mazal ad yettban deg tebdart-ik·im n udiwenni.",
     "countChats": "{chats} idiwenniyen",
     "@countChats": {
@@ -1536,7 +1392,6 @@
             }
         }
     },
-    "donate": "Mudd tawsa",
     "startedAPoll": "{username}yessenker tafrent.",
     "@startedAPoll": {
         "type": "String",
@@ -1550,7 +1405,6 @@
     "startPoll": "Senker tafrent",
     "endPoll": "Eg taggara n tafrent",
     "answersVisible": "Tiririyin yettbanen",
-    "answersHidden": "Tiririyin yeffren",
     "pollQuestion": "Isteqsiyen n tefrent",
     "answerOption": "tanefrunt n tririt",
     "addAnswerOption": "Rnu tanefrunt n tririt",
@@ -1639,37 +1493,8 @@
     },
     "sendTypingNotifications": "Azen alɣu ttaruɣ",
     "swipeRightToLeftToReply": "Zuɣer seg uyeffus ɣer uzelmaḍ akken ad d-terreḍ",
-    "badServerVersionsException": "Aqeddac agejdan issefrak ileqman Spec:\n{serverVersions}\nMaca asnas-agi issefrak kan {supportedVersions}",
-    "@badServerVersionsException": {
-        "type": "String",
-        "placeholders": {
-            "serverVersions": {
-                "type": "String"
-            },
-            "supportedVersions": {
-                "type": "String"
-            }
-        }
-    },
-    "countChatsAndCountParticipants": "{chats} n yidiwenniyen akked {participants} n yimttekkiyen",
-    "@countChatsAndCountParticipants": {
-        "type": "String",
-        "placeholders": {
-            "chats": {
-                "type": "int"
-            },
-            "participants": {
-                "type": "int"
-            }
-        }
-    },
     "noMoreChatsFound": "Ulac ugar n idiwenniyen yettwafen…",
     "noChatsFoundHere": "Ur d-nufi ula d yiwen n udiwenni da. Bdu adiwenni akked yiwen s useqdec n tqeffalt ukessar-a. ⤵️",
-    "joinedChats": "Yettwarna ɣer udiwenni",
-    "widgetName": "Isem",
-    "widgetUrlError": "Wagi mačči d URL ameɣtu.",
-    "widgetNameError": "Ttxil-k·m sekcem isem n uskan.",
-    "errorAddingWidget": "Tuccḍa deg tmerna n uwiǧit.",
     "youRejectedTheInvitation": "Tugiḍ tinnubga",
     "youJoinedTheChat": "Tekcemeḍ ɣer udiwenni",
     "youAcceptedTheInvitation": "👍 Tqebleḍ tinubga",
@@ -1685,14 +1510,6 @@
     "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {
-                "type": "String"
-            }
-        }
-    },
-    "youInvitedToBy": "📩 Tettwaɛerḍeḍ s useɣwen ɣer:\n{alias}",
-    "@youInvitedToBy": {
-        "placeholders": {
-            "alias": {
                 "type": "String"
             }
         }
@@ -1755,15 +1572,6 @@
     },
     "usersMustKnock": "Iseqdacen yessefk ad sṭebṭben",
     "noOneCanJoin": "Yiwen ur yezmir ad d-yernu",
-    "userWouldLikeToChangeTheChat": "{user} yebɣa ad yettekki deg udiwenni.",
-    "@userWouldLikeToChangeTheChat": {
-        "placeholders": {
-            "user": {
-                "type": "String"
-            }
-        }
-    },
-    "noPublicLinkHasBeenCreatedYet": "Werɛad ur d-yennulfa ula d yiwen n wassaɣ azayez",
     "users": "Iseqdacen",
     "unlockOldMessages": "Kkes asekkeṛ i yiznan iqbuṛen",
     "storeInSecureStorageDescription": "Ḥrez tasarut n tririt deg usekles aɣelsan n yibenk-a.",
@@ -1784,10 +1592,590 @@
     "foregroundServiceRunning": "Alɣu-agi yettban-d ticki ameẓlu n uɣawas amezwaru iteddu.",
     "screenSharingTitle": "beṭṭu n ugdil",
     "screenSharingDetail": "Tbeṭṭuḍ agdil-ik·im deg FluffyChat",
-    "callingPermissions": "Tisirag n usiwel",
-    "callingAccount": "amiḍan n usiwel",
-    "callingAccountDetails": "Sireg FluffyChat ad iseqdec asnas aneṣli n Android i usɛeddi n usiwel.",
-    "appearOnTop": "Sbeqeḍ deg uksawen",
-    "otherCallingPermissions": "Tisirag n umikrufun, takamiṛat akked tiyaḍ n FluffyChat",
-    "whyIsThisMessageEncrypted": "Acuɣer izen-agi ur yettwaɣri ara?"
+    "whyIsThisMessageEncrypted": "Acuɣer izen-agi ur yettwaɣri ara?",
+    "recoveryKeyLost": "Tasarut n tririt teɛreq?",
+    "send": "Azen",
+    "@send": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendAMessage": "Azen izen",
+    "@sendAMessage": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendAsText": "Azen am uḍris",
+    "@sendAsText": {
+        "type": "String"
+    },
+    "sendAudio": "Azen ameslaw",
+    "@sendAudio": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendFile": "Azen afaylu",
+    "@sendFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendImage": "Azen tugna",
+    "@sendImage": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendImages": "Azen {count} n tugna(iwin)",
+    "@sendImages": {
+        "type": "String",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "sendMessages": "Azen iznan",
+    "@sendMessages": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sendVideo": "Azen avidyu",
+    "@sendVideo": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sentAFile": "📁 {username} yuzen afaylu",
+    "@sentAFile": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "sentAnAudio": "🎤 {username} yuzen ameslaw",
+    "@sentAnAudio": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "sentAPicture": "🖼️ {username} yuzen tugna",
+    "@sentAPicture": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "sentASticker": "😊 {username} yuzen ticṛeṭ n tesfift",
+    "@sentASticker": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "sentAVideo": "🎥 {username} yuzen tavidyut",
+    "@sentAVideo": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "sentCallInformations": "{senderName} yuzen talɣut n usiwel",
+    "@sentCallInformations": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    "setAsCanonicalAlias": "Sbadu-t d tazaẓlut tagejdant",
+    "@setAsCanonicalAlias": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "noOtherDevicesFound": "Ulac ibenkan nniḍen yettwafen",
+    "fileIsTooBigForServer": "Ur izmir ara ad yazen! Aqeddac yessefrak kan ifuyla imeddayen almi ɣer {max}.",
+    "@fileIsTooBigForServer": {
+        "type": "String",
+        "placeholders": {
+            "max": {
+                "type": "String"
+            }
+        }
+    },
+    "fileHasBeenSavedAt": "Afaylu yettwasekles deg {path}",
+    "@fileHasBeenSavedAt": {
+        "type": "String",
+        "placeholders": {
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "jumpToLastReadMessage": "Ddu ɣer yizen aneggaru yettwaɣen",
+    "readUpToHere": "Ɣeṛ dagi",
+    "jump": "Neggez",
+    "openLinkInBrowser": "Ldi aseɣwen deg yiminig",
+    "reportErrorDescription": "😭 Uhu. Yella kra n wugur ay yellan. Ma tebɣiḍ, tzemreḍ ad tazneḍ aneqqis-a i yineflayen.",
+    "report": "aneqqis",
+    "setColorTheme": "Sbadu asentel n yini:",
+    "invite": "Snubget",
+    "inviteGroupChat": "📨Snubget ɣer udiwenni n ugraw",
+    "invalidInput": "Anekcam d armeɣtu!",
+    "wrongPinEntered": "Tettwasekcem tangalt PIN d armeɣtut! Ɛreḍ tikkelt nniḍen deg {seconds} n tasinin…",
+    "@wrongPinEntered": {
+        "type": "String",
+        "placeholders": {
+            "seconds": {
+                "type": "int"
+            }
+        }
+    },
+    "pleaseEnterANumber": "Ma ulac aɣilif sekcem amḍan yugaren 0",
+    "unknownEncryptionAlgorithm": "Alguritm n uwgelhen d arussin",
+    "@unknownEncryptionAlgorithm": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unknownEvent": "Tadyant tarussint '{type}'",
+    "@unknownEvent": {
+        "type": "String",
+        "placeholders": {
+            "type": {
+                "type": "String"
+            }
+        }
+    },
+    "unmuteChat": "Kkes asgugem i udiwenni",
+    "@unmuteChat": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unsupportedAndroidVersion": "Lqem Android ur yettwasefrak ara",
+    "unsupportedAndroidVersionLong": "Tamahilt-a tesra lqem Android tamaynut. Ttxil-k·m senqed ileqman neɣ asefrak n Lineage OS.",
+    "status": "Addad",
+    "@status": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "statusExampleMessage": "Amek telliḍ ass-a?",
+    "@statusExampleMessage": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "submit": "Ceyyeɛ",
+    "@submit": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "synchronizingPleaseWait": "Amtawi... Ttxil-k·m arǧu.",
+    "@synchronizingPleaseWait": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "synchronizingPleaseWaitCounter": " Amtawi… ({percentage}%)",
+    "@synchronizingPleaseWaitCounter": {
+        "type": "String",
+        "placeholders": {
+            "percentage": {
+                "type": "String"
+            }
+        }
+    },
+    "systemTheme": "Anagraw",
+    "@systemTheme": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "theyDontMatch": "Ur mṣadan ara",
+    "@theyDontMatch": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "theyMatch": "mṣadan",
+    "@theyMatch": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "title": "FluffyChat",
+    "@title": {
+        "description": "Title for the application",
+        "type": "String",
+        "placeholders": {}
+    },
+    "tooManyRequestsWarning": "Deqs n tuttriwin. Ttxil-k·m, ɛreḍ tikelt nniḍen ticki!",
+    "@tooManyRequestsWarning": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "transferFromAnotherDevice": "Asiweḍ seg yibenk nniḍen",
+    "@transferFromAnotherDevice": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "tryToSendAgain": "Ɛreḍ ad tazneḍ tikkelt nniḍen",
+    "@tryToSendAgain": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unavailable": "Ur yewjid ara",
+    "@unavailable": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unbannedUser": "{username} yekkes agdek n {targetName}",
+    "@unbannedUser": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "targetName": {
+                "type": "String"
+            }
+        }
+    },
+    "unblockDevice": "Kkes asewḥel n yibenk",
+    "@unblockDevice": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unknownDevice": "Ibenk arussin",
+    "@unknownDevice": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "skip": "Zgel",
+    "@skip": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "sourceCode": "Tangalt taɣbalutt",
+    "@sourceCode": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "spaceIsPublic": "Tallunt d tazayezt",
+    "@spaceIsPublic": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "spaceName": "Isem n tallunt",
+    "@spaceName": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "startedACall": "{senderName} yebda-d asiwel",
+    "@startedACall": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    "pleaseEnterRecoveryKeyDescription": "Akken ad tekkseḍ asekkeṛ i yiznan-ik·im iqburen, ttxil-k·m sekcem tasarut n tririt i d-yenulfan di tɣimit tuzwirt. Tasarut-ik·im n tririt UR TELLI ARA d awal-ik·im n uɛeddi.",
+    "experimentalVideoCalls": "Isawalen uvidya s wudem armitan",
+    "newGroup": "Agraw amaynut",
+    "newSpace": "Tallunt tamaynut",
+    "allSpaces": "Akk tallunin",
+    "verifiedDevicesOnly": "Ibenkan yettwasneqden kan",
+    "optionalMessage": "(D afrayan) izen…",
+    "notSupportedOnThisDevice": "Ur itteddu ara deg yibenk-agi",
+    "approve": "Sqbel",
+    "enterNewChat": "Sekcem adiwenni amaynut",
+    "pleaseWaitUntilInvited": "Ttxil-k·m, rǧu arma yeɛreḍ-ik-id yiwen seg texxamt.",
+    "commandHint_logout": "Senser seg yibenk-ik·im amiran",
+    "commandHint_logoutall": "Senser akk ibenkan urmiden",
+    "displayNavigationRail": "Sken afeggag n yinig deg uziraz",
+    "customReaction": "Tasedmirt yugnen",
+    "backToMainChat": "Uɣal ɣer udiwenni agejdan",
+    "createSticker": "Snulfu-d ticṛeṭ n tesfift neɣ imujiten",
+    "useAsSticker": "Seqdec am tcṛeṭ n tesfift",
+    "useAsEmoji": "Seqdec am imujit",
+    "stickerPackNameAlreadyExists": "Isem ukemmus n tcṛeṭ n tesfift yella yakan",
+    "newStickerPack": "Akemmus n tcṛeṭ n tesfift",
+    "stickerPackName": "Isem ukemmus n tcṛeṭ n tesfift",
+    "skipChatBackup": "Zgel aḥraz n udiwenni",
+    "skipChatBackupWarning": "tetḥeqqeḍ? S war armad n weḥraz n udiwenni, tzemreḍ ad tesruḥeḍ anekcum ɣer yiznan-ik·im ma tbeddeleḍ ibenk-ik·im.",
+    "loadingMessages": "Asali n yiznan",
+    "setupChatBackup": "Sbadu aḥraz n udiwenni",
+    "noMoreResultsFound": "Ulac ugar n igmaḍ yettwafen",
+    "clientWellKnownInformation": "Talɣut yettwasnen ɣef umsaɣ:",
+    "advancedConfigs": "Tawila leqqayen",
+    "advancedConfigurations": "Tawila tinaẓiyin",
+    "signUpGreeting": "FluffyChat d araslemmes! Fren aqeddac anda tebɣiḍ ad ternuḍ amiḍan-ik·im, u yyaw ad neddu!",
+    "signInGreeting": "Tesɛiḍ yakan amiḍan deg Matriks? Anṣuf yes-k·m tikkelt niḍen! Fren aqeddac-ik·im, u tkecmeḍ.",
+    "theProcessWasCanceled": "Tettwasefsex ukala-nni.",
+    "searchOrEnterHomeserverAddress": "Nadi neɣ sekcem tansa n uqeddac agejdan",
+    "setPowerLevel": "Sbadu aswir n tezmert",
+    "removeAdminRights": "Kkes izerfan n unedbal",
+    "powerLevel": "Aswir n tezmert",
+    "help": "Tallelt",
+    "@help": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "privacy": "Tabaḍnit",
+    "@privacy": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "reason": "Taɣẓint",
+    "@reason": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "recording": "Asekles",
+    "@recording": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "register": "Jerred",
+    "@register": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "reject": "Aggi",
+    "@reject": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "search": "Nadi",
+    "@search": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "security": "Taɣellist",
+    "@security": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "settings": "Iɣewwaren",
+    "@settings": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "share": "Bḍu",
+    "@share": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unpin": "Kkes anṭaḍ",
+    "@unpin": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "knock": "Sqeṛbeb",
+    "knocking": "Sqeṛbeb",
+    "select": "Fren",
+    "gallery": "Timidelt",
+    "files": "Ifuyla",
+    "transparent": "Afrawan",
+    "discover": "Snirem",
+    "changelog": "Aɣmis n ibeddilen",
+    "notificationRuleCall": "Asiwel",
+    "notificationRuleMessage": "Izen",
+    "notificationRuleEncrypted": "Yettwawgelhen",
+    "notificationRuleJitsi": "Jitsi",
+    "more": "Ugar",
+    "logs": "Iɣmisen",
+    "join": "Ttekki",
+    "owner": "Amli",
+    "changePassword": "Asnifel n wawal n uɛeddi",
+    "@changePassword": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "commandHint_send": "Azen aḍris",
+    "@commandHint_send": {
+        "type": "String",
+        "description": "Usage hint for the command /send"
+    },
+    "addAccount": "Rnu amiḍan",
+    "directChat": "Adiwenni usrid",
+    "redactMessage": "Kkes izen",
+    "@redactMessage": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "requestPermission": "Suter tasiregt",
+    "@requestPermission": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "saveFile": "Sekles afaylu",
+    "@saveFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "recoveryKey": "Tasarut n tririt",
+    "setStatus": "Sbadu addad",
+    "@setStatus": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "shareLocation": "Bḍu adig",
+    "@shareLocation": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "showPassword": "Sken-d awal n uɛeddi",
+    "@showPassword": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "deviceKeys": "Tisura n yibenk:",
+    "learnMore": "Issin ugar",
+    "groupName": "Isem n ugraw",
+    "newPassword": "Awal n uɛeddi amaynut",
+    "thisDevice": "Ibenk-a:",
+    "searchMore": "Nadi ugar…",
+    "allDevices": "Akk ibenkan",
+    "saveChanges": "Sekles ibeddilen",
+    "baseUrl": "URL n taffa",
+    "identityServer": "Aseqdac n tmagit:",
+    "versionWithNumber": "Lqem: {version}",
+    "@versionWithNumber": {
+        "type": "String",
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "signIn": "Qqen",
+    "matrixId": "Asulay ID Matrix",
+    "makeAdmin": "Err-it d anedbal",
+    "openInMaps": "Ldi-t deg maps",
+    "@openInMaps": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "encryptThisChat": "Wgelhen adiwenni-a",
+    "searchForUsers": "Nadi iseqdacen…",
+    "createNewAddress": "Snulfu-d tansa tamaynut",
+    "adminLevel": "{level} - Tadbelt",
+    "@adminLevel": {
+        "type": "String",
+        "placeholders": {
+            "level": {
+                "type": "int"
+            }
+        }
+    },
+    "loginWithMatrixId": "Tuqqna s usulay ID n Matrix",
+    "calculatingFileSize": "Asiḍen n tiddi n ufaylu...",
+    "shareKeysWith": "Bḍu tisura akked…",
+    "takeAPhoto": "Ṭṭef tawlaft",
+    "recordAVideo": "Sekles tavidyut",
+    "createNewAccount": "Snulfu-d amiḍan amaynut",
+    "pleaseEnterYourPassword": "Ma ulac aɣilif, sekcem-d awal-ik n uɛeddi",
+    "@pleaseEnterYourPassword": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "doNotShowAgain": "Ur t-id-sskan ara tikkelt nniḍen",
+    "passwordsDoNotMatch": "Awalen n uɛeddi mgarraden",
+    "searchIn": "Nadi deg udiwenni \"{chat}\"...",
+    "@searchIn": {
+        "type": "String",
+        "placeholders": {
+            "chat": {
+                "type": "String"
+            }
+        }
+    },
+    "enableMultiAccounts": "(armitan) Rmed aget n yimiḍanen deg yibenk-agi",
+    "pleaseEnter4Digits": "Ttxil-k·m sekcem 4 n wuṭṭunen neɣ eǧǧ-it d ilem akken ad tsenseḍ asekkeṛ n usnas.",
+    "@pleaseEnter4Digits": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "pleaseEnterYourPin": "Ttxil-k·m sekcem tangalt-ik·im pin",
+    "@pleaseEnterYourPin": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "pleaseEnterYourUsername": "Ma ulac aɣilif sekcem isem n useqdac",
+    "@pleaseEnterYourUsername": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "pleaseFollowInstructionsOnWeb": "Ma ulac aɣilif, ḍfeṛ iwellihen n usmel web sakin sit ɣef uḍfir.",
+    "@pleaseFollowInstructionsOnWeb": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "publicRooms": "Tixxamin tizuyaz",
+    "@publicRooms": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "rejectedTheInvitation": "{username} yugi tinnubga-nni",
+    "@rejectedTheInvitation": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "reportMessage": "Mmel-d izen",
+    "@reportMessage": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "roomHasBeenUpgraded": "Taxxamt tettwaleqqem",
+    "@roomHasBeenUpgraded": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "roomVersion": "Lqem n texxamt",
+    "@roomVersion": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "setChatDescription": "Sbadu aglam n udiwenni",
+    "sharedTheLocation": "{username} yebḍa adig-is",
+    "@sharedTheLocation": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "compressVideo": "Asekkussem n tvidyut...",
+    "sendingAttachmentCountOfCount": "Tuzna umedday {index} n {length}…",
+    "@sendingAttachmentCountOfCount": {
+        "type": "integer",
+        "placeholders": {
+            "index": {
+                "type": "int"
+            },
+            "length": {
+                "type": "int"
+            }
+        }
+    },
+    "welcomeText": "Azul Azul 👋 Wa d FluffyChat. Tzemreḍ ad tkecmeḍ ɣer uqeddac agejdan, yellan yemsaḍa akked https://matrix.org. Dɣa meslay d win tebɣiḍ, d aẓeṭṭa n udiwenni araslemmas amuqṛan!",
+    "notificationRuleRoomnotif": "Alɣu n texxamt",
+    "notificationRuleRoomnotifDescription": "Azen alɣu i useqdec mi ara yelli yizen yegber '@room'.",
+    "notificationRuleTombstoneDescription": "Azen alɣu i useqdec ɣef yiznan n usens n texxamt.",
+    "notificationRuleReaction": "Tasedmirt",
+    "notificationRuleReactionDescription": "Kkes ilɣa i tsedmirin.",
+    "notificationRuleSuppressEdits": "Kkes Asiẓreg",
+    "notificationRuleSuppressEditsDescription": "Kkes ilɣa i yeznan yettwaẓergen.",
+    "notificationRuleCallDescription": "Azen alɣu i useqdac ɣef isawalen.",
+    "notificationRuleEncryptedRoomOneToOne": "Taxxamt yettwawgelhen s wudem n yiwen ɣer yiwen",
+    "notificationRuleRoomOneToOne": "Taxxamt s wudem n yiwen ɣer yiwen"
 }

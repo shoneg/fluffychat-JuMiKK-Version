@@ -177,7 +177,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
   final onRoomKeyRequestSub = <String, StreamSubscription>{};
   final onKeyVerificationRequestSub = <String, StreamSubscription>{};
   final onNotification = <String, StreamSubscription>{};
-  final onLoginStateChanged = <String, StreamSubscription<LoginState>>{};
+  final onLogoutSub = <String, StreamSubscription<LoginState>>{};
   final onUiaRequest = <String, StreamSubscription<UiaRequest>>{};
 
   String? _cachedPassword;
@@ -255,31 +255,27 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
                 context,
           );
         });
-    onLoginStateChanged[name] ??= c.onLoginStateChanged.stream.listen((state) {
-      final loggedInWithMultipleClients = widget.clients.length > 1;
-      if (state == LoginState.loggedOut) {
-        _cancelSubs(c.clientName);
-        widget.clients.remove(c);
-        ClientManager.removeClientNameFromStore(c.clientName, store);
-        InitWithRestoreExtension.deleteSessionBackup(name);
-      }
-      if (loggedInWithMultipleClients && state != LoginState.loggedIn) {
-        ScaffoldMessenger.of(
-          FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
-              context,
-        ).showSnackBar(
-          SnackBar(content: Text(L10n.of(context).oneClientLoggedOut)),
-        );
+    onLogoutSub[name] ??= c.onLoginStateChanged.stream
+        .where((state) => state == LoginState.loggedOut)
+        .listen((_) {
+          final loggedInWithMultipleClients = widget.clients.length > 1;
 
-        if (state != LoginState.loggedIn) {
-          FluffyChatApp.router.go('/rooms');
-        }
-      } else {
-        FluffyChatApp.router.go(
-          state == LoginState.loggedIn ? '/backup' : '/home',
-        );
-      }
-    });
+          _cancelSubs(c.clientName);
+          widget.clients.remove(c);
+          ClientManager.removeClientNameFromStore(c.clientName, store);
+          InitWithRestoreExtension.deleteSessionBackup(name);
+
+          if (loggedInWithMultipleClients) {
+            ScaffoldMessenger.of(
+              FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
+                  context,
+            ).showSnackBar(
+              SnackBar(content: Text(L10n.of(context).oneClientLoggedOut)),
+            );
+            return;
+          }
+          FluffyChatApp.router.go('/');
+        });
     onUiaRequest[name] ??= c.onUiaRequest.stream.listen(uiaRequestHandler);
     if (PlatformInfos.isWeb || PlatformInfos.isLinux) {
       c.onSync.stream.first.then((s) {
@@ -296,8 +292,8 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
     onRoomKeyRequestSub.remove(name);
     onKeyVerificationRequestSub[name]?.cancel();
     onKeyVerificationRequestSub.remove(name);
-    onLoginStateChanged[name]?.cancel();
-    onLoginStateChanged.remove(name);
+    onLogoutSub[name]?.cancel();
+    onLogoutSub.remove(name);
     onNotification[name]?.cancel();
     onNotification.remove(name);
   }
@@ -343,7 +339,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
   }
 
   Future<void> createVoipPlugin() async {
-    if (AppSettings.experimentalVoip.value) {
+    if (!AppSettings.experimentalVoip.value) {
       voipPlugin = null;
       return;
     }
@@ -373,7 +369,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
 
     onRoomKeyRequestSub.values.map((s) => s.cancel());
     onKeyVerificationRequestSub.values.map((s) => s.cancel());
-    onLoginStateChanged.values.map((s) => s.cancel());
+    onLogoutSub.values.map((s) => s.cancel());
     onNotification.values.map((s) => s.cancel());
     client.httpClient.close();
 
