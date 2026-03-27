@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
+
 import 'settings_3pid_view.dart';
 
 class Settings3Pid extends StatefulWidget {
@@ -19,7 +18,7 @@ class Settings3Pid extends StatefulWidget {
 }
 
 class Settings3PidController extends State<Settings3Pid> {
-  void add3PidAction() async {
+  Future<void> add3PidAction() async {
     final input = await showTextInputDialog(
       useRootNavigator: false,
       context: context,
@@ -63,7 +62,7 @@ class Settings3PidController extends State<Settings3Pid> {
 
   Future<List<ThirdPartyIdentifier>?>? request;
 
-  void delete3Pid(ThirdPartyIdentifier identifier) async {
+  Future<void> delete3Pid(ThirdPartyIdentifier identifier) async {
     if (await showOkCancelAlertDialog(
           useRootNavigator: false,
           context: context,

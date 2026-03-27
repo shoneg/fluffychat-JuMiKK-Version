@@ -80,7 +80,7 @@ class _DefaultLoginRedirectState extends State<DefaultLoginRedirect> {
       setState(() {
         _error =
             '${l10n.noConnectionToTheServer}\n'
-            '${l10n.pleaseTryAgainLaterOrChooseDifferentServer}\n\n'
+            '${l10n.tryAgain}\n\n'
             '${e.toLocalizedString(context, ExceptionContext.checkHomeserver)}';
         _loading = false;
       });

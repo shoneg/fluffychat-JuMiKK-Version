@@ -1,13 +1,12 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/invitation_selection/invitation_selection_view.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
+
 import '../../utils/localized_exception_extension.dart';
 
 class InvitationSelection extends StatefulWidget {
@@ -50,7 +49,11 @@ class InvitationSelectionController extends State<InvitationSelection> {
     return contacts;
   }
 
-  void inviteAction(BuildContext context, String id, String displayname) async {
+  Future<void> inviteAction(
+    BuildContext context,
+    String id,
+    String displayname,
+  ) async {
     final room = Matrix.of(context).client.getRoomById(roomId!)!;
 
     final success = await showFutureLoadingDialog(
@@ -66,7 +69,7 @@ class InvitationSelectionController extends State<InvitationSelection> {
     }
   }
 
-  void searchUserWithCoolDown(String text) async {
+  void searchUserWithCoolDown(String text) {
     coolDown?.cancel();
     coolDown = Timer(
       const Duration(milliseconds: 500),
@@ -74,7 +77,7 @@ class InvitationSelectionController extends State<InvitationSelection> {
     );
   }
 
-  void searchUser(BuildContext context, String text) async {
+  Future<void> searchUser(BuildContext context, String text) async {
     coolDown?.cancel();
     if (text.isEmpty) {
       setState(() => foundProfiles = []);

@@ -1,19 +1,20 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-
-import 'package:go_router/go_router.dart';
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/events/poll.dart';
 import 'package:fluffychat/pages/chat/events/video_player.dart';
+import 'package:fluffychat/pages/image_viewer/image_viewer.dart';
 import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
 import 'package:fluffychat/utils/date_time_extension.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:matrix/encryption.dart';
+import 'package:matrix/matrix.dart';
+
 import '../../../config/app_config.dart';
 import '../../../utils/event_checkbox_extension.dart';
 import '../../../utils/platform_infos.dart';
@@ -33,6 +34,7 @@ class MessageContent extends StatelessWidget {
   final BorderRadius borderRadius;
   final Timeline timeline;
   final bool selected;
+  final Set<String> bigEmojis;
 
   const MessageContent(
     this.event, {
@@ -43,9 +45,10 @@ class MessageContent extends StatelessWidget {
     required this.linkColor,
     required this.borderRadius,
     required this.selected,
+    required this.bigEmojis,
   });
 
-  void _verifyOrRequestKey(BuildContext context) async {
+  Future<void> _verifyOrRequestKey(BuildContext context) async {
     final l10n = L10n.of(context);
     if (event.content['can_request_session'] != true) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -56,7 +59,8 @@ class MessageContent extends StatelessWidget {
       return;
     }
     final client = Matrix.of(context).client;
-    if (client.isUnknownSession && client.encryption!.crossSigning.enabled) {
+    final state = await client.getCryptoIdentityState();
+    if (!state.connected) {
       final success = await context.push('/backup');
       if (success != true) return;
     }
@@ -142,6 +146,14 @@ class MessageContent extends StatelessWidget {
               borderRadius: borderRadius,
               timeline: timeline,
               textColor: textColor,
+              onTap: () => showDialog(
+                context: context,
+                builder: (_) => ImageViewer(
+                  event,
+                  timeline: timeline,
+                  outerContext: context,
+                ),
+              ),
             );
           case CuteEventContent.eventType:
             return CuteContent(event);
@@ -196,7 +208,7 @@ class MessageContent extends StatelessWidget {
                   .split(';')
                   .first
                   .split(',')
-                  .map((s) => double.tryParse(s))
+                  .map(double.tryParse)
                   .toList();
               if (latlong.length == 2 &&
                   latlong.first != null &&
@@ -247,9 +259,8 @@ class MessageContent extends StatelessWidget {
             }
 
             final bigEmotes =
-                event.onlyEmotes &&
-                event.numberEmotes > 0 &&
-                event.numberEmotes <= 3;
+                !event.isRichMessage && bigEmojis.contains(event.body);
+
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: HtmlMessage(
