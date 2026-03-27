@@ -40,6 +40,33 @@ git branch custom/main main
 ./scripts/fork-mirror-upstream-tags.sh
 ```
 
+### L10n conflict strategy (recommended)
+
+To avoid losing upstream translation updates while keeping fork branding:
+
+1. Resolve ARB conflicts by preferring upstream and then reapplying branding:
+
+```bash
+./scripts/fork-resolve-l10n-conflicts.sh
+```
+
+2. If you only need to reapply branding later (without conflict resolution):
+
+```bash
+./scripts/fork-reapply-branding.sh
+```
+
+What these scripts do:
+
+- `fork-resolve-l10n-conflicts.sh`
+  - Finds conflicted `lib/l10n/*.arb` files
+  - Uses `git checkout --theirs` for those files
+  - Reapplies branding (`FluffyChat`/`Fluffy Chat` -> `JuMiKK-Chat`) in values
+  - Stages the resolved files
+- `fork-reapply-branding.sh`
+  - Reapplies branding for ARB string values only
+  - Keeps ARB keys unchanged (for example `newMessageInFluffyChat`)
+
 ## Custom feature workflow
 
 ```bash
