@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
@@ -9,6 +5,9 @@ import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart'
 import 'package:fluffychat/widgets/app_lock.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
+
 import 'settings_security_view.dart';
 
 class SettingsSecurity extends StatefulWidget {
@@ -19,7 +18,7 @@ class SettingsSecurity extends StatefulWidget {
 }
 
 class SettingsSecurityController extends State<SettingsSecurity> {
-  void setAppLockAction() async {
+  Future<void> setAppLockAction() async {
     if (AppLock.of(context).isActive) {
       AppLock.of(context).showLockScreen();
     }
@@ -46,7 +45,7 @@ class SettingsSecurityController extends State<SettingsSecurity> {
     }
   }
 
-  void deleteAccountAction() async {
+  Future<void> deleteAccountAction() async {
     if (await showOkCancelAlertDialog(
           useRootNavigator: false,
           context: context,
@@ -79,7 +78,9 @@ class SettingsSecurityController extends State<SettingsSecurity> {
       delay: false,
       future: () =>
           Matrix.of(context).client.uiaRequestBackground<IdServerUnbindResult?>(
-            (auth) => Matrix.of(context).client.deactivateAccount(auth: auth),
+            (auth) => Matrix.of(
+              context,
+            ).client.deactivateAccount(auth: auth, erase: true),
           ),
     );
 
@@ -93,7 +94,7 @@ class SettingsSecurityController extends State<SettingsSecurity> {
 
   Future<void> dehydrateAction() => Matrix.of(context).dehydrateAction(context);
 
-  void changeShareKeysWith(ShareKeysWith? shareKeysWith) async {
+  Future<void> changeShareKeysWith(ShareKeysWith? shareKeysWith) async {
     if (shareKeysWith == null) return;
     AppSettings.shareKeysWith.setItem(shareKeysWith.name);
     Matrix.of(context).client.shareKeysWith = shareKeysWith;

@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
-
 import 'package:collection/collection.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_details/chat_details_view.dart';
 import 'package:fluffychat/pages/settings/settings.dart';
@@ -15,8 +10,9 @@ import 'package:fluffychat/widgets/adaptive_dialogs/show_modal_action_popup.dart
 import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
-
-enum AliasActions { copy, delete, setCanonical }
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:matrix/matrix.dart';
 
 class ChatDetails extends StatefulWidget {
   final String roomId;
@@ -40,7 +36,7 @@ class ChatDetailsController extends State<ChatDetails> {
 
   String? get roomId => widget.roomId;
 
-  void setDisplaynameAction() async {
+  Future<void> setDisplaynameAction() async {
     final room = Matrix.of(context).client.getRoomById(roomId!)!;
     final input = await showTextInputDialog(
       context: context,
@@ -61,7 +57,7 @@ class ChatDetailsController extends State<ChatDetails> {
     }
   }
 
-  void setTopicAction() async {
+  Future<void> setTopicAction() async {
     final room = Matrix.of(context).client.getRoomById(roomId!)!;
     final input = await showTextInputDialog(
       context: context,
@@ -85,7 +81,7 @@ class ChatDetailsController extends State<ChatDetails> {
     }
   }
 
-  void setAvatarAction() async {
+  Future<void> setAvatarAction() async {
     final room = Matrix.of(context).client.getRoomById(roomId!);
     final actions = [
       if (PlatformInfos.isMobile)

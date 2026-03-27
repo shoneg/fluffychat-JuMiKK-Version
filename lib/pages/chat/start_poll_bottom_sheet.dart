@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
 
 class StartPollBottomSheet extends StatefulWidget {
   final Room room;
@@ -28,7 +26,7 @@ class _StartPollBottomSheetState extends State<StartPollBottomSheet> {
 
   String? _txid;
 
-  void _createPoll() async {
+  Future<void> _createPoll() async {
     try {
       var id = 0;
       _txid ??= widget.room.client.generateUniqueTransactionId();
@@ -56,7 +54,7 @@ class _StartPollBottomSheetState extends State<StartPollBottomSheet> {
     }
   }
 
-  void _updateCanCreate([dynamic _]) {
+  void _updateCanCreate([_]) {
     final newCanCreate =
         _bodyController.text.trim().isNotEmpty &&
         !_answers.any((controller) => controller.text.trim().isEmpty);

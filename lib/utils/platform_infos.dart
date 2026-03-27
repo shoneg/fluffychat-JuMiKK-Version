@@ -1,14 +1,13 @@
 import 'dart:io';
 
+import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/l10n/l10n.dart';
 import '../config/app_config.dart';
 
 abstract class PlatformInfos {
@@ -33,7 +32,10 @@ abstract class PlatformInfos {
   static bool get supportsVideoPlayer =>
       !PlatformInfos.isWindows && !PlatformInfos.isLinux;
 
-  /// Web could also record in theory but currently only wav which is too large
+  static bool get supportsCustomImageResizer =>
+      PlatformInfos.isWeb || PlatformInfos.isMobile;
+
+  /// Web could also record in theory but currently creates broken opus
   static bool get platformCanRecord => (isMobile || isMacOS);
 
   static String get clientName =>
@@ -47,7 +49,7 @@ abstract class PlatformInfos {
     return version;
   }
 
-  static void showDialog(BuildContext context) async {
+  static Future<void> showDialog(BuildContext context) async {
     final version = await PlatformInfos.getVersion();
     showAboutDialog(
       context: context,
