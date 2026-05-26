@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 # Contributing to FluffyChat
 Contributions are always welcome. Yet we might lack manpower to review all of them in time.
 
@@ -59,7 +66,7 @@ FluffyChat tries to be as minimal as possible even in the code style. We try to 
   - main.dart
 
 
-Most of the business model is in the Famedly Matrix Dart SDK. We try to not keep a model inside of the source code but extend it under `/utils`.
+Most of the business model is in the Matrix Dart SDK. We try to not keep a model inside of the source code but extend it under `/utils`.
 
 ### Separation of Controllers and Views
 

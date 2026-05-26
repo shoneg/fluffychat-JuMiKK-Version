@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 # Privacy
 
 FluffyChat is available on Android, iOS, Linux and as a web version. Desktop versions for Windows and macOS may follow.
@@ -82,7 +89,9 @@ A typical push notification could look like this:
         "app_id": "chat.fluffy.fluffychat",
         "pushkey": "V2h5IG9uIGVhcnRoIGRpZCB5b3UgZGVjb2RlIHRoaXM/",
         "pushkey_ts": 12345678,
-        "data": {},
+        "data": {
+          "client_name": "<random-identifier-for-the-client-in-case-of-multi-account-usage>"  
+        },
         "tweaks": {
           "sound": "bing"
         }
@@ -111,3 +120,13 @@ To enhance user safety and help protect against the sexual abuse and exploitatio
 In addition to reporting messages, users can also report other users following a similar process.
 
 We encourage server administrators to adhere to strict safety standards and provide mechanisms for addressing and moderating inappropriate content. For more information on the Matrix protocol and its safety standards, please refer to the following link: https://matrix.org/docs/older/moderation/
+
+## Impressum
+
+krille-chan - Christian Kußowski  
+c/o Online-Impressum #8198  
+Europaring 90  
+53757 St Augustin
+
+E-Mail: christian-kussowski[at)posteo.de  
+[Zweiter Kontaktweg](https://mein.online-impressum.de/krille-chan/#Zweiter_Kontaktweg)

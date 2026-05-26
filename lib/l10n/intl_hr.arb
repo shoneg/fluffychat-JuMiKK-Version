@@ -722,11 +722,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Izrazito uvredljiv",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Ime datoteke",
     "@fileName": {
         "type": "String",
@@ -818,11 +813,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Koliko je ovaj sadržaj uvredljiv?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -845,11 +835,6 @@
     },
     "incorrectPassphraseOrKey": "Neispravna lozinka ili ključ za obnavljanje",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Neuvredljiv",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1109,11 +1094,6 @@
                 "type": "int"
             }
         }
-    },
-    "offensive": "Uvredljiv",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
     },
     "offline": "Nepovezano s internetom",
     "@offline": {
@@ -1890,7 +1870,6 @@
     "homeserver": "Homeserver",
     "sendOnEnter": "Pošalji pritiskom tipke enter",
     "link": "Poveznica",
-    "enableMultiAccounts": "(BETA) Omogući korištenje više računa na ovom uređaju",
     "bundleName": "Ime paketa",
     "removeFromBundle": "Ukloni iz ovog paketa",
     "addToBundle": "Dodaj u paket",
@@ -1929,7 +1908,6 @@
     },
     "markAsRead": "Označi kao pročitano",
     "reportUser": "Prijavi korisnika",
-    "openChat": "Otvori chat",
     "dismiss": "Odbaci",
     "unsupportedAndroidVersion": "Nepodržana Android verzija",
     "unsupportedAndroidVersionLong": "Ova funkcija zahtijeva noviju verziju Androida. Provjeri, postoje li nove verzije ili podrška za Lineage OS.",
@@ -2399,20 +2377,7 @@
     "@alwaysUse24HourFormat": {
         "description": "Set to true to always display time of day in 24 hour format."
     },
-    "prepareSendingAttachment": "Pripremi slanje priloga …",
     "sendingAttachment": "Slanje priloga …",
-    "sendingAttachmentCountOfCount": "Slanje priloga {index} od {length} …",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
     "ignoreUser": "Zanemari korisnika",
     "aboutHomeserver": "Informacije o {homeserver}",
     "@aboutHomeserver": {
@@ -2522,17 +2487,7 @@
     "loginWithMatrixId": "Prijava pomoću Matrix-ID-a",
     "doesNotSeemToBeAValidHomeserver": "Čini se da nije kompatibilan homeserver. Pogrešan URL?",
     "calculatingFileSize": "Izračunavanje veličine datoteke …",
-    "generatingVideoThumbnail": "Generiranje minijatura videa …",
     "compressVideo": "Komprimiranje videa …",
-    "serverLimitReached": "Granica servera je dosegnuta! Čeka {seconds} s …",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Jedan od tvojih uređaja nije potvrđen",
     "noticeChatBackupDeviceVerification": "Napomena: Kada spojiš sve svoje uređaje na sigurnosnu kopiju chata, oni se automatski potvrđuju.",
     "continueText": "Nastavi",

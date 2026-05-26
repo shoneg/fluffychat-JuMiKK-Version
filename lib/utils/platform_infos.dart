@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:io';
 
 import 'package:fluffychat/config/setting_keys.dart';
@@ -38,7 +43,7 @@ abstract class PlatformInfos {
   /// Web could also record in theory but currently creates broken opus
   static bool get platformCanRecord => (isMobile || isMacOS);
 
-  static String get clientName =>
+  static String get appDisplayName =>
       '${AppSettings.applicationName.value} ${isWeb ? 'web' : Platform.operatingSystem}${kReleaseMode ? '' : 'Debug'}';
 
   static Future<String> getVersion() async {
@@ -50,15 +55,17 @@ abstract class PlatformInfos {
   }
 
   static Future<void> showDialog(BuildContext context) async {
+    final l10n = L10n.of(context);
     final version = await PlatformInfos.getVersion();
+    if (!context.mounted) return;
     showAboutDialog(
       context: context,
       children: [
-        Text(L10n.of(context).versionWithNumber(version)),
+        Text(l10n.versionWithNumber(version)),
         TextButton.icon(
           onPressed: () => launchUrlString(AppConfig.sourceCodeUrl),
           icon: const Icon(Icons.source_outlined),
-          label: Text(L10n.of(context).sourceCode),
+          label: Text(l10n.sourceCode),
         ),
         Builder(
           builder: (innerContext) {
@@ -68,7 +75,7 @@ abstract class PlatformInfos {
                 Navigator.of(innerContext).pop();
               },
               icon: const Icon(Icons.list_outlined),
-              label: Text(L10n.of(context).logs),
+              label: Text(l10n.logs),
             );
           },
         ),
@@ -80,7 +87,7 @@ abstract class PlatformInfos {
                 Navigator.of(innerContext).pop();
               },
               icon: const Icon(Icons.settings_applications_outlined),
-              label: Text(L10n.of(context).advancedConfigs),
+              label: Text(l10n.advancedConfigs),
             );
           },
         ),

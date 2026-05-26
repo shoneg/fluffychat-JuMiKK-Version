@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -40,6 +45,10 @@ class SettingsChatView extends StatelessWidget {
                 setting: AppSettings.hideRedactedEvents,
               ),
               SettingsSwitchListTile.adaptive(
+                title: L10n.of(context).hideRoomsInSpaces,
+                setting: AppSettings.hideRoomsInSpaces,
+              ),
+              SettingsSwitchListTile.adaptive(
                 title: L10n.of(context).hideInvalidOrUnknownMessageFormats,
                 setting: AppSettings.hideUnknownEvents,
               ),
@@ -55,6 +64,10 @@ class SettingsChatView extends StatelessWidget {
               SettingsSwitchListTile.adaptive(
                 title: L10n.of(context).swipeRightToLeftToReply,
                 setting: AppSettings.swipeRightToLeftToReply,
+              ),
+              SettingsSwitchListTile.adaptive(
+                title: L10n.of(context).showThumbnailsInTimeline,
+                setting: AppSettings.showThumbnailsInTimeline,
               ),
               Divider(color: theme.dividerColor),
               ListTile(

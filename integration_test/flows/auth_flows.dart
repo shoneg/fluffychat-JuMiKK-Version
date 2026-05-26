@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/pages/sign_in/view_model/model/public_homeserver_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,15 +14,18 @@ Future<void> finalLogout(WidgetTester widgetTester) =>
     widgetTester.startFluffyChatTest().then((tester) => tester.logout());
 
 extension AuthFlows on FluffyChatTester {
-  Future<void> login() async {
+  Future<void> login({
+    String username = user1Name,
+    String password = user1Pw,
+  }) async {
     await waitFor('Sign in');
     await tapOn('Sign in');
     await enterText(TextField, 'http://$homeserver', index: 0);
     await tapOn(RadioListTile<PublicHomeserverData>, index: 0);
     await tapOn('Continue');
     await waitFor('Log in to http://$homeserver');
-    await enterText(TextField, user1Name, index: 0);
-    await enterText(TextField, user1Pw, index: 1);
+    await enterText(TextField, username, index: 0);
+    await enterText(TextField, password, index: 1);
     await tapOn('Login');
   }
 

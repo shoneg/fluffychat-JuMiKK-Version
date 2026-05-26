@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/routes.dart';
 import 'package:fluffychat/config/setting_keys.dart';
@@ -43,7 +48,7 @@ class FluffyChatApp extends StatelessWidget {
 
       // Pass deep links to app:
       if (state.uri.toString().startsWith(AppConfig.deepLinkPrefix)) {
-        return '/rooms/newprivatechat?deeplink=${state.uri}';
+        return '/rooms/newprivatechat#${state.uri}';
       }
       return null;
     },

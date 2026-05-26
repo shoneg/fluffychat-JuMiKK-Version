@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/permission_slider_dialog.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +19,8 @@ Future<void> showMemberActionsPopupMenu({
   required User user,
   void Function()? onMention,
 }) async {
+  final l10n = L10n.of(context);
+  final scaffoldMessenger = ScaffoldMessenger.of(context);
   final theme = Theme.of(context);
   final displayname = user.calcDisplayname();
   final isMe = user.room.client.userID == user.id;
@@ -79,7 +86,7 @@ Future<void> showMemberActionsPopupMenu({
           ),
         ),
       if (user.canChangeUserPowerLevel) ...[
-        if (user.powerLevel < 100)
+        if (user.powerLevel.level < 100)
           PopupMenuItem(
             value: _MemberActions.makeAdmin,
             child: Row(
@@ -90,7 +97,7 @@ Future<void> showMemberActionsPopupMenu({
               ],
             ),
           ),
-        if (user.powerLevel < 50)
+        if (user.powerLevel.level < 50)
           PopupMenuItem(
             value: _MemberActions.makeModerator,
             child: Row(
@@ -101,7 +108,7 @@ Future<void> showMemberActionsPopupMenu({
               ],
             ),
           ),
-        if (user.powerLevel >= 100)
+        if (user.powerLevel.role == PowerLevelRole.admin)
           PopupMenuItem(
             value: _MemberActions.removeAdmin,
             child: Row(
@@ -112,7 +119,7 @@ Future<void> showMemberActionsPopupMenu({
               ],
             ),
           )
-        else if (user.powerLevel >= 50)
+        else if (user.powerLevel.role == PowerLevelRole.moderator)
           PopupMenuItem(
             value: _MemberActions.removeModerator,
             child: Row(
@@ -125,7 +132,7 @@ Future<void> showMemberActionsPopupMenu({
           ),
       ],
       if (user.canChangeUserPowerLevel ||
-          !defaultPowerLevels.contains(user.powerLevel))
+          !defaultPowerLevels.contains(user.powerLevel.level))
         PopupMenuItem(
           value: _MemberActions.setPowerLevel,
           enabled: user.canChangeUserPowerLevel,
@@ -138,7 +145,7 @@ Future<void> showMemberActionsPopupMenu({
                     ? L10n.of(context).setPowerLevel
                     : L10n.of(context).powerLevel,
               ),
-              if (!defaultPowerLevels.contains(user.powerLevel))
+              if (!defaultPowerLevels.contains(user.powerLevel.level))
                 Text(' (${user.powerLevel})'),
             ],
           ),
@@ -217,8 +224,8 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.setPowerLevel:
       final power = await showPermissionChooser(
         context,
-        currentLevel: user.powerLevel,
-        maxLevel: user.room.ownPowerLevel,
+        currentLevel: user.powerLevel.level,
+        maxLevel: user.room.ownPowerLevel.level,
       );
       if (power == null) return;
       if (!context.mounted) return;
@@ -245,12 +252,13 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.kick:
       if (await showOkCancelAlertDialog(
             context: context,
-            title: L10n.of(context).areYouSure,
-            okLabel: L10n.of(context).yes,
-            cancelLabel: L10n.of(context).no,
-            message: L10n.of(context).kickUserDescription,
+            title: l10n.areYouSure,
+            okLabel: l10n.yes,
+            cancelLabel: l10n.no,
+            message: l10n.kickUserDescription,
           ) ==
           OkCancelResult.ok) {
+        if (!context.mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => user.kick(),
@@ -260,12 +268,13 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.ban:
       if (await showOkCancelAlertDialog(
             context: context,
-            title: L10n.of(context).areYouSure,
-            okLabel: L10n.of(context).yes,
-            cancelLabel: L10n.of(context).no,
-            message: L10n.of(context).banUserDescription,
+            title: l10n.areYouSure,
+            okLabel: l10n.yes,
+            cancelLabel: l10n.no,
+            message: l10n.banUserDescription,
           ) ==
           OkCancelResult.ok) {
+        if (!context.mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => user.ban(),
@@ -275,20 +284,22 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.report:
       final reason = await showTextInputDialog(
         context: context,
-        title: L10n.of(context).whyDoYouWantToReportThis,
-        okLabel: L10n.of(context).report,
-        cancelLabel: L10n.of(context).cancel,
-        hintText: L10n.of(context).reason,
+        title: l10n.whyDoYouWantToReportThis,
+        okLabel: l10n.report,
+        cancelLabel: l10n.cancel,
+        hintText: l10n.reason,
       );
       if (reason == null || reason.isEmpty) return;
+      if (!context.mounted) return;
 
       final result = await showFutureLoadingDialog(
         context: context,
         future: () => user.room.client.reportUser(user.id, reason),
       );
       if (result.error != null) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(L10n.of(context).contentHasBeenReported)),
+      if (!context.mounted) return;
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(l10n.contentHasBeenReported)),
       );
       return;
     case _MemberActions.info:
@@ -304,19 +315,20 @@ Future<void> showMemberActionsPopupMenu({
     case _MemberActions.unban:
       if (await showOkCancelAlertDialog(
             context: context,
-            title: L10n.of(context).areYouSure,
-            okLabel: L10n.of(context).yes,
-            cancelLabel: L10n.of(context).no,
-            message: L10n.of(context).unbanUserDescription,
+            title: l10n.areYouSure,
+            okLabel: l10n.yes,
+            cancelLabel: l10n.no,
+            message: l10n.unbanUserDescription,
           ) ==
           OkCancelResult.ok) {
+        if (!context.mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => user.unban(),
         );
       }
     case _MemberActions.makeAdmin:
-      if (user.room.ownPowerLevel <= 100) {
+      if (user.room.ownPowerLevel.level <= 100) {
         final consent = await showOkCancelAlertDialog(
           context: context,
           title: L10n.of(context).areYouSure,

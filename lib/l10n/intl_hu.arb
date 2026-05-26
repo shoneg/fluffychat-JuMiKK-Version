@@ -1496,11 +1496,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Rendkívül sértő",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fontSize": "Betűméret",
     "@fontSize": {
         "type": "String",
@@ -1516,16 +1511,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Mennyire sértő ez a tartalom?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Nem sértő",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "locationPermissionDeniedNotice": "A helymeghatározás visszautasításra került. Kérem engedélyezze, hogy meg tudja osztani helyzetét.",
     "@locationPermissionDeniedNotice": {
         "type": "String",
@@ -1538,11 +1523,6 @@
     },
     "scanQrCode": "QR kód beolvasása",
     "@scanQrCode": {},
-    "offensive": "Sértő",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "oopsPushError": "Hoppá! Sajnos hiba lépett fel a push értesítések beállításakor.",
     "@oopsPushError": {
         "type": "String",
@@ -2299,8 +2279,6 @@
     "@noBackupWarning": {},
     "storeInSecureStorageDescription": "Tárolja a visszaállítási kulcsot az eszköz biztonsági tárjában.",
     "@storeInSecureStorageDescription": {},
-    "openChat": "Csevegés megnyitása",
-    "@openChat": {},
     "kickUserDescription": "A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.",
     "@kickUserDescription": {},
     "importNow": "Importálás most",
@@ -2309,8 +2287,6 @@
     "@pinMessage": {},
     "invite": "Meghívás",
     "@invite": {},
-    "enableMultiAccounts": "(BÉTA) Több fiók bekapcsolása az eszközön",
-    "@enableMultiAccounts": {},
     "unsupportedAndroidVersionLong": "Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.",
     "@unsupportedAndroidVersionLong": {},
     "storeSecurlyOnThisDevice": "Biztonságos tárolás az eszközön",
@@ -2704,27 +2680,6 @@
     "@ignoreUser": {},
     "commandHint_roomupgrade": "Szoba frissítése a megadott szoba verzióra",
     "@commandHint_roomupgrade": {},
-    "sendingAttachmentCountOfCount": "{index} csatolmány küldése {length}-ból...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Szerver korlát elérve! {seconds} mp türelem...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Egyik készüléke nem hitelesített",
     "@oneOfYourDevicesIsNotVerified": {},
     "synchronizingPleaseWaitCounter": " Szinkronizálás… ({percentage}%)",
@@ -2738,12 +2693,8 @@
     },
     "calculatingFileSize": "Fájl méret kalkulálása...",
     "@calculatingFileSize": {},
-    "prepareSendingAttachment": "Felkészülés csatolmány küldésére...",
-    "@prepareSendingAttachment": {},
     "sendingAttachment": "Csatolmány küldése...",
     "@sendingAttachment": {},
-    "generatingVideoThumbnail": "Videó miniatűr generálása...",
-    "@generatingVideoThumbnail": {},
     "compressVideo": "Videó tömörítése...",
     "@compressVideo": {},
     "contentNotificationSettings": "Tartalom értesítési beállítások",

@@ -1323,11 +1323,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "inoffensive": "غير مسيء",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "iHaveClickedOnLink": "نقرت على الرابط",
     "@iHaveClickedOnLink": {
         "type": "String",
@@ -1335,11 +1330,6 @@
     },
     "ignore": "تجاهل",
     "@ignore": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "howOffensiveIsThisContent": "ما مدى سوء هذا المحتوى؟",
-    "@howOffensiveIsThisContent": {
         "type": "String",
         "placeholders": {}
     },
@@ -1355,11 +1345,6 @@
     },
     "fontSize": "حجم الخط",
     "@fontSize": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "extremeOffensive": "مسيئة للغاية",
-    "@extremeOffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1672,8 +1657,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "enableMultiAccounts": "(ميزة تجربية) فعّل تعدد الحسابات",
-    "@enableMultiAccounts": {},
     "bundleName": "اسم الحزمة",
     "@bundleName": {},
     "removeFromBundle": "أزله من الحزمة",
@@ -1897,11 +1880,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "عدواني",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "yourChatBackupHasBeenSetUp": "تم إعداد النسخ الاحتياطي لمحادثاتك.",
     "@yourChatBackupHasBeenSetUp": {},
     "noEncryptionForPublicRooms": "يمكنك فقط تفعيل التشفير عندما تصبح الغرفة غير متاحة للعامة.",
@@ -1988,8 +1966,6 @@
     "@start": {},
     "reportUser": "التبيلغ عن المستخدم",
     "@reportUser": {},
-    "openChat": "فتح المحادثة",
-    "@openChat": {},
     "pinMessage": "تثبيت في الغرفة",
     "@pinMessage": {},
     "confirmEventUnpin": "هل أنت متأكد من إلغاء تثبيت الحدث بشكل دائم؟",
@@ -2673,35 +2649,10 @@
     "@doesNotSeemToBeAValidHomeserver": {},
     "calculatingFileSize": "جارٍ حساب حجم الملف...",
     "@calculatingFileSize": {},
-    "prepareSendingAttachment": "إعداد مرفق الإرسال...",
-    "@prepareSendingAttachment": {},
     "sendingAttachment": "جارٍ إرسال المرفق...",
     "@sendingAttachment": {},
-    "generatingVideoThumbnail": "جارٍ إنشاء صورة مصغرة للفيديو...",
-    "@generatingVideoThumbnail": {},
     "compressVideo": "جارٍ ضغط الفيديو...",
     "@compressVideo": {},
-    "sendingAttachmentCountOfCount": "جارٍ إرسال المرفق {index} من {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "تم الوصول إلى حد الخادم! انتظر {seconds} ثانية...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "لم يتم التحقق من أحد أجهزتك",
     "@oneOfYourDevicesIsNotVerified": {},
     "noticeChatBackupDeviceVerification": "ملاحظة: عند توصيل جميع أجهزتك بنسخة احتياطية للدردشة، يتم التحقق منها تلقائيًا.",

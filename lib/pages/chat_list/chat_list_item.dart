@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_list/unread_bubble.dart';
@@ -219,7 +224,15 @@ class ChatListItem extends StatelessWidget {
                         room.latestEventReceivedTime.localizedTimeShort(
                           context,
                         ),
-                        style: TextStyle(fontSize: 11),
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: room.hasNewMessages
+                              ? FontWeight.bold
+                              : null,
+                          color: hasNotifications
+                              ? theme.colorScheme.primary
+                              : null,
+                        ),
                       ),
                     ),
                 ],

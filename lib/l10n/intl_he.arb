@@ -902,11 +902,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "פוגעני ביותר",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "hideUnknownEvents": "הסתר אירועים לא ידועים",
     "@hideUnknownEvents": {
         "type": "String",
@@ -945,11 +940,6 @@
     },
     "delete": "מחיקה",
     "@delete": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "לֹא פּוֹגֵעַ",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1013,11 +1003,6 @@
     },
     "help": "עזרה",
     "@help": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "howOffensiveIsThisContent": "עד כמה התוכן הזה פוגעני?",
-    "@howOffensiveIsThisContent": {
         "type": "String",
         "placeholders": {}
     },
@@ -1239,11 +1224,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "פוגעני",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "bundleName": "שם החבילה",
     "@bundleName": {},
     "offline": "לא מקוון",
@@ -1253,8 +1233,6 @@
     },
     "removeFromBundle": "הסר מחבילה זו",
     "@removeFromBundle": {},
-    "enableMultiAccounts": "(בטא) אפשר ריבוי חשבונות במכשיר זה",
-    "@enableMultiAccounts": {},
     "openInMaps": "פתיחה במפות",
     "@openInMaps": {
         "type": "String",

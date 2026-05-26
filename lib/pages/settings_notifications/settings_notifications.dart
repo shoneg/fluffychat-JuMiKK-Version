@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 
 import 'package:fluffychat/config/app_config.dart';
@@ -40,6 +45,7 @@ class SettingsNotificationsController extends State<SettingsNotifications> {
       ],
     );
     if (delete != true) return;
+    if (!mounted) return;
 
     final success = await showFutureLoadingDialog(
       context: context,

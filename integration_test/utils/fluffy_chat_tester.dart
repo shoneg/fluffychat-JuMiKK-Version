@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/main.dart' as app;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -107,7 +112,7 @@ extension on Object {
 
 extension StartTest on WidgetTester {
   Future<FluffyChatTester> startFluffyChatTest() async {
-    app.main();
+    app.main(['integration_test']);
 
     return FluffyChatTester(this);
   }

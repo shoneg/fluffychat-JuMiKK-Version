@@ -1,11 +1,3 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-
-import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
-import 'package:go_router/go_router.dart';
-import 'package:matrix/matrix.dart';
-import 'package:universal_html/html.dart' as html;
-
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -13,6 +5,12 @@ import 'package:fluffychat/utils/localized_exception_extension.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
+import 'package:go_router/go_router.dart';
+import 'package:matrix/matrix.dart';
+import 'package:universal_html/html.dart' as html;
 
 class DefaultLoginRedirect extends StatefulWidget {
   const DefaultLoginRedirect({super.key});
@@ -120,7 +118,7 @@ class _DefaultLoginRedirectState extends State<DefaultLoginRedirect> {
     await client.login(
       LoginType.mLoginToken,
       token: token,
-      initialDeviceDisplayName: PlatformInfos.clientName,
+      initialDeviceDisplayName: PlatformInfos.appDisplayName,
     );
   }
 

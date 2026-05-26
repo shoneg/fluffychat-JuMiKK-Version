@@ -941,11 +941,6 @@
             }
         }
     },
-    "howOffensiveIsThisContent": "این محتوا چقدر توهین‌آمیز است؟",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "enableEmotesGlobally": "فعال کردن بسته شکلک به‌صورت سراسری",
     "@enableEmotesGlobally": {
         "type": "String",
@@ -1002,11 +997,6 @@
     },
     "everythingReady": "همه‌چیز آماده است!",
     "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "extremeOffensive": "بسیار توهین‌آمیز",
-    "@extremeOffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1214,11 +1204,6 @@
     },
     "incorrectPassphraseOrKey": "عبارت عبور یا کلید بازیابی نادرست است",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "بی‌ضرر",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1437,7 +1422,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "enableMultiAccounts": "(آزمایشی) فعال کردن چند حساب در این دستگاه",
     "pleaseClickOnLink": "لطفاً روی پیوند در رایانامه کلیک کنید و ادامه دهید.",
     "@pleaseClickOnLink": {
         "type": "String",
@@ -1489,11 +1473,6 @@
     },
     "none": "هیچ",
     "@none": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "offensive": "توهین‌آمیز",
-    "@offensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1925,7 +1904,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "openChat": "باز کردن چت",
     "dismiss": "رد کردن",
     "unsupportedAndroidVersion": "نسخه اندروید پشتیبانی‌نشده",
     "youUnbannedUser": "شما محرومیت {user} را برداشتید",
@@ -2504,31 +2482,8 @@
     "loginWithMatrixId": "ورود با شناسه ماتریکس",
     "doesNotSeemToBeAValidHomeserver": "به نظر نمیرسد سرور خانگی سازگاری داشته باشد. نشانی اشتباه است؟",
     "calculatingFileSize": "در حال محاسبه اندازه پرونده...",
-    "prepareSendingAttachment": "آماده‌سازی برای فرستادن پیوست...",
     "sendingAttachment": "در حال فرستادن پیوست...",
-    "generatingVideoThumbnail": "در حال تولید تصویر کوچک ویدئو...",
     "compressVideo": "در حال فشرده‌سازی ویدئو...",
-    "sendingAttachmentCountOfCount": "در حال فرستادن پیوست {index} از {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "محدودیت سرور رسیده است! {seconds} ثانیه صبر کنید...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "یکی از دستگاه‌های شما بازبینی نشده است",
     "noticeChatBackupDeviceVerification": "توجه: وقتی همه دستگاه‌های خود را به پشتیبان چت متصل کنید، به‌صورت خودکار بازبینی میشوند.",
     "continueText": "ادامه",
@@ -2785,10 +2740,6 @@
     "reset": "ریست کردن",
     "supportFluffyChat": "حمایت از فلافی چت",
     "support": "پشتیبانی",
-    "fluffyChatSupportBannerMessage": "فلافی چت به کمک شما نیاز دارد!\n❤️❤️❤️\nفلافی چت همواره رایگان خواهد بود، اما توسعه و نگهداری از آن هزینه بر است.\nآینده این پروژه در گرو حمایت افرادی مثل شماست.",
-    "skipSupportingFluffyChat": "رد کردن حمایت از فلافی چت",
-    "iDoNotWantToSupport": "نمیخواهم حمایت کنم",
-    "iAlreadySupportFluffyChat": "از قبل از فلافی چت حمایت میکنم",
     "setLowPriority": "تنظیم اولویت پایین",
     "unsetLowPriority": "لغو تنظیم اولویت پایین",
     "countVotes": "{count} رای دیگر",

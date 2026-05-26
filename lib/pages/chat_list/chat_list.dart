@@ -1,10 +1,16 @@
-import 'dart:async';
-import 'dart:developer';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
+import 'dart:async';
+
+import 'package:collection/collection.dart';
 import 'package:cross_file/cross_file.dart';
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_list/chat_list_view.dart';
+import 'package:fluffychat/utils/error_reporter.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
@@ -23,14 +29,13 @@ import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart' as sdk;
 import 'package:matrix/matrix.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../utils/account_bundles.dart';
 import '../../config/setting_keys.dart';
 import '../../utils/url_launcher.dart';
 import '../../widgets/matrix.dart';
 
-enum ActiveFilter { allChats, messages, groups, unread, spaces }
+enum ActiveFilter { allChats, spaces, messages, groups, unread, tag }
 
 extension LocalizedActiveFilter on ActiveFilter {
   String toLocalizedString(BuildContext context) {
@@ -45,6 +50,8 @@ extension LocalizedActiveFilter on ActiveFilter {
         return L10n.of(context).groups;
       case ActiveFilter.spaces:
         return L10n.of(context).spaces;
+      case ActiveFilter.tag:
+        throw 'Tags should not directly be displayed!';
     }
   }
 }
@@ -73,6 +80,7 @@ class ChatListController extends State<ChatList>
   StreamSubscription? _intentFileStreamSubscription;
 
   late ActiveFilter activeFilter;
+  String? activeTag;
 
   String? _activeSpaceId;
   String? get activeSpaceId => _activeSpaceId;
@@ -90,6 +98,8 @@ class ChatListController extends State<ChatList>
   });
 
   Future<void> onChatTap(Room room) async {
+    final l10n = L10n.of(context);
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
     if (room.membership == Membership.invite) {
       final joinResult = await showFutureLoadingDialog(
         context: context,
@@ -105,10 +115,11 @@ class ChatListController extends State<ChatList>
       );
       if (joinResult.error != null) return;
     }
+    if (!mounted) return;
 
     if (room.membership == Membership.ban) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(L10n.of(context).youHaveBeenBannedFromThisChat)),
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(l10n.youHaveBeenBannedFromThisChat)),
       );
       return;
     }
@@ -138,6 +149,8 @@ class ChatListController extends State<ChatList>
         return (room) => room.isUnreadOrInvited;
       case ActiveFilter.spaces:
         return (room) => room.isSpace;
+      case ActiveFilter.tag:
+        return (room) => room.tags.keys.contains(activeTag);
     }
   }
 
@@ -156,23 +169,25 @@ class ChatListController extends State<ChatList>
   static const String _serverStoreNamespace = 'im.fluffychat.search.server';
 
   Future<void> setServer() async {
+    final matrix = Matrix.of(context);
+    final l10n = L10n.of(context);
     final newServer = await showTextInputDialog(
       useRootNavigator: false,
-      title: L10n.of(context).changeTheHomeserver,
+      title: l10n.changeTheHomeserver,
       context: context,
-      okLabel: L10n.of(context).ok,
-      cancelLabel: L10n.of(context).cancel,
+      okLabel: l10n.ok,
+      cancelLabel: l10n.cancel,
       prefixText: 'https://',
-      hintText: Matrix.of(context).client.homeserver?.host,
+      hintText: matrix.client.homeserver?.host,
       initialText: searchServer,
       keyboardType: TextInputType.url,
       autocorrect: false,
-      validator: (server) => server.contains('.') == true
-          ? null
-          : L10n.of(context).invalidServerName,
+      validator: (server) =>
+          server.contains('.') == true ? null : l10n.invalidServerName,
     );
     if (newServer == null) return;
-    Matrix.of(context).store.setString(_serverStoreNamespace, newServer);
+    if (!mounted) return;
+    matrix.store.setString(_serverStoreNamespace, newServer);
     setState(() {
       searchServer = newServer;
     });
@@ -185,6 +200,7 @@ class ChatListController extends State<ChatList>
 
   Future<void> _search() async {
     final client = Matrix.of(context).client;
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
     if (!isSearching) {
       setState(() {
         isSearching = true;
@@ -227,9 +243,10 @@ class ChatListController extends State<ChatList>
       );
     } catch (e, s) {
       Logs().w('Searching has crashed', e, s);
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(e.toLocalizedString(context))));
+      if (!mounted) return;
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(e.toLocalizedString(context))),
+      );
     }
     if (!isSearchMode) return;
     setState(() {
@@ -293,9 +310,8 @@ class ChatListController extends State<ChatList>
 
   Future<void> editSpace(BuildContext context, String spaceId) async {
     await Matrix.of(context).client.getRoomById(spaceId)!.postLoad();
-    if (mounted) {
-      context.push('/rooms/$spaceId/details');
-    }
+    if (!context.mounted) return;
+    context.push('/rooms/$spaceId/details');
   }
 
   // Needs to match GroupsSpacesEntry for 'separate group' checking.
@@ -305,11 +321,10 @@ class ChatListController extends State<ChatList>
   String? get activeChat => widget.activeChat;
 
   void _processIncomingSharedMedia(List<SharedMediaFile> files) {
+    files.removeWhere(
+      (file) => file.path.startsWith(AppConfig.deepLinkPrefix) == true,
+    );
     if (files.isEmpty) return;
-    inspect(files);
-    if (files.singleOrNull?.path.startsWith(AppConfig.deepLinkPrefix) == true) {
-      return;
-    }
 
     showScaffoldDialog(
       context: context,
@@ -353,9 +368,10 @@ class ChatListController extends State<ChatList>
     }
   }
 
+  StreamSubscription? _onRoomTagUpdate;
+
   @override
   void initState() {
-    activeFilter = ActiveFilter.allChats;
     _initReceiveSharingIntent();
     _activeSpaceId = widget.activeSpace;
 
@@ -364,7 +380,6 @@ class ChatListController extends State<ChatList>
     _hackyWebRTCFixForWeb();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
-        _showLastSeenSupportBanner();
         searchServer = Matrix.of(
           context,
         ).store.getString(_serverStoreNamespace);
@@ -378,6 +393,34 @@ class ChatListController extends State<ChatList>
       );
     });
 
+    _updateRoomTags();
+    _onRoomTagUpdate = Matrix.of(context).client.onSync.stream
+        .where(
+          (syncUpdate) =>
+              syncUpdate.rooms?.join?.values.any(
+                (roomUpdate) =>
+                    roomUpdate.accountData?.any(
+                      (accountData) => accountData.type == 'm.tag',
+                    ) ??
+                    false,
+              ) ??
+              false,
+        )
+        .listen(_updateRoomTags);
+
+    if (roomTags.containsKey(AppSettings.chatFilter.value)) {
+      activeFilter = ActiveFilter.tag;
+      activeTag = AppSettings.chatFilter.value;
+    } else {
+      activeFilter =
+          ActiveFilter.values.singleWhereOrNull(
+            (filter) => AppSettings.chatFilter.value == filter.name,
+          ) ??
+          ActiveFilter.allChats;
+    }
+
+    if (AppSettings.debugPush.value) _processPushHelperCrashReport();
+
     super.initState();
   }
 
@@ -385,84 +428,20 @@ class ChatListController extends State<ChatList>
   void dispose() {
     _intentDataStreamSubscription?.cancel();
     _intentFileStreamSubscription?.cancel();
+    _onRoomTagUpdate?.cancel();
     scrollController.removeListener(_onScroll);
     super.dispose();
   }
 
-  Future<void> _showLastSeenSupportBanner() async {
-    if (AppSettings.supportBannerOptOut.value) return;
-
-    if (AppSettings.lastSeenSupportBanner.value == 0) {
-      await AppSettings.lastSeenSupportBanner.setItem(
-        DateTime.now().millisecondsSinceEpoch,
-      );
-      return;
-    }
-
-    final lastSeenSupportBanner = DateTime.fromMillisecondsSinceEpoch(
-      AppSettings.lastSeenSupportBanner.value,
-    );
-
-    if (DateTime.now().difference(lastSeenSupportBanner) >=
-        Duration(days: 6 * 7)) {
-      final theme = Theme.of(context);
-      final messenger = ScaffoldMessenger.of(context);
-      messenger.showMaterialBanner(
-        MaterialBanner(
-          backgroundColor: theme.colorScheme.errorContainer,
-          leading: CloseButton(
-            color: theme.colorScheme.onErrorContainer,
-            onPressed: () async {
-              final okCancelResult = await showOkCancelAlertDialog(
-                context: context,
-                title: L10n.of(context).skipSupportingFluffyChat,
-                message: L10n.of(context).fluffyChatSupportBannerMessage,
-                okLabel: L10n.of(context).iDoNotWantToSupport,
-                cancelLabel: L10n.of(context).iAlreadySupportFluffyChat,
-                isDestructive: true,
-              );
-              switch (okCancelResult) {
-                case null:
-                  return;
-                case OkCancelResult.ok:
-                  messenger.clearMaterialBanners();
-                  return;
-                case OkCancelResult.cancel:
-                  messenger.clearMaterialBanners();
-                  await AppSettings.supportBannerOptOut.setItem(true);
-                  return;
-              }
-            },
-          ),
-          content: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: Text(
-              L10n.of(context).fluffyChatSupportBannerMessage,
-              style: TextStyle(color: theme.colorScheme.onErrorContainer),
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                messenger.clearMaterialBanners();
-                launchUrlString(
-                  'https://fluffychat.im/faq/#how_can_i_support_fluffychat',
-                );
-              },
-              child: Text(
-                L10n.of(context).support,
-                style: TextStyle(color: theme.colorScheme.onErrorContainer),
-              ),
-            ),
-          ],
-        ),
-      );
-      await AppSettings.lastSeenSupportBanner.setItem(
-        DateTime.now().millisecondsSinceEpoch,
-      );
-    }
-
-    return;
+  void _processPushHelperCrashReport() {
+    final store = Matrix.of(context).store;
+    final report = store.getStringList(AppConfig.pushHelperCrashReportKey);
+    if (report == null) return;
+    store.remove(AppConfig.pushHelperCrashReportKey);
+    ErrorReporter(
+      context,
+      'Push Helper has been crashed',
+    ).onErrorCallback(report.first, StackTrace.fromString(report.last));
   }
 
   Future<void> chatContextAction(
@@ -613,6 +592,30 @@ class ChatListController extends State<ChatList>
                 ],
               ),
             ),
+          if (activeTag == null)
+            PopupMenuItem(
+              value: ChatContextAction.addTag,
+              child: Row(
+                mainAxisSize: .min,
+                children: [
+                  Icon(Icons.bookmark_add_outlined),
+                  const SizedBox(width: 12),
+                  Text(L10n.of(context).addTag),
+                ],
+              ),
+            )
+          else
+            PopupMenuItem(
+              value: ChatContextAction.removeTag,
+              child: Row(
+                mainAxisSize: .min,
+                children: [
+                  Icon(Icons.bookmark_remove_outlined),
+                  const SizedBox(width: 12),
+                  Text(L10n.of(context).removeTag),
+                ],
+              ),
+            ),
           if (spacesWithPowerLevels.isNotEmpty)
             PopupMenuItem(
               value: ChatContextAction.addToSpace,
@@ -742,6 +745,7 @@ class ChatListController extends State<ChatList>
               .toList(),
         );
         if (space == null) return;
+        if (!mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => space.setSpaceChild(room.id),
@@ -752,7 +756,66 @@ class ChatListController extends State<ChatList>
           future: () => room.setLowPriority(!room.isLowPriority),
         );
         return;
+      case ChatContextAction.addTag:
+        final existingTags = List.of(roomTags.keys);
+        existingTags.removeWhere(room.tags.containsKey);
+        String? tag;
+        if (existingTags.isNotEmpty) {
+          tag = await showModalActionPopup<String?>(
+            context: context,
+            actions: [
+              ...existingTags.map((tag) {
+                final displayTag = tag.replaceFirst('u.', '');
+                return AdaptiveModalAction(
+                  label: displayTag,
+                  value: displayTag,
+                );
+              }),
+              AdaptiveModalAction(
+                label: L10n.of(context).createNewTag,
+                value: null,
+              ),
+            ],
+          );
+          if (!mounted) return;
+        }
+        tag ??= await showTextInputDialog(
+          context: context,
+          title: L10n.of(context).addTag,
+          hintText: L10n.of(context).tagName,
+        );
+        final newTag = tag;
+        if (!mounted) return;
+        if (newTag == null) return;
+        await showFutureLoadingDialog(
+          context: context,
+          future: () => room.addTag('u.$newTag'),
+        );
+        return;
+      case ChatContextAction.removeTag:
+        await showFutureLoadingDialog(
+          context: context,
+          future: () => room.removeTag(activeTag!),
+        );
+        return;
     }
+  }
+
+  Map<String, int> roomTags = {};
+
+  void _updateRoomTags([_]) {
+    roomTags.clear();
+    for (final room in Matrix.of(context).client.rooms) {
+      for (final tag in room.tags.keys) {
+        if (tag.startsWith('u.')) roomTags[tag] = (roomTags[tag] ?? 0) + 1;
+      }
+    }
+    setState(() {
+      if (activeTag != null && !roomTags.keys.contains(activeTag)) {
+        activeTag = null;
+        activeFilter = ActiveFilter.allChats;
+      }
+    });
   }
 
   Future<void> dismissStatusList() async {
@@ -767,16 +830,18 @@ class ChatListController extends State<ChatList>
   }
 
   Future<void> setStatus() async {
+    final l10n = L10n.of(context);
     final client = Matrix.of(context).client;
     final currentPresence = await client.fetchCurrentPresence(client.userID!);
+    if (!mounted) return;
     final input = await showTextInputDialog(
       useRootNavigator: false,
       context: context,
-      title: L10n.of(context).setStatus,
-      message: L10n.of(context).leaveEmptyToClearStatus,
-      okLabel: L10n.of(context).ok,
-      cancelLabel: L10n.of(context).cancel,
-      hintText: L10n.of(context).statusExampleMessage,
+      title: l10n.setStatus,
+      message: l10n.leaveEmptyToClearStatus,
+      okLabel: l10n.ok,
+      cancelLabel: l10n.cancel,
+      hintText: l10n.statusExampleMessage,
       maxLines: 6,
       minLines: 1,
       maxLength: 255,
@@ -846,10 +911,17 @@ class ChatListController extends State<ChatList>
     }
   }
 
-  void setActiveFilter(ActiveFilter filter) {
+  void setActiveFilter(ActiveFilter filter, String? tag) {
+    if (filter == ActiveFilter.tag && tag == null) {
+      throw ('Must set a tag when setting filter to tags!');
+    }
     setState(() {
+      activeTag = tag;
       activeFilter = filter;
     });
+    AppSettings.chatFilter.setItem(
+      filter == ActiveFilter.tag ? tag! : filter.name,
+    );
   }
 
   void setActiveClient(Client client) {
@@ -904,18 +976,21 @@ class ChatListController extends State<ChatList>
     if (action == null) return;
     switch (action) {
       case EditBundleAction.addToBundle:
+        if (!mounted) return;
         final bundle = await showTextInputDialog(
           context: context,
           title: l10n.bundleName,
           hintText: l10n.bundleName,
         );
         if (bundle == null || bundle.isEmpty || bundle.isEmpty) return;
+        if (!mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => client.setAccountBundle(bundle),
         );
         break;
       case EditBundleAction.removeFromBundle:
+        if (!mounted) return;
         await showFutureLoadingDialog(
           context: context,
           future: () => client.removeFromAccountBundle(activeBundle!),
@@ -962,6 +1037,8 @@ enum ChatContextAction {
   goToSpace,
   favorite,
   lowPriority,
+  addTag,
+  removeTag,
   markUnread,
   mute,
   leave,

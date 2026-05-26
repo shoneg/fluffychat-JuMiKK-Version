@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:archive/archive.dart';
@@ -91,6 +96,7 @@ class _ImportEmoteArchiveDialogState extends State<ImportEmoteArchiveDialog> {
   }
 
   Future<void> _addEmotePack() async {
+    final matrix = Matrix.of(context);
     setState(() {
       _loading = true;
       _progress = 0;
@@ -148,7 +154,7 @@ class _ImportEmoteArchiveDialogState extends State<ImportEmoteArchiveDialog> {
         } else {
           mxcFile = thumbnail;
         }
-        final uri = await Matrix.of(context).client.uploadContent(
+        final uri = await matrix.client.uploadContent(
           mxcFile.bytes,
           filename: mxcFile.name,
           contentType: mxcFile.mimeType,
@@ -178,6 +184,7 @@ class _ImportEmoteArchiveDialogState extends State<ImportEmoteArchiveDialog> {
       }
     }
 
+    if (!mounted) return;
     await widget.controller.save(context);
     _importMap.removeWhere(
       (key, value) => successfulUploads.contains(key.name),

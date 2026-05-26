@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:async/async.dart' as async;
 import 'package:fluffychat/utils/size_string.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
@@ -25,12 +30,14 @@ extension LocalizedBody on Event {
 
   Future<void> saveFile(BuildContext context) async {
     final matrixFile = await _getFile(context);
+    if (!context.mounted) return;
 
     matrixFile.result?.save(context);
   }
 
   Future<void> shareFile(BuildContext context) async {
     final matrixFile = await _getFile(context);
+    if (!context.mounted) return;
 
     matrixFile.result?.share(context);
   }

@@ -741,11 +741,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Extrémně urážlivé",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Název souboru",
     "@fileName": {
         "type": "String",
@@ -837,11 +832,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Jak urážlivý je tento obsah?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -864,11 +854,6 @@
     },
     "incorrectPassphraseOrKey": "Nesprávné přístupové heslo anebo klíč pro obnovu",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Neškodný",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1158,11 +1143,6 @@
     },
     "obtainingLocation": "Získávání polohy…",
     "@obtainingLocation": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "offensive": "Urážlivé",
-    "@offensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1900,7 +1880,6 @@
     "link": "Odkaz",
     "yourChatBackupHasBeenSetUp": "Vaše záloha chatu byla nastavena.",
     "editBundlesForAccount": "Upravit balíčky pro tento účet",
-    "enableMultiAccounts": "(BETA) Na tomto zařízení povolte více účtů",
     "oneClientLoggedOut": "Jeden z vašich klientů byl odhlášen",
     "removeFromBundle": "Odstranit z tohoto balíčku",
     "unverified": "Neověřeno",
@@ -1934,7 +1913,6 @@
     },
     "markAsRead": "Označit jako přečtené",
     "reportUser": "Nahlásit uživatele",
-    "openChat": "Otevřete chat",
     "dismiss": "Zavrhnout",
     "reactedWith": "{sender} reagoval s {reaction}",
     "@reactedWith": {
@@ -2406,31 +2384,8 @@
             }
         }
     },
-    "prepareSendingAttachment": "Připravuji odeslání přílohy...",
     "sendingAttachment": "Posílám přílohu...",
-    "generatingVideoThumbnail": "Vytvářím náhledový obrázek videa...",
     "compressVideo": "Komprimuji video...",
-    "sendingAttachmentCountOfCount": "Odesílám přílohu {index} z {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Dosažen limit serveru! Čekám {seconds} sekund...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Jedno z vašich zařízení není ověřeno",
     "continueText": "Pokračovat",
     "welcomeText": "Ahoj, ahoj 👋 Tohle je JuMiKK-Chat. Můžete se přihlásit k jakémukoliv domácímu serveru, který je kompatibilní s https://matrix.org, a začít s kýmkoliv chatovat. Je to obří decentralizovaná chatovací síť!",

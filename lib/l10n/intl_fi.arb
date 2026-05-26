@@ -601,11 +601,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Erittäin loukkaavaa",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Tiedostonimi",
     "@fileName": {
         "type": "String",
@@ -679,11 +674,6 @@
     },
     "hideUnknownEvents": "Piilota tuntemattomat tapahtumat",
     "@hideUnknownEvents": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "howOffensiveIsThisContent": "Kuinka loukkaavaa tämä sisältö on?",
-    "@howOffensiveIsThisContent": {
         "type": "String",
         "placeholders": {}
     },
@@ -945,11 +935,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "Loukkaava",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "offline": "Poissa verkosta",
     "@offline": {
         "type": "String",
@@ -1104,11 +1089,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "inoffensive": "Loukkaamatonta",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "inviteContactToGroup": "Kutsu yhteystieto ryhmään {groupName}",
     "@inviteContactToGroup": {
         "type": "String",
@@ -1192,8 +1172,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "enableMultiAccounts": "(BETA) Ota käyttöön tuki usealle tilille tällä laitteella",
-    "@enableMultiAccounts": {},
     "onlineKeyBackupEnabled": "Verkkkoavainvarmuuskopio on käytössä",
     "@onlineKeyBackupEnabled": {
         "type": "String",
@@ -1984,8 +1962,6 @@
             }
         }
     },
-    "openChat": "Avaa Keskustelu",
-    "@openChat": {},
     "pinMessage": "Kiinnitä huoneeseen",
     "@pinMessage": {},
     "confirmEventUnpin": "Haluatko varmasti irrottaa tapahtuman pysyvästi?",
@@ -2739,35 +2715,10 @@
     "@doesNotSeemToBeAValidHomeserver": {},
     "calculatingFileSize": "Lasketaan tiedoston kokoa...",
     "@calculatingFileSize": {},
-    "prepareSendingAttachment": "Valmistele lähetettävä liite...",
-    "@prepareSendingAttachment": {},
     "sendingAttachment": "Lähetetään liitettä...",
     "@sendingAttachment": {},
-    "generatingVideoThumbnail": "Videon pikkukuvan luominen...",
-    "@generatingVideoThumbnail": {},
     "compressVideo": "Pakataan videota...",
     "@compressVideo": {},
-    "sendingAttachmentCountOfCount": "Lähetetään {length} pituista liitettä {index}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Palvelinraja saavutettu! Odotetaan {seconds} sekuntia...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Yhtä laitteistasi ei ole vahvistettu",
     "@oneOfYourDevicesIsNotVerified": {},
     "noticeChatBackupDeviceVerification": "Huomautus: Kun yhdistät kaikki laitteesi keskustelun varmuuskopiointiin, ne vahvistetaan automaattisesti.",

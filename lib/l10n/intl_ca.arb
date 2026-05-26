@@ -72,7 +72,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "areGuestsAllowedToJoin": "Es pot entrar al xat com a convidadi",
+    "areGuestsAllowedToJoin": "Es pot entrar al xat com a convidadi?",
     "@areGuestsAllowedToJoin": {
         "type": "String",
         "placeholders": {}
@@ -1596,11 +1596,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Extremadament ofensiu",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "yourChatBackupHasBeenSetUp": "S’ha configurat la còpia de seguretat del xat.",
     "contentHasBeenReported": "El contingut s’ha denunciat als administradors del servidor",
     "@contentHasBeenReported": {
@@ -1771,17 +1766,12 @@
             }
         }
     },
-    "howOffensiveIsThisContent": "Com d’ofensiu és aquest contingut?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "commandHint_clearcache": "Neteja la memòria cau",
     "@commandHint_clearcache": {
         "type": "String",
         "description": "Usage hint for the command /clearcache"
     },
-    "commandHint_join": "Uneix-te a la sala",
+    "commandHint_join": "Uneix-te a la sala indicada",
     "@commandHint_join": {
         "type": "String",
         "description": "Usage hint for the command /join"
@@ -1921,11 +1911,6 @@
     },
     "encryptThisChat": "Xifra aquest xat",
     "reopenChat": "Reobre el xat",
-    "inoffensive": "Inofensiu",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "addToBundle": "Afegeix al pquet",
     "countFiles": "{count} arxius",
     "@countFiles": {
@@ -1949,11 +1934,6 @@
     "chatPermissions": "Permisos del xat",
     "sender": "Remitent",
     "storeInAndroidKeystore": "Desa en la Android KeyStore",
-    "offensive": "Ofensiu",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "makeAdminDescription": "Un cop hagis fet admin aquesta persona ja no podràs desfer-ho, ja que llavors tindrà els mateixos permisos que tu.",
     "saveKeyManuallyDescription": "Per desar aquesta clau manualment, pica l'eina de compartir o copia-la al porta-retalls.",
     "editBundlesForAccount": "Edita paquets per aquest compte",
@@ -2189,12 +2169,10 @@
     "custom": "Personalitzat",
     "noBackupWarning": "Compte! Si no actives la còpia de seguretat dels xats, perdràs accés als teus missatges xifrats. És molt recomanable activar-ho abans de tancar la sessió.",
     "storeInSecureStorageDescription": "Desa la clau de recuperació en l'emmagatzematge segur d'aquest dispositiu.",
-    "openChat": "Obre el xat",
     "kickUserDescription": "Li usuàrïi ha estat expulsadi però no vetadi. Als xats públics, pot tornar-hi a entrar en qualsevol moment.",
     "importNow": "Importa-ho ara",
     "pinMessage": "Fixa a la sala",
     "invite": "Convida",
-    "enableMultiAccounts": "(Beta) Activa multi-compte en aquest dispositiu",
     "unsupportedAndroidVersionLong": "Aquesta funcionalitat només funciona amb versions d'Android més noves.",
     "storeSecurlyOnThisDevice": "Desa de forma segura en aquest dispositiu",
     "screenSharingDetail": "Estàs compartint la teva pantalla a JuMiKK-Chat",
@@ -2466,8 +2444,6 @@
         }
     },
     "calculatingFileSize": "S'està calculant la mida de l'arxiu...",
-    "prepareSendingAttachment": "S'està preparant per enviar l'adjunt...",
-    "generatingVideoThumbnail": "S'està generant la miniatura del vídeo...",
     "noticeChatBackupDeviceVerification": "Nota: quan connectes tots els dispositius al backup del xat, es verifiquen automàticament.",
     "continueText": "Continua",
     "strikeThrough": "Text ratllat",
@@ -2485,27 +2461,6 @@
     },
     "sendingAttachment": "S'està enviant l'adjunt...",
     "compressVideo": "S'està comprimint el vídeo...",
-    "sendingAttachmentCountOfCount": "S'està enviant l'adjunt {index} de {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "S'ha arribat al límit del servidor! Esperant {seconds} segons...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Un dels teus dispositius no està verificat",
     "welcomeText": "Hola hola! 👋 Això és JuMiKK-Chat. Pots iniciar sessió en qualsevol servidor compatible amb https://matrix.org. I llavors xatejar amb qualsevol. És una xarxa enorme de missatgeria descentralitzada !",
     "blur": "Difumina:",
@@ -2754,7 +2709,7 @@
         }
     },
     "federationBaseUrl": "URL base de federació",
-    "clientWellKnownInformation": "Informació de",
+    "clientWellKnownInformation": "Informació coneguda del client:",
     "baseUrl": "URL base",
     "identityServer": "Servidor d'identitats:",
     "versionWithNumber": "Versió: {version}",
@@ -2774,5 +2729,35 @@
     "signUpGreeting": "El JuMiKK-Chat és descentralitzat! Tria un servidor on vulguis crear-t'hi un compte, i som-hi!",
     "signInGreeting": "Si ja tens un compte a Matrix, benvingudi! Tria el teu servidor i inicia-hi sessió.",
     "appIntro": "Pots xatejar amb lis tevis amiguis amb Fluffychat. És una app de missatgeria [matrix] descentralitzada! Llegeix-ne més a https://matrix.org si vols, o inicia sessió.",
-    "theProcessWasCanceled": "S'ha canceŀlat el procés."
+    "theProcessWasCanceled": "S'ha canceŀlat el procés.",
+    "join": "Entra",
+    "searchOrEnterHomeserverAddress": "Cerca o introdueix l'adreça del teu servidor",
+    "matrixId": "ID de Matrix",
+    "setPowerLevel": "Concedeix permisos",
+    "makeModerator": "Fes moderadori",
+    "makeAdmin": "Fes admin",
+    "removeModeratorRights": "Treu els drets de moderadori",
+    "removeAdminRights": "Treu els drets d'admin",
+    "powerLevel": "Nivell de permisos",
+    "setPowerLevelDescription": "Els nivells de permisos defineixen què pot fer uni membre d'aquesta sala, i es defineix per un número entre 0 i 100.",
+    "owner": "Propietàriï",
+    "mute": "Silencia",
+    "@mute": {
+        "description": "This should be a very short string because there is not much space in the button!"
+    },
+    "createNewChat": "Crea un nou xat",
+    "reset": "Reseteja",
+    "supportFluffyChat": "Dona suport a FluffyChat",
+    "support": "Aporta",
+    "setLowPriority": "Estableix una prioritat baixa",
+    "unsetLowPriority": "Restableix la prioritat",
+    "removeCallFromChat": "Treu la trucada del xat",
+    "removeCallFromChatDescription": "Vols treure la trucada del xat per a totis lis membres?",
+    "removeCallForEveryone": "Treu la trucada per tothom",
+    "startVoiceCall": "Inicia una trucada",
+    "startVideoCall": "Fes una videotrucada",
+    "joinVoiceCall": "Fica't a la trucada",
+    "joinVideoCall": "Fica't a la videotrucada",
+    "live": "En directe",
+    "playSoundOnNotification": "Notificacions sonores"
 }

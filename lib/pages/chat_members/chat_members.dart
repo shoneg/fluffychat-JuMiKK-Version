@@ -1,7 +1,11 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-
 import 'package:matrix/matrix.dart';
 
 import '../../widgets/matrix.dart';
@@ -39,7 +43,7 @@ class ChatMembersController extends State<ChatMembersPage> {
     if (filter.isEmpty) {
       setState(() {
         filteredMembers = members
-          ?..sort((b, a) => a.powerLevel.compareTo(b.powerLevel));
+          ?..sort((b, a) => a.powerLevel.level.compareTo(b.powerLevel.level));
       });
       return;
     }
@@ -52,7 +56,7 @@ class ChatMembersController extends State<ChatMembersPage> {
                     user.id.toLowerCase().contains(filter),
               )
               .toList()
-            ?..sort((b, a) => a.powerLevel.compareTo(b.powerLevel));
+            ?..sort((b, a) => a.powerLevel.level.compareTo(b.powerLevel.level));
     });
   }
 

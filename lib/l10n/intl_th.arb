@@ -645,10 +645,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "@inoffensive": {
-    "type": "String",
-    "placeholders": {}
-  },
   "@unpin": {
     "type": "String",
     "placeholders": {}
@@ -773,10 +769,6 @@
     }
   },
   "@weSentYouAnEmail": {
-    "type": "String",
-    "placeholders": {}
-  },
-  "@offensive": {
     "type": "String",
     "placeholders": {}
   },
@@ -1370,10 +1362,6 @@
     "placeholders": {}
   },
   "@unverified": {},
-  "@howOffensiveIsThisContent": {
-    "type": "String",
-    "placeholders": {}
-  },
   "@serverRequiresEmail": {},
   "@screenSharingTitle": {},
   "@sentCallInformations": {
@@ -1777,10 +1765,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "@extremeOffensive": {
-    "type": "String",
-    "placeholders": {}
-  },
   "@editBlockedServers": {
     "type": "String",
     "placeholders": {}
@@ -1875,7 +1859,6 @@
     "placeholders": {}
   },
   "@storeInSecureStorageDescription": {},
-  "@openChat": {},
   "@kickUserDescription": {},
   "@sendAMessage": {
     "type": "String",
@@ -1892,7 +1875,6 @@
     "placeholders": {}
   },
   "@invite": {},
-  "@enableMultiAccounts": {},
   "@emotePacks": {
     "type": "String",
     "placeholders": {}

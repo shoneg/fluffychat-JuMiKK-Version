@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:fluffychat/l10n/l10n.dart';
@@ -81,6 +86,7 @@ class SendLocationDialogState extends State<SendLocationDialog> {
       context: context,
       future: () => widget.room.sendLocation(body, uri),
     );
+    if (!mounted) return;
     Navigator.of(context, rootNavigator: false).pop();
   }
 

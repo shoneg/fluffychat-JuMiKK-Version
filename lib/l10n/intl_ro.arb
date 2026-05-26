@@ -206,11 +206,6 @@
             }
         }
     },
-    "howOffensiveIsThisContent": "Cât de ofensiv este acest conținut?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "kickFromChat": "Dați afară din chat",
     "@kickFromChat": {
         "type": "String",
@@ -431,8 +426,6 @@
     },
     "removeFromBundle": "Stergeți din acest pachet",
     "@removeFromBundle": {},
-    "enableMultiAccounts": "(BETA) Activați multiple conturi pe acest dispozitiv",
-    "@enableMultiAccounts": {},
     "participant": "Participant",
     "@participant": {
         "type": "String",
@@ -547,8 +540,6 @@
             }
         }
     },
-    "openChat": "Deschideți Chat",
-    "@openChat": {},
     "youBannedUser": "Ați interzis pe {user}",
     "@youBannedUser": {
         "placeholders": {
@@ -822,11 +813,6 @@
     },
     "incorrectPassphraseOrKey": "Parolă sau cheie de recuperare incorectă",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Inofensiv",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1297,11 +1283,6 @@
                 "type": "int"
             }
         }
-    },
-    "offensive": "Ofensiv",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
     },
     "or": "Sau",
     "@or": {
@@ -2049,11 +2030,6 @@
                 "type": "String"
             }
         }
-    },
-    "extremeOffensive": "De foarte mare ofensă",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
     },
     "id": "ID",
     "@id": {

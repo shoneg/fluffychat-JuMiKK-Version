@@ -230,7 +230,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "allSpaces": "Visas vietas",
+    "allSpaces": "Visas kopienas",
     "supposedMxid": "Tam būtu jābūt {mxid}",
     "@supposedMxid": {
         "type": "String",
@@ -385,7 +385,7 @@
         }
     },
     "tryAgain": "Jāmēģina vēlreiz",
-    "areGuestsAllowedToJoin": "Vai vieslietotājiem ir ļauts pievienoties",
+    "areGuestsAllowedToJoin": "Vai vieslietotāji drīkst pievienoties?",
     "@areGuestsAllowedToJoin": {
         "type": "String",
         "placeholders": {}
@@ -458,7 +458,7 @@
         "placeholders": {}
     },
     "link": "Saite",
-    "newSpaceDescription": "Vietas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas kopienas.",
+    "newSpaceDescription": "Kopienas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas cilvēku grupas, kurus vieno kaut kas kopīgs, piemēram, zinātne, matemātika, valoda, reliģija, ķīmija, medicīna, kosmoss, datori, ceļošana, grāmatu lasīšana, kriptovalūta, kiberdrošība, aparātprogrammatūra.",
     "chatDescription": "Tērzēšanas apraksts",
     "next": "Nākamais",
     "@next": {
@@ -531,11 +531,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "inoffensive": "Nav aizskarošs",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "unpin": "Atspraust",
     "@unpin": {
         "type": "String",
@@ -547,7 +542,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "spaceIsPublic": "Vieta ir publiska",
+    "spaceIsPublic": "Kopiena ir publiska",
     "@spaceIsPublic": {
         "type": "String",
         "placeholders": {}
@@ -697,11 +692,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "Aizskarošs",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "needPantalaimonWarning": "Lūgums ņemt vērā, ka pagaidām ir nepieciešams Pantalaimon, lai izmantotu pilnīgu šifrēšanu.",
     "@needPantalaimonWarning": {
         "type": "String",
@@ -790,7 +780,7 @@
             }
         }
     },
-    "spaceName": "Vietas nosaukums",
+    "spaceName": "Kopienas nosaukums",
     "@spaceName": {
         "type": "String",
         "placeholders": {}
@@ -873,7 +863,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "logInTo": "PIeteikties {homeserver}",
+    "logInTo": "Pieteikties {homeserver}",
     "@logInTo": {
         "type": "String",
         "placeholders": {
@@ -1195,7 +1185,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "emoteExists": "Emocija jau pastāv.",
+    "emoteExists": "Emocija jau pastāv!",
     "@emoteExists": {
         "type": "String",
         "placeholders": {}
@@ -1351,7 +1341,7 @@
             }
         }
     },
-    "addToSpace": "Pievienot vietai",
+    "addToSpace": "Pievienot kopienai",
     "unbanFromChat": "Atcelt liegumu tērzēšanā",
     "@unbanFromChat": {
         "type": "String",
@@ -1476,11 +1466,6 @@
     "unverified": "Neapliecināta",
     "fluffychat": "JuMiKK-Chat",
     "@fluffychat": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "howOffensiveIsThisContent": "Cik aizskarošs ir šis saturs?",
-    "@howOffensiveIsThisContent": {
         "type": "String",
         "placeholders": {}
     },
@@ -1646,7 +1631,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "createNewSpace": "Jauna vieta",
+    "createNewSpace": "Jauna kopiena",
     "@createNewSpace": {
         "type": "String",
         "placeholders": {}
@@ -1725,7 +1710,7 @@
     },
     "newGroup": "Jauna kopa",
     "bundleName": "Komplekta nosaukums",
-    "removeFromSpace": "Noņemt no vietas",
+    "removeFromSpace": "Noņemt no kopienas",
     "dateAndTimeOfDay": "{date}, {timeOfDay}",
     "@dateAndTimeOfDay": {
         "type": "String",
@@ -2008,11 +1993,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Īpaši aizskarošs",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "editBlockedServers": "Labot liegtos serverus",
     "@editBlockedServers": {
         "type": "String",
@@ -2060,7 +2040,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "newSpace": "Jauna vieta",
+    "newSpace": "Jauna kopiena",
     "changePassword": "Nomainīt paroli",
     "@changePassword": {
         "type": "String",
@@ -2137,14 +2117,13 @@
         "placeholders": {}
     },
     "storeInSecureStorageDescription": "Glabāt atkopes atslēgu šīs ierīces drošajā krātuvē.",
-    "openChat": "Atvērt tērzēšanu",
     "kickUserDescription": "Lietotājs ir izmests no tērzēšanas, bet piekļuve nav liegta. Publiskās tērzēšanās lietotājs var atkārtoti pievienoties jebkurā laikā.",
     "sendAMessage": "Nosūtīt ziņu",
     "@sendAMessage": {
         "type": "String",
         "placeholders": {}
     },
-    "pin": "PIN",
+    "pin": "Piespraust",
     "@pin": {
         "type": "String",
         "placeholders": {}
@@ -2163,7 +2142,6 @@
         "placeholders": {}
     },
     "invite": "Uzaicināt",
-    "enableMultiAccounts": "(BETA) Iespējot vairākus kontus šajā ierīcē",
     "anyoneCanJoin": "Ikviens var pievienoties",
     "@anyoneCanJoin": {
         "type": "String",
@@ -2203,8 +2181,8 @@
     "transparent": "Caurspīdīgs",
     "searchForUsers": "Meklēt @lietotājus...",
     "pleaseEnterYourCurrentPassword": "Lūgums ievadīt savu pašreizējo paroli",
-    "publicSpaces": "Publiskas vietas",
-    "joinSpace": "Pievienoties vietai",
+    "publicSpaces": "Publiskas kopienas",
+    "joinSpace": "Pievienoties kopienai",
     "createGroupAndInviteUsers": "Izveidot kopu un uzaicināt lietotājus",
     "groupCanBeFoundViaSearch": "Kopu var atrast meklēšanā",
     "commandHint_sendraw": "Nosūtīt neapstrādātu JSON",
@@ -2319,7 +2297,7 @@
             }
         }
     },
-    "addChatOrSubSpace": "Pievienot tērzēšanu vai apakšvietu",
+    "addChatOrSubSpace": "Pievienot tērzēšanu vai apakškopienu",
     "formattedMessagesDescription": "Attēlot bagātinātu ziņu saturu, piemēram, ar Markdown iezīmētu treknrakstu.",
     "sessionLostBody": "Sesija ir zaudēta. Lūgums ziņot par šo kļūdu izstrādātājiem {url}. Kļūdas ziņojums ir: {error}",
     "@sessionLostBody": {
@@ -2410,7 +2388,7 @@
     "changeTheCanonicalRoomAlias": "Mainīt tērzēšanas galveno publisko adresi",
     "sendRoomNotifications": "Sūtīt @istaba paziņojumus",
     "changeTheDescriptionOfTheGroup": "Mainīt tērzēšanas aprakstu",
-    "alwaysUse24HourFormat": "nē",
+    "alwaysUse24HourFormat": "true",
     "@alwaysUse24HourFormat": {
         "description": "Set to true to always display time of day in 24 hour format."
     },
@@ -2423,7 +2401,7 @@
             }
         }
     },
-    "goToSpace": "Doties uz vietu: {space}",
+    "goToSpace": "Doties uz kopienu: {space}",
     "@goToSpace": {
         "type": "String",
         "space": {}
@@ -2446,34 +2424,11 @@
     "changelog": "Izmaiņu žurnāls",
     "noMoreChatsFound": "Vairs netika atrasta neviena tērzēšana...",
     "unread": "Nelasītas",
-    "space": "Vieta",
-    "spaces": "Vietas",
+    "space": "Kopiena",
+    "spaces": "Kopienas",
     "markAsUnread": "Atzīmēt kā nelasītu",
     "sendingAttachment": "Nosūta pielikumu...",
-    "generatingVideoThumbnail": "Izveido video sīktēlu...",
-    "sendingAttachmentCountOfCount": "Nosūta {index}. pielikumu no {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Sasniegts servera ierobežojums. Gaida {seconds} sekundes...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "calculatingFileSize": "Aprēķina datnes lielumu...",
-    "prepareSendingAttachment": "Sagatavo pielikuma nosūtīšanu...",
     "compressVideo": "Saspiež video...",
     "oneOfYourDevicesIsNotVerified": "Viena no ierīcēm nav apliecināta",
     "noticeChatBackupDeviceVerification": "Piezīme: kad visas ierīces tiek savienotas ar tērzēšanu rezerves kopiju, tās tiek automātiski apliecinātas.",
@@ -2562,7 +2517,7 @@
     "more": "Vairāk",
     "roomNotificationSettings": "Istabu paziņojumu iestatījumi",
     "notificationRuleEncrypted": "Šifrēts",
-    "notificationRuleJitsi": "Jitsi",
+    "notificationRuleJitsi": "Jitsi videozvani",
     "notificationRuleIsUserMention": "Lietotāja pieminēšana",
     "notificationRuleIsRoomMentionDescription": "Paziņo lietotājam, kad tiek pieminēta istaba.",
     "notificationRuleMessageDescription": "Paziņo lietotājam par vispārējām ziņām.",
@@ -2645,7 +2600,7 @@
     "longPressToRecordVoiceMessage": "Ilga piespiešana, lai ierakstītu balss ziņu.",
     "pause": "Apturēt",
     "resume": "Atsākt",
-    "removeFromSpaceDescription": "Tērzēšana tiks noņemta no vietas, bet tā joprojām būs redzama tērzēšanu sarakstā.",
+    "removeFromSpaceDescription": "Tērzēšana tiks noņemta no kopienas, bet tā joprojām būs redzama tērzēšanu sarakstā.",
     "countChats": "{chats} tērzēšanas",
     "@countChats": {
         "type": "String",

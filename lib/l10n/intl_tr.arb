@@ -744,11 +744,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Aşırı rahatsız edici",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Dosya adı",
     "@fileName": {
         "type": "String",
@@ -840,11 +835,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Bu içerik ne kadar rahatsız edici?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "Kimlik",
     "@id": {
         "type": "String",
@@ -867,11 +857,6 @@
     },
     "incorrectPassphraseOrKey": "Yanlış parola veya kurtarma anahtarı",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Rahatsız edici değil",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1161,11 +1146,6 @@
     },
     "obtainingLocation": "Konum alınıyor…",
     "@obtainingLocation": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "offensive": "Rahatsız edici",
-    "@offensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1900,8 +1880,6 @@
     "@homeserver": {},
     "serverRequiresEmail": "Bu sunucunun kayıt için e-posta adresinizi doğrulaması gerekiyor.",
     "@serverRequiresEmail": {},
-    "enableMultiAccounts": "(BETA) Bu aygıtta çoklu hesapları etkinleştir",
-    "@enableMultiAccounts": {},
     "bundleName": "Paket adı",
     "@bundleName": {},
     "removeFromBundle": "Bu paketten kaldır",
@@ -1962,8 +1940,6 @@
     "@markAsRead": {},
     "reportUser": "Kullanıcıyı bildir",
     "@reportUser": {},
-    "openChat": "Sohbeti Aç",
-    "@openChat": {},
     "reactedWith": "{sender}, {reaction} ile tepki verdi",
     "@reactedWith": {
         "type": "String",
@@ -2671,35 +2647,10 @@
     "@loginWithMatrixId": {},
     "doesNotSeemToBeAValidHomeserver": "Uyumlu bir ana sunucu gibi görünmüyor. Yanlış URL mi?",
     "@doesNotSeemToBeAValidHomeserver": {},
-    "prepareSendingAttachment": "Ek gönderilmeye hazırlanıyor...",
-    "@prepareSendingAttachment": {},
-    "serverLimitReached": "Sunucu sınırına ulaşıldı! {seconds} saniye bekleniyor...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "calculatingFileSize": "Dosya boyutu hesaplanıyor...",
     "@calculatingFileSize": {},
-    "sendingAttachmentCountOfCount": "Ek {index} / {length} gönderiliyor...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
     "sendingAttachment": "Ek gönderiliyor...",
     "@sendingAttachment": {},
-    "generatingVideoThumbnail": "Video küçük resmi oluşturuluyor...",
-    "@generatingVideoThumbnail": {},
     "compressVideo": "Video sıkıştırılıyor...",
     "@compressVideo": {},
     "oneOfYourDevicesIsNotVerified": "Aygıtlarınızdan biri doğrulanmadı",

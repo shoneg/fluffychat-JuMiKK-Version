@@ -612,11 +612,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Estremamente offensivo",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Nome del file",
     "@fileName": {
         "type": "String",
@@ -708,11 +703,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Quanto è offensivo questo contenuto?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -735,11 +725,6 @@
     },
     "incorrectPassphraseOrKey": "Frase segrata o chiave di ripristino errate",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Inoffensivo",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1004,11 +989,6 @@
                 "type": "int"
             }
         }
-    },
-    "offensive": "Offensivo",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
     },
     "offline": "Fuori linea",
     "@offline": {
@@ -2298,8 +2278,6 @@
     "@noBackupWarning": {},
     "storeInSecureStorageDescription": "Salva la chiave di recupero nell'archivio sicuro di questo dispositivo.",
     "@storeInSecureStorageDescription": {},
-    "openChat": "Apri la Chat",
-    "@openChat": {},
     "kickUserDescription": "L'utente è stato rimosso, ma non bannato. Nelle chat pubbliche, l'utente potrà rientrare quando vuole.",
     "@kickUserDescription": {},
     "importNow": "Importa ora",
@@ -2308,8 +2286,6 @@
     "@pinMessage": {},
     "invite": "Invitare",
     "@invite": {},
-    "enableMultiAccounts": "(BETA) Abilita account multipli su questo dispositivo",
-    "@enableMultiAccounts": {},
     "unsupportedAndroidVersionLong": "Questa funzionalità richiede una versione di Android più recente. Si prega di verificare la presenza di aggiornamenti o supporto per Lineage OS.",
     "@unsupportedAndroidVersionLong": {},
     "storeSecurlyOnThisDevice": "Salva in modo sicuro su questo dispositivo",
@@ -2617,35 +2593,10 @@
     "@sendCanceled": {},
     "calculatingFileSize": "Calcolo della dimensione del file...",
     "@calculatingFileSize": {},
-    "prepareSendingAttachment": "Preparazione per l'invio dell'allegato...",
-    "@prepareSendingAttachment": {},
     "sendingAttachment": "Invio allegato...",
     "@sendingAttachment": {},
     "compressVideo": "Compressione video...",
     "@compressVideo": {},
-    "generatingVideoThumbnail": "Generazione miniatura video...",
-    "@generatingVideoThumbnail": {},
-    "sendingAttachmentCountOfCount": "Invio dell'allegato {index} di {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Limite server raggiunto! Attendere {seconds} secondi...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Uno dei tuoi dispositivi non è verificato",
     "@oneOfYourDevicesIsNotVerified": {},
     "noticeChatBackupDeviceVerification": "Nota: quando colleghi tutti i tuoi dispositivi al backup della chat, vengono verificati automaticamente.",

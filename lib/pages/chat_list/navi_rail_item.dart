@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:badges/badges.dart';
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/widgets/hover_builder.dart';
@@ -67,8 +72,8 @@ class NaviRailItem extends StatelessWidget {
                   child: Material(
                     borderRadius: borderRadius,
                     color: isSelected
-                        ? theme.colorScheme.primaryContainer
-                        : theme.colorScheme.surfaceContainerHigh,
+                        ? theme.colorScheme.secondaryContainer
+                        : theme.colorScheme.surfaceContainerHighest,
                     child: Tooltip(
                       message: toolTip,
                       child: InkWell(

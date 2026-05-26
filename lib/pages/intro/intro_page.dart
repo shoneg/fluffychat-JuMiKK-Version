@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/intro/flows/restore_backup_flow.dart';
@@ -166,6 +171,7 @@ class IntroPage extends StatelessWidget {
                                       final client = await Matrix.of(
                                         context,
                                       ).getLoginClient();
+                                      if (!context.mounted) return;
                                       context.go(
                                         '${GoRouterState.of(context).uri.path}/login',
                                         extra: client,

@@ -1,22 +1,28 @@
-import 'dart:io';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
-import 'package:collection/collection.dart';
-import 'package:desktop_notifications/desktop_notifications.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/client_download_content_extension.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/utils/notification_background_handler.dart';
 import 'package:fluffychat/utils/push_helper.dart';
-import 'package:fluffychat/widgets/fluffy_chat_app.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image/image.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:matrix/matrix.dart';
 import 'package:universal_html/html.dart' as html;
 
 extension LocalNotificationsExtension on MatrixState {
+  static final html.AudioElement _audioPlayer = html.AudioElement()
+    ..src = 'assets/assets/sounds/notification.ogg'
+    ..load();
+
   Future<void> showLocalNotification(Event event) async {
+    final l10n = L10n.of(context);
     final roomId = event.room.id;
     if (activeRoomId == roomId) {
       if (WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed) {
@@ -37,52 +43,15 @@ extension LocalNotificationsExtension on MatrixState {
       hideEdit: true,
       removeMarkdown: true,
     );
+    final avatarUrl = event.room.avatar;
 
-    if (kIsWeb) {
-      final avatarUrl = event.senderFromMemoryOrFallback.avatarUrl;
-      Uri? thumbnailUri;
+    const size = 128;
+    const thumbnailMethod = ThumbnailMethod.crop;
 
-      if (avatarUrl != null) {
-        const size = 128;
-        const thumbnailMethod = ThumbnailMethod.crop;
-        // Pre-cache so that we can later just set the thumbnail uri as icon:
-        try {
-          await client.downloadMxcCached(
-            avatarUrl,
-            width: size,
-            height: size,
-            thumbnailMethod: thumbnailMethod,
-            isThumbnail: true,
-            rounded: true,
-          );
-        } catch (e, s) {
-          Logs().d('Unable to pre-download avatar for web notification', e, s);
-        }
-
-        thumbnailUri = await event.senderFromMemoryOrFallback.avatarUrl
-            ?.getThumbnailUri(
-              client,
-              width: size,
-              height: size,
-              method: thumbnailMethod,
-            );
-      }
-
-      html.Notification(
-        title,
-        body: body,
-        icon: thumbnailUri?.toString(),
-        tag: event.room.id,
-      );
-    } else if (Platform.isLinux) {
-      final avatarUrl = event.room.avatar;
-      final hints = [NotificationHint.soundName('message-new-instant')];
-
-      if (avatarUrl != null) {
-        const size = notificationAvatarDimension;
-        const thumbnailMethod = ThumbnailMethod.crop;
-        // Pre-cache so that we can later just set the thumbnail uri as icon:
-        final data = await client.downloadMxcCached(
+    if (avatarUrl != null) {
+      // Pre-cache so that we can later just set the thumbnail uri as icon:
+      try {
+        await client.downloadMxcCached(
           avatarUrl,
           width: size,
           height: size,
@@ -90,64 +59,54 @@ extension LocalNotificationsExtension on MatrixState {
           isThumbnail: true,
           rounded: true,
         );
-
-        final image = decodeImage(data);
-        if (image != null) {
-          final realData = image.getBytes(order: ChannelOrder.rgba);
-          hints.add(
-            NotificationHint.imageData(
-              image.width,
-              image.height,
-              realData,
-              hasAlpha: true,
-              channels: 4,
-            ),
-          );
-        }
+      } catch (e, s) {
+        Logs().d('Unable to pre-download avatar for web notification', e, s);
       }
-      final notification = await linuxNotifications!.notify(
+    }
+
+    if (kIsWeb) {
+      final thumbnailUri = await avatarUrl?.getThumbnailUri(
+        client,
+        width: size,
+        height: size,
+        method: thumbnailMethod,
+      );
+
+      if (AppSettings.webNotificationSound.value) _audioPlayer.play();
+
+      html.Notification(
         title,
         body: body,
-        replacesId: linuxNotificationIds[roomId] ?? 0,
-        appName: AppSettings.applicationName.value,
-        appIcon: 'fluffychat',
-        actions: [
-          NotificationAction(
-            DesktopNotificationActions.openChat.name,
-            L10n.of(context).openChat,
-          ),
-          NotificationAction(
-            DesktopNotificationActions.seen.name,
-            L10n.of(context).markAsRead,
-          ),
-        ],
-        hints: hints,
+        icon: thumbnailUri?.toString(),
+        tag: event.room.id,
       );
-      notification.action.then((actionStr) {
-        var action = DesktopNotificationActions.values.singleWhereOrNull(
-          (a) => a.name == actionStr,
-        );
-        if (action == null && actionStr == 'default') {
-          action = DesktopNotificationActions.openChat;
-        }
-        switch (action!) {
-          case DesktopNotificationActions.seen:
-            event.room.setReadMarker(
-              event.eventId,
-              mRead: event.eventId,
-              public: AppSettings.sendPublicReadReceipts.value,
-            );
-            break;
-          case DesktopNotificationActions.openChat:
-            setActiveClient(event.room.client);
-
-            FluffyChatApp.router.go('/rooms/${event.room.id}');
-            break;
-        }
-      });
-      linuxNotificationIds[roomId] = notification.id;
+      return;
     }
+
+    FlutterLocalNotificationsPlugin().show(
+      id: event.room.id.hashCode,
+      title: title,
+      body: body,
+      notificationDetails: NotificationDetails(
+        linux: LinuxNotificationDetails(
+          sound: ThemeLinuxSound('message-new-instant'),
+          actions: [
+            LinuxNotificationAction(
+              key: FluffyChatNotificationActions.markAsRead.name,
+              label: l10n.markAsRead,
+            ),
+            LinuxNotificationAction(
+              key: FluffyChatNotificationActions.mute.name,
+              label: l10n.mute,
+            ),
+          ],
+        ),
+      ),
+      payload: FluffyChatPushPayload(
+        client.clientName,
+        event.room.id,
+        event.eventId,
+      ).toString(),
+    );
   }
 }
-
-enum DesktopNotificationActions { seen, openChat }

@@ -682,11 +682,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Extremamente ofensivo",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Nome do ficheiro",
     "@fileName": {
         "type": "String",
@@ -768,11 +763,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Quão ofensivo é este conteúdo?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -795,11 +785,6 @@
     },
     "incorrectPassphraseOrKey": "Senha ou chave de recuperação incorretos",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Inofensivo",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1179,11 +1164,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "Offensivo",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "offline": "Offline",
     "@offline": {
         "type": "String",
@@ -1236,8 +1216,6 @@
     "@removeFromBundle": {},
     "bundleName": "Nome do pacote",
     "@bundleName": {},
-    "enableMultiAccounts": "(BETA) Ativar múltiplas contas neste dispositivo",
-    "@enableMultiAccounts": {},
     "openInMaps": "Abrir nos mapas",
     "@openInMaps": {
         "type": "String",

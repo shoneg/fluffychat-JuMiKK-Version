@@ -1344,11 +1344,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Izugarri iraingarria",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "groups": "Taldeak",
     "@groups": {
         "type": "String",
@@ -1403,7 +1398,6 @@
         "placeholders": {}
     },
     "experimentalVideoCalls": "Bideo-dei esperimentalak",
-    "enableMultiAccounts": "(BETA) Gaitu kontu bat baino gehiago gailu honetan",
     "removeFromBundle": "Kendu sorta honetatik",
     "serverRequiresEmail": "Zerbitzari honek zure posta elektronikoa egiaztatu behar du izena eman dezazun.",
     "or": "Edo",
@@ -1761,16 +1755,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Zenbaterainoko iraingarria da eduki hau?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Ez da iraingarria",
-    "@inoffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "locationPermissionDeniedNotice": "Kokapen baimena ukatu da. Eman zure kokapena partekatzeko baimena.",
     "@locationPermissionDeniedNotice": {
         "type": "String",
@@ -1811,11 +1795,6 @@
     "scanQrCode": "Eskaneatu QR kodea",
     "obtainingLocation": "Kokapena atzitzen…",
     "@obtainingLocation": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "offensive": "Iraingarria",
-    "@offensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1956,7 +1935,6 @@
     "removeFromSpace": "Kendu gunetik",
     "start": "Hasi",
     "reportUser": "Salatu erabiltzailea",
-    "openChat": "Ireki txata",
     "youJoinedTheChat": "Txatera batu zara",
     "youAcceptedTheInvitation": "👍 Gonbidapena onartu duzu",
     "youBannedUser": "{user}(r)i debekua ezarri diozu",
@@ -2467,31 +2445,8 @@
     "loginWithMatrixId": "Hasi saioa Matrix IDarekin",
     "doesNotSeemToBeAValidHomeserver": "Ez dirudi zerbitzaria bateragarria denik. Zuzena da URLa?",
     "calculatingFileSize": "Fitxategiaren tamaina kalkulatzen…",
-    "prepareSendingAttachment": "Eranskinaren bidalketa prestatzen…",
     "sendingAttachment": "Eranskina bidaltzen…",
     "compressVideo": "Bideoa konprimatzen…",
-    "generatingVideoThumbnail": "Bideoaren iruditxoa sortzen…",
-    "serverLimitReached": "Zerbitzariaren muga gainditu da! Itxaron {seconds} segundo…",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
-    "sendingAttachmentCountOfCount": "{index}. eranskina bidaltzen ({length} guztira)…",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Zure gailuetako bat ez dago egiaztatuta",
     "noticeChatBackupDeviceVerification": "Oharra: gailu guztiak txat-babeskopiarekin konektatzen dituzunean, automatikoki egiaztatzen dira.",
     "opacity": "Opakutasuna:",
@@ -2792,5 +2747,18 @@
         "description": "This should be a very short string because there is not much space in the button!"
     },
     "createNewChat": "Sortu txat berria",
-    "reset": "Berrezarri"
+    "reset": "Berrezarri",
+    "supportFluffyChat": "Eman babesa FluffyChat-i",
+    "support": "Lagundu",
+    "setLowPriority": "Ezarri lehentasun baxua",
+    "unsetLowPriority": "Kendu lehentasun baxua",
+    "removeCallFromChat": "Kendu deia txatetik",
+    "removeCallFromChatDescription": "Kide guztientzat kendu nahi al duzu deia txatetik?",
+    "removeCallForEveryone": "Kendu deia guztientzat",
+    "startVoiceCall": "Hasi ahots-deia",
+    "startVideoCall": "Hasi bideo-deia",
+    "joinVoiceCall": "Batu ahots-deira",
+    "joinVideoCall": "Batu bideo-deira",
+    "live": "Zuzenean",
+    "playSoundOnNotification": "Jo soinua jakinarazpenekin"
 }

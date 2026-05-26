@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:math';
 
 import 'package:fluffychat/config/setting_keys.dart';
@@ -61,9 +66,11 @@ class MessageContent extends StatelessWidget {
     final client = Matrix.of(context).client;
     final state = await client.getCryptoIdentityState();
     if (!state.connected) {
+      if (!context.mounted) return;
       final success = await context.push('/backup');
       if (success != true) return;
     }
+    if (!context.mounted) return;
     event.requestKey();
     final sender = event.senderFromMemoryOrFallback;
     await showAdaptiveBottomSheet(

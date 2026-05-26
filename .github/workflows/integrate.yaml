@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: webiny/action-conventional-commits@v1.3.1
+      - uses: webiny/action-conventional-commits@v1.4.2
+      - name: Check licenses
+        uses: fsfe/reuse-action@v6
       - run: ./scripts/generate-locale-config.sh
       - run: git diff --exit-code
       - uses: subosito/flutter-action@v2
@@ -124,14 +126,11 @@ jobs:
         with:
           flutter-version-file: .tool_versions.yaml
           cache: true
-      - name: Use Xcode 16.4
-        run: sudo xcode-select --switch /Applications/Xcode_16.4.app
+      - name: Use specific XCode version
+        run: sudo xcode-select --switch /Applications/Xcode_26.3.app
       - run: brew install sqlcipher
       - uses: moonrepo/setup-rust@v1
-      - name: Add Firebase Messaging
-        run: |
-          flutter pub add fcm_shared_isolate:0.1.0
-          sed -i '' 's,//<GOOGLE_SERVICES>,,g' lib/utils/background_push.dart
+      - run: ./scripts/add-firebase-messaging.sh
       - run: flutter pub get
       - run: flutter build ios --no-codesign
 
@@ -205,7 +204,6 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: gradle-${{ runner.os }}-
-      - run: ./scripts/add-firebase-messaging.sh
       - name: Prepare Homeserver
         run: ./scripts/prepare_integration_test.sh
       - name: Integration tests

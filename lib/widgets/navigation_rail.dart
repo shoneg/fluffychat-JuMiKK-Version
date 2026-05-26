@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -26,7 +31,10 @@ class SpacesNavigationRail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final client = Matrix.of(context).client;
+    final coloredMode = !FluffyThemes.isColumnMode(context);
+    final theme = Theme.of(context);
     return Material(
+      color: coloredMode ? theme.colorScheme.surfaceContainer : null,
       child: SafeArea(
         child: StreamBuilder(
           key: ValueKey(client.userID.toString()),
@@ -54,11 +62,11 @@ class SpacesNavigationRail extends StatelessWidget {
                             isSelected: activeSpaceId == null,
                             onTap: onGoToChats,
                             icon: const Padding(
-                              padding: EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.forum_outlined),
                             ),
                             selectedIcon: const Padding(
-                              padding: EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.forum),
                             ),
                             toolTip: L10n.of(context).chats,
@@ -71,7 +79,7 @@ class SpacesNavigationRail extends StatelessWidget {
                             isSelected: false,
                             onTap: () => context.go('/rooms/newspace'),
                             icon: const Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(6.0),
                               child: Icon(Icons.add),
                             ),
                             toolTip: L10n.of(context).createNewSpace,
@@ -94,6 +102,7 @@ class SpacesNavigationRail extends StatelessWidget {
                           icon: Avatar(
                             mxContent: allSpaces[i].avatar,
                             name: displayname,
+                            size: 36,
                             shapeBorder: RoundedSuperellipseBorder(
                               side: BorderSide(
                                 width: 1,

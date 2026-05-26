@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:device_info_plus/device_info_plus.dart';
@@ -81,17 +86,19 @@ class NewPrivateChatController extends State<NewPrivateChat> {
   void inviteAction() => FluffyShare.shareInviteLink(context);
 
   Future<void> openScannerAction() async {
+    final l10n = L10n.of(context);
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
     if (PlatformInfos.isAndroid) {
       final info = await DeviceInfoPlugin().androidInfo;
+      if (!mounted) return;
       if (info.version.sdkInt < 21) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(L10n.of(context).unsupportedAndroidVersionLong),
-          ),
+        scaffoldMessenger.showSnackBar(
+          SnackBar(content: Text(l10n.unsupportedAndroidVersionLong)),
         );
         return;
       }
     }
+    if (!mounted) return;
     await showAdaptiveBottomSheet(
       context: context,
       builder: (_) => QrScannerModal(
@@ -101,12 +108,15 @@ class NewPrivateChatController extends State<NewPrivateChat> {
   }
 
   Future<void> copyUserId() async {
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+    final l10n = L10n.of(context);
     await Clipboard.setData(
       ClipboardData(text: Matrix.of(context).client.userID!),
     );
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(L10n.of(context).copiedToClipboard)));
+    if (!mounted) return;
+    scaffoldMessenger.showSnackBar(
+      SnackBar(content: Text(l10n.copiedToClipboard)),
+    );
   }
 
   void openUserModal(Profile profile) =>

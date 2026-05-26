@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:fluffychat/config/themes.dart';
@@ -179,8 +184,8 @@ abstract class AppRoutes {
                 context,
                 state,
                 NewPrivateChat(
-                  key: ValueKey('new_chat_${state.uri.query}'),
-                  deeplink: state.uri.queryParameters['deeplink'],
+                  key: ValueKey('new_chat_${state.uri.fragment}'),
+                  deeplink: state.uri.fragment,
                 ),
               ),
               redirect: loggedOutRedirect,
@@ -511,11 +516,19 @@ abstract class AppRoutes {
     BuildContext context,
     GoRouterState state,
     Widget child,
-  ) => FluffyThemes.isColumnMode(context)
-      ? noTransitionPageBuilder(context, state, child)
-      : MaterialPage(
-          key: state.pageKey,
-          restorationId: state.pageKey.value,
-          child: child,
-        );
+  ) {
+    final clientName = state.uri.queryParameters['client'];
+    if (clientName != null) {
+      final matrix = Matrix.of(context);
+      final client = matrix.getClientByName(clientName);
+      if (client != null) matrix.setActiveClient(client);
+    }
+    return FluffyThemes.isColumnMode(context)
+        ? noTransitionPageBuilder(context, state, child)
+        : MaterialPage(
+            key: state.pageKey,
+            restorationId: state.pageKey.value,
+            child: child,
+          );
+  }
 }

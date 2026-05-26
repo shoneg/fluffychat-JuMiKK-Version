@@ -80,11 +80,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "extremeOffensive": "Extremmen offensiv",
-  "@extremeOffensive": {
-    "type": "String",
-    "placeholders": {}
-  },
   "fileName": "Nómine de file",
   "@fileName": {
     "type": "String",
@@ -176,11 +171,6 @@
   },
   "no": "No",
   "@no": {
-    "type": "String",
-    "placeholders": {}
-  },
-  "offensive": "Offensiv",
-  "@offensive": {
     "type": "String",
     "placeholders": {}
   },
@@ -472,11 +462,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "inoffensive": "Ínoffensiv",
-  "@inoffensive": {
-    "type": "String",
-    "placeholders": {}
-  },
   "invited": "Invitat",
   "@invited": {
     "type": "String",
@@ -593,8 +578,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "openChat": "Aperter li conversation",
-  "@openChat": {},
   "reportMessage": "Raportar li missage",
   "@reportMessage": {
     "type": "String",
@@ -1701,10 +1684,6 @@
     "type": "String",
     "placeholders": {}
   },
-  "@howOffensiveIsThisContent": {
-    "type": "String",
-    "placeholders": {}
-  },
   "@serverRequiresEmail": {},
   "@sentCallInformations": {
     "type": "String",
@@ -2051,7 +2030,6 @@
   "@pinMessage": {},
   "@screenSharingDetail": {},
   "@invite": {},
-  "@enableMultiAccounts": {},
   "@emotePacks": {
     "type": "String",
     "placeholders": {}

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:file_picker/file_picker.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/size_string.dart';
@@ -9,7 +14,7 @@ extension MatrixFileExtension on MatrixFile {
   Future<void> save(BuildContext context) async {
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     final l10n = L10n.of(context);
-    final downloadPath = await FilePicker.platform.saveFile(
+    final downloadPath = await FilePicker.saveFile(
       dialogTitle: l10n.saveFile,
       fileName: name,
       type: filePickerFileType,

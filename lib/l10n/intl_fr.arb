@@ -744,11 +744,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Extrêmement offensant",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Nom du ficher",
     "@fileName": {
         "type": "String",
@@ -840,11 +835,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "À quel point ce contenu est-il offensant ?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "Identifiant",
     "@id": {
         "type": "String",
@@ -867,11 +857,6 @@
     },
     "incorrectPassphraseOrKey": "Phrase de passe ou clé de récupération incorrecte",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Non offensant",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1161,11 +1146,6 @@
     },
     "obtainingLocation": "Obtention de la localisation…",
     "@obtainingLocation": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "offensive": "Offensant",
-    "@offensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1900,8 +1880,6 @@
     "@homeserver": {},
     "serverRequiresEmail": "Ce serveur doit valider votre adresse électronique pour l'inscription.",
     "@serverRequiresEmail": {},
-    "enableMultiAccounts": "(BETA) Activer les comptes multiples sur cet appareil",
-    "@enableMultiAccounts": {},
     "bundleName": "Nom du groupe",
     "@bundleName": {},
     "removeFromBundle": "Retirer de ce groupe",
@@ -1962,8 +1940,6 @@
     "@markAsRead": {},
     "reportUser": "Signaler l'utilisateur/trice",
     "@reportUser": {},
-    "openChat": "Ouvrir la discussion",
-    "@openChat": {},
     "reactedWith": "{sender} a réagi avec {reaction}",
     "@reactedWith": {
         "type": "String",
@@ -2709,35 +2685,10 @@
     },
     "calculatingFileSize": "Calcul en cours...",
     "@calculatingFileSize": {},
-    "prepareSendingAttachment": "Préparation à l'envoi...",
-    "@prepareSendingAttachment": {},
     "sendingAttachment": "Envoi en cours...",
     "@sendingAttachment": {},
-    "generatingVideoThumbnail": "Génération de la vignette...",
-    "@generatingVideoThumbnail": {},
     "compressVideo": "Compression de la vidéo...",
     "@compressVideo": {},
-    "sendingAttachmentCountOfCount": "Envoi {index} sur {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Nombre de tentatives dépassé! Patientez {seconds} secondes...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Un de vos appareils n'est pas vérifié",
     "@oneOfYourDevicesIsNotVerified": {},
     "customReaction": "Réaction",

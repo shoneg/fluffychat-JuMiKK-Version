@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:collection/collection.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -77,7 +82,7 @@ class ChatEventList extends StatelessWidget {
               return Column(
                 mainAxisSize: .min,
                 children: [
-                  SeenByRow(event: events.first),
+                  if (events.isNotEmpty) SeenByRow(event: events.first),
                   TypingIndicators(controller),
                 ],
               );
@@ -117,9 +122,7 @@ class ChatEventList extends StatelessWidget {
 
             // The message at this index:
             final event = events[i];
-            final animateIn =
-                event.eventId == timeline.events.first.eventId &&
-                controller.firstUpdateReceived;
+            final animateIn = event.eventId == controller.animateInEventId;
 
             final nextEvent = i + 1 < events.length ? events[i + 1] : null;
             final previousEvent = i > 0 ? events[i - 1] : null;

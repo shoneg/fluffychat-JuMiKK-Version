@@ -72,7 +72,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "areGuestsAllowedToJoin": "Får gästanvändare gå med",
+    "areGuestsAllowedToJoin": "Får gästanvändare gå med?",
     "@areGuestsAllowedToJoin": {
         "type": "String",
         "placeholders": {}
@@ -565,11 +565,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "extremeOffensive": "Extremt stötande",
-    "@extremeOffensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fileName": "Filnamn",
     "@fileName": {
         "type": "String",
@@ -656,11 +651,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Hur stötande är detta innehåll?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -683,11 +673,6 @@
     },
     "incorrectPassphraseOrKey": "Felaktig lösenordsfras eller åsterställningsnyckel",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Oförargligt",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -947,11 +932,6 @@
                 "type": "int"
             }
         }
-    },
-    "offensive": "Stötande",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
     },
     "offline": "Offline",
     "@offline": {
@@ -1928,12 +1908,10 @@
     },
     "link": "Länk",
     "reportUser": "Rapportera användare",
-    "openChat": "Öppna Chatt",
     "sendOnEnter": "Skicka med Enter",
     "scanQrCode": "Skanna QR-kod",
     "yourChatBackupHasBeenSetUp": "Din chatt-backup har konfigurerats.",
     "removeFromBundle": "Ta bort från paket",
-    "enableMultiAccounts": "(BETA) Aktivera multi-konton på denna enhet",
     "emojis": "Uttryckssymboler",
     "placeCall": "Ring",
     "voiceCall": "Röstsamtal",
@@ -2040,7 +2018,7 @@
     },
     "screenSharingTitle": "skärmdelning",
     "noKeyForThisMessage": "Detta kan hända om meddelandet skickades innan du loggade in på ditt konto i den här enheten.\n\nDet kan också vara så att avsändaren har blockerat din enhet eller att något gick fel med internetanslutningen.\n\nKan du läsa meddelandet i en annan session? I sådana fall kan du överföra meddelandet från den sessionen! Gå till Inställningar > Enhet och säkerställ att dina enheter har verifierat varandra. När du öppnar rummet nästa gång och båda sessionerna är i förgrunden, så kommer nycklarna att överföras automatiskt.\n\nVill du inte förlora nycklarna vid utloggning eller när du byter enhet? Säkerställ att du har aktiverat säkerhetskopiering för chatten i inställningarna.",
-    "fileIsTooBigForServer": "Gick inte att skicka! Servern stödjer endast bilagor upp till{max}.",
+    "fileIsTooBigForServer": "Gick inte att skicka! Servern stödjer endast bilagor upp till {max}.",
     "deviceKeys": "Enhetsnycklar:",
     "commandHint_googly": "Skicka några googly ögon",
     "commandHint_cuddle": "Skicka en omfamning",
@@ -2333,7 +2311,7 @@
     "stickers": "Klistermärken",
     "discover": "Upptäck",
     "ignoreUser": "Ignorera användare",
-    "aboutHomeserver": "Om{homeserver}",
+    "aboutHomeserver": "Om {homeserver}",
     "@aboutHomeserver": {
         "type": "String",
         "placeholders": {
@@ -2395,7 +2373,7 @@
             }
         }
     },
-    "invitedBy": "📩Inbjuden av{user}",
+    "invitedBy": "📩Inbjuden av {user}",
     "@invitedBy": {
         "placeholders": {
             "user": {
@@ -2507,31 +2485,8 @@
     "loginWithMatrixId": "Logga in med Matrix-ID",
     "doesNotSeemToBeAValidHomeserver": "Verkar inte vara en kompatibel hemserver. Fel URL?",
     "calculatingFileSize": "Beräknar filstorlek...",
-    "prepareSendingAttachment": "Förbered skickar bilaga...",
     "sendingAttachment": "Skickar bilaga...",
-    "generatingVideoThumbnail": "Genererar förhandsvisning...",
     "compressVideo": "Komprimerar video...",
-    "sendingAttachmentCountOfCount": "Skickar bilaga {index} om {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Servergräns nådd! Väntar {seconds} sekunder...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "En av dina enheter är inte verifierade",
     "noticeChatBackupDeviceVerification": "Notis: När du ansluter alla dina enheter till chatt-backupen, är de automatiskt verifierade.",
     "continueText": "Fortsätt",

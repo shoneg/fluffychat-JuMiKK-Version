@@ -860,11 +860,6 @@
     "hideRedactedMessages": "Oʻchirilgan xabarlarni yashirish",
     "hideRedactedMessagesBody": "Agar kimdir xabarni oʻchirsa, bu xabar endi suhbatda koʻrinmaydi.",
     "hideInvalidOrUnknownMessageFormats": "Notoʻgʻri yoki nomaʼlum xabar formatlarini yashirish",
-    "howOffensiveIsThisContent": "Bu kontent qanchalik haqoratli?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
         "type": "String",
@@ -881,11 +876,6 @@
     },
     "incorrectPassphraseOrKey": "Notoʻgʻri parol yoki tiklash kaliti",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Zararsiz",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1029,11 +1019,6 @@
     },
     "everythingReady": "Hammasi tayyor!",
     "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "extremeOffensive": "O‘ta haqoratomuz",
-    "@extremeOffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -1284,11 +1269,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "Haqoratomuz",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "offline": "Oflayn",
     "@offline": {
         "type": "String",
@@ -1335,7 +1315,6 @@
     "addToBundle": "Toʻplamga qoʻshish",
     "removeFromBundle": "Bu toʻplamdan oʻchirish",
     "bundleName": "Toʻplam nomi",
-    "enableMultiAccounts": "(BETA) Ushbu qurilmada bir nechta hisoblarni yoqish",
     "openInMaps": "Xaritalarda ochish",
     "@openInMaps": {
         "type": "String",
@@ -2114,7 +2093,6 @@
         }
     },
     "newSpaceDescription": "Maydonlar sizga suhbatlaringizni birlashtirish va shaxsiy yoki ommaviy hamjamiyatlarni yaratish imkonini beradi.",
-    "openChat": "Suhbatni ochish",
     "youJoinedTheChat": "Siz suhbatga qoʻshildingiz",
     "encryptThisChat": "Bu suhbatni shifrlash",
     "disableEncryptionWarning": "Xavfsizlik nuqtai nazaridan, agar u ilgari yoqilgan boʻlsa, suhbatda shifrlashni oʻchirib qoʻyolmaysiz.",
@@ -2456,31 +2434,8 @@
     "loginWithMatrixId": "Matriks-ID bilan kirish",
     "doesNotSeemToBeAValidHomeserver": "Uy serveri mos emasga o‘xshaydi. URL xato kiritilganmi?",
     "calculatingFileSize": "Fayl hajmi hisoblanmoqda...",
-    "prepareSendingAttachment": "Yuborish uchun biriktirmani tayyorlang...",
     "sendingAttachment": "Biriktirish yuborilmoqda...",
-    "generatingVideoThumbnail": "Video eskizi yaratilmoqda...",
     "compressVideo": "Video siqilmoqda...",
-    "sendingAttachmentCountOfCount": "Biriktirma yuborilmoqda: {index} of {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
-    "serverLimitReached": "Server limiti tugadi! {seconds} soniya kutilmoqda...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "oneOfYourDevicesIsNotVerified": "Qurilmalaringizdan biri tasdiqlanmagan",
     "continueText": "Davom etish",
     "blur": "Xiralashtirish:",

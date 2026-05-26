@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 
 import 'package:fluffychat/config/setting_keys.dart';
@@ -75,7 +80,8 @@ class _IntroPagePresenterState extends State<IntroPagePresenter> {
       final client = await Matrix.of(context).getLoginClient();
       await client.checkHomeserver(homeserverUrl);
       await client.oidcLogin(session: session, code: code, state: state);
-      if (context.mounted) context.go('/backup');
+      if (!mounted) return;
+      context.go('/backup');
     } catch (e, s) {
       Logs().w('Unable to login via OIDC', e, s);
       if (mounted) {
