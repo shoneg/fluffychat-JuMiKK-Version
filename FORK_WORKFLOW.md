@@ -33,12 +33,16 @@ git branch custom/main main
 ```
 
 2. Resolve conflicts (if any), run tests/build checks.
-3. Merge `sync/upstream-*` into `custom/main`.
-4. Mirror upstream tags into your fork:
+3. Before merging, check and adjust the custom build version:
+   - Update `version` / build number in `pubspec.yaml` if the custom release needs a new app version.
+4. Merge `sync/upstream-*` into `custom/main`.
+5. Mirror upstream tags into your fork:
 
 ```bash
 ./scripts/fork-mirror-upstream-tags.sh
 ```
+
+6. For releases, also update the custom version tag according to [Release tagging](#release-tagging) and update the F-Droid repository according to [F-Droid repository update](#f-droid-repository-update).
 
 ### L10n conflict strategy (recommended)
 
@@ -88,6 +92,22 @@ Use an app release tag based on the upstream version:
 git switch custom/main
 git tag -a jumikk-v1.23.0+r1 -m "Custom release based on upstream v1.23.0"
 git push origin jumikk-v1.23.0+r1
+```
+
+## F-Droid repository update
+
+After building a release APK, update the separate F-Droid repository:
+
+```bash
+# 1. Copy the new APK into repo/, for example:
+repo/de.jumikk.chat_1.2.30.apk
+
+# 2. Update metadata/de.jumikk.chat.yml:
+CurrentVersion: "1.2.3"
+CurrentVersionCode: <new-versionCode>
+
+# 3. Rebuild/sign the repository index:
+fdroid update
 ```
 
 ## Release note template
