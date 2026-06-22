@@ -1,7 +1,7 @@
 name: fluffychat
 title: FluffyChat
 base: core24
-version: 2.7.0
+version: 2.7.1
 license: AGPL-3.0
 summary: The cutest messenger in the Matrix network
 description: |
@@ -38,7 +38,7 @@ description: |
   And a world where apps are made for fluffyness and not for profit. ♥
 
   Join the community: https://matrix.to/#/#fluffy-space:matrix.org
-  Website: http://fluffy.chat
+  Website: http://fluffychat.im
   Microblog: https://mastodon.art/@krille
 
 grade: stable
