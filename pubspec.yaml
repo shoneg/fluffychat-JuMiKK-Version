@@ -128,3 +128,8 @@ flutter_launcher_icons:
 # 2. Always link an (upstream?) issue
 # 3. Explain how and when this can be removed (overrides must be temporarily)
 dependency_overrides:
+  # Workaround for shared_preferences_android 2.4.23+ missing Kotlin classes from
+  # the release compile JAR in this Android build setup.
+  # Remove once the upstream plugin/build-tool combination produces a complete
+  # release compile JAR again.
+  shared_preferences_android: 2.4.20
