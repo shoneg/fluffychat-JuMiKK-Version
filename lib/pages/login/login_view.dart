@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -33,9 +38,18 @@ class LoginView extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               children: <Widget>[
-                Hero(
-                  tag: 'info-logo',
-                  child: Image.asset('assets/banner_transparent.png'),
+                Center(
+                  child: Hero(
+                    tag: 'info-logo',
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(128),
+                      child: Image.asset(
+                        './assets/logo/mini/logo_mini.png',
+                        width: 128,
+                        height: 128,
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 16),
                 Padding(

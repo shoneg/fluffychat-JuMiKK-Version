@@ -1,4 +1,12 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:collection/collection.dart';
+import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/config/themes.dart';
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/code_highlight_theme.dart';
 import 'package:fluffychat/utils/event_checkbox_extension.dart';
 import 'package:fluffychat/widgets/avatar.dart';
@@ -23,7 +31,6 @@ class HtmlMessage extends StatelessWidget {
   final void Function(LinkableElement) onOpen;
   final String? eventId;
   final Set<Event>? checkboxCheckedEvents;
-  final bool limitHeight;
 
   const HtmlMessage({
     super.key,
@@ -35,7 +42,6 @@ class HtmlMessage extends StatelessWidget {
     required this.onOpen,
     this.eventId,
     this.checkboxCheckedEvents,
-    this.limitHeight = true,
   });
 
   /// Keep in sync with: https://spec.matrix.org/latest/client-server-api/#mroommessage-msgtypes
@@ -397,6 +403,76 @@ class HtmlMessage extends StatelessWidget {
             ),
           ),
         );
+      case 'table':
+        return WidgetSpan(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Table(
+              defaultColumnWidth: const IntrinsicColumnWidth(),
+              border: TableBorder.all(color: textColor.withAlpha(100)),
+              children: node.nodes
+                  .whereType<dom.Element>()
+                  .expand(
+                    (e) =>
+                        e.localName == 'thead' ||
+                            e.localName == 'tbody' ||
+                            e.localName == 'tfoot'
+                        ? e.nodes.whereType<dom.Element>()
+                        : [e],
+                  )
+                  .where((e) => e.localName == 'tr')
+                  .map(
+                    (tr) => TableRow(
+                      children: tr.nodes
+                          .whereType<dom.Element>()
+                          .where(
+                            (e) => e.localName == 'td' || e.localName == 'th',
+                          )
+                          .map(
+                            (cell) => Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 6,
+                                vertical: 3,
+                              ),
+                              child: Text.rich(
+                                TextSpan(
+                                  children: _renderWithLineBreaks(
+                                    cell.nodes,
+                                    context,
+                                    depth: depth,
+                                  ),
+                                  style: cell.localName == 'th'
+                                      ? const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        )
+                                      : null,
+                                ),
+                                style: TextStyle(
+                                  fontSize: fontSize,
+                                  color: textColor,
+                                ),
+                              ),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+        );
+      case 'thead':
+      case 'tbody':
+      case 'tfoot':
+      case 'tr':
+      case 'th':
+      case 'td':
+      case 'caption':
+        // These are handled by the 'table' case above; if encountered
+        // outside a table, render children inline as fallback.
+        return TextSpan(
+          children: _renderWithLineBreaks(node.nodes, context, depth: depth),
+        );
       case 'hr':
         return const WidgetSpan(child: Divider());
       case 'details':
@@ -509,12 +585,96 @@ class HtmlMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final element = parser.parse(html).body ?? dom.Element.html('');
-    return Text.rich(
-      _renderHtml(element, context),
-      style: TextStyle(fontSize: fontSize, color: textColor),
-      maxLines: limitHeight ? 64 : null,
-      overflow: TextOverflow.fade,
-      selectionColor: textColor.withAlpha(128),
+    final configuredMaxLines = AppSettings.messagePreviewMaxLines.value;
+    final maxLines = configuredMaxLines <= 0 ? null : configuredMaxLines;
+    final span = _renderHtml(element, context);
+    final style = TextStyle(fontSize: fontSize, color: textColor);
+
+    if (maxLines == null) {
+      return Text.rich(
+        span,
+        style: style,
+        selectionColor: textColor.withAlpha(128),
+      );
+    }
+
+    // Heuristic: if plain text has enough newlines or length, it will overflow.
+    final plainText = element.text;
+    final lineCount = '\n'.allMatches(plainText).length + 1;
+    final likelyOverflows =
+        lineCount > maxLines || plainText.length > maxLines * 50;
+
+    if (!likelyOverflows) {
+      return Text.rich(
+        span,
+        style: style,
+        selectionColor: textColor.withAlpha(128),
+      );
+    }
+
+    return _CollapsibleText(
+      span: span,
+      style: style,
+      maxLines: maxLines,
+      textColor: textColor,
+      linkColor: linkStyle.color ?? textColor,
+      fontSize: fontSize,
+    );
+  }
+}
+
+class _CollapsibleText extends StatefulWidget {
+  final InlineSpan span;
+  final TextStyle style;
+  final int maxLines;
+  final Color textColor;
+  final Color linkColor;
+  final double fontSize;
+
+  const _CollapsibleText({
+    required this.span,
+    required this.style,
+    required this.maxLines,
+    required this.textColor,
+    required this.linkColor,
+    required this.fontSize,
+  });
+
+  @override
+  State<_CollapsibleText> createState() => _CollapsibleTextState();
+}
+
+class _CollapsibleTextState extends State<_CollapsibleText> {
+  bool _expanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = L10n.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        AnimatedSize(
+          duration: FluffyThemes.animationDuration,
+          curve: FluffyThemes.animationCurve,
+          alignment: Alignment.topLeft,
+          child: Text.rich(
+            widget.span,
+            style: widget.style,
+            maxLines: _expanded ? null : widget.maxLines,
+            overflow: _expanded ? TextOverflow.visible : TextOverflow.ellipsis,
+            selectionColor: widget.textColor.withAlpha(128),
+          ),
+        ),
+        Center(
+          child: TextButton.icon(
+            onPressed: () => setState(() => _expanded = !_expanded),
+            style: TextButton.styleFrom(foregroundColor: widget.linkColor),
+            icon: Icon(_expanded ? Icons.arrow_drop_up : Icons.arrow_drop_down),
+            label: Text(_expanded ? l10n.showLess : l10n.showMore),
+          ),
+        ),
+      ],
     );
   }
 }

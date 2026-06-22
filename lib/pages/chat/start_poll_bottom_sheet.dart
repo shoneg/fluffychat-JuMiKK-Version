@@ -1,4 +1,10 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/l10n/l10n.dart';
+import 'package:fluffychat/pages/chat/trust_user_key_dialog.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
@@ -27,6 +33,8 @@ class _StartPollBottomSheetState extends State<StartPollBottomSheet> {
   String? _txid;
 
   Future<void> _createPoll() async {
+    final proceed = await showTrustUserInRoomDialog(context, widget.room);
+    if (!proceed || !mounted) return;
     try {
       var id = 0;
       _txid ??= widget.room.client.generateUniqueTransactionId();
@@ -44,6 +52,7 @@ class _StartPollBottomSheetState extends State<StartPollBottomSheet> {
         maxSelections: _allowMultipleAnswers ? _answers.length : 1,
         txid: _txid,
       );
+      if (!mounted) return;
       Navigator.of(context).pop();
     } catch (e, s) {
       Logs().w('Unable to create poll', e, s);

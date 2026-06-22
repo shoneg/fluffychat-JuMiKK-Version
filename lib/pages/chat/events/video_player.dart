@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:math';
 
 import 'package:fluffychat/config/app_config.dart';
@@ -80,9 +85,12 @@ class EventVideoPlayer extends StatelessWidget {
                 tag: event.eventId,
                 child: Stack(
                   children: [
-                    if (event.hasThumbnail)
+                    if (event.hasThumbnail &&
+                        AppSettings.showThumbnailsInTimeline.value)
                       MxcImage(
                         event: event,
+                        cacheKey: event.transactionId ?? event.eventId,
+                        cacheName: event.room.id,
                         isThumbnail: true,
                         width: width,
                         height: height,
@@ -136,16 +144,12 @@ class EventVideoPlayer extends StatelessWidget {
                 textScaleFactor: MediaQuery.textScalerOf(context).scale(1),
                 style: TextStyle(
                   color: textColor,
-                  fontSize:
-                      AppSettings.fontSizeFactor.value *
-                      AppConfig.messageFontSize,
+                  fontSize: AppConfig.messageFontSize,
                 ),
                 options: const LinkifyOptions(humanize: false),
                 linkStyle: TextStyle(
                   color: linkColor,
-                  fontSize:
-                      AppSettings.fontSizeFactor.value *
-                      AppConfig.messageFontSize,
+                  fontSize: AppConfig.messageFontSize,
                   decoration: TextDecoration.underline,
                   decorationColor: linkColor,
                 ),

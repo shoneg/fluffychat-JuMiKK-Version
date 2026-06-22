@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/main.dart' as app;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -59,23 +64,32 @@ extension type FluffyChatTester(WidgetTester tester) {
     return finder;
   }
 
-  Future<void> tapOn(Object object, {int? index}) async {
+  Future<void> tapOn(
+    Object object, {
+    int? index,
+    bool pumpAndSettle = true,
+  }) async {
     final finder = await _ensureVisible(object, index: index);
 
     _print('👆 Tapping on "$object"');
     await tester.tap(finder);
-    await tester.pumpAndSettle();
+    if (pumpAndSettle) await tester.pumpAndSettle();
   }
 
   Future<void> goBack() => tapOn(find.byTooltip('Back'));
 
-  Future<void> enterText(Object object, String text, {int? index}) async {
+  Future<void> enterText(
+    Object object,
+    String text, {
+    int? index,
+    bool pumpAndSettle = true,
+  }) async {
     final finder = await _ensureVisible(object, index: index);
 
     _print('⌨️ Enter "$text" into "$object"');
     await tester.enterText(finder, text);
     FocusManager.instance.primaryFocus?.unfocus();
-    await tester.pumpAndSettle();
+    if (pumpAndSettle) await tester.pumpAndSettle();
   }
 
   Future<void> scrollUntilVisible(
@@ -107,7 +121,7 @@ extension on Object {
 
 extension StartTest on WidgetTester {
   Future<FluffyChatTester> startFluffyChatTest() async {
-    app.main();
+    app.main(['integration_test']);
 
     return FluffyChatTester(this);
   }

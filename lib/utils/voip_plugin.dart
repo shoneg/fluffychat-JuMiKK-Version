@@ -1,6 +1,10 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:core';
 
-import 'package:fluffychat/pages/chat_list/chat_list.dart';
 import 'package:fluffychat/pages/dialer/dialer.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:flutter/foundation.dart';
@@ -28,7 +32,7 @@ class VoipPlugin with WidgetsBindingObserver implements WebRTCDelegate {
   bool speakerOn = false;
   late VoIP voip;
   OverlayEntry? overlayEntry;
-  BuildContext get context => matrix.context;
+  BuildContext? context;
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState? state) {
@@ -38,42 +42,29 @@ class VoipPlugin with WidgetsBindingObserver implements WebRTCDelegate {
   }
 
   void addCallingOverlay(String callId, CallSession call) {
-    final context = kIsWeb
-        ? ChatList.contextForVoip!
-        : this.context; // web is weird
+    final context = this.context;
+    if (context == null || !context.mounted) {
+      throw ('addCallingOverlay because of missing context', context);
+    }
 
     if (overlayEntry != null) {
       Logs().e('[VOIP] addCallingOverlay: The call session already exists?');
       overlayEntry!.remove();
     }
-    // Overlay.of(context) is broken on web
-    // falling back on a dialog
-    if (kIsWeb) {
-      showDialog(
+
+    overlayEntry = OverlayEntry(
+      builder: (_) => Calling(
         context: context,
-        builder: (context) => Calling(
-          context: context,
-          client: client,
-          callId: callId,
-          call: call,
-          onClear: () => Navigator.of(context).pop(),
-        ),
-      );
-    } else {
-      overlayEntry = OverlayEntry(
-        builder: (_) => Calling(
-          context: context,
-          client: client,
-          callId: callId,
-          call: call,
-          onClear: () {
-            overlayEntry?.remove();
-            overlayEntry = null;
-          },
-        ),
-      );
-      Overlay.of(context).insert(overlayEntry!);
-    }
+        client: client,
+        callId: callId,
+        call: call,
+        onClear: () {
+          overlayEntry?.remove();
+          overlayEntry = null;
+        },
+      ),
+    );
+    Overlay.of(context).insert(overlayEntry!);
   }
 
   @override
@@ -153,6 +144,7 @@ class VoipPlugin with WidgetsBindingObserver implements WebRTCDelegate {
   @override
   Future<void> handleNewGroupCall(GroupCallSession groupCall) async {
     // TODO: implement handleNewGroupCall
+    return;
   }
 
   @override
@@ -163,15 +155,19 @@ class VoipPlugin with WidgetsBindingObserver implements WebRTCDelegate {
   @override
   Future<void> handleMissedCall(CallSession session) async {
     // TODO: implement handleMissedCall
+    return;
   }
 
   @override
   // TODO: implement keyProvider
-  EncryptionKeyProvider? get keyProvider => throw UnimplementedError();
+  EncryptionKeyProvider? get keyProvider {
+    // TODO: Implement me
+    return null;
+  }
 
   @override
-  Future<void> registerListeners(CallSession session) {
-    // TODO: implement registerListeners
-    throw UnimplementedError();
+  Future<void> registerListeners(CallSession session) async {
+    // TODO: Implement me
+    return;
   }
 }

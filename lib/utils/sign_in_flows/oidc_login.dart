@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 
 import 'package:fluffychat/config/setting_keys.dart';
@@ -76,9 +81,10 @@ Future<void> oidcLoginFlow(
   if (kIsWeb) return; // On Web we return at intro page when app starts again!
 
   final returnUrl = Uri.parse(returnUrlString);
-  final queryParameters = returnUrl.hasFragment
+  final queryParameters = returnUrl.fragment.isNotEmpty
       ? Uri.parse(returnUrl.fragment).queryParameters
       : returnUrl.queryParameters;
+
   final code = queryParameters['code'] as String;
   final state = queryParameters['state'] as String;
 

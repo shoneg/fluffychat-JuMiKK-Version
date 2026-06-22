@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/sign_in/view_model/model/public_homeserver_data.dart';
@@ -38,6 +43,7 @@ Future<void> connectToHomeserverFlow(
 
     if ((kIsWeb || PlatformInfos.isLinux) &&
         (supportsSso || authMetadata != null || (signUp && regLink != null))) {
+      if (!context.mounted) return;
       final consent = await showOkCancelAlertDialog(
         context: context,
         title: l10n.appWantsToUseForLogin(homeserverInput),
@@ -45,7 +51,9 @@ Future<void> connectToHomeserverFlow(
         okLabel: l10n.continueText,
       );
       if (consent != OkCancelResult.ok) return;
+      if (!context.mounted) return;
     }
+    if (!context.mounted) return;
 
     if (authMetadata != null && AppSettings.enableMatrixNativeOIDC.value) {
       await oidcLoginFlow(client, context, signUp);
@@ -55,6 +63,7 @@ Future<void> connectToHomeserverFlow(
       if (signUp && regLink != null) {
         await launchUrlString(regLink);
       }
+      if (!context.mounted) return;
       final pathSegments = List.of(
         GoRouter.of(context).routeInformationProvider.value.uri.pathSegments,
       );

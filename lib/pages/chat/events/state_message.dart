@@ -1,7 +1,13 @@
-import 'package:fluffychat/config/setting_keys.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
+import 'package:fluffychat/pages/chat/utd_dialog.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/widgets/avatar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
@@ -45,17 +51,52 @@ class StateMessage extends StatelessWidget {
                       child: Text.rich(
                         TextSpan(
                           children: [
-                            TextSpan(
-                              text: event.calcLocalizedBodyFallback(
-                                MatrixLocals(L10n.of(context)),
+                            if (event.type != EventTypes.Encrypted)
+                              TextSpan(
+                                text: event.calcLocalizedBodyFallback(
+                                  MatrixLocals(L10n.of(context)),
+                                ),
+                              )
+                            else ...[
+                              WidgetSpan(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 4.0),
+                                  child: Avatar(
+                                    name: event.senderFromMemoryOrFallback
+                                        .calcDisplayname(),
+                                    size: 14,
+                                    mxContent: event
+                                        .senderFromMemoryOrFallback
+                                        .avatarUrl,
+                                  ),
+                                ),
                               ),
-                            ),
+                              TextSpan(
+                                text: L10n.of(context).messageNotDecryptable,
+                              ),
+                              if (!event.redacted)
+                                WidgetSpan(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 4.0),
+                                    child: InkWell(
+                                      borderRadius: BorderRadius.circular(7),
+                                      onTap: () =>
+                                          UtdDialog.show(context, event),
+                                      child: Icon(
+                                        Icons.info_outlined,
+                                        size: 14,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                            ],
                             if (onExpand != null) ...[
                               const TextSpan(text: '\n'),
                               TextSpan(
                                 style: TextStyle(
                                   color: theme.colorScheme.primary,
                                   decoration: TextDecoration.underline,
+                                  decorationColor: theme.colorScheme.primary,
                                 ),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = onExpand,
@@ -66,7 +107,7 @@ class StateMessage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 11 * AppSettings.fontSizeFactor.value,
+                          fontSize: 11,
                           decoration: event.redacted
                               ? TextDecoration.lineThrough
                               : null,

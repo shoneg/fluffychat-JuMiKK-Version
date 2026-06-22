@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:math';
 
 import 'package:fluffychat/config/setting_keys.dart';
@@ -50,6 +55,7 @@ class _CuteContentState extends State<CuteContent> {
   Future<void> addOverlay() async {
     _isOverlayShown = true;
     await Future.delayed(const Duration(milliseconds: 50));
+    if (!mounted) return;
 
     OverlayEntry? overlay;
     overlay = OverlayEntry(

@@ -8,8 +8,10 @@ jobs:
   code_tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: webiny/action-conventional-commits@v1.3.1
+      - uses: actions/checkout@v7
+      - uses: webiny/action-conventional-commits@v1.4.2
+      - name: Check licenses
+        uses: fsfe/reuse-action@v6
       - run: ./scripts/generate-locale-config.sh
       - run: git diff --exit-code
       - uses: subosito/flutter-action@v2
@@ -50,15 +52,13 @@ jobs:
     needs: [ code_tests ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/free_up_space
       - uses: subosito/flutter-action@v2
         with:
           flutter-version-file: .tool_versions.yaml
           cache: true
-      - uses: moonrepo/setup-rust@v1
-        with:
-          cache: true
+      - uses: dtolnay/rust-toolchain@stable
       - name: Cache Gradle
         uses: actions/cache@v5
         with:
@@ -79,12 +79,12 @@ jobs:
     needs: [ code_tests ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version-file: .tool_versions.yaml
           cache: true
-      - uses: moonrepo/setup-rust@v1
+      - uses: dtolnay/rust-toolchain@stable
       - run: rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
       - run: flutter pub get
       - name: Prepare web
@@ -103,7 +103,7 @@ jobs:
         arch: [ x64, arm64 ]
     runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest'}}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install git wget curl clang cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libsecret-1-dev libsecret-1-0 librhash0 libssl-dev libwebkit2gtk-4.1-dev -y
       - run: echo "FLUTTER_VERSION=$(yq '.environment.flutter' < .tool_versions.yaml)" >> $GITHUB_ENV
@@ -111,7 +111,7 @@ jobs:
         run: |
           git clone --branch ${{ env.FLUTTER_VERSION }} https://github.com/flutter/flutter.git
           ./flutter/bin/flutter doctor
-      - uses: moonrepo/setup-rust@v1
+      - uses: dtolnay/rust-toolchain@stable
       - run: ./flutter/bin/flutter pub get
       - run: ./flutter/bin/flutter build linux --target-platform linux-${{ matrix.arch }}
 
@@ -119,19 +119,16 @@ jobs:
     needs: [ code_tests ]
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version-file: .tool_versions.yaml
           cache: true
-      - name: Use Xcode 16.4
-        run: sudo xcode-select --switch /Applications/Xcode_16.4.app
+      - name: Use specific XCode version
+        run: sudo xcode-select --switch /Applications/Xcode_26.3.app
       - run: brew install sqlcipher
-      - uses: moonrepo/setup-rust@v1
-      - name: Add Firebase Messaging
-        run: |
-          flutter pub add fcm_shared_isolate:0.1.0
-          sed -i '' 's,//<GOOGLE_SERVICES>,,g' lib/utils/background_push.dart
+      - uses: dtolnay/rust-toolchain@stable
+      - run: ./scripts/add-firebase-messaging.sh
       - run: flutter pub get
       - run: flutter build ios --no-codesign
 
@@ -148,7 +145,7 @@ jobs:
       ANDROID_AVD_HOME: /home/runner/.android/avd
       AVD_CONFIG_PATH: "~/.android/avd/test.avd/config.ini"
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/free_up_space
       # https://github.blog/changelog/2023-02-23-hardware-accelerated-android-virtualization-on-actions-windows-and-linux-larger-hosted-runners/
       - name: Enable KVM group perms
@@ -194,9 +191,7 @@ jobs:
         with:
           flutter-version-file: .tool_versions.yaml
           cache: true
-      - uses: moonrepo/setup-rust@v1
-        with:
-          cache: true
+      - uses: dtolnay/rust-toolchain@stable
       - name: Cache Gradle
         uses: actions/cache@v5
         with:
@@ -205,7 +200,6 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: gradle-${{ runner.os }}-
-      - run: ./scripts/add-firebase-messaging.sh
       - name: Prepare Homeserver
         run: ./scripts/prepare_integration_test.sh
       - name: Integration tests

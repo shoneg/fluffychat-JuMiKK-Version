@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 import 'dart:ui';
 
@@ -82,6 +87,7 @@ class KeyVerificationPageState extends State<KeyVerificationDialog> {
       },
     );
     if (valid.error != null) {
+      if (!mounted) return;
       await showOkAlertDialog(
         useRootNavigator: false,
         context: context,
@@ -178,9 +184,10 @@ class KeyVerificationPageState extends State<KeyVerificationDialog> {
         );
         buttons.add(
           AdaptiveDialogAction(
-            onPressed: () => widget.request.rejectVerification().then(
-              (_) => Navigator.of(context, rootNavigator: false).pop(false),
-            ),
+            onPressed: () => widget.request.rejectVerification().then((_) {
+              if (!context.mounted) return;
+              Navigator.of(context, rootNavigator: false).pop(false);
+            }),
             child: Text(
               L10n.of(context).reject,
               style: TextStyle(color: theme.colorScheme.error),

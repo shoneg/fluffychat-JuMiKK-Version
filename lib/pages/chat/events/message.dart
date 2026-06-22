@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui' as ui;
 
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
@@ -82,7 +87,6 @@ class Message extends StatelessWidget {
     if (!{
       EventTypes.Message,
       EventTypes.Sticker,
-      EventTypes.Encrypted,
       EventTypes.CallInvite,
       PollEventContent.startType,
     }.contains(event.type)) {
@@ -104,24 +108,20 @@ class Message extends StatelessWidget {
     var color = theme.colorScheme.surfaceContainerHigh;
     final displayTime =
         event.type == EventTypes.RoomCreate ||
-        nextEvent == null ||
-        !event.originServerTs.sameEnvironment(nextEvent!.originServerTs);
+        previousEvent == null ||
+        !event.originServerTs.sameEnvironment(previousEvent!.originServerTs);
+
     final nextEventSameSender =
         nextEvent != null &&
-        {
-          EventTypes.Message,
-          EventTypes.Sticker,
-          EventTypes.Encrypted,
-        }.contains(nextEvent!.type) &&
+        {EventTypes.Message, EventTypes.Sticker}.contains(nextEvent!.type) &&
         nextEvent!.senderId == event.senderId &&
-        !displayTime;
+        nextEvent!.originServerTs.sameEnvironment(event.originServerTs);
 
     final previousEventSameSender =
         previousEvent != null &&
         {
           EventTypes.Message,
           EventTypes.Sticker,
-          EventTypes.Encrypted,
         }.contains(previousEvent!.type) &&
         previousEvent!.senderId == event.senderId &&
         previousEvent!.originServerTs.sameEnvironment(event.originServerTs);
@@ -146,13 +146,10 @@ class Message extends StatelessWidget {
     final borderRadius = BorderRadius.only(
       topLeft: !ownMessage && nextEventSameSender ? hardCorner : roundedCorner,
       topRight: ownMessage && nextEventSameSender ? hardCorner : roundedCorner,
-      bottomLeft: !ownMessage && previousEventSameSender
-          ? hardCorner
-          : roundedCorner,
-      bottomRight: ownMessage && previousEventSameSender
-          ? hardCorner
-          : roundedCorner,
+      bottomLeft: !ownMessage ? hardCorner : roundedCorner,
+      bottomRight: ownMessage ? hardCorner : roundedCorner,
     );
+    const avatarSize = 48.0;
     final noBubble =
         ({
           MessageTypes.Video,
@@ -203,129 +200,97 @@ class Message extends StatelessWidget {
     final enterThread = this.enterThread;
     final sender = event.senderFromMemoryOrFallback;
 
-    return _AnimateIn(
-      animateIn: animateIn,
-      child: Center(
-        child: Swipeable(
-          key: ValueKey(event.eventId),
-          background: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.0),
-            child: Center(child: Icon(Icons.check_outlined)),
+    final wallpaperTextShadow = !wallpaperMode
+        ? null
+        : [
+            Shadow(
+              offset: Offset(0.0, 0.0),
+              blurRadius: 2,
+              color: theme.colorScheme.surface,
+            ),
+          ];
+    final eventStateTextColor = theme.colorScheme.onSurface;
+
+    return Center(
+      child: Swipeable(
+        key: ValueKey(event.transactionId ?? event.eventId),
+        background: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12.0),
+          child: Center(child: Icon(Icons.check_outlined)),
+        ),
+        direction: AppSettings.swipeRightToLeftToReply.value
+            ? SwipeDirection.endToStart
+            : SwipeDirection.startToEnd,
+        onSwipe: (_) => onSwipe(),
+        child: Container(
+          constraints: const BoxConstraints(
+            maxWidth: FluffyThemes.maxTimelineWidth,
           ),
-          direction: AppSettings.swipeRightToLeftToReply.value
-              ? SwipeDirection.endToStart
-              : SwipeDirection.startToEnd,
-          onSwipe: (_) => onSwipe(),
-          child: Container(
-            constraints: const BoxConstraints(
-              maxWidth: FluffyThemes.maxTimelineWidth,
-            ),
-            padding: EdgeInsets.only(
-              left: 8.0,
-              right: 8.0,
-              top: nextEventSameSender ? 1.0 : 4.0,
-              bottom: previousEventSameSender ? 1.0 : 4.0,
-            ),
-            child: Column(
-              mainAxisSize: .min,
-              crossAxisAlignment: ownMessage ? .end : .start,
-              children: <Widget>[
-                if (displayTime || selected)
-                  Padding(
-                    padding: displayTime
-                        ? const EdgeInsets.symmetric(vertical: 8.0)
-                        : EdgeInsets.zero,
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 4.0),
-                        child: Material(
-                          borderRadius: BorderRadius.circular(
-                            AppConfig.borderRadius * 2,
-                          ),
-                          color: theme.colorScheme.surface.withAlpha(128),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0,
-                              vertical: 2.0,
-                            ),
-                            child: Text(
-                              event.originServerTs.localizedTime(context),
-                              style: TextStyle(
-                                fontSize: 12 * AppSettings.fontSizeFactor.value,
-                                fontWeight: FontWeight.bold,
-                                color: theme.colorScheme.secondary,
-                              ),
-                            ),
-                          ),
-                        ),
+          padding: EdgeInsets.only(
+            left: 8.0,
+            right: 8.0,
+            top: nextEventSameSender ? 1.0 : 8.0,
+            bottom: previousEventSameSender || previousEvent == null
+                ? 1.0
+                : 8.0,
+          ),
+          child: Column(
+            mainAxisSize: .min,
+            crossAxisAlignment: ownMessage ? .end : .start,
+            children: <Widget>[
+              Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Positioned(
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: InkWell(
+                      hoverColor: longPressSelect ? Colors.transparent : null,
+                      enableFeedback: !selected,
+                      onTap: longPressSelect ? null : () => onSelect(event),
+                      borderRadius: BorderRadius.circular(
+                        AppConfig.borderRadius / 2,
                       ),
-                    ),
-                  ),
-                Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Positioned(
-                      top: 0,
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      child: InkWell(
-                        hoverColor: longPressSelect ? Colors.transparent : null,
-                        enableFeedback: !selected,
-                        onTap: longPressSelect ? null : () => onSelect(event),
+                      child: Material(
                         borderRadius: BorderRadius.circular(
                           AppConfig.borderRadius / 2,
                         ),
-                        child: Material(
-                          borderRadius: BorderRadius.circular(
-                            AppConfig.borderRadius / 2,
-                          ),
-                          color: selected || highlightMarker
-                              ? theme.colorScheme.secondaryContainer.withAlpha(
-                                  128,
-                                )
-                              : Colors.transparent,
-                        ),
+                        color: selected || highlightMarker
+                            ? theme.colorScheme.secondaryContainer.withAlpha(
+                                128,
+                              )
+                            : Colors.transparent,
                       ),
                     ),
-                    Row(
-                      crossAxisAlignment: .start,
-                      mainAxisAlignment: rowMainAxisAlignment,
-                      children: [
-                        if (longPressSelect && !event.redacted)
-                          SizedBox(
-                            height: 32,
-                            width: Avatar.defaultSize,
-                            child: IconButton(
-                              padding: EdgeInsets.zero,
-                              tooltip: L10n.of(context).select,
-                              icon: Icon(
-                                selected
-                                    ? Icons.check_circle
-                                    : Icons.circle_outlined,
-                              ),
-                              onPressed: () => onSelect(event),
+                  ),
+                  Row(
+                    crossAxisAlignment: .end,
+                    mainAxisAlignment: rowMainAxisAlignment,
+                    children: [
+                      if (longPressSelect && !event.redacted)
+                        SizedBox(
+                          height: avatarSize,
+                          width: avatarSize,
+                          child: IconButton(
+                            padding: EdgeInsets.zero,
+                            tooltip: L10n.of(context).select,
+                            icon: Icon(
+                              selected
+                                  ? Icons.check_circle
+                                  : Icons.circle_outlined,
                             ),
-                          )
-                        else if (nextEventSameSender || ownMessage)
-                          SizedBox(
-                            width: Avatar.defaultSize,
-                            child: Center(
-                              child: SizedBox(
-                                width: 16,
-                                height: 16,
-                                child: event.status == EventStatus.error
-                                    ? const Icon(Icons.error, color: Colors.red)
-                                    : event.fileSendingStatus != null
-                                    ? const CircularProgressIndicator.adaptive(
-                                        strokeWidth: 1,
-                                      )
-                                    : null,
-                              ),
-                            ),
-                          )
-                        else
-                          FutureBuilder<User?>(
+                            onPressed: () => onSelect(event),
+                          ),
+                        )
+                      else if (previousEventSameSender || ownMessage)
+                        SizedBox(width: avatarSize)
+                      else
+                        Padding(
+                          // Align with bottom line of displayname:
+                          padding: const EdgeInsets.only(bottom: 2.0),
+                          child: FutureBuilder<User?>(
                             future: event.fetchSenderUser(),
                             builder: (context, snapshot) {
                               final user = snapshot.data ?? sender;
@@ -337,6 +302,7 @@ class Message extends StatelessWidget {
                                   user: user,
                                   onMention: onMention,
                                 ),
+                                size: avatarSize,
                                 presenceUserId: user.stateKey,
                                 presenceBackgroundColor: wallpaperMode
                                     ? Colors.transparent
@@ -344,92 +310,27 @@ class Message extends StatelessWidget {
                               );
                             },
                           ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: .start,
-                            mainAxisSize: .min,
-                            children: [
-                              if (!nextEventSameSender)
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8.0,
-                                    bottom: 4,
+                        ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: .start,
+                          mainAxisSize: .min,
+                          children: [
+                            Container(
+                              alignment: alignment,
+                              padding: const EdgeInsets.only(left: 8),
+                              child: GestureDetector(
+                                onLongPress: longPressSelect
+                                    ? null
+                                    : () {
+                                        HapticFeedback.heavyImpact();
+                                        onSelect(event);
+                                      },
+                                child: _AnimateIn(
+                                  key: ValueKey(
+                                    event.transactionId ?? event.eventId,
                                   ),
-                                  child: ownMessage || event.room.isDirectChat
-                                      ? const SizedBox(height: 12)
-                                      : Row(
-                                          children: [
-                                            if (sender.powerLevel >= 50)
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                  right: 2.0,
-                                                ),
-                                                child: Icon(
-                                                  sender.powerLevel >= 100
-                                                      ? Icons
-                                                            .admin_panel_settings
-                                                      : Icons
-                                                            .add_moderator_outlined,
-                                                  size: 14,
-                                                  color: theme
-                                                      .colorScheme
-                                                      .onPrimaryContainer,
-                                                ),
-                                              ),
-                                            Expanded(
-                                              child: FutureBuilder<User?>(
-                                                future: event.fetchSenderUser(),
-                                                builder: (context, snapshot) {
-                                                  final displayname =
-                                                      snapshot.data
-                                                          ?.calcDisplayname() ??
-                                                      sender.calcDisplayname();
-                                                  return Text(
-                                                    displayname,
-                                                    style: TextStyle(
-                                                      fontSize: 11,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color:
-                                                          (theme.brightness ==
-                                                              Brightness.light
-                                                          ? displayname.color
-                                                          : displayname
-                                                                .lightColorText),
-                                                      shadows: !wallpaperMode
-                                                          ? null
-                                                          : [
-                                                              const Shadow(
-                                                                offset: Offset(
-                                                                  0.0,
-                                                                  0.0,
-                                                                ),
-                                                                blurRadius: 3,
-                                                                color: Colors
-                                                                    .black,
-                                                              ),
-                                                            ],
-                                                    ),
-                                                    maxLines: 1,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                  );
-                                                },
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                ),
-                              Container(
-                                alignment: alignment,
-                                padding: const EdgeInsets.only(left: 8),
-                                child: GestureDetector(
-                                  onLongPress: longPressSelect
-                                      ? null
-                                      : () {
-                                          HapticFeedback.heavyImpact();
-                                          onSelect(event);
-                                        },
+                                  animateIn: animateIn,
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: noBubble
@@ -534,42 +435,6 @@ class Message extends StatelessWidget {
                                               selected: selected,
                                               bigEmojis: bigEmojis,
                                             ),
-                                            if (event.hasAggregatedEvents(
-                                              timeline,
-                                              RelationshipTypes.edit,
-                                            ))
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                  bottom: 8.0,
-                                                  left: 16.0,
-                                                  right: 16.0,
-                                                ),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  spacing: 4.0,
-                                                  children: [
-                                                    Icon(
-                                                      Icons.edit_outlined,
-                                                      color: textColor
-                                                          .withAlpha(164),
-                                                      size: 14,
-                                                    ),
-                                                    Text(
-                                                      displayEvent
-                                                          .originServerTs
-                                                          .localizedTimeShort(
-                                                            context,
-                                                          ),
-                                                      style: TextStyle(
-                                                        color: textColor
-                                                            .withAlpha(164),
-                                                        fontSize: 11,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
                                           ],
                                         ),
                                       ),
@@ -577,287 +442,414 @@ class Message extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Align(
-                                alignment: ownMessage
-                                    ? Alignment.bottomRight
-                                    : Alignment.bottomLeft,
-                                child: AnimatedSize(
-                                  duration: FluffyThemes.animationDuration,
-                                  curve: FluffyThemes.animationCurve,
-                                  child: showReactionPicker
-                                      ? Padding(
-                                          padding: const EdgeInsets.all(4.0),
-                                          child: Material(
-                                            elevation: 4,
-                                            borderRadius: BorderRadius.circular(
-                                              AppConfig.borderRadius,
+                            ),
+
+                            Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Row(
+                                mainAxisAlignment: ownMessage ? .end : .start,
+                                children: [
+                                  if (sender.powerLevel.role !=
+                                          PowerLevelRole.user &&
+                                      !previousEventSameSender &&
+                                      !ownMessage &&
+                                      !event.room.isDirectChat)
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        right: 2.0,
+                                      ),
+                                      child: Icon(
+                                        sender.powerLevel.role ==
+                                                PowerLevelRole.moderator
+                                            ? Icons.add_moderator_outlined
+                                            : Icons.admin_panel_settings,
+                                        size: 14,
+                                        color: theme
+                                            .colorScheme
+                                            .onPrimaryContainer,
+                                      ),
+                                    ),
+                                  if (!previousEventSameSender &&
+                                      !ownMessage &&
+                                      !event.room.isDirectChat)
+                                    FutureBuilder<User?>(
+                                      future: event.fetchSenderUser(),
+                                      builder: (context, snapshot) {
+                                        final displayname =
+                                            snapshot.data?.calcDisplayname() ??
+                                            sender.calcDisplayname();
+                                        return ConstrainedBox(
+                                          constraints: BoxConstraints(
+                                            maxWidth: 200,
+                                          ),
+                                          child: Text(
+                                            displayname,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color:
+                                                  (theme.brightness ==
+                                                      Brightness.light
+                                                  ? displayname.color
+                                                  : displayname.lightColorText),
+                                              fontSize: 11,
+                                              shadows: wallpaperTextShadow,
                                             ),
-                                            shadowColor: theme
-                                                .colorScheme
-                                                .surface
-                                                .withAlpha(128),
-                                            child: SingleChildScrollView(
-                                              scrollDirection: Axis.horizontal,
-                                              child: Row(
-                                                mainAxisSize: .min,
-                                                children: [
-                                                  ...AppConfig.defaultReactions.map(
-                                                    (emoji) => IconButton(
-                                                      padding: EdgeInsets.zero,
-                                                      icon: Center(
-                                                        child: Opacity(
-                                                          opacity:
-                                                              sentReactions
-                                                                  .contains(
-                                                                    emoji,
-                                                                  )
-                                                              ? 0.33
-                                                              : 1,
-                                                          child: Text(
-                                                            emoji,
-                                                            style:
-                                                                const TextStyle(
-                                                                  fontSize: 20,
-                                                                ),
-                                                            textAlign: TextAlign
-                                                                .center,
-                                                          ),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  if (event.status.isSent &&
+                                      (displayTime ||
+                                          !previousEventSameSender ||
+                                          selected))
+                                    Text(
+                                      ' ${event.originServerTs.localizedTimeOfDay(context)}',
+                                      style: TextStyle(
+                                        color: eventStateTextColor,
+                                        fontSize: 11,
+                                        shadows: wallpaperTextShadow,
+                                      ),
+                                    ),
+                                  if (event.hasAggregatedEvents(
+                                    timeline,
+                                    RelationshipTypes.edit,
+                                  )) ...[
+                                    Text(' ', style: TextStyle(fontSize: 11)),
+                                    Text(
+                                      L10n.of(context).edited,
+                                      style: TextStyle(
+                                        color: eventStateTextColor,
+                                        fontSize: 11,
+                                        shadows: wallpaperTextShadow,
+                                      ),
+                                    ),
+                                  ],
+                                  if (event.status == EventStatus.error) ...[
+                                    Text(' ', style: TextStyle(fontSize: 11)),
+                                    Text(
+                                      L10n.of(context).couldNotBeSent,
+                                      style: TextStyle(
+                                        fontSize: 11,
+                                        color: theme.colorScheme.error,
+                                        shadows: wallpaperTextShadow,
+                                      ),
+                                    ),
+                                    Text(' ', style: TextStyle(fontSize: 11)),
+                                    Icon(
+                                      Icons.error_outlined,
+                                      size: 14,
+                                      color: theme.colorScheme.error,
+                                      shadows: wallpaperTextShadow,
+                                    ),
+                                  ],
+                                  if (event.status == EventStatus.sending) ...[
+                                    Text(
+                                      switch (event.fileSendingStatus) {
+                                        null => L10n.of(context).sending,
+                                        FileSendingStatus.generatingThumbnail =>
+                                          L10n.of(context).generatingThumbnail,
+                                        FileSendingStatus.encrypting => L10n.of(
+                                          context,
+                                        ).encrypting,
+                                        FileSendingStatus.uploading => L10n.of(
+                                          context,
+                                        ).uploading,
+                                      },
+                                      style: TextStyle(
+                                        color: eventStateTextColor,
+                                        fontSize: 11,
+                                        shadows: wallpaperTextShadow,
+                                      ),
+                                    ),
+                                    Text(' ', style: TextStyle(fontSize: 11)),
+                                    SizedBox.square(
+                                      dimension: 11,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              ),
+                            ),
+                            Align(
+                              alignment: ownMessage
+                                  ? Alignment.bottomRight
+                                  : Alignment.bottomLeft,
+                              child: AnimatedSize(
+                                duration: FluffyThemes.animationDuration,
+                                curve: FluffyThemes.animationCurve,
+                                child: showReactionPicker
+                                    ? Padding(
+                                        padding: const EdgeInsets.all(4.0),
+                                        child: Material(
+                                          elevation: 4,
+                                          borderRadius: BorderRadius.circular(
+                                            AppConfig.borderRadius,
+                                          ),
+                                          shadowColor: theme.colorScheme.surface
+                                              .withAlpha(128),
+                                          child: SingleChildScrollView(
+                                            scrollDirection: Axis.horizontal,
+                                            child: Row(
+                                              mainAxisSize: .min,
+                                              children: [
+                                                ...AppConfig.defaultReactions.map(
+                                                  (emoji) => IconButton(
+                                                    padding: EdgeInsets.zero,
+                                                    icon: Center(
+                                                      child: Opacity(
+                                                        opacity:
+                                                            sentReactions
+                                                                .contains(emoji)
+                                                            ? 0.33
+                                                            : 1,
+                                                        child: Text(
+                                                          emoji,
+                                                          style:
+                                                              const TextStyle(
+                                                                fontSize: 20,
+                                                              ),
+                                                          textAlign:
+                                                              TextAlign.center,
                                                         ),
                                                       ),
-                                                      onPressed:
-                                                          sentReactions
-                                                              .contains(emoji)
-                                                          ? null
-                                                          : () {
-                                                              onSelect(event);
-                                                              event.room
-                                                                  .sendReaction(
-                                                                    event
-                                                                        .eventId,
-                                                                    emoji,
-                                                                  );
-                                                            },
                                                     ),
+                                                    onPressed:
+                                                        sentReactions.contains(
+                                                          emoji,
+                                                        )
+                                                        ? null
+                                                        : () {
+                                                            onSelect(event);
+                                                            event.room
+                                                                .sendReaction(
+                                                                  event.eventId,
+                                                                  emoji,
+                                                                );
+                                                          },
                                                   ),
-                                                  IconButton(
-                                                    icon: const Icon(
-                                                      Icons
-                                                          .add_reaction_outlined,
-                                                    ),
-                                                    tooltip: L10n.of(
-                                                      context,
-                                                    ).customReaction,
-                                                    onPressed: () async {
-                                                      final emoji = await showAdaptiveBottomSheet<String>(
-                                                        context: context,
-                                                        builder: (context) => Scaffold(
-                                                          appBar: AppBar(
-                                                            title: Text(
-                                                              L10n.of(
-                                                                context,
-                                                              ).customReaction,
-                                                            ),
-                                                            leading: CloseButton(
-                                                              onPressed: () =>
-                                                                  Navigator.of(
-                                                                    context,
-                                                                  ).pop(null),
-                                                            ),
+                                                ),
+                                                IconButton(
+                                                  icon: const Icon(
+                                                    Icons.add_reaction_outlined,
+                                                  ),
+                                                  tooltip: L10n.of(
+                                                    context,
+                                                  ).customReaction,
+                                                  onPressed: () async {
+                                                    final emoji = await showAdaptiveBottomSheet<String>(
+                                                      context: context,
+                                                      builder: (context) => Scaffold(
+                                                        appBar: AppBar(
+                                                          title: Text(
+                                                            L10n.of(
+                                                              context,
+                                                            ).customReaction,
                                                           ),
-                                                          body: SizedBox(
-                                                            height:
-                                                                double.infinity,
-                                                            child: EmojiPicker(
-                                                              onEmojiSelected:
-                                                                  (_, emoji) =>
-                                                                      Navigator.of(
-                                                                        context,
-                                                                      ).pop(
-                                                                        emoji
-                                                                            .emoji,
-                                                                      ),
-                                                              config: Config(
-                                                                locale:
-                                                                    Localizations.localeOf(
+                                                          leading: CloseButton(
+                                                            onPressed: () =>
+                                                                Navigator.of(
+                                                                  context,
+                                                                ).pop(null),
+                                                          ),
+                                                        ),
+                                                        body: SizedBox(
+                                                          height:
+                                                              double.infinity,
+                                                          child: EmojiPicker(
+                                                            onEmojiSelected:
+                                                                (_, emoji) =>
+                                                                    Navigator.of(
                                                                       context,
+                                                                    ).pop(
+                                                                      emoji
+                                                                          .emoji,
                                                                     ),
-                                                                emojiViewConfig:
-                                                                    const EmojiViewConfig(
-                                                                      backgroundColor:
-                                                                          Colors
-                                                                              .transparent,
+                                                            config: Config(
+                                                              locale:
+                                                                  Localizations.localeOf(
+                                                                    context,
+                                                                  ),
+                                                              emojiViewConfig:
+                                                                  const EmojiViewConfig(
+                                                                    backgroundColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                  ),
+                                                              bottomActionBarConfig:
+                                                                  const BottomActionBarConfig(
+                                                                    enabled:
+                                                                        false,
+                                                                  ),
+                                                              categoryViewConfig: CategoryViewConfig(
+                                                                initCategory:
+                                                                    Category
+                                                                        .SMILEYS,
+                                                                backspaceColor: theme
+                                                                    .colorScheme
+                                                                    .primary,
+                                                                iconColor: theme
+                                                                    .colorScheme
+                                                                    .primary
+                                                                    .withAlpha(
+                                                                      128,
                                                                     ),
-                                                                bottomActionBarConfig:
-                                                                    const BottomActionBarConfig(
-                                                                      enabled:
-                                                                          false,
-                                                                    ),
-                                                                categoryViewConfig: CategoryViewConfig(
-                                                                  initCategory:
-                                                                      Category
-                                                                          .SMILEYS,
-                                                                  backspaceColor: theme
-                                                                      .colorScheme
-                                                                      .primary,
-                                                                  iconColor: theme
-                                                                      .colorScheme
-                                                                      .primary
-                                                                      .withAlpha(
-                                                                        128,
-                                                                      ),
-                                                                  iconColorSelected: theme
-                                                                      .colorScheme
-                                                                      .primary,
-                                                                  indicatorColor: theme
-                                                                      .colorScheme
-                                                                      .primary,
-                                                                  backgroundColor: theme
-                                                                      .colorScheme
-                                                                      .surface,
-                                                                ),
-                                                                skinToneConfig: SkinToneConfig(
-                                                                  dialogBackgroundColor: Color.lerp(
+                                                                iconColorSelected:
+                                                                    theme
+                                                                        .colorScheme
+                                                                        .primary,
+                                                                indicatorColor: theme
+                                                                    .colorScheme
+                                                                    .primary,
+                                                                backgroundColor:
                                                                     theme
                                                                         .colorScheme
                                                                         .surface,
-                                                                    theme
-                                                                        .colorScheme
-                                                                        .primaryContainer,
-                                                                    0.75,
-                                                                  )!,
-                                                                  indicatorColor: theme
+                                                              ),
+                                                              skinToneConfig: SkinToneConfig(
+                                                                dialogBackgroundColor: Color.lerp(
+                                                                  theme
                                                                       .colorScheme
-                                                                      .onSurface,
-                                                                ),
+                                                                      .surface,
+                                                                  theme
+                                                                      .colorScheme
+                                                                      .primaryContainer,
+                                                                  0.75,
+                                                                )!,
+                                                                indicatorColor: theme
+                                                                    .colorScheme
+                                                                    .onSurface,
                                                               ),
                                                             ),
                                                           ),
                                                         ),
-                                                      );
-                                                      if (emoji == null) {
-                                                        return;
-                                                      }
-                                                      if (sentReactions
-                                                          .contains(emoji)) {
-                                                        return;
-                                                      }
-                                                      onSelect(event);
+                                                      ),
+                                                    );
+                                                    if (emoji == null) {
+                                                      return;
+                                                    }
+                                                    if (sentReactions.contains(
+                                                      emoji,
+                                                    )) {
+                                                      return;
+                                                    }
+                                                    onSelect(event);
 
-                                                      await event.room
-                                                          .sendReaction(
-                                                            event.eventId,
-                                                            emoji,
-                                                          );
-                                                    },
-                                                  ),
-                                                ],
-                                              ),
+                                                    await event.room
+                                                        .sendReaction(
+                                                          event.eventId,
+                                                          emoji,
+                                                        );
+                                                  },
+                                                ),
+                                              ],
                                             ),
                                           ),
-                                        )
-                                      : const SizedBox.shrink(),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-
-                AnimatedSize(
-                  duration: FluffyThemes.animationDuration,
-                  curve: FluffyThemes.animationCurve,
-                  alignment: Alignment.bottomCenter,
-                  child: !hasReactions
-                      ? const SizedBox.shrink()
-                      : Padding(
-                          padding: EdgeInsets.only(
-                            top: 1.0,
-                            left: (ownMessage ? 0 : Avatar.defaultSize) + 12.0,
-                            right: ownMessage ? 0 : 12.0,
-                          ),
-                          child: MessageReactions(event, timeline),
-                        ),
-                ),
-                if (enterThread != null)
-                  AnimatedSize(
-                    duration: FluffyThemes.animationDuration,
-                    curve: FluffyThemes.animationCurve,
-                    alignment: Alignment.bottomCenter,
-                    child: threadChildren.isEmpty
-                        ? const SizedBox.shrink()
-                        : Padding(
-                            padding: const EdgeInsets.only(
-                              top: 2.0,
-                              bottom: 8.0,
-                              left: Avatar.defaultSize + 8,
-                            ),
-                            child: ConstrainedBox(
-                              constraints: const BoxConstraints(
-                                maxWidth: FluffyThemes.columnWidth * 1.5,
-                              ),
-                              child: TextButton.icon(
-                                style: TextButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                  foregroundColor:
-                                      theme.colorScheme.onSecondaryContainer,
-                                  backgroundColor:
-                                      theme.colorScheme.secondaryContainer,
-                                ),
-                                onPressed: () => enterThread(event.eventId),
-                                icon: const Icon(Icons.message),
-                                label: Text(
-                                  '${L10n.of(context).countReplies(threadChildren.length)} | ${threadChildren.first.calcLocalizedBodyFallback(MatrixLocals(L10n.of(context)), withSenderNamePrefix: true)}',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
+                                        ),
+                                      )
+                                    : const SizedBox.shrink(),
                               ),
                             ),
-                          ),
-                  ),
-                if (displayReadMarker)
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          color: theme.colorScheme.surfaceContainerHighest,
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 4,
-                          vertical: 16.0,
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 2,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                            AppConfig.borderRadius / 3,
-                          ),
-                          color: theme.colorScheme.surface.withAlpha(128),
-                        ),
-                        child: Text(
-                          L10n.of(context).readUpToHere,
-                          style: TextStyle(
-                            fontSize: 12 * AppSettings.fontSizeFactor.value,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          color: theme.colorScheme.surfaceContainerHighest,
+                          ],
                         ),
                       ),
                     ],
                   ),
-              ],
-            ),
+                ],
+              ),
+
+              AnimatedSize(
+                duration: FluffyThemes.animationDuration,
+                curve: FluffyThemes.animationCurve,
+                alignment: Alignment.bottomCenter,
+                child: !hasReactions
+                    ? const SizedBox.shrink()
+                    : Padding(
+                        padding: EdgeInsets.only(
+                          top: 1.0,
+                          left: (ownMessage ? 0 : avatarSize) + 8.0,
+                          right: ownMessage ? 0 : 12.0,
+                        ),
+                        child: MessageReactions(event, timeline),
+                      ),
+              ),
+              if (enterThread != null)
+                AnimatedSize(
+                  duration: FluffyThemes.animationDuration,
+                  curve: FluffyThemes.animationCurve,
+                  alignment: Alignment.bottomCenter,
+                  child: threadChildren.isEmpty
+                      ? const SizedBox.shrink()
+                      : Padding(
+                          padding: const EdgeInsets.only(
+                            top: 2.0,
+                            bottom: 8.0,
+                            left: avatarSize + 8,
+                          ),
+                          child: ConstrainedBox(
+                            constraints: const BoxConstraints(
+                              maxWidth: FluffyThemes.columnWidth * 1.5,
+                            ),
+                            child: TextButton.icon(
+                              style: TextButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                foregroundColor:
+                                    theme.colorScheme.onSecondaryContainer,
+                                backgroundColor:
+                                    theme.colorScheme.secondaryContainer,
+                              ),
+                              onPressed: () => enterThread(event.eventId),
+                              icon: const Icon(Icons.message),
+                              label: Text(
+                                '${L10n.of(context).countReplies(threadChildren.length)} | ${threadChildren.first.calcLocalizedBodyFallback(MatrixLocals(L10n.of(context)), withSenderNamePrefix: true)}',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ),
+                        ),
+                ),
+              if (displayReadMarker)
+                Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        color: theme.colorScheme.surfaceContainerHighest,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        horizontal: 4,
+                        vertical: 16.0,
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          AppConfig.borderRadius / 3,
+                        ),
+                        color: theme.colorScheme.surface.withAlpha(128),
+                      ),
+                      child: Text(
+                        L10n.of(context).readUpToHere,
+                        style: TextStyle(fontSize: 11),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        color: theme.colorScheme.surfaceContainerHighest,
+                      ),
+                    ),
+                  ],
+                ),
+            ],
           ),
         ),
       ),
@@ -939,7 +931,7 @@ class BubblePainter extends CustomPainter {
 class _AnimateIn extends StatefulWidget {
   final bool animateIn;
   final Widget child;
-  const _AnimateIn({required this.animateIn, required this.child});
+  const _AnimateIn({required this.animateIn, required this.child, super.key});
 
   @override
   State<_AnimateIn> createState() => __AnimateInState();
@@ -947,6 +939,7 @@ class _AnimateIn extends StatefulWidget {
 
 class __AnimateInState extends State<_AnimateIn> {
   bool _animationFinished = false;
+
   @override
   Widget build(BuildContext context) {
     if (!widget.animateIn) return widget.child;
@@ -957,15 +950,11 @@ class __AnimateInState extends State<_AnimateIn> {
         });
       });
     }
-    return AnimatedOpacity(
+
+    return AnimatedSize(
       duration: FluffyThemes.animationDuration,
       curve: FluffyThemes.animationCurve,
-      opacity: _animationFinished ? 1 : 0,
-      child: AnimatedSize(
-        duration: FluffyThemes.animationDuration,
-        curve: FluffyThemes.animationCurve,
-        child: _animationFinished ? widget.child : const SizedBox.shrink(),
-      ),
+      child: _animationFinished ? widget.child : const SizedBox.shrink(),
     );
   }
 }

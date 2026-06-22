@@ -1,10 +1,12 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui';
 
 abstract class AppConfig {
-  // Const and final configuration values (immutable)
-  static const Color primaryColor = Color(0xFF5625BA);
-  static const Color primaryColorLight = Color(0xFFCCBDEA);
-  static const Color secondaryColor = Color(0xFF41a2bc);
+  static const Color primaryColor = Color(0xFF261386);
 
   static const Color chatColor = primaryColor;
   static const double messageFontSize = 16.0;
@@ -38,6 +40,8 @@ abstract class AppConfig {
   static const String supportUrl =
       'https://github.com/krille-chan/fluffychat/issues';
   static const String changelogUrl = 'https://fluffy.chat/en/changelog/';
+  static const String helpUrl =
+      'https://fluffychat.im/faq/#how_can_i_support_fluffychat';
 
   static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
 
@@ -55,4 +59,5 @@ abstract class AppConfig {
 
   static const String mainIsolatePortName = 'main_isolate';
   static const String pushIsolatePortName = 'push_isolate';
+  static const String pushHelperCrashReportKey = 'push_helper_crash_report';
 }

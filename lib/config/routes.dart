@@ -1,8 +1,13 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/pages/archive/archive.dart';
-import 'package:fluffychat/pages/bootstrap/bootstrap_dialog.dart';
+import 'package:fluffychat/pages/bootstrap/bootstrap_page.dart';
 import 'package:fluffychat/pages/chat/chat.dart';
 import 'package:fluffychat/pages/chat_access_settings/chat_access_settings_controller.dart';
 import 'package:fluffychat/pages/chat_details/chat_details.dart';
@@ -112,11 +117,8 @@ abstract class AppRoutes {
     GoRoute(
       path: '/backup',
       redirect: loggedOutRedirect,
-      pageBuilder: (context, state) => defaultPageBuilder(
-        context,
-        state,
-        BootstrapDialog(wipe: state.uri.queryParameters['wipe'] == 'true'),
-      ),
+      pageBuilder: (context, state) =>
+          defaultPageBuilder(context, state, BootstrapPage()),
     ),
     ShellRoute(
       // Never use a transition on the shell route. Changing the PageBuilder
@@ -179,8 +181,8 @@ abstract class AppRoutes {
                 context,
                 state,
                 NewPrivateChat(
-                  key: ValueKey('new_chat_${state.uri.query}'),
-                  deeplink: state.uri.queryParameters['deeplink'],
+                  key: ValueKey('new_chat_${state.uri.fragment}'),
+                  deeplink: state.uri.fragment,
                 ),
               ),
               redirect: loggedOutRedirect,
@@ -511,11 +513,19 @@ abstract class AppRoutes {
     BuildContext context,
     GoRouterState state,
     Widget child,
-  ) => FluffyThemes.isColumnMode(context)
-      ? noTransitionPageBuilder(context, state, child)
-      : MaterialPage(
-          key: state.pageKey,
-          restorationId: state.pageKey.value,
-          child: child,
-        );
+  ) {
+    final clientName = state.uri.queryParameters['client'];
+    if (clientName != null) {
+      final matrix = Matrix.of(context);
+      final client = matrix.getClientByName(clientName);
+      if (client != null) matrix.setActiveClient(client);
+    }
+    return FluffyThemes.isColumnMode(context)
+        ? noTransitionPageBuilder(context, state, child)
+        : MaterialPage(
+            key: state.pageKey,
+            restorationId: state.pageKey.value,
+            child: child,
+          );
+  }
 }

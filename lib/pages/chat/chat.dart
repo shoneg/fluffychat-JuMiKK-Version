@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 import 'dart:io';
 
@@ -12,6 +17,8 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat_view.dart';
 import 'package:fluffychat/pages/chat/event_info_dialog.dart';
 import 'package:fluffychat/pages/chat/start_poll_bottom_sheet.dart';
+import 'package:fluffychat/pages/chat/trust_user_key_dialog.dart';
+import 'package:fluffychat/pages/chat/utils/web_file_to_x_file.dart';
 import 'package:fluffychat/pages/chat_details/chat_details.dart';
 import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
 import 'package:fluffychat/utils/error_reporter.dart';
@@ -27,6 +34,7 @@ import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.
 import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:fluffychat/widgets/mxc_image.dart';
 import 'package:fluffychat/widgets/share_scaffold_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +43,9 @@ import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:matrix/matrix.dart';
 import 'package:mime/mime.dart';
+import 'package:pasteboard/pasteboard.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:universal_html/universal_html.dart' as web;
 
 import '../../utils/account_bundles.dart';
 import '../../utils/localized_exception_extension.dart';
@@ -118,6 +128,8 @@ class ChatController extends State<ChatPageWithRoom>
   Timer? typingTimeout;
   bool currentlyTyping = false;
   bool dragging = false;
+
+  final GlobalKey inputBarKey = GlobalKey();
 
   void onDragEntered(_) => setState(() => dragging = true);
 
@@ -211,6 +223,7 @@ class ChatController extends State<ChatPageWithRoom>
       context: context,
       future: room.leave,
     );
+    if (!mounted) return;
     if (success.error != null) return;
     context.go('/rooms');
   }
@@ -267,7 +280,7 @@ class ChatController extends State<ChatPageWithRoom>
     }
   }
 
-  void _shareItems([_]) {
+  Future<void> _shareItems([_]) async {
     final shareItems = widget.shareItems;
     if (shareItems == null || shareItems.isEmpty) return;
     if (!room.otherPartyCanReceiveMessages) {
@@ -285,6 +298,8 @@ class ChatController extends State<ChatPageWithRoom>
       );
       return;
     }
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     for (final item in shareItems) {
       if (item is FileShareItem) continue;
       if (item is TextShareItem) room.sendTextEvent(item.value);
@@ -308,6 +323,23 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   KeyEventResult _customEnterKeyHandling(FocusNode node, KeyEvent evt) {
+    if (evt is KeyDownEvent &&
+        evt.logicalKey == LogicalKeyboardKey.arrowUp &&
+        !PlatformInfos.isMobile &&
+        editEvent == null &&
+        replyEvent == null &&
+        sendController.text.isEmpty) {
+      _editLastSentMessage();
+      return KeyEventResult.handled;
+    }
+
+    if (evt is KeyDownEvent &&
+        evt.logicalKey == LogicalKeyboardKey.escape &&
+        editEvent != null) {
+      _cancelEditWithConfirmation();
+      return KeyEventResult.handled;
+    }
+
     if (!HardwareKeyboard.instance.isShiftPressed &&
         evt.logicalKey.keyLabel == 'Enter' &&
         AppSettings.sendOnEnter.value) {
@@ -357,6 +389,7 @@ class ChatController extends State<ChatPageWithRoom>
 
     _loadDraft();
     WidgetsBinding.instance.addPostFrameCallback(_shareItems);
+    web.window.addEventListener('paste', _handleClipboardFilePasteWeb);
     super.initState();
     _displayChatDetailsColumn = ValueNotifier(
       AppSettings.displayChatDetailsColumn.value,
@@ -462,21 +495,29 @@ class ChatController extends State<ChatPageWithRoom>
     scrollUpBannerEventId = eventId;
   });
 
-  bool firstUpdateReceived = false;
+  String? animateInEventId;
+
+  Future<void> _insert(int index) async {
+    if (index > 0) return;
+    final firstEvent = timeline?.events.firstOrNull;
+    final eventId = firstEvent?.transactionId ?? firstEvent?.eventId;
+    animateInEventId = eventId;
+    await Future.delayed(FluffyThemes.animationDuration);
+    if (animateInEventId == eventId) animateInEventId = null;
+  }
 
   void updateView() {
     if (!mounted) return;
     setReadMarker();
-    setState(() {
-      firstUpdateReceived = true;
-    });
+    setState(() {});
   }
 
   Future<void>? loadTimelineFuture;
 
   Future<void> _getTimeline({String? eventContextId}) async {
-    await Matrix.of(context).client.roomsLoading;
-    await Matrix.of(context).client.accountDataLoading;
+    final matrix = Matrix.of(context);
+    await matrix.client.roomsLoading;
+    await matrix.client.accountDataLoading;
     if (eventContextId != null &&
         (!eventContextId.isValidMatrixId || eventContextId.sigil != '\$')) {
       eventContextId = null;
@@ -485,6 +526,7 @@ class ChatController extends State<ChatPageWithRoom>
       timeline?.cancelSubscriptions();
       timeline = await room.getTimeline(
         onUpdate: updateView,
+        onInsert: _insert,
         eventContextId: eventContextId,
       );
     } catch (e, s) {
@@ -543,17 +585,22 @@ class ChatController extends State<ChatPageWithRoom>
         .then((_) {
           _setReadMarkerFuture = null;
         });
-    if (eventId == null || eventId == timeline.room.lastEvent?.eventId) {
-      Matrix.of(context).backgroundPush?.cancelNotification(roomId);
-    }
   }
 
   @override
   void dispose() {
     timeline?.cancelSubscriptions();
     timeline = null;
+    _storeInputTimeoutTimer?.cancel();
+    typingCoolDown?.cancel();
+    typingTimeout?.cancel();
+    sendController.dispose();
+    scrollController.dispose();
     inputFocus.removeListener(_inputFocusListener);
+    inputFocus.dispose();
+    web.window.removeEventListener('paste', _handleClipboardFilePasteWeb);
     if (currentlyTyping) room.setTyping(false);
+    MxcImage.clearCache(widget.room.id);
     super.dispose();
   }
 
@@ -586,6 +633,8 @@ class ChatController extends State<ChatPageWithRoom>
   });
 
   Future<void> send() async {
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     if (sendController.text.trim().isEmpty) return;
     _storeInputTimeoutTimer?.cancel();
     final prefs = Matrix.of(context).store;
@@ -632,6 +681,7 @@ class ChatController extends State<ChatPageWithRoom>
   Future<void> sendFileAction({FileType type = FileType.any}) async {
     final files = await selectFiles(context, allowMultiple: true, type: type);
     if (files.isEmpty) return;
+    if (!mounted) return;
     await showAdaptiveDialog(
       context: context,
       builder: (c) => SendFileDialog(
@@ -663,6 +713,7 @@ class ChatController extends State<ChatPageWithRoom>
     FocusScope.of(context).requestFocus(FocusNode());
     final file = await ImagePicker().pickImage(source: ImageSource.camera);
     if (file == null) return;
+    if (!mounted) return;
 
     await showAdaptiveDialog(
       context: context,
@@ -676,6 +727,90 @@ class ChatController extends State<ChatPageWithRoom>
     );
   }
 
+  Future<void> _handleClipboardFilePasteWeb(web.Event event) async {
+    if (event is! web.ClipboardEvent) return;
+
+    final clipboardFiles = event.clipboardData?.files;
+    final length = clipboardFiles?.length ?? 0;
+    if (clipboardFiles == null || length < 1) return;
+
+    // Browser will clear clipboardData when we await!
+    // We MUST extract the files synchronously first.
+    final localFiles = clipboardFiles.toList();
+
+    if (localFiles.isEmpty) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    final xFilesResult = await showFutureLoadingDialog(
+      context: context,
+      future: () async {
+        // Convert one after another seems to be more stable
+        final xFiles = <XFile>[];
+        for (final file in localFiles) {
+          xFiles.add(await webToXFile(file));
+        }
+        return xFiles;
+      },
+    );
+    final xFiles = xFilesResult.result;
+    if (xFiles == null || xFiles.isEmpty) return;
+
+    if (!mounted) return;
+    showAdaptiveDialog(
+      context: context,
+      builder: (c) => SendFileDialog(
+        files: xFiles,
+        room: room,
+        outerContext: context,
+        threadRootEventId: activeThreadId,
+        threadLastEventId: threadLastEventId,
+      ),
+    );
+  }
+
+  Future<void> _handleClipboardImagePaste() async {
+    final files = await Pasteboard.files();
+    if (files.isNotEmpty) {
+      if (!mounted) return;
+      await showAdaptiveDialog(
+        context: context,
+        builder: (c) => SendFileDialog(
+          files: files.map(XFile.new).toList(),
+          room: room,
+          outerContext: context,
+          threadRootEventId: activeThreadId,
+          threadLastEventId: threadLastEventId,
+        ),
+      );
+      return;
+    }
+    final image = await Pasteboard.image;
+    if (image != null) {
+      await sendImageFromClipBoard(image);
+      return;
+    }
+    // No image in clipboard — fall back to pasting text
+    final textData = await Clipboard.getData('text/plain');
+    if (textData?.text != null) {
+      final selection = sendController.selection;
+      final text = sendController.text;
+      final newText = text.replaceRange(
+        selection.start,
+        selection.end,
+        textData!.text!,
+      );
+      sendController.value = TextEditingValue(
+        text: newText,
+        selection: TextSelection.collapsed(
+          offset: selection.start + textData.text!.length,
+        ),
+      );
+      onInputBarChanged(sendController.text);
+    }
+  }
+
   Future<void> openVideoCameraAction() async {
     // Make sure the textfield is unfocused before opening the camera
     FocusScope.of(context).requestFocus(FocusNode());
@@ -684,6 +819,7 @@ class ChatController extends State<ChatPageWithRoom>
       maxDuration: const Duration(minutes: 1),
     );
     if (file == null) return;
+    if (!mounted) return;
 
     await showAdaptiveDialog(
       context: context,
@@ -703,6 +839,8 @@ class ChatController extends State<ChatPageWithRoom>
     List<int> waveform,
     String fileName,
   ) async {
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     final audioFile = XFile(path);
 
@@ -726,26 +864,27 @@ class ChatController extends State<ChatPageWithRoom>
       mimeType: mimeType,
     );
 
-    room
-        .sendFileEvent(
-          file,
-          inReplyTo: replyEvent,
-          threadRootEventId: activeThreadId,
-          extraContent: {
-            'info': {...file.info, 'duration': duration},
-            'org.matrix.msc3245.voice': {},
-            'org.matrix.msc1767.audio': {
-              'duration': duration,
-              'waveform': waveform,
-            },
+    try {
+      await room.sendFileEvent(
+        file,
+        inReplyTo: replyEvent,
+        threadRootEventId: activeThreadId,
+        extraContent: {
+          'info': {...file.info, 'duration': duration},
+          'org.matrix.msc3245.voice': {},
+          'org.matrix.msc1767.audio': {
+            'duration': duration,
+            'waveform': waveform,
           },
-        )
-        .catchError((e) {
-          scaffoldMessenger.showSnackBar(
-            SnackBar(content: Text((e as Object).toLocalizedString(context))),
-          );
-          return null;
-        });
+        },
+      );
+    } catch (e) {
+      if (!mounted) return;
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(e.toLocalizedString(context))),
+      );
+      return;
+    }
     setState(() {
       replyEvent = null;
     });
@@ -807,45 +946,32 @@ class ChatController extends State<ChatPageWithRoom>
 
   Future<void> reportEventAction() async {
     final event = selectedEvents.single;
-    final score = await showModalActionPopup<int>(
-      context: context,
-      title: L10n.of(context).reportMessage,
-      message: L10n.of(context).howOffensiveIsThisContent,
-      cancelLabel: L10n.of(context).cancel,
-      actions: [
-        AdaptiveModalAction(
-          value: -100,
-          label: L10n.of(context).extremeOffensive,
-        ),
-        AdaptiveModalAction(value: -50, label: L10n.of(context).offensive),
-        AdaptiveModalAction(value: 0, label: L10n.of(context).inoffensive),
-      ],
-    );
-    if (score == null) return;
+    final l10n = L10n.of(context);
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+    if (!mounted) return;
     final reason = await showTextInputDialog(
       context: context,
-      title: L10n.of(context).whyDoYouWantToReportThis,
-      okLabel: L10n.of(context).ok,
-      cancelLabel: L10n.of(context).cancel,
-      hintText: L10n.of(context).reason,
+      title: l10n.whyDoYouWantToReportThis,
+      okLabel: l10n.ok,
+      cancelLabel: l10n.cancel,
+      hintText: l10n.reason,
     );
     if (reason == null || reason.isEmpty) return;
+    if (!mounted) return;
     final result = await showFutureLoadingDialog(
       context: context,
-      future: () => Matrix.of(context).client.reportEvent(
-        event.roomId!,
-        event.eventId,
-        reason: reason,
-        score: score,
-      ),
+      future: () => Matrix.of(
+        context,
+      ).client.reportEvent(event.roomId!, event.eventId, reason: reason),
     );
     if (result.error != null) return;
+    if (!mounted) return;
     setState(() {
       showEmojiPicker = false;
       selectedEvents.clear();
     });
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(L10n.of(context).contentHasBeenReported)),
+    scaffoldMessenger.showSnackBar(
+      SnackBar(content: Text(l10n.contentHasBeenReported)),
     );
   }
 
@@ -861,6 +987,7 @@ class ChatController extends State<ChatPageWithRoom>
       }
       setState(selectedEvents.clear);
     } catch (e, s) {
+      if (!mounted) return;
       ErrorReporter(
         context,
         'Error while delete error events action',
@@ -885,6 +1012,7 @@ class ChatController extends State<ChatPageWithRoom>
         : null;
     if (reasonInput == null) return;
     final reason = reasonInput.isEmpty ? null : reasonInput;
+    if (!mounted) return;
     await showFutureLoadingDialog(
       context: context,
       futureWithProgress: (onProgress) async {
@@ -1108,28 +1236,56 @@ class ChatController extends State<ChatPageWithRoom>
     }
   }
 
-  void editSelectedEventAction() {
+  void _startEditingEvent(Event event, {bool clearSelection = false}) {
+    final timeline = this.timeline;
+    if (timeline == null) return;
+
     final client = currentRoomBundle.firstWhere(
-      (cl) => selectedEvents.first.senderId == cl!.userID,
+      (c) => c?.userID == event.senderId,
       orElse: () => null,
     );
-    if (client == null) {
-      return;
-    }
+    if (client == null) return;
+
     setSendingClient(client);
     setState(() {
       pendingText = sendController.text;
-      editEvent = selectedEvents.first;
-      sendController.text = editEvent!
-          .getDisplayEvent(timeline!)
+      editEvent = event;
+      sendController.text = event
+          .getDisplayEvent(timeline)
           .calcLocalizedBodyFallback(
             MatrixLocals(L10n.of(context)),
             withSenderNamePrefix: false,
             hideReply: true,
           );
-      selectedEvents.clear();
+      if (clearSelection) selectedEvents.clear();
     });
     inputFocus.requestFocus();
+  }
+
+  void editSelectedEventAction() {
+    _startEditingEvent(selectedEvents.first, clearSelection: true);
+  }
+
+  void _editLastSentMessage() {
+    final timeline = this.timeline;
+    if (timeline == null) return;
+
+    final events = timeline.events.filterByVisibleInGui(
+      threadId: activeThreadId,
+    );
+
+    final lastOwnMessage = events.firstWhereOrNull(
+      (e) =>
+          e.type == EventTypes.Message &&
+          e.messageType == MessageTypes.Text &&
+          e.status.isSent &&
+          !e.redacted &&
+          currentRoomBundle.any((c) => c?.userID == e.senderId),
+    );
+
+    if (lastOwnMessage == null) return;
+
+    _startEditingEvent(lastOwnMessage);
   }
 
   Future<void> goToNewRoomAction() async {
@@ -1141,7 +1297,7 @@ class ChatController extends State<ChatPageWithRoom>
           true,
           false,
         );
-        users.sort((a, b) => a.powerLevel.compareTo(b.powerLevel));
+        users.sort((a, b) => a.powerLevel.level.compareTo(b.powerLevel.level));
         final via = users
             .map((user) => user.id.domain)
             .whereType<String>()
@@ -1239,6 +1395,7 @@ class ChatController extends State<ChatPageWithRoom>
       okLabel: L10n.of(context).unpin,
       cancelLabel: L10n.of(context).cancel,
     );
+    if (!mounted) return;
     if (response == OkCancelResult.ok) {
       final events = room.pinnedEventIds
         ..removeWhere((oldEvent) => oldEvent == eventId);
@@ -1268,6 +1425,22 @@ class ChatController extends State<ChatPageWithRoom>
 
   Timer? _storeInputTimeoutTimer;
   static const Duration _storeInputTimeout = Duration(milliseconds: 500);
+
+  double? inputBarHeight;
+
+  void updateInputBarHeight() {
+    RenderBox? renderBox;
+    if (inputBarKey.currentContext?.findRenderObject() != null) {
+      renderBox = inputBarKey.currentContext!.findRenderObject() as RenderBox;
+    }
+
+    final height = renderBox?.size.height ?? 72.0;
+    if (height != inputBarHeight) {
+      setState(() {
+        inputBarHeight = height;
+      });
+    }
+  }
 
   void onInputBarChanged(String text) {
     if (_inputTextIsEmpty != text.isEmpty) {
@@ -1328,17 +1501,18 @@ class ChatController extends State<ChatPageWithRoom>
   Future<void> onPhoneButtonTap() async {
     // VoIP required Android SDK 21
     if (PlatformInfos.isAndroid) {
-      DeviceInfoPlugin().androidInfo.then((value) {
-        if (value.version.sdkInt < 21) {
-          Navigator.pop(context);
-          showOkAlertDialog(
-            context: context,
-            title: L10n.of(context).unsupportedAndroidVersion,
-            message: L10n.of(context).unsupportedAndroidVersionLong,
-            okLabel: L10n.of(context).close,
-          );
-        }
-      });
+      final androidInfo = await DeviceInfoPlugin().androidInfo;
+      if (!mounted) return;
+      if (androidInfo.version.sdkInt < 21) {
+        Navigator.pop(context);
+        await showOkAlertDialog(
+          context: context,
+          title: L10n.of(context).unsupportedAndroidVersion,
+          message: L10n.of(context).unsupportedAndroidVersionLong,
+          okLabel: L10n.of(context).close,
+        );
+        return;
+      }
     }
     final callType = await showModalActionPopup<CallType>(
       context: context,
@@ -1359,11 +1533,13 @@ class ChatController extends State<ChatPageWithRoom>
       ],
     );
     if (callType == null) return;
+    if (!mounted) return;
 
     final voipPlugin = Matrix.of(context).voipPlugin;
     try {
       await voipPlugin!.voip.inviteToCall(room, callType);
     } catch (e) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(e.toLocalizedString(context))));
@@ -1379,6 +1555,29 @@ class ChatController extends State<ChatPageWithRoom>
     editEvent = null;
   });
 
+  Future<void> _cancelEditWithConfirmation() async {
+    final originalText = editEvent!
+        .getDisplayEvent(timeline!)
+        .calcLocalizedBodyFallback(
+          MatrixLocals(L10n.of(context)),
+          withSenderNamePrefix: false,
+          hideReply: true,
+        );
+
+    if (sendController.text != originalText) {
+      final result = await showOkCancelAlertDialog(
+        context: context,
+        title: L10n.of(context).areYouSure,
+        message: L10n.of(context).discardEdits,
+        okLabel: L10n.of(context).ok,
+        cancelLabel: L10n.of(context).cancel,
+      );
+      if (result == OkCancelResult.cancel) return;
+    }
+
+    cancelReplyEventAction();
+  }
+
   late final ValueNotifier<bool> _displayChatDetailsColumn;
 
   Future<void> toggleDisplayChatDetailsColumn() async {
@@ -1391,34 +1590,44 @@ class ChatController extends State<ChatPageWithRoom>
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Row(
-      children: [
-        Expanded(child: ChatView(this)),
-        ValueListenableBuilder(
-          valueListenable: _displayChatDetailsColumn,
-          builder: (context, displayChatDetailsColumn, _) =>
-              !FluffyThemes.isThreeColumnMode(context) ||
-                  room.membership != Membership.join ||
-                  !displayChatDetailsColumn
-              ? const SizedBox(height: double.infinity, width: 0)
-              : Container(
-                  width: FluffyThemes.columnWidth,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      left: BorderSide(width: 1, color: theme.dividerColor),
+    return Actions(
+      actions: kIsWeb
+          ? {}
+          : <Type, Action<Intent>>{
+              PasteTextIntent: CallbackAction<PasteTextIntent>(
+                onInvoke: (PasteTextIntent intent) =>
+                    _handleClipboardImagePaste(),
+              ),
+            },
+      child: Row(
+        children: [
+          Expanded(child: ChatView(this)),
+          ValueListenableBuilder(
+            valueListenable: _displayChatDetailsColumn,
+            builder: (context, displayChatDetailsColumn, _) =>
+                !FluffyThemes.isThreeColumnMode(context) ||
+                    room.membership != Membership.join ||
+                    !displayChatDetailsColumn
+                ? const SizedBox(height: double.infinity, width: 0)
+                : Container(
+                    width: FluffyThemes.columnWidth,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      border: Border(
+                        left: BorderSide(width: 1, color: theme.dividerColor),
+                      ),
+                    ),
+                    child: ChatDetails(
+                      roomId: roomId,
+                      embeddedCloseButton: IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: toggleDisplayChatDetailsColumn,
+                      ),
                     ),
                   ),
-                  child: ChatDetails(
-                    roomId: roomId,
-                    embeddedCloseButton: IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: toggleDisplayChatDetailsColumn,
-                    ),
-                  ),
-                ),
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

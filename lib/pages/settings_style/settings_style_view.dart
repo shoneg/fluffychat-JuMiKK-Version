@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui';
 
 import 'package:dynamic_color/dynamic_color.dart';
@@ -15,7 +20,6 @@ import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 
 import '../../config/app_config.dart';
-import '../../widgets/settings_switch_list_tile.dart';
 import 'settings_style.dart';
 
 class SettingsStyleView extends StatelessWidget {
@@ -158,99 +162,71 @@ class SettingsStyleView extends StatelessWidget {
                 return Column(
                   mainAxisSize: .min,
                   children: [
-                    AnimatedContainer(
-                      duration: FluffyThemes.animationDuration,
-                      curve: FluffyThemes.animationCurve,
-                      decoration: const BoxDecoration(),
-                      clipBehavior: Clip.hardEdge,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          if (accountConfig.wallpaperUrl != null)
-                            Opacity(
-                              opacity: controller.wallpaperOpacity,
-                              child: ImageFiltered(
-                                imageFilter: ImageFilter.blur(
-                                  sigmaX: controller.wallpaperBlur,
-                                  sigmaY: controller.wallpaperBlur,
-                                ),
-                                child: MxcImage(
-                                  key: ValueKey(accountConfig.wallpaperUrl),
-                                  uri: accountConfig.wallpaperUrl,
-                                  fit: BoxFit.cover,
-                                  isThumbnail: true,
-                                  width: FluffyThemes.columnWidth * 2,
-                                  height: 212,
-                                ),
-                              ),
-                            ),
-                          Column(
-                            mainAxisSize: .min,
-                            children: [
-                              const SizedBox(height: 16),
-                              StateMessage(
-                                Event(
-                                  eventId: 'style_dummy',
-                                  room: Room(
-                                    id: '!style_dummy',
-                                    client: client,
+                    MediaQuery(
+                      data: MediaQuery.of(context).copyWith(
+                        textScaler: TextScaler.linear(
+                          AppSettings.fontSizeFactor.value,
+                        ),
+                      ),
+                      child: AnimatedContainer(
+                        duration: FluffyThemes.animationDuration,
+                        curve: FluffyThemes.animationCurve,
+                        decoration: const BoxDecoration(),
+                        clipBehavior: Clip.hardEdge,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            if (accountConfig.wallpaperUrl != null)
+                              Opacity(
+                                opacity: controller.wallpaperOpacity,
+                                child: ImageFiltered(
+                                  imageFilter: ImageFilter.blur(
+                                    sigmaX: controller.wallpaperBlur,
+                                    sigmaY: controller.wallpaperBlur,
                                   ),
-                                  content: {'membership': 'join'},
-                                  type: EventTypes.RoomMember,
-                                  senderId: client.userID!,
-                                  originServerTs: DateTime.now(),
-                                  stateKey: client.userID,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                  left: 12 + 12 + Avatar.defaultSize,
-                                  right: 12,
-                                  top: accountConfig.wallpaperUrl == null
-                                      ? 0
-                                      : 12,
-                                  bottom: 12,
-                                ),
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    color: theme.bubbleColor,
-                                    borderRadius: BorderRadius.circular(
-                                      AppConfig.borderRadius,
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 16,
-                                      vertical: 8,
-                                    ),
-                                    child: Text(
-                                      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor',
-                                      style: TextStyle(
-                                        color: theme.onBubbleColor,
-                                        fontSize:
-                                            AppConfig.messageFontSize *
-                                            AppSettings.fontSizeFactor.value,
-                                      ),
-                                    ),
+                                  child: MxcImage(
+                                    key: ValueKey(accountConfig.wallpaperUrl),
+                                    uri: accountConfig.wallpaperUrl,
+                                    fit: BoxFit.cover,
+                                    isThumbnail: true,
+                                    width: FluffyThemes.columnWidth * 2,
+                                    height: 212,
                                   ),
                                 ),
                               ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Padding(
+                            Column(
+                              mainAxisSize: .min,
+                              children: [
+                                const SizedBox(height: 16),
+                                StateMessage(
+                                  Event(
+                                    eventId: 'style_dummy',
+                                    room: Room(
+                                      id: '!style_dummy',
+                                      client: client,
+                                    ),
+                                    content: {'membership': 'join'},
+                                    type: EventTypes.RoomMember,
+                                    senderId: client.userID!,
+                                    originServerTs: DateTime.now(),
+                                    stateKey: client.userID,
+                                  ),
+                                ),
+                                Padding(
                                   padding: EdgeInsets.only(
+                                    left: 12 + 12 + Avatar.defaultSize,
                                     right: 12,
-                                    left: 12,
                                     top: accountConfig.wallpaperUrl == null
                                         ? 0
                                         : 12,
                                     bottom: 12,
                                   ),
-                                  child: Material(
-                                    color:
-                                        theme.colorScheme.surfaceContainerHigh,
-                                    borderRadius: BorderRadius.circular(
-                                      AppConfig.borderRadius,
+                                  child: DecoratedBox(
+                                    decoration: BoxDecoration(
+                                      color: theme.bubbleColor,
+                                      borderRadius: BorderRadius.circular(
+                                        AppConfig.borderRadius,
+                                      ),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(
@@ -258,21 +234,53 @@ class SettingsStyleView extends StatelessWidget {
                                         vertical: 8,
                                       ),
                                       child: Text(
-                                        'Lorem ipsum dolor sit amet',
+                                        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor',
                                         style: TextStyle(
-                                          color: theme.colorScheme.onSurface,
-                                          fontSize:
-                                              AppConfig.messageFontSize *
-                                              AppSettings.fontSizeFactor.value,
+                                          color: theme.onBubbleColor,
+                                          fontSize: AppConfig.messageFontSize,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      right: 12,
+                                      left: 12,
+                                      top: accountConfig.wallpaperUrl == null
+                                          ? 0
+                                          : 12,
+                                      bottom: 12,
+                                    ),
+                                    child: Material(
+                                      color: theme
+                                          .colorScheme
+                                          .surfaceContainerHigh,
+                                      borderRadius: BorderRadius.circular(
+                                        AppConfig.borderRadius,
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 16,
+                                          vertical: 8,
+                                        ),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet',
+                                          style: TextStyle(
+                                            color: theme.colorScheme.onSurface,
+                                            fontSize: AppConfig.messageFontSize,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Divider(color: theme.dividerColor),
@@ -332,24 +340,6 @@ class SettingsStyleView extends StatelessWidget {
               value: AppSettings.fontSizeFactor.value,
               semanticFormatterCallback: (d) => d.toString(),
               onChanged: controller.changeFontSizeFactor,
-            ),
-            Divider(color: theme.dividerColor),
-            ListTile(
-              title: Text(
-                L10n.of(context).overview,
-                style: TextStyle(
-                  color: theme.colorScheme.secondary,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            SettingsSwitchListTile.adaptive(
-              title: L10n.of(context).presencesToggle,
-              setting: AppSettings.showPresences,
-            ),
-            SettingsSwitchListTile.adaptive(
-              title: L10n.of(context).displayNavigationRail,
-              setting: AppSettings.displayNavigationRail,
             ),
           ],
         ),

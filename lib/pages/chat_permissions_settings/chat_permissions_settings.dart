@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_permissions_settings/chat_permissions_settings_view.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
@@ -36,6 +41,7 @@ class ChatPermissionsSettingsController extends State<ChatPermissionsSettings> {
       currentLevel: currentLevel,
     );
     if (newLevel == null) return;
+    if (!context.mounted) return;
     final content = Map<String, dynamic>.from(
       room.getState(EventTypes.RoomPowerLevels)!.content,
     );

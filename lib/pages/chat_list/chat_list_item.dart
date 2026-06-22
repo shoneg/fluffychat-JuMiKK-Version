@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_list/unread_bubble.dart';
@@ -61,7 +66,7 @@ class ChatListItem extends StatelessWidget {
     final space = this.space;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 1),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Material(
         borderRadius: BorderRadius.circular(AppConfig.borderRadius),
         clipBehavior: Clip.hardEdge,
@@ -70,7 +75,7 @@ class ChatListItem extends StatelessWidget {
           future: room.name.isEmpty ? room.loadHeroUsers() : null,
           builder: (context, _) => HoverBuilder(
             builder: (context, listTileHovered) => ListTile(
-              visualDensity: const VisualDensity(vertical: -0.5),
+              minVerticalPadding: 16,
               contentPadding: const EdgeInsets.symmetric(horizontal: 8),
               onLongPress: () => onLongPress?.call(context),
               leading: HoverBuilder(
@@ -219,7 +224,17 @@ class ChatListItem extends StatelessWidget {
                         room.latestEventReceivedTime.localizedTimeShort(
                           context,
                         ),
-                        style: TextStyle(fontSize: 11),
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: room.hasNewMessages
+                              ? FontWeight.bold
+                              : null,
+                          color: room.highlightCount >= 1
+                              ? theme.colorScheme.error
+                              : room.hasNewMessages
+                              ? theme.colorScheme.primary
+                              : null,
+                        ),
                       ),
                     ),
                 ],

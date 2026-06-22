@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 import 'dart:isolate';
 import 'dart:ui';
@@ -76,10 +81,14 @@ Future<void> notificationTapBackground(
     _vodInitialized = true;
   }
   final store = await AppSettings.init();
-  final client = (await ClientManager.getClients(
-    initialize: false,
-    store: store,
-  )).first;
+
+  final payload = FluffyChatPushPayload.fromString(
+    notificationResponse.payload ?? '',
+  );
+  final clientName = payload.clientName;
+  final client = clientName == null
+      ? (await ClientManager.getClients(store: store, initialize: false)).first
+      : (await ClientManager.createClient(clientName, store));
   await client.abortSync();
   await client.init(
     waitForFirstSync: false,
@@ -90,7 +99,7 @@ Future<void> notificationTapBackground(
     throw Exception('Notification tab in background but not logged in!');
   }
   try {
-    await notificationTap(notificationResponse, client: client);
+    await notificationTap(notificationResponse, clients: [client]);
   } finally {
     await client.dispose(closeDatabase: false);
     pushIsolateReceivePort.sendPort.send('DONE');
@@ -102,7 +111,7 @@ Future<void> notificationTapBackground(
 Future<void> notificationTap(
   NotificationResponse notificationResponse, {
   GoRouter? router,
-  required Client client,
+  required List<Client> clients,
   L10n? l10n,
 }) async {
   Logs().d(
@@ -112,6 +121,18 @@ Future<void> notificationTap(
   final payload = FluffyChatPushPayload.fromString(
     notificationResponse.payload ?? '',
   );
+  final client =
+      clients.firstWhereOrNull(
+        (client) => client.clientName == payload.clientName,
+      ) ??
+      clients.first;
+
+  updateSummaryNotification(
+    flutterLocalNotificationsPlugin: FlutterLocalNotificationsPlugin(),
+    clientName: client.clientName,
+    l10n: await lookupL10n(PlatformDispatcher.instance.locale),
+  );
+
   switch (notificationResponse.notificationResponseType) {
     case NotificationResponseType.selectedNotification:
       final roomId = payload.roomId;
@@ -131,8 +152,8 @@ Future<void> notificationTap(
       }
       router.go(
         client.getRoomById(roomId)?.membership == Membership.invite
-            ? '/rooms'
-            : '/rooms/$roomId',
+            ? '/rooms?client=${client.clientName}'
+            : '/rooms/$roomId?client=${client.clientName}',
       );
     case NotificationResponseType.selectedNotificationAction:
       final actionType = FluffyChatNotificationActions.values.singleWhereOrNull(
@@ -176,8 +197,14 @@ Future<void> notificationTap(
           );
         case FluffyChatNotificationActions.mute:
           await room.setPushRuleState(PushRuleState.mentionsOnly);
+        case FluffyChatNotificationActions.open:
+          router?.go(
+            client.getRoomById(roomId)?.membership == Membership.invite
+                ? '/rooms?client=${client.clientName}'
+                : '/rooms/$roomId?client=${client.clientName}',
+          );
       }
   }
 }
 
-enum FluffyChatNotificationActions { markAsRead, reply, mute }
+enum FluffyChatNotificationActions { markAsRead, reply, mute, open }

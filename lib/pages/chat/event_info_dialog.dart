@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 
 import 'package:fluffychat/config/app_config.dart';
@@ -77,7 +82,8 @@ class EventInfoDialog extends StatelessWidget {
               ),
             ),
           ),
-          if (originalSource != null) ...[
+          if (event.messageType != MessageTypes.BadEncrypted &&
+              originalSource != null) ...[
             ListTile(title: Text('${L10n.of(context).encrypted}:')),
             Padding(
               padding: const EdgeInsets.all(12.0),

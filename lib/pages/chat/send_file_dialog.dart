@@ -1,14 +1,20 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:async/async.dart' show Result;
 import 'package:cross_file/cross_file.dart';
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
+import 'package:fluffychat/pages/chat/trust_user_key_dialog.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
 import 'package:fluffychat/utils/other_party_can_receive.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/utils/size_string.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/dialog_text_field.dart';
+import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart' hide Result;
@@ -44,30 +50,32 @@ class SendFileDialogState extends State<SendFileDialog> {
   final TextEditingController _labelTextController = TextEditingController();
 
   Future<void> _send() async {
-    final scaffoldMessenger = ScaffoldMessenger.of(widget.outerContext);
     final l10n = L10n.of(context);
 
-    try {
+    final proceed = await showTrustUserInRoomDialog(context, widget.room);
+    if (!context.mounted || !proceed) return;
+
+    Future<void> sendAction(setProgress) async {
       if (!widget.room.otherPartyCanReceiveMessages) {
         throw OtherPartyCanNotReceiveMessages();
       }
-      scaffoldMessenger.showLoadingSnackBar(l10n.prepareSendingAttachment);
       Navigator.of(context, rootNavigator: false).pop();
       final clientConfig = await Result.capture(widget.room.client.getConfig());
       final maxUploadSize =
           clientConfig.asValue?.value.mUploadSize ?? 100 * 1000 * 1000;
 
+      var sentFiles = 0;
+
       for (final xfile in widget.files) {
         final MatrixFile file;
         MatrixImageFile? thumbnail;
-        final length = await xfile.length();
         final mimeType = xfile.mimeType ?? lookupMimeType(xfile.path);
 
         // Generate video thumbnail
         if (PlatformInfos.isMobile &&
             mimeType != null &&
             mimeType.startsWith('video')) {
-          scaffoldMessenger.showLoadingSnackBar(l10n.generatingVideoThumbnail);
+          setProgress(sentFiles / widget.files.length + 0.2);
           thumbnail = await xfile.getVideoThumbnail();
         }
 
@@ -75,14 +83,13 @@ class SendFileDialogState extends State<SendFileDialog> {
         if (PlatformInfos.isMobile &&
             mimeType != null &&
             mimeType.startsWith('video')) {
-          scaffoldMessenger.showLoadingSnackBar(l10n.compressVideo);
+          setProgress(sentFiles / widget.files.length + 0.2);
+          final lengthResult = await Result.capture(xfile.length());
+          final length = lengthResult.asValue?.value;
           file = await xfile.getVideoInfo(
-            compress: length > minSizeToCompress && compress,
+            compress: length != null && length > minSizeToCompress && compress,
           );
         } else {
-          if (length > maxUploadSize) {
-            throw FileTooBigMatrixException(length, maxUploadSize);
-          }
           // Else we just create a MatrixFile
           file = MatrixFile(
             bytes: await xfile.readAsBytes(),
@@ -92,16 +99,11 @@ class SendFileDialogState extends State<SendFileDialog> {
         }
 
         if (file.bytes.length > maxUploadSize) {
-          throw FileTooBigMatrixException(length, maxUploadSize);
+          throw FileTooBigMatrixException(file.bytes.length, maxUploadSize);
         }
 
         if (widget.files.length > 1) {
-          scaffoldMessenger.showLoadingSnackBar(
-            l10n.sendingAttachmentCountOfCount(
-              widget.files.indexOf(xfile) + 1,
-              widget.files.length,
-            ),
-          );
+          setProgress(sentFiles / widget.files.length + 0.4);
         }
 
         final label = _labelTextController.text.trim();
@@ -124,16 +126,8 @@ class SendFileDialogState extends State<SendFileDialog> {
             milliseconds: retryAfterMs + 1000,
           );
 
-          scaffoldMessenger.showSnackBar(
-            SnackBar(
-              content: Text(
-                l10n.serverLimitReached(retryAfterDuration.inSeconds),
-              ),
-            ),
-          );
+          setProgress(sentFiles / widget.files.length + 0.2);
           await Future.delayed(retryAfterDuration);
-
-          scaffoldMessenger.showLoadingSnackBar(l10n.sendingAttachment);
 
           await widget.room.sendFileEvent(
             file,
@@ -142,24 +136,18 @@ class SendFileDialogState extends State<SendFileDialog> {
             extraContent: label.isEmpty ? null : {'body': label},
           );
         }
+        sentFiles++;
       }
-      scaffoldMessenger.clearSnackBars();
-    } catch (e) {
-      scaffoldMessenger.clearSnackBars();
-      final theme = Theme.of(context);
-      scaffoldMessenger.showSnackBar(
-        SnackBar(
-          backgroundColor: theme.colorScheme.errorContainer,
-          closeIconColor: theme.colorScheme.onErrorContainer,
-          content: Text(
-            e.toLocalizedString(widget.outerContext),
-            style: TextStyle(color: theme.colorScheme.onErrorContainer),
-          ),
-          duration: const Duration(seconds: 30),
-          showCloseIcon: true,
-        ),
+    }
+
+    if (widget.files.length == 1) {
+      await sendAction(VoidCallback);
+    } else {
+      showFutureLoadingDialog(
+        context: widget.outerContext,
+        title: l10n.sendingAttachment,
+        futureWithProgress: sendAction,
       );
-      rethrow;
     }
 
     return;
@@ -345,7 +333,7 @@ class SendFileDialogState extends State<SendFileDialog> {
                         controller: _labelTextController,
                         labelText: L10n.of(context).optionalMessage,
                         minLines: 1,
-                        maxLines: 3,
+                        maxLines: 1,
                         maxLength: 255,
                         counterText: '',
                       ),
@@ -420,31 +408,6 @@ class SendFileDialogState extends State<SendFileDialog> {
           ],
         );
       },
-    );
-  }
-}
-
-extension on ScaffoldMessengerState {
-  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showLoadingSnackBar(
-    String title,
-  ) {
-    clearSnackBars();
-    return showSnackBar(
-      SnackBar(
-        duration: const Duration(minutes: 5),
-        dismissDirection: DismissDirection.none,
-        content: Row(
-          children: [
-            const SizedBox(
-              width: 16,
-              height: 16,
-              child: CircularProgressIndicator.adaptive(strokeWidth: 2),
-            ),
-            const SizedBox(width: 16),
-            Text(title),
-          ],
-        ),
-      ),
     );
   }
 }

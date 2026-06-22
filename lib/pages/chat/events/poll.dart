@@ -1,6 +1,10 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:async/async.dart';
 import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
 import 'package:fluffychat/widgets/avatar.dart';
@@ -73,16 +77,12 @@ class PollWidget extends StatelessWidget {
               textScaleFactor: MediaQuery.textScalerOf(context).scale(1),
               style: TextStyle(
                 color: textColor,
-                fontSize:
-                    AppSettings.fontSizeFactor.value *
-                    AppConfig.messageFontSize,
+                fontSize: AppConfig.messageFontSize,
               ),
               options: const LinkifyOptions(humanize: false),
               linkStyle: TextStyle(
                 color: linkColor,
-                fontSize:
-                    AppSettings.fontSizeFactor.value *
-                    AppConfig.messageFontSize,
+                fontSize: AppConfig.messageFontSize,
                 decoration: TextDecoration.underline,
                 decorationColor: linkColor,
               ),
@@ -120,9 +120,7 @@ class PollWidget extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: textColor,
-                    fontSize:
-                        AppConfig.messageFontSize *
-                        AppSettings.fontSizeFactor.value,
+                    fontSize: AppConfig.messageFontSize,
                   ),
                 ),
                 subtitle: answersVisible
@@ -142,8 +140,7 @@ class PollWidget extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     color: linkColor,
-                                    fontSize:
-                                        12 * AppSettings.fontSizeFactor.value,
+                                    fontSize: 12,
                                   ),
                                 ),
                                 const SizedBox(width: 2),
@@ -160,8 +157,7 @@ class PollWidget extends StatelessWidget {
                                       name:
                                           user?.calcDisplayname() ??
                                           userId.localpart,
-                                      size:
-                                          12 * AppSettings.fontSizeFactor.value,
+                                      size: 12,
                                     ),
                                   );
                                 }),
@@ -204,7 +200,7 @@ class PollWidget extends StatelessWidget {
                 L10n.of(context).answersWillBeVisibleWhenPollHasEnded,
                 style: TextStyle(
                   color: linkColor,
-                  fontSize: 12 * AppSettings.fontSizeFactor.value,
+                  fontSize: 12,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -216,7 +212,7 @@ class PollWidget extends StatelessWidget {
                 L10n.of(context).pollHasBeenEnded,
                 style: TextStyle(
                   color: linkColor,
-                  fontSize: 12 * AppSettings.fontSizeFactor.value,
+                  fontSize: 12,
                   fontStyle: FontStyle.italic,
                 ),
               ),

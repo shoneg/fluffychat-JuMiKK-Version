@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat_input_row.dart';
@@ -91,13 +96,8 @@ class RecordingInputRow extends StatelessWidget {
               foregroundColor: theme.onBubbleColor,
             ),
             tooltip: L10n.of(context).sendAudio,
-            icon: state.isSending
-                ? const SizedBox.square(
-                    dimension: 24,
-                    child: CircularProgressIndicator.adaptive(),
-                  )
-                : const Icon(Icons.send_outlined),
-            onPressed: state.isSending ? null : () => state.stopAndSend(onSend),
+            icon: const Icon(Icons.send_outlined),
+            onPressed: () => state.stopAndSend(onSend),
           ),
           const SizedBox(width: 4),
         ],

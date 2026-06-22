@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
@@ -23,8 +28,12 @@ class MxcImage extends StatefulWidget {
   final ThumbnailMethod thumbnailMethod;
   final Widget Function(BuildContext context)? placeholder;
   final String? cacheKey;
+  final String? cacheName;
   final Client? client;
   final BorderRadius borderRadius;
+
+  static void clearCache(String cacheName) =>
+      _MxcImageState._imageDataCaches.remove(cacheName);
 
   const MxcImage({
     this.uri,
@@ -42,6 +51,7 @@ class MxcImage extends StatefulWidget {
     this.cacheKey,
     this.client,
     this.borderRadius = BorderRadius.zero,
+    this.cacheName,
     super.key,
   });
 
@@ -50,7 +60,10 @@ class MxcImage extends StatefulWidget {
 }
 
 class _MxcImageState extends State<MxcImage> {
-  static final Map<String, Uint8List> _imageDataCache = {};
+  static final Map<String?, Map<String, Uint8List>> _imageDataCaches = {};
+  Map<String, Uint8List> get _imageDataCache =>
+      _imageDataCaches[widget.cacheName ?? ''] ??= {};
+
   Uint8List? _imageDataNoCache;
 
   Uint8List? get _imageData => widget.cacheKey == null
@@ -131,12 +144,17 @@ class _MxcImageState extends State<MxcImage> {
     final data = _imageData;
     final hasData = data != null && data.isNotEmpty;
 
-    return AnimatedSwitcher(
+    return AnimatedCrossFade(
       duration: FluffyThemes.animationDuration,
-      child: hasData
-          ? ClipRRect(
-              borderRadius: widget.borderRadius,
-              child: Image.memory(
+      firstChild: ClipRRect(
+        borderRadius: widget.borderRadius,
+        child: data == null
+            ? _MxcImagePlaceholder(
+                width: widget.width,
+                height: widget.height,
+                placeholder: widget.placeholder,
+              )
+            : Image.memory(
                 data,
                 width: widget.width,
                 height: widget.height,
@@ -160,12 +178,15 @@ class _MxcImageState extends State<MxcImage> {
                   );
                 },
               ),
-            )
-          : _MxcImagePlaceholder(
-              width: widget.width,
-              height: widget.height,
-              placeholder: widget.placeholder,
-            ),
+      ),
+      secondChild: _MxcImagePlaceholder(
+        width: widget.width,
+        height: widget.height,
+        placeholder: widget.placeholder,
+      ),
+      crossFadeState: hasData
+          ? CrossFadeState.showFirst
+          : CrossFadeState.showSecond,
     );
   }
 }

@@ -1,5 +1,10 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/pages/chat/events/file_send_status_indicator.dart';
 import 'package:fluffychat/utils/file_description.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
@@ -31,6 +36,7 @@ class MessageDownloadContent extends StatelessWidget {
               'UNKNOWN');
     final sizeString = event.sizeString ?? '?MB';
     final fileDescription = event.fileDescription;
+    final fileSendingStatus = event.fileSendingStatus;
     return Column(
       mainAxisSize: .min,
       crossAxisAlignment: .start,
@@ -48,10 +54,18 @@ class MessageDownloadContent extends StatelessWidget {
                 mainAxisSize: .min,
                 spacing: 16,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: textColor.withAlpha(32),
-                    child: Icon(Icons.file_download_outlined, color: textColor),
-                  ),
+                  if (fileSendingStatus != null)
+                    FileSendStatusIndicator(
+                      fileSendingStatus: fileSendingStatus,
+                    )
+                  else
+                    CircleAvatar(
+                      backgroundColor: textColor.withAlpha(32),
+                      child: Icon(
+                        Icons.file_download_outlined,
+                        color: textColor,
+                      ),
+                    ),
                   Flexible(
                     child: Column(
                       crossAxisAlignment: .start,
@@ -91,16 +105,12 @@ class MessageDownloadContent extends StatelessWidget {
               textScaleFactor: MediaQuery.textScalerOf(context).scale(1),
               style: TextStyle(
                 color: textColor,
-                fontSize:
-                    AppSettings.fontSizeFactor.value *
-                    AppConfig.messageFontSize,
+                fontSize: AppConfig.messageFontSize,
               ),
               options: const LinkifyOptions(humanize: false),
               linkStyle: TextStyle(
                 color: linkColor,
-                fontSize:
-                    AppSettings.fontSizeFactor.value *
-                    AppConfig.messageFontSize,
+                fontSize: AppConfig.messageFontSize,
                 decoration: TextDecoration.underline,
                 decorationColor: linkColor,
               ),

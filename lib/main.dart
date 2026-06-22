@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:isolate';
 import 'dart:ui';
 
@@ -22,7 +27,10 @@ ReceivePort? mainIsolateReceivePort;
 
 bool _vodozemacInitialized = false;
 
-void main() async {
+bool isIntegrationTest = false;
+
+void main(List<String> args) async {
+  isIntegrationTest = args.singleOrNull == 'integration_test';
   if (PlatformInfos.isAndroid) {
     final port = mainIsolateReceivePort = ReceivePort();
     IsolateNameServer.removePortNameMapping(AppConfig.mainIsolatePortName);
@@ -70,7 +78,7 @@ void main() async {
 
     // In the background fetch mode we do not want to waste ressources with
     // starting the Flutter engine but process incoming push notifications.
-    BackgroundPush.clientOnly(clients.first);
+    BackgroundPush.clientOnly(clients);
     // To start the flutter engine afterwards we add an custom observer.
     WidgetsBinding.instance.addObserver(AppStarter(clients, store));
     Logs().i(

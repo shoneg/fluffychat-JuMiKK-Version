@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/intro/flows/restore_backup_flow.dart';
@@ -5,7 +10,6 @@ import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -34,11 +38,9 @@ class IntroPage extends StatelessWidget {
     return LoginScaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          addMultiAccount
-              ? L10n.of(context).addAccount
-              : L10n.of(context).login,
-        ),
+        title: addMultiAccount
+            ? Text(L10n.of(context).addAccount)
+            : Text(AppSettings.applicationName.value),
         actions: [
           PopupMenuButton(
             useRootNavigator: true,
@@ -103,38 +105,35 @@ class IntroPage extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.center,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0,
-                            ),
+                            padding: const EdgeInsets.all(32.0),
                             child: Hero(
                               tag: 'info-logo',
-                              child: Image.asset(
-                                './assets/banner_transparent.png',
-                                fit: BoxFit.fitWidth,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(128),
+                                child: Image.asset(
+                                  './assets/logo/mini/logo_mini.png',
+                                  width: 128,
+                                  height: 128,
+                                ),
                               ),
                             ),
                           ),
-                          const SizedBox(height: 32),
+                          Text(
+                            L10n.of(context).appSubtitle,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          const SizedBox(height: 8),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 32.0,
-                            ),
-                            child: SelectableLinkify(
-                              text: welcomeText ?? L10n.of(context).appIntro,
-                              textScaleFactor: MediaQuery.textScalerOf(
-                                context,
-                              ).scale(1),
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Text(
+                              L10n.of(context).appDescription,
                               textAlign: TextAlign.center,
-                              linkStyle: TextStyle(
-                                color: theme.colorScheme.secondary,
-                                decorationColor: theme.colorScheme.secondary,
-                              ),
-                              onOpen: (link) => launchUrlString(link.url),
                             ),
                           ),
                           const Spacer(),
                           Padding(
-                            padding: const EdgeInsets.all(32.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 32),
                             child: Column(
                               mainAxisSize: .min,
                               crossAxisAlignment: .stretch,
@@ -166,6 +165,7 @@ class IntroPage extends StatelessWidget {
                                       final client = await Matrix.of(
                                         context,
                                       ).getLoginClient();
+                                      if (!context.mounted) return;
                                       context.go(
                                         '${GoRouterState.of(context).uri.path}/login',
                                         extra: client,
@@ -178,6 +178,7 @@ class IntroPage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          const SizedBox(height: 36),
                         ],
                       ),
                     ),

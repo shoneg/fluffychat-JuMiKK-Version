@@ -1,6 +1,10 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui' as ui;
 
-import 'package:badges/badges.dart';
 import 'package:desktop_drop/desktop_drop.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
@@ -9,8 +13,6 @@ import 'package:fluffychat/pages/chat/chat.dart';
 import 'package:fluffychat/pages/chat/chat_app_bar_list_tile.dart';
 import 'package:fluffychat/pages/chat/chat_app_bar_title.dart';
 import 'package:fluffychat/pages/chat/chat_event_list.dart';
-import 'package:fluffychat/pages/chat/encryption_button.dart';
-import 'package:fluffychat/pages/chat/jitsi_popup_button.dart';
 import 'package:fluffychat/pages/chat/pinned_events.dart';
 import 'package:fluffychat/pages/chat/reply_display.dart';
 import 'package:fluffychat/utils/account_config.dart';
@@ -19,7 +21,6 @@ import 'package:fluffychat/widgets/chat_settings_popup_menu.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
-import 'package:fluffychat/widgets/unread_rooms_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 
@@ -84,7 +85,14 @@ class ChatView extends StatelessWidget {
               appbarBottomHeight += ChatAppBarListTile.fixedHeight;
             }
             return Scaffold(
+              key: Key('chat_page'),
+              extendBodyBehindAppBar: true,
               appBar: AppBar(
+                shape: FluffyThemes.isColumnMode(context)
+                    ? Border(
+                        bottom: BorderSide(color: theme.dividerColor, width: 1),
+                      )
+                    : null,
                 actionsIconTheme: IconThemeData(
                   color: controller.selectedEvents.isEmpty
                       ? null
@@ -93,7 +101,7 @@ class ChatView extends StatelessWidget {
                 backgroundColor: controller.selectedEvents.isEmpty
                     ? controller.activeThreadId != null
                           ? theme.colorScheme.secondaryContainer
-                          : null
+                          : theme.colorScheme.surface.withAlpha(240)
                     : theme.colorScheme.tertiaryContainer,
                 automaticallyImplyLeading: false,
                 leading: controller.selectMode
@@ -112,16 +120,7 @@ class ChatView extends StatelessWidget {
                       )
                     : FluffyThemes.isColumnMode(context)
                     ? null
-                    : StreamBuilder<Object>(
-                        stream: Matrix.of(context).client.onSync.stream.where(
-                          (syncUpdate) => syncUpdate.hasRoomUpdate,
-                        ),
-                        builder: (context, _) => UnreadRoomsBadge(
-                          filter: (r) => r.id != controller.roomId,
-                          badgePosition: BadgePosition.topEnd(end: 8, top: 4),
-                          child: const Center(child: BackButton()),
-                        ),
-                      ),
+                    : const Center(child: BackButton()),
                 titleSpacing: FluffyThemes.isColumnMode(context) ? 24 : 0,
                 title: ChatAppBarTitle(controller),
                 actions: [
@@ -225,16 +224,12 @@ class ChatView extends StatelessWidget {
                       ),
                   ] else if (!controller.room.isArchived) ...[
                     if ((AppSettings.experimentalVoip.value &&
-                        Matrix.of(context).voipPlugin != null &&
                         controller.room.isDirectChat))
                       IconButton(
                         onPressed: controller.onPhoneButtonTap,
                         icon: const Icon(Icons.call_outlined),
                         tooltip: L10n.of(context).placeCall,
-                      )
-                    else if (AppSettings.jitsiFeature.value)
-                      JitsiPopupButton(controller.room),
-                    EncryptionButton(controller.room),
+                      ),
                     ChatSettingsPopupMenu(controller.room, true),
                   ],
                 ],
@@ -292,7 +287,9 @@ class ChatView extends StatelessWidget {
                   controller.showScrollDownButton &&
                       controller.selectedEvents.isEmpty
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 56.0),
+                      padding: EdgeInsets.only(
+                        bottom: theme.appBarTheme.toolbarHeight ?? 56,
+                      ),
                       child: FloatingActionButton(
                         onPressed: controller.scrollDown,
                         heroTag: null,
@@ -303,116 +300,159 @@ class ChatView extends StatelessWidget {
                       ),
                     )
                   : null,
-              body: DropTarget(
-                onDragDone: controller.onDragDone,
-                onDragEntered: controller.onDragEntered,
-                onDragExited: controller.onDragExited,
-                child: Stack(
-                  children: <Widget>[
-                    if (accountConfig.wallpaperUrl != null)
-                      Opacity(
-                        opacity: accountConfig.wallpaperOpacity ?? 0.5,
-                        child: ImageFiltered(
-                          imageFilter: ui.ImageFilter.blur(
-                            sigmaX: accountConfig.wallpaperBlur ?? 0.0,
-                            sigmaY: accountConfig.wallpaperBlur ?? 0.0,
-                          ),
-                          child: MxcImage(
-                            cacheKey: accountConfig.wallpaperUrl.toString(),
-                            uri: accountConfig.wallpaperUrl,
-                            fit: BoxFit.cover,
-                            height: MediaQuery.sizeOf(context).height,
-                            width: MediaQuery.sizeOf(context).width,
-                            isThumbnail: false,
-                            placeholder: (_) => Container(),
-                          ),
-                        ),
-                      ),
-                    SafeArea(
-                      child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: controller.clearSingleSelectedEvent,
-                              child: ChatEventList(controller: controller),
+              body: NotificationListener<SizeChangedLayoutNotification>(
+                onNotification: (SizeChangedLayoutNotification notification) {
+                  WidgetsBinding.instance.addPostFrameCallback(
+                    (_) => controller.updateInputBarHeight(),
+                  );
+                  return true;
+                },
+                child: DropTarget(
+                  onDragDone: controller.onDragDone,
+                  onDragEntered: controller.onDragEntered,
+                  onDragExited: controller.onDragExited,
+                  child: SafeArea(
+                    top: false,
+                    child: Stack(
+                      children: <Widget>[
+                        if (accountConfig.wallpaperUrl != null)
+                          Opacity(
+                            opacity: accountConfig.wallpaperOpacity ?? 0.5,
+                            child: ImageFiltered(
+                              imageFilter: ui.ImageFilter.blur(
+                                sigmaX: accountConfig.wallpaperBlur ?? 0.0,
+                                sigmaY: accountConfig.wallpaperBlur ?? 0.0,
+                              ),
+                              child: MxcImage(
+                                cacheKey: accountConfig.wallpaperUrl.toString(),
+                                uri: accountConfig.wallpaperUrl,
+                                fit: BoxFit.cover,
+                                height: MediaQuery.sizeOf(context).height,
+                                width: MediaQuery.sizeOf(context).width,
+                                isThumbnail: false,
+                                placeholder: (_) => Container(),
+                              ),
                             ),
                           ),
-                          if (controller.showScrollDownButton)
-                            Divider(height: 1, color: theme.dividerColor),
-                          if (controller.room.isExtinct)
-                            Container(
-                              margin: EdgeInsets.all(bottomSheetPadding),
-                              width: double.infinity,
-                              child: ElevatedButton.icon(
-                                icon: const Icon(Icons.chevron_right),
-                                label: Text(L10n.of(context).enterNewChat),
-                                onPressed: controller.goToNewRoomAction,
-                              ),
-                            )
-                          else if (controller.room.canSendDefaultMessages &&
-                              controller.room.membership == Membership.join)
-                            Container(
-                              margin: EdgeInsets.all(bottomSheetPadding),
-                              constraints: const BoxConstraints(
-                                maxWidth: FluffyThemes.maxTimelineWidth,
+                        GestureDetector(
+                          onTap: controller.clearSingleSelectedEvent,
+                          child: ChatEventList(controller: controller),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          child: SizeChangedLayoutNotifier(
+                            child: Container(
+                              key: controller.inputBarKey,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    theme.colorScheme.surface.withAlpha(0),
+                                    theme.colorScheme.surface.withAlpha(0),
+                                    theme.colorScheme.surface,
+                                    theme.colorScheme.surface,
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                ),
                               ),
                               alignment: Alignment.center,
-                              child: Material(
-                                clipBehavior: Clip.hardEdge,
-                                color: controller.selectedEvents.isNotEmpty
-                                    ? theme.colorScheme.tertiaryContainer
-                                    : theme.colorScheme.surfaceContainerHigh,
-                                borderRadius: BorderRadius.circular(32),
-                                child: controller.room.isAbandonedDMRoom == true
-                                    ? Row(
-                                        mainAxisAlignment: .spaceEvenly,
-                                        children: [
-                                          TextButton.icon(
-                                            style: TextButton.styleFrom(
-                                              padding: const EdgeInsets.all(16),
-                                              foregroundColor:
-                                                  theme.colorScheme.error,
-                                            ),
-                                            icon: const Icon(
-                                              Icons.archive_outlined,
-                                            ),
-                                            onPressed: controller.leaveChat,
-                                            label: Text(L10n.of(context).leave),
-                                          ),
-                                          TextButton.icon(
-                                            style: TextButton.styleFrom(
-                                              padding: const EdgeInsets.all(16),
-                                            ),
-                                            icon: const Icon(
-                                              Icons.forum_outlined,
-                                            ),
-                                            onPressed: controller.recreateChat,
-                                            label: Text(
-                                              L10n.of(context).reopenChat,
-                                            ),
-                                          ),
-                                        ],
+                              child: Container(
+                                margin: EdgeInsets.all(bottomSheetPadding),
+                                constraints: const BoxConstraints(
+                                  maxWidth: FluffyThemes.maxTimelineWidth,
+                                ),
+                                child: controller.room.isExtinct
+                                    ? ElevatedButton.icon(
+                                        icon: const Icon(Icons.chevron_right),
+                                        label: Text(
+                                          L10n.of(context).enterNewChat,
+                                        ),
+                                        onPressed: controller.goToNewRoomAction,
                                       )
-                                    : Column(
-                                        mainAxisSize: .min,
-                                        children: [
-                                          ReplyDisplay(controller),
-                                          ChatInputRow(controller),
-                                          ChatEmojiPicker(controller),
-                                        ],
-                                      ),
+                                    : controller.room.canSendDefaultMessages &&
+                                          controller.room.membership ==
+                                              Membership.join
+                                    ? Material(
+                                        clipBehavior: Clip.hardEdge,
+                                        color:
+                                            controller.selectedEvents.isNotEmpty
+                                            ? theme
+                                                  .colorScheme
+                                                  .tertiaryContainer
+                                            : theme
+                                                  .colorScheme
+                                                  .surfaceContainer,
+                                        borderRadius: BorderRadius.circular(32),
+                                        child:
+                                            controller.room.isAbandonedDMRoom ==
+                                                true
+                                            ? Row(
+                                                mainAxisAlignment: .spaceEvenly,
+                                                children: [
+                                                  TextButton.icon(
+                                                    style: TextButton.styleFrom(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                            16,
+                                                          ),
+                                                      foregroundColor: theme
+                                                          .colorScheme
+                                                          .error,
+                                                    ),
+                                                    icon: const Icon(
+                                                      Icons.archive_outlined,
+                                                    ),
+                                                    onPressed:
+                                                        controller.leaveChat,
+                                                    label: Text(
+                                                      L10n.of(context).leave,
+                                                    ),
+                                                  ),
+                                                  TextButton.icon(
+                                                    style: TextButton.styleFrom(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                            16,
+                                                          ),
+                                                    ),
+                                                    icon: const Icon(
+                                                      Icons.forum_outlined,
+                                                    ),
+                                                    onPressed:
+                                                        controller.recreateChat,
+                                                    label: Text(
+                                                      L10n.of(
+                                                        context,
+                                                      ).reopenChat,
+                                                    ),
+                                                  ),
+                                                ],
+                                              )
+                                            : Column(
+                                                mainAxisSize: .min,
+                                                children: [
+                                                  ReplyDisplay(controller),
+                                                  ChatInputRow(controller),
+                                                  ChatEmojiPicker(controller),
+                                                ],
+                                              ),
+                                      )
+                                    : SizedBox.shrink(),
                               ),
                             ),
-                        ],
-                      ),
+                          ),
+                        ),
+                        if (controller.dragging)
+                          Container(
+                            color: theme.scaffoldBackgroundColor.withAlpha(230),
+                            alignment: Alignment.center,
+                            child: const Icon(Icons.upload_outlined, size: 100),
+                          ),
+                      ],
                     ),
-                    if (controller.dragging)
-                      Container(
-                        color: theme.scaffoldBackgroundColor.withAlpha(230),
-                        alignment: Alignment.center,
-                        child: const Icon(Icons.upload_outlined, size: 100),
-                      ),
-                  ],
+                  ),
                 ),
               ),
             );

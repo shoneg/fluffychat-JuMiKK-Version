@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/date_time_extension.dart';
@@ -64,7 +69,7 @@ class UserDialog extends StatelessWidget {
                 ).lastActiveAgo(lastActiveTimestamp.localizedTimeShort(context))
               : null;
           return Column(
-            spacing: 16,
+            spacing: 8,
             mainAxisSize: .min,
             crossAxisAlignment: .stretch,
             children: [
@@ -220,6 +225,7 @@ class UserDialog extends StatelessWidget {
                               hintText: L10n.of(context).reason,
                             );
                             if (reason == null || reason.isEmpty) return;
+                            if (!context.mounted) return;
                             await showFutureLoadingDialog(
                               context: context,
                               future: () => Matrix.of(

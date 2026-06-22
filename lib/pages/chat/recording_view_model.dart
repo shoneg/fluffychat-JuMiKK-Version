@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 
 import 'package:device_info_plus/device_info_plus.dart';
@@ -29,8 +34,6 @@ class RecordingViewModelState extends State<RecordingViewModel> {
   Timer? _recorderSubscription;
   Duration duration = Duration.zero;
 
-  bool isSending = false;
-
   bool get isRecording => _audioRecorder != null;
 
   AudioRecorder? _audioRecorder;
@@ -44,6 +47,7 @@ class RecordingViewModelState extends State<RecordingViewModel> {
     room.client.getConfig(); // Preload server file configuration.
     if (PlatformInfos.isAndroid) {
       final info = await DeviceInfoPlugin().androidInfo;
+      if (!mounted) return;
       if (info.version.sdkInt < 19) {
         showOkAlertDialog(
           context: context,
@@ -76,6 +80,7 @@ class RecordingViewModelState extends State<RecordingViewModel> {
 
       final result = await audioRecorder.hasPermission();
       if (result != true) {
+        if (!mounted) return;
         showOkAlertDialog(
           context: context,
           title: L10n.of(context).oopsSomethingWentWrong,
@@ -97,10 +102,12 @@ class RecordingViewModelState extends State<RecordingViewModel> {
         ),
         path: path ?? '',
       );
+      if (!mounted) return;
       setState(() => duration = Duration.zero);
       _subscribe();
     } catch (e, s) {
       Logs().w('Unable to start voice message recording', e, s);
+      if (!mounted) return;
       showOkAlertDialog(
         context: context,
         title: L10n.of(context).oopsSomethingWentWrong,
@@ -136,7 +143,7 @@ class RecordingViewModelState extends State<RecordingViewModel> {
     _recorderSubscription?.cancel();
     _audioRecorder?.stop();
     _audioRecorder = null;
-    isSending = false;
+
     fileName = null;
     duration = Duration.zero;
     amplitudeTimeline.clear();
@@ -185,18 +192,7 @@ class RecordingViewModelState extends State<RecordingViewModel> {
       waveform.add((amplitudeTimeline[i] / 100 * 1024).round());
     }
 
-    setState(() {
-      isSending = true;
-    });
-    try {
-      await onSend(path, duration.inMilliseconds, waveform, fileName!);
-    } catch (e, s) {
-      Logs().e('Unable to send voice message', e, s);
-      setState(() {
-        isSending = false;
-      });
-      return;
-    }
+    onSend(path, duration.inMilliseconds, waveform, fileName!);
 
     cancel();
   }

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:flutter/material.dart';
@@ -43,24 +48,18 @@ abstract class FluffyThemes {
     final colorScheme = ColorScheme.fromSeed(
       brightness: brightness,
       seedColor: seed ?? Color(AppSettings.colorSchemeSeedInt.value),
+      dynamicSchemeVariant: DynamicSchemeVariant.rainbow,
     );
     final isColumnMode = FluffyThemes.isColumnMode(context);
+    final dividerColor = brightness == Brightness.dark
+        ? colorScheme.surfaceContainerHighest
+        : colorScheme.surfaceContainer;
     return ThemeData(
       visualDensity: VisualDensity.standard,
       useMaterial3: true,
       brightness: brightness,
       colorScheme: colorScheme,
-      dividerColor: brightness == Brightness.dark
-          ? colorScheme.surfaceContainerHighest
-          : colorScheme.surfaceContainer,
-      popupMenuTheme: PopupMenuThemeData(
-        color: colorScheme.surfaceContainerLow,
-        iconColor: colorScheme.onSurface,
-        textStyle: TextStyle(color: colorScheme.onSurface),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppConfig.borderRadius / 2),
-        ),
-      ),
+      dividerColor: dividerColor,
       segmentedButtonTheme: SegmentedButtonThemeData(
         style: SegmentedButton.styleFrom(
           iconColor: colorScheme.onSurface,
@@ -87,9 +86,6 @@ abstract class FluffyThemes {
       ),
       appBarTheme: AppBarTheme(
         toolbarHeight: isColumnMode ? 72 : 56,
-        shadowColor: isColumnMode
-            ? colorScheme.surfaceContainer.withAlpha(128)
-            : null,
         surfaceTintColor: isColumnMode ? colorScheme.surface : null,
         backgroundColor: isColumnMode ? colorScheme.surface : null,
         actionsPadding: isColumnMode

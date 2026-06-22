@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:file_picker/file_picker.dart';
 import 'package:file_selector/file_selector.dart';
 import 'package:fluffychat/widgets/app_lock.dart';
@@ -13,12 +18,21 @@ Future<List<XFile>> selectFiles(
   final result = await AppLock.of(context).pauseWhile(
     showFutureLoadingDialog(
       context: context,
-      future: () => FilePicker.platform.pickFiles(
-        compressionQuality: 0,
-        allowMultiple: allowMultiple,
-        type: type,
-      ),
+      future: () async {
+        if (allowMultiple) {
+          final result = await FilePicker.pickFiles(
+            type: type,
+            dialogTitle: title,
+          );
+          return result?.xFiles;
+        }
+        final result = await FilePicker.pickFile(
+          type: type,
+          dialogTitle: title,
+        );
+        return [?result?.xFile];
+      },
     ),
   );
-  return result.result?.xFiles ?? [];
+  return result.result ?? [];
 }

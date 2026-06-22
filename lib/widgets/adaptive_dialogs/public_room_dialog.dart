@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/fluffy_share.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
@@ -25,6 +30,7 @@ class PublicRoomDialog extends StatelessWidget {
   const PublicRoomDialog({super.key, this.roomAlias, this.chunk, this.via});
 
   Future<void> _joinRoom(BuildContext context) async {
+    final l10n = L10n.of(context);
     final client = Matrix.of(context).client;
     final chunk = this.chunk;
     final knock = chunk?.joinRule == 'knock';
@@ -48,12 +54,13 @@ class PublicRoomDialog extends StatelessWidget {
     );
     final roomId = result.result;
     if (roomId == null) return;
+    if (!context.mounted) return;
     if (knock && client.getRoomById(roomId) == null) {
       Navigator.of(context).pop<bool>(true);
       await showOkAlertDialog(
         context: context,
-        title: L10n.of(context).youHaveKnocked,
-        message: L10n.of(context).pleaseWaitUntilInvited,
+        title: l10n.youHaveKnocked,
+        message: l10n.pleaseWaitUntilInvited,
       );
       return;
     }
@@ -73,6 +80,7 @@ class PublicRoomDialog extends StatelessWidget {
   bool _testRoom(PublishedRoomsChunk r) => r.canonicalAlias == roomAlias;
 
   Future<PublishedRoomsChunk> _search(BuildContext context) async {
+    final l10n = L10n.of(context);
     final chunk = this.chunk;
     if (chunk != null) return chunk;
     final query = await Matrix.of(context).client.queryPublicRooms(
@@ -80,7 +88,7 @@ class PublicRoomDialog extends StatelessWidget {
       filter: PublicRoomQueryFilter(genericSearchTerm: roomAlias),
     );
     if (!query.chunk.any(_testRoom)) {
-      throw (L10n.of(context).noRoomsFound);
+      throw (l10n.noRoomsFound);
     }
     return query.chunk.firstWhere(_testRoom);
   }
@@ -103,7 +111,7 @@ class PublicRoomDialog extends StatelessWidget {
             final topic = profile?.topic;
             return SingleChildScrollView(
               child: Column(
-                spacing: 16,
+                spacing: 8,
                 mainAxisSize: .min,
                 crossAxisAlignment: .stretch,
                 children: [
@@ -248,6 +256,7 @@ class PublicRoomDialog extends StatelessWidget {
                             hintText: L10n.of(context).reason,
                           );
                           if (reason == null || reason.isEmpty) return;
+                          if (!context.mounted) return;
                           await showFutureLoadingDialog(
                             context: context,
                             future: () => Matrix.of(context).client.reportRoom(

@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:matrix/matrix.dart';
 
@@ -37,16 +42,11 @@ extension IsStateExtension on Event {
       // if we enabled to hide all unknown events, don't show those
       (!AppSettings.hideUnknownEvents.value || isEventTypeKnown);
 
-  bool get isState => !{
-    EventTypes.Message,
-    EventTypes.Sticker,
-    EventTypes.Encrypted,
-  }.contains(type);
+  bool get isState => !{EventTypes.Message, EventTypes.Sticker}.contains(type);
 
   bool get isCollapsedState => !{
     EventTypes.Message,
     EventTypes.Sticker,
-    EventTypes.Encrypted,
     EventTypes.RoomCreate,
     EventTypes.RoomTombstone,
   }.contains(type);

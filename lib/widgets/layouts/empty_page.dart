@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -20,7 +25,7 @@ class EmptyPage extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         child: Image.asset(
-          'assets/logo_transparent.png',
+          'assets/logo/mini/logo_mono_mini.png',
           color: theme.colorScheme.surfaceContainerHigh,
           width: width,
           height: width,

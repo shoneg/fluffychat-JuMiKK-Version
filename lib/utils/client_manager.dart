@@ -1,7 +1,9 @@
-import 'dart:io';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:collection/collection.dart';
-import 'package:desktop_notifications/desktop_notifications.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/custom_http_client.dart';
@@ -17,6 +19,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 
 import 'matrix_sdk_extensions/flutter_matrix_dart_sdk_database/builder.dart';
+import 'matrix_sdk_extensions/on_soft_logout.dart';
 
 abstract class ClientManager {
   static const String clientNamespace = 'im.fluffychat.store.clients';
@@ -34,7 +37,7 @@ abstract class ClientManager {
       await store.remove(clientNamespace);
     }
     if (clientNames.isEmpty) {
-      clientNames.add(PlatformInfos.clientName);
+      clientNames.add(PlatformInfos.appDisplayName);
       await store.setStringList(clientNamespace, clientNames.toList());
     }
     final clients = await Future.wait(
@@ -139,9 +142,7 @@ abstract class ClientManager {
             (share) => share.name == shareKeysWith,
           ) ??
           ShareKeysWith.all,
-      onSoftLogout: enableSoftLogout
-          ? (client) => client.refreshAccessToken()
-          : null,
+      onSoftLogout: enableSoftLogout ? onSoftLogout : null,
       sendTimelineEventTimeout: Duration(
         seconds: AppSettings.sendTimelineEventTimeout.value,
       ),
@@ -151,15 +152,6 @@ abstract class ClientManager {
   static Future<void> sendInitNotification(String title, String body) async {
     if (kIsWeb) {
       html.Notification(title, body: body);
-      return;
-    }
-    if (Platform.isLinux) {
-      await NotificationsClient().notify(
-        title,
-        body: body,
-        appName: AppSettings.applicationName.value,
-        hints: [NotificationHint.soundName('message-new-instant')],
-      );
       return;
     }
 

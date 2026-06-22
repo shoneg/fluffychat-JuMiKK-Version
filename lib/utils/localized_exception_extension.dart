@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:io';
 import 'dart:math';
 
@@ -77,11 +82,9 @@ extension LocalizedExceptionExtension on Object {
           .toString()
           .replaceAll('{', '"')
           .replaceAll('}', '"');
-      return L10n.of(context).badServerLoginTypesException(
-        serverVersions,
-        supportedVersions,
-        supportedVersions,
-      );
+      return L10n.of(
+        context,
+      ).badServerLoginTypesException(serverVersions, supportedVersions);
     }
     if (this is IOException ||
         this is SocketException ||

@@ -1,8 +1,14 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_list/unread_bubble.dart';
@@ -170,14 +176,17 @@ class _SpaceViewState extends State<SpaceView> {
     switch (action) {
       case SpaceActions.settings:
         await space?.postLoad();
+        if (!mounted) return;
         context.push('/rooms/${widget.spaceId}/details');
         break;
       case SpaceActions.invite:
         await space?.postLoad();
+        if (!mounted) return;
         context.push('/rooms/${widget.spaceId}/invite');
         break;
       case SpaceActions.members:
         await space?.postLoad();
+        if (!mounted) return;
         context.push('/rooms/${widget.spaceId}/details/members');
         break;
       case SpaceActions.leave:
@@ -373,11 +382,17 @@ class _SpaceViewState extends State<SpaceView> {
     final isAdmin = room?.canChangeStateEvent(EventTypes.SpaceChild) == true;
     return Scaffold(
       appBar: AppBar(
-        leading: FluffyThemes.isColumnMode(context)
+        leading:
+            FluffyThemes.isColumnMode(context) ||
+                AppSettings.displayNavigationRail.value
             ? null
             : Center(child: CloseButton(onPressed: widget.onBack)),
         automaticallyImplyLeading: false,
-        titleSpacing: FluffyThemes.isColumnMode(context) ? null : 0,
+        titleSpacing:
+            FluffyThemes.isColumnMode(context) ||
+                AppSettings.displayNavigationRail.value
+            ? null
+            : 0,
         title: ListTile(
           contentPadding: EdgeInsets.zero,
           leading: Avatar(
@@ -524,14 +539,16 @@ class _SpaceViewState extends State<SpaceView> {
                           );
                         }
                         final item = _discoveredChildren[i];
+                        var joinedRoom = room.client.getRoomById(item.roomId);
                         final displayname =
                             item.name ??
                             item.canonicalAlias ??
+                            joinedRoom?.getLocalizedDisplayname() ??
                             L10n.of(context).emptyChat;
+                        final avatarUrl = item.avatarUrl ?? joinedRoom?.avatar;
                         if (!displayname.toLowerCase().contains(filter)) {
                           return const SizedBox.shrink();
                         }
-                        var joinedRoom = room.client.getRoomById(item.roomId);
                         if (joinedRoom?.membership == Membership.leave) {
                           joinedRoom = null;
                         }
@@ -595,7 +612,7 @@ class _SpaceViewState extends State<SpaceView> {
                                       )
                                     : Avatar(
                                         size: avatarSize,
-                                        mxContent: item.avatarUrl,
+                                        mxContent: avatarUrl,
                                         name: '#',
                                         backgroundColor:
                                             theme.colorScheme.surfaceContainer,

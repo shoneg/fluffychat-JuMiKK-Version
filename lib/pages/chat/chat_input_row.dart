@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:emoji_picker_flutter/locales/default_emoji_set_locale.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -171,6 +176,38 @@ class ChatInputRow extends StatelessWidget {
                             contentPadding: const EdgeInsets.all(0),
                           ),
                         ),
+                        PopupMenuDivider(),
+                        if (PlatformInfos.isMobile) ...[
+                          PopupMenuItem(
+                            value: AddPopupMenuActions.videoCamera,
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundColor:
+                                    theme.colorScheme.onPrimaryContainer,
+                                foregroundColor:
+                                    theme.colorScheme.primaryContainer,
+                                child: const Icon(Icons.videocam_outlined),
+                              ),
+                              title: Text(L10n.of(context).recordAVideo),
+                              contentPadding: const EdgeInsets.all(0),
+                            ),
+                          ),
+                          PopupMenuItem(
+                            value: AddPopupMenuActions.photoCamera,
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundColor:
+                                    theme.colorScheme.onPrimaryContainer,
+                                foregroundColor:
+                                    theme.colorScheme.primaryContainer,
+                                child: const Icon(Icons.camera_alt_outlined),
+                              ),
+                              title: Text(L10n.of(context).takeAPhoto),
+                              contentPadding: const EdgeInsets.all(0),
+                            ),
+                          ),
+                          PopupMenuDivider(),
+                        ],
                         PopupMenuItem(
                           value: AddPopupMenuActions.image,
                           child: ListTile(
@@ -218,52 +255,6 @@ class ChatInputRow extends StatelessWidget {
                       ],
                     ),
                   ),
-                  if (PlatformInfos.isMobile)
-                    AnimatedContainer(
-                      duration: FluffyThemes.animationDuration,
-                      curve: FluffyThemes.animationCurve,
-                      width: textMessageOnly ? 0 : 48,
-                      height: height,
-                      alignment: Alignment.center,
-                      decoration: const BoxDecoration(),
-                      clipBehavior: Clip.hardEdge,
-                      child: PopupMenuButton(
-                        useRootNavigator: true,
-                        icon: const Icon(Icons.camera_alt_outlined),
-                        onSelected: controller.onAddPopupMenuButtonSelected,
-                        iconColor: theme.colorScheme.onPrimaryContainer,
-                        itemBuilder: (context) => [
-                          PopupMenuItem(
-                            value: AddPopupMenuActions.videoCamera,
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor:
-                                    theme.colorScheme.onPrimaryContainer,
-                                foregroundColor:
-                                    theme.colorScheme.primaryContainer,
-                                child: const Icon(Icons.videocam_outlined),
-                              ),
-                              title: Text(L10n.of(context).recordAVideo),
-                              contentPadding: const EdgeInsets.all(0),
-                            ),
-                          ),
-                          PopupMenuItem(
-                            value: AddPopupMenuActions.photoCamera,
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor:
-                                    theme.colorScheme.onPrimaryContainer,
-                                foregroundColor:
-                                    theme.colorScheme.primaryContainer,
-                                child: const Icon(Icons.camera_alt_outlined),
-                              ),
-                              title: Text(L10n.of(context).takeAPhoto),
-                              contentPadding: const EdgeInsets.all(0),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   Container(
                     height: height,
                     width: 48,
@@ -315,7 +306,9 @@ class ChatInputRow extends StatelessWidget {
                             top: 3.0,
                           ),
                           counter: const SizedBox.shrink(),
-                          hintText: L10n.of(context).writeAMessage,
+                          hintText: controller.room.encrypted
+                              ? L10n.of(context).encryptedMessage
+                              : L10n.of(context).unencryptedMessage,
                           hintMaxLines: 1,
                           border: InputBorder.none,
                           enabledBorder: InputBorder.none,
