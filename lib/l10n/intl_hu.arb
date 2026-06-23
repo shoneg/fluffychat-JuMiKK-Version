@@ -1418,51 +1418,131 @@
                 "type": "String"            }
         }
     },
-    "deletePushRuleCanNotBeUndone": "Ha törli ezt az értesítési beállítást, később nem vonható vissza.",    "manageAccount": "Fiók kezelése",    "enterNewChat": "Belépés új csevegésbe",    "blur": "Homályosít:",    "name": "Név",    "continueText": "Folytatás",    "opacity": "Átlátszóság:",    "welcomeText": "Üdv 👋 Ez a JuMiKK-Chat. Bejelentkezhet bármely matrix-kiszolgálóhoz amely kompatibilis a https://matrix.org címmel. Ezután cseveghet bárkivel. Így képez egy óriási decentralizált üzenetküldő hálózatot!",    "addLink": "Hivatkozás hozzáadása",    "invalidUrl": "Helytelen hivatkozás",    "setWallpaper": "Háttér beállítás",    "noContactInformationProvided": "A szervertől nem érkezett vissza kapcsolati információ",    "contactServerSecurity": "Kapcsolatfelvétel a szerver biztonsággal",    "contactServerAdmin": "Kapcsolatfelvétel a szerver adminnal",    "supportPage": "Támogatási oldal",    "version": "Verzió",    "verifiedDevicesOnly": "Csak hitelesített eszközök",    "website": "Weboldal",    "pleaseFillOut": "Kérem töltse ki",    "previous": "Előző",    "optionalMessage": "(Választható) üzenet...",    "takeAPhoto": "Készítsen egy fotót",    "recordAVideo": "Vegyen fel egy videót",    "notSupportedOnThisDevice": "Nem támogatott ezen az eszközön",    "noticeChatBackupDeviceVerification": "Megjegyzés: Minden eszköze amit a csevegés mentéshez kapcsol, automatikusan hitelesítésre kerül.",    "notificationRuleMaster": "Minden értesítés némítása",    "notificationRuleContainsDisplayNameDescription": "Értesíti a felhasználót, ha közvetlenül említésre kerül a megjelenített neve az üzenetben.",    "notificationRuleTombstone": "Sírkő",    "shareKeysWithDescription": "Mely eszközök tekinthetőek megbízhatónak, hogy olvashassák a titkosított csevegéseket is?",    "allDevices": "Minden eszköz",    "notificationRuleServerAclDescription": "Némítja a Szerver ACL események értesítéseit.",    "notificationRuleCallDescription": "Értesíti a felhasználót a hívásokról.",    "more": "Több",    "shareKeysWith": "Kulcsok megosztása...",    "approve": "Jóváhagy",    "youHaveKnocked": "Kopogott",    "pleaseWaitUntilInvited": "Kérem várjon, amíg valaki a szobából behívja Önt.",    "answersVisible": "",    "logs": "",    "signIn": "",    "pollQuestion": "",    "reset": "",    "thread": "",    "poll": "",    "stickerPackName": "",    "createNewTag": "",    "countReplies": "",    "@countReplies": {
+    "deletePushRuleCanNotBeUndone": "Ha törli ezt az értesítési beállítást, később nem vonható vissza.",    "manageAccount": "Fiók kezelése",    "enterNewChat": "Belépés új csevegésbe",    "blur": "Homályosít:",    "name": "Név",    "continueText": "Folytatás",    "opacity": "Átlátszóság:",    "welcomeText": "Üdv 👋 Ez a JuMiKK-Chat. Bejelentkezhet bármely matrix-kiszolgálóhoz amely kompatibilis a https://matrix.org címmel. Ezután cseveghet bárkivel. Így képez egy óriási decentralizált üzenetküldő hálózatot!",    "addLink": "Hivatkozás hozzáadása",    "invalidUrl": "Helytelen hivatkozás",    "setWallpaper": "Háttér beállítás",    "noContactInformationProvided": "A szervertől nem érkezett vissza kapcsolati információ",    "contactServerSecurity": "Kapcsolatfelvétel a szerver biztonsággal",    "contactServerAdmin": "Kapcsolatfelvétel a szerver adminnal",    "supportPage": "Támogatási oldal",    "version": "Verzió",    "verifiedDevicesOnly": "Csak hitelesített eszközök",    "website": "Weboldal",    "pleaseFillOut": "Kérem töltse ki",    "previous": "Előző",    "optionalMessage": "(Választható) üzenet...",    "takeAPhoto": "Készítsen egy fotót",    "recordAVideo": "Vegyen fel egy videót",    "notSupportedOnThisDevice": "Nem támogatott ezen az eszközön",    "noticeChatBackupDeviceVerification": "Megjegyzés: Minden eszköze amit a csevegés mentéshez kapcsol, automatikusan hitelesítésre kerül.",    "notificationRuleMaster": "Minden értesítés némítása",    "notificationRuleContainsDisplayNameDescription": "Értesíti a felhasználót, ha közvetlenül említésre kerül a megjelenített neve az üzenetben.",    "notificationRuleTombstone": "Sírkő",    "shareKeysWithDescription": "Mely eszközök tekinthetőek megbízhatónak, hogy olvashassák a titkosított csevegéseket is?",    "allDevices": "Minden eszköz",    "notificationRuleServerAclDescription": "Némítja a Szerver ACL események értesítéseit.",    "notificationRuleCallDescription": "Értesíti a felhasználót a hívásokról.",    "more": "Több",    "shareKeysWith": "Kulcsok megosztása...",    "approve": "Jóváhagy",    "youHaveKnocked": "Kopogott",    "pleaseWaitUntilInvited": "Kérem várjon, amíg valaki a szobából behívja Önt.",    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@countReplies": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    "versionWithNumber": "",    "@versionWithNumber": {
+    
+    "@versionWithNumber": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    "useAsEmoji": "",    "join": "",    "countChats": "",    "@countChats": {
+    
+    
+    
+    "@countChats": {
         "type": "String",        "placeholders": {
             "chats": {
                 "type": "int"            }
         }
     },
-    "advancedConfigurations": "",    "signUpGreeting": "",    "baseUrl": "",    "pause": "",    "allowMultipleAnswers": "",    "answersWillBeVisibleWhenPollHasEnded": "",    "createNewChat": "",    "backToMainChat": "",    "makeModerator": "",    "addAnswerOption": "",    "skipChatBackup": "",    "answerOption": "",    "customReaction": "",    "displayNavigationRail": "",    "tagName": "",    "moreEvents": "",    "resume": "",    "commandHint_logoutall": "",    "clientWellKnownInformation": "",    "federationBaseUrl": "",    "setPowerLevelDescription": "",    "noMessagesYet": "",    "stickerPackNameAlreadyExists": "",    "matrixId": "",    "identityServer": "",    "support": "",    "createNewAccount": "",    "setPowerLevel": "",    "pollHasBeenEnded": "",    "replyInThread": "",    "mute": "",    "@mute": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    "useAsSticker": "",    "noMoreResultsFound": "",    "longPressToRecordVoiceMessage": "",    "createSticker": "",    "removeModeratorRights": "",    "addTag": "",    "startPoll": "",    "spaceMemberOfCanKnock": "",    "@spaceMemberOfCanKnock": {
+    
+    
+    
+    
+    
+    
+    
+    
+    "@spaceMemberOfCanKnock": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
         }
     },
-    "removeAdminRights": "",    "removeFromSpaceDescription": "",    "owner": "",    "powerLevel": "",    "playSoundOnNotification": "",    "changedTheChatDescription": "",    "skipChatBackupWarning": "",    "makeAdmin": "",    "searchOrEnterHomeserverAddress": "",    "unsetLowPriority": "",    "setLowPriority": "",    "chatSearchedUntil": "",    "@chatSearchedUntil": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@chatSearchedUntil": {
         "type": "String",        "placeholders": {
             "time": {
                 "type": "String"            }
         }
     },
-    "endPoll": "",    "theProcessWasCanceled": "",    "saveChanges": "",    "commandHint_logout": "",    "newStickerPack": "",    "signInGreeting": "",    "advancedConfigs": "",    "declineInvitation": "",    "removeTag": "",    "countVotes": "",    "@countVotes": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    "attribution": "",    "supportFluffyChat": "",    "startedAPoll": "",    "@startedAPoll": {
+    
+    
+    
+    "@startedAPoll": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheChatName": "",    "spaceMemberOf": "",    "@spaceMemberOf": {
+    
+    
+    "@spaceMemberOf": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }

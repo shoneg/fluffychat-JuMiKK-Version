@@ -1428,7 +1428,42 @@
                 "type": "String"            }
         }
     },
-    "logs": "Loggar",    "signIn": "Logga in",    "createNewAccount": "Skapa nytt konto",    "answersVisible": "",    "notificationRuleInviteForMeDescription": "",    "notificationRuleMemberEventDescription": "",    "shareKeysWithDescription": "",    "notificationRuleEncryptedRoomOneToOneDescription": "",    "pollQuestion": "",    "reset": "",    "notificationRuleRoomOneToOneDescription": "",    "poll": "",    "stickerPackName": "",    "notificationRuleIsRoomMentionDescription": "",    "deletePushRuleCanNotBeUndone": "",    "youHaveKnocked": "",    "verifiedDevicesOnly": "",    "notificationRuleSuppressNoticesDescription": "",    "createNewTag": "",    "notificationRuleRoomServerAcl": "",    "notificationRuleIsUserMention": "",    "useAsEmoji": "",    "join": "",    "shareKeysWith": "",    "notificationRuleIsUserMentionDescription": "",    "notificationRuleServerAcl": "",    "advancedConfigurations": "",    "signUpGreeting": "",    "baseUrl": "",    "answersWillBeVisibleWhenPollHasEnded": "",    "notificationRuleContainsDisplayNameDescription": "",    "createNewChat": "",    "backToMainChat": "",    "makeModerator": "",    "skipChatBackup": "",    "notificationRuleEncryptedDescription": "",    "notificationRuleRoomOneToOne": "",    "sentVoiceMessage": "",    "@sentVoiceMessage": {
+    "logs": "Loggar",    "signIn": "Logga in",    "createNewAccount": "Skapa nytt konto",    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@sentVoiceMessage": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1436,33 +1471,99 @@
                 "type": "String"            }
         }
     },
-    "notificationRuleEncryptedRoomOneToOne": "",    "displayNavigationRail": "",    "tagName": "",    "commandHint_logoutall": "",    "clientWellKnownInformation": "",    "notificationRuleIsRoomMention": "",    "federationBaseUrl": "",    "notSupportedOnThisDevice": "",    "setPowerLevelDescription": "",    "notificationRuleRoomnotif": "",    "stickerPackNameAlreadyExists": "",    "matrixId": "",    "identityServer": "",    "support": "",    "notificationRuleMessageDescription": "",    "setPowerLevel": "",    "notificationRuleServerAclDescription": "",    "pollHasBeenEnded": "",    "mute": "",    "@mute": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    "notificationRuleSuppressEdits": "",    "pleaseWaitUntilInvited": "",    "useAsSticker": "",    "longPressToRecordVoiceMessage": "",    "createSticker": "",    "notificationRuleMessage": "",    "notificationRuleTombstone": "",    "removeModeratorRights": "",    "addTag": "",    "startPoll": "",    "notificationRuleRoomServerAclDescription": "",    "notificationRuleInviteForMe": "",    "spaceMemberOfCanKnock": "",    "@spaceMemberOfCanKnock": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@spaceMemberOfCanKnock": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
         }
     },
-    "removeAdminRights": "",    "removeFromSpaceDescription": "",    "owner": "",    "powerLevel": "",    "playSoundOnNotification": "",    "skipChatBackupWarning": "",    "makeAdmin": "",    "searchOrEnterHomeserverAddress": "",    "notificationRuleSuppressEditsDescription": "",    "unsetLowPriority": "",    "setLowPriority": "",    "notificationRuleSuppressNotices": "",    "chatSearchedUntil": "",    "@chatSearchedUntil": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@chatSearchedUntil": {
         "type": "String",        "placeholders": {
             "time": {
                 "type": "String"            }
         }
     },
-    "notificationRuleTombstoneDescription": "",    "endPoll": "",    "theProcessWasCanceled": "",    "unknownPushRule": "",    "@unknownPushRule": {
+    
+    
+    
+    
+    "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }
         }
     },
-    "crossVerifiedDevices": "",    "commandHint_logout": "",    "newStickerPack": "",    "signInGreeting": "",    "advancedConfigs": "",    "crossVerifiedDevicesIfEnabled": "",    "declineInvitation": "",    "notificationRuleReactionDescription": "",    "notificationRuleCallDescription": "",    "removeTag": "",    "notificationRuleJitsiDescription": "",    "attribution": "",    "notificationRuleRoomnotifDescription": "",    "supportFluffyChat": "",    "startedAPoll": "",    "@startedAPoll": {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@startedAPoll": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "notificationRuleEncrypted": "",    "spaceMemberOf": "",    "@spaceMemberOf": {
+    
+    
+    "@spaceMemberOf": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }

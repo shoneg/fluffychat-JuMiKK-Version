@@ -1467,5 +1467,5 @@
             "count": {
                 "type": "int"            }
         }
-    },
-    "createNewTag": "",    "tagName": "",    "addTag": "",    "playSoundOnNotification": "",    "removeTag": ""}
+    }
+}
