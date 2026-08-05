@@ -112,7 +112,7 @@ class LoginController extends State<Login> {
 
   Future<void> _checkWellKnown(String userId) async {
     if (mounted) setState(() => usernameError = null);
-    if (!userId.isValidMatrixId) return;
+    if (!userId.isValidMatrixIdStrict()) return;
     final oldHomeserver = widget.client.homeserver;
     try {
       var newDomain = Uri.https(userId.domain!, '');
@@ -254,6 +254,13 @@ class LoginController extends State<Login> {
   }
 
   static int sendAttempt = 0;
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => LoginView(this);

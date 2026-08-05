@@ -24,9 +24,9 @@ class ClientChooserButton extends StatelessWidget {
     final matrix = Matrix.of(context);
     final bundles = matrix.accountBundles.keys.toList()
       ..sort(
-        (a, b) => a!.isValidMatrixId == b!.isValidMatrixId
+        (a, b) => a!.isValidMatrixIdStrict() == b!.isValidMatrixIdStrict()
             ? 0
-            : a.isValidMatrixId && !b.isValidMatrixId
+            : a.isValidMatrixIdStrict() && !b.isValidMatrixIdStrict()
             ? -1
             : 1,
       );
@@ -184,12 +184,10 @@ class ClientChooserButton extends StatelessWidget {
           tooltip: 'Accounts and settings',
           onSelected: (o) => _clientSelected(o, context),
           itemBuilder: _bundleMenuItems,
-          child: Center(
-            child: Avatar(
-              mxContent: snapshot.data?.avatarUrl,
-              name: snapshot.data?.displayName ?? client?.userID?.localpart,
-              size: 32,
-            ),
+          icon: Avatar(
+            mxContent: snapshot.data?.avatarUrl,
+            name: snapshot.data?.displayName ?? client?.userID?.localpart,
+            size: 32,
           ),
         ),
       ),

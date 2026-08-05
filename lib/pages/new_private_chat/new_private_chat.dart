@@ -74,7 +74,7 @@ class NewPrivateChatController extends State<NewPrivateChat> {
     ).client.searchUserDirectory(searchTerm);
     final profiles = result.results;
 
-    if (searchTerm.isValidMatrixId &&
+    if (searchTerm.isValidMatrixIdStrict() &&
         searchTerm.sigil == '@' &&
         !profiles.any((profile) => profile.userId == searchTerm)) {
       profiles.add(Profile(userId: searchTerm));
@@ -121,6 +121,13 @@ class NewPrivateChatController extends State<NewPrivateChat> {
 
   void openUserModal(Profile profile) =>
       UserDialog.show(context: context, profile: profile);
+
+  @override
+  void dispose() {
+    controller.dispose();
+    textFieldFocus.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => NewPrivateChatView(this);

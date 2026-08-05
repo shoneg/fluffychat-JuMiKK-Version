@@ -6,6 +6,7 @@
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat.dart';
+import 'package:fluffychat/utils/date_time_extension.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import 'package:fluffychat/utils/sync_status_localization.dart';
 import 'package:fluffychat/widgets/avatar.dart';
@@ -72,26 +73,79 @@ class ChatAppBarTitle extends StatelessWidget {
                         (room.client.onSync.value != null &&
                             status.status != SyncStatus.error &&
                             room.client.prevBatch != null);
+                    final style = TextStyle(fontSize: 11);
                     return AnimatedSize(
                       duration: FluffyThemes.animationDuration,
                       child: hide
-                          ? PresenceBuilder(
-                              userId: room.directChatMatrixID,
-                              builder: (context, presence) {
-                                final statusMessage = presence?.statusMsg;
-                                final style = TextStyle(fontSize: 11);
-                                if (statusMessage != null) {
-                                  return Text(statusMessage, style: style);
-                                }
-                                if (presence?.currentlyActive == true) {
-                                  return Text(
-                                    L10n.of(context).currentlyActive,
-                                    style: style,
-                                  );
-                                }
-                                return const SizedBox.shrink();
-                              },
-                            )
+                          ? room.isDirectChat
+                                ? PresenceBuilder(
+                                    userId: room.directChatMatrixID,
+                                    builder: (context, presence) {
+                                      final statusMessage = presence?.statusMsg;
+
+                                      final lastActiveTimestamp =
+                                          presence?.lastActiveTimestamp;
+
+                                      return Row(
+                                        children: [
+                                          if (presence?.currentlyActive == true)
+                                            Text(
+                                              L10n.of(context).currentlyActive,
+                                              style: style,
+                                            )
+                                          else if (lastActiveTimestamp != null)
+                                            Text(
+                                              L10n.of(context).lastActiveAgo(
+                                                lastActiveTimestamp
+                                                    .localizedTimeShort(
+                                                      context,
+                                                    ),
+                                              ),
+                                              style: style,
+                                            ),
+                                          if (statusMessage != null) ...[
+                                            if ((presence?.currentlyActive ==
+                                                    true ||
+                                                lastActiveTimestamp != null))
+                                              Text(' ◦ ', style: style),
+                                            Expanded(
+                                              child: Text(
+                                                statusMessage,
+                                                style: style,
+                                                maxLines: 1,
+                                              ),
+                                            ),
+                                          ],
+                                        ],
+                                      );
+                                    },
+                                  )
+                                : Row(
+                                    children: [
+                                      Text(
+                                        L10n.of(context).countParticipants(
+                                          (room.summary.mJoinedMemberCount ??
+                                                  1) +
+                                              (room
+                                                      .summary
+                                                      .mInvitedMemberCount ??
+                                                  0),
+                                        ),
+                                        maxLines: 1,
+                                        style: style,
+                                      ),
+                                      if (room.topic.isNotEmpty) ...[
+                                        Text(' ◦ ', style: style),
+                                        Expanded(
+                                          child: Text(
+                                            room.topic,
+                                            style: style,
+                                            maxLines: 1,
+                                          ),
+                                        ),
+                                      ],
+                                    ],
+                                  )
                           : Row(
                               children: [
                                 SizedBox.square(

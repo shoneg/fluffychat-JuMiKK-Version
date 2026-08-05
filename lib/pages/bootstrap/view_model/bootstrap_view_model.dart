@@ -19,21 +19,27 @@ import 'bootstrap_state.dart';
 
 class BootstrapViewModel extends ValueNotifier<BootstrapViewModelState> {
   final Client client;
+  final bool reset;
 
   final TextEditingController enterPassphraseOrRecovController =
       TextEditingController();
   final TextEditingController newPassphraseController = TextEditingController();
   final TextEditingController repeatPassphraseController =
       TextEditingController();
+  final ScrollController devicesScrollController = ScrollController();
 
-  BootstrapViewModel({required this.client})
-    : super(BootstrapViewModelState()) {
+  BootstrapViewModel({required this.client, required this.reset})
+    : super(BootstrapViewModelState()..reset = reset) {
     _init();
   }
 
   @override
   void dispose() {
     _cancelKeyVerification();
+    enterPassphraseOrRecovController.dispose();
+    newPassphraseController.dispose();
+    repeatPassphraseController.dispose();
+    devicesScrollController.dispose();
     super.dispose();
   }
 
@@ -146,6 +152,12 @@ class BootstrapViewModel extends ValueNotifier<BootstrapViewModelState> {
     try {
       value.recoveryKey = await client.initCryptoIdentity(
         passphrase: passphrase,
+        wipeCrossSigning: !reset,
+        wipeKeyBackup: !reset,
+        wipeSecureStorage: !reset,
+        setupMasterKey: !reset,
+        setupSelfSigningKey: !reset,
+        setupUserSigningKey: !reset,
       );
     } catch (e, s) {
       if (!context.mounted) return;

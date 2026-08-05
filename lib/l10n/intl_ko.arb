@@ -5,9 +5,6 @@
     "accept": "수락",    "@accept": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "모든 채팅",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "cantOpenUri": "URI {uri}를 열 수 없습니다",    "@cantOpenUri": {
         "type": "String",        "placeholders": {
             "uri": {
@@ -72,13 +69,7 @@
     "fontSize": "폰트 크기",    "@fontSize": {
         "type": "String",        "placeholders": {}
     },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
-    },
-    "fileName": "파일 이름",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "homeserver": "홈서버",    "enterAnEmailAddress": "이메일 주소 입력",    "@enterAnEmailAddress": {
+    "enterAnEmailAddress": "이메일 주소 입력",    "@enterAnEmailAddress": {
         "type": "String",        "placeholders": {}
     },
     "endedTheCall": "{senderName} 이 통화를 종료했습니다",    "@endedTheCall": {
@@ -114,9 +105,6 @@
     "emoteSettings": "이모트 설정",    "@emoteSettings": {
         "type": "String",        "placeholders": {}
     },
-    "emotePacks": "방을 위한 이모트 팩",    "@emotePacks": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteInvalid": "올바르지 않은 이모트 단축키!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
@@ -142,12 +130,6 @@
         "type": "String",        "placeholders": {}
     },
     "devices": "기기",    "@devices": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "기기 ID",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
-    "device": "기기",    "@device": {
         "type": "String",        "placeholders": {}
     },
     "deleteMessage": "메시지 삭제",    "@deleteMessage": {
@@ -343,22 +325,6 @@
                 "type": "String"            }
         }
     },
-    "changedTheChatNameTo": "{username}님이 채팅 이름을 '{chatname}' 으로 바꿈",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username}님이 채팅 설명을 '{description}' 으로 변경함",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
     "changedTheChatAvatar": "{username}님이 채팅 아바타를 바꿈",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
@@ -462,13 +428,7 @@
     "ignore": "무시",    "@ignore": {
         "type": "String",        "placeholders": {}
     },
-    "id": "ID",    "@id": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "알 수 없는 이벤트 숨기기",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "hideRedactedEvents": "지워진 이벤트 숨기기",    "@hideRedactedEvents": {
         "type": "String",        "placeholders": {}
     },
     "hasWithdrawnTheInvitationFor": "{username}님이 {targetName}님에 대한 초대를 철회함",    "@hasWithdrawnTheInvitationFor": {
@@ -565,13 +525,7 @@
     "verifyStart": "확인 시작",    "@verifyStart": {
         "type": "String",        "placeholders": {}
     },
-    "verify": "확인",    "@verify": {
-        "type": "String",        "placeholders": {}
-    },
     "verified": "확인됨",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "username": "유저 이름",    "@username": {
         "type": "String",        "placeholders": {}
     },
     "userLeftTheChat": "🚪 {username}님이 채팅을 나감",    "@userLeftTheChat": {
@@ -614,9 +568,6 @@
     "pin": "고정",    "@pin": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "이미지 고르기",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "passwordRecovery": "비밀번호 복구",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
@@ -644,13 +595,7 @@
     "oopsPushError": "앗! 안타깝게도, 푸시 알림을 설정하는 중 오류가 발생했습니다.",    "@oopsPushError": {
         "type": "String",        "placeholders": {}
     },
-    "online": "온라인",    "@online": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "확인",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "offline": "오프라인",    "@offline": {
         "type": "String",        "placeholders": {}
     },
     "obtainingLocation": "위치 얻는 중…",    "@obtainingLocation": {
@@ -718,9 +663,6 @@
     "logout": "로그아웃",    "@logout": {
         "type": "String",        "placeholders": {}
     },
-    "unavailable": "사용할 수 없음",    "@unavailable": {
-        "type": "String",        "placeholders": {}
-    },
     "all": "모두",    "@all": {
         "type": "String",        "placeholders": {}
     },
@@ -773,9 +715,6 @@
     "tooManyRequestsWarning": "너무 많은 요청. 잠시 후에 다시 시도해주세요!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "theyMatch": "일치합니다",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
@@ -809,9 +748,6 @@
     "spaceIsPublic": "스페이스 공개",    "@spaceIsPublic": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "푸시 규칙",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "lastActiveAgo": "마지막 활동: {localizedTimeShort}",    "@lastActiveAgo": {
         "type": "String",        "placeholders": {
             "localizedTimeShort": {
@@ -821,17 +757,8 @@
     "ignoredUsers": "무시된 사용자",    "@ignoredUsers": {
         "type": "String",        "placeholders": {}
     },
-    "pleaseEnter4Digits": "4자리 숫자를 입력하거나 앱 잠금을 사용하지 않도록 하려면 비워두세요.",    "@pleaseEnter4Digits": {
-        "type": "String",        "placeholders": {}
-    },
     "pleaseChooseAPasscode": "비밀번호를 골라주세요",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "{fileName} 재생",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "passwordHasBeenChanged": "비밀번호가 변경됨",    "@passwordHasBeenChanged": {
         "type": "String",        "placeholders": {}
@@ -842,16 +769,13 @@
     "or": "이나",    "@or": {
         "type": "String",        "placeholders": {}
     },
-    "serverRequiresEmail": "이 서버는 가입을 위해 당신의 이메일을 확인해야 합니다.",    "bundleName": "번들 이름",    "removeFromBundle": "이 번들에서 삭제",    "addToBundle": "번들에 추가",    "editBundlesForAccount": "이 계정의 번들 수정",    "oneClientLoggedOut": "당신의 클라이언트 중 하나가 로그아웃 됨",    "onlineKeyBackupEnabled": "온라인 키 백업이 활성화됨",    "@onlineKeyBackupEnabled": {
+    "bundleName": "번들 이름",    "removeFromBundle": "이 번들에서 삭제",    "addToBundle": "번들에 추가",    "editBundlesForAccount": "이 계정의 번들 수정",    "oneClientLoggedOut": "당신의 클라이언트 중 하나가 로그아웃 됨",    "onlineKeyBackupEnabled": "온라인 키 백업이 활성화됨",    "@onlineKeyBackupEnabled": {
         "type": "String",        "placeholders": {}
     },
     "noRoomsFound": "아무 방도 발견되지 않았어요…",    "@noRoomsFound": {
         "type": "String",        "placeholders": {}
     },
     "noPasswordRecoveryDescription": "당신은 비밀번호를 복구할 방법을 추가하지 않았습니다.",    "@noPasswordRecoveryDescription": {
-        "type": "String",        "placeholders": {}
-    },
-    "none": "없음",    "@none": {
         "type": "String",        "placeholders": {}
     },
     "noGoogleServicesWarning": "이 휴대폰에 Firebase Cloud Messaging 서비스가 없는 것 같습니다. JuMiKK-Chat에서 푸시 알림을 받으려면 ntfy 사용을 추천합니다. ntfy 혹은 다른 푸시 알림 제공자를 사용하면 알림을 보안적인 방법으로 받을 수 있습니다. ntfy는 PlayStore와 F-Droid에서 설치 가능합니다.",    "@noGoogleServicesWarning": {
@@ -864,9 +788,6 @@
         "type": "String",        "placeholders": {}
     },
     "noConnectionToTheServer": "서버에 연결 없음",    "@noConnectionToTheServer": {
-        "type": "String",        "placeholders": {}
-    },
-    "needPantalaimonWarning": "지금 종단간 암호화를 사용하기 위해서는 Pantalaimon이 필요하다는 것을 알아주세요.",    "@needPantalaimonWarning": {
         "type": "String",        "placeholders": {}
     },
     "moderator": "관리자",    "@moderator": {
@@ -885,9 +806,6 @@
         "type": "String",        "placeholders": {}
     },
     "skip": "스킵",    "@skip": {
-        "type": "String",        "placeholders": {}
-    },
-    "showPassword": "비밀번호 보이기",    "@showPassword": {
         "type": "String",        "placeholders": {}
     },
     "shareLocation": "위치 보내기",    "@shareLocation": {
@@ -956,9 +874,6 @@
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "방이 업그레이드되었습니다",    "@roomHasBeenUpgraded": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "권한 요청",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "reason": "이유",    "@reason": {
@@ -1073,12 +988,6 @@
     "unbanFromChat": "채팅에서 영구추방 해제됨",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "{username}에 의해 지워짐",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "removeAllOtherDevices": "모든 다른 기기에서 지우기",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
@@ -1094,9 +1003,6 @@
     "reject": "거절",    "@reject": {
         "type": "String",        "placeholders": {}
     },
-    "register": "가입",    "@register": {
-        "type": "String",        "placeholders": {}
-    },
     "redactMessage": "메시지 지우기",    "@redactMessage": {
         "type": "String",        "placeholders": {}
     },
@@ -1105,9 +1011,6 @@
             "username": {
                 "type": "String"            }
         }
-    },
-    "recording": "녹음",    "@recording": {
-        "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "이메일의 링크를 클릭하고 진행해주세요.",    "@pleaseClickOnLink": {
         "type": "String",        "placeholders": {}
@@ -1131,7 +1034,7 @@
                 "type": "String"            }
         }
     },
-    "link": "링크",    "unverified": "확인되지 않음",    "time": "시간",    "messageType": "메시지 유형",    "openGallery": "갤러리 열기",    "sender": "발신자",    "messageInfo": "메시지 정보",    "repeatPassword": "비밀번호 다시 입력",    "start": "시작",    "removeFromSpace": "스페이스에서 삭제",    "commandHint_discardsession": "세션 삭제",    "@commandHint_discardsession": {
+    "link": "링크",    "unverified": "확인되지 않음",    "time": "시간",    "openGallery": "갤러리 열기",    "sender": "발신자",    "messageInfo": "메시지 정보",    "repeatPassword": "비밀번호 다시 입력",    "removeFromSpace": "스페이스에서 삭제",    "commandHint_discardsession": "세션 삭제",    "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_dm": "다이렉트 채팅 시작\t\n--no-encryption을 사용해 암호화 비활성화",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
@@ -1139,7 +1042,7 @@
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_create": "빈 그룹 채팅을 생성\n--no-encryption을 사용해 암호화를 비활성화",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
-    "dismiss": "닫기",    "markAsRead": "읽음으로 표시하기",    "reportUser": "유저 신고",    "reactedWith": "{sender}가 {reaction}로 반응함",    "@reactedWith": {
+    "markAsRead": "읽음으로 표시하기",    "reportUser": "유저 신고",    "reactedWith": "{sender}가 {reaction}로 반응함",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1159,7 +1062,7 @@
                 "type": "String"            }
         }
     },
-    "jumpToLastReadMessage": "마지막으로 읽은 메시지로 이동",    "commandHint_cuddle": "미소 보내기",    "reportErrorDescription": "😭 이런. 무언가 잘못되었습니다. 원한다면, 개발자에게 버그를 신고할 수 있습니다.",    "setColorTheme": "색상 테마 설정:",    "allSpaces": "모든 스페이스",    "supposedMxid": "{mxid} 이어야 함",    "@supposedMxid": {
+    "jumpToLastReadMessage": "마지막으로 읽은 메시지로 이동",    "commandHint_cuddle": "미소 보내기",    "reportErrorDescription": "😭 이런. 무언가 잘못되었습니다. 원한다면, 개발자에게 버그를 신고할 수 있습니다.",    "setColorTheme": "색상 테마 설정:",    "supposedMxid": "{mxid} 이어야 함",    "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
@@ -1215,7 +1118,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.",    "recoveryKey": "복구키",    "invalidInput": "잘못된 입력!",    "doNotShowAgain": "다시 보지 않기",    "report": "신고",    "screenSharingTitle": "화면 공유",    "youBannedUser": "{user}님을 영구 추방함",    "@youBannedUser": {
+    "redactMessageDescription": "메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.",    "invalidInput": "잘못된 입력!",    "doNotShowAgain": "다시 보지 않기",    "report": "신고",    "screenSharingTitle": "화면 공유",    "youBannedUser": "{user}님을 영구 추방함",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1239,7 +1142,7 @@
                 "type": "String"            }
         }
     },
-    "noChatDescriptionYet": "채팅 설명이 아직 추가되지 않음.",    "learnMore": "더 알아보기",    "notAnImage": "이미지 파일이 아닙니다.",    "users": "유저",    "chatDescriptionHasBeenChanged": "채팅 설명 변경됨",    "newGroup": "새 그룹 채팅",    "roomUpgradeDescription": "채팅이 새로운 방 버전으로 다시 생성됩니다. 모든 참가자는 새로운 채팅으로 전환해야합니다. https://spec.matrix.org/latest/rooms/ 에서 방 버전에 대해 자세히 알아볼 수 있습니다.",    "pleaseEnterANumber": "0보다 큰 숫자를 입력하세요",    "youKicked": "👞 {user}님을 추방했습니다",    "@youKicked": {
+    "noChatDescriptionYet": "채팅 설명이 아직 추가되지 않음.",    "learnMore": "더 알아보기",    "notAnImage": "이미지 파일이 아닙니다.",    "users": "유저",    "chatDescriptionHasBeenChanged": "채팅 설명 변경됨",    "roomUpgradeDescription": "채팅이 새로운 방 버전으로 다시 생성됩니다. 모든 참가자는 새로운 채팅으로 전환해야합니다. https://spec.matrix.org/latest/rooms/ 에서 방 버전에 대해 자세히 알아볼 수 있습니다.",    "pleaseEnterANumber": "0보다 큰 숫자를 입력하세요",    "youKicked": "👞 {user}님을 추방했습니다",    "@youKicked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1251,7 +1154,7 @@
                 "type": "String"            }
         }
     },
-    "deviceKeys": "기기 키:",    "emoteKeyboardNoRecents": "최근 사용한 이모트가 여기 나타납니다...",    "@emoteKeyboardNoRecents": {
+    "emoteKeyboardNoRecents": "최근 사용한 이모트가 여기 나타납니다...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "youJoinedTheChat": "채팅에 참가하였습니다",    "commandHint_hug": "허그 보내기",    "replace": "대체",    "youUnbannedUser": "{user}님의 영구 추방을 해제했습니다",    "@youUnbannedUser": {
@@ -1318,7 +1221,7 @@
                 "type": "String"            }
         }
     },
-    "transparent": "투명",    "incomingMessages": "메시지 수신함",    "stickers": "스티커",    "discover": "탐색",    "unreadChatsInApp": "{appname}: {unread}개의 읽지 않은 채팅",    "@unreadChatsInApp": {
+    "incomingMessages": "메시지 수신함",    "stickers": "스티커",    "discover": "탐색",    "unreadChatsInApp": "{appname}: {unread}개의 읽지 않은 채팅",    "@unreadChatsInApp": {
         "type": "String",        "placeholders": {
             "appname": {
                 "type": "String"            },
@@ -1341,7 +1244,7 @@
                 "type": "String"            }
         }
     },
-    "gallery": "갤러리",    "restricted": "스페이스 멤버로 제한",    "knockRestricted": "스페이스 멤버만 참가 요청 가능",    "swipeRightToLeftToReply": "오른쪽에서 왼쪽으로 스와이프해서 답장",    "unread": "읽지 않은",    "space": "스페이스",    "spaces": "스페이스",    "goToSpace": "스페이스로: {space}",    "@goToSpace": {
+    "gallery": "갤러리",    "swipeRightToLeftToReply": "오른쪽에서 왼쪽으로 스와이프해서 답장",    "unread": "읽지 않은",    "space": "스페이스",    "goToSpace": "스페이스로: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
     "markAsUnread": "읽지 않음으로 표시",    "noMoreChatsFound": "채팅을 찾을 수 없습니다...",    "moderatorLevel": "{level} - 관리자",    "@moderatorLevel": {
@@ -1356,19 +1259,13 @@
                 "type": "int"            }
         }
     },
-    "invitedBy": "📩 {user}님이 나를 초대함",    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
     "userLevel": "{level} - 유저",    "@userLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
         }
     },
-    "noChatsFoundHere": "대화가 발견되지 않았습니다. 아래 버튼을 사용하여 새 대화를 시작해 보세요. ⤵️",    "changeTheVisibilityOfChatHistory": "채팅 기록 표시 여부 바꾸기",    "changeTheCanonicalRoomAlias": "메인 공개 채팅 주소 바꾸기",    "sendCanceled": "전송 최소됨",    "noContactInformationProvided": "서버가 유효한 연락처 정보를 제공하지 않음",    "welcomeText": "안녕하세요 👋 JuMiKK-Chat이에요. 당신은 htpps://matrix.org와 호환되는 모든 홈서버를 사용할 수 있어요. 그리고 모두와 대화해보세요. 거대한 분산 대화망이니까요!",    "changeGeneralChatSettings": "일반 채팅 설정 번경하기",    "inviteOtherUsers": "다른 사용자를 이 채팅에 초대하기",    "changeTheChatPermissions": "채팅 권한 바꾸기",    "calculatingFileSize": "파일 크기 계산 중...",    "oneOfYourDevicesIsNotVerified": "당신의 기기 중 하나가 인증되지 않았음",    "noticeChatBackupDeviceVerification": "참고: 모든 기기에 채팅 백업을 설정하면 자동으로 서로 인증됩니다.",    "opacity": "불투명:",    "setWallpaper": "배경화면 설정하기",    "manageAccount": "계정 관리하기",    "aboutHomeserver": "{homeserver}의 대해서",    "@aboutHomeserver": {
+    "noChatsFoundHere": "대화가 발견되지 않았습니다. 아래 버튼을 사용하여 새 대화를 시작해 보세요. ⤵️",    "changeTheVisibilityOfChatHistory": "채팅 기록 표시 여부 바꾸기",    "changeTheCanonicalRoomAlias": "메인 공개 채팅 주소 바꾸기",    "sendCanceled": "전송 최소됨",    "noContactInformationProvided": "서버가 유효한 연락처 정보를 제공하지 않음",    "changeGeneralChatSettings": "일반 채팅 설정 번경하기",    "inviteOtherUsers": "다른 사용자를 이 채팅에 초대하기",    "changeTheChatPermissions": "채팅 권한 바꾸기",    "calculatingFileSize": "파일 크기 계산 중...",    "oneOfYourDevicesIsNotVerified": "당신의 기기 중 하나가 인증되지 않았음",    "noticeChatBackupDeviceVerification": "참고: 모든 기기에 채팅 백업을 설정하면 자동으로 서로 인증됩니다.",    "opacity": "불투명:",    "setWallpaper": "배경화면 설정하기",    "manageAccount": "계정 관리하기",    "aboutHomeserver": "{homeserver}의 대해서",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1380,7 +1277,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "변경 기록",    "sendingAttachment": "첨부된 파일 전송 중...",    "compressVideo": "영상 압축 중...",    "blur": "블러:",    "sendImages": "이미지 {count}개 보내기",    "@sendImages": {
+    "changelog": "변경 기록",    "sendingAttachment": "첨부된 파일 전송 중...",    "blur": "블러:",    "sendImages": "이미지 {count}개 보내기",    "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1398,71 +1295,30 @@
                 "type": "String"            }
         }
     },
-    "waitingForServer": "서버를 기다리는중...",    "contentNotificationSettings": "콘텐츠 알림 설정",    "generalNotificationSettings": "일반 알림 설정",    "roomNotificationSettings": "채팅방 알림 설정",    "otherNotificationSettings": "기타 알림 설정",    "notificationRuleContainsUserName": "유저 이름을 포함함",    "notificationRuleMaster": "모든 알림 음소거",    "notificationRuleContainsUserNameDescription": "메시지가 유저의 이름을 포함할때 알림합니다.",    "notificationRuleMasterDescription": "모든 규칙을 무시하고 모든 알림을 비활성화합니다.",    "notificationRuleSuppressNotices": "자동화된 메시지 무시",    "notificationRuleSuppressNoticesDescription": "봇을 비롯한 자동화된 메시지로부터 발생하는 알림을 무시합니다.",    "notificationRuleInviteForMe": "초대를 받음",    "notificationRuleInviteForMeDescription": "채팅방에 초대받았을 때 알림합니다.",    "notificationRuleMemberEvent": "멤버 이벤트",    "notificationRuleMemberEventDescription": "멤버 이벤트로 발생하는 알림을 무시합니다.",    "notificationRuleIsUserMentionDescription": "유저가 메시지에 멘션됐을 때 알림합니다.",    "notificationRuleContainsDisplayName": "표시 이름을 포함함",    "notificationRuleIsUserMention": "유저가 멘션됨",    "notificationRuleContainsDisplayNameDescription": "메시지에 표시 이름이 포함되면 알림합니다.",    "notificationRuleIsRoomMention": "방 멘션",    "notificationRuleIsRoomMentionDescription": "방 멘션이 있을경우 알림합니다.",    "notificationRuleRoomnotif": "방 알림",    "notificationRuleRoomnotifDescription": "메시지가 '@room'을 포함하면 알림합니다.",    "notificationRuleTombstone": "비활성화",    "notificationRuleTombstoneDescription": "채팅방 비활성화 메시지를 알림합니다.",    "notificationRuleReaction": "반응",    "notificationRuleReactionDescription": "반응으로 발생하는 알림을 무시합니다.",    "notificationRuleRoomServerAcl": "채팅방 서버 ACL",    "notificationRuleRoomServerAclDescription": "채팅방 서버의 접근 권한(ACL)으로부터 오는 알림을 무시합니다.",    "notificationRuleSuppressEdits": "수정 음소거",    "notificationRuleSuppressEditsDescription": "수정된 메시지로부터 오는 알림을 무시합니다.",    "notificationRuleCall": "전화",    "ignoreUser": "사용자 무시",    "commandHint_roomupgrade": "이 방을 주어진 방 버전으로 업그레이드합니다",    "checkList": "체크리스트",    "countInvited": "{count}초대받은",    "@countInvited": {
+    "waitingForServer": "서버를 기다리는중...",    "contentNotificationSettings": "콘텐츠 알림 설정",    "generalNotificationSettings": "일반 알림 설정",    "roomNotificationSettings": "채팅방 알림 설정",    "otherNotificationSettings": "기타 알림 설정",    "notificationRuleContainsUserName": "유저 이름을 포함함",    "notificationRuleMaster": "모든 알림 음소거",    "notificationRuleContainsUserNameDescription": "메시지가 유저의 이름을 포함할때 알림합니다.",    "notificationRuleMasterDescription": "모든 규칙을 무시하고 모든 알림을 비활성화합니다.",    "notificationRuleSuppressNotices": "자동화된 메시지 무시",    "notificationRuleSuppressNoticesDescription": "봇을 비롯한 자동화된 메시지로부터 발생하는 알림을 무시합니다.",    "notificationRuleInviteForMe": "초대를 받음",    "notificationRuleInviteForMeDescription": "채팅방에 초대받았을 때 알림합니다.",    "notificationRuleMemberEvent": "멤버 이벤트",    "notificationRuleMemberEventDescription": "멤버 이벤트로 발생하는 알림을 무시합니다.",    "notificationRuleIsUserMentionDescription": "유저가 메시지에 멘션됐을 때 알림합니다.",    "notificationRuleContainsDisplayName": "표시 이름을 포함함",    "notificationRuleIsUserMention": "유저가 멘션됨",    "notificationRuleContainsDisplayNameDescription": "메시지에 표시 이름이 포함되면 알림합니다.",    "notificationRuleIsRoomMention": "방 멘션",    "notificationRuleIsRoomMentionDescription": "방 멘션이 있을경우 알림합니다.",    "notificationRuleRoomnotif": "방 알림",    "notificationRuleRoomnotifDescription": "메시지가 '@room'을 포함하면 알림합니다.",    "notificationRuleTombstone": "비활성화",    "notificationRuleTombstoneDescription": "채팅방 비활성화 메시지를 알림합니다.",    "notificationRuleReaction": "반응",    "notificationRuleReactionDescription": "반응으로 발생하는 알림을 무시합니다.",    "notificationRuleRoomServerAcl": "채팅방 서버 ACL",    "notificationRuleRoomServerAclDescription": "채팅방 서버의 접근 권한(ACL)으로부터 오는 알림을 무시합니다.",    "notificationRuleSuppressEdits": "수정 음소거",    "notificationRuleSuppressEditsDescription": "수정된 메시지로부터 오는 알림을 무시합니다.",    "notificationRuleCall": "전화",    "commandHint_roomupgrade": "이 방을 주어진 방 버전으로 업그레이드합니다",    "checkList": "체크리스트",    "countInvited": "{count}초대받은",    "@countInvited": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@countReplies": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
     "@versionWithNumber": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
     "@countChats": {
         "type": "String",        "placeholders": {
             "chats": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@sentVoiceMessage": {
         "type": "String",        "placeholders": {
             "sender": {
@@ -1471,109 +1327,32 @@
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@spaceMemberOfCanKnock": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@chatSearchedUntil": {
         "type": "String",        "placeholders": {
             "time": {
                 "type": "String"            }
         }
     },
-    
-    
-    
     "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    
-    
-    
     "@spaceMemberOf": {
         "type": "String",        "placeholders": {
             "spaces": {

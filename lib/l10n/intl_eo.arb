@@ -32,9 +32,6 @@
     "all": "Ĉio",    "@all": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "Ĉiuj babiloj",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "answeredTheCall": "{senderName} respondis la vokon",    "@answeredTheCall": {
         "type": "String",        "placeholders": {
             "senderName": {
@@ -111,22 +108,6 @@
     "changedTheChatAvatar": "{username} ŝanĝis bildon de la babilo",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} ŝanĝis priskribon de la babilo al: «{description}»",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} ŝanĝis nomon de la babilo al: «{chatname}»",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
                 "type": "String"            }
         }
     },
@@ -351,12 +332,6 @@
     "deleteMessage": "Forigi mesaĝon",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Aparato",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "Identigilo de aparato",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Aparatoj",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -388,9 +363,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "Nevalida mallongigo de mieneto!",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Mienetaroj por la ĉambro",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Agordoj pri mienetoj",    "@emoteSettings": {
@@ -434,12 +406,6 @@
             "error": {
                 "type": "String"            }
         }
-    },
-    "fileName": "Dosiernomo",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
     },
     "fontSize": "Grandeco de tiparo",    "@fontSize": {
         "type": "String",        "placeholders": {}
@@ -485,13 +451,7 @@
     "help": "Helpo",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Kaŝi obskurigitajn eventojn",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Kaŝi nekonatajn eventojn",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "Identigilo",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignore": "Malatenti",    "@ignore": {
@@ -619,9 +579,6 @@
     "muteChat": "Silentigi babilon",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "Bonvolu scii, ke vi ankoraŭ bezonas la programon Pantalaimon por uzi tutvojan ĉifradon.",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "Nova babilo",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -649,9 +606,6 @@
     "noGoogleServicesWarning": "Ŝajnas, ke via telefono ne havas servojn de Google. Tio estas bona decido por via privateco! Por ricevadi pasivajn sciigojn en JuMiKK-Chat, ni rekomendas, ke vi uzu la https://microg.org/ aŭ https://unifiedpush.org/.",    "@noGoogleServicesWarning": {
         "type": "String",        "placeholders": {}
     },
-    "none": "Neniu",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "Vi ankoraŭ ne aldonis manieron rehavi vian pasvorton.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
@@ -673,13 +627,7 @@
     "obtainingLocation": "Akirante lokon…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
-    "offline": "Eksterrete",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "bone",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "Enrete",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "Enreta savkopiado de ŝlosiloj estas ŝaltita",    "@onlineKeyBackupEnabled": {
@@ -718,25 +666,13 @@
     "passwordRecovery": "Rehavo de pasvorto",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Elekti bildon",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "Fiksi",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "Ludi {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "Bonvolu elekti paskodon",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Bonvolu klaki la ligilon en la retletero kaj pluiĝi.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Bonvolu enigi 4 ciferojn, aŭ nenion por malŝalti ŝlosadon de la aplikaĵo.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "Bonvolu enigi vian pasvorton",    "@pleaseEnterYourPassword": {
@@ -757,13 +693,7 @@
     "publicRooms": "Publikaj ĉambroj",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Reguloj de pasivaj sciigoj",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "Kialo",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Registrante",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedAnEvent": "{username} obskurigis eventon",    "@redactedAnEvent": {
@@ -773,9 +703,6 @@
         }
     },
     "redactMessage": "Obskurigi mesaĝon",    "@redactMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "Registriĝi",    "@register": {
         "type": "String",        "placeholders": {}
     },
     "reject": "Rifuzi",    "@reject": {
@@ -793,12 +720,6 @@
     "removeAllOtherDevices": "Forigi ĉiujn aliajn aparatojn",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Forigita de {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "Malforbari",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
@@ -812,9 +733,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Raporti mesaĝon",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Peti permeson",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "Ĉambro gradaltiĝis",    "@roomHasBeenUpgraded": {
@@ -910,9 +828,6 @@
     "shareLocation": "Konigi lokon",    "@shareLocation": {
         "type": "String",        "placeholders": {}
     },
-    "showPassword": "Montri pasvorton",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "skip": "Preterpasi",    "@skip": {
         "type": "String",        "placeholders": {}
     },
@@ -952,16 +867,10 @@
     "theyMatch": "Ili akordas",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "tooManyRequestsWarning": "Tro multaj petoj. Bonvolu reprovi poste!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "Reprovi sendi",    "@tryToSendAgain": {
-        "type": "String",        "placeholders": {}
-    },
-    "unavailable": "Nedisponeble",    "@unavailable": {
         "type": "String",        "placeholders": {}
     },
     "unbannedUser": "{username} malforbaris uzanton {targetName}",    "@unbannedUser": {
@@ -1021,9 +930,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Uzantonomo",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} sendis eventon de speco {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1033,9 +939,6 @@
         }
     },
     "verified": "Kontrolita",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "Kontroli",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Komenci kontrolon",    "@verifyStart": {
@@ -1122,240 +1025,97 @@
     "autoplayImages": "Memage ludi movbildajn glumarkojn kaj mienetojn",    "@autoplayImages": {
         "type": "String",        "placeholder": {}
     },
-    "addToSpace": "Aldoni al aro",    "homeserver": "Hejmservilo",    "sendOnEnter": "Sendi per eniga klavo",    
-    "@hugContent": {
+    "addToSpace": "Aldoni al aro",    "sendOnEnter": "Sendi per eniga klavo",    "@hugContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@completedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@synchronizingPleaseWaitCounter": {
         "type": "String",        "placeholders": {
             "percentage": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
     "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
-    
-    
-    
-    
-    
-    
-    
     "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
         }
     },
-    
     "@goToSpace": {
         "type": "String",        "space": {}
     },
-    
-    
-    
-    
-    
-    
     "@youInvitedBy": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@youKickedAndBanned": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
     "@isReadyForKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
-    
     "@countReplies": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
     "@versionWithNumber": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@countChats": {
         "type": "String",        "placeholders": {
             "chats": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
     "@userLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
         }
     },
-    
-    
     "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@updateInstalled": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
     "@commandHint_clearcache": {
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
-    
-    
-    
-    
     "@noUsersFoundWithQuery": {
         "type": "String",        "placeholders": {
             "query": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@sentVoiceMessage": {
         "type": "String",        "placeholders": {
             "sender": {
@@ -1364,115 +1124,47 @@
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
     "@redactedBy": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@startedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
     "@fileIsTooBigForServer": {
         "type": "String",        "placeholders": {
             "max": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@adminLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
     "@locationPermissionDeniedNotice": {
         "type": "String",        "placeholders": {}
     },
-    
-    
-    
     "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@locationDisabledNotice": {
         "type": "String",        "placeholders": {}
     },
-    
-    
-    
-    
-    
-    
-    
-    
     "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
-    
     "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1481,120 +1173,50 @@
                 "type": "String"            }
         }
     },
-    
     "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@youInvitedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
     "@fileHasBeenSavedAt": {
         "type": "String",        "placeholders": {
             "path": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
     "@spaceMemberOfCanKnock": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
     "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    
     "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
     "@chatSearchedUntil": {
         "type": "String",        "placeholders": {
             "time": {
                 "type": "String"            }
         }
     },
-    
     "@sessionLostBody": {
         "type": "String",        "placeholders": {
             "url": {
@@ -1603,93 +1225,39 @@
                 "type": "String"            }
         }
     },
-    
     "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    
     "@hasKnocked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }
         }
     },
-    
-    
     "@youKicked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
     "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
@@ -1698,74 +1266,35 @@
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
     "@cuddleContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    
-    
     "@acceptedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
         }
     },
-    
     "@canceledKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
     "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    
-    
-    
     "@restoreSessionBody": {
         "type": "String",        "placeholders": {
             "url": {
@@ -1774,31 +1303,18 @@
                 "type": "String"            }
         }
     },
-    
-    
-    
     "@youUnbannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
     "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
         }
     },
-    
-    
-    
     "@unreadChatsInApp": {
         "type": "String",        "placeholders": {
             "appname": {
@@ -1807,80 +1323,42 @@
                 "type": "String"            }
         }
     },
-    
-    
     "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
-    
-    
     "@moderatorLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
         }
     },
-    
-    
-    
     "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    
-    
-    
-    
-    
-    
-    
-    
     "@countInvited": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    
     "@spaceMemberOf": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
         }
     },
-    
     "@requestedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
         }
     },
-    
     "@searchIn": {
         "type": "String",        "placeholders": {
             "chat": {

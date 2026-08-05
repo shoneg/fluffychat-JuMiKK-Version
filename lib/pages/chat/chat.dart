@@ -303,7 +303,7 @@ class ChatController extends State<ChatPageWithRoom>
     for (final item in shareItems) {
       if (item is FileShareItem) continue;
       if (item is TextShareItem) room.sendTextEvent(item.value);
-      if (item is ContentShareItem) room.sendEvent(item.value);
+      if (item is ContentShareItem) room.sendEvent(item.value.copy());
     }
     final files = shareItems
         .whereType<FileShareItem>()
@@ -519,7 +519,8 @@ class ChatController extends State<ChatPageWithRoom>
     await matrix.client.roomsLoading;
     await matrix.client.accountDataLoading;
     if (eventContextId != null &&
-        (!eventContextId.isValidMatrixId || eventContextId.sigil != '\$')) {
+        (!eventContextId.isValidMatrixIdStrict() ||
+            eventContextId.sigil != '\$')) {
       eventContextId = null;
     }
     try {
@@ -556,7 +557,7 @@ class ChatController extends State<ChatPageWithRoom>
   Future<void>? _setReadMarkerFuture;
 
   void setReadMarker({String? eventId}) {
-    if (eventId?.isValidMatrixId == false) return;
+    if (eventId?.isValidMatrixIdStrict() == false) return;
     if (_setReadMarkerFuture != null) return;
     if (_scrolledUp) return;
     if (scrollUpBannerEventId != null) return;
@@ -598,6 +599,7 @@ class ChatController extends State<ChatPageWithRoom>
     scrollController.dispose();
     inputFocus.removeListener(_inputFocusListener);
     inputFocus.dispose();
+    _displayChatDetailsColumn.dispose();
     web.window.removeEventListener('paste', _handleClipboardFilePasteWeb);
     if (currentlyTyping) room.setTyping(false);
     MxcImage.clearCache(widget.room.id);
@@ -709,8 +711,7 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   Future<void> openCameraAction() async {
-    // Make sure the textfield is unfocused before opening the camera
-    FocusScope.of(context).requestFocus(FocusNode());
+    inputFocus.unfocus();
     final file = await ImagePicker().pickImage(source: ImageSource.camera);
     if (file == null) return;
     if (!mounted) return;
@@ -812,8 +813,7 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   Future<void> openVideoCameraAction() async {
-    // Make sure the textfield is unfocused before opening the camera
-    FocusScope.of(context).requestFocus(FocusNode());
+    inputFocus.unfocus();
     final file = await ImagePicker().pickVideo(
       source: ImageSource.camera,
       maxDuration: const Duration(minutes: 1),

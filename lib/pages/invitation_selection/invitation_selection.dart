@@ -107,7 +107,7 @@ class InvitationSelectionController extends State<InvitationSelection> {
     }
     setState(() {
       foundProfiles = List<Profile>.from(response.results);
-      if (text.isValidMatrixId &&
+      if (text.isValidMatrixIdStrict() &&
           foundProfiles.indexWhere((profile) => text == profile.userId) == -1) {
         setState(
           () => foundProfiles = [
@@ -116,6 +116,12 @@ class InvitationSelectionController extends State<InvitationSelection> {
         );
       }
     });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override

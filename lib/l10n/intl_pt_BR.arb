@@ -32,9 +32,6 @@
     "all": "Tudo",    "@all": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "Todas as conversas",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "answeredTheCall": "{senderName} atendeu à chamada",    "@answeredTheCall": {
         "type": "String",        "placeholders": {
             "senderName": {
@@ -114,22 +111,6 @@
     "changedTheChatAvatar": "{username} alterou o avatar da conversa",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} alterou a descrição da conversa para: '{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} alterou o nome da conversa para: '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
                 "type": "String"            }
         }
     },
@@ -356,12 +337,6 @@
     "deleteMessage": "Apagar mensagem",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Dispositivo",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "ID do dispositivo",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Dispositivos",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -393,9 +368,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "Código emoji inválido!",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Pacote de emoji para a sala",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Configuração dos Emoji",    "@emoteSettings": {
@@ -439,12 +411,6 @@
             "error": {
                 "type": "String"            }
         }
-    },
-    "fileName": "Nome do arquivo",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
     },
     "fontSize": "Tamanho da fonte",    "@fontSize": {
         "type": "String",        "placeholders": {}
@@ -490,13 +456,7 @@
     "help": "Ajuda",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Ocultar eventos removidos",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Ocultar eventos desconhecidos",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "ID",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignore": "Ignorar",    "@ignore": {
@@ -630,9 +590,6 @@
     "muteChat": "Silenciar conversa",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "Esteja ciente que você precisa do Pantalaimon para usar a criptografia de ponta a ponta.",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "Nova conversa",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -668,9 +625,6 @@
                 "type": "String"            }
         }
     },
-    "none": "Nenhum",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "Você ainda não adicionou uma forma de recuperar sua senha.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
@@ -692,13 +646,7 @@
     "obtainingLocation": "Obtendo localização…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
-    "offline": "Desconectado",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "Ok",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "Disponível",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "O backup de chaves on-line está ativado",    "@onlineKeyBackupEnabled": {
@@ -740,25 +688,13 @@
     "passwordRecovery": "Recuperação de senha",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Selecione uma imagem",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "Fixar",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "Tocar {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "Escolha um código",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Clique no link do e-mail para prosseguir.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Digite 4 dígitos ou deixe em branco para desativar o bloqueio do app.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "Digite sua senha",    "@pleaseEnterYourPassword": {
@@ -779,13 +715,7 @@
     "publicRooms": "Salas públicas",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Regras de push",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "Motivo",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Gravação",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedAnEvent": "{username} apagou um evento",    "@redactedAnEvent": {
@@ -795,9 +725,6 @@
         }
     },
     "redactMessage": "Apagar mensagem",    "@redactMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "Cadastrar-se",    "@register": {
         "type": "String",        "placeholders": {}
     },
     "reject": "Recusar",    "@reject": {
@@ -815,12 +742,6 @@
     "removeAllOtherDevices": "Remover todos os outros dispositivos",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Removido por {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "Desbanir da conversa",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
@@ -834,9 +755,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Denunciar mensagem",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Solicitar permissão",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "A sala foi atualizada",    "@roomHasBeenUpgraded": {
@@ -934,9 +852,6 @@
     "shareLocation": "Compartilhar localização",    "@shareLocation": {
         "type": "String",        "placeholders": {}
     },
-    "showPassword": "Mostrar senha",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "skip": "Pular",    "@skip": {
         "type": "String",        "placeholders": {}
     },
@@ -976,16 +891,10 @@
     "theyMatch": "Correspondem",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "tooManyRequestsWarning": "Demasiadas requisições. Por favor, tente novamente mais tarde!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "Tentar enviar novamente",    "@tryToSendAgain": {
-        "type": "String",        "placeholders": {}
-    },
-    "unavailable": "Indisponível",    "@unavailable": {
         "type": "String",        "placeholders": {}
     },
     "unbannedUser": "{username} desbaniu {targetName}",    "@unbannedUser": {
@@ -1045,9 +954,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Nome de usuário",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} enviou um evento de {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1057,9 +963,6 @@
         }
     },
     "verified": "Verificado",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "Verificar",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Iniciar verificação",    "@verifyStart": {
@@ -1131,7 +1034,7 @@
     "yourPublicKey": "Sua chave pública",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "oneClientLoggedOut": "Um dos seus clientes foi desconectado",    "addAccount": "Adicionar conta",    "unverified": "Não verificado",    "editBundlesForAccount": "Editar coleções para esta conta",    "serverRequiresEmail": "Este servidor precisa validar seu e-mail para efetuar o cadastro.",    "messageInfo": "Informações da mensagem",    "sender": "Remetente",    "removeFromSpace": "Remover do espaço",    "link": "Link",    "start": "Iniciar",    "repeatPassword": "Repita a senha",    "addToSpace": "Adicionar ao espaço",    "sendOnEnter": "Enviar ao pressionar enter",    "homeserver": "Servidor",    "commandHint_clearcache": "Limpar dados temporários",    "@commandHint_clearcache": {
+    "oneClientLoggedOut": "Um dos seus clientes foi desconectado",    "addAccount": "Adicionar conta",    "unverified": "Não verificado",    "editBundlesForAccount": "Editar coleções para esta conta",    "messageInfo": "Informações da mensagem",    "sender": "Remetente",    "removeFromSpace": "Remover do espaço",    "link": "Link",    "repeatPassword": "Repita a senha",    "addToSpace": "Adicionar ao espaço",    "sendOnEnter": "Enviar ao pressionar enter",    "commandHint_clearcache": "Limpar dados temporários",    "@commandHint_clearcache": {
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_create": "Criar uma conversa em grupo vazia.\nUse --no-encryption para desativar a criptografia",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
@@ -1139,7 +1042,7 @@
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_dm": "Iniciar uma conversa direta\nUse --no-encryption para desativar a criptografia",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    "scanQrCode": "Ler código QR",    "addToBundle": "Adicionar à coleção",    "removeFromBundle": "Remover desta coleção",    "bundleName": "Nome da coleção",    "time": "Horário",    "messageType": "Tipo da mensagem",    "openGallery": "Abrir galeria",    "markAsRead": "Marcar como lido",    "dismiss": "Descartar",    "reportUser": "Denunciar usuário",    "emojis": "Emojis",    "placeCall": "Chamar",    "reactedWith": "{sender} reagiu com {reaction}",    "@reactedWith": {
+    "scanQrCode": "Ler código QR",    "addToBundle": "Adicionar à coleção",    "removeFromBundle": "Remover desta coleção",    "bundleName": "Nome da coleção",    "time": "Horário",    "openGallery": "Abrir galeria",    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuário",    "emojis": "Emojis",    "placeCall": "Chamar",    "reactedWith": "{sender} reagiu com {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1201,7 +1104,7 @@
                 "type": "String"            }
         }
     },
-    "recoveryKey": "Chave de recuperação",    "commandHint_cuddle": "Enviar um afago",    "commandHint_hug": "Enviar um abraço",    "commandHint_googly": "Enviar olhos arregalados",    "googlyEyesContent": "{senderName} enviou olhos arregalados",    "@googlyEyesContent": {
+    "commandHint_cuddle": "Enviar um afago",    "commandHint_hug": "Enviar um abraço",    "commandHint_googly": "Enviar olhos arregalados",    "googlyEyesContent": "{senderName} enviou olhos arregalados",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1213,7 +1116,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Marcar como sala de mensagens diretas para o ID Matrix fornecido",    "commandHint_markasgroup": "Marcar como grupo",    "hydrate": "Restaurar a partir de um arquivo de backup",    "storeInAndroidKeystore": "Guardar no cofre do Android (KeyStore)",    "storeInAppleKeyChain": "Guardar no chaveiro da Apple",    "storeSecurlyOnThisDevice": "Guardar de modo seguro neste dispositivo",    "user": "Usuário",    "custom": "Personalizado",    "foregroundServiceRunning": "Esta notificação aparece quando o serviço de primeiro plano está sendo executado.",    "newGroup": "Novo grupo",    "newSpace": "Novo espaço",    "allSpaces": "Todos os espaços",    "countFiles": "{count} arquivos",    "@countFiles": {
+    "commandHint_markasdm": "Marcar como sala de mensagens diretas para o ID Matrix fornecido",    "commandHint_markasgroup": "Marcar como grupo",    "hydrate": "Restaurar a partir de um arquivo de backup",    "storeInAndroidKeystore": "Guardar no cofre do Android (KeyStore)",    "storeInAppleKeyChain": "Guardar no chaveiro da Apple",    "storeSecurlyOnThisDevice": "Guardar de modo seguro neste dispositivo",    "user": "Usuário",    "custom": "Personalizado",    "foregroundServiceRunning": "Esta notificação aparece quando o serviço de primeiro plano está sendo executado.",    "newSpace": "Novo espaço",    "countFiles": "{count} arquivos",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1257,7 +1160,7 @@
                 "type": "String"            }
         }
     },
-    "noChatDescriptionYet": "Nenhuma descrição para a conversa foi criada ainda.",    "learnMore": "Saiba mais",    "chatDescriptionHasBeenChanged": "Descrição da conversa alterada",    "roomUpgradeDescription": "A conversa será recriada com a nova versão de sala. Todos participantes será notificados e terão que migrar para a nova sala. Você pode encontrar mais informações sobre versões de sala em https://spec.matrix.org/latest/room/",    "pleaseEnterANumber": "Digite um número maior que 0",    "jump": "Pular",    "sorryThatsNotPossible": "Desculpe... isto não é possível",    "shareInviteLink": "Compartilhar link de convite",    "deviceKeys": "Chaves de dispositivo:",    "emoteKeyboardNoRecents": "Emojis recentes aparecem aqui...",    "@emoteKeyboardNoRecents": {
+    "noChatDescriptionYet": "Nenhuma descrição para a conversa foi criada ainda.",    "learnMore": "Saiba mais",    "chatDescriptionHasBeenChanged": "Descrição da conversa alterada",    "roomUpgradeDescription": "A conversa será recriada com a nova versão de sala. Todos participantes será notificados e terão que migrar para a nova sala. Você pode encontrar mais informações sobre versões de sala em https://spec.matrix.org/latest/room/",    "pleaseEnterANumber": "Digite um número maior que 0",    "jump": "Pular",    "sorryThatsNotPossible": "Desculpe... isto não é possível",    "shareInviteLink": "Compartilhar link de convite",    "emoteKeyboardNoRecents": "Emojis recentes aparecem aqui...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "createGroup": "Criar grupo",    "noBackupWarning": "Atenção! Se não ativar o backup de conversas, você perderá acesso a suas mensagens criptografadas. É altamente recomendável ativar o backup antes de sair.",    "kickUserDescription": "O usuário foi expulso da conversa, mas não banido. Em conversas públicas, o usuário pode entrar novamente a qualquer momento.",    "invite": "Convidar",    "blockListDescription": "Você pode bloquear usuários que estejam te perturbando. Você não receberá mensagens ou convites de usuários na sua lista pessoal de bloqueios.",    "createGroupAndInviteUsers": "Criar um grupo e convidar pessoas",    "thisDevice": "Este dispositivo:",    "publicSpaces": "Espaços públicos",    "blockedUsers": "Usuários bloqueados",    "passwordIsWrong": "A senha digitada está incorreta",    "pleaseEnterYourCurrentPassword": "Digite sua senha atual",    "groupCanBeFoundViaSearch": "Grupos podem ser encontrados por pesquisa",    "noUsersFoundWithQuery": "Infelizmente, não foi encontrado usuário com \"{query}\". Verifique se digitou corretamente.",    "@noUsersFoundWithQuery": {
@@ -1278,7 +1181,7 @@
                 "type": "String"            }
         }
     },
-    "transparent": "Transparente",    "initAppError": "Ocorreu um erro enquanto o app era iniciado",    "restoreSessionBody": "O app tentará agora restaurar sua sessão a partir do backup. Relate isto ao desenvolvedor em {url}. A mensagem de erro é: {error}",    "@restoreSessionBody": {
+    "initAppError": "Ocorreu um erro enquanto o app era iniciado",    "restoreSessionBody": "O app tentará agora restaurar sua sessão a partir do backup. Relate isto ao desenvolvedor em {url}. A mensagem de erro é: {error}",    "@restoreSessionBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },
@@ -1341,7 +1244,7 @@
                 "type": "String"            }
         }
     },
-    "restricted": "Restrito",    "knockRestricted": "Bater na porta restrito",    "searchMore": "Pesquisar mais...",    "gallery": "Galeria",    "files": "Arquivos",    "more": "Mais",    "deletePushRuleCanNotBeUndone": "Se você apagar esta configuração de notificação, isso não poderá ser desfeito.",    "shareKeysWith": "Compartilhar chaves com...",    "ignoreUser": "Ignorar usuário",    "contentNotificationSettings": "Configurações de notificações de conteúdo",    "generalNotificationSettings": "Configurações de notificações gerais",    "notificationRuleContainsUserNameDescription": "Notifica o usuário quando a mensagem contém o seu nome de usuário.",    "notificationRuleMaster": "Silenciar todas as notificações",    "notificationRuleMasterDescription": "Sobrescreve todas as outras regras e desativa todas as notificações.",    "notificationRuleContainsDisplayName": "Contém o nome de exibição",    "notificationRuleRoomnotif": "Notificação de sala",    "notificationRuleIsRoomMentionDescription": "Notifica o usuário quando há uma menção de sala.",    "notificationRuleRoomnotifDescription": "Notifica o usuário quando uma mensagem contém '@room'.",    "notificationRuleTombstone": "Morte",    "notificationRuleReaction": "Reação",    "notificationRuleSuppressEditsDescription": "Omite notificações de mensagens editadas.",    "notificationRuleEncryptedRoomOneToOneDescription": "Notifica o usuário de mensagens em salas criptografas de 2 pessoas.",    "notificationRuleRoomOneToOne": "Sala de 2 pessoas",    "notificationRuleMessageDescription": "Notifica o usuário de mensagens gerais.",    "notificationRuleEncrypted": "Criptografado",    "unknownPushRule": "Regra de push desconhecida '{rule}'",    "@unknownPushRule": {
+    "searchMore": "Pesquisar mais...",    "gallery": "Galeria",    "files": "Arquivos",    "more": "Mais",    "deletePushRuleCanNotBeUndone": "Se você apagar esta configuração de notificação, isso não poderá ser desfeito.",    "shareKeysWith": "Compartilhar chaves com...",    "contentNotificationSettings": "Configurações de notificações de conteúdo",    "generalNotificationSettings": "Configurações de notificações gerais",    "notificationRuleContainsUserNameDescription": "Notifica o usuário quando a mensagem contém o seu nome de usuário.",    "notificationRuleMaster": "Silenciar todas as notificações",    "notificationRuleMasterDescription": "Sobrescreve todas as outras regras e desativa todas as notificações.",    "notificationRuleContainsDisplayName": "Contém o nome de exibição",    "notificationRuleRoomnotif": "Notificação de sala",    "notificationRuleIsRoomMentionDescription": "Notifica o usuário quando há uma menção de sala.",    "notificationRuleRoomnotifDescription": "Notifica o usuário quando uma mensagem contém '@room'.",    "notificationRuleTombstone": "Morte",    "notificationRuleReaction": "Reação",    "notificationRuleSuppressEditsDescription": "Omite notificações de mensagens editadas.",    "notificationRuleEncryptedRoomOneToOneDescription": "Notifica o usuário de mensagens em salas criptografas de 2 pessoas.",    "notificationRuleRoomOneToOne": "Sala de 2 pessoas",    "notificationRuleMessageDescription": "Notifica o usuário de mensagens gerais.",    "notificationRuleEncrypted": "Criptografado",    "unknownPushRule": "Regra de push desconhecida '{rule}'",    "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }
@@ -1356,12 +1259,6 @@
     "checkList": "Lista de tarefas",    "synchronizingPleaseWaitCounter": " Sincronizando… ({percentage}%)",    "@synchronizingPleaseWaitCounter": {
         "type": "String",        "placeholders": {
             "percentage": {
-                "type": "String"            }
-        }
-    },
-    "invitedBy": "📩 Convidado por {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
                 "type": "String"            }
         }
     },
@@ -1400,19 +1297,19 @@
     "goToSpace": "Ir ao espaço: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
-    "loginWithMatrixId": "Conectar com ID Matrix",    "calculatingFileSize": "Calculando o tamanho do arquivo...",    "compressVideo": "Comprimindo o vídeo...",    "oneOfYourDevicesIsNotVerified": "Um dos seus dispositivos não está verificado",    "manageAccount": "Gerenciar conta",    "newChatRequest": "📩 Nova solicitação de conversa",    "userLevel": "{level} - Usuário",    "@userLevel": {
+    "loginWithMatrixId": "Conectar com ID Matrix",    "calculatingFileSize": "Calculando o tamanho do arquivo...",    "oneOfYourDevicesIsNotVerified": "Um dos seus dispositivos não está verificado",    "manageAccount": "Gerenciar conta",    "newChatRequest": "📩 Nova solicitação de conversa",    "userLevel": "{level} - Usuário",    "@userLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
         }
     },
-    "enterNewChat": "Abrir a conversa nova",    "notificationRuleSuppressNoticesDescription": "Omite notificações de clientes automatizados, como bots.",    "notificationRuleInviteForMeDescription": "Notifica o usuário quando for convidado para uma sala.",    "approve": "Aprovar",    "notificationRuleEncryptedRoomOneToOne": "Sala criptografada de 2 pessoas",    "pleaseWaitUntilInvited": "Aguarde até que alguém da sala te convide.",    "waitingForServer": "Aguardando o servidor...",    "notificationRuleEncryptedDescription": "Notifica o usuário de mensagens em salas criptografadas.",    "sendRoomNotifications": "Enviar notificações de @room",    "welcomeText": "Olá! 👋 Este é o JuMiKK-Chat. Você pode se conectar com qualquer servidor que é compatível com o https://matrix.org. E então conversar com qualquer um. É uma rede gigante e descentralizada de conversa!",    "notificationRuleRoomServerAclDescription": "Omite notificações de listas de controle de acesso de servidor de uma sala (ACL).",    "notificationRuleIsUserMentionDescription": "Notifica o usuário quando é mencionado diretamente em uma mensagem.",    "notificationRuleSuppressEdits": "Omitir edições",    "shareKeysWithDescription": "Quais dispositivos devem ser confiados para que possam ler suas mensagens em conversas criptografas?",    "allDevices": "Todos os dispositivos",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
+    "enterNewChat": "Abrir a conversa nova",    "notificationRuleSuppressNoticesDescription": "Omite notificações de clientes automatizados, como bots.",    "notificationRuleInviteForMeDescription": "Notifica o usuário quando for convidado para uma sala.",    "approve": "Aprovar",    "notificationRuleEncryptedRoomOneToOne": "Sala criptografada de 2 pessoas",    "pleaseWaitUntilInvited": "Aguarde até que alguém da sala te convide.",    "waitingForServer": "Aguardando o servidor...",    "notificationRuleEncryptedDescription": "Notifica o usuário de mensagens em salas criptografadas.",    "sendRoomNotifications": "Enviar notificações de @room",    "notificationRuleRoomServerAclDescription": "Omite notificações de listas de controle de acesso de servidor de uma sala (ACL).",    "notificationRuleIsUserMentionDescription": "Notifica o usuário quando é mencionado diretamente em uma mensagem.",    "notificationRuleSuppressEdits": "Omitir edições",    "shareKeysWithDescription": "Quais dispositivos devem ser confiados para que possam ler suas mensagens em conversas criptografas?",    "allDevices": "Todos os dispositivos",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
         }
     },
-    "swipeRightToLeftToReply": "Deslizar da direita pra esquerda para responder",    "verifiedDevicesOnly": "Somente dispositivos verificados",    "boldText": "Texto em negrito",    "recordAVideo": "Gravar um vídeo",    "optionalMessage": "(Opcional) mensagem...",    "notSupportedOnThisDevice": "Não há suporte neste dispositivo",    "commandHint_roomupgrade": "Atualizar esta sala para a versão de sala especificada",    "noMoreChatsFound": "Mais nenhuma conversa foi encontrada...",    "noChatsFoundHere": "Nenhuma conversa encontrada aqui ainda. Inicie uma nova conversa com alguém usando o botão abaixo. ⤵️",    "space": "Espaço",    "spaces": "Espaços",    "moderatorLevel": "{level} - Moderador",    "@moderatorLevel": {
+    "swipeRightToLeftToReply": "Deslizar da direita pra esquerda para responder",    "verifiedDevicesOnly": "Somente dispositivos verificados",    "boldText": "Texto em negrito",    "recordAVideo": "Gravar um vídeo",    "optionalMessage": "(Opcional) mensagem...",    "notSupportedOnThisDevice": "Não há suporte neste dispositivo",    "commandHint_roomupgrade": "Atualizar esta sala para a versão de sala especificada",    "noMoreChatsFound": "Mais nenhuma conversa foi encontrada...",    "noChatsFoundHere": "Nenhuma conversa encontrada aqui ainda. Inicie uma nova conversa com alguém usando o botão abaixo. ⤵️",    "space": "Espaço",    "moderatorLevel": "{level} - Moderador",    "@moderatorLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
@@ -1436,13 +1333,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} iniciou uma enquete.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Enquete",    "startPoll": "Abrir enquete",    "endPoll": "Fechar enquete",    "answersVisible": "Respostas visíveis",    "pollQuestion": "Questão da enquete",    "answerOption": "Opção de resposta",    "addAnswerOption": "Adicionar opção de resposta",    "allowMultipleAnswers": "Permitir várias respostas",    "pollHasBeenEnded": "A enquete terminou",    "countVotes": "{count, plural, =1{Um voto} other{{count} votos}}",    "@countVotes": {
+    "startPoll": "Abrir enquete",    "endPoll": "Fechar enquete",    "answersVisible": "Respostas visíveis",    "pollQuestion": "Questão da enquete",    "answerOption": "Opção de resposta",    "addAnswerOption": "Adicionar opção de resposta",    "allowMultipleAnswers": "Permitir várias respostas",    "pollHasBeenEnded": "A enquete terminou",    "countVotes": "{count, plural, =1{Um voto} other{{count} votos}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1460,42 +1351,8 @@
                 "type": "String"            }
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     "@chatSearchedUntil": {
         "type": "String",        "placeholders": {
             "time": {

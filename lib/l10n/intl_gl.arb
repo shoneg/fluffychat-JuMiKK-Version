@@ -32,9 +32,6 @@
     "all": "Todos",    "@all": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "Todas as conversas",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "answeredTheCall": "{senderName} respondeu á chamada",    "@answeredTheCall": {
         "type": "String",        "placeholders": {
             "senderName": {
@@ -114,22 +111,6 @@
     "changedTheChatAvatar": "{username} cambiou o avatar da conversa",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} mudou a descrición da conversa a: '{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} mudou o nome da charla a: '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
                 "type": "String"            }
         }
     },
@@ -356,12 +337,6 @@
     "deleteMessage": "Eliminar mensaxe",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Dispositivo",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "ID do dispositivo",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Dispositivos",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -393,9 +368,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "Atallo do emote non é válido!",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Paquetes de Emotes para a sala",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Axustes de Emote",    "@emoteSettings": {
@@ -439,12 +411,6 @@
             "error": {
                 "type": "String"            }
         }
-    },
-    "fileName": "Nome do ficheiro",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
     },
     "fontSize": "Tamaño da letra",    "@fontSize": {
         "type": "String",        "placeholders": {}
@@ -490,13 +456,7 @@
     "help": "Axuda",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Agochar eventos editados",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Agochar eventos descoñecidos",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "ID",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignore": "Ignorar",    "@ignore": {
@@ -630,9 +590,6 @@
     "muteChat": "Acalar conversa",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "Ten en conta que polo de agora precisas Pantalaimon para a cifraxe extremo-a-extremo.",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "Nova conversa",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -668,9 +625,6 @@
                 "type": "String"            }
         }
     },
-    "none": "Ningún",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "Aínda non engaiches ningún xeito de recuperar o contrasinal.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
@@ -692,13 +646,7 @@
     "obtainingLocation": "Obtendo a localización…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
-    "offline": "Desconectada",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "Ok",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "En liña",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "Copia de Apoio en liña das Chaves activada",    "@onlineKeyBackupEnabled": {
@@ -740,25 +688,13 @@
     "passwordRecovery": "Recuperación do contrasinal",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Elixe unha imaxe",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "Fixar",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "Reproducir {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "Escolle un código de acceso",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Preme na ligazón do email e segue as instrucións.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Escribe 4 díxitos ou deíxao baleiro para non activar o bloqueo.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "Escribe o teu contrasinal",    "@pleaseEnterYourPassword": {
@@ -779,13 +715,7 @@
     "publicRooms": "Salas públicas",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Regras de envío",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "Razón",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Gravando",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedAnEvent": "{username} editou un evento",    "@redactedAnEvent": {
@@ -795,9 +725,6 @@
         }
     },
     "redactMessage": "Eliminar mensaxe",    "@redactMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "Crear conta",    "@register": {
         "type": "String",        "placeholders": {}
     },
     "reject": "Rexeitar",    "@reject": {
@@ -815,12 +742,6 @@
     "removeAllOtherDevices": "Quitar todos os outros dispositivos",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Eliminado por {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "Retirar veto na conversa",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
@@ -834,9 +755,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Denunciar mensaxe",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Solicitar permiso",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "A sala foi actualizada",    "@roomHasBeenUpgraded": {
@@ -934,9 +852,6 @@
     "shareLocation": "Compartir localización",    "@shareLocation": {
         "type": "String",        "placeholders": {}
     },
-    "showPassword": "Amosar contrasinal",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "skip": "Saltar",    "@skip": {
         "type": "String",        "placeholders": {}
     },
@@ -976,16 +891,10 @@
     "theyMatch": "Concordan",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "tooManyRequestsWarning": "Demasiadas solicitudes. Inténtao máis tarde!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "Inténtao outra vez",    "@tryToSendAgain": {
-        "type": "String",        "placeholders": {}
-    },
-    "unavailable": "Non dispoñible",    "@unavailable": {
         "type": "String",        "placeholders": {}
     },
     "unbannedUser": "{username} retirou o veto a {targetName}",    "@unbannedUser": {
@@ -1045,9 +954,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Nome de usuaria",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} enviou un evento {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1057,9 +963,6 @@
         }
     },
     "verified": "Verificado",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "Verificar",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Comezar verificación",    "@verifyStart": {
@@ -1131,7 +1034,7 @@
     "yourPublicKey": "A túa chave pública",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "addToSpace": "Engadir ao espazo",    "scanQrCode": "Escanear código QR",    "sendOnEnter": "Enter para enviar",    "homeserver": "Servidor de inicio",    "serverRequiresEmail": "O servidor precisa validar o teu enderezo de email para rexistrarte.",    "addAccount": "Engadir conta",    "oneClientLoggedOut": "Un dos teus clientes foi desconectado",    "link": "Ligazón",    "unverified": "Sen verificar",    "repeatPassword": "Repite o contrasinal",    "messageInfo": "Info da mensaxe",    "time": "Hora",    "sender": "Remitente",    "openGallery": "Galería pública",    "messageType": "Tipo de mensaxe",    "removeFromSpace": "Retirar do espazo",    "start": "Comezar",    "commandHint_discardsession": "Descartar sesión",    "@commandHint_discardsession": {
+    "addToSpace": "Engadir ao espazo",    "scanQrCode": "Escanear código QR",    "sendOnEnter": "Enter para enviar",    "addAccount": "Engadir conta",    "oneClientLoggedOut": "Un dos teus clientes foi desconectado",    "link": "Ligazón",    "unverified": "Sen verificar",    "repeatPassword": "Repite o contrasinal",    "messageInfo": "Info da mensaxe",    "time": "Hora",    "sender": "Remitente",    "openGallery": "Galería pública",    "removeFromSpace": "Retirar do espazo",    "commandHint_discardsession": "Descartar sesión",    "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_create": "Crear un grupo de conversa baleiro\nUsa --no-encryption para desactivar a cifraxe",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
@@ -1139,7 +1042,7 @@
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_dm": "Iniciar unha charla directa\nUsa --no-encryption para desactivar a cifraxe",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    "dismiss": "Desbotar",    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuaria",    "voiceCall": "Chamada de voz",    "emojis": "Emojis",    "placeCall": "Chamar",    "unsupportedAndroidVersionLong": "Esta característica require unha vesión máis recente de Android. Mira se hai actualizacións ou soporte de LineageOS.",    "videoCallsBetaWarning": "Ten en conta que as chamadas de vídeo están en fase beta. Poderían non funcionar correctamente ou non funcionar nalgunhas plataformas.",    "unsupportedAndroidVersion": "Version de Android non soportada",    "reactedWith": "{sender} reaccionou con {reaction}",    "@reactedWith": {
+    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuaria",    "voiceCall": "Chamada de voz",    "emojis": "Emojis",    "placeCall": "Chamar",    "unsupportedAndroidVersionLong": "Esta característica require unha vesión máis recente de Android. Mira se hai actualizacións ou soporte de LineageOS.",    "videoCallsBetaWarning": "Ten en conta que as chamadas de vídeo están en fase beta. Poderían non funcionar correctamente ou non funcionar nalgunhas plataformas.",    "unsupportedAndroidVersion": "Version de Android non soportada",    "reactedWith": "{sender} reaccionou con {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1189,7 +1092,7 @@
                 "type": "String"            }
         }
     },
-    "storeInAndroidKeystore": "Gardar en Android KeyStore",    "storeInAppleKeyChain": "Gardar en Apple KeyChain",    "recoveryKey": "Chave de recuperación",    "storeSecurlyOnThisDevice": "Gardar de xeito seguro no dispositivo",    "users": "Usuarias",    "countFiles": "{count} ficheiros",    "@countFiles": {
+    "storeInAndroidKeystore": "Gardar en Android KeyStore",    "storeInAppleKeyChain": "Gardar en Apple KeyChain",    "storeSecurlyOnThisDevice": "Gardar de xeito seguro no dispositivo",    "users": "Usuarias",    "countFiles": "{count} ficheiros",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1201,7 +1104,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Marcar como sala de mensaxe directa para o ID Matrix indicado",    "commandHint_markasgroup": "Marcar como grupo",    "whyIsThisMessageEncrypted": "Por que non podo ler esta mensaxe?",    "noKeyForThisMessage": "Pode ser que a mensaxe fose enviada antes de que ti accedeses á túa conta neste dispositivo.\n\nTamén é posible que a remitente non validase o teu dispositivo ou tamén que algo fallase na conexión a internet.\n\nPodes ler a mensaxe noutro dispositivo? Entón podes transferila desde el! Vai a Axustes > Dispositivos e comproba que tes tódolos dispositivos verificados. Entón cando abras a sala a próxima vez a sincronización realizarase e as chaves transmitiranse automáticamente.\n\nNon desexas perder as chaves cando pechas sesión ou cambias de dispositivo? Comproba nos axustes que activaches a copia de apoio das conversas.",    "newGroup": "Novo grupo",    "newSpace": "Novo espazo",    "foregroundServiceRunning": "Esta notificación aparece cando se está a executar o servizo en segundo plano.",    "screenSharingTitle": "compartición da pantalla",    "allSpaces": "Todos os espazos",    "screenSharingDetail": "Estás a compartir a túa pantalla en JuMiKK-Chat",    "doNotShowAgain": "Non mostrar outra vez",    "commandHint_googly": "Envía uns ollos desos grandes",    "googlyEyesContent": "{senderName} enviouche uns ollos grandes",    "@googlyEyesContent": {
+    "commandHint_markasdm": "Marcar como sala de mensaxe directa para o ID Matrix indicado",    "commandHint_markasgroup": "Marcar como grupo",    "whyIsThisMessageEncrypted": "Por que non podo ler esta mensaxe?",    "noKeyForThisMessage": "Pode ser que a mensaxe fose enviada antes de que ti accedeses á túa conta neste dispositivo.\n\nTamén é posible que a remitente non validase o teu dispositivo ou tamén que algo fallase na conexión a internet.\n\nPodes ler a mensaxe noutro dispositivo? Entón podes transferila desde el! Vai a Axustes > Dispositivos e comproba que tes tódolos dispositivos verificados. Entón cando abras a sala a próxima vez a sincronización realizarase e as chaves transmitiranse automáticamente.\n\nNon desexas perder as chaves cando pechas sesión ou cambias de dispositivo? Comproba nos axustes que activaches a copia de apoio das conversas.",    "newSpace": "Novo espazo",    "foregroundServiceRunning": "Esta notificación aparece cando se está a executar o servizo en segundo plano.",    "screenSharingTitle": "compartición da pantalla",    "screenSharingDetail": "Estás a compartir a túa pantalla en JuMiKK-Chat",    "doNotShowAgain": "Non mostrar outra vez",    "commandHint_googly": "Envía uns ollos desos grandes",    "googlyEyesContent": "{senderName} enviouche uns ollos grandes",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1219,7 +1122,7 @@
                 "type": "String"            }
         }
     },
-    "encryptThisChat": "Cifrar esta conversa",    "disableEncryptionWarning": "Por razóns de seguridade non podes desactivar a cifraxe dunha conversa onde foi activada previamente.",    "sorryThatsNotPossible": "Lamentámolo... iso non é posible",    "deviceKeys": "Chaves do dispositivo:",    "newSpaceDescription": "Os Espazos permítenche consolidar as túas conversas e construir comunidades públicas ou privadas.",    "wasDirectChatDisplayName": "Conversa baleira (era {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "encryptThisChat": "Cifrar esta conversa",    "disableEncryptionWarning": "Por razóns de seguridade non podes desactivar a cifraxe dunha conversa onde foi activada previamente.",    "sorryThatsNotPossible": "Lamentámolo... iso non é posible",    "newSpaceDescription": "Os Espazos permítenche consolidar as túas conversas e construir comunidades públicas ou privadas.",    "wasDirectChatDisplayName": "Conversa baleira (era {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1282,7 +1185,7 @@
                 "type": "String"            }
         }
     },
-    "transparent": "Transparente",    "sendReadReceipts": "Enviar confirmación de lectura",    "sendReadReceiptsDescription": "Outras participantes na conversa poden ver cando liches unha mensaxe.",    "formattedMessages": "Mensaxes con formato",    "verifyOtherDevice": "🔐 Verificar outro dispositivo",    "verifyOtherUser": "🔐 Verificar outra usuaria",    "verifyOtherDeviceDescription": "Ao verificar outro dispositivo estás compartindo as chaves, aumentando a túa seguridade 💪. Ao iniciar a verificación aparecerá unha xanela emerxente nos dous dispositivos. Nesa xanela verás varios emojis ou números que tes que comparar entre eles. O mellor xeito de facelo é ter os dous dispositivos contigo cando inicias o proceso de verificación. 🤳",    "canceledKeyVerification": "{sender} desbotou a verificación da chave",    "@canceledKeyVerification": {
+    "sendReadReceipts": "Enviar confirmación de lectura",    "sendReadReceiptsDescription": "Outras participantes na conversa poden ver cando liches unha mensaxe.",    "formattedMessages": "Mensaxes con formato",    "verifyOtherDevice": "🔐 Verificar outro dispositivo",    "verifyOtherUser": "🔐 Verificar outra usuaria",    "verifyOtherDeviceDescription": "Ao verificar outro dispositivo estás compartindo as chaves, aumentando a túa seguridade 💪. Ao iniciar a verificación aparecerá unha xanela emerxente nos dous dispositivos. Nesa xanela verás varios emojis ou números que tes que comparar entre eles. O mellor xeito de facelo é ter os dous dispositivos contigo cando inicias o proceso de verificación. 🤳",    "canceledKeyVerification": "{sender} desbotou a verificación da chave",    "@canceledKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1341,7 +1244,7 @@
                 "type": "String"            }
         }
     },
-    "searchMore": "Buscar máis...",    "gallery": "Galería",    "files": "Ficheiros",    "knockRestricted": "Peta á porta",    "restricted": "Non accesible",    "swipeRightToLeftToReply": "Despraza hacia a esquerda para responder",    "noMoreChatsFound": "Non se atopan máis charlas…",    "unread": "Sen ler",    "space": "Espazo",    "spaces": "Espazos",    "goToSpace": "Ir ao espazo: {space}",    "@goToSpace": {
+    "searchMore": "Buscar máis...",    "gallery": "Galería",    "files": "Ficheiros",    "swipeRightToLeftToReply": "Despraza hacia a esquerda para responder",    "noMoreChatsFound": "Non se atopan máis charlas…",    "unread": "Sen ler",    "space": "Espazo",    "goToSpace": "Ir ao espazo: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
     "markAsUnread": "Marcar como non lido",    "userLevel": "{level} - Usuaria",    "@userLevel": {
@@ -1362,25 +1265,19 @@
                 "type": "int"            }
         }
     },
-    "changeGeneralChatSettings": "Cambiar os axustes xerais da charla",    "inviteOtherUsers": "Convidar a outras usuarias a esta charla",    "changeTheChatPermissions": "Cambiar os permisos na charla",    "changeTheVisibilityOfChatHistory": "Cambiar a visibilidade do historial da charla",    "changeTheCanonicalRoomAlias": "Cambiar o enderezo público principal da charla",    "sendRoomNotifications": "Enviar notificacións a @room",    "changeTheDescriptionOfTheGroup": "Cambiar a descrición da charla",    "invitedBy": "📩 Convidada por {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    "changelog": "Novidades na versión",    "chatPermissionsDescription": "Define que nivel de permisos son necesarios para realizar certas accións nesta charla. Os niveis de permiso 0, 50 e 100 normalmente representan, usuarias, moderadoras e administradoras, pero son posibles outras escalas.",    "updateInstalled": "🎉 Instalouse a actualización a {version}!",    "@updateInstalled": {
+    "changeGeneralChatSettings": "Cambiar os axustes xerais da charla",    "inviteOtherUsers": "Convidar a outras usuarias a esta charla",    "changeTheChatPermissions": "Cambiar os permisos na charla",    "changeTheVisibilityOfChatHistory": "Cambiar a visibilidade do historial da charla",    "changeTheCanonicalRoomAlias": "Cambiar o enderezo público principal da charla",    "sendRoomNotifications": "Enviar notificacións a @room",    "changeTheDescriptionOfTheGroup": "Cambiar a descrición da charla",    "changelog": "Novidades na versión",    "chatPermissionsDescription": "Define que nivel de permisos son necesarios para realizar certas accións nesta charla. Os niveis de permiso 0, 50 e 100 normalmente representan, usuarias, moderadoras e administradoras, pero son posibles outras escalas.",    "updateInstalled": "🎉 Instalouse a actualización a {version}!",    "@updateInstalled": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    "sendCanceled": "Cancelouse o envío",    "noChatsFoundHere": "Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️",    "loginWithMatrixId": "Acceder co ID-Matrix",    "doesNotSeemToBeAValidHomeserver": "Non semella ser un servidor de inicio compatible. É o URL correcto?",    "calculatingFileSize": "Calculando o tamaño do ficheiro…",    "sendingAttachment": "Enviando o anexo…",    "compressVideo": "Comprimindo o vídeo…",    "oneOfYourDevicesIsNotVerified": "Un dos teus dispositivos non está verificado",    "noticeChatBackupDeviceVerification": "Nota: Cando conectas todos os teus dispositivos á copia de apoio da conversa quedan verificados automaticamente.",    "blur": "Néboa:",    "opacity": "Opacidade:",    "contactServerSecurity": "Contacto con Seguridade do servidor",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
+    "sendCanceled": "Cancelouse o envío",    "noChatsFoundHere": "Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️",    "loginWithMatrixId": "Acceder co ID-Matrix",    "doesNotSeemToBeAValidHomeserver": "Non semella ser un servidor de inicio compatible. É o URL correcto?",    "calculatingFileSize": "Calculando o tamaño do ficheiro…",    "sendingAttachment": "Enviando o anexo…",    "oneOfYourDevicesIsNotVerified": "Un dos teus dispositivos non está verificado",    "noticeChatBackupDeviceVerification": "Nota: Cando conectas todos os teus dispositivos á copia de apoio da conversa quedan verificados automaticamente.",    "blur": "Néboa:",    "opacity": "Opacidade:",    "contactServerSecurity": "Contacto con Seguridade do servidor",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
         }
     },
-    "welcomeText": "Ola! 👋 Isto é JuMiKK-Chat. Podes iniciar sesión en calquera servidor compatible con https://matrix.org. Poderás conversar con calquera. Unha enorme rede de mensaxería descentralizada!",    "setWallpaper": "Establecer fondo",    "manageAccount": "Xestionar conta",    "noContactInformationProvided": "O servidor non proporciona información de contacto válida",    "contactServerAdmin": "Contacto con Admin do servidor",    "supportPage": "Páxina de axuda",    "serverInformation": "Información do servidor:",    "name": "Nome",    "version": "Versión",    "website": "Páxina web",    "continueText": "Continuar",    "italicText": "Cursiva",    "strikeThrough": "Riscar",    "pleaseFillOut": "Por favor completa",    "invalidUrl": "URL non válido",    "boldText": "Resaltar texto",    "addLink": "Engadir ligazón",    "unableToJoinChat": "Non se puido acceder. Pode que a outra parte xa pechase a conversa.",    "sendImages": "Enviar {count} imaxe",    "@sendImages": {
+    "setWallpaper": "Establecer fondo",    "manageAccount": "Xestionar conta",    "noContactInformationProvided": "O servidor non proporciona información de contacto válida",    "contactServerAdmin": "Contacto con Admin do servidor",    "supportPage": "Páxina de axuda",    "serverInformation": "Información do servidor:",    "name": "Nome",    "version": "Versión",    "website": "Páxina web",    "continueText": "Continuar",    "italicText": "Cursiva",    "strikeThrough": "Riscar",    "pleaseFillOut": "Por favor completa",    "invalidUrl": "URL non válido",    "boldText": "Resaltar texto",    "addLink": "Engadir ligazón",    "unableToJoinChat": "Non se puido acceder. Pode que a outra parte xa pechase a conversa.",    "sendImages": "Enviar {count} imaxe",    "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1404,7 +1301,7 @@
                 "type": "String"            }
         }
     },
-    "optionalMessage": "(Optativo) mensaxe…",    "notSupportedOnThisDevice": "Non compatible co dispositivo",    "takeAPhoto": "Facer foto",    "recordAVideo": "Gravar vídeo",    "enterNewChat": "Entrar na nova conversa",    "commandHint_roomupgrade": "Actualizar esta sala á versión de sala indicada",    "ignoreUser": "Ignorar usuaria",    "approve": "Aprobar",    "pleaseWaitUntilInvited": "Agora agarda a que alguén da sala te convide a entrar.",    "youHaveKnocked": "Petaches á porta",    "sentVoiceMessage": "🎙️ {duration} - Mensaxe de voz de {sender}",    "@sentVoiceMessage": {
+    "optionalMessage": "(Optativo) mensaxe…",    "notSupportedOnThisDevice": "Non compatible co dispositivo",    "takeAPhoto": "Facer foto",    "recordAVideo": "Gravar vídeo",    "enterNewChat": "Entrar na nova conversa",    "commandHint_roomupgrade": "Actualizar esta sala á versión de sala indicada",    "approve": "Aprobar",    "pleaseWaitUntilInvited": "Agora agarda a que alguén da sala te convide a entrar.",    "youHaveKnocked": "Petaches á porta",    "sentVoiceMessage": "🎙️ {duration} - Mensaxe de voz de {sender}",    "@sentVoiceMessage": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1436,13 +1333,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} publicou unha enquisa.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Enquisa",    "startPoll": "Publicar enquisa",    "endPoll": "Finalizar enquisa",    "answersVisible": "Resultados visibles",    "pollQuestion": "Pregunta da enquisa",    "answerOption": "Opción de resposta",    "addAnswerOption": "Engadir opción",    "allowMultipleAnswers": "Permitir varias respostas",    "pollHasBeenEnded": "Rematou a enquisa",    "countVotes": "{count, plural, =1{Un voto} other{{count} votos}}",    "@countVotes": {
+    "startPoll": "Publicar enquisa",    "endPoll": "Finalizar enquisa",    "answersVisible": "Resultados visibles",    "pollQuestion": "Pregunta da enquisa",    "answerOption": "Opción de resposta",    "addAnswerOption": "Engadir opción",    "allowMultipleAnswers": "Permitir varias respostas",    "pollHasBeenEnded": "Rematou a enquisa",    "countVotes": "{count, plural, =1{Un voto} other{{count} votos}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1477,7 +1368,7 @@
                 "type": "int"            }
         }
     },
-    "check": "Comprobar",    "encryptedMessage": "Mensaxe cifrada",    "unencryptedMessage": "Mensaxe sen cifrar",    "allow": "Permitir",    "messageCanOnlyBeReadByUser": "A túa mensaxe está cifrada de extremo a extremo e só a pode ler a usuaria:",    "messageCanOnlyBeReadByUsers": "A túa mensaxe está cifrada de extremo a extremo e só a poden ler estas usuarias:",    "publicKey": "Clave pública: {key}",    "@publicKey": {
+    "encryptedMessage": "Mensaxe cifrada",    "unencryptedMessage": "Mensaxe sen cifrar",    "messageCanOnlyBeReadByUser": "A túa mensaxe está cifrada de extremo a extremo e só a pode ler a usuaria:",    "messageCanOnlyBeReadByUsers": "A túa mensaxe está cifrada de extremo a extremo e só a poden ler estas usuarias:",    "publicKey": "Clave pública: {key}",    "@publicKey": {
         "type": "String",        "placeholders": {
             "key": {
                 "type": "String"            }
@@ -1564,4 +1455,10 @@
     "noCurve25519KeyFound": "Non se atopa a clave curve25519",    "@noCurve25519KeyFound": {
         "type": "String",        "placeholders": {}
     },
-    "messageNotDecryptable": "Mensaxe non descifrable",    "today": "Hoxe",    "sending": "Enviando",    "generatingThumbnail": "Creando a miniatura",    "encrypting": "Cifrando",    "uploading": "Subindo",    "edited": "(editada)",    "couldNotBeSent": "Non se puido enviar",    "yesterday": "Onte"}
+    "messageNotDecryptable": "Mensaxe non descifrable",    "today": "Hoxe",    "sending": "Enviando",    "generatingThumbnail": "Creando a miniatura",    "encrypting": "Cifrando",    "uploading": "Subindo",    "edited": "(editada)",    "couldNotBeSent": "Non se puido enviar",    "yesterday": "Onte",    "resetRecoveryKey": "Restablecer clave de recuperación",    "pleaseEnter6Digits": "Escribe os 6 díxitos para activar o bloqueo da app.",    "disableAppLock": "Desactivar bloqueo da app",    "disableAppLockAreYouSure": "Tes certeza de querer desactivar o bloqueo da app?",    "enableBiometrics": "Activar a autenticación biométrica",    "disableBiometrics": "Desactivar autenticación biométrica",    "biometricsDescription": "Coa autenticación biométrica podes desbloquear a app coa face ou a impresión dactilar. As opcións dependen do teu dispositivo.",    "useAppLock": "Usar bloqueo da app",    "unlockWithBiometrics": "Desbloquear con autenticación biométrica",    "resetPin": "Restablecer PIN",    "forwardCountMessages": "Reenviar {count, plural, =1{unha mensaxe} other{{count} mensaxes}}?",    "@forwardCountMessages": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "repeatPassword": "Паўтарыце пароль",    "notAnImage": "Не файл выявы.",    "ignoreUser": "Ігнараваць карыстальніка",    "remove": "Прыбраць",    "@remove": {
+    "repeatPassword": "Паўтарыце пароль",    "notAnImage": "Не файл выявы.",    "remove": "Прыбраць",    "@remove": {
         "type": "String",        "placeholders": {}
     },
     "importNow": "Імпартаваць зараз",    "importEmojis": "Імпартаваць эмодзі",    "importFromZipFile": "Імпартаваць з файла .zip",    "exportEmotePack": "Экспартаваць пак эмодзі як .zip",    "replace": "Замяніць",    "about": "Пра праграму",    "aboutHomeserver": "Пра {homeserver}",    "@aboutHomeserver": {
@@ -42,9 +42,6 @@
         "type": "String",        "placeholders": {}
     },
     "all": "Усё",    "@all": {
-        "type": "String",        "placeholders": {}
-    },
-    "allChats": "Усе чаты",    "@allChats": {
         "type": "String",        "placeholders": {}
     },
     "commandHint_roomupgrade": "Абнавіце гэты пакой да згаданай версіі",    "commandHint_googly": "Даслаць смешныя вочы",    "commandHint_cuddle": "Даслаць усмешку",    "commandHint_hug": "Даслаць абдымашкі",    "googlyEyesContent": "{senderName} даслаў(-ла) вам смешныя вочы",    "@googlyEyesContent": {
@@ -109,7 +106,7 @@
                 "type": "String"            }
         }
     },
-    "sendTypingNotifications": "Дасылаць паведамленне пра друк",    "swipeRightToLeftToReply": "Змахніце ўлева, каб адказаць",    "sendOnEnter": "Дасылаць на enter",    "noMoreChatsFound": "Болей чатаў не знойдзена...",    "noChatsFoundHere": "Здаецца, тут пуста. Пачніце новы чат з кімсьці праз кнопку ніжэй. ⤵️",    "unread": "Непрачытаные",    "space": "Прастора",    "spaces": "Прасторы",    "banFromChat": "Заблакіраваць ў чаце",    "@banFromChat": {
+    "sendTypingNotifications": "Дасылаць паведамленне пра друк",    "swipeRightToLeftToReply": "Змахніце ўлева, каб адказаць",    "sendOnEnter": "Дасылаць на enter",    "noMoreChatsFound": "Болей чатаў не знойдзена...",    "noChatsFoundHere": "Здаецца, тут пуста. Пачніце новы чат з кімсьці праз кнопку ніжэй. ⤵️",    "unread": "Непрачытаные",    "space": "Прастора",    "banFromChat": "Заблакіраваць ў чаце",    "@banFromChat": {
         "type": "String",        "placeholders": {}
     },
     "banned": "Заблакіраваны",    "@banned": {
@@ -144,22 +141,6 @@
     "changedTheChatAvatar": "{username} змяніў выяву чата",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} змяніў апісанне чата на :'{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} змяніў назву чата на '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
                 "type": "String"            }
         }
     },
@@ -400,12 +381,6 @@
     "deleteMessage": "Выдаліць паведамленне",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Прылада",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "ID прылады",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Прылады",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -440,9 +415,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteKeyboardNoRecents": "Нядаўна ўжытыя эмодзі паявяцца тут...",    "@emoteKeyboardNoRecents": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Наборы эмодзі для пакою",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Налады эмодзі",    "@emoteSettings": {
@@ -481,17 +453,11 @@
     "enterAnEmailAddress": "Увядзіце электроную пошту (email)",    "@enterAnEmailAddress": {
         "type": "String",        "placeholders": {}
     },
-    "homeserver": "Дамашні сервер",    "errorObtainingLocation": "Памылка атрымання месцазнаходжання: {error}",    "@errorObtainingLocation": {
+    "errorObtainingLocation": "Памылка атрымання месцазнаходжання: {error}",    "@errorObtainingLocation": {
         "type": "String",        "placeholders": {
             "error": {
                 "type": "String"            }
         }
-    },
-    "fileName": "Назва файла",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
     },
     "fontSize": "Памер шрыфту",    "@fontSize": {
         "type": "String",        "placeholders": {}
@@ -537,13 +503,7 @@
     "help": "Дапамога",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Схаваць адрэдагаваныя падзеі",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "hideRedactedMessages": "Схаваць адрэдагаваныя паведамленні",    "hideRedactedMessagesBody": "Калі хтосьці рэдагуе паведамленне, яно будзе схавана ў чаце.",    "hideInvalidOrUnknownMessageFormats": "Хаваць памылковыя ці невядомыя фарматы паведамленняў",    "id": "ID",    "@id": {
-        "type": "String",        "placeholders": {}
-    },
-    "block": "Заблакіраваць",    "blockedUsers": "Заблакіраваныя карыстальнікі",    "blockListDescription": "Вы можаце заблакіраваць карыстальнікаў, якія вам перашкаджаюць. Вы не атрымаеце ад іх ні паведамленняў, ні запрашэнняў.",    "blockUsername": "Ігнараваць імя карыстальніка",    "iHaveClickedOnLink": "Я перайшоў па спасылцы",    "@iHaveClickedOnLink": {
+    "hideRedactedMessages": "Схаваць адрэдагаваныя паведамленні",    "hideRedactedMessagesBody": "Калі хтосьці рэдагуе паведамленне, яно будзе схавана ў чаце.",    "hideInvalidOrUnknownMessageFormats": "Хаваць памылковыя ці невядомыя фарматы паведамленняў",    "block": "Заблакіраваць",    "blockedUsers": "Заблакіраваныя карыстальнікі",    "blockListDescription": "Вы можаце заблакіраваць карыстальнікаў, якія вам перашкаджаюць. Вы не атрымаеце ад іх ні паведамленняў, ні запрашэнняў.",    "blockUsername": "Ігнараваць імя карыстальніка",    "iHaveClickedOnLink": "Я перайшоў па спасылцы",    "@iHaveClickedOnLink": {
         "type": "String",        "placeholders": {}
     },
     "incorrectPassphraseOrKey": "Няслушныя фраза-пароль ці ключ аднаўлення",    "@incorrectPassphraseOrKey": {
@@ -668,9 +628,6 @@
     "muteChat": "Заглушыць чат",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "Пераканайцеся, калі ласка, што вы выкарыстоўваеце Pantalaimon для end-to-end шыфравання.",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "Новы чат",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -706,10 +663,7 @@
                 "type": "String"            }
         }
     },
-    "shareInviteLink": "Падзяліцца запрашальнай спасылкай",    "scanQrCode": "Сканіраваць QR-код",    "none": "Нічога",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
-    "noPasswordRecoveryDescription": "Вы яшчэ не дадалі метад аднаўлення пароля.",    "@noPasswordRecoveryDescription": {
+    "shareInviteLink": "Падзяліцца запрашальнай спасылкай",    "scanQrCode": "Сканіраваць QR-код",    "noPasswordRecoveryDescription": "Вы яшчэ не дадалі метад аднаўлення пароля.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
     "noPermission": "Няма дазволу",    "@noPermission": {
@@ -737,9 +691,6 @@
         }
     },
     "shareLocation": "Падзяліцца месцазнаходжаннем",    "@shareLocation": {
-        "type": "String",        "placeholders": {}
-    },
-    "showPassword": "Паказаць пароль",    "@showPassword": {
         "type": "String",        "placeholders": {}
     },
     "skip": "Прапусціць",    "@skip": {
@@ -786,9 +737,6 @@
     },
     "theyMatch": "Яны супадаюць",    "@theyMatch": {
         "type": "String",        "placeholders": {}
-    },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
     },
     "visibleForEveryone": "Бачна ўсім",    "@visibleForEveryone": {
         "type": "String",        "placeholders": {}
@@ -841,7 +789,7 @@
     "yourPublicKey": "Ваш публічны ключ",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "Інфармацыя пра паведамленне",    "time": "Час",    "messageType": "Тып паведамлення",    "sender": "Адпраўшчык",    "openGallery": "Адкрыць галерэю",    "removeFromSpace": "Выдаліць з прасторы",    "start": "Пачаць",    "markAsRead": "Адзначыць як прачытанае",    "reportUser": "Паскардзіцца на карыстальніка",    "dismiss": "Адхіліць",    "reactedWith": "{sender} рэагуе з {reaction}",    "@reactedWith": {
+    "messageInfo": "Інфармацыя пра паведамленне",    "time": "Час",    "sender": "Адпраўшчык",    "openGallery": "Адкрыць галерэю",    "removeFromSpace": "Выдаліць з прасторы",    "markAsRead": "Адзначыць як прачытанае",    "reportUser": "Паскардзіцца на карыстальніка",    "reactedWith": "{sender} рэагуе з {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -862,12 +810,6 @@
         }
     },
     "youInvitedBy": "📩 Вы былі запрошаны карыстальнікам {user}",    "@youInvitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    "invitedBy": "📩 Запрошаны(-а) {user}",    "@invitedBy": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -909,13 +851,13 @@
                 "type": "int"            }
         }
     },
-    "user": "Карыстальнік",    "custom": "Карыстальніцкае",    "foregroundServiceRunning": "Гэта паведамленне з'явіцца, калі асноўныя службы запрацуюць.",    "screenSharingTitle": "падзяліцца экранам",    "screenSharingDetail": "Вы дзеліцеся экранам у JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Чаму гэта паведамленне нельга прачытаць?",    "noKeyForThisMessage": "Гэта можа здарыцца з-за таго, што паведамленне было даслана да таго, як вы увайшлі ў уліковы запіс на гэтай прыладзе.\n\nТаксама верагодна, што адпраўшчык заблакіраваў вашу прыладу ці ў вас хібы з інтэрнэтам.\n\nВы можаце чытаць гэта паведамленне з іншага сеансу? Тад дашліце паведамленне адтуль! Перайдзіце ў Налады > Прылады і пераканайцеся ў тым, што вашы прылады верыфікавалі адна адну. Калі вы адкрыеце пакой наступны раз і абодве сэсіі будуць запушчаны, ключы павінны сінхранізавацца аўтаматычна.\n\nВы не хаціце згубіць клбчы, калі будзеце выходзіць ці змяняць прылады? Пераканайцеся ў тым, што вы уключылі рэзервовае капіраванне чатаў у наладах.",    "newGroup": "Новая група",    "newSpace": "Новая прастора",    "allSpaces": "Усе прасторы",    "doNotShowAgain": "Не паказваць зноў",    "wasDirectChatDisplayName": "Пусты чат (быў {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "user": "Карыстальнік",    "custom": "Карыстальніцкае",    "foregroundServiceRunning": "Гэта паведамленне з'явіцца, калі асноўныя службы запрацуюць.",    "screenSharingTitle": "падзяліцца экранам",    "screenSharingDetail": "Вы дзеліцеся экранам у JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Чаму гэта паведамленне нельга прачытаць?",    "noKeyForThisMessage": "Гэта можа здарыцца з-за таго, што паведамленне было даслана да таго, як вы увайшлі ў уліковы запіс на гэтай прыладзе.\n\nТаксама верагодна, што адпраўшчык заблакіраваў вашу прыладу ці ў вас хібы з інтэрнэтам.\n\nВы можаце чытаць гэта паведамленне з іншага сеансу? Тад дашліце паведамленне адтуль! Перайдзіце ў Налады > Прылады і пераканайцеся ў тым, што вашы прылады верыфікавалі адна адну. Калі вы адкрыеце пакой наступны раз і абодве сэсіі будуць запушчаны, ключы павінны сінхранізавацца аўтаматычна.\n\nВы не хаціце згубіць клбчы, калі будзеце выходзіць ці змяняць прылады? Пераканайцеся ў тым, што вы уключылі рэзервовае капіраванне чатаў у наладах.",    "newSpace": "Новая прастора",    "doNotShowAgain": "Не паказваць зноў",    "wasDirectChatDisplayName": "Пусты чат (быў {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
         }
     },
-    "newSpaceDescription": "Прасторы дазваляюць аб'ядноўваць вашы чаты і ствараць агульныя ці асобныя супольнасці.",    "encryptThisChat": "Шыфраваць гэты чат",    "disableEncryptionWarning": "У мэтах бяспекі, вы не можаце адклбчауь шыфраванне ў гэтым чаце, дзе яно было ўключана.",    "sorryThatsNotPossible": "Прабачце... Гэта немагчыма",    "deviceKeys": "Ключы прылад:",    "reopenChat": "Адкрыць чат зноў",    "noBackupWarning": "Увага! Без уключэння рэзервовага капіравання чатаў, вы страціце доступ да вашых зашыфраваных паведамленняў. Настойліва рэкамендуецца уключыць фукнцыю да таго, як выйсці.",    "noOtherDevicesFound": "Іншыя прылады не знойдзены",    "fileIsTooBigForServer": "Немагчыма даслаць! Сервер падтрымлівае файлы да {max}.",    "@fileIsTooBigForServer": {
+    "newSpaceDescription": "Прасторы дазваляюць аб'ядноўваць вашы чаты і ствараць агульныя ці асобныя супольнасці.",    "encryptThisChat": "Шыфраваць гэты чат",    "disableEncryptionWarning": "У мэтах бяспекі, вы не можаце адклбчауь шыфраванне ў гэтым чаце, дзе яно было ўключана.",    "sorryThatsNotPossible": "Прабачце... Гэта немагчыма",    "reopenChat": "Адкрыць чат зноў",    "noBackupWarning": "Увага! Без уключэння рэзервовага капіравання чатаў, вы страціце доступ да вашых зашыфраваных паведамленняў. Настойліва рэкамендуецца уключыць фукнцыю да таго, як выйсці.",    "noOtherDevicesFound": "Іншыя прылады не знойдзены",    "fileIsTooBigForServer": "Немагчыма даслаць! Сервер падтрымлівае файлы да {max}.",    "@fileIsTooBigForServer": {
         "type": "String",        "placeholders": {
             "max": {
                 "type": "String"            }
@@ -942,13 +884,7 @@
     "obtainingLocation": "Атрыманне месцазнаходжання…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
-    "offline": "Не ў сетцы",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "Ок",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "У сетцы",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "Рэзервовае капіраванне ключэй уключана",    "@onlineKeyBackupEnabled": {
@@ -969,7 +905,7 @@
     "oneClientLoggedOut": "Адзін з вашых кліентаў выйшаў",    "addAccount": "Дадаць уліковы запіс",    "editBundlesForAccount": "Змяніць пакеты для гэтага ўліковага запісу",    "addToBundle": "Дадаць у пакет",    "removeFromBundle": "Выдаліць з пакета",    "bundleName": "Назва пакета",    "openInMaps": "Адкрыць на картах",    "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
-    "link": "Спасылка",    "serverRequiresEmail": "Гэты сервер павінен спраўдзіць ваш email для рэгістрацыі.",    "or": "Ці",    "@or": {
+    "link": "Спасылка",    "or": "Ці",    "@or": {
         "type": "String",        "placeholders": {}
     },
     "participant": "Удзельнік",    "@participant": {
@@ -990,25 +926,13 @@
     "passwordRecoverySettings": "Налады скіду пароля",    "passwordRecovery": "Аднаўленне пароля",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Абраць выяву",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "Замацаваць",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "Прайграць {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "Калі ласка, выберыце код доступу",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Калі ласка, націсніце на спасылку ў лісце на email, каб працягнуць.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Калі ласка, увядзіце 4 лічбы ці пакіньце пустым, каб адключыць код-пароль.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "Калі ласка, увядзіце ваш пароль",    "@pleaseEnterYourPassword": {
@@ -1029,13 +953,7 @@
     "publicRooms": "Публічныя пакоі",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Правілы пушэй",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "Прычына",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Запіс",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedBy": "Адрэдагавана {username}",    "@redactedBy": {
@@ -1061,9 +979,6 @@
     "redactMessage": "Адрэдагаваць паведамленне",    "@redactMessage": {
         "type": "String",        "placeholders": {}
     },
-    "register": "Зарэгістравацца",    "@register": {
-        "type": "String",        "placeholders": {}
-    },
     "reject": "Адмовіць",    "@reject": {
         "type": "String",        "placeholders": {}
     },
@@ -1075,12 +990,6 @@
     },
     "removeAllOtherDevices": "Выдаліць усе іншыя прылады",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
-    },
-    "removedBy": "Выдалена {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
     },
     "unbanFromChat": "Разблакіраваць у чаце",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
@@ -1095,9 +1004,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Паведаміць пра паведамленне",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Запрасіць дазвол",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "Пакой быў абноўлены",    "@roomHasBeenUpgraded": {
@@ -1115,7 +1021,7 @@
     "security": "Бяспека",    "@security": {
         "type": "String",        "placeholders": {}
     },
-    "recoveryKey": "Ключ аднаўлення",    "send": "Даслаць",    "@send": {
+    "send": "Даслаць",    "@send": {
         "type": "String",        "placeholders": {}
     },
     "sendAMessage": "Даслаць паведамленне",    "@sendAMessage": {
@@ -1189,9 +1095,6 @@
     "tryToSendAgain": "Паспрабуйце даслаць зноў",    "@tryToSendAgain": {
         "type": "String",        "placeholders": {}
     },
-    "unavailable": "Недаступна",    "@unavailable": {
-        "type": "String",        "placeholders": {}
-    },
     "unbannedUser": "{username} разблакіраваў {targetName}",    "@unbannedUser": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1249,9 +1152,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Імя карыстальніка",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} даслаў падзею {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1261,9 +1161,6 @@
         }
     },
     "unverified": "Не спраўджана",    "verified": "Спраўджана",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "Спраўдзіць",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Пачаць спраўджванне",    "@verifyStart": {
@@ -1304,7 +1201,7 @@
                 "type": "String"            }
         }
     },
-    "knocking": "Грукацца",    "knockRestricted": "Грук абмежаваны",    "spaceMemberOfCanKnock": "Удзельнікі прасторы з {spaces} могуць грукацца",    "@spaceMemberOfCanKnock": {
+    "knocking": "Грукацца",    "spaceMemberOfCanKnock": "Удзельнікі прасторы з {spaces} могуць грукацца",    "@spaceMemberOfCanKnock": {
         "type": "String",        "placeholders": {
             "spaces": {
                 "type": "String"            }
@@ -1366,7 +1263,7 @@
                 "type": "String"            }
         }
     },
-    "transparent": "Празрысты",    "incomingMessages": "Уваходныя паведамленні",    "stickers": "Стыкеры",    "discover": "Даследаваць",    "commandHint_ignore": "Ігнараваць дадзены matrix ID",    "commandHint_unignore": "Перастаць ігнараваць дадзены matrix ID",    "unreadChatsInApp": "{appname}: {unread} непрачытаных чатаў",    "@unreadChatsInApp": {
+    "incomingMessages": "Уваходныя паведамленні",    "stickers": "Стыкеры",    "discover": "Даследаваць",    "commandHint_ignore": "Ігнараваць дадзены matrix ID",    "commandHint_unignore": "Перастаць ігнараваць дадзены matrix ID",    "unreadChatsInApp": "{appname}: {unread} непрачытаных чатаў",    "@unreadChatsInApp": {
         "type": "String",        "placeholders": {
             "appname": {
                 "type": "String"            },
@@ -1377,7 +1274,7 @@
     "noDatabaseEncryption": "Шыфраванне базы даных не падтрымліваецца гэтай платформай",    "thereAreCountUsersBlocked": "На гэты момант, {count} карыстальнікаў заблакіравана.",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "restricted": "Абмежавана",    "goToSpace": "Перайсці да прасторы: {space}",    "@goToSpace": {
+    "goToSpace": "Перайсці да прасторы: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
     "markAsUnread": "Адзначыць як непрачытанае",    "userLevel": "{level} - Карыстальнік",    "@userLevel": {
@@ -1404,7 +1301,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Спіс змен",    "sendCanceled": "Адпраўка скасавана",    "loginWithMatrixId": "Увайсці з Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Гэта не выглядае як дамашні сервер. Няслушны URL?",    "calculatingFileSize": "Вылічэнне памеру файла...",    "sendingAttachment": "Адпраўка прыкладання...",    "compressVideo": "Сцісканне відэа...",    "oneOfYourDevicesIsNotVerified": "Адна з вашых прылад не спраўджана",    "noticeChatBackupDeviceVerification": "Заўвага: Калі вы падключыце ўсе свае прылады да рэзервовага капіравання, яны аўтаматычна спраўдзяцца.",    "welcomeText": "Вітаначкі 👋 Гэта JuMiKK-Chat. Вы можаце ўвайсці на любы дамашні сервер, што сумяшчальны з https://matrix.org, а потым паразмаўляць з кім-небудзь. Гэта вялізная дэцэнтралізаваная сетка абмену паведамленнямі!",    "blur": "Размыццё:",    "opacity": "Празрыстасць:",    "setWallpaper": "Задаць шпалеры",    "notificationRuleMemberEvent": "Падзеі ўдзельніцтва",    "notificationRuleMemberEventDescription": "Спыніць усе паведамленні пра ўдзельніцтва.",    "notificationRuleIsUserMention": "Згадванні карыстальніка",    "notificationRuleIsUserMentionDescription": "Паведамляе, калі карыстальніка згадалі ў паведамленні.",    "notificationRuleContainsDisplayName": "Мае адлюстроўваемае імя",    "notificationRuleContainsDisplayNameDescription": "Паведамляе, калі паведамленне мае іх адлюстроўваемае імя.",    "notificationRuleIsRoomMention": "Згадванні пакою",    "notificationRuleIsRoomMentionDescription": "Паведамляе карыстальніка, калі згадваюць пакой.",    "notificationRuleRoomnotif": "Паведамленні пакою",    "notificationRuleRoomnotifDescription": "Паведамляе пра згадванні '@room'.",    "notificationRuleTombstone": "Помнік",    "notificationRuleTombstoneDescription": "Паведамляе пра дэактывацыю пакою.",    "notificationRuleReaction": "Рэакцыя",    "notificationRuleReactionDescription": "Адключыць усе паведамленні пра рэакцыі.",    "notificationRuleRoomServerAcl": "ACL сервера пакою",    "notificationRuleRoomServerAclDescription": "Адключыць паведамленні пра серверныя спісы кантролю пакою (ACL).",    "notificationRuleSuppressEdits": "Заглушыць змены",    "notificationRuleSuppressEditsDescription": "Заглушыць паведамленні пра адрэдагаваныя паведамленні.",    "notificationRuleCall": "Выклік",    "notificationRuleCallDescription": "Паведамляе пра выклікі.",    "notificationRuleEncryptedRoomOneToOne": "Шыфраваны пакой One-to-One",    "notificationRuleEncryptedRoomOneToOneDescription": "Паведамляе пра паведамленні ў шыфраваных one-to-one пакоях.",    "notificationRuleRoomOneToOne": "Пакой One-to-One",    "notificationRuleRoomOneToOneDescription": "Паведамляе пра паведамленні ў пакоях one-to-one.",    "notificationRuleMessage": "Паведамленне",    "notificationRuleMessageDescription": "Паведамляе пра звычайныя паведамленні.",    "notificationRuleEncrypted": "Зашыфравана",    "notificationRuleEncryptedDescription": "Паведамляе пра паведамленні ў зашыфраваных пакоях.",    "notificationRuleJitsi": "Jitsi",    "notificationRuleJitsiDescription": "Паведамляе пра падзеі віджэту Jitsi.",    "notificationRuleServerAcl": "Заглушыць серверныя падзеі ACL",    "notificationRuleServerAclDescription": "Заглушыць паведамленні пра серверныя падзеі ACL.",    "unknownPushRule": "Невядомае правіла пуша '{rule}'",    "@unknownPushRule": {
+    "changelog": "Спіс змен",    "sendCanceled": "Адпраўка скасавана",    "loginWithMatrixId": "Увайсці з Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Гэта не выглядае як дамашні сервер. Няслушны URL?",    "calculatingFileSize": "Вылічэнне памеру файла...",    "sendingAttachment": "Адпраўка прыкладання...",    "oneOfYourDevicesIsNotVerified": "Адна з вашых прылад не спраўджана",    "noticeChatBackupDeviceVerification": "Заўвага: Калі вы падключыце ўсе свае прылады да рэзервовага капіравання, яны аўтаматычна спраўдзяцца.",    "blur": "Размыццё:",    "opacity": "Празрыстасць:",    "setWallpaper": "Задаць шпалеры",    "notificationRuleMemberEvent": "Падзеі ўдзельніцтва",    "notificationRuleMemberEventDescription": "Спыніць усе паведамленні пра ўдзельніцтва.",    "notificationRuleIsUserMention": "Згадванні карыстальніка",    "notificationRuleIsUserMentionDescription": "Паведамляе, калі карыстальніка згадалі ў паведамленні.",    "notificationRuleContainsDisplayName": "Мае адлюстроўваемае імя",    "notificationRuleContainsDisplayNameDescription": "Паведамляе, калі паведамленне мае іх адлюстроўваемае імя.",    "notificationRuleIsRoomMention": "Згадванні пакою",    "notificationRuleIsRoomMentionDescription": "Паведамляе карыстальніка, калі згадваюць пакой.",    "notificationRuleRoomnotif": "Паведамленні пакою",    "notificationRuleRoomnotifDescription": "Паведамляе пра згадванні '@room'.",    "notificationRuleTombstone": "Помнік",    "notificationRuleTombstoneDescription": "Паведамляе пра дэактывацыю пакою.",    "notificationRuleReaction": "Рэакцыя",    "notificationRuleReactionDescription": "Адключыць усе паведамленні пра рэакцыі.",    "notificationRuleRoomServerAcl": "ACL сервера пакою",    "notificationRuleRoomServerAclDescription": "Адключыць паведамленні пра серверныя спісы кантролю пакою (ACL).",    "notificationRuleSuppressEdits": "Заглушыць змены",    "notificationRuleSuppressEditsDescription": "Заглушыць паведамленні пра адрэдагаваныя паведамленні.",    "notificationRuleCall": "Выклік",    "notificationRuleCallDescription": "Паведамляе пра выклікі.",    "notificationRuleEncryptedRoomOneToOne": "Шыфраваны пакой One-to-One",    "notificationRuleEncryptedRoomOneToOneDescription": "Паведамляе пра паведамленні ў шыфраваных one-to-one пакоях.",    "notificationRuleRoomOneToOne": "Пакой One-to-One",    "notificationRuleRoomOneToOneDescription": "Паведамляе пра паведамленні ў пакоях one-to-one.",    "notificationRuleMessage": "Паведамленне",    "notificationRuleMessageDescription": "Паведамляе пра звычайныя паведамленні.",    "notificationRuleEncrypted": "Зашыфравана",    "notificationRuleEncryptedDescription": "Паведамляе пра паведамленні ў зашыфраваных пакоях.",    "notificationRuleJitsi": "Jitsi",    "notificationRuleJitsiDescription": "Паведамляе пра падзеі віджэту Jitsi.",    "notificationRuleServerAcl": "Заглушыць серверныя падзеі ACL",    "notificationRuleServerAclDescription": "Заглушыць паведамленні пра серверныя падзеі ACL.",    "unknownPushRule": "Невядомае правіла пуша '{rule}'",    "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }
@@ -1430,13 +1327,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} пачаў апытанне.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Апытанне",    "startPoll": "Пачаць апытанне",    "endPoll": "Скончыць апытанне",    "answersVisible": "Адказы бачны",    "pollQuestion": "Пытанне апытання",    "answerOption": "Варыянт адказу",    "addAnswerOption": "Дадаць варыянт адказу",    "allowMultipleAnswers": "Дазволіць некалькі адказаў",    "pollHasBeenEnded": "Апытанне было скончана",    "countVotes": "{count, plural, =1{Адзін голас} other{{count} галасы(-оў)}}",    "@countVotes": {
+    "startPoll": "Пачаць апытанне",    "endPoll": "Скончыць апытанне",    "answersVisible": "Адказы бачны",    "pollQuestion": "Пытанне апытання",    "answerOption": "Варыянт адказу",    "addAnswerOption": "Дадаць варыянт адказу",    "allowMultipleAnswers": "Дазволіць некалькі адказаў",    "pollHasBeenEnded": "Апытанне было скончана",    "countVotes": "{count, plural, =1{Адзін голас} other{{count} галасы(-оў)}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }

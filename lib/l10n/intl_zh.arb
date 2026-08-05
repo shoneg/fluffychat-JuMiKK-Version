@@ -105,22 +105,6 @@
                 "type": "String"            }
         }
     },
-    "changedTheChatDescriptionTo": "{username} 将聊天描述更改为：'{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} 将聊天名称更改为：'{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
-                "type": "String"            }
-        }
-    },
     "changedTheChatPermissions": "{username} 更改了聊天权限",    "@changedTheChatPermissions": {
         "type": "String",        "placeholders": {
             "username": {
@@ -341,12 +325,6 @@
     "deleteMessage": "删除消息",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "设备",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "设备 ID",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "设备",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -378,9 +356,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "无效的表情快捷码！",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "聊天室的表情包",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "表情设置",    "@emoteSettings": {
@@ -417,12 +392,6 @@
         }
     },
     "enterAnEmailAddress": "输入一个电子邮件地址",    "@enterAnEmailAddress": {
-        "type": "String",        "placeholders": {}
-    },
-    "fileName": "文件名",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
         "type": "String",        "placeholders": {}
     },
     "fontSize": "字体大小",    "@fontSize": {
@@ -469,13 +438,7 @@
     "help": "帮助",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "隐藏已删除的事件",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "隐藏未知的事件",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "ID",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignore": "忽略",    "@ignore": {
@@ -603,9 +566,6 @@
     "muteChat": "静音聊天",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "请注意当前你需要 Pantalaimon 以使用端到端加密功能。",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "新的聊天",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -633,9 +593,6 @@
     "noGoogleServicesWarning": "看起来你手机上没有 Firebase Cloud Messaging。如果仍希望接收 JuMiKK-Chat 的推送通知，推荐安装 ntfy。借助 ntfy 或另一个 Unified Push 程序，你可以以一种数据安全的方式接收推送通知。你可以从 PlayStore 或 F-Droid 商店下载 ntfy。",    "@noGoogleServicesWarning": {
         "type": "String",        "placeholders": {}
     },
-    "none": "无",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "你尚未添加恢复密码的方法。",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
@@ -654,13 +611,7 @@
                 "type": "int"            }
         }
     },
-    "offline": "离线",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "确认",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "在线",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "在线密钥备份已启用",    "@onlineKeyBackupEnabled": {
@@ -699,25 +650,13 @@
     "passwordRecovery": "密码恢复",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "选择图像",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "置顶",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "播放 {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "请选择一个密码",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "请点击电子邮件中的链接，然后继续。",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "请输入 4 位数字或留空以停用应用锁。",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "请输入你的密码",    "@pleaseEnterYourPassword": {
@@ -738,13 +677,7 @@
     "publicRooms": "公开聊天室",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "推送规则",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "原因",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "录制",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedAnEvent": "{username} 删除了一个事件",    "@redactedAnEvent": {
@@ -754,9 +687,6 @@
         }
     },
     "redactMessage": "删除消息",    "@redactMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "注册",    "@register": {
         "type": "String",        "placeholders": {}
     },
     "reject": "拒绝",    "@reject": {
@@ -774,12 +704,6 @@
     "removeAllOtherDevices": "移除所有其它设备",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "被 {username} 移除",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "从聊天中解封",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
@@ -793,9 +717,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "举报信息",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "请求权限",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "聊天室已升级",    "@roomHasBeenUpgraded": {
@@ -890,9 +811,6 @@
                 "type": "String"            }
         }
     },
-    "showPassword": "显示密码",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "skip": "跳过",    "@skip": {
         "type": "String",        "placeholders": {}
     },
@@ -926,16 +844,10 @@
     "theyMatch": "它们匹配",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "tooManyRequestsWarning": "请求过多。请稍后再试！",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "尝试重新发送",    "@tryToSendAgain": {
-        "type": "String",        "placeholders": {}
-    },
-    "unavailable": "不可用",    "@unavailable": {
         "type": "String",        "placeholders": {}
     },
     "unbannedUser": "{username} 解封了 {targetName}",    "@unbannedUser": {
@@ -995,9 +907,6 @@
                 "type": "String"            }
         }
     },
-    "username": "用户名",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} 发送了一个 {type} 事件",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1007,9 +916,6 @@
         }
     },
     "verified": "已验证",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "验证",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "开始验证",    "@verifyStart": {
@@ -1081,9 +987,6 @@
     "yourPublicKey": "你的公钥",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "所有聊天",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "addToSpace": "添加到空间",    "obtainingLocation": "获取位置中…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
@@ -1131,7 +1034,7 @@
     "openInMaps": "在地图中打开",    "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
-    "sendOnEnter": "按 Enter 键发送",    "scanQrCode": "扫描二维码",    "homeserver": "服务器",    "oneClientLoggedOut": "你的一个客户端已登出",    "removeFromBundle": "从此集合中移除",    "unverified": "未经验证",    "repeatPassword": "重复输入密码",    "addAccount": "添加账户",    "editBundlesForAccount": "编辑此账户的集合",    "addToBundle": "添加到集合",    "bundleName": "集合名称",    "link": "链接",    "serverRequiresEmail": "此服务器需要验证你的电子邮件地址以进行注册。",    "messageType": "消息类型",    "sender": "发送者",    "openGallery": "打开图库",    "messageInfo": "消息信息",    "time": "时间",    "removeFromSpace": "从此空间中移除",    "start": "开始",    "commandHint_discardsession": "丢弃会话",    "@commandHint_discardsession": {
+    "sendOnEnter": "按 Enter 键发送",    "scanQrCode": "扫描二维码",    "oneClientLoggedOut": "你的一个客户端已登出",    "removeFromBundle": "从此集合中移除",    "unverified": "未经验证",    "repeatPassword": "重复输入密码",    "addAccount": "添加账户",    "editBundlesForAccount": "编辑此账户的集合",    "addToBundle": "添加到集合",    "bundleName": "集合名称",    "link": "链接",    "sender": "发送者",    "openGallery": "打开图库",    "messageInfo": "消息信息",    "time": "时间",    "removeFromSpace": "从此空间中移除",    "commandHint_discardsession": "丢弃会话",    "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_dm": "创建私聊\n使用 --no-encryption 选项来禁用加密",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
@@ -1139,7 +1042,7 @@
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_create": "创建空的群聊\n使用 --no-encryption 选项来禁用加密",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
-    "dismiss": "忽略",    "markAsRead": "标为已读",    "reportUser": "举报用户",    "reactedWith": "{sender} 回应了 {reaction}",    "@reactedWith": {
+    "markAsRead": "标为已读",    "reportUser": "举报用户",    "reactedWith": "{sender} 回应了 {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1189,7 +1092,7 @@
                 "type": "String"            }
         }
     },
-    "storeInAppleKeyChain": "存储在 Apple KeyChain 中",    "recoveryKey": "恢复密钥",    "storeInAndroidKeystore": "存储在 Android KeyStore 中",    "storeSecurlyOnThisDevice": "安全地存储在此设备上",    "users": "用户",    "countFiles": "{count} 个文件",    "@countFiles": {
+    "storeInAppleKeyChain": "存储在 Apple KeyChain 中",    "storeInAndroidKeystore": "存储在 Android KeyStore 中",    "storeSecurlyOnThisDevice": "安全地存储在此设备上",    "users": "用户",    "countFiles": "{count} 个文件",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1201,7 +1104,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasgroup": "标记为群组",    "commandHint_markasdm": "将给定的 Matrix ID 标为私信聊天室",    "whyIsThisMessageEncrypted": "为什么此消息不可读？",    "noKeyForThisMessage": "如果消息是在你在此设备上登录账户前发送的，就可能发生这种情况。\n\n也有可能是发送者屏蔽了你的设备或网络连接出了问题。\n\n你能在另一个会话中读取消息吗？如果是的话，你可以从它那里传递信息！点击设置 > 设备，并确保你的设备已经相互验证。当你下次打开聊天室，且两个会话都在前台，密钥就会自动传输。\n\n你不想在退出登录或切换设备时丢失密钥？请确保在设置中启用了聊天备份。",    "newGroup": "新群组",    "newSpace": "新的空间",    "allSpaces": "所有空间",    "foregroundServiceRunning": "此通知在前台服务运行时出现。",    "screenSharingTitle": "屏幕共享",    "screenSharingDetail": "你正在 JuMiKK-Chat 中共享屏幕",    "doNotShowAgain": "不再显示",    "googlyEyesContent": "{senderName} 向你发送了“大眼”表情",    "@googlyEyesContent": {
+    "commandHint_markasgroup": "标记为群组",    "commandHint_markasdm": "将给定的 Matrix ID 标为私信聊天室",    "whyIsThisMessageEncrypted": "为什么此消息不可读？",    "noKeyForThisMessage": "如果消息是在你在此设备上登录账户前发送的，就可能发生这种情况。\n\n也有可能是发送者屏蔽了你的设备或网络连接出了问题。\n\n你能在另一个会话中读取消息吗？如果是的话，你可以从它那里传递信息！点击设置 > 设备，并确保你的设备已经相互验证。当你下次打开聊天室，且两个会话都在前台，密钥就会自动传输。\n\n你不想在退出登录或切换设备时丢失密钥？请确保在设置中启用了聊天备份。",    "newSpace": "新的空间",    "foregroundServiceRunning": "此通知在前台服务运行时出现。",    "screenSharingTitle": "屏幕共享",    "screenSharingDetail": "你正在 JuMiKK-Chat 中共享屏幕",    "doNotShowAgain": "不再显示",    "googlyEyesContent": "{senderName} 向你发送了“大眼”表情",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1225,7 +1128,7 @@
                 "type": "String"            }
         }
     },
-    "newSpaceDescription": "空间让你可以整合聊天并建立私人或公共社区。",    "encryptThisChat": "加密此聊天",    "disableEncryptionWarning": "出于安全考虑 ，你不能在之前已启用加密的聊天中禁用加密。",    "sorryThatsNotPossible": "非常抱歉……这是做不到的",    "deviceKeys": "设备密钥：",    "report": "报错",    "fileIsTooBigForServer": "无法发送！服务器只支持最大 {max} 的文件。",    "noOtherDevicesFound": "未找到其它设备",    "jumpToLastReadMessage": "跳转到上次已读的消息",    "readUpToHere": "读到此处",    "jump": "跳转",    "openLinkInBrowser": "在浏览器中打开链接",    "fileHasBeenSavedAt": "文件已保存在 {path}",    "@fileHasBeenSavedAt": {
+    "newSpaceDescription": "空间让你可以整合聊天并建立私人或公共社区。",    "encryptThisChat": "加密此聊天",    "disableEncryptionWarning": "出于安全考虑 ，你不能在之前已启用加密的聊天中禁用加密。",    "sorryThatsNotPossible": "非常抱歉……这是做不到的",    "report": "报错",    "fileIsTooBigForServer": "无法发送！服务器只支持最大 {max} 的文件。",    "noOtherDevicesFound": "未找到其它设备",    "jumpToLastReadMessage": "跳转到上次已读的消息",    "readUpToHere": "读到此处",    "jump": "跳转",    "openLinkInBrowser": "在浏览器中打开链接",    "fileHasBeenSavedAt": "文件已保存在 {path}",    "@fileHasBeenSavedAt": {
         "type": "String",        "placeholders": {
             "path": {
                 "type": "String"            }
@@ -1318,7 +1221,7 @@
                 "type": "String"            }
         }
     },
-    "transparent": "透明",    "incomingMessages": "传入消息",    "stickers": "贴纸",    "discover": "发现",    "commandHint_ignore": "忽略给定的 matrix ID",    "commandHint_unignore": "取消忽略给定的 matrix ID",    "unreadChatsInApp": "{appname}: {unread} 未读聊天",    "@unreadChatsInApp": {
+    "incomingMessages": "传入消息",    "stickers": "贴纸",    "discover": "发现",    "commandHint_ignore": "忽略给定的 matrix ID",    "commandHint_unignore": "取消忽略给定的 matrix ID",    "unreadChatsInApp": "{appname}: {unread} 未读聊天",    "@unreadChatsInApp": {
         "type": "String",        "placeholders": {
             "appname": {
                 "type": "String"            },
@@ -1341,7 +1244,7 @@
                 "type": "String"            }
         }
     },
-    "knockRestricted": "“请求加入”请求受限",    "restricted": "受限",    "swipeRightToLeftToReply": "从右向左滑动进行回复",    "noMoreChatsFound": "找不到更多聊天…",    "space": "空间",    "spaces": "空间",    "goToSpace": "转到空间：{space}",    "@goToSpace": {
+    "swipeRightToLeftToReply": "从右向左滑动进行回复",    "noMoreChatsFound": "找不到更多聊天…",    "space": "空间",    "goToSpace": "转到空间：{space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
     "markAsUnread": "标为未读",    "unread": "未读",    "userLevel": "{level} - 用户",    "@userLevel": {
@@ -1362,25 +1265,19 @@
                 "type": "int"            }
         }
     },
-    "inviteOtherUsers": "邀请其他用户到这个聊天",    "changeTheChatPermissions": "更改聊天权限",    "changeTheVisibilityOfChatHistory": "更改聊天历史的可见性",    "changeTheCanonicalRoomAlias": "更改主公共聊天地址",    "sendRoomNotifications": "发送通知聊天室所有人的通知",    "changeTheDescriptionOfTheGroup": "更改聊天描述",    "changeGeneralChatSettings": "更改常规聊天设置",    "invitedBy": "📩 邀请人 {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    "chatPermissionsDescription": "定义此聊天中哪个权限等级对特定操作是必需的。权限等级 0、50 和 100 通常代表用户、主持人和管理员，但你可以自定义任何等级。",    "changelog": "更新记录",    "updateInstalled": "🎉 已安装更新 {version} ！",    "@updateInstalled": {
+    "inviteOtherUsers": "邀请其他用户到这个聊天",    "changeTheChatPermissions": "更改聊天权限",    "changeTheVisibilityOfChatHistory": "更改聊天历史的可见性",    "changeTheCanonicalRoomAlias": "更改主公共聊天地址",    "sendRoomNotifications": "发送通知聊天室所有人的通知",    "changeTheDescriptionOfTheGroup": "更改聊天描述",    "changeGeneralChatSettings": "更改常规聊天设置",    "chatPermissionsDescription": "定义此聊天中哪个权限等级对特定操作是必需的。权限等级 0、50 和 100 通常代表用户、主持人和管理员，但你可以自定义任何等级。",    "changelog": "更新记录",    "updateInstalled": "🎉 已安装更新 {version} ！",    "@updateInstalled": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    "sendCanceled": "发送被取消",    "noChatsFoundHere": "此处尚未找到聊天。使用下方按钮 ⤵️ 开始和某人的新聊天",    "loginWithMatrixId": "使用 Matrix-ID 登录",    "doesNotSeemToBeAValidHomeserver": "似乎不是兼容的主服务器。URL 不正确？",    "sendingAttachment": "发送附件中…",    "calculatingFileSize": "计算文件尺寸中…",    "compressVideo": "压缩视频中…",    "oneOfYourDevicesIsNotVerified": "您设备中的一台未验证",    "noticeChatBackupDeviceVerification": "注意：当你连接所有设备到聊天备份时，这些设备将被自动验证。",    "welcomeText": "你好呀 👋 欢迎来到 JuMiKK-Chat。你可以登录任意兼容 https://matrix.org 的 homeserver，然后和任何人聊天。这是个巨大的去中心化消息网络！",    "continueText": "继续",    "blur": "模糊：",    "opacity": "不透明：",    "setWallpaper": "设置壁纸",    "manageAccount": "管理账户",    "aboutHomeserver": "关于 {homeserver}",    "@aboutHomeserver": {
+    "sendCanceled": "发送被取消",    "noChatsFoundHere": "此处尚未找到聊天。使用下方按钮 ⤵️ 开始和某人的新聊天",    "loginWithMatrixId": "使用 Matrix-ID 登录",    "doesNotSeemToBeAValidHomeserver": "似乎不是兼容的主服务器。URL 不正确？",    "sendingAttachment": "发送附件中…",    "calculatingFileSize": "计算文件尺寸中…",    "oneOfYourDevicesIsNotVerified": "您设备中的一台未验证",    "noticeChatBackupDeviceVerification": "注意：当你连接所有设备到聊天备份时，这些设备将被自动验证。",    "continueText": "继续",    "blur": "模糊：",    "opacity": "不透明：",    "setWallpaper": "设置壁纸",    "manageAccount": "管理账户",    "aboutHomeserver": "关于 {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
         }
     },
-    "version": "版本",    "noContactInformationProvided": "服务器未提供任何有效的联系信息",    "contactServerAdmin": "联系服务器管理员",    "name": "名称",    "contactServerSecurity": "联系服务器安全管理",    "supportPage": "支持页面",    "serverInformation": "服务器信息：",    "website": "网站",    "italicText": "文件倾斜",    "strikeThrough": "删除线",    "pleaseFillOut": "请填写",    "addLink": "添加链接",    "boldText": "文本加粗",    "invalidUrl": "无效 url",    "unableToJoinChat": "无法加入聊天。可能其他方面已经关闭了对话。",    "sendImages": "发送 {count} 张图片",    "@sendImages": {
+    "version": "版本",    "noContactInformationProvided": "服务器未提供任何有效的联系信息",    "contactServerAdmin": "联系服务器管理员",    "name": "名称",    "contactServerSecurity": "联系服务器安全管理",    "supportPage": "支持页面",    "serverInformation": "服务器信息：",    "website": "网站",    "italicText": "文本倾斜",    "strikeThrough": "删除线",    "pleaseFillOut": "请填写",    "addLink": "添加链接",    "boldText": "文本加粗",    "invalidUrl": "无效 url",    "unableToJoinChat": "无法加入聊天。可能其他方面已经关闭了对话。",    "sendImages": "发送 {count} 张图片",    "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1404,7 +1301,7 @@
                 "type": "String"            }
         }
     },
-    "crossVerifiedDevices": "交叉验证设备",    "shareKeysWithDescription": "选择应当信任哪些设备允许它们读取你在加密聊天中的消息？",    "shareKeysWith": "与哪些设备分享密钥…",    "allDevices": "所有设备",    "crossVerifiedDevicesIfEnabled": "交叉验证设备（如启用）",    "verifiedDevicesOnly": "仅已验证设备",    "optionalMessage": "（可选）消息…",    "takeAPhoto": "拍照",    "recordAVideo": "录像",    "notSupportedOnThisDevice": "此设备上不受支持",    "enterNewChat": "进入新聊天",    "commandHint_roomupgrade": "将此聊天室升级到给定的聊天室版本",    "ignoreUser": "忽略用户",    "approve": "批准",    "youHaveKnocked": "你已请求加入",    "pleaseWaitUntilInvited": "在来自该聊天室的某人邀请你之前请等待。",    "countInvited": "邀请了 {count}",    "@countInvited": {
+    "crossVerifiedDevices": "交叉验证设备",    "shareKeysWithDescription": "选择应当信任哪些设备允许它们读取你在加密聊天中的消息？",    "shareKeysWith": "与哪些设备分享密钥…",    "allDevices": "所有设备",    "crossVerifiedDevicesIfEnabled": "交叉验证设备（如启用）",    "verifiedDevicesOnly": "仅已验证设备",    "optionalMessage": "（可选）消息…",    "takeAPhoto": "拍照",    "recordAVideo": "录像",    "notSupportedOnThisDevice": "此设备上不受支持",    "enterNewChat": "进入新聊天",    "commandHint_roomupgrade": "将此聊天室升级到给定的聊天室版本",    "approve": "批准",    "youHaveKnocked": "你已请求加入",    "pleaseWaitUntilInvited": "在来自该聊天室的某人邀请你之前请等待。",    "countInvited": "邀请了 {count}",    "@countInvited": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1436,13 +1333,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} 启动了投票。",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "投票",    "startPoll": "启动投票",    "endPoll": "结束投票",    "answersVisible": "结果可见",    "pollQuestion": "投票问题",    "answerOption": "结果选项",    "addAnswerOption": "添加结果选项",    "allowMultipleAnswers": "允许多个结果",    "pollHasBeenEnded": "投票已结束",    "countVotes": "{count, plural, =1{票} other{{count} 票}}",    "@countVotes": {
+    "startPoll": "启动投票",    "endPoll": "结束投票",    "answersVisible": "投票结果可见",    "pollQuestion": "投票主题",    "answerOption": "选项",    "addAnswerOption": "添加选项",    "allowMultipleAnswers": "允许多选投票选项",    "pollHasBeenEnded": "投票已结束",    "countVotes": "{count, plural, =1{票} other{{count} 票}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1477,7 +1368,7 @@
                 "type": "int"            }
         }
     },
-    "check": "检查",    "encryptedMessage": "加密的消息",    "unencryptedMessage": "未加密的消息",    "allow": "允许",    "publicKey": "公钥：{key}",    "@publicKey": {
+    "encryptedMessage": "加密的消息",    "unencryptedMessage": "未加密的消息",    "publicKey": "公钥：{key}",    "@publicKey": {
         "type": "String",        "placeholders": {
             "key": {
                 "type": "String"            }
@@ -1564,4 +1455,10 @@
                 "type": "String"            }
         }
     },
-    "messageCanOnlyBeReadByUser": "你的消息是端到端加密的，只能由该用户读取：",    "messageCanOnlyBeReadByUsers": "你的消息是端到端加密的，只能由这些用户读取：",    "today": "今日",    "sending": "发送中",    "generatingThumbnail": "正在生成缩略图",    "encrypting": "加密中",    "uploading": "上传中",    "edited": "(已编辑)",    "couldNotBeSent": "无法发送",    "yesterday": "昨天"}
+    "messageCanOnlyBeReadByUser": "你的消息是端到端加密的，只能由该用户读取：",    "messageCanOnlyBeReadByUsers": "你的消息是端到端加密的，只能由这些用户读取：",    "today": "今日",    "sending": "发送中",    "generatingThumbnail": "正在生成缩略图",    "encrypting": "加密中",    "uploading": "上传中",    "edited": "(已编辑)",    "couldNotBeSent": "无法发送",    "yesterday": "昨天",    "resetRecoveryKey": "重置恢复密钥",    "pleaseEnter6Digits": "请输入 6 位数字来启用应用锁。",    "disableAppLock": "禁用应用锁",    "disableAppLockAreYouSure": "确定要禁用应用锁吗？",    "enableBiometrics": "启用生物识别身份认证",    "disableBiometrics": "禁用生物识别身份认证",    "biometricsDescription": "借助生物识别身份认证，你可以用脸或指纹解锁应用。该功能是否可用取决于你的设备。",    "useAppLock": "使用应用锁",    "unlockWithBiometrics": "用生物识别身份认证解锁",    "resetPin": "重置 pin 码",    "forwardCountMessages": "转发 {count, plural, =1{条消息} other{{count} 条消息}}？",    "@forwardCountMessages": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    }
+}

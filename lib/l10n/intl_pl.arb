@@ -1,11 +1,11 @@
 {
-    "@@locale": "pl",    "@@last_modified": "2021-08-14 12:41:09.943634",    "about": "O aplikacji",    "@about": {
+    "@@locale": "pl",    "@@last_modified": "2021-08-14 12:41:09.943634",    "about": "O",    "@about": {
         "type": "String",        "placeholders": {}
     },
     "accept": "Akceptuj",    "@accept": {
         "type": "String",        "placeholders": {}
     },
-    "acceptedTheInvitation": "👍 {username} zaakceptował/-a zaproszenie",    "@acceptedTheInvitation": {
+    "acceptedTheInvitation": "👍 {username} zaakceptował(a) zaproszenie",    "@acceptedTheInvitation": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -14,7 +14,7 @@
     "account": "Konto",    "@account": {
         "type": "String",        "placeholders": {}
     },
-    "activatedEndToEndEncryption": "🔐 {username} aktywował/-a szyfrowanie od końca do końca",    "@activatedEndToEndEncryption": {
+    "activatedEndToEndEncryption": "🔐 {username} aktywował(a) szyfrowanie od końca do końca",    "@activatedEndToEndEncryption": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -99,29 +99,13 @@
                 "type": "String"            }
         }
     },
-    "changedTheChatDescriptionTo": "{username} zmienił/-a opis czatu na '{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} zmienił/-a nazwę czatu na '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatPermissions": "{username} zmienił/-a uprawnienia w czacie",    "@changedTheChatPermissions": {
+    "changedTheChatPermissions": "{username} zmienił(a) uprawnienia w czacie",    "@changedTheChatPermissions": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheDisplaynameTo": "{username} zmienił/-a swoją nazwę wyświetlaną na '{displayname}'",    "@changedTheDisplaynameTo": {
+    "changedTheDisplaynameTo": "{username} zmienił(a) swoją nazwę wyświetlaną na '{displayname}'",    "@changedTheDisplaynameTo": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -129,27 +113,13 @@
                 "type": "String"            }
         }
     },
-    "changedTheGuestAccessRules": "{username} zmienił/-a zasady dostępu dla gości",    "@changedTheGuestAccessRules": {
+    "changedTheGuestAccessRules": "{username} zmienił(a) zasady dostępu dla gości",    "@changedTheGuestAccessRules": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheGuestAccessRulesTo": "{username} zmienił/-a zasady dostępu dla gości na {rules}",    "@changedTheGuestAccessRulesTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "rules": {
-                "type": "String"            }
-        }
-    },
-    "changedTheHistoryVisibility": "{username} zmienił/-a widoczność historii",    "@changedTheHistoryVisibility": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "changedTheHistoryVisibilityTo": "{username} zmienił/-a widoczność historii na {rules}",    "@changedTheHistoryVisibilityTo": {
+    "changedTheGuestAccessRulesTo": "{username} zmienił(a) zasady dostępu dla gości na {rules}",    "@changedTheGuestAccessRulesTo": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -157,13 +127,27 @@
                 "type": "String"            }
         }
     },
-    "changedTheJoinRules": "{username} zmienił/-a zasady wejścia",    "@changedTheJoinRules": {
+    "changedTheHistoryVisibility": "{username} zmienił(a) widoczność historii",    "@changedTheHistoryVisibility": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheJoinRulesTo": "{username} zmienił/-a zasady wejścia na {joinRules}",    "@changedTheJoinRulesTo": {
+    "changedTheHistoryVisibilityTo": "{username} zmienił(a) widoczność historii na {rules}",    "@changedTheHistoryVisibilityTo": {
+        "type": "String",        "placeholders": {
+            "username": {
+                "type": "String"            },
+            "rules": {
+                "type": "String"            }
+        }
+    },
+    "changedTheJoinRules": "{username} zmienił(a) zasady wejścia",    "@changedTheJoinRules": {
+        "type": "String",        "placeholders": {
+            "username": {
+                "type": "String"            }
+        }
+    },
+    "changedTheJoinRulesTo": "{username} zmienił(a) zasady wejścia na {joinRules}",    "@changedTheJoinRulesTo": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -171,19 +155,19 @@
                 "type": "String"            }
         }
     },
-    "changedTheProfileAvatar": "{username} zmienił/-a zdjęcie profilowe",    "@changedTheProfileAvatar": {
+    "changedTheProfileAvatar": "{username} zmienił(a) zdjęcie profilowe",    "@changedTheProfileAvatar": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheRoomAliases": "{username} zmienił/-a alias pokoju",    "@changedTheRoomAliases": {
+    "changedTheRoomAliases": "{username} zmienił(a) alias pokoju",    "@changedTheRoomAliases": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
     },
-    "changedTheRoomInvitationLink": "{username} zmienił/-a link z zaproszeniem do pokoju",    "@changedTheRoomInvitationLink": {
+    "changedTheRoomInvitationLink": "{username} zmienił(a) link z zaproszeniem do pokoju",    "@changedTheRoomInvitationLink": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -323,12 +307,6 @@
     "deleteMessage": "Usuń wiadomość",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Urządzenie",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "Identyfikator urządzenia",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Urządzenia",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -354,9 +332,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "Nieprawidłowy kod emotikonu!",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Paczki emotikonów dla pokoju",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Ustawienia emotikonów",    "@emoteSettings": {
@@ -390,12 +365,6 @@
         }
     },
     "enterAnEmailAddress": "Wpisz adres e-mail",    "@enterAnEmailAddress": {
-        "type": "String",        "placeholders": {}
-    },
-    "fileName": "Nazwa pliku",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
         "type": "String",        "placeholders": {}
     },
     "forward": "Przekaż",    "@forward": {
@@ -436,13 +405,7 @@
     "help": "Pomoc",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Ukryj informacje o usuniętych zdarzeniach",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Ukryj nieznane wdarzenia",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "Identyfikator",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignoredUsers": "Ignorowani użytkownicy",    "@ignoredUsers": {
@@ -543,7 +506,7 @@
     "loadMore": "Załaduj więcej…",    "@loadMore": {
         "type": "String",        "placeholders": {}
     },
-    "login": "Login",    "@login": {
+    "login": "Zaloguj się",    "@login": {
         "type": "String",        "placeholders": {}
     },
     "logInTo": "Zaloguj się do {homeserver}",    "@logInTo": {
@@ -562,9 +525,6 @@
         "type": "String",        "placeholders": {}
     },
     "muteChat": "Wycisz czat",    "@muteChat": {
-        "type": "String",        "placeholders": {}
-    },
-    "needPantalaimonWarning": "Należy pamiętać, że Pantalaimon wymaga na razie szyfrowania od końca do końca.",    "@needPantalaimonWarning": {
         "type": "String",        "placeholders": {}
     },
     "newChat": "Nowa rozmowa",    "@newChat": {
@@ -586,9 +546,6 @@
         "type": "String",        "placeholders": {}
     },
     "noGoogleServicesWarning": "Wygląda na to, że Twoje urządzenie nie obsługuje Firebase Cloud Messaging. Aby wciąż otrzymywać powiadomienia push, zalecamy istalację ntfy. Używając ntfy lub inengo zunifikowanego dostawcy powiadomień push, możesz bezpiecznie otrzymywać takowe powiadomienia. Ntfy można pobrać ze sklepu Google Play Store lub z F-Droid.",    "@noGoogleServicesWarning": {
-        "type": "String",        "placeholders": {}
-    },
-    "none": "Brak",    "@none": {
         "type": "String",        "placeholders": {}
     },
     "noPasswordRecoveryDescription": "Nie dodałeś/-aś jeszcze sposobu odzyskiwania swojego hasła.",    "@noPasswordRecoveryDescription": {
@@ -621,12 +578,6 @@
     "pin": "Przypnij",    "@pin": {
         "type": "String",        "placeholders": {}
     },
-    "play": "Otwórz {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
-    },
     "pleaseEnterYourPassword": "Wprowadź swoje hasło",    "@pleaseEnterYourPassword": {
         "type": "String",        "placeholders": {}
     },
@@ -639,20 +590,11 @@
     "publicRooms": "Publiczne pokoje",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Reguły push",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Nagranie",    "@recording": {
-        "type": "String",        "placeholders": {}
-    },
     "redactedAnEvent": "{username} usunął/-ęła zdarzenie",    "@redactedAnEvent": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
         }
-    },
-    "register": "Zarejestruj",    "@register": {
-        "type": "String",        "placeholders": {}
     },
     "rejectedTheInvitation": "{username} odrzucił/-a zaproszenie",    "@rejectedTheInvitation": {
         "type": "String",        "placeholders": {
@@ -666,19 +608,10 @@
     "removeAllOtherDevices": "Usuń wszystkie inne urządzenia",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Usunięta przez {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "Odbanuj w czacie",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
     "reply": "Odpowiedz",    "@reply": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Prośba o pozwolenie",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomVersion": "Wersja pokoju",    "@roomVersion": {
@@ -744,9 +677,6 @@
                 "type": "String"            }
         }
     },
-    "showPassword": "Pokaż hasło",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "sourceCode": "Kod żródłowy",    "@sourceCode": {
         "type": "String",        "placeholders": {}
     },
@@ -758,9 +688,6 @@
     },
     "systemTheme": "System",    "@systemTheme": {
         "type": "String",        "placeholders": {}
-    },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "Spróbuj wysłać ponownie",    "@tryToSendAgain": {
         "type": "String",        "placeholders": {}
@@ -819,9 +746,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Nazwa użytkownika",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} wysłał/-a zdarzenie {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -831,9 +755,6 @@
         }
     },
     "verified": "Zweryfikowane",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "zweryfikuj",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "videoCall": "Rozmowa wideo",    "@videoCall": {
@@ -869,9 +790,6 @@
     "youHaveBeenBannedFromThisChat": "Zostałeś/-aś zbanowany/-a w tym czacie",    "@youHaveBeenBannedFromThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "allChats": "Wszystkie",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
     "ignore": "Ignoruj",    "@ignore": {
         "type": "String",        "placeholders": {}
     },
@@ -881,7 +799,7 @@
     "obtainingLocation": "Uzyskiwanie lokalizacji…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
-    "addAccount": "Dodaj konto",    "serverRequiresEmail": "Ten serwer wymaga potwierdzenia Twojego adresu email w celu rejestracji.",    "or": "Lub",    "@or": {
+    "addAccount": "Dodaj konto",    "or": "Lub",    "@or": {
         "type": "String",        "placeholders": {}
     },
     "participant": "Uczestnik",    "@participant": {
@@ -891,9 +809,6 @@
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Proszę kliknij w odnośnik wysłany w wiadomości e-mail, aby kontynuować.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Proszę podaj 4 cyfry. By wyłączyć blokadę pozostaw puste.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "removeYourAvatar": "Usuń swoje zdjęcie",    "@removeYourAvatar": {
@@ -934,9 +849,6 @@
     "yourPublicKey": "Twój klucz publiczny",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Wybierz obraz",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "passwordRecovery": "Odzyskiwanie hasła",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
@@ -967,7 +879,7 @@
     "configureChat": "Konfiguruj czat",    "@configureChat": {
         "type": "String",        "placeholders": {}
     },
-    "homeserver": "Adres serwera",    "locationDisabledNotice": "Usługi lokalizacji są wyłączone. Proszę włącz je aby móc udostępnić swoją lokalizację.",    "@locationDisabledNotice": {
+    "locationDisabledNotice": "Usługi lokalizacji są wyłączone. Proszę włącz je aby móc udostępnić swoją lokalizację.",    "@locationDisabledNotice": {
         "type": "String",        "placeholders": {}
     },
     "oneClientLoggedOut": "Jedno z twoich urządzeń zostało wylogowane",    "privacy": "Prywatność",    "@privacy": {
@@ -982,7 +894,7 @@
     "editRoomAvatar": "Edytuj zdjęcie pokoju",    "@editRoomAvatar": {
         "type": "String",        "placeholders": {}
     },
-    "fontSize": "Rozmiar fontu",    "@fontSize": {
+    "fontSize": "Rozmiar czcionki",    "@fontSize": {
         "type": "String",        "placeholders": {}
     },
     "groups": "Grupy",    "@groups": {
@@ -1018,13 +930,7 @@
     "spaceName": "Nazwa przestrzeni",    "@spaceName": {
         "type": "String",        "placeholders": {}
     },
-    "unavailable": "Niedostępne",    "@unavailable": {
-        "type": "String",        "placeholders": {}
-    },
     "scanQrCode": "Skanuj kod QR",    "createNewSpace": "Nowa przestrzeń",    "@createNewSpace": {
-        "type": "String",        "placeholders": {}
-    },
-    "offline": "Offline",    "@offline": {
         "type": "String",        "placeholders": {}
     },
     "addToSpace": "Dodaj do przestrzeni",    "changeYourAvatar": "Zmień swoje zdjęcie",    "@changeYourAvatar": {
@@ -1054,9 +960,6 @@
     "reject": "Odrzuć",    "@reject": {
         "type": "String",        "placeholders": {}
     },
-    "online": "Online",    "@online": {
-        "type": "String",        "placeholders": {}
-    },
     "status": "Status",    "@status": {
         "type": "String",        "placeholders": {}
     },
@@ -1068,7 +971,7 @@
     "warning": "Uwaga!",    "@warning": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "Informacje o wiadomości",    "time": "Czas",    "messageType": "Rodzaj wiadomości",    "waitingPartnerAcceptRequest": "Oczekiwanie na zaakceptowanie prośby przez drugą osobę…",    "@waitingPartnerAcceptRequest": {
+    "messageInfo": "Informacje o wiadomości",    "time": "Czas",    "waitingPartnerAcceptRequest": "Oczekiwanie na zaakceptowanie prośby przez drugą osobę…",    "@waitingPartnerAcceptRequest": {
         "type": "String",        "placeholders": {}
     },
     "waitingPartnerEmoji": "Oczekiwanie na zaakceptowanie emoji przez drugą osobę…",    "@waitingPartnerEmoji": {
@@ -1089,7 +992,7 @@
                 "type": "String"            }
         }
     },
-    "recoveryKey": "Klucz odzyskiwania",    "sentCallInformations": "{senderName} wysłał/-a informacje o połączeniu",    "@sentCallInformations": {
+    "sentCallInformations": "{senderName} wysłał/-a informacje o połączeniu",    "@sentCallInformations": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1107,7 +1010,7 @@
     "waitingPartnerNumbers": "Oczekiwanie na zaakceptowanie numerów przez drugą osobę…",    "@waitingPartnerNumbers": {
         "type": "String",        "placeholders": {}
     },
-    "sender": "Nadawca",    "openGallery": "Otwórz galerię",    "start": "Start",    "hydrate": "Przywracanie z pliku kopii zapasowej",    "noMatrixServer": "{server1} nie jest serwerem Matriksa, czy chcesz zamiast niego użyć {server2}?",    "@noMatrixServer": {
+    "sender": "Nadawca",    "openGallery": "Otwórz galerię",    "hydrate": "Przywracanie z pliku kopii zapasowej",    "noMatrixServer": "{server1} nie jest serwerem Matriksa, czy chcesz zamiast niego użyć {server2}?",    "@noMatrixServer": {
         "type": "String",        "placeholders": {
             "server1": {
                 "type": "String"            },
@@ -1133,7 +1036,7 @@
     "unverified": "Niezweryfikowane",    "whoCanPerformWhichAction": "Kto może wykonywać jakie czynności",    "@whoCanPerformWhichAction": {
         "type": "String",        "placeholders": {}
     },
-    "reportUser": "Zgłoś użytkownika",    "dismiss": "Odrzuć",    "markAsRead": "Oznacz jako przeczytane",    "passphraseOrKey": "fraza dostępu lub klucz odzyskiwania",    "@passphraseOrKey": {
+    "reportUser": "Zgłoś użytkownika",    "markAsRead": "Oznacz jako przeczytane",    "passphraseOrKey": "fraza dostępu lub klucz odzyskiwania",    "@passphraseOrKey": {
         "type": "String",        "placeholders": {}
     },
     "supposedMxid": "To powinno być {mxid}",    "@supposedMxid": {
@@ -1145,7 +1048,7 @@
     "commandHint_markasdm": "Oznacz jako pokój wiadomości bezpośrednich dla podanego Matrix ID",    "confirmMatrixId": "Potwierdź swój identyfikator Matrix w celu usunięcia konta.",    "commandHint_markasgroup": "Oznacz jako grupę",    "noEmotesFound": "Nie znaleziono żadnych emotikonów. 😕",    "@noEmotesFound": {
         "type": "String",        "placeholders": {}
     },
-    "dehydrate": "Eksportuj sesję i wymaż urządzenie",    "dehydrateWarning": "Tego nie można cofnąć. Upewnij się, że plik kopii zapasowej jest bezpiecznie przechowywany.",    "unsupportedAndroidVersion": "Nieobsługiwana wersja systemu Android",    "pinMessage": "Przypnij do pokoju",    "confirmEventUnpin": "Czy na pewno chcesz trwale odpiąć wydarzenie?",    "youJoinedTheChat": "Dołączono do czatu",    "user": "Użytkownik",    "custom": "Własne",    "newGroup": "Nowa grupa",    "newSpace": "Nowa przestrzeń",    "fileIsTooBigForServer": "Nie udało się wysłać! Ten serwer obsługuje załączniki o maksymalnej wielkości {max}.",    "youBannedUser": "Zbanowałeś/-aś {user}",    "@youBannedUser": {
+    "dehydrate": "Eksportuj sesję i wymaż urządzenie",    "dehydrateWarning": "Tego nie można cofnąć. Upewnij się, że plik kopii zapasowej jest bezpiecznie przechowywany.",    "unsupportedAndroidVersion": "Nieobsługiwana wersja systemu Android",    "pinMessage": "Przypnij do pokoju",    "confirmEventUnpin": "Czy na pewno chcesz trwale odpiąć wydarzenie?",    "youJoinedTheChat": "Dołączono do czatu",    "user": "Użytkownik",    "custom": "Własne",    "newSpace": "Nowa przestrzeń",    "fileIsTooBigForServer": "Nie udało się wysłać! Ten serwer obsługuje załączniki o maksymalnej wielkości {max}.",    "youBannedUser": "Zbanowałeś/-aś {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1157,25 +1060,25 @@
                 "type": "int"            }
         }
     },
-    "noOtherDevicesFound": "Nie znaleziono innych urządzeń",    "encryptThisChat": "Zaszyfruj ten czat",    "disableEncryptionWarning": "Ze względów bezpieczeństwa nie można wyłączyć szyfrowania w czacie, w którym zostało ono wcześniej włączone.",    "deviceKeys": "Klucze urządzenia:",    "screenSharingTitle": "udostępnianie ekranu",    "noKeyForThisMessage": "Może się to zdarzyć, jeśli wiadomość została wysłana przed zalogowaniem się na to konto na tym urządzeniu.\n\nMożliwe jest również, że nadawca zablokował Twoje urządzenie lub coś poszło nie tak z połączeniem internetowym.\n\nJesteś w stanie odczytać wiadomość na innej sesji? W takim razie możesz przenieść z niej wiadomość! Wejdź w Ustawienia > Urządzenia i upewnij się, że Twoje urządzenia zweryfikowały się wzajemnie. Gdy następnym razem otworzysz pokój i obie sesje będą włączone, klucze zostaną przekazane automatycznie.\n\nNie chcesz stracić kluczy podczas wylogowania lub przełączania urządzeń? Upewnij się, że w ustawieniach masz włączoną kopię zapasową czatu.",    "sorryThatsNotPossible": "Przepraszamy... to nie jest możliwe",    "noBackupWarning": "Uwaga! Bez włączenia kopii zapasowej czatu, stracisz dostęp do swoich zaszyfrowanych wiadomości. Zaleca się włączenie kopii zapasowej czatu przed wylogowaniem.",    "commandHint_googly": "Wyślij kręcące się oczka",    "storeInAndroidKeystore": "Przechowaj w Android KeyStore",    "commandHint_cuddle": "Wyślij przytulenie",    "googlyEyesContent": "{senderName} wysyła ci kręcące się oczka",    "@googlyEyesContent": {
+    "noOtherDevicesFound": "Nie znaleziono innych urządzeń",    "encryptThisChat": "Zaszyfruj ten czat",    "disableEncryptionWarning": "Ze względów bezpieczeństwa nie można wyłączyć szyfrowania w czacie, w którym zostało ono wcześniej włączone.",    "screenSharingTitle": "udostępnianie ekranu",    "noKeyForThisMessage": "Może się to zdarzyć, jeśli wiadomość została wysłana przed zalogowaniem się na to konto na tym urządzeniu.\n\nMożliwe jest również, że nadawca zablokował Twoje urządzenie lub coś poszło nie tak z połączeniem internetowym.\n\nJesteś w stanie odczytać wiadomość na innej sesji? W takim razie możesz przenieść z niej wiadomość! Wejdź w Ustawienia > Urządzenia i upewnij się, że Twoje urządzenia zweryfikowały się wzajemnie. Gdy następnym razem otworzysz pokój i obie sesje będą włączone, klucze zostaną przekazane automatycznie.\n\nNie chcesz stracić kluczy podczas wylogowania lub przełączania urządzeń? Upewnij się, że w ustawieniach masz włączoną kopię zapasową czatu.",    "sorryThatsNotPossible": "Przepraszamy... to nie jest możliwe",    "noBackupWarning": "Uwaga! Bez włączenia kopii zapasowej czatu, stracisz dostęp do swoich zaszyfrowanych wiadomości. Zaleca się włączenie kopii zapasowej czatu przed wylogowaniem.",    "commandHint_googly": "Wyślij kręcące się oczka",    "storeInAndroidKeystore": "Przechowaj w Android KeyStore",    "commandHint_cuddle": "Wyślij uścisk",    "googlyEyesContent": "{senderName} wysyła ci kręcące się oczka",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    "cuddleContent": "{senderName} przytula cię",    "@cuddleContent": {
+    "cuddleContent": "{senderName} cię uściska",    "@cuddleContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    "hugContent": "{senderName} uściska cię",    "@hugContent": {
+    "hugContent": "{senderName} przytula cię",    "@hugContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    "commandHint_hug": "Wyślij uścisk",    "reactedWith": "{sender} zareagował/-a z {reaction}",    "@reactedWith": {
+    "commandHint_hug": "Wyślij przytulasa",    "reactedWith": "{sender} zareagował/-a z {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1219,7 +1122,7 @@
                 "type": "String"            }
         }
     },
-    "storeInAppleKeyChain": "Przechowaj w pęku kluczy Apple",    "storeSecurlyOnThisDevice": "Przechowaj bezpiecznie na tym urządzeniu",    "foregroundServiceRunning": "To powiadomienie pojawia się, gdy usługa w tle jest uruchomiona.",    "screenSharingDetail": "Udostępniasz swój ekran w JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Dlaczego nie można odczytać tej wiadomości?",    "allSpaces": "Wszystkie przestrzenie",    "doNotShowAgain": "Nie pokazuj ponownie",    "wasDirectChatDisplayName": "Pusty czat (wcześniej {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "storeInAppleKeyChain": "Przechowaj w pęku kluczy Apple",    "storeSecurlyOnThisDevice": "Przechowaj bezpiecznie na tym urządzeniu",    "foregroundServiceRunning": "To powiadomienie pojawia się, gdy usługa w tle jest uruchomiona.",    "screenSharingDetail": "Udostępniasz swój ekran w JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Dlaczego nie można odczytać tej wiadomości?",    "doNotShowAgain": "Nie pokazuj ponownie",    "wasDirectChatDisplayName": "Pusty czat (wcześniej {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1237,7 +1140,7 @@
                 "type": "String"            }
         }
     },
-    "optionalRedactReason": "(Opcjonalnie) Powód usunięcia tej wiadomości...",    "exportEmotePack": "Eksportuj pakiet emotikonów jako .zip",    "redactedByBecause": "Usunięte przez {username} z powodu „{reason}”",    "@redactedByBecause": {
+    "optionalRedactReason": "(Opcjonalnie) Powód usunięcia tej wiadomości...",    "exportEmotePack": "Eksportuj paczkę emoji jako .zip",    "redactedByBecause": "Usunięte przez {username} z powodu „{reason}”",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1251,16 +1154,10 @@
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Wysyłaj powiadomienie o pisaniu",    "inviteGroupChat": "📨 Zaproszenie do rozmowy grupowej",    "importEmojis": "Zaimportuj emotikony",    "noChatDescriptionYet": "Nie utworzono jeszcze opisu czatu.",    "notAnImage": "To nie jest plik obrazu.",    "chatDescriptionHasBeenChanged": "Zmieniono opis czatu",    "shareInviteLink": "Udostępnij link z zaproszeniem",    "emoteKeyboardNoRecents": "Tutaj pojawiają się ostatnio używane emotikony...",    "@emoteKeyboardNoRecents": {
+    "sendTypingNotifications": "Wysyłaj powiadomienie o pisaniu",    "inviteGroupChat": "📨 Zaproszenie do rozmowy grupowej",    "importEmojis": "Zaimportuj emoji",    "noChatDescriptionYet": "Nie utworzono jeszcze opisu czatu.",    "notAnImage": "To nie jest plik obrazu.",    "chatDescriptionHasBeenChanged": "Zmieniono opis czatu",    "shareInviteLink": "Udostępnij link z zaproszeniem",    "emoteKeyboardNoRecents": "Tutaj pojawiają się ostatnio używane emotikony...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "replace": "Zastąp",    "createGroup": "Utwórz grupę",    "importNow": "Zaimportuj",    "invite": "Zaproszenie",    "block": "Zablokuj",    "blockedUsers": "Zablokowani użytkownicy",    "blockUsername": "Ignoruj użytkownika",    "transparent": "Przezroczystość",    "select": "Zaznacz",    "calls": "Połączenia",    "learnMore": "Dowiedz się więcej",    "groupName": "Nazwa grupy",    "newPassword": "Nowe hasło",    "thisDevice": "To urządzenie:",    "gallery": "Galeria",    "files": "Pliki",    "discover": "Odkrywaj",    "restricted": "Ograniczone",    "nothingFound": "Nic nie odnaleziono...",    "stickers": "Naklejki",    "noChatsFoundHere": "Nie jeszcze ma żadnych czatów. Wciśnij poniższy przycisk, aby rozpocząć nowy czat. ⤵️",    "hideRedactedMessagesBody": "Usunięte wiadomości nie będą widoczne w czacie.",    "passwordRecoverySettings": "Ustawienia odzyskiwania hasła",    "invitedBy": "Zaproszony/-a przez {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    "archiveRoomDescription": "Czat zostanie przeniesiony do archiwum. Pozostali użytkownicy będą mogli zobaczyć, że opuściłeś/-aś czat.",    "yourGlobalUserIdIs": "Twój globalny identyfikator to: ",    "canceledKeyVerification": "{sender} anulował/-a weryfikację kluczy",    "@canceledKeyVerification": {
+    "replace": "Zastąp",    "createGroup": "Utwórz grupę",    "importNow": "Zaimportuj teraz",    "invite": "Zaproszenie",    "block": "Zablokuj",    "blockedUsers": "Zablokowani użytkownicy",    "blockUsername": "Ignoruj użytkownika",    "select": "Zaznacz",    "calls": "Połączenia",    "learnMore": "Dowiedz się więcej",    "groupName": "Nazwa grupy",    "newPassword": "Nowe hasło",    "thisDevice": "To urządzenie:",    "gallery": "Galeria",    "files": "Pliki",    "discover": "Odkrywaj",    "nothingFound": "Nic nie odnaleziono...",    "stickers": "Naklejki",    "noChatsFoundHere": "Nie jeszcze ma żadnych czatów. Wciśnij poniższy przycisk, aby rozpocząć nowy czat. ⤵️",    "hideRedactedMessagesBody": "Usunięte wiadomości nie będą widoczne w czacie.",    "passwordRecoverySettings": "Ustawienia odzyskiwania hasła",    "archiveRoomDescription": "Czat zostanie przeniesiony do archiwum. Pozostali użytkownicy będą mogli zobaczyć, że opuściłeś/-aś czat.",    "yourGlobalUserIdIs": "Twój globalny identyfikator to: ",    "canceledKeyVerification": "{sender} anulował/-a weryfikację kluczy",    "@canceledKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1328,7 +1225,7 @@
                 "type": "int"            }
         }
     },
-    "sendRoomNotifications": "Wysyłaj powiadomienia @room",    "chatPermissionsDescription": "Ustal jaki poziom uprawnień jest wymagany dla określonych czynności w czacie. Poziomy uprawnień 0, 50 i 100 zwykle dotyczą odpowiednio użytkowników, moderatorów i administratorów, ale możliwa jest dowolna gradacja.",    "changeTheCanonicalRoomAlias": "Zmień główny publiczny czatu",    "changeTheDescriptionOfTheGroup": "Zmień opis czatu",    "sendCanceled": "Anulowano wysyłanie",    "doesNotSeemToBeAValidHomeserver": "Wydaje się nie być kompatybilnym serwerem domowym. Niepoprawny adres URL?",    "calculatingFileSize": "Obliczanie rozmiaru pliku...",    "sendingAttachment": "Wysyłanie załącznika...",    "compressVideo": "Kompresowanie filmu...",    "welcomeText": "No cześć! 👋 Tutaj JuMiKK-Chat. Możesz zapisać się do dowolnego serwera domowego, kompatybilnego z https://matrix.org i rozmawiać ze wszystkimi. To duża zdecentralizowana sieć czatów!",    "blur": "Rozmazanie:",    "opacity": "Przezroczystość:",    "setWallpaper": "Ustaw tapetę",    "manageAccount": "Zarządzaj kontem",    "noContactInformationProvided": "Serwer nie dostarcza żadnych poprawnych danych kontaktowych",    "contactServerAdmin": "Skontaktuj się z administratorem serwera",    "compress": "Skompresuj",    "pleaseFillOut": "Proszę wypełnić",    "invalidUrl": "Niepoprawny adres url",    "unableToJoinChat": "Nie udało się dołączyć do czatu. Rozmowa mogła zostać zakończona przez drugą stronę.",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
+    "sendRoomNotifications": "Wysyłaj powiadomienia @room",    "chatPermissionsDescription": "Ustal jaki poziom uprawnień jest wymagany dla określonych czynności w czacie. Poziomy uprawnień 0, 50 i 100 zwykle dotyczą odpowiednio użytkowników, moderatorów i administratorów, ale możliwa jest dowolna gradacja.",    "changeTheCanonicalRoomAlias": "Zmień główny publiczny czatu",    "changeTheDescriptionOfTheGroup": "Zmień opis czatu",    "sendCanceled": "Anulowano wysyłanie",    "doesNotSeemToBeAValidHomeserver": "Wydaje się nie być kompatybilnym serwerem domowym. Niepoprawny adres URL?",    "calculatingFileSize": "Obliczanie rozmiaru pliku...",    "sendingAttachment": "Wysyłanie załącznika...",    "blur": "Rozmazanie:",    "opacity": "Przezroczystość:",    "setWallpaper": "Ustaw tapetę",    "manageAccount": "Zarządzaj kontem",    "noContactInformationProvided": "Serwer nie dostarcza żadnych poprawnych danych kontaktowych",    "contactServerAdmin": "Skontaktuj się z administratorem serwera",    "compress": "Skompresuj",    "pleaseFillOut": "Proszę wypełnić",    "invalidUrl": "Niepoprawny adres URL",    "unableToJoinChat": "Nie udało się dołączyć do czatu. Rozmowa mogła zostać zakończona przez drugą stronę.",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1352,7 +1249,7 @@
                 "type": "String"            }
         }
     },
-    "publicSpaces": "Przestrzenie publiczne",    "searchMore": "Szukaj dalej...",    "formattedMessagesDescription": "Używaj Markdown do wyświetlania dodatkowego formatowania w wiadomościach, jak np. pogrubienie tekstu.",    "verifyOtherUser": "🔐 Zweryfikuj innego użytkownika",    "knockRestricted": "Pukanie jest ograniczone",    "appLockDescription": "Zablokuj aplikację pinem kiedy nie jest używana",    "knocking": "Pukanie",    "pleaseChooseAStrongPassword": "Proszę wybrać silne hasło",    "usersMustKnock": "Użytkownicy muszą zapukać",    "noOneCanJoin": "Nikt nie może dołączyć",    "swipeRightToLeftToReply": "Przeciągnij w lewo, by odpowiedzieć",    "pleaseEnterANumber": "Proszę podać liczbę większą od 0",    "commandHint_sendraw": "Wyślij zwykły json",    "databaseMigrationBody": "Proszę czekać. Może to potrwać chwilę.",    "leaveEmptyToClearStatus": "Pozostaw puste, aby wyczyścić swój status.",    "sessionLostBody": "Twoja sesja została utracona. Prosimy zgłosić ten błąd autorom aplikacji na {url}. Treść błędu to: {error}",    "@sessionLostBody": {
+    "publicSpaces": "Przestrzenie publiczne",    "searchMore": "Szukaj dalej...",    "formattedMessagesDescription": "Używaj Markdown do wyświetlania dodatkowego formatowania w wiadomościach, jak np. pogrubienie tekstu.",    "verifyOtherUser": "🔐 Zweryfikuj innego użytkownika",    "appLockDescription": "Zablokuj aplikację pinem kiedy nie jest używana",    "knocking": "Pukanie",    "pleaseChooseAStrongPassword": "Proszę wybrać silne hasło",    "usersMustKnock": "Użytkownicy muszą zapukać",    "noOneCanJoin": "Nikt nie może dołączyć",    "swipeRightToLeftToReply": "Przeciągnij w lewo, by odpowiedzieć",    "pleaseEnterANumber": "Proszę podać liczbę większą od 0",    "commandHint_sendraw": "Wyślij zwykły json",    "databaseMigrationBody": "Proszę czekać. Może to potrwać chwilę.",    "leaveEmptyToClearStatus": "Pozostaw puste, aby wyczyścić swój status.",    "sessionLostBody": "Twoja sesja została utracona. Prosimy zgłosić ten błąd autorom aplikacji na {url}. Treść błędu to: {error}",    "@sessionLostBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },
@@ -1380,7 +1277,7 @@
                 "type": "String"            }
         }
     },
-    "addLink": "Dodaj link",    "unread": "Nieprzeczytane",    "space": "Przestrzeń",    "spaces": "Przestrzenie",    "noMoreChatsFound": "Nie znaleziono więcej czatów...",    "removeDevicesDescription": "Nastąpi wylogowanie z tego urządzenia. Nie będziesz w stanie odbierać na nim wiadomości.",    "makeAdminDescription": "Kiedy użytkownik zostanie adminem, nie będziesz móc tego cofnąć, bo nabierze takich samych uprawnień, jak Ty.",    "searchChatsRooms": "Szukaj #czatów, @użytkowników...",    "createGroupAndInviteUsers": "Utwórz grupę i zaproś użytkowników",    "groupCanBeFoundViaSearch": "Grupa może być znaleziona poprzez wyszukiwanie",    "wrongRecoveryKey": "Niestety to nie wygląda na poprawny klucz odzyskiwania.",    "searchForUsers": "Szukaj @użytkowników...",    "pleaseEnterYourCurrentPassword": "Proszę podać swoje obecne hasło",    "passwordIsWrong": "Podano niepoprawne hasło",    "joinSpace": "Dołącz do przestrzeni",    "addChatOrSubSpace": "Dodaj czat lub podprzestrzeń",    "initAppError": "Wystąpił błąd podczas inicjalizacji aplikacji",    "searchIn": "Szukaj w czacie \"{chat}\"...",    "@searchIn": {
+    "addLink": "Dodaj link",    "unread": "Nieprzeczytane",    "space": "Przestrzeń",    "noMoreChatsFound": "Nie znaleziono więcej czatów...",    "removeDevicesDescription": "Nastąpi wylogowanie z tego urządzenia. Nie będziesz w stanie odbierać na nim wiadomości.",    "makeAdminDescription": "Kiedy użytkownik zostanie adminem, nie będziesz móc tego cofnąć, bo nabierze takich samych uprawnień, jak Ty.",    "searchChatsRooms": "Szukaj #czatów, @użytkowników...",    "createGroupAndInviteUsers": "Utwórz grupę i zaproś użytkowników",    "groupCanBeFoundViaSearch": "Grupa może być znaleziona poprzez wyszukiwanie",    "wrongRecoveryKey": "Niestety to nie wygląda na poprawny klucz odzyskiwania.",    "searchForUsers": "Szukaj @użytkowników...",    "pleaseEnterYourCurrentPassword": "Proszę podać swoje obecne hasło",    "passwordIsWrong": "Podano niepoprawne hasło",    "joinSpace": "Dołącz do przestrzeni",    "addChatOrSubSpace": "Dodaj czat lub podprzestrzeń",    "initAppError": "Wystąpił błąd podczas inicjalizacji aplikacji",    "searchIn": "Szukaj w czacie \"{chat}\"...",    "@searchIn": {
         "type": "String",        "placeholders": {
             "chat": {
                 "type": "String"            }
@@ -1418,7 +1315,7 @@
                 "type": "String"            }
         }
     },
-    "checkList": "Lista kontrolna",    "ignoreUser": "Ignoruj użytkownika",    "approve": "Zaakceptuj",    "youHaveKnocked": "Zapukałeś/-aś",    "pleaseWaitUntilInvited": "Proszę zaczekać na zaproszenie przez kogoś z pokoju.",    "commandHint_logout": "Wyloguj bieżące urządzenie",    "commandHint_logoutall": "Wyloguj wszystkie aktywne urządzenia",    "displayNavigationRail": "Pokazuj pasek nawigacyjny na urządzeniach mobilnych",    "customReaction": "Własna reakcja",    "moreEvents": "Więcej zdarzeń",    "declineInvitation": "Odrzuć zaproszenie",    "changedTheChatDescription": "{username} zmienił(a) opis czatu",    "changedTheChatName": "{username} zmienił(a) nazwę czatu",    "noMessagesYet": "Brak wiadomości",    "longPressToRecordVoiceMessage": "Naciśnij i przytrzymaj, aby nagrać wiadomość głosową.",    "pause": "Pauza",    "resume": "Wznów",    "removeFromSpaceDescription": "Czat zostanie usunięty z pokoju, ale nadal będzie widoczny na liście czatów.",    "countChats": "{chats} czaty",    "@countChats": {
+    "checkList": "Lista kontrolna",    "approve": "Zaakceptuj",    "youHaveKnocked": "Zapukałeś/-aś",    "pleaseWaitUntilInvited": "Proszę zaczekać na zaproszenie przez kogoś z pokoju.",    "commandHint_logout": "Wyloguj bieżące urządzenie",    "commandHint_logoutall": "Wyloguj wszystkie aktywne urządzenia",    "displayNavigationRail": "Pokazuj pasek nawigacyjny na urządzeniach mobilnych",    "customReaction": "Własna reakcja",    "moreEvents": "Więcej zdarzeń",    "declineInvitation": "Odrzuć zaproszenie",    "changedTheChatDescription": "{username} zmienił(a) opis czatu",    "changedTheChatName": "{username} zmienił(a) nazwę czatu",    "noMessagesYet": "Brak wiadomości",    "longPressToRecordVoiceMessage": "Naciśnij i przytrzymaj, aby nagrać wiadomość głosową.",    "pause": "Pauza",    "resume": "Wznów",    "removeFromSpaceDescription": "Czat zostanie usunięty z pokoju, ale nadal będzie widoczny na liście czatów.",    "countChats": "{chats} czaty",    "@countChats": {
         "type": "String",        "placeholders": {
             "chats": {
                 "type": "int"            }
@@ -1450,13 +1347,7 @@
     },
     "logs": "Logi",    "advancedConfigs": "Konfiguracje zaawansowane",    "advancedConfigurations": "Zaawansowane konfiguracje",    "signIn": "Zaloguj się",    "createNewAccount": "Utwórz nowe konto",    "signUpGreeting": "JuMiKK-Chat jest zdecentralizowany! Wybierz serwer, na którym chcesz utworzyć konto i zaczynamy!",    "signInGreeting": "Masz już konto w sieci Matrix? Witaj z powrotem! Wybierz swój serwer macierzysty i zaloguj się.",    "theProcessWasCanceled": "Proces został anulowany.",    "join": "Dołącz",    "searchOrEnterHomeserverAddress": "Wyszukaj lub wprowadź adres serwera macierzystego",    "matrixId": "Identyfikator Matrix",    "setPowerLevel": "Ustaw poziom uprawnień",    "makeModerator": "Mianuj moderatorem",    "makeAdmin": "Mianuj administratorem",    "removeModeratorRights": "Odbierz uprawnienia moderatora",    "removeAdminRights": "Odbierz uprawnienia administratora",    "powerLevel": "Poziom uprawnień",    "setPowerLevelDescription": "Poziomy uprawnień określają, co członek może robić w tym pokoju i zazwyczaj mieszczą się w zakresie od 0 do 100.",    "owner": "Właściciel",    "mute": "Wycisz",    "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
-    "createNewChat": "Utwórz nowy czat",    "reset": "Resetuj",    "supportFluffyChat": "Wesprzyj JuMiKK-Chat",    "support": "Wsparcie",    "setLowPriority": "Ustaw niski priorytet",    "unsetLowPriority": "Cofnij niski priorytet",    "playSoundOnNotification": "Odtwórz dźwięk powiadomienia",    "addTag": "Dodaj znacznik",    "removeTag": "Usuń znacznik",    "tagName": "Nazwa znacznika",    "startedAPoll": "{username} rozpoczął głosowanie.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Ankieta",    "startPoll": "Rozpocznij ankietę",    "endPoll": "Zakończ ankietę",    "answersVisible": "Widoczne odpowiedzi",    "pollQuestion": "Pytanie ankiety",    "answerOption": "Opcja odpowiedzi",    "addAnswerOption": "Dodaj opcję odpowiedzi",    "allowMultipleAnswers": "Zezwalaj na wiele odpowiedzi",    "pollHasBeenEnded": "Ankieta została zakończona",    "countVotes": "{count, plural, one {{count} głos} few {{count} głosy} many {{count} głosów} other {{count} głosu}}",    "@countVotes": {
+    "createNewChat": "Utwórz nowy czat",    "reset": "Resetuj",    "supportFluffyChat": "Wesprzyj JuMiKK-Chat",    "support": "Wsparcie",    "setLowPriority": "Ustaw niski priorytet",    "unsetLowPriority": "Cofnij niski priorytet",    "playSoundOnNotification": "Odtwórz dźwięk powiadomienia",    "addTag": "Dodaj znacznik",    "removeTag": "Usuń znacznik",    "tagName": "Nazwa znacznika",    "startPoll": "Rozpocznij ankietę",    "endPoll": "Zakończ ankietę",    "answersVisible": "Widoczne odpowiedzi",    "pollQuestion": "Pytanie ankiety",    "answerOption": "Opcja odpowiedzi",    "addAnswerOption": "Dodaj opcję odpowiedzi",    "allowMultipleAnswers": "Zezwalaj na wiele odpowiedzi",    "pollHasBeenEnded": "Ankieta została zakończona",    "countVotes": "{count, plural, one {{count} głos} few {{count} głosy} many {{count} głosów} other {{count} głosu}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1468,4 +1359,106 @@
                 "type": "int"            }
         }
     },
-    "thread": "Wątek",    "backToMainChat": "Wróć do czatu głównego",    "saveChanges": "Zapisz zmiany",    "createSticker": "Utwórz naklejkę lub emoji",    "useAsSticker": "Użyj naklejki",    "useAsEmoji": "Użyj emoji",    "stickerPackNameAlreadyExists": "Paczka naklejek o tej nazwie już istnieje",    "newStickerPack": "Nowy pakiet naklejek",    "stickerPackName": "Nazwa paczki naklejek"}
+    "thread": "Wątek",    "backToMainChat": "Wróć do czatu głównego",    "saveChanges": "Zapisz zmiany",    "createSticker": "Utwórz naklejkę lub emoji",    "useAsSticker": "Użyj jako naklejki",    "useAsEmoji": "Użyj jako emoji",    "stickerPackNameAlreadyExists": "Paczka naklejek o tej nazwie już istnieje",    "newStickerPack": "Nowa paczka naklejek",    "stickerPackName": "Nazwa paczki naklejek",    "discardEdits": "Masz niezapisane zmiany. Porzucić je?",    "@discardEdits": {
+        "type": "String",        "placeholders": {}
+    },
+    "showMore": "Pokaż wiecej",    "showLess": "Pokaż mniej",    "hideRoomsInSpaces": "Ukryj pokoje, które są w przestrzeni",    "possibleByYou": "To wydanie było tylko możliwe dzięki twojemu wsparciu. JuMiKK-Chat pozostaje darmowe, otwartoźródłowe i w całości oparty na inicjatywie społeczności.",    "showThumbnailsInTimeline": "Wyświetl miniatury zdjęć i filmów",    "appSubtitle": "Bezpieczna komunikacja [matrix]",    "appDescription": "Komunikuj się w sposób zaszyfrowany za pośrednictwem zdecentralizowanej sieci [matrix] – w łatwy i dostępny dla wszystkich sposób.",    "interactiveVerification": "Weryfikacja interaktywna",    "interactiveVerificationDescription": "Jeżeli jesteście obok siebie albo komunikujecie się przez bezpieczny kanał to możecie zweryfikować wszystkie urządzenia naraz przez porównywanie numeru bezpieczeństwa lub emoji.",    "countUnverifiedDevices": "{count} niezweryfikowanych urządzeń w czacie.",    "@countUnverifiedDevices": {
+        "type": "int",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "encryptedMessage": "Szyfrowana wiadomość",    "unencryptedMessage": "Nieszyfrowana wiadomość",    "messageCanOnlyBeReadByUser": "Twoja wiadomość jest szyfrowana od początku do końca i może ją odczytać wyłącznie ten użytkownik:",    "messageCanOnlyBeReadByUsers": "Twoja wiadomość jest szyfrowana od początku do końca i mogą ją odczytać wyłącznie następujący użytkownicy:",    "publicKey": "Publiczny klucz: {key}",    "@publicKey": {
+        "type": "String",        "placeholders": {
+            "key": {
+                "type": "String"            }
+        }
+    },
+    "deviceIdentityKey": "Klucz identyfikacyjny urządzenia",    "restoreBootstrapEmptyDevicesDescription": "Wprowadź hasło lub klucz odzyskiwania, aby zweryfikować to urządzenie i uzyskać dostęp do zaszyfrowanej kopii zapasowej wiadomości.",    "@restoreBootstrapEmptyDevicesDescription": {
+        "type": "String",        "placeholders": {}
+    },
+    "restoreBootstrapDevicesDescription": "Wybierz jedno ze swoich innych urządzeń, aby zweryfikować tę sesję:",    "@restoreBootstrapDevicesDescription": {
+        "type": "String",        "placeholders": {}
+    },
+    "resetAccount": "Zresetuj konto",    "@resetAccount": {
+        "type": "String",        "placeholders": {}
+    },
+    "restoreCryptoIdentity": "Przywróć tożsamość kryptograficzną",    "@restoreCryptoIdentity": {
+        "type": "String",        "placeholders": {}
+    },
+    "resetCryptoIdentity": "Zresetuj tożsamość kryptograficzną",    "@resetCryptoIdentity": {
+        "type": "String",        "placeholders": {}
+    },
+    "setUpCryptoIdentity": "Skonfiguruj tożsamość kryptograficzną",    "@setUpCryptoIdentity": {
+        "type": "String",        "placeholders": {}
+    },
+    "waitingForKeys": "Oczekiwanie na klucze... Proszę pozostawić drugie urządzenie włączone.",    "@waitingForKeys": {
+        "type": "String",        "placeholders": {}
+    },
+    "noKeysTransmitted": "Nie przesłano żadnych kluczy. Spróbuj ponownie.",    "@noKeysTransmitted": {
+        "type": "String",        "placeholders": {}
+    },
+    "unlock": "Odblokuj",    "@unlock": {
+        "type": "String",        "placeholders": {}
+    },
+    "openFile": "Otwórz plik",    "@openFile": {
+        "type": "String",        "placeholders": {}
+    },
+    "resetAccountWarning": "Po zresetowaniu konta utracisz na zawsze dostęp do starych wiadomości. Wszystkie Twoje obecne urządzenia będą wymagały ponownej weryfikacji. Wykonaj tę czynność tylko wtedy, gdy nie masz już żadnych innych urządzeń, na których można zweryfikować sesję, oraz utraciłeś klucz odzyskiwania i hasło!",    "@resetAccountWarning": {
+        "type": "String",        "placeholders": {}
+    },
+    "newPassphraseDescription": "JuMiKK-Chat korzysta z szyfrowania od końca do końca. Aby nie utracić swoich wiadomości, wybierz silne hasło, które zabezpieczy Twoją tożsamość kryptograficzną oraz zaszyfrowaną kopię zapasową wiadomości.",    "@newPassphraseDescription": {
+        "type": "String",        "placeholders": {}
+    },
+    "newPassphrase": "Nowa fraza hasłowa",    "@newPassphrase": {
+        "type": "String",        "placeholders": {}
+    },
+    "repeatPassphrase": "Powtórz frazę hasłową",    "@repeatPassphrase": {
+        "type": "String",        "placeholders": {}
+    },
+    "passphrasesMatch": "Zgodność fraz hasłowych",    "@passphrasesMatch": {
+        "type": "String",        "placeholders": {}
+    },
+    "passphraseLengthRequirement": "Co najmniej 12 znaków.",    "@passphraseLengthRequirement": {
+        "type": "String",        "placeholders": {}
+    },
+    "passphraseUpperAndLowerCaseRequirement": "Zawiera wielkie i małe litery.",    "@passphraseUpperAndLowerCaseRequirement": {
+        "type": "String",        "placeholders": {}
+    },
+    "passphraseSpecialCharactersRequirement": "Zawiera znaki specjalne.",    "@passphraseSpecialCharactersRequirement": {
+        "type": "String",        "placeholders": {}
+    },
+    "passphraseNumberRequirement": "Zawiera jedną liczbę.",    "@passphraseNumberRequirement": {
+        "type": "String",        "placeholders": {}
+    },
+    "storeRecoveryKeyDescription": "Zapisz swój klucz odzyskiwania, aby móc przywrócić zaszyfrowane wiadomości oraz swoją tożsamość kryptograficzną.",    "@storeRecoveryKeyDescription": {
+        "type": "String",        "placeholders": {}
+    },
+    "saveAsFile": "Zapisz jako plik",    "@saveAsFile": {
+        "type": "String",        "placeholders": {}
+    },
+    "youAreReadyToStart": "Jesteś gotowy aby rozpocząć!",    "noUserKeyFound": "Nie znaleziono kluczy użytkownika",    "@noUserKeyFound": {
+        "type": "String",        "placeholders": {}
+    },
+    "knownSince": "Znany od: {date}",    "@knownSince": {
+        "type": "String",        "placeholders": {
+            "date": {
+                "type": "String"            }
+        }
+    },
+    "unsignedDevice": "Niepodpisane urządzenie",    "@unsignedDevice": {
+        "type": "String",        "placeholders": {}
+    },
+    "signedDevice": "Podpisane urządzenie",    "@signedDevice": {
+        "type": "String",        "placeholders": {}
+    },
+    "noCurve25519KeyFound": "Nie znaleziono klucza curve25519",    "@noCurve25519KeyFound": {
+        "type": "String",        "placeholders": {}
+    },
+    "messageNotDecryptable": "Nie można odszyfrować wiadomości",    "today": "Dzisiaj",    "sending": "Wysyłanie",    "generatingThumbnail": "Tworzenie miniatury",    "encrypting": "Szyfrowanie",    "uploading": "Przesyłanie",    "edited": "(edytowano)",    "couldNotBeSent": "Nie udało się wysłać",    "yesterday": "Wczoraj",    "resetRecoveryKey": "Zresetuj klucz odzyskiwania",    "pleaseEnter6Digits": "Wpisz 6 cyfr aby włączyć blokadę aplikacji.",    "disableAppLock": "Wyłącz blokadę aplikacji",    "disableAppLockAreYouSure": "Czy na pewno chcesz wyłączyć blokadę aplikacji?",    "enableBiometrics": "Włącz uwierzytelnianie biometryczne",    "disableBiometrics": "Wyłącz uwierzytelnianie biometryczne",    "resetPin": "Resetuj pin",    "forwardCountMessages": "Przekazać {count, plural, =1{jedną wiadomość} other {{count} wiadomości}}?",    "@forwardCountMessages": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "unlockWithBiometrics": "Odblokuj za pomocą uwierzytelniania biometrycznego",    "useAppLock": "Użyj blokady aplikacji",    "biometricsDescription": "Za pomocą biometrycznego uwierzytelniania możesz odblokować aplikację za pomocą swojej twarzy lub odsisku palca. Możliwości zależą od twojego urządzenia."}

@@ -93,13 +93,7 @@
     "ignoredUsers": "Pengguna yang diabaikan",    "@ignoredUsers": {
         "type": "String",        "placeholders": {}
     },
-    "id": "ID",    "@id": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Sembunyikan peristiwa tidak dikenal",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "hideRedactedEvents": "Sembunyikan peristiwa yang dihapus",    "@hideRedactedEvents": {
         "type": "String",        "placeholders": {}
     },
     "help": "Bantuan",    "@help": {
@@ -140,12 +134,6 @@
     "forward": "Teruskan",    "@forward": {
         "type": "String",        "placeholders": {}
     },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
-        "type": "String",        "placeholders": {}
-    },
-    "fileName": "Nama file",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
     "enterAnEmailAddress": "Masukkan alamat email",    "@enterAnEmailAddress": {
         "type": "String",        "placeholders": {}
     },
@@ -176,9 +164,6 @@
     "emoteSettings": "Pengaturan Emote",    "@emoteSettings": {
         "type": "String",        "placeholders": {}
     },
-    "emotePacks": "Paket emote untuk ruangan",    "@emotePacks": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteInvalid": "Shortcode emote tidak valid!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
@@ -204,12 +189,6 @@
         "type": "String",        "placeholders": {}
     },
     "devices": "Perangkat",    "@devices": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "ID Perangkat",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
-    "device": "Perangkat",    "@device": {
         "type": "String",        "placeholders": {}
     },
     "deleteMessage": "Hapus pesan",    "@deleteMessage": {
@@ -360,22 +339,6 @@
                 "type": "String"            }
         }
     },
-    "changedTheChatNameTo": "{username} mengubah nama obrolan ke: '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} mengubah deskripsi obrolan ke: '{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
     "changedTheChatAvatar": "{username} mengubah avatar obrolan",    "@changedTheChatAvatar": {
         "type": "String",        "placeholders": {
             "username": {
@@ -435,9 +398,6 @@
         "type": "String",        "placeholders": {}
     },
     "appLock": "Kunci aplikasi",    "@appLock": {
-        "type": "String",        "placeholders": {}
-    },
-    "allChats": "Semua obrolan",    "@allChats": {
         "type": "String",        "placeholders": {}
     },
     "all": "Semua",    "@all": {
@@ -531,9 +491,6 @@
     "noPasswordRecoveryDescription": "Kamu belum menambahkan cara untuk memulihkan kata sandimu.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
-    "none": "Tidak Ada",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noGoogleServicesWarning": "Perpesanan Awan Firebase sepertinya tidak tersedia di perangkatmu. Untuk dapat menerima notifikasi dorongan, kami menyarankan memasang ntfy. Dengan ntfy atau penyedia UnifiedPush lainnya, kamu bisa menerima notifikasi dorongan dengan cara yang aman. Kamu bisa mengunduh ntfy dari Play Store atau F-Droid.",    "@noGoogleServicesWarning": {
         "type": "String",        "placeholders": {}
     },
@@ -553,9 +510,6 @@
         "type": "String",        "placeholders": {}
     },
     "newChat": "Chat baru",    "@newChat": {
-        "type": "String",        "placeholders": {}
-    },
-    "needPantalaimonWarning": "Perlu diketahui bahwa kamu memerlukan Pantalaimon untuk menggunakan enkripsi ujung-ke-ujung untuk saat ini.",    "@needPantalaimonWarning": {
         "type": "String",        "placeholders": {}
     },
     "muteChat": "Bisukan obrolan",    "@muteChat": {
@@ -591,19 +545,7 @@
                 "type": "String"            }
         }
     },
-    "unavailable": "Tidak tersedia",    "@unavailable": {
-        "type": "String",        "placeholders": {}
-    },
-    "showPassword": "Tampilkan kata sandi",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "removeYourAvatar": "Hapus avatarmu",    "@removeYourAvatar": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "Daftar",    "@register": {
-        "type": "String",        "placeholders": {}
-    },
-    "pushRules": "Aturan push",    "@pushRules": {
         "type": "String",        "placeholders": {}
     },
     "pleaseFollowInstructionsOnWeb": "Mohon ikuti petunjuk di situs web dan tekan lanjut.",    "@pleaseFollowInstructionsOnWeb": {
@@ -615,13 +557,7 @@
     "onlineKeyBackupEnabled": "Cadangan Kunci Online dinyalakan",    "@onlineKeyBackupEnabled": {
         "type": "String",        "placeholders": {}
     },
-    "online": "Online",    "@online": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "Ok",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "offline": "Offline",    "@offline": {
         "type": "String",        "placeholders": {}
     },
     "notifications": "Notifikasi",    "@notifications": {
@@ -696,9 +632,6 @@
     "verifyStart": "Mulai Verifikasi",    "@verifyStart": {
         "type": "String",        "placeholders": {}
     },
-    "verify": "Verifikasi",    "@verify": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} mengirim peristiwa {type}",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -706,9 +639,6 @@
             "type": {
                 "type": "String"            }
         }
-    },
-    "username": "Nama Pengguna",    "@username": {
-        "type": "String",        "placeholders": {}
     },
     "userIsTyping": "{username} sedang mengetik…",    "@userIsTyping": {
         "type": "String",        "placeholders": {
@@ -766,9 +696,6 @@
     },
     "tooManyRequestsWarning": "Terlalu banyak permintaan. Coba lagi nanti!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
-    },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
     },
     "theyMatch": "Cocok",    "@theyMatch": {
         "type": "String",        "placeholders": {}
@@ -869,9 +796,6 @@
     "search": "Cari",    "@search": {
         "type": "String",        "placeholders": {}
     },
-    "requestPermission": "Minta izin",    "@requestPermission": {
-        "type": "String",        "placeholders": {}
-    },
     "reportMessage": "Laporkan pesan",    "@reportMessage": {
         "type": "String",        "placeholders": {}
     },
@@ -914,12 +838,6 @@
     "pleaseChooseAPasscode": "Mohon pilih kode sandi",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
-    "play": "Mainkan {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
-    },
     "pin": "Pin",    "@pin": {
         "type": "String",        "placeholders": {}
     },
@@ -944,7 +862,7 @@
     "or": "Atau",    "@or": {
         "type": "String",        "placeholders": {}
     },
-    "serverRequiresEmail": "Server ini harus memvalidasi alamat email kamu untuk registrasi.",    "openInMaps": "Buka di peta",    "@openInMaps": {
+    "openInMaps": "Buka di peta",    "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
     "bundleName": "Nama bundel",    "removeFromBundle": "Hilangkan dari bundel ini",    "addToBundle": "Tambah ke bundel",    "editBundlesForAccount": "Edit bundel untuk akun ini",    "addAccount": "Tambah akun",    "oneClientLoggedOut": "Salah satu klienmu telah keluar",    "openCamera": "Buka kamera",    "@openCamera": {
@@ -1006,7 +924,7 @@
                 "type": "String"            }
         }
     },
-    "homeserver": "Homeserver",    "enableEncryption": "Aktifkan enkripsi",    "@enableEncryption": {
+    "enableEncryption": "Aktifkan enkripsi",    "@enableEncryption": {
         "type": "String",        "placeholders": {}
     },
     "editRoomAvatar": "Edit avatar ruangan",    "@editRoomAvatar": {
@@ -1098,16 +1016,7 @@
     "roomHasBeenUpgraded": "Ruangan telah ditingkatkan",    "@roomHasBeenUpgraded": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Dihapus oleh {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "removeAllOtherDevices": "Hapus semua perangkat lain",    "@removeAllOtherDevices": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Merekam",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "reason": "Alasan",    "@reason": {
@@ -1122,16 +1031,10 @@
     "pleaseEnterYourUsername": "Mohon masukkan nama penggunamu",    "@pleaseEnterYourUsername": {
         "type": "String",        "placeholders": {}
     },
-    "pleaseEnter4Digits": "Mohon masukkan 4 digit atau tinggalkan kosong untuk menonaktifkan kunci aplikasi.",    "@pleaseEnter4Digits": {
-        "type": "String",        "placeholders": {}
-    },
     "pleaseEnterYourPin": "Masukkan pin",    "@pleaseEnterYourPin": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Pilih gambar",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
-    "link": "Tautan",    "unverified": "Tidak terverifikasi",    "repeatPassword": "Ulangi kata sandi",    "messageInfo": "Informasi pesan",    "time": "Waktu",    "messageType": "Tipe Pesan",    "sender": "Pengirim",    "openGallery": "Buka galeri",    "start": "Mulai",    "removeFromSpace": "Hilangkan dari space",    "commandHint_clearcache": "Bersihkan tembolok",    "@commandHint_clearcache": {
+    "link": "Tautan",    "unverified": "Tidak terverifikasi",    "repeatPassword": "Ulangi kata sandi",    "messageInfo": "Informasi pesan",    "time": "Waktu",    "sender": "Pengirim",    "openGallery": "Buka galeri",    "removeFromSpace": "Hilangkan dari space",    "commandHint_clearcache": "Bersihkan tembolok",    "@commandHint_clearcache": {
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_discardsession": "Buang sesi",    "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
@@ -1139,7 +1042,7 @@
         "type": "String",        "description": "Usage hint for the command /dm"    },
     "commandHint_create": "Buat sebuah grup obrolan kosong\nGunakan --no-encryption untuk menonaktifkan enkripsi",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
-    "dismiss": "Abaikan",    "markAsRead": "Tandai sebagai dibaca",    "reportUser": "Laporkan pengguna",    "reactedWith": "{sender} bereaksi dengan {reaction}",    "@reactedWith": {
+    "markAsRead": "Tandai sebagai dibaca",    "reportUser": "Laporkan pengguna",    "reactedWith": "{sender} bereaksi dengan {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1189,7 +1092,7 @@
                 "type": "String"            }
         }
     },
-    "users": "Pengguna",    "recoveryKey": "Kunci pemulihan",    "storeInAppleKeyChain": "Simpan di Apple KeyChain",    "storeInAndroidKeystore": "Simpan di Android KeyStore",    "storeSecurlyOnThisDevice": "Simpan secara aman di perangkat ini",    "countFiles": "{count} file",    "@countFiles": {
+    "users": "Pengguna",    "storeInAppleKeyChain": "Simpan di Apple KeyChain",    "storeInAndroidKeystore": "Simpan di Android KeyStore",    "storeSecurlyOnThisDevice": "Simpan secara aman di perangkat ini",    "countFiles": "{count} file",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1201,7 +1104,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Tandai sebagai ruangan pesan langsung untuk ID Matrix yang ditentukan",    "commandHint_markasgroup": "Tandai sebagai grup",    "screenSharingTitle": "membagikan layar",    "noKeyForThisMessage": "Hal ini bisa terjadi jika pesan dikirim sebelum kamu masuk ke akunmu di perangkat ini.\n\nMungkin juga pengirim telah memblokir perangkatmu atau ada yang tidak beres dengan koneksi internet.\n\nApakah kamu bisa membaca pesan pada sesi lain? Maka kamu bisa mentransfer pesan dari sesi tersebut! Buka Pengaturan > Perangkat dan pastikan bahwa perangkat Anda telah ditandatangani secara silang. Ketika kamu membuka ruangan di lain waktu dan kedua sesi berada di latar depan, kunci akan ditransmisikan secara otomatis.\n\nApakah kamu tidak mau kehilangan kunci saat keluar atau berpindah perangkat? Pastikan bahwa kamu telah mengaktifkan cadangan obrolan dalam pengaturan.",    "foregroundServiceRunning": "Notifikasi ini ditampilkan ketika layanan latar depan berjalan.",    "whyIsThisMessageEncrypted": "Mengapa pesan ini tidak bisa dibaca?",    "newGroup": "Grup baru",    "newSpace": "Space baru",    "allSpaces": "Semua space",    "screenSharingDetail": "Kamu membagikan layarmu di JuMiKK-Chat",    "doNotShowAgain": "Jangan tampilkan lagi",    "hugContent": "{senderName} memeluk kamu",    "@hugContent": {
+    "commandHint_markasdm": "Tandai sebagai ruangan pesan langsung untuk ID Matrix yang ditentukan",    "commandHint_markasgroup": "Tandai sebagai grup",    "screenSharingTitle": "membagikan layar",    "noKeyForThisMessage": "Hal ini bisa terjadi jika pesan dikirim sebelum kamu masuk ke akunmu di perangkat ini.\n\nMungkin juga pengirim telah memblokir perangkatmu atau ada yang tidak beres dengan koneksi internet.\n\nApakah kamu bisa membaca pesan pada sesi lain? Maka kamu bisa mentransfer pesan dari sesi tersebut! Buka Pengaturan > Perangkat dan pastikan bahwa perangkat Anda telah ditandatangani secara silang. Ketika kamu membuka ruangan di lain waktu dan kedua sesi berada di latar depan, kunci akan ditransmisikan secara otomatis.\n\nApakah kamu tidak mau kehilangan kunci saat keluar atau berpindah perangkat? Pastikan bahwa kamu telah mengaktifkan cadangan obrolan dalam pengaturan.",    "foregroundServiceRunning": "Notifikasi ini ditampilkan ketika layanan latar depan berjalan.",    "whyIsThisMessageEncrypted": "Mengapa pesan ini tidak bisa dibaca?",    "newSpace": "Space baru",    "screenSharingDetail": "Kamu membagikan layarmu di JuMiKK-Chat",    "doNotShowAgain": "Jangan tampilkan lagi",    "hugContent": "{senderName} memeluk kamu",    "@hugContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1225,7 +1128,7 @@
                 "type": "String"            }
         }
     },
-    "newSpaceDescription": "Fitur space bisa membantu untuk memisahkan obrolanmu dan membuat komunitas pribadi atau publik.",    "sorryThatsNotPossible": "Maaf... itu tidak mungkin",    "deviceKeys": "Kunci perangkat:",    "encryptThisChat": "Enkripsi obrolan ini",    "disableEncryptionWarning": "Demi keamanan kamu tidak bisa menonaktifkan enkripsi dalam sebuah obrolan di mana sebelumbya sudah diaktifkan.",    "reopenChat": "Buka obrolan lagi",    "noBackupWarning": "Peringatan! Tanpa mengaktifkan cadangan percakapan, kamu akan kehilangan akses ke pesan terenkripsimu. Disarankan untuk mengaktifkan cadangan percakapan terlebih dahulu sebelum keluar dari akun.",    "noOtherDevicesFound": "Tidak ada perangkat lain yang ditemukan",    "fileIsTooBigForServer": "Tidak dapat mengirim! Server hanya mendukung lampiran sampai dengan {max}.",    "fileHasBeenSavedAt": "Berkas telah disimpan di {path}",    "@fileHasBeenSavedAt": {
+    "newSpaceDescription": "Fitur space bisa membantu untuk memisahkan obrolanmu dan membuat komunitas pribadi atau publik.",    "sorryThatsNotPossible": "Maaf... itu tidak mungkin",    "encryptThisChat": "Enkripsi obrolan ini",    "disableEncryptionWarning": "Demi keamanan kamu tidak bisa menonaktifkan enkripsi dalam sebuah obrolan di mana sebelumbya sudah diaktifkan.",    "reopenChat": "Buka obrolan lagi",    "noBackupWarning": "Peringatan! Tanpa mengaktifkan cadangan percakapan, kamu akan kehilangan akses ke pesan terenkripsimu. Disarankan untuk mengaktifkan cadangan percakapan terlebih dahulu sebelum keluar dari akun.",    "noOtherDevicesFound": "Tidak ada perangkat lain yang ditemukan",    "fileIsTooBigForServer": "Tidak dapat mengirim! Server hanya mendukung lampiran sampai dengan {max}.",    "fileHasBeenSavedAt": "Berkas telah disimpan di {path}",    "@fileHasBeenSavedAt": {
         "type": "String",        "placeholders": {
             "path": {
                 "type": "String"            }
@@ -1312,7 +1215,7 @@
                 "type": "String"            }
         }
     },
-    "publicSpaces": "Space publik",    "commandHint_sendraw": "Kirim JSON mentah",    "sendReadReceiptsDescription": "Anggota lain dalam percakapan dapat melihat ketika kamu membaca sebuah pesan.",    "block": "Blokir",    "blockedUsers": "Pengguna yang terblokir",    "blockListDescription": "Kamu bisa memblokir pengguna yang sedang menganggumu. Kamu tidak akan mendapatkan pesan atau undangan ruangan dari pengguna dalam daftar blokiran pribadimu.",    "blockUsername": "Abaikan nama pengguna",    "transparent": "Transparan",    "stickers": "Stiker",    "discover": "Jelajahi",    "yourGlobalUserIdIs": "ID pengguna globalmu adalah: ",    "select": "Pilih",    "nothingFound": "Tidak ada yang ditemukan...",    "thisDevice": "Perangkat ini:",    "newPassword": "Kata sandi baru",    "incomingMessages": "Pesan masuk",    "databaseMigrationTitle": "Basis data sudah dioptimalkan",    "searchForUsers": "Cari @pengguna...",    "completedKeyVerification": "{sender} menyelesaikan verifikasi kunci",    "@completedKeyVerification": {
+    "publicSpaces": "Space publik",    "commandHint_sendraw": "Kirim JSON mentah",    "sendReadReceiptsDescription": "Anggota lain dalam percakapan dapat melihat ketika kamu membaca sebuah pesan.",    "block": "Blokir",    "blockedUsers": "Pengguna yang terblokir",    "blockListDescription": "Kamu bisa memblokir pengguna yang sedang menganggumu. Kamu tidak akan mendapatkan pesan atau undangan ruangan dari pengguna dalam daftar blokiran pribadimu.",    "blockUsername": "Abaikan nama pengguna",    "stickers": "Stiker",    "discover": "Jelajahi",    "yourGlobalUserIdIs": "ID pengguna globalmu adalah: ",    "select": "Pilih",    "nothingFound": "Tidak ada yang ditemukan...",    "thisDevice": "Perangkat ini:",    "newPassword": "Kata sandi baru",    "incomingMessages": "Pesan masuk",    "databaseMigrationTitle": "Basis data sudah dioptimalkan",    "searchForUsers": "Cari @pengguna...",    "completedKeyVerification": "{sender} menyelesaikan verifikasi kunci",    "@completedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1341,16 +1244,10 @@
                 "type": "String"            }
         }
     },
-    "files": "Berkas",    "restricted": "Dibatasi",    "knockRestricted": "Ketukan dibatasi",    "sendCanceled": "Pengiriman dibatalkan",    "noChatsFoundHere": "Belum ada chat di sini. Mulai chat baru dengan seseorang menggunakan tombol di bawah. ⤵️",    "invitedBy": "📩 Diundang oleh {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"            }
-        }
-    },
-    "markAsUnread": "Tandai sebagai belum dibaca",    "goToSpace": "Pergi ke space: {space}",    "@goToSpace": {
+    "files": "Berkas",    "sendCanceled": "Pengiriman dibatalkan",    "noChatsFoundHere": "Belum ada chat di sini. Mulai chat baru dengan seseorang menggunakan tombol di bawah. ⤵️",    "markAsUnread": "Tandai sebagai belum dibaca",    "goToSpace": "Pergi ke space: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
-    "changeTheChatPermissions": "Ubah perizinan chat",    "changeTheCanonicalRoomAlias": "Ubah alamat chat publik utama",    "changeTheVisibilityOfChatHistory": "Ubah keterlihatan riwayat chat",    "changeTheDescriptionOfTheGroup": "Ubah deskripsi chat",    "sendingAttachment": "Mengirim lampiran...",    "compressVideo": "Mengompres video...",    "calculatingFileSize": "Menghitung ukuran berkas...",    "userLevel": "{level} - Pengguna",    "@userLevel": {
+    "changeTheChatPermissions": "Ubah perizinan chat",    "changeTheCanonicalRoomAlias": "Ubah alamat chat publik utama",    "changeTheVisibilityOfChatHistory": "Ubah keterlihatan riwayat chat",    "changeTheDescriptionOfTheGroup": "Ubah deskripsi chat",    "sendingAttachment": "Mengirim lampiran...",    "calculatingFileSize": "Menghitung ukuran berkas...",    "userLevel": "{level} - Pengguna",    "@userLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }
@@ -1368,13 +1265,13 @@
                 "type": "int"            }
         }
     },
-    "changeGeneralChatSettings": "Ubah pengaturan chat umum",    "loginWithMatrixId": "Masuk dengan ID Matrix",    "doesNotSeemToBeAValidHomeserver": "Sepertinya bukan homeserver yang kompatibel. URL salah?",    "unread": "Tidak dibaca",    "space": "Space",    "spaces": "Space",    "noMoreChatsFound": "Tidak ada chat lagi yang ditemukan...",    "changelog": "Catatan perubahan",    "sendRoomNotifications": "Kirim notifikasi @room",    "updateInstalled": "🎉 Pembaruan {version} terpasang!",    "@updateInstalled": {
+    "changeGeneralChatSettings": "Ubah pengaturan chat umum",    "loginWithMatrixId": "Masuk dengan ID Matrix",    "doesNotSeemToBeAValidHomeserver": "Sepertinya bukan homeserver yang kompatibel. URL salah?",    "unread": "Tidak dibaca",    "space": "Space",    "noMoreChatsFound": "Tidak ada chat lagi yang ditemukan...",    "changelog": "Catatan perubahan",    "sendRoomNotifications": "Kirim notifikasi @room",    "updateInstalled": "🎉 Pembaruan {version} terpasang!",    "@updateInstalled": {
         "type": "String",        "placeholders": {
             "version": {
                 "type": "String"            }
         }
     },
-    "inviteOtherUsers": "Undang pengguna lain ke chat ini",    "chatPermissionsDescription": "Tentukan tingkat kekuasaan yang diperlukan untuk tindakan tertentu dalam chat ini. Tingkat kekuasaan 0, 50 dan 100 biasanya mewakili pengguna, moderator dan admin, tetapi gradasi apa pun dimungkinkan.",    "oneOfYourDevicesIsNotVerified": "Salah satu perangkat Anda tidak terverifikasi",    "noticeChatBackupDeviceVerification": "Catatan: Ketika Anda menghubungkan semua perangkat Anda ke cadangan chat, mereka akan diverifikasi secara otomatis.",    "welcomeText": "Halo 👋 Ini JuMiKK-Chat. Kamu bisa masuk ke homeserver mana pun, yang kompatibel dengan https://matrix.org. Lalu, chat dengan siapa pun. Ini merupakan jaringan perpesanan besar yang terdesentralisasi!",    "continueText": "Lanjutkan",    "aboutHomeserver": "Tentang {homeserver}",    "@aboutHomeserver": {
+    "inviteOtherUsers": "Undang pengguna lain ke chat ini",    "chatPermissionsDescription": "Tentukan tingkat kekuasaan yang diperlukan untuk tindakan tertentu dalam chat ini. Tingkat kekuasaan 0, 50 dan 100 biasanya mewakili pengguna, moderator dan admin, tetapi gradasi apa pun dimungkinkan.",    "oneOfYourDevicesIsNotVerified": "Salah satu perangkat Anda tidak terverifikasi",    "noticeChatBackupDeviceVerification": "Catatan: Ketika Anda menghubungkan semua perangkat Anda ke cadangan chat, mereka akan diverifikasi secara otomatis.",    "continueText": "Lanjutkan",    "aboutHomeserver": "Tentang {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1404,7 +1301,7 @@
                 "type": "String"            }
         }
     },
-    "appWantsToUseForLoginDescription": "Anda memperbolehkan aplikasi dan situs web membagikan informasi tentang Anda.",    "open": "Buka",    "takeAPhoto": "Ambil foto",    "recordAVideo": "Rekam video",    "optionalMessage": "Pesan (opsional)...",    "notSupportedOnThisDevice": "Tidak didukung pada perangkat ini",    "enterNewChat": "Masuk ke obrolan baru",    "commandHint_roomupgrade": "Tingkatkan ruangan ini ke versi ruangan yang ditentukan",    "pleaseWaitUntilInvited": "Silakan menunggu sampai seseorang dari ruangan mengundang Anda.",    "ignoreUser": "Abaikan pengguna",    "approve": "Terima",    "youHaveKnocked": "Anda telah mengetuk",    "sentVoiceMessage": "🎙️ {duration} - Pesan suara dari {sender}",    "@sentVoiceMessage": {
+    "appWantsToUseForLoginDescription": "Anda memperbolehkan aplikasi dan situs web membagikan informasi tentang Anda.",    "open": "Buka",    "takeAPhoto": "Ambil foto",    "recordAVideo": "Rekam video",    "optionalMessage": "Pesan (opsional)...",    "notSupportedOnThisDevice": "Tidak didukung pada perangkat ini",    "enterNewChat": "Masuk ke obrolan baru",    "commandHint_roomupgrade": "Tingkatkan ruangan ini ke versi ruangan yang ditentukan",    "pleaseWaitUntilInvited": "Silakan menunggu sampai seseorang dari ruangan mengundang Anda.",    "approve": "Terima",    "youHaveKnocked": "Anda telah mengetuk",    "sentVoiceMessage": "🎙️ {duration} - Pesan suara dari {sender}",    "@sentVoiceMessage": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1436,13 +1333,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} memulai polling.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Polling",    "startPoll": "Mulai polling",    "endPoll": "Akhiri polling",    "answersVisible": "Jawaban terlihat",    "pollQuestion": "Pertanyaan polling",    "answerOption": "Opsi jawaban",    "addAnswerOption": "Tambah opsi jawaban",    "allowMultipleAnswers": "Izinkan beberapa jawaban",    "pollHasBeenEnded": "Polling telah diakhiri",    "countVotes": "{count, plural, =1{Satu suara} other{{count} suara}}",    "@countVotes": {
+    "startPoll": "Mulai polling",    "endPoll": "Akhiri polling",    "answersVisible": "Jawaban terlihat",    "pollQuestion": "Pertanyaan polling",    "answerOption": "Opsi jawaban",    "addAnswerOption": "Tambah opsi jawaban",    "allowMultipleAnswers": "Izinkan beberapa jawaban",    "pollHasBeenEnded": "Polling telah diakhiri",    "countVotes": "{count, plural, =1{Satu suara} other{{count} suara}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1477,7 +1368,7 @@
                 "type": "int"            }
         }
     },
-    "check": "Periksa",    "encryptedMessage": "Pesan terenkripsi",    "unencryptedMessage": "Pesan tidak terenkripsi",    "allow": "Izinkan",    "messageCanOnlyBeReadByUser": "Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh pengguna ini:",    "messageCanOnlyBeReadByUsers": "Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh para pengguna ini:",    "publicKey": "Kunci publik: {key}",    "@publicKey": {
+    "encryptedMessage": "Pesan terenkripsi",    "unencryptedMessage": "Pesan tidak terenkripsi",    "messageCanOnlyBeReadByUser": "Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh pengguna ini:",    "messageCanOnlyBeReadByUsers": "Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh para pengguna ini:",    "publicKey": "Kunci publik: {key}",    "@publicKey": {
         "type": "String",        "placeholders": {
             "key": {
                 "type": "String"            }

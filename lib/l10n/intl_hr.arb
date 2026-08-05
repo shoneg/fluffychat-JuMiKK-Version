@@ -111,22 +111,6 @@
                 "type": "String"            }
         }
     },
-    "changedTheChatDescriptionTo": "{username} je promijenio/la opis chata u: '{description}'",    "@changedTheChatDescriptionTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "description": {
-                "type": "String"            }
-        }
-    },
-    "changedTheChatNameTo": "{username} je promijenio/la ime chata u: '{chatname}'",    "@changedTheChatNameTo": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            },
-            "chatname": {
-                "type": "String"            }
-        }
-    },
     "changedTheChatPermissions": "{username} je promijenio/la dozvole chata",    "@changedTheChatPermissions": {
         "type": "String",        "placeholders": {
             "username": {
@@ -350,12 +334,6 @@
     "deleteMessage": "Izbriši poruku",    "@deleteMessage": {
         "type": "String",        "placeholders": {}
     },
-    "device": "Uređaj",    "@device": {
-        "type": "String",        "placeholders": {}
-    },
-    "deviceId": "ID oznaka uređaja",    "@deviceId": {
-        "type": "String",        "placeholders": {}
-    },
     "devices": "Uređaji",    "@devices": {
         "type": "String",        "placeholders": {}
     },
@@ -387,9 +365,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteInvalid": "Neispravna kratica emotikona!",    "@emoteInvalid": {
-        "type": "String",        "placeholders": {}
-    },
-    "emotePacks": "Paketi emotikona za sobu",    "@emotePacks": {
         "type": "String",        "placeholders": {}
     },
     "emoteSettings": "Postavke emotikona",    "@emoteSettings": {
@@ -426,12 +401,6 @@
         }
     },
     "enterAnEmailAddress": "Upiši e-mail adresu",    "@enterAnEmailAddress": {
-        "type": "String",        "placeholders": {}
-    },
-    "fileName": "Ime datoteke",    "@fileName": {
-        "type": "String",        "placeholders": {}
-    },
-    "fluffychat": "JuMiKK-Chat",    "@fluffychat": {
         "type": "String",        "placeholders": {}
     },
     "fontSize": "Veličina fonta",    "@fontSize": {
@@ -478,13 +447,7 @@
     "help": "Pomoć",    "@help": {
         "type": "String",        "placeholders": {}
     },
-    "hideRedactedEvents": "Sakrij promijenjene događaje",    "@hideRedactedEvents": {
-        "type": "String",        "placeholders": {}
-    },
     "hideUnknownEvents": "Sakrij nepoznate događaje",    "@hideUnknownEvents": {
-        "type": "String",        "placeholders": {}
-    },
-    "id": "ID",    "@id": {
         "type": "String",        "placeholders": {}
     },
     "ignore": "Zanemari",    "@ignore": {
@@ -612,9 +575,6 @@
     "muteChat": "Isključi zvuk chata",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
-    "needPantalaimonWarning": "Za trenutačno korištenje obostranog šifriranja trebaš Pantalaimon.",    "@needPantalaimonWarning": {
-        "type": "String",        "placeholders": {}
-    },
     "newChat": "Novi chat",    "@newChat": {
         "type": "String",        "placeholders": {}
     },
@@ -639,9 +599,6 @@
     "noEncryptionForPublicRooms": "Šifriranje možeš aktivirati samo nakon što soba više nije javno dostupna.",    "@noEncryptionForPublicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "none": "Ništa",    "@none": {
-        "type": "String",        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "Još nisi dodao/la način za obnavljanje lozinke.",    "@noPasswordRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
@@ -660,13 +617,7 @@
                 "type": "int"            }
         }
     },
-    "offline": "Nepovezano s internetom",    "@offline": {
-        "type": "String",        "placeholders": {}
-    },
     "ok": "U redu",    "@ok": {
-        "type": "String",        "placeholders": {}
-    },
-    "online": "Povezano s internetom",    "@online": {
         "type": "String",        "placeholders": {}
     },
     "onlineKeyBackupEnabled": "Internetski ključ sigurnosnih kopija je aktiviran",    "@onlineKeyBackupEnabled": {
@@ -705,25 +656,13 @@
     "passwordRecovery": "Obnavljanje lozinke",    "@passwordRecovery": {
         "type": "String",        "placeholders": {}
     },
-    "pickImage": "Odaberi sliku",    "@pickImage": {
-        "type": "String",        "placeholders": {}
-    },
     "pin": "Prikvači",    "@pin": {
         "type": "String",        "placeholders": {}
-    },
-    "play": "Sviraj {fileName}",    "@play": {
-        "type": "String",        "placeholders": {
-            "fileName": {
-                "type": "String"            }
-        }
     },
     "pleaseChooseAPasscode": "Odaberi lozinku",    "@pleaseChooseAPasscode": {
         "type": "String",        "placeholders": {}
     },
     "pleaseClickOnLink": "Pritisni poveznicu u e-mailu i zatim nastavi.",    "@pleaseClickOnLink": {
-        "type": "String",        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Upiši 4 znamenke ili ostavi prazno, za deaktiviranje zaključavanja programa.",    "@pleaseEnter4Digits": {
         "type": "String",        "placeholders": {}
     },
     "pleaseEnterYourPassword": "Upiši svoju lozinku",    "@pleaseEnterYourPassword": {
@@ -744,13 +683,7 @@
     "publicRooms": "Javne sobe",    "@publicRooms": {
         "type": "String",        "placeholders": {}
     },
-    "pushRules": "Pravila slanja",    "@pushRules": {
-        "type": "String",        "placeholders": {}
-    },
     "reason": "Razlog",    "@reason": {
-        "type": "String",        "placeholders": {}
-    },
-    "recording": "Snimanje",    "@recording": {
         "type": "String",        "placeholders": {}
     },
     "redactedAnEvent": "{username} je preuredio/la događaj",    "@redactedAnEvent": {
@@ -760,9 +693,6 @@
         }
     },
     "redactMessage": "Ispravi poruku",    "@redactMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "register": "Registracija",    "@register": {
         "type": "String",        "placeholders": {}
     },
     "reject": "Odbij",    "@reject": {
@@ -780,12 +710,6 @@
     "removeAllOtherDevices": "Ukloni sve druge uređaje",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
-    "removedBy": "Uklonjeno od {username}",    "@removedBy": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
     "unbanFromChat": "Ponovo uključi u chat",    "@unbanFromChat": {
         "type": "String",        "placeholders": {}
     },
@@ -799,9 +723,6 @@
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Prijavi poruku",    "@reportMessage": {
-        "type": "String",        "placeholders": {}
-    },
-    "requestPermission": "Zatraži dozvolu",    "@requestPermission": {
         "type": "String",        "placeholders": {}
     },
     "roomHasBeenUpgraded": "Soba je nadograđena",    "@roomHasBeenUpgraded": {
@@ -896,9 +817,6 @@
                 "type": "String"            }
         }
     },
-    "showPassword": "Pokaži lozinku",    "@showPassword": {
-        "type": "String",        "placeholders": {}
-    },
     "skip": "Preskoči",    "@skip": {
         "type": "String",        "placeholders": {}
     },
@@ -938,16 +856,10 @@
     "theyMatch": "Poklapaju se",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "title": "JuMiKK-Chat",    "@title": {
-        "description": "Title for the application",        "type": "String",        "placeholders": {}
-    },
     "tooManyRequestsWarning": "Previše zahtjeva. Pokušaj ponovo kasnije!",    "@tooManyRequestsWarning": {
         "type": "String",        "placeholders": {}
     },
     "tryToSendAgain": "Pokušaj ponovo poslati",    "@tryToSendAgain": {
-        "type": "String",        "placeholders": {}
-    },
-    "unavailable": "Nedostupno",    "@unavailable": {
         "type": "String",        "placeholders": {}
     },
     "unbannedUser": "{username} je ponovo uključio/la {targetName}",    "@unbannedUser": {
@@ -1007,9 +919,6 @@
                 "type": "String"            }
         }
     },
-    "username": "Korisničko ime",    "@username": {
-        "type": "String",        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} ja poslao/la {type} događaj",    "@userSentUnknownEvent": {
         "type": "String",        "placeholders": {
             "username": {
@@ -1019,9 +928,6 @@
         }
     },
     "verified": "Potvrđeno",    "@verified": {
-        "type": "String",        "placeholders": {}
-    },
-    "verify": "Potvrdi",    "@verify": {
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Pokreni potvrđivanje",    "@verifyStart": {
@@ -1125,10 +1031,7 @@
     "autoplayImages": "Automatski pokreni animirane naljepnice i emotikone",    "@autoplayImages": {
         "type": "String",        "placeholder": {}
     },
-    "allChats": "Svi chatovi",    "@allChats": {
-        "type": "String",        "placeholders": {}
-    },
-    "addToSpace": "Dodaj u prostor",    "serverRequiresEmail": "Za registraciju ovaj server mora potvrditi tvoju e-mail adresu.",    "scanQrCode": "Snimi QR kod",    "homeserver": "Homeserver",    "sendOnEnter": "Pošalji pritiskom tipke enter",    "link": "Poveznica",    "bundleName": "Ime paketa",    "removeFromBundle": "Ukloni iz ovog paketa",    "addToBundle": "Dodaj u paket",    "editBundlesForAccount": "Uredi pakete za ovaj račun",    "addAccount": "Dodaj račun",    "oneClientLoggedOut": "Jedan od tvojih klijenata je odjavljen",    "unverified": "Nepotvrđeno",    "repeatPassword": "Ponovi lozinku",    "messageInfo": "Informacija poruke",    "messageType": "Vrsta poruke",    "sender": "Pošiljatelj",    "openGallery": "Otvori galeriju",    "time": "Vrijeme",    "removeFromSpace": "Ukloni iz prostora",    "start": "Početak",    "commandHint_clearcache": "Isprazni predmemoriju",    "@commandHint_clearcache": {
+    "addToSpace": "Dodaj u prostor",    "scanQrCode": "Snimi QR kod",    "sendOnEnter": "Pošalji pritiskom tipke enter",    "link": "Poveznica",    "bundleName": "Ime paketa",    "removeFromBundle": "Ukloni iz ovog paketa",    "addToBundle": "Dodaj u paket",    "editBundlesForAccount": "Uredi pakete za ovaj račun",    "addAccount": "Dodaj račun",    "oneClientLoggedOut": "Jedan od tvojih klijenata je odjavljen",    "unverified": "Nepotvrđeno",    "repeatPassword": "Ponovi lozinku",    "messageInfo": "Informacija poruke",    "sender": "Pošiljatelj",    "openGallery": "Otvori galeriju",    "time": "Vrijeme",    "removeFromSpace": "Ukloni iz prostora",    "commandHint_clearcache": "Isprazni predmemoriju",    "@commandHint_clearcache": {
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_create": "Stvori prazan grupni chat\nKoristi --no-encryption za deaktiviranje šifriranja",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
@@ -1136,7 +1039,7 @@
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_dm": "Započni izravni chat\nKoristi --no-encryption za deaktiviranje šifriranja",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    "markAsRead": "Označi kao pročitano",    "reportUser": "Prijavi korisnika",    "dismiss": "Odbaci",    "unsupportedAndroidVersion": "Nepodržana Android verzija",    "unsupportedAndroidVersionLong": "Ova funkcija zahtijeva noviju verziju Androida. Provjeri, postoje li nove verzije ili podrška za Lineage OS.",    "recoveryKey": "Ključ za obnavljanje",    "youKickedAndBanned": "🙅 Izbacio/la i isključio/la si korisnika {user}",    "@youKickedAndBanned": {
+    "markAsRead": "Označi kao pročitano",    "reportUser": "Prijavi korisnika",    "unsupportedAndroidVersion": "Nepodržana Android verzija",    "unsupportedAndroidVersionLong": "Ova funkcija zahtijeva noviju verziju Androida. Provjeri, postoje li nove verzije ili podrška za Lineage OS.",    "youKickedAndBanned": "🙅 Izbacio/la i isključio/la si korisnika {user}",    "@youKickedAndBanned": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1204,13 +1107,13 @@
                 "type": "String"            }
         }
     },
-    "noBackupWarning": "Upozorenje! Bez aktiviranja spremanja sigurnosne kopije chata, izgubit ćeš pristup tvojim šifriranim porukama. Preporučujemo spremanje sigurnosne kopije chata prije odjave.",    "noOtherDevicesFound": "Nijedan drugi uređaj nije pronađen",    "whyIsThisMessageEncrypted": "Zašto nije moguće čitati ovu poruku?",    "jump": "Skoči",    "newSpaceDescription": "Prostori omogućuju konsolidiranje tvojih chatova i izgradnju privatne ili javne zajednice.",    "encryptThisChat": "Šifiraj ovaj chat",    "deviceKeys": "Ključevi uređaja:",    "foregroundServiceRunning": "Ova se obavijest pojavljuje kada se pokreće usluga u prvom planu.",    "commandHint_hug": "Pošalji grljenje",    "commandHint_googly": "Pošalji kotrljajuće oči",    "commandHint_cuddle": "Pošalji maženje",    "confirmMatrixId": "Za brisanje tvog računa potvrdi svoj Matrix ID.",    "supposedMxid": "Trebao bi biti {mxid}",    "@supposedMxid": {
+    "noBackupWarning": "Upozorenje! Bez aktiviranja spremanja sigurnosne kopije chata, izgubit ćeš pristup tvojim šifriranim porukama. Preporučujemo spremanje sigurnosne kopije chata prije odjave.",    "noOtherDevicesFound": "Nijedan drugi uređaj nije pronađen",    "whyIsThisMessageEncrypted": "Zašto nije moguće čitati ovu poruku?",    "jump": "Skoči",    "newSpaceDescription": "Prostori omogućuju konsolidiranje tvojih chatova i izgradnju privatne ili javne zajednice.",    "encryptThisChat": "Šifiraj ovaj chat",    "foregroundServiceRunning": "Ova se obavijest pojavljuje kada se pokreće usluga u prvom planu.",    "commandHint_hug": "Pošalji grljenje",    "commandHint_googly": "Pošalji kotrljajuće oči",    "commandHint_cuddle": "Pošalji maženje",    "confirmMatrixId": "Za brisanje tvog računa potvrdi svoj Matrix ID.",    "supposedMxid": "Trebao bi biti {mxid}",    "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
         }
     },
-    "screenSharingDetail": "Dijeliš svoj ekran u FuffyChatu",    "newGroup": "Nova grupa",    "allSpaces": "Svi prostori",    "screenSharingTitle": "dijeljenje ekrana",    "newSpace": "Novi prostor",    "sorryThatsNotPossible": "Žao nam je … to nije moguće",    "disableEncryptionWarning": "Iz sigurnosnih razloga ne možeš deaktivirati šifriranje u chatu u kojem je prije bilo aktivirano.",    "googlyEyesContent": "{senderName} ti šalje kotrljajuće oči",    "@googlyEyesContent": {
+    "screenSharingDetail": "Dijeliš svoj ekran u FuffyChatu",    "screenSharingTitle": "dijeljenje ekrana",    "newSpace": "Novi prostor",    "sorryThatsNotPossible": "Žao nam je … to nije moguće",    "disableEncryptionWarning": "Iz sigurnosnih razloga ne možeš deaktivirati šifriranje u chatu u kojem je prije bilo aktivirano.",    "googlyEyesContent": "{senderName} ti šalje kotrljajuće oči",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1257,7 +1160,7 @@
                 "type": "String"            }
         }
     },
-    "pleaseEnterANumber": "Upiši broj veći od 0",    "pushNotificationsNotAvailable": "Automatsko slanje obavijesti nije dostupno",    "learnMore": "Saznaj više",    "createGroupAndInviteUsers": "Stvori grupu i pozovi korisnike",    "blockedUsers": "Blokirani korisnici",    "groupCanBeFoundViaSearch": "Grupa se može pronaći putem pretrage",    "block": "Blokiraj",    "yourGlobalUserIdIs": "Tvoj globalni korisnički ID je: ",    "commandHint_sendraw": "Pošalji neobrađeni json",    "wrongRecoveryKey": "Oprosti … čini se da ovo nije ispravan ključ za obnavljanje.",    "blockUsername": "Zanemari korisničko ime",    "groupName": "Ime grupe",    "databaseMigrationTitle": "Baza podataka je optimirana",    "searchChatsRooms": "Traži #chats, @users …",    "databaseMigrationBody": "Pričekaj. Ovo može potrajati.",    "transparent": "Prozirno",    "formattedMessages": "Formatirane poruke",    "incomingMessages": "Dolazne poruke",    "passwordsDoNotMatch": "Lozinke se ne poklapaju",    "accessAndVisibility": "Pristup i vidljivost",    "calls": "Pozivi",    "customEmojisAndStickers": "Prilagođeni emojiji i naljepnice",    "customEmojisAndStickersBody": "Dodaj ili dijeli prilagođene emojije ili naljepnice koje se mogu koristiti u bilo kojem chatu.",    "accessAndVisibilityDescription": "Tko se smije pridružiti ovom chatu i kako se chat može otkriti.",    "stickers": "Naljepnice",    "discover": "Otkrij",    "formattedMessagesDescription": "Prikaži formatirani sadržaj poruke poput podebljanog teksta koristeći markdown.",    "nothingFound": "Ništa nije pronađeno...",    "select": "Odaberi",    "newPassword": "Nova lozinka",    "unbanUserDescription": "Korisnik će se ponovo moći pridružiti chatu ako pokuša.",    "publicSpaces": "Javni prostori",    "thisDevice": "Ovaj uređaj:",    "pleaseEnterYourCurrentPassword": "Upiši svoju trenutačnu lozinku",    "passwordIsWrong": "Tvoja upisana lozinka je kriva",    "initAppError": "Dogodila se greška prilikom inicijaliziranja aplikacije",    "hideRedactedMessagesBody": "Ako netko redigira poruku, ta poruka više neće biti vidljiva u chatu.",    "kickUserDescription": "Korisnik je izbačen iz chata, ali nije isključen. U javnim chatovima se korisnik može ponovo pridružiti u bilo kojem trenutku.",    "addChatOrSubSpace": "Dodaj chat ili podpodručje",    "appLockDescription": "Zaključaj aplikaciju kada je ne koristiš s PIN kodom",    "globalChatId": "Globalni ID chata",    "hideRedactedMessages": "Sakrij redigirane poruke",    "hideInvalidOrUnknownMessageFormats": "Sakrij nevažeće ili nepoznate formate poruka",    "passwordRecoverySettings": "Postavke za obnavljanje lozinke",    "usersMustKnock": "Korisnici moraju pokucati",    "noOneCanJoin": "Nitko se ne može pridružiti",    "knock": "Pokucaj",    "knocking": "Kucanje",    "chatCanBeDiscoveredViaSearchOnServer": "Chat se može otkriti pretraživanjem servera {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "pleaseEnterANumber": "Upiši broj veći od 0",    "pushNotificationsNotAvailable": "Automatsko slanje obavijesti nije dostupno",    "learnMore": "Saznaj više",    "createGroupAndInviteUsers": "Stvori grupu i pozovi korisnike",    "blockedUsers": "Blokirani korisnici",    "groupCanBeFoundViaSearch": "Grupa se može pronaći putem pretrage",    "block": "Blokiraj",    "yourGlobalUserIdIs": "Tvoj globalni korisnički ID je: ",    "commandHint_sendraw": "Pošalji neobrađeni json",    "wrongRecoveryKey": "Oprosti … čini se da ovo nije ispravan ključ za obnavljanje.",    "blockUsername": "Zanemari korisničko ime",    "groupName": "Ime grupe",    "databaseMigrationTitle": "Baza podataka je optimirana",    "searchChatsRooms": "Traži #chats, @users …",    "databaseMigrationBody": "Pričekaj. Ovo može potrajati.",    "formattedMessages": "Formatirane poruke",    "incomingMessages": "Dolazne poruke",    "passwordsDoNotMatch": "Lozinke se ne poklapaju",    "accessAndVisibility": "Pristup i vidljivost",    "calls": "Pozivi",    "customEmojisAndStickers": "Prilagođeni emojiji i naljepnice",    "customEmojisAndStickersBody": "Dodaj ili dijeli prilagođene emojije ili naljepnice koje se mogu koristiti u bilo kojem chatu.",    "accessAndVisibilityDescription": "Tko se smije pridružiti ovom chatu i kako se chat može otkriti.",    "stickers": "Naljepnice",    "discover": "Otkrij",    "formattedMessagesDescription": "Prikaži formatirani sadržaj poruke poput podebljanog teksta koristeći markdown.",    "nothingFound": "Ništa nije pronađeno...",    "select": "Odaberi",    "newPassword": "Nova lozinka",    "unbanUserDescription": "Korisnik će se ponovo moći pridružiti chatu ako pokuša.",    "publicSpaces": "Javni prostori",    "thisDevice": "Ovaj uređaj:",    "pleaseEnterYourCurrentPassword": "Upiši svoju trenutačnu lozinku",    "passwordIsWrong": "Tvoja upisana lozinka je kriva",    "initAppError": "Dogodila se greška prilikom inicijaliziranja aplikacije",    "hideRedactedMessagesBody": "Ako netko redigira poruku, ta poruka više neće biti vidljiva u chatu.",    "kickUserDescription": "Korisnik je izbačen iz chata, ali nije isključen. U javnim chatovima se korisnik može ponovo pridružiti u bilo kojem trenutku.",    "addChatOrSubSpace": "Dodaj chat ili podpodručje",    "appLockDescription": "Zaključaj aplikaciju kada je ne koristiš s PIN kodom",    "globalChatId": "Globalni ID chata",    "hideRedactedMessages": "Sakrij redigirane poruke",    "hideInvalidOrUnknownMessageFormats": "Sakrij nevažeće ili nepoznate formate poruka",    "passwordRecoverySettings": "Postavke za obnavljanje lozinke",    "usersMustKnock": "Korisnici moraju pokucati",    "noOneCanJoin": "Nitko se ne može pridružiti",    "knock": "Pokucaj",    "knocking": "Kucanje",    "chatCanBeDiscoveredViaSearchOnServer": "Chat se može otkriti pretraživanjem servera {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1317,10 +1220,10 @@
                 "type": "String"            }
         }
     },
-    "restricted": "Ograničeni",    "roomUpgradeDescription": "Chat će se tada ponovo stvoriti s novom verzijom sobe. Svi sudionici će biti obaviješteni da se moraju prebaciti na novi chat. Više o verzijama soba možeš saznati na https://spec.matrix.org/latest/rooms/",    "noGoogleServicesWarning": "Čini se da Firebase Cloud Messaging nije dostupan na tvom uređaju. Za daljnje primanje push obavijesti, preporučujemo da instaliraš ntfy. S ntfy ili drugim pružateljem Unified Push usluge možeš primati push obavijesti na podatkovno siguran način. Ntfy možeš preuzeti s PlayStorea ili s F-Droida.",    "@noGoogleServicesWarning": {
+    "roomUpgradeDescription": "Chat će se tada ponovo stvoriti s novom verzijom sobe. Svi sudionici će biti obaviješteni da se moraju prebaciti na novi chat. Više o verzijama soba možeš saznati na https://spec.matrix.org/latest/rooms/",    "noGoogleServicesWarning": "Čini se da Firebase Cloud Messaging nije dostupan na tvom uređaju. Za daljnje primanje push obavijesti, preporučujemo da instaliraš ntfy. S ntfy ili drugim pružateljem Unified Push usluge možeš primati push obavijesti na podatkovno siguran način. Ntfy možeš preuzeti s PlayStorea ili s F-Droida.",    "@noGoogleServicesWarning": {
         "type": "String",        "placeholders": {}
     },
-    "verifyOtherDeviceDescription": "Kada potvrdiš jedan drugi uređaj, ti uređaji mogu razmjenjivati ključeve, povećavajući tvoju ukupnu sigurnost. 💪 Kada pokreneš provjeru, pojavit će se skočni prozor u aplikaciji na oba uređaja. Tamo ćeš tada vidjeti niz emojija ili brojeve koje moraš međusobno usporediti. Najbolje je imati oba uređaja pri ruci prije nego što započneš provjeru. 🤳",    "verifyOtherUserDescription": "Ako potvrdiš jednog drugog korisnika, možeš biti siguran/na da znaš kome zapravo pišeš. 💪\n\nKada pokreneš provjeru, vi i drugi korisnik vidjet ćete skočni prozor u aplikaciji. Tamo ćeš tada vidjeti niz emojija ili brojeve koje morate međusobno usporediti.\n\nNajbolji način za to je da se nađete zajedno ili započnete videopoziv. 👭",    "knockRestricted": "Pokucaj na ograničene sobe",    "makeAdminDescription": "Nakon postavljanja ovog korisnika kao administratora, to možda nećeš moći poništiti jer će on tada imati iste dozvole kao i ti.",    "leaveEmptyToClearStatus": "Ostavi prazno za brisanje tvog stanja.",    "sendReadReceipts": "Šalji potvrde o čitanju",    "acceptedKeyVerification": "{sender} je prihvatio/la potvrđivanje ključa",    "@acceptedKeyVerification": {
+    "verifyOtherDeviceDescription": "Kada potvrdiš jedan drugi uređaj, ti uređaji mogu razmjenjivati ključeve, povećavajući tvoju ukupnu sigurnost. 💪 Kada pokreneš provjeru, pojavit će se skočni prozor u aplikaciji na oba uređaja. Tamo ćeš tada vidjeti niz emojija ili brojeve koje moraš međusobno usporediti. Najbolje je imati oba uređaja pri ruci prije nego što započneš provjeru. 🤳",    "verifyOtherUserDescription": "Ako potvrdiš jednog drugog korisnika, možeš biti siguran/na da znaš kome zapravo pišeš. 💪\n\nKada pokreneš provjeru, vi i drugi korisnik vidjet ćete skočni prozor u aplikaciji. Tamo ćeš tada vidjeti niz emojija ili brojeve koje morate međusobno usporediti.\n\nNajbolji način za to je da se nađete zajedno ili započnete videopoziv. 👭",    "makeAdminDescription": "Nakon postavljanja ovog korisnika kao administratora, to možda nećeš moći poništiti jer će on tada imati iste dozvole kao i ti.",    "leaveEmptyToClearStatus": "Ostavi prazno za brisanje tvog stanja.",    "sendReadReceipts": "Šalji potvrde o čitanju",    "acceptedKeyVerification": "{sender} je prihvatio/la potvrđivanje ključa",    "@acceptedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1341,13 +1244,13 @@
     "commandHint_unignore": "Poništi zanemarivanje navedenog matrix ID-a",    "noDatabaseEncryption": "Šifriranje baze podataka nije podržano na ovoj platformi",    "thereAreCountUsersBlocked": "Broj trenutačno blokiranih korisnika: {count}.",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "swipeRightToLeftToReply": "Za odgovaranje povuci prstom zdesna ulijevo",    "sendingAttachment": "Slanje priloga …",    "ignoreUser": "Zanemari korisnika",    "aboutHomeserver": "Informacije o {homeserver}",    "@aboutHomeserver": {
+    "swipeRightToLeftToReply": "Za odgovaranje povuci prstom zdesna ulijevo",    "sendingAttachment": "Slanje priloga …",    "aboutHomeserver": "Informacije o {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
         }
     },
-    "commandHint_roomupgrade": "Nadogradi ovu sobu na zadanu verziju sobe",    "noMoreChatsFound": "Nema više chatova …",    "noChatsFoundHere": "Ovdje još nisu pronađeni chatovi. Započni novi chat s nekime pomoću donjeg gumba. ⤵️",    "unread": "Nepročitano",    "space": "Prostor",    "spaces": "Prostori",    "changedTheChatDescription": "{username} je promijenio/la opis chata",    "changedTheChatName": "{username} je promijenio/la ime chata",    "checkList": "Kontrolni popis",    "countInvited": "Broj pozvanih: {count}",    "@countInvited": {
+    "commandHint_roomupgrade": "Nadogradi ovu sobu na zadanu verziju sobe",    "noMoreChatsFound": "Nema više chatova …",    "noChatsFoundHere": "Ovdje još nisu pronađeni chatovi. Započni novi chat s nekime pomoću donjeg gumba. ⤵️",    "unread": "Nepročitano",    "space": "Prostor",    "changedTheChatDescription": "{username} je promijenio/la opis chata",    "changedTheChatName": "{username} je promijenio/la ime chata",    "checkList": "Kontrolni popis",    "countInvited": "Broj pozvanih: {count}",    "@countInvited": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1362,12 +1265,6 @@
     "synchronizingPleaseWaitCounter": " Sinkronizacija … ({percentage} %)",    "@synchronizingPleaseWaitCounter": {
         "type": "String",        "placeholders": {
             "percentage": {
-                "type": "String"            }
-        }
-    },
-    "invitedBy": "📩 Pozvan/a si od korisnika {user}",    "@invitedBy": {
-        "placeholders": {
-            "user": {
                 "type": "String"            }
         }
     },
@@ -1398,7 +1295,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Dnevnik promjena",    "sendCanceled": "Slanje je prekinuto",    "loginWithMatrixId": "Prijava pomoću Matrix-ID-a",    "doesNotSeemToBeAValidHomeserver": "Čini se da nije kompatibilan homeserver. Pogrešan URL?",    "calculatingFileSize": "Izračunavanje veličine datoteke …",    "compressVideo": "Komprimiranje videa …",    "oneOfYourDevicesIsNotVerified": "Jedan od tvojih uređaja nije potvrđen",    "noticeChatBackupDeviceVerification": "Napomena: Kada spojiš sve svoje uređaje na sigurnosnu kopiju chata, oni se automatski potvrđuju.",    "continueText": "Nastavi",    "welcomeText": "Hej, hej 👋, ovdje JuMiKK-Chat. Možeš se prijaviti na bilo koji homeserver koji je kompatibilan s https://matrix.org. I onda razgovaraj s bilo kim. To je ogromna decentralizirana mreža za razmjenu poruka!",    "blur": "Zamućenost:",    "opacity": "Neprozirnost:",    "setWallpaper": "Postavi sliku pozadine",    "manageAccount": "Upravljaj računom",    "noContactInformationProvided": "Server ne pruža nikoje valjane kontakt podatke",    "contactServerAdmin": "Kontaktiraj administratora servera",    "contactServerSecurity": "Kontaktiraj zadužene za sigurnost servera",    "supportPage": "Stranica podrške",    "serverInformation": "Podaci servera:",    "name": "Ime",    "version": "Verzija",    "website": "Web-stranica",    "compress": "Komprimiraj",    "boldText": "Podebljani tekst",    "italicText": "Kurzivni tekst",    "strikeThrough": "Precrtano",    "pleaseFillOut": "Ispuni",    "invalidUrl": "Neispravan URL",    "addLink": "Dodaj poveznicu",    "unableToJoinChat": "Neuspjelo pridruživanje chatu. Možda je druga strana već zatvorila konverzaciju.",    "previous": "Prethodni",    "otherPartyNotLoggedIn": "Druga strana trenutačno nije prijavljena i stoga ne može primati poruke!",    "appWantsToUseForLogin": "Koristi '{server}' za prijavu",    "@appWantsToUseForLogin": {
+    "changelog": "Dnevnik promjena",    "sendCanceled": "Slanje je prekinuto",    "loginWithMatrixId": "Prijava pomoću Matrix-ID-a",    "doesNotSeemToBeAValidHomeserver": "Čini se da nije kompatibilan homeserver. Pogrešan URL?",    "calculatingFileSize": "Izračunavanje veličine datoteke …",    "oneOfYourDevicesIsNotVerified": "Jedan od tvojih uređaja nije potvrđen",    "noticeChatBackupDeviceVerification": "Napomena: Kada spojiš sve svoje uređaje na sigurnosnu kopiju chata, oni se automatski potvrđuju.",    "continueText": "Nastavi",    "blur": "Zamućenost:",    "opacity": "Neprozirnost:",    "setWallpaper": "Postavi sliku pozadine",    "manageAccount": "Upravljaj računom",    "noContactInformationProvided": "Server ne pruža nikoje valjane kontakt podatke",    "contactServerAdmin": "Kontaktiraj administratora servera",    "contactServerSecurity": "Kontaktiraj zadužene za sigurnost servera",    "supportPage": "Stranica podrške",    "serverInformation": "Podaci servera:",    "name": "Ime",    "version": "Verzija",    "website": "Web-stranica",    "compress": "Komprimiraj",    "boldText": "Podebljani tekst",    "italicText": "Kurzivni tekst",    "strikeThrough": "Precrtano",    "pleaseFillOut": "Ispuni",    "invalidUrl": "Neispravan URL",    "addLink": "Dodaj poveznicu",    "unableToJoinChat": "Neuspjelo pridruživanje chatu. Možda je druga strana već zatvorila konverzaciju.",    "previous": "Prethodni",    "otherPartyNotLoggedIn": "Druga strana trenutačno nije prijavljena i stoga ne može primati poruke!",    "appWantsToUseForLogin": "Koristi '{server}' za prijavu",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1436,13 +1333,7 @@
                 "type": "String"            }
         }
     },
-    "startedAPoll": "{username} je pokrenuo/la anketu.",    "@startedAPoll": {
-        "type": "String",        "placeholders": {
-            "username": {
-                "type": "String"            }
-        }
-    },
-    "poll": "Anketa",    "startPoll": "Početak ankete",    "endPoll": "Kraj ankete",    "answersVisible": "Odgovori vidljivi",    "pollQuestion": "Pitanje u anketi",    "answerOption": "Opcija za odgovor",    "addAnswerOption": "Dodaj opciju za odgovor",    "allowMultipleAnswers": "Dopusti više odgovora",    "pollHasBeenEnded": "Anketa je završena",    "countVotes": "{count, plural, =1{Jedan glas} few{{count} glasa} other{{count} glasova}}",    "@countVotes": {
+    "startPoll": "Početak ankete",    "endPoll": "Kraj ankete",    "answersVisible": "Odgovori vidljivi",    "pollQuestion": "Pitanje u anketi",    "answerOption": "Opcija za odgovor",    "addAnswerOption": "Dodaj opciju za odgovor",    "allowMultipleAnswers": "Dopusti više odgovora",    "pollHasBeenEnded": "Anketa je završena",    "countVotes": "{count, plural, =1{Jedan glas} few{{count} glasa} other{{count} glasova}}",    "@countVotes": {
         "type": "int",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1466,20 +1357,6 @@
                 "type": "String"            }
         }
     },
-    "logs": "Zapisi",    "advancedConfigs": "Napredne konfiguracije",    "advancedConfigurations": "Napredne konfiguracije",    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "@mute": {
+    "logs": "Zapisi",    "advancedConfigs": "Napredne konfiguracije",    "advancedConfigurations": "Napredne konfiguracije",    "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    }
 }
