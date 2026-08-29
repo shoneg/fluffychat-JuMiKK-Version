@@ -1,4 +1,34 @@
 {
+    "editImage": "Edit image",    "@editImage": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateLeft": "Rotate left",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateRight": "Rotate right",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
+    },
+    "mirror": "Mirror",    "@mirror": {
+        "type": "String",        "placeholders": {}
+    },
+    "save": "Save",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "draw": "Draw",    "@draw": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "Undo",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "Clear",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "eraser": "Eraser",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "Crop",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
     "@@locale": "en",    "@@last_modified": "2021-08-14 12:38:37.885451",    "repeatPassword": "Repeat password",    "notAnImage": "Not an image file.",    "remove": "Remove",    "@remove": {
         "type": "String",        "placeholders": {}
     },
@@ -420,9 +450,6 @@
     "emoteKeyboardNoRecents": "Recently-used emotes will appear here...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emote Settings",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "globalChatId": "Global chat ID",    "accessAndVisibility": "Access and visibility",    "accessAndVisibilityDescription": "Who is allowed to join this chat and how the chat can be discovered.",    "calls": "Calls",    "customEmojisAndStickers": "Custom emojis and stickers",    "customEmojisAndStickersBody": "Add or share custom emojis or stickers which can be used in any chat.",    "emoteShortcode": "Emote shortcode",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -543,7 +570,7 @@
                 "type": "String"            }
         }
     },
-    "isTyping": "is typing…",    "@isTyping": {
+    "isTyping": "is typing",    "@isTyping": {
         "type": "String",        "placeholders": {}
     },
     "joinedTheChat": "👋 {username} joined the chat",    "@joinedTheChat": {
@@ -765,7 +792,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Direct chat",    "redactedByBecause": "Redacted by {username} because: \"{reason}\"",    "@redactedByBecause": {
+    "redactedByBecause": "Redacted by {username} because: \"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -812,7 +839,13 @@
     "roomHasBeenUpgraded": "Room has been upgraded",    "@roomHasBeenUpgraded": {
         "type": "String",        "placeholders": {}
     },
-    "roomVersion": "Room version",    "@roomVersion": {
+    "sendingFilesDoNotExit": "Sending {count} files... Please do not exit!",    "@sendingFilesDoNotExit": {
+        "type": "String",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "roomVersion": "Room version",    "compressingVideo": "Compressing video...",    "@roomVersion": {
         "type": "String",        "placeholders": {}
     },
     "saveFile": "Save file",    "@saveFile": {
@@ -1160,7 +1193,7 @@
                 "type": "int"            }
         }
     },
-    "user": "User",    "custom": "Custom",    "foregroundServiceRunning": "This notification appears when the foreground service is running.",    "screenSharingTitle": "screen sharing",    "screenSharingDetail": "You are sharing your screen in FuffyChat",    "whyIsThisMessageEncrypted": "Why is this message unreadable?",    "noKeyForThisMessage": "This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.",    "newSpace": "New space",    "doNotShowAgain": "Do not show again",    "wasDirectChatDisplayName": "Empty chat (was {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "user": "User",    "custom": "Custom",    "whyIsThisMessageEncrypted": "Why is this message unreadable?",    "noKeyForThisMessage": "This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.",    "newSpace": "New space",    "doNotShowAgain": "Do not show again",    "wasDirectChatDisplayName": "Empty chat (was {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1292,7 +1325,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Changelog",    "sendCanceled": "Sending canceled",    "loginWithMatrixId": "Login with Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Doesn't seem to be a compatible homeserver. Wrong URL?",    "calculatingFileSize": "Calculating file size...",    "sendingAttachment": "Sending attachment...",    "oneOfYourDevicesIsNotVerified": "One of your devices is not verified",    "noticeChatBackupDeviceVerification": "Note: When you connect all your devices to the chat backup, they are automatically verified.",    "continueText": "Continue",    "blur": "Blur:",    "opacity": "Opacity:",    "setWallpaper": "Set wallpaper",    "manageAccount": "Manage account",    "noContactInformationProvided": "Server does not provide any valid contact information",    "contactServerAdmin": "Contact server admin",    "contactServerSecurity": "Contact server security",    "supportPage": "Support page",    "serverInformation": "Server information:",    "name": "Name",    "version": "Version",    "website": "Website",    "compress": "Compress",    "boldText": "Bold text",    "italicText": "Italic text",    "strikeThrough": "Strikethrough",    "pleaseFillOut": "Please fill out",    "invalidUrl": "Invalid url",    "addLink": "Add link",    "unableToJoinChat": "Unable to join chat. Maybe the other party has already closed the conversation.",    "previous": "Previous",    "otherPartyNotLoggedIn": "The other party is currently not logged in and therefore cannot receive messages!",    "appWantsToUseForLogin": "Use '{server}' to log in",    "@appWantsToUseForLogin": {
+    "changelog": "Changelog",    "sendCanceled": "Sending canceled",    "loginWithMatrixId": "Login with Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Doesn't seem to be a compatible homeserver. Wrong URL?",    "calculatingFileSize": "Calculating file size...",    "oneOfYourDevicesIsNotVerified": "One of your devices is not verified",    "noticeChatBackupDeviceVerification": "Note: When you connect all your devices to the chat backup, they are automatically verified.",    "continueText": "Continue",    "blur": "Blur:",    "opacity": "Opacity:",    "setWallpaper": "Set wallpaper",    "manageAccount": "Manage account",    "noContactInformationProvided": "Server does not provide any valid contact information",    "contactServerAdmin": "Contact server admin",    "contactServerSecurity": "Contact server security",    "supportPage": "Support page",    "serverInformation": "Server information:",    "name": "Name",    "version": "Version",    "website": "Website",    "compress": "Compress",    "boldText": "Bold text",    "italicText": "Italic text",    "strikeThrough": "Strikethrough",    "pleaseFillOut": "Please fill out",    "invalidUrl": "Invalid url",    "addLink": "Add link",    "unableToJoinChat": "Unable to join chat. Maybe the other party has already closed the conversation.",    "previous": "Previous",    "otherPartyNotLoggedIn": "The other party is currently not logged in and therefore cannot receive messages!",    "appWantsToUseForLogin": "Use '{server}' to log in",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1454,5 +1487,5 @@
             "count": {
                 "type": "int"            }
         }
-    }
-}
+    },
+    "loadingMessages": "Loading messages...",    "buildDoesNotSupportFirebase": "This build does not support firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Unable to register device for firebase cloud messaging.",    "unifiedPushDistributors": "Unified Push distributors:",    "doubleTapToReact": "Double-tap to react",    "doubleTapToReactDescription": "Double-tap a message to react instead of selecting text",    "doubleTapReaction": "Double-tap reaction"}

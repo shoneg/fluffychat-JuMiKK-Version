@@ -5,6 +5,7 @@
 
 import 'dart:ui' as ui;
 
+import 'package:collection/collection.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
@@ -362,9 +363,12 @@ class Message extends StatelessWidget {
                                                   ? Colors.transparent
                                                   : (theme.brightness ==
                                                             Brightness.light
-                                                        ? displayname.color
+                                                        ? displayname
+                                                              .colorScheme
+                                                              .primary
                                                         : displayname
-                                                              .lightColorText),
+                                                              .colorScheme
+                                                              .primaryContainer),
                                               fontSize: 11,
                                               shadows: wallpaperTextShadow,
                                             ),
@@ -382,6 +386,45 @@ class Message extends StatelessWidget {
                               alignment: alignment,
                               padding: const EdgeInsets.only(left: 8),
                               child: GestureDetector(
+                                onDoubleTap:
+                                    AppSettings.doubleTapToReact.value &&
+                                        event.room.canSendDefaultMessages
+                                    ? () {
+                                        HapticFeedback.lightImpact();
+                                        final emoji =
+                                            AppSettings.doubleTapReaction.value;
+                                        final existingReaction = event
+                                            .aggregatedEvents(
+                                              timeline,
+                                              RelationshipTypes.reaction,
+                                            )
+                                            .firstWhereOrNull(
+                                              (e) =>
+                                                  e.senderId ==
+                                                      event
+                                                          .room
+                                                          .client
+                                                          .userID &&
+                                                  e.content
+                                                          .tryGetMap<
+                                                            String,
+                                                            Object?
+                                                          >('m.relates_to')
+                                                          ?.tryGet<String>(
+                                                            'key',
+                                                          ) ==
+                                                      emoji,
+                                            );
+                                        if (existingReaction != null) {
+                                          existingReaction.redactEvent();
+                                        } else {
+                                          event.room.sendReaction(
+                                            event.eventId,
+                                            emoji,
+                                          );
+                                        }
+                                      }
+                                    : null,
                                 onLongPress: longPressSelect
                                     ? null
                                     : () {

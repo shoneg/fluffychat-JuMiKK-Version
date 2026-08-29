@@ -298,9 +298,6 @@
     "emoteInvalid": "Epäkelpo emote-lyhytkoodi!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emote-asetukset",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Emote-lyhytkoodi",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasgroup": "Merkitse ryhmäksi",    "whyIsThisMessageEncrypted": "Miksei tätä viestiä voida lukea?",    "noKeyForThisMessage": "Tämä voi tapahtua mikäli viesti lähetettiin ennen sisäänkirjautumistasi tälle laitteelle.\n\nOn myös mahdollista, että lähettäjä on estänyt tämän laitteen tai jokin meni pieleen verkkoyhteyden kanssa.\n\nPystytkö lukemaan viestin toisella istunnolla? Siinä tapauksessa voit siirtää viestin siltä! Mene Asetukset > Laitteet ja varmista, että laitteesi ovat varmistaneet toisensa. Seuraavankerran avatessasi huoneen ja molempien istuntojen ollessa etualalla, avaimet siirretään automaattisesti.\n\nHaluatko varmistaa ettet menetä avaimia uloskirjautuessa tai laitteita vaihtaessa? Varmista avainvarmuuskopion käytössäolo asetuksista.",    "commandHint_markasdm": "Merkitse yksityiskeskusteluksi syötetyn Matrix IDn kanssa",    "foregroundServiceRunning": "Tämä ilmoitus näkyy etualapalvelun ollessa käynnissä.",    "newSpace": "Uusi tila",    "screenSharingTitle": "ruudunjako",    "screenSharingDetail": "Jaat ruutuasi JuMiKK-Chatissä",    "hugContent": "{senderName} halaa sinua",    "@hugContent": {
+    "commandHint_markasgroup": "Merkitse ryhmäksi",    "whyIsThisMessageEncrypted": "Miksei tätä viestiä voida lukea?",    "noKeyForThisMessage": "Tämä voi tapahtua mikäli viesti lähetettiin ennen sisäänkirjautumistasi tälle laitteelle.\n\nOn myös mahdollista, että lähettäjä on estänyt tämän laitteen tai jokin meni pieleen verkkoyhteyden kanssa.\n\nPystytkö lukemaan viestin toisella istunnolla? Siinä tapauksessa voit siirtää viestin siltä! Mene Asetukset > Laitteet ja varmista, että laitteesi ovat varmistaneet toisensa. Seuraavankerran avatessasi huoneen ja molempien istuntojen ollessa etualalla, avaimet siirretään automaattisesti.\n\nHaluatko varmistaa ettet menetä avaimia uloskirjautuessa tai laitteita vaihtaessa? Varmista avainvarmuuskopion käytössäolo asetuksista.",    "commandHint_markasdm": "Merkitse yksityiskeskusteluksi syötetyn Matrix IDn kanssa",    "newSpace": "Uusi tila",    "hugContent": "{senderName} halaa sinua",    "@hugContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1154,7 +1151,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Yksityiskeskustelu",    "wrongPinEntered": "Väärä pin-koodi! Yritä uudelleen {seconds} sekuntin kuluttua...",    "@wrongPinEntered": {
+    "wrongPinEntered": "Väärä pin-koodi! Yritä uudelleen {seconds} sekuntin kuluttua...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1295,7 +1292,7 @@
                 "type": "String"            }
         }
     },
-    "sendCanceled": "Lähetys peruttu",    "loginWithMatrixId": "Kirjaudu sisään Matrix-tunnuksella",    "doesNotSeemToBeAValidHomeserver": "Ei näytä olevan yhteensopiva kotipalvelin. Väärä URL-osoite?",    "calculatingFileSize": "Lasketaan tiedoston kokoa...",    "sendingAttachment": "Lähetetään liitettä...",    "oneOfYourDevicesIsNotVerified": "Yhtä laitteistasi ei ole vahvistettu",    "noticeChatBackupDeviceVerification": "Huomautus: Kun yhdistät kaikki laitteesi keskustelun varmuuskopiointiin, ne vahvistetaan automaattisesti.",    "blur": "Sumeus:",    "opacity": "Läpinäkymättömyys:",    "setWallpaper": "Aseta taustakuva",    "manageAccount": "Hallinnoi tiliä",    "noContactInformationProvided": "Palvelin ei ilmoittaa mitään kelvollisia yhteystietoja",    "contactServerAdmin": "Ota yhteyttä palvelimen ylläpitäjään",    "contactServerSecurity": "Ota yhteyttä palvelimen tietoturvaosastoon",    "supportPage": "Tukisivu",    "compress": "Pakkaa",    "boldText": "Lihavoitu teksti",    "italicText": "Kursivoitu teksti",    "strikeThrough": "Yliviivaus",    "pleaseFillOut": "Ole hyvä ja täytä",    "invalidUrl": "Virheellinen URL-osoite",    "addLink": "Lisää linkki",    "unableToJoinChat": "Pikakeskusteluun liittyminen ei onnistu. Toinen osapuoli on ehkä jo sulkenut keskustelun.",    "otherPartyNotLoggedIn": "Toinen osapuoli ei ole tällä hetkellä kirjautuneena sisään, joten ei voi vastaanottaa viestejä!",    "appWantsToUseForLogin": "Kirjaudu sisään käyttämällä '{server}':ta",    "@appWantsToUseForLogin": {
+    "sendCanceled": "Lähetys peruttu",    "loginWithMatrixId": "Kirjaudu sisään Matrix-tunnuksella",    "doesNotSeemToBeAValidHomeserver": "Ei näytä olevan yhteensopiva kotipalvelin. Väärä URL-osoite?",    "calculatingFileSize": "Lasketaan tiedoston kokoa...",    "oneOfYourDevicesIsNotVerified": "Yhtä laitteistasi ei ole vahvistettu",    "noticeChatBackupDeviceVerification": "Huomautus: Kun yhdistät kaikki laitteesi keskustelun varmuuskopiointiin, ne vahvistetaan automaattisesti.",    "blur": "Sumeus:",    "opacity": "Läpinäkymättömyys:",    "setWallpaper": "Aseta taustakuva",    "manageAccount": "Hallinnoi tiliä",    "noContactInformationProvided": "Palvelin ei ilmoittaa mitään kelvollisia yhteystietoja",    "contactServerAdmin": "Ota yhteyttä palvelimen ylläpitäjään",    "contactServerSecurity": "Ota yhteyttä palvelimen tietoturvaosastoon",    "supportPage": "Tukisivu",    "compress": "Pakkaa",    "boldText": "Lihavoitu teksti",    "italicText": "Kursivoitu teksti",    "strikeThrough": "Yliviivaus",    "pleaseFillOut": "Ole hyvä ja täytä",    "invalidUrl": "Virheellinen URL-osoite",    "addLink": "Lisää linkki",    "unableToJoinChat": "Pikakeskusteluun liittyminen ei onnistu. Toinen osapuoli on ehkä jo sulkenut keskustelun.",    "otherPartyNotLoggedIn": "Toinen osapuoli ei ole tällä hetkellä kirjautuneena sisään, joten ei voi vastaanottaa viestejä!",    "appWantsToUseForLogin": "Kirjaudu sisään käyttämällä '{server}':ta",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

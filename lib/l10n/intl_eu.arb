@@ -251,9 +251,6 @@
     "emoteInvalid": "Emotearen laburdura ez da baliozkoa!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emote-ezarpenak",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Laburdura",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1098,13 +1095,13 @@
                 "type": "int"            }
         }
     },
-    "user": "Erabiltzailea",    "custom": "Neurrira egindakoa",    "storeInAppleKeyChain": "Gorde Apple KeyChain-en",    "confirmMatrixId": "Baieztatu zure Matrix IDa kontua ezabatu ahal izateko.",    "newSpace": "Gune berria",    "whyIsThisMessageEncrypted": "Zergatik ezin da mezu hau irakurri?",    "screenSharingTitle": "pantaila-partekatzea",    "screenSharingDetail": "Pantaila JuMiKK-Chaten partekatzen ari zara",    "noKeyForThisMessage": "Mezua gailu honetan saioa hasi baino lehen bidali bazen gertatu daiteke.\n\nBeste aukera bat igorleak zure gailua blokeatu izana da, edo zerbaitek huts egin izana interneteko konexioan.\n\nMezua beste saio batean irakur dezakezu? Hala bada, mezua transferitu dezakezu! Zoaz Ezrpenetara > Gailuak eta baieztatu zure gailuek bata bestea egiaztatu dutela. Gela irekiko duzun hurrengo aldian eta bi saioak aurreko planoan irekita daudenean, gakoak automatikoki partekatuko dira.\n\nEz duzu gakorik galdu nahi saioa amaitu edo gailuak aldatzen dituzunean? Baieztatu ezarpenetan txaten babeskopiak gaituta dituzula.",    "supposedMxid": "Hau {mxid} izan behar da",    "@supposedMxid": {
+    "user": "Erabiltzailea",    "custom": "Neurrira egindakoa",    "storeInAppleKeyChain": "Gorde Apple KeyChain-en",    "confirmMatrixId": "Baieztatu zure Matrix IDa kontua ezabatu ahal izateko.",    "newSpace": "Gune berria",    "whyIsThisMessageEncrypted": "Zergatik ezin da mezu hau irakurri?",    "noKeyForThisMessage": "Mezua gailu honetan saioa hasi baino lehen bidali bazen gertatu daiteke.\n\nBeste aukera bat igorleak zure gailua blokeatu izana da, edo zerbaitek huts egin izana interneteko konexioan.\n\nMezua beste saio batean irakur dezakezu? Hala bada, mezua transferitu dezakezu! Zoaz Ezrpenetara > Gailuak eta baieztatu zure gailuek bata bestea egiaztatu dutela. Gela irekiko duzun hurrengo aldian eta bi saioak aurreko planoan irekita daudenean, gakoak automatikoki partekatuko dira.\n\nEz duzu gakorik galdu nahi saioa amaitu edo gailuak aldatzen dituzunean? Baieztatu ezarpenetan txaten babeskopiak gaituta dituzula.",    "supposedMxid": "Hau {mxid} izan behar da",    "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
         }
     },
-    "commandHint_markasgroup": "Markatu talde bezala",    "foregroundServiceRunning": "Jakinarazpen hau zerbitzua martxan dagoenean agertzen da.",    "commandHint_markasdm": "Markatu mezu-zuzen gela bezala Matrix ID jakin honentzat",    "wasDirectChatDisplayName": "Txata hutsik dago ({oldDisplayName} zen lehen)",    "@wasDirectChatDisplayName": {
+    "commandHint_markasgroup": "Markatu talde bezala",    "commandHint_markasdm": "Markatu mezu-zuzen gela bezala Matrix ID jakin honentzat",    "wasDirectChatDisplayName": "Txata hutsik dago ({oldDisplayName} zen lehen)",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "Mezua elkarrizketa honetako partaide guztientzat botako da atzera. Ezin da desegin.",    "directChat": "Banakako txata",    "wrongPinEntered": "PIN okerra! Saiatu berriro {seconds} segundu barru…",    "@wrongPinEntered": {
+    "redactMessageDescription": "Mezua elkarrizketa honetako partaide guztientzat botako da atzera. Ezin da desegin.",    "wrongPinEntered": "PIN okerra! Saiatu berriro {seconds} segundu barru…",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Aldaketak",    "chatPermissionsDescription": "Definitu zer botere-maila behar den txat honetako ekintza jakinetarako. 0, 50 eta 100 botere-mailek erabiltzaileak, moderatzaileak eta administratzaileak ordezkatzen dituzte, baina edozein graduazio posible da.",    "sendCanceled": "Bidalketa bertan behera utzi da",    "noChatsFoundHere": "Ez da txatik aurkitu. Hasi norbaitekin txateatzen beheko botoia erabiliz. ⤵️",    "loginWithMatrixId": "Hasi saioa Matrix IDarekin",    "doesNotSeemToBeAValidHomeserver": "Ez dirudi zerbitzaria bateragarria denik. Zuzena da URLa?",    "calculatingFileSize": "Fitxategiaren tamaina kalkulatzen…",    "sendingAttachment": "Eranskina bidaltzen…",    "oneOfYourDevicesIsNotVerified": "Zure gailuetako bat ez dago egiaztatuta",    "noticeChatBackupDeviceVerification": "Oharra: gailu guztiak txat-babeskopiarekin konektatzen dituzunean, automatikoki egiaztatzen dira.",    "opacity": "Opakutasuna:",    "manageAccount": "Kudeatu kontua",    "setWallpaper": "Ezarri horma-irudia",    "blur": "Lausotu:",    "continueText": "Jarraitu",    "contactServerAdmin": "Jarri harremanetan zerbitzariaren administratzailearekin",    "aboutHomeserver": "{homeserver}(e)ri buruz",    "@aboutHomeserver": {
+    "changelog": "Aldaketak",    "chatPermissionsDescription": "Definitu zer botere-maila behar den txat honetako ekintza jakinetarako. 0, 50 eta 100 botere-mailek erabiltzaileak, moderatzaileak eta administratzaileak ordezkatzen dituzte, baina edozein graduazio posible da.",    "sendCanceled": "Bidalketa bertan behera utzi da",    "noChatsFoundHere": "Ez da txatik aurkitu. Hasi norbaitekin txateatzen beheko botoia erabiliz. ⤵️",    "loginWithMatrixId": "Hasi saioa Matrix IDarekin",    "doesNotSeemToBeAValidHomeserver": "Ez dirudi zerbitzaria bateragarria denik. Zuzena da URLa?",    "calculatingFileSize": "Fitxategiaren tamaina kalkulatzen…",    "oneOfYourDevicesIsNotVerified": "Zure gailuetako bat ez dago egiaztatuta",    "noticeChatBackupDeviceVerification": "Oharra: gailu guztiak txat-babeskopiarekin konektatzen dituzunean, automatikoki egiaztatzen dira.",    "opacity": "Opakutasuna:",    "manageAccount": "Kudeatu kontua",    "setWallpaper": "Ezarri horma-irudia",    "blur": "Lausotu:",    "continueText": "Jarraitu",    "contactServerAdmin": "Jarri harremanetan zerbitzariaren administratzailearekin",    "aboutHomeserver": "{homeserver}(e)ri buruz",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

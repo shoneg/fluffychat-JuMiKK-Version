@@ -348,9 +348,6 @@
     "emoteInvalid": "Неисправна скраћеница за емоти!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Поставке емотија",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "скраћеница",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },

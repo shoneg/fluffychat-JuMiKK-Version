@@ -161,9 +161,6 @@
     "emoteShortcode": "Shortcode emote",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Pengaturan Emote",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteInvalid": "Shortcode emote tidak valid!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Tandai sebagai ruangan pesan langsung untuk ID Matrix yang ditentukan",    "commandHint_markasgroup": "Tandai sebagai grup",    "screenSharingTitle": "membagikan layar",    "noKeyForThisMessage": "Hal ini bisa terjadi jika pesan dikirim sebelum kamu masuk ke akunmu di perangkat ini.\n\nMungkin juga pengirim telah memblokir perangkatmu atau ada yang tidak beres dengan koneksi internet.\n\nApakah kamu bisa membaca pesan pada sesi lain? Maka kamu bisa mentransfer pesan dari sesi tersebut! Buka Pengaturan > Perangkat dan pastikan bahwa perangkat Anda telah ditandatangani secara silang. Ketika kamu membuka ruangan di lain waktu dan kedua sesi berada di latar depan, kunci akan ditransmisikan secara otomatis.\n\nApakah kamu tidak mau kehilangan kunci saat keluar atau berpindah perangkat? Pastikan bahwa kamu telah mengaktifkan cadangan obrolan dalam pengaturan.",    "foregroundServiceRunning": "Notifikasi ini ditampilkan ketika layanan latar depan berjalan.",    "whyIsThisMessageEncrypted": "Mengapa pesan ini tidak bisa dibaca?",    "newSpace": "Space baru",    "screenSharingDetail": "Kamu membagikan layarmu di JuMiKK-Chat",    "doNotShowAgain": "Jangan tampilkan lagi",    "hugContent": "{senderName} memeluk kamu",    "@hugContent": {
+    "commandHint_markasdm": "Tandai sebagai ruangan pesan langsung untuk ID Matrix yang ditentukan",    "commandHint_markasgroup": "Tandai sebagai grup",    "noKeyForThisMessage": "Hal ini bisa terjadi jika pesan dikirim sebelum kamu masuk ke akunmu di perangkat ini.\n\nMungkin juga pengirim telah memblokir perangkatmu atau ada yang tidak beres dengan koneksi internet.\n\nApakah kamu bisa membaca pesan pada sesi lain? Maka kamu bisa mentransfer pesan dari sesi tersebut! Buka Pengaturan > Perangkat dan pastikan bahwa perangkat Anda telah ditandatangani secara silang. Ketika kamu membuka ruangan di lain waktu dan kedua sesi berada di latar depan, kunci akan ditransmisikan secara otomatis.\n\nApakah kamu tidak mau kehilangan kunci saat keluar atau berpindah perangkat? Pastikan bahwa kamu telah mengaktifkan cadangan obrolan dalam pengaturan.",    "whyIsThisMessageEncrypted": "Mengapa pesan ini tidak bisa dibaca?",    "newSpace": "Space baru",    "doNotShowAgain": "Jangan tampilkan lagi",    "hugContent": "{senderName} memeluk kamu",    "@hugContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1140,7 +1137,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Chat langsung",    "redactedByBecause": "Dihilangkan oleh {username} karena: \"{reason}\"",    "@redactedByBecause": {
+    "redactedByBecause": "Dihilangkan oleh {username} karena: \"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1247,7 +1244,7 @@
     "files": "Berkas",    "sendCanceled": "Pengiriman dibatalkan",    "noChatsFoundHere": "Belum ada chat di sini. Mulai chat baru dengan seseorang menggunakan tombol di bawah. ⤵️",    "markAsUnread": "Tandai sebagai belum dibaca",    "goToSpace": "Pergi ke space: {space}",    "@goToSpace": {
         "type": "String",        "space": {}
     },
-    "changeTheChatPermissions": "Ubah perizinan chat",    "changeTheCanonicalRoomAlias": "Ubah alamat chat publik utama",    "changeTheVisibilityOfChatHistory": "Ubah keterlihatan riwayat chat",    "changeTheDescriptionOfTheGroup": "Ubah deskripsi chat",    "sendingAttachment": "Mengirim lampiran...",    "calculatingFileSize": "Menghitung ukuran berkas...",    "userLevel": "{level} - Pengguna",    "@userLevel": {
+    "changeTheChatPermissions": "Ubah perizinan chat",    "changeTheCanonicalRoomAlias": "Ubah alamat chat publik utama",    "changeTheVisibilityOfChatHistory": "Ubah keterlihatan riwayat chat",    "changeTheDescriptionOfTheGroup": "Ubah deskripsi chat",    "calculatingFileSize": "Menghitung ukuran berkas...",    "userLevel": "{level} - Pengguna",    "@userLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }

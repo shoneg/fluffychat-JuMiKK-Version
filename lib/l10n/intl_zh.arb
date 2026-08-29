@@ -358,9 +358,6 @@
     "emoteInvalid": "无效的表情快捷码！",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "表情设置",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "表情快捷码",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasgroup": "标记为群组",    "commandHint_markasdm": "将给定的 Matrix ID 标为私信聊天室",    "whyIsThisMessageEncrypted": "为什么此消息不可读？",    "noKeyForThisMessage": "如果消息是在你在此设备上登录账户前发送的，就可能发生这种情况。\n\n也有可能是发送者屏蔽了你的设备或网络连接出了问题。\n\n你能在另一个会话中读取消息吗？如果是的话，你可以从它那里传递信息！点击设置 > 设备，并确保你的设备已经相互验证。当你下次打开聊天室，且两个会话都在前台，密钥就会自动传输。\n\n你不想在退出登录或切换设备时丢失密钥？请确保在设置中启用了聊天备份。",    "newSpace": "新的空间",    "foregroundServiceRunning": "此通知在前台服务运行时出现。",    "screenSharingTitle": "屏幕共享",    "screenSharingDetail": "你正在 JuMiKK-Chat 中共享屏幕",    "doNotShowAgain": "不再显示",    "googlyEyesContent": "{senderName} 向你发送了“大眼”表情",    "@googlyEyesContent": {
+    "commandHint_markasgroup": "标记为群组",    "commandHint_markasdm": "将给定的 Matrix ID 标为私信聊天室",    "whyIsThisMessageEncrypted": "为什么此消息不可读？",    "noKeyForThisMessage": "如果消息是在你在此设备上登录账户前发送的，就可能发生这种情况。\n\n也有可能是发送者屏蔽了你的设备或网络连接出了问题。\n\n你能在另一个会话中读取消息吗？如果是的话，你可以从它那里传递信息！点击设置 > 设备，并确保你的设备已经相互验证。当你下次打开聊天室，且两个会话都在前台，密钥就会自动传输。\n\n你不想在退出登录或切换设备时丢失密钥？请确保在设置中启用了聊天备份。",    "newSpace": "新的空间",    "doNotShowAgain": "不再显示",    "googlyEyesContent": "{senderName} 向你发送了“大眼”表情",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1140,7 +1137,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "私聊",    "redactedByBecause": "已被 {username} 删除，原因：\"{reason}\"",    "@redactedByBecause": {
+    "redactedByBecause": "已被 {username} 删除，原因：\"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "sendCanceled": "发送被取消",    "noChatsFoundHere": "此处尚未找到聊天。使用下方按钮 ⤵️ 开始和某人的新聊天",    "loginWithMatrixId": "使用 Matrix-ID 登录",    "doesNotSeemToBeAValidHomeserver": "似乎不是兼容的主服务器。URL 不正确？",    "sendingAttachment": "发送附件中…",    "calculatingFileSize": "计算文件尺寸中…",    "oneOfYourDevicesIsNotVerified": "您设备中的一台未验证",    "noticeChatBackupDeviceVerification": "注意：当你连接所有设备到聊天备份时，这些设备将被自动验证。",    "continueText": "继续",    "blur": "模糊：",    "opacity": "不透明：",    "setWallpaper": "设置壁纸",    "manageAccount": "管理账户",    "aboutHomeserver": "关于 {homeserver}",    "@aboutHomeserver": {
+    "sendCanceled": "发送被取消",    "noChatsFoundHere": "此处尚未找到聊天。使用下方按钮 ⤵️ 开始和某人的新聊天",    "loginWithMatrixId": "使用 Matrix-ID 登录",    "doesNotSeemToBeAValidHomeserver": "似乎不是兼容的主服务器。URL 不正确？",    "calculatingFileSize": "计算文件尺寸中…",    "oneOfYourDevicesIsNotVerified": "您设备中的一台未验证",    "noticeChatBackupDeviceVerification": "注意：当你连接所有设备到聊天备份时，这些设备将被自动验证。",    "continueText": "继续",    "blur": "模糊：",    "opacity": "不透明：",    "setWallpaper": "设置壁纸",    "manageAccount": "管理账户",    "aboutHomeserver": "关于 {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

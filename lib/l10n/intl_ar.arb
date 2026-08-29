@@ -257,9 +257,6 @@
     "emoteInvalid": "رمز الانفعالة غير صالح!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "اعدادات الانفعالات",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "رمز الانفعالة",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1098,7 +1095,7 @@
                 "type": "int"            }
         }
     },
-    "foregroundServiceRunning": "يظهر هذا الإشعار عند تشغيل الخدمة الأمامية.",    "screenSharingTitle": "مشاركة الشاشة",    "whyIsThisMessageEncrypted": "لماذا هذه الرسالة غير قابلة للقراءة؟",    "encryptThisChat": "تشفير هذه المحادثة",    "screenSharingDetail": "أنت تشارك شاشتك في FuffyChat",    "youKicked": "👞 لقد ركلت {user}",    "@youKicked": {
+    "whyIsThisMessageEncrypted": "لماذا هذه الرسالة غير قابلة للقراءة؟",    "encryptThisChat": "تشفير هذه المحادثة",    "youKicked": "👞 لقد ركلت {user}",    "@youKicked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "invite": "دعوة",    "chatPermissions": "صلاحيات المحادثة",    "chatDescription": "وصف المحادثة",    "chatDescriptionHasBeenChanged": "تغير وصف المجموعة",    "noChatDescriptionYet": "لم يتم إنشاء وصف للمحادثة حتى الآن.",    "invalidServerName": "اسم الخادم غير متاح",    "setChatDescription": "تعيين وصفًا للدردشة",    "directChat": "محادثة مباشرة",    "inviteGroupChat": "📨 دعوة للمحادثة الجماعية",    "emoteKeyboardNoRecents": "التعبيرات المستخدمة مؤخرًا ستظهر هنا ...",    "@emoteKeyboardNoRecents": {
+    "invite": "دعوة",    "chatPermissions": "صلاحيات المحادثة",    "chatDescription": "وصف المحادثة",    "chatDescriptionHasBeenChanged": "تغير وصف المجموعة",    "noChatDescriptionYet": "لم يتم إنشاء وصف للمحادثة حتى الآن.",    "invalidServerName": "اسم الخادم غير متاح",    "setChatDescription": "تعيين وصفًا للدردشة",    "inviteGroupChat": "📨 دعوة للمحادثة الجماعية",    "emoteKeyboardNoRecents": "التعبيرات المستخدمة مؤخرًا ستظهر هنا ...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "invalidInput": "مدخل غير صالح!",    "wrongPinEntered": "تم إدخال رمز خاطئ! حاول مرة أخرى خلال {seconds} ثانية...",    "@wrongPinEntered": {
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "sendCanceled": "تم إلغاء الإرسال",    "noChatsFoundHere": "لم يتم العثور على دردشات هنا حتى الآن. ابدأ محادثة جديدة مع شخص ما باستخدام الزر أدناه. ⤵️",    "loginWithMatrixId": "تسجيل الدخول باستخدام معرف ماتريكس",    "doesNotSeemToBeAValidHomeserver": "لا يبدو أنه خادم منزلي متوافق. عنوان URL غير صحيح ؟",    "calculatingFileSize": "جارٍ حساب حجم الملف...",    "sendingAttachment": "جارٍ إرسال المرفق...",    "oneOfYourDevicesIsNotVerified": "لم يتم التحقق من أحد أجهزتك",    "noticeChatBackupDeviceVerification": "ملاحظة: عند توصيل جميع أجهزتك بنسخة احتياطية للدردشة، يتم التحقق منها تلقائيًا.",    "continueText": "استمرار",    "blur": "الضبابية:",    "setWallpaper": "تعيين الخلفية",    "opacity": "التعتيم:",    "manageAccount": "‫إدارة الحساب‬",    "noContactInformationProvided": "لا يقدم السيرفر أي معلومات اتصال صحيحة",    "contactServerAdmin": "اتصل بمسؤول الخادم",    "contactServerSecurity": "الاتصال بمسؤول أمان ااخادم",    "supportPage": "صفحة الدعم",    "serverInformation": "معلومات الخادم:",    "name": "الإسم",    "version": "اﻹصدار",    "website": "الموقع اﻹلكتروني",    "aboutHomeserver": "حول {homeserver}",    "@aboutHomeserver": {
+    "sendCanceled": "تم إلغاء الإرسال",    "noChatsFoundHere": "لم يتم العثور على دردشات هنا حتى الآن. ابدأ محادثة جديدة مع شخص ما باستخدام الزر أدناه. ⤵️",    "loginWithMatrixId": "تسجيل الدخول باستخدام معرف ماتريكس",    "doesNotSeemToBeAValidHomeserver": "لا يبدو أنه خادم منزلي متوافق. عنوان URL غير صحيح ؟",    "calculatingFileSize": "جارٍ حساب حجم الملف...",    "oneOfYourDevicesIsNotVerified": "لم يتم التحقق من أحد أجهزتك",    "noticeChatBackupDeviceVerification": "ملاحظة: عند توصيل جميع أجهزتك بنسخة احتياطية للدردشة، يتم التحقق منها تلقائيًا.",    "continueText": "استمرار",    "blur": "الضبابية:",    "setWallpaper": "تعيين الخلفية",    "opacity": "التعتيم:",    "manageAccount": "‫إدارة الحساب‬",    "noContactInformationProvided": "لا يقدم السيرفر أي معلومات اتصال صحيحة",    "contactServerAdmin": "اتصل بمسؤول الخادم",    "contactServerSecurity": "الاتصال بمسؤول أمان ااخادم",    "supportPage": "صفحة الدعم",    "serverInformation": "معلومات الخادم:",    "name": "الإسم",    "version": "اﻹصدار",    "website": "الموقع اﻹلكتروني",    "aboutHomeserver": "حول {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

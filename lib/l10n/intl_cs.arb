@@ -370,9 +370,6 @@
     "emoteInvalid": "Neplatný kód emotikony!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Nastavení emotikonů",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Klávesová zkratka emotikonu",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1124,19 +1121,19 @@
                 "type": "String"            }
         }
     },
-    "tryAgain": "Zkuste to znovu",    "redactMessageDescription": "Tato zpráva bude smazána pro všechny účastníky konverzace. Tuto akci nelze vzít zpět.",    "optionalRedactReason": "(Nepovinné) Důvod smazání této zprávy…",    "messagesStyle": "Zprávy:",    "noOtherDevicesFound": "Žádná ostatní zařízení nebyla nalezena",    "chatDescription": "Popis konverzace",    "chatDescriptionHasBeenChanged": "Popis konverzace byl změněn",    "noChatDescriptionYet": "Zatím nebyl vytvořen žádný popis konverzace.",    "invalidServerName": "Neplatné jméno serveru",    "chatPermissions": "Oprávnění konverzace",    "directChat": "Přímá konverzace",    "setChatDescription": "Nastavit popis konverzace",    "whyIsThisMessageEncrypted": "Proč nelze přečíst tuto zprávu?",    "wasDirectChatDisplayName": "Prázdná konverzace (dříve {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "tryAgain": "Zkuste to znovu",    "redactMessageDescription": "Tato zpráva bude smazána pro všechny účastníky konverzace. Tuto akci nelze vzít zpět.",    "optionalRedactReason": "(Nepovinné) Důvod smazání této zprávy…",    "messagesStyle": "Zprávy:",    "noOtherDevicesFound": "Žádná ostatní zařízení nebyla nalezena",    "chatDescription": "Popis konverzace",    "chatDescriptionHasBeenChanged": "Popis konverzace byl změněn",    "noChatDescriptionYet": "Zatím nebyl vytvořen žádný popis konverzace.",    "invalidServerName": "Neplatné jméno serveru",    "chatPermissions": "Oprávnění konverzace",    "setChatDescription": "Nastavit popis konverzace",    "whyIsThisMessageEncrypted": "Proč nelze přečíst tuto zprávu?",    "wasDirectChatDisplayName": "Prázdná konverzace (dříve {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
         }
     },
-    "newSpaceDescription": "Prostory umožňují organizovat Vaše konverzace a vytvářet soukromé nebo veřejné komunity.",    "sendTypingNotifications": "Posílat oznámení o psaní",    "commandHint_markasgroup": "Označit jako skupinu",    "foregroundServiceRunning": "Toto oznámení se zobrazuje když běží služba na pozadí.",    "screenSharingDetail": "Sdílíte svou obrazovku přes JuMiKK-Chat",    "encryptThisChat": "Zašifrovat tuto konverzaci",    "sorryThatsNotPossible": "Omlouváme se… to není možné",    "reopenChat": "Znovu otevřít konverzaci",    "fileIsTooBigForServer": "Neodesláno! Server povoluje maximálně {max} příloh.",    "jump": "Skočit",    "openLinkInBrowser": "Otevřít odkaz v prohlížeči",    "supposedMxid": "Tady by mělo být {mxid}",    "@supposedMxid": {
+    "newSpaceDescription": "Prostory umožňují organizovat Vaše konverzace a vytvářet soukromé nebo veřejné komunity.",    "sendTypingNotifications": "Posílat oznámení o psaní",    "commandHint_markasgroup": "Označit jako skupinu",    "encryptThisChat": "Zašifrovat tuto konverzaci",    "sorryThatsNotPossible": "Omlouváme se… to není možné",    "reopenChat": "Znovu otevřít konverzaci",    "fileIsTooBigForServer": "Neodesláno! Server povoluje maximálně {max} příloh.",    "jump": "Skočit",    "openLinkInBrowser": "Otevřít odkaz v prohlížeči",    "supposedMxid": "Tady by mělo být {mxid}",    "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
         }
     },
-    "newSpace": "Nový prostor",    "screenSharingTitle": "sdílení obrazovky",    "user": "Uživatel",    "fileHasBeenSavedAt": "Soubor uložen do {path}",    "@fileHasBeenSavedAt": {
+    "newSpace": "Nový prostor",    "user": "Uživatel",    "fileHasBeenSavedAt": "Soubor uložen do {path}",    "@fileHasBeenSavedAt": {
         "type": "String",        "placeholders": {
             "path": {
                 "type": "String"            }
@@ -1245,7 +1242,7 @@
                 "type": "String"            }
         }
     },
-    "sendingAttachment": "Posílám přílohu...",    "oneOfYourDevicesIsNotVerified": "Jedno z vašich zařízení není ověřeno",    "continueText": "Pokračovat",    "setWallpaper": "Nastavit tapetu",    "manageAccount": "Spravovat účet",    "noContactInformationProvided": "Server neposkytl žádné platné kontaktní informace",    "contactServerAdmin": "Kontaktovat administrátora serveru",    "supportPage": "Podpora",    "serverInformation": "Informace o serveru:",    "name": "Název",    "version": "Verze",    "website": "Webová stránka",    "compress": "Komprimovat",    "boldText": "Tučný text",    "italicText": "Kurzíva",    "strikeThrough": "Přeškrtnutý text",    "pleaseFillOut": "Prosím vyplňte",    "invalidUrl": "Neplatná URL adresa",    "addLink": "Přidat odkaz",    "unableToJoinChat": "Nepodařilo se připojit ke konverzaci. Je možné, že druhá strana ji už uzavřela.",    "previous": "Předchozí",    "otherPartyNotLoggedIn": "Druhá strana aktuálně není přihlášená, takže nemůže přijímat zprávy!",    "appWantsToUseForLogin": "Použít '{server}' k přihlášení",    "@appWantsToUseForLogin": {
+    "oneOfYourDevicesIsNotVerified": "Jedno z vašich zařízení není ověřeno",    "continueText": "Pokračovat",    "setWallpaper": "Nastavit tapetu",    "manageAccount": "Spravovat účet",    "noContactInformationProvided": "Server neposkytl žádné platné kontaktní informace",    "contactServerAdmin": "Kontaktovat administrátora serveru",    "supportPage": "Podpora",    "serverInformation": "Informace o serveru:",    "name": "Název",    "version": "Verze",    "website": "Webová stránka",    "compress": "Komprimovat",    "boldText": "Tučný text",    "italicText": "Kurzíva",    "strikeThrough": "Přeškrtnutý text",    "pleaseFillOut": "Prosím vyplňte",    "invalidUrl": "Neplatná URL adresa",    "addLink": "Přidat odkaz",    "unableToJoinChat": "Nepodařilo se připojit ke konverzaci. Je možné, že druhá strana ji už uzavřela.",    "previous": "Předchozí",    "otherPartyNotLoggedIn": "Druhá strana aktuálně není přihlášená, takže nemůže přijímat zprávy!",    "appWantsToUseForLogin": "Použít '{server}' k přihlášení",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

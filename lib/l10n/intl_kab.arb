@@ -396,9 +396,6 @@
     "emoteKeyboardNoRecents": "Izamulen uḥulfu yettwasqedcen melmi kan ad banen dagi…",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Iɣewwaṛen n uzamul uḥulfu",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "globalChatId": "Asulay n udiwenni amatu",    "accessAndVisibility": "Addaf d twalit",    "accessAndVisibilityDescription": "Anwa i yesɛan turagt ad yernu ɣer udiwenni-agi u amek adiwenni yezmer ad yettwaf.",    "calls": "Isawalen",    "customEmojisAndStickers": "Imujiten yugnen akked tcṛeṭ n tesfift",    "customEmojisAndStickersBody": "Rnu neɣ bḍu imujiten yugnen neɣ tcṛeṭ n tesfift i zemren ad ttwasqedcen deg yal adiwenni.",    "emptyChat": "Adiwenni d ilem",    "@emptyChat": {
         "type": "String",        "placeholders": {}
     },
@@ -785,7 +782,7 @@
                 "type": "int"            }
         }
     },
-    "user": "Aseqdac",    "custom": "Yugnen",    "foregroundServiceRunning": "Alɣu-agi yettban-d ticki ameẓlu n uɣawas amezwaru iteddu.",    "screenSharingTitle": "beṭṭu n ugdil",    "screenSharingDetail": "Tbeṭṭuḍ agdil-ik·im deg JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Acuɣer izen-agi ur yettwaɣri ara?",    "send": "Azen",    "@send": {
+    "user": "Aseqdac",    "custom": "Yugnen",    "whyIsThisMessageEncrypted": "Acuɣer izen-agi ur yettwaɣri ara?",    "send": "Azen",    "@send": {
         "type": "String",        "placeholders": {}
     },
     "sendAMessage": "Azen izen",    "@sendAMessage": {
@@ -980,7 +977,7 @@
     },
     "commandHint_send": "Azen aḍris",    "@commandHint_send": {
         "type": "String",        "description": "Usage hint for the command /send"    },
-    "addAccount": "Rnu amiḍan",    "directChat": "Adiwenni usrid",    "redactMessage": "Kkes izen",    "@redactMessage": {
+    "addAccount": "Rnu amiḍan",    "redactMessage": "Kkes izen",    "@redactMessage": {
         "type": "String",        "placeholders": {}
     },
     "saveFile": "Sekles afaylu",    "@saveFile": {

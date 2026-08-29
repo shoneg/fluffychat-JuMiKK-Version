@@ -370,9 +370,6 @@
     "emoteInvalid": "Geçersiz ifade kısa kodu!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "İfade Ayarları",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "İfade kısa kodu",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasgroup": "Grup olarak işaretle",    "commandHint_markasdm": "Verilen Matrix kimliği için doğrudan mesaj odası olarak işaretle",    "whyIsThisMessageEncrypted": "Bu mesaj neden okunamıyor?",    "noKeyForThisMessage": "Bu durum, mesaj siz bu aygıtta hesabınızda oturum açmadan önce gönderildiyse meydana gelebilir.\n\nGönderenin aygıtınızı engellemiş olması veya internet bağlantısında bir sorun olması da mümkündür.\n\nMesajı başka bir oturumda okuyabiliyor musunuz? O zaman mesajı oradan aktarabilirsiniz! Ayarlar > Aygıtlar bölümüne gidin ve aygıtlarınızın birbirini doğruladığından emin olun. Odayı bir sonraki sefer açtığınızda ve her iki oturum da ön planda olduğunda, anahtarlar otomatik olarak iletilecektir.\n\nOturumu kapatırken veya aygıt değiştirirken anahtarları kaybetmek istemiyor musunuz? Ayarlarda sohbet yedeklemesini etkinleştirdiğinizden emin olun.",    "screenSharingTitle": "ekran paylaşımı",    "foregroundServiceRunning": "Bu bildirim, ön plan hizmeti çalışırken görünür.",    "newSpace": "Yeni alan",    "screenSharingDetail": "Ekranınızı FuffyChat'te paylaşıyorsunuz",    "doNotShowAgain": "Tekrar gösterme",    "googlyEyesContent": "{senderName} size şaşkın gözler gönderiyor",    "@googlyEyesContent": {
+    "commandHint_markasgroup": "Grup olarak işaretle",    "commandHint_markasdm": "Verilen Matrix kimliği için doğrudan mesaj odası olarak işaretle",    "whyIsThisMessageEncrypted": "Bu mesaj neden okunamıyor?",    "noKeyForThisMessage": "Bu durum, mesaj siz bu aygıtta hesabınızda oturum açmadan önce gönderildiyse meydana gelebilir.\n\nGönderenin aygıtınızı engellemiş olması veya internet bağlantısında bir sorun olması da mümkündür.\n\nMesajı başka bir oturumda okuyabiliyor musunuz? O zaman mesajı oradan aktarabilirsiniz! Ayarlar > Aygıtlar bölümüne gidin ve aygıtlarınızın birbirini doğruladığından emin olun. Odayı bir sonraki sefer açtığınızda ve her iki oturum da ön planda olduğunda, anahtarlar otomatik olarak iletilecektir.\n\nOturumu kapatırken veya aygıt değiştirirken anahtarları kaybetmek istemiyor musunuz? Ayarlarda sohbet yedeklemesini etkinleştirdiğinizden emin olun.",    "newSpace": "Yeni alan",    "doNotShowAgain": "Tekrar gösterme",    "googlyEyesContent": "{senderName} size şaşkın gözler gönderiyor",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "setChatDescription": "Sohbet açıklamasını ayarla",    "chatDescriptionHasBeenChanged": "Sohbet açıklaması değişti",    "directChat": "Doğrudan sohbet",    "inviteGroupChat": "📨 Grup sohbetine davet et",    "emoteKeyboardNoRecents": "Son kullanılan ifadeler burada görünecek...",    "@emoteKeyboardNoRecents": {
+    "setChatDescription": "Sohbet açıklamasını ayarla",    "chatDescriptionHasBeenChanged": "Sohbet açıklaması değişti",    "inviteGroupChat": "📨 Grup sohbetine davet et",    "emoteKeyboardNoRecents": "Son kullanılan ifadeler burada görünecek...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "invalidInput": "Geçersiz giriş!",    "wrongPinEntered": "Yanlış PIN girildi! {seconds} saniye sonra tekrar deneyin...",    "@wrongPinEntered": {
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "sendCanceled": "Gönderme iptal edildi",    "noChatsFoundHere": "Burada henüz sohbet bulunamadı. Aşağıdaki düğmeyi kullanarak biriyle yeni bir sohbet başlatın. ⤵️",    "loginWithMatrixId": "Matrix kimliği ile oturum aç",    "doesNotSeemToBeAValidHomeserver": "Uyumlu bir ana sunucu gibi görünmüyor. Yanlış URL mi?",    "calculatingFileSize": "Dosya boyutu hesaplanıyor...",    "sendingAttachment": "Ek gönderiliyor...",    "oneOfYourDevicesIsNotVerified": "Aygıtlarınızdan biri doğrulanmadı",    "noticeChatBackupDeviceVerification": "Not: Tüm aygıtlarınızı sohbet yedeklemesine bağladığınızda, otomatik olarak doğrulanırlar.",    "blur": "Blur:",    "opacity": "Şeffaflık:",    "setWallpaper": "Duvar kağıdı seç",    "manageAccount": "Hesabı yönet",    "noContactInformationProvided": "Sunucu geçerli bir iletişim bilgisi sunmadı",    "contactServerAdmin": "Sunucu yöneticisiyle iletişime geçin",    "contactServerSecurity": "Sunucu güvenliğiyle iletişime geçin",    "supportPage": "Destek sayfası",    "name": "İsim",    "version": "Versiyon",    "serverInformation": "Sunucu bilgisi:",    "website": "Web sitesi",    "compress": "Sıkıştırma",    "boldText": "Kalın metin",    "italicText": "İtalik metin",    "strikeThrough": "Üstü çizili",    "pleaseFillOut": "Lütfen doldurun",    "aboutHomeserver": "{homeserver} Hakkında",    "@aboutHomeserver": {
+    "sendCanceled": "Gönderme iptal edildi",    "noChatsFoundHere": "Burada henüz sohbet bulunamadı. Aşağıdaki düğmeyi kullanarak biriyle yeni bir sohbet başlatın. ⤵️",    "loginWithMatrixId": "Matrix kimliği ile oturum aç",    "doesNotSeemToBeAValidHomeserver": "Uyumlu bir ana sunucu gibi görünmüyor. Yanlış URL mi?",    "calculatingFileSize": "Dosya boyutu hesaplanıyor...",    "oneOfYourDevicesIsNotVerified": "Aygıtlarınızdan biri doğrulanmadı",    "noticeChatBackupDeviceVerification": "Not: Tüm aygıtlarınızı sohbet yedeklemesine bağladığınızda, otomatik olarak doğrulanırlar.",    "blur": "Blur:",    "opacity": "Şeffaflık:",    "setWallpaper": "Duvar kağıdı seç",    "manageAccount": "Hesabı yönet",    "noContactInformationProvided": "Sunucu geçerli bir iletişim bilgisi sunmadı",    "contactServerAdmin": "Sunucu yöneticisiyle iletişime geçin",    "contactServerSecurity": "Sunucu güvenliğiyle iletişime geçin",    "supportPage": "Destek sayfası",    "name": "İsim",    "version": "Versiyon",    "serverInformation": "Sunucu bilgisi:",    "website": "Web sitesi",    "compress": "Sıkıştırma",    "boldText": "Kalın metin",    "italicText": "İtalik metin",    "strikeThrough": "Üstü çizili",    "pleaseFillOut": "Lütfen doldurun",    "aboutHomeserver": "{homeserver} Hakkında",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

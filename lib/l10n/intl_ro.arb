@@ -202,7 +202,7 @@
                 "type": "String"            }
         }
     },
-    "screenSharingTitle": "partajarea de ecran",    "changedTheRoomInvitationLink": "{username} a schimbat linkul de invitație",    "@changedTheRoomInvitationLink": {
+    "changedTheRoomInvitationLink": "{username} a schimbat linkul de invitație",    "@changedTheRoomInvitationLink": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -326,7 +326,7 @@
     "theyMatch": "Sunt asemănători",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "scanQrCode": "Scanați cod QR",    "addAccount": "Adăugați cont",    "experimentalVideoCalls": "Apeluri video experimentale",    "confirmEventUnpin": "Sunteți sigur că doriți să anulați permanent fixarea evenimentului?",    "emojis": "Emoji-uri",    "users": "Utilizatori",    "foregroundServiceRunning": "Această notificare apare când serviciul de foreground rulează.",    "currentlyActive": "Activ acum",    "@currentlyActive": {
+    "scanQrCode": "Scanați cod QR",    "addAccount": "Adăugați cont",    "experimentalVideoCalls": "Apeluri video experimentale",    "confirmEventUnpin": "Sunteți sigur că doriți să anulați permanent fixarea evenimentului?",    "emojis": "Emoji-uri",    "users": "Utilizatori",    "currentlyActive": "Activ acum",    "@currentlyActive": {
         "type": "String",        "placeholders": {}
     },
     "isTyping": "tastează…",    "@isTyping": {
@@ -590,7 +590,7 @@
                 "type": "String"            }
         }
     },
-    "storeInAndroidKeystore": "Stoca în Android KeyStore",    "user": "Utilizator",    "custom": "Personalizat",    "screenSharingDetail": "Partajați ecranul în JuMiKK-Chat",    "storeSecurlyOnThisDevice": "Stoca sigur pe acest dispozitiv",    "whyIsThisMessageEncrypted": "De ce este acest mesaj ilizibil?",    "newSpace": "Spațiu nou",    "doNotShowAgain": "Nu se mai apară din nou",    "newSpaceDescription": "Spațiile vă permit să vă consolidați chaturile și să stabiliți comunități private sau publice.",    "encryptThisChat": "Criptați acest chat",    "disableEncryptionWarning": "Pentru motive de securitate, nu este posibil să dezactivați criptarea unui chat în care criptare este activată.",    "noBackupWarning": "Avertisment! Fără să activați backup de chat, veți pierde accesul la mesajele voastre criptate. E foarte recomandat să activați backup de chat înainte să vă deconectați.",    "noOtherDevicesFound": "Nu s-a găsit alte dispozitive",    "fileHasBeenSavedAt": "Fișierul a fost salvat la {path}",    "@fileHasBeenSavedAt": {
+    "storeInAndroidKeystore": "Stoca în Android KeyStore",    "user": "Utilizator",    "custom": "Personalizat",    "storeSecurlyOnThisDevice": "Stoca sigur pe acest dispozitiv",    "whyIsThisMessageEncrypted": "De ce este acest mesaj ilizibil?",    "newSpace": "Spațiu nou",    "doNotShowAgain": "Nu se mai apară din nou",    "newSpaceDescription": "Spațiile vă permit să vă consolidați chaturile și să stabiliți comunități private sau publice.",    "encryptThisChat": "Criptați acest chat",    "disableEncryptionWarning": "Pentru motive de securitate, nu este posibil să dezactivați criptarea unui chat în care criptare este activată.",    "noBackupWarning": "Avertisment! Fără să activați backup de chat, veți pierde accesul la mesajele voastre criptate. E foarte recomandat să activați backup de chat înainte să vă deconectați.",    "noOtherDevicesFound": "Nu s-a găsit alte dispozitive",    "fileHasBeenSavedAt": "Fișierul a fost salvat la {path}",    "@fileHasBeenSavedAt": {
         "type": "String",        "placeholders": {
             "path": {
                 "type": "String"            }
@@ -921,9 +921,6 @@
         "type": "String",        "placeholders": {}
     },
     "emoteExists": "Emote deja există!",    "@emoteExists": {
-        "type": "String",        "placeholders": {}
-    },
-    "emoteSettings": "Configurări Emote",    "@emoteSettings": {
         "type": "String",        "placeholders": {}
     },
     "emoteShortcode": "Shortcode de emote",    "@emoteShortcode": {

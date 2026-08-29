@@ -316,9 +316,6 @@
     "emoteInvalid": "Shortcode emote invalido!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Impostazioni emote",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Scorciatoia emote",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1083,7 +1080,7 @@
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "invalidInput": "Contenuto non valido!",    "commandHint_myroomnick": "Imposta il nome visualizzato per questa stanza",    "@commandHint_myroomnick": {
         "type": "String",        "description": "Usage hint for the command /myroomnick"    },
-    "doNotShowAgain": "Non mostrare più",    "report": "segnala",    "screenSharingTitle": "condivisione schermo",    "googlyEyesContent": "{senderName} ti ha inviato degli occhi finti",    "@googlyEyesContent": {
+    "doNotShowAgain": "Non mostrare più",    "report": "segnala",    "googlyEyesContent": "{senderName} ti ha inviato degli occhi finti",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1107,13 +1104,13 @@
         "type": "String",        "description": "Usage hint for the command /react"    },
     "commandHint_me": "Descriviti",    "@commandHint_me": {
         "type": "String",        "description": "Usage hint for the command /me"    },
-    "messageInfo": "Informazioni del messaggio",    "disableEncryptionWarning": "Per motivi di sicurezza non puoi disabilitare la crittografia in una chat, se era stata abilitata in precedenza.",    "directChat": "Chat diretta",    "wrongPinEntered": "È stato inserito il pin sbagliato! Riprova tra {seconds} secondi...",    "@wrongPinEntered": {
+    "messageInfo": "Informazioni del messaggio",    "disableEncryptionWarning": "Per motivi di sicurezza non puoi disabilitare la crittografia in una chat, se era stata abilitata in precedenza.",    "wrongPinEntered": "È stato inserito il pin sbagliato! Riprova tra {seconds} secondi...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Invia notifiche di scrittura",    "inviteGroupChat": "📨 Invita a una chat di gruppo",    "foregroundServiceRunning": "Questa notifica viene mostrata quando il servizio in primo piano è in esecuzione.",    "voiceCall": "Chiamata vocale",    "commandHint_kick": "Rimuovi l'utente fornito da questa stanza",    "@commandHint_kick": {
+    "sendTypingNotifications": "Invia notifiche di scrittura",    "inviteGroupChat": "📨 Invita a una chat di gruppo",    "voiceCall": "Chiamata vocale",    "commandHint_kick": "Rimuovi l'utente fornito da questa stanza",    "@commandHint_kick": {
         "type": "String",        "description": "Usage hint for the command /kick"    },
     "createNewSpace": "Nuovo spazio",    "@createNewSpace": {
         "type": "String",        "placeholders": {}
@@ -1163,7 +1160,7 @@
                 "type": "String"            }
         }
     },
-    "newSpace": "Nuovo spazio",    "emojis": "Emoji",    "commandHint_googly": "Invia degli occhi finti",    "createGroup": "Crea gruppo",    "time": "Tempo",    "custom": "Personalizzato",    "noBackupWarning": "Attenzione! Senza abilitare il backup della chat, perderai l'accesso ai tuoi messaggi crittografati. Si consiglia vivamente di abilitare il backup della chat prima di disconnettersi.",    "kickUserDescription": "L'utente è stato rimosso, ma non bannato. Nelle chat pubbliche, l'utente potrà rientrare quando vuole.",    "importNow": "Importa ora",    "pinMessage": "Fissa alla stanza",    "invite": "Invitare",    "unsupportedAndroidVersionLong": "Questa funzionalità richiede una versione di Android più recente. Si prega di verificare la presenza di aggiornamenti o supporto per Lineage OS.",    "storeSecurlyOnThisDevice": "Salva in modo sicuro su questo dispositivo",    "screenSharingDetail": "Stai condividendo il tuo schermo in FuffyChat",    "placeCall": "Fai una chiamata",    "blockListDescription": "Puoi bloccare gli utenti che ti disturbano. Non sarai più in grado di ricevere messaggi o inviti alle stanze dalle persone che hai bloccato.",    "blockedUsers": "Utenti bloccati",    "blockUsername": "Nome utente da ignorare",    "createGroupAndInviteUsers": "Crea un gruppo e invita gli utenti",    "groupCanBeFoundViaSearch": "Il gruppo può essere cercato",    "noUsersFoundWithQuery": "Sfortunatamente non è stato trovato nessun utente con \"{query}\". Per favore controlla se hai fatto un errore di battitura.",    "@noUsersFoundWithQuery": {
+    "newSpace": "Nuovo spazio",    "emojis": "Emoji",    "commandHint_googly": "Invia degli occhi finti",    "createGroup": "Crea gruppo",    "time": "Tempo",    "custom": "Personalizzato",    "noBackupWarning": "Attenzione! Senza abilitare il backup della chat, perderai l'accesso ai tuoi messaggi crittografati. Si consiglia vivamente di abilitare il backup della chat prima di disconnettersi.",    "kickUserDescription": "L'utente è stato rimosso, ma non bannato. Nelle chat pubbliche, l'utente potrà rientrare quando vuole.",    "importNow": "Importa ora",    "pinMessage": "Fissa alla stanza",    "invite": "Invitare",    "unsupportedAndroidVersionLong": "Questa funzionalità richiede una versione di Android più recente. Si prega di verificare la presenza di aggiornamenti o supporto per Lineage OS.",    "storeSecurlyOnThisDevice": "Salva in modo sicuro su questo dispositivo",    "placeCall": "Fai una chiamata",    "blockListDescription": "Puoi bloccare gli utenti che ti disturbano. Non sarai più in grado di ricevere messaggi o inviti alle stanze dalle persone che hai bloccato.",    "blockedUsers": "Utenti bloccati",    "blockUsername": "Nome utente da ignorare",    "createGroupAndInviteUsers": "Crea un gruppo e invita gli utenti",    "groupCanBeFoundViaSearch": "Il gruppo può essere cercato",    "noUsersFoundWithQuery": "Sfortunatamente non è stato trovato nessun utente con \"{query}\". Per favore controlla se hai fatto un errore di battitura.",    "@noUsersFoundWithQuery": {
         "type": "String",        "placeholders": {
             "query": {
                 "type": "String"            }
@@ -1244,7 +1241,7 @@
                 "type": "String"            }
         }
     },
-    "changeTheChatPermissions": "Cambia i permessi della chat",    "changeTheVisibilityOfChatHistory": "Cambia la visibilità della cronologia chat",    "changeTheCanonicalRoomAlias": "Cambia l'indirizzo principale della chat pubblica",    "sendRoomNotifications": "Invia notifiche alla @stanza",    "sendCanceled": "Invio annullato",    "calculatingFileSize": "Calcolo della dimensione del file...",    "sendingAttachment": "Invio allegato...",    "oneOfYourDevicesIsNotVerified": "Uno dei tuoi dispositivi non è verificato",    "noticeChatBackupDeviceVerification": "Nota: quando colleghi tutti i tuoi dispositivi al backup della chat, vengono verificati automaticamente.",    "moderatorLevel": "{level} - Moderatore",    "@moderatorLevel": {
+    "changeTheChatPermissions": "Cambia i permessi della chat",    "changeTheVisibilityOfChatHistory": "Cambia la visibilità della cronologia chat",    "changeTheCanonicalRoomAlias": "Cambia l'indirizzo principale della chat pubblica",    "sendRoomNotifications": "Invia notifiche alla @stanza",    "sendCanceled": "Invio annullato",    "calculatingFileSize": "Calcolo della dimensione del file...",    "oneOfYourDevicesIsNotVerified": "Uno dei tuoi dispositivi non è verificato",    "noticeChatBackupDeviceVerification": "Nota: quando colleghi tutti i tuoi dispositivi al backup della chat, vengono verificati automaticamente.",    "moderatorLevel": "{level} - Moderatore",    "@moderatorLevel": {
         "type": "String",        "placeholders": {
             "level": {
                 "type": "int"            }

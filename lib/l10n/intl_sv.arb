@@ -293,9 +293,6 @@
     "emoteInvalid": "Ogiltig dekal-kod!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emote inställningar",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Dekal kod",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1086,19 +1083,19 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Märk som rum för direktmeddelanden för det givante Matrix ID",    "user": "Användare",    "storeInAppleKeyChain": "Lagra i Apples nyckelkedja (KeyChain)",    "foregroundServiceRunning": "Denna avisering visas när förgrundstjänsten körs.",    "custom": "Anpassad",    "countFiles": "{count} filer",    "@countFiles": {
+    "commandHint_markasdm": "Märk som rum för direktmeddelanden för det givante Matrix ID",    "user": "Användare",    "storeInAppleKeyChain": "Lagra i Apples nyckelkedja (KeyChain)",    "custom": "Anpassad",    "countFiles": "{count} filer",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    "screenSharingTitle": "skärmdelning",    "noKeyForThisMessage": "Detta kan hända om meddelandet skickades innan du loggade in på ditt konto i den här enheten.\n\nDet kan också vara så att avsändaren har blockerat din enhet eller att något gick fel med internetanslutningen.\n\nKan du läsa meddelandet i en annan session? I sådana fall kan du överföra meddelandet från den sessionen! Gå till Inställningar > Enhet och säkerställ att dina enheter har verifierat varandra. När du öppnar rummet nästa gång och båda sessionerna är i förgrunden, så kommer nycklarna att överföras automatiskt.\n\nVill du inte förlora nycklarna vid utloggning eller när du byter enhet? Säkerställ att du har aktiverat säkerhetskopiering för chatten i inställningarna.",    "fileIsTooBigForServer": "Gick inte att skicka! Servern stödjer endast bilagor upp till {max}.",    "commandHint_googly": "Skicka några googly ögon",    "commandHint_cuddle": "Skicka en omfamning",    "commandHint_hug": "Skicka en kram",    "users": "Användare",    "cuddleContent": "{senderName} omfamnar dig",    "@cuddleContent": {
+    "noKeyForThisMessage": "Detta kan hända om meddelandet skickades innan du loggade in på ditt konto i den här enheten.\n\nDet kan också vara så att avsändaren har blockerat din enhet eller att något gick fel med internetanslutningen.\n\nKan du läsa meddelandet i en annan session? I sådana fall kan du överföra meddelandet från den sessionen! Gå till Inställningar > Enhet och säkerställ att dina enheter har verifierat varandra. När du öppnar rummet nästa gång och båda sessionerna är i förgrunden, så kommer nycklarna att överföras automatiskt.\n\nVill du inte förlora nycklarna vid utloggning eller när du byter enhet? Säkerställ att du har aktiverat säkerhetskopiering för chatten i inställningarna.",    "fileIsTooBigForServer": "Gick inte att skicka! Servern stödjer endast bilagor upp till {max}.",    "commandHint_googly": "Skicka några googly ögon",    "commandHint_cuddle": "Skicka en omfamning",    "commandHint_hug": "Skicka en kram",    "users": "Användare",    "cuddleContent": "{senderName} omfamnar dig",    "@cuddleContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
         }
     },
-    "hydrate": "Återställ från säkerhetskopia",    "screenSharingDetail": "Du delar din skärm i JuMiKK-Chat",    "youRejectedTheInvitation": "Du avvisade inbjudan",    "youBannedUser": "Du förbjöd {user}",    "@youBannedUser": {
+    "hydrate": "Återställ från säkerhetskopia",    "youRejectedTheInvitation": "Du avvisade inbjudan",    "youBannedUser": "Du förbjöd {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1154,7 +1151,7 @@
                 "type": "String"            }
         }
     },
-    "openLinkInBrowser": "Öppna länk i webbläsare",    "directChat": "Direktchatt",    "wrongPinEntered": "Fel pin-kod inslagen! Försök igen om {seconds} sekunder…",    "@wrongPinEntered": {
+    "openLinkInBrowser": "Öppna länk i webbläsare",    "wrongPinEntered": "Fel pin-kod inslagen! Försök igen om {seconds} sekunder…",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1295,7 +1292,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Ändringslogg",    "sendCanceled": "Skickande avbröts",    "loginWithMatrixId": "Logga in med Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Verkar inte vara en kompatibel hemserver. Fel URL?",    "calculatingFileSize": "Beräknar filstorlek...",    "sendingAttachment": "Skickar bilaga...",    "oneOfYourDevicesIsNotVerified": "En av dina enheter är inte verifierade",    "noticeChatBackupDeviceVerification": "Notis: När du ansluter alla dina enheter till chatt-backupen, är de automatiskt verifierade.",    "continueText": "Fortsätt",    "blur": "Blurra:",    "opacity": "Opacitet:",    "setWallpaper": "Ställ in bakgrundsbild",    "manageAccount": "Hantera konto",    "noContactInformationProvided": "Servern bistår inte med någon giltig kontaktinformation",    "contactServerAdmin": "Kontakta server-admin",    "contactServerSecurity": "Kontakta server-säkerheten",    "supportPage": "Stödsida",    "serverInformation": "Serverinformation:",    "name": "Namn",    "version": "Version",    "website": "Hemsida",    "compress": "Komprimera",    "boldText": "Fetstilt",    "italicText": "Kursiv",    "strikeThrough": "Genomstryk",    "pleaseFillOut": "Fyll i",    "invalidUrl": "Ogiltig url",    "addLink": "Lägg till länk",    "unableToJoinChat": "Kunde inte gå med i chatten. Kanske har den andra parten redan stängt konversationen.",    "previous": "Föregående",    "otherPartyNotLoggedIn": "Den andra parten är för närvarande inte inloggad, och kan därför inte ta emot meddelanden!",    "appWantsToUseForLogin": "Använd '{server}' för att logga in",    "@appWantsToUseForLogin": {
+    "changelog": "Ändringslogg",    "sendCanceled": "Skickande avbröts",    "loginWithMatrixId": "Logga in med Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Verkar inte vara en kompatibel hemserver. Fel URL?",    "calculatingFileSize": "Beräknar filstorlek...",    "oneOfYourDevicesIsNotVerified": "En av dina enheter är inte verifierade",    "noticeChatBackupDeviceVerification": "Notis: När du ansluter alla dina enheter till chatt-backupen, är de automatiskt verifierade.",    "continueText": "Fortsätt",    "blur": "Blurra:",    "opacity": "Opacitet:",    "setWallpaper": "Ställ in bakgrundsbild",    "manageAccount": "Hantera konto",    "noContactInformationProvided": "Servern bistår inte med någon giltig kontaktinformation",    "contactServerAdmin": "Kontakta server-admin",    "contactServerSecurity": "Kontakta server-säkerheten",    "supportPage": "Stödsida",    "serverInformation": "Serverinformation:",    "name": "Namn",    "version": "Version",    "website": "Hemsida",    "compress": "Komprimera",    "boldText": "Fetstilt",    "italicText": "Kursiv",    "strikeThrough": "Genomstryk",    "pleaseFillOut": "Fyll i",    "invalidUrl": "Ogiltig url",    "addLink": "Lägg till länk",    "unableToJoinChat": "Kunde inte gå med i chatten. Kanske har den andra parten redan stängt konversationen.",    "previous": "Föregående",    "otherPartyNotLoggedIn": "Den andra parten är för närvarande inte inloggad, och kan därför inte ta emot meddelanden!",    "appWantsToUseForLogin": "Använd '{server}' för att logga in",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

@@ -278,9 +278,6 @@
     "downloadFile": "Descargar li file",    "@downloadFile": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Parametres de emotiones",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Curt-code de emotion",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -383,7 +380,7 @@
     "changeTheme": "Cambiar li stil",    "@changeTheme": {
         "type": "String",        "placeholders": {}
     },
-    "commandHint_markasgroup": "Marcar quam gruppe",    "screenSharingTitle": "partir li ecran",    "bannedUser": "{username} ha bannit {targetName}",    "@bannedUser": {
+    "commandHint_markasgroup": "Marcar quam gruppe",    "bannedUser": "{username} ha bannit {targetName}",    "@bannedUser": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },

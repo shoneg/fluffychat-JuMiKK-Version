@@ -283,9 +283,6 @@
     "emoteInvalid": "Codi d'emoticona invàlid!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Paràmetres de les emoticones",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Codi d'emoticona",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1093,7 +1090,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "S'estriparà el missatge per a totser d'aquesta conversa. Aquesta acció és irreversible.",    "invalidInput": "L'entrada no és vàlida!",    "doNotShowAgain": "No ho tornis a mostrar",    "report": "informa",    "screenSharingTitle": "compartició de pantalla",    "googlyEyesContent": "{senderName} t'ha enviat un parell d'ulls",    "@googlyEyesContent": {
+    "redactMessageDescription": "S'estriparà el missatge per a totser d'aquesta conversa. Aquesta acció és irreversible.",    "invalidInput": "L'entrada no és vàlida!",    "doNotShowAgain": "No ho tornis a mostrar",    "report": "informa",    "googlyEyesContent": "{senderName} t'ha enviat un parell d'ulls",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1114,13 +1111,13 @@
                 "type": "String"            }
         }
     },
-    "openLinkInBrowser": "Obre l'enllaç en un navegador",    "messageInfo": "Informació del missatge",    "disableEncryptionWarning": "Per motius de seguretat, un cop activat, no es pot desactivar el xifratge.",    "directChat": "Xat directe",    "wrongPinEntered": "Pin incorrecte! Torna-ho a provar en {seconds} segons...",    "@wrongPinEntered": {
+    "openLinkInBrowser": "Obre l'enllaç en un navegador",    "messageInfo": "Informació del missatge",    "disableEncryptionWarning": "Per motius de seguretat, un cop activat, no es pot desactivar el xifratge.",    "wrongPinEntered": "Pin incorrecte! Torna-ho a provar en {seconds} segons...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Envia notificacions d'escriptura",    "inviteGroupChat": "📨 Invitació de grup",    "foregroundServiceRunning": "Aquesta notificació apareix quan el servei de primer pla està corrent.",    "voiceCall": "Videotrucada",    "commandHint_unban": "Aixeca el veto a aquesti usuàriï per aquesta sala",    "@commandHint_unban": {
+    "sendTypingNotifications": "Envia notificacions d'escriptura",    "inviteGroupChat": "📨 Invitació de grup",    "voiceCall": "Videotrucada",    "commandHint_unban": "Aixeca el veto a aquesti usuàriï per aquesta sala",    "@commandHint_unban": {
         "type": "String",        "description": "Usage hint for the command /unban"    },
     "importEmojis": "Importa emojis",    "wasDirectChatDisplayName": "Xat buit ( era {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
@@ -1163,7 +1160,7 @@
     "newSpace": "Espai nou",    "emojis": "Emojis",    "pleaseEnterYourPin": "Introdueix el teu pin",    "@pleaseEnterYourPin": {
         "type": "String",        "placeholders": {}
     },
-    "commandHint_googly": "Envia uns ulls curiosos",    "createGroup": "Crea un grup",    "time": "Temps",    "custom": "Personalitzat",    "noBackupWarning": "Compte! Si no actives la còpia de seguretat dels xats, perdràs accés als teus missatges xifrats. És molt recomanable activar-ho abans de tancar la sessió.",    "kickUserDescription": "Li usuàrïi ha estat expulsadi però no vetadi. Als xats públics, pot tornar-hi a entrar en qualsevol moment.",    "importNow": "Importa-ho ara",    "pinMessage": "Fixa a la sala",    "invite": "Convida",    "unsupportedAndroidVersionLong": "Aquesta funcionalitat només funciona amb versions d'Android més noves.",    "storeSecurlyOnThisDevice": "Desa de forma segura en aquest dispositiu",    "screenSharingDetail": "Estàs compartint la teva pantalla a JuMiKK-Chat",    "placeCall": "Truca",    "block": "Bloca",    "blockUsername": "Ignora aquesti usuàrïi",    "blockedUsers": "Usuàrïis blocadis",    "blockListDescription": "Pots bloquejar usuàrïis que et molestin. No rebràs missatges seus ni invitacions de part seva a cap sala.",    "pleaseChooseAStrongPassword": "Tria una contrasenya forta",    "groupName": "Nom del grup",    "createGroupAndInviteUsers": "Crea un grup i convida-hi usuàrïis",    "wrongRecoveryKey": "Malauradament, aquesta clau de recuperació no és la correcta.",    "sendReadReceiptsDescription": "Lis altris participants d'un xat poden veure quan has llegit un missatge.",    "yourGlobalUserIdIs": "La teva ID global és: ",    "commandHint_sendraw": "Envia un json pelat",    "databaseMigrationTitle": "La base de dades ha estat optimitzada",    "pleaseEnterYourCurrentPassword": "Fica la teva contrasenya actual",    "newPassword": "Contrasenya nova",    "restoreSessionBody": "L'aplicació provarà de restaurar la teva sessió des de la còpia de seguretat. Si us plau, comunica aquest error a l'equi pde desenvolupament a {url}. El missatge d'error és {error}",    "@restoreSessionBody": {
+    "commandHint_googly": "Envia uns ulls curiosos",    "createGroup": "Crea un grup",    "time": "Temps",    "custom": "Personalitzat",    "noBackupWarning": "Compte! Si no actives la còpia de seguretat dels xats, perdràs accés als teus missatges xifrats. És molt recomanable activar-ho abans de tancar la sessió.",    "kickUserDescription": "Li usuàrïi ha estat expulsadi però no vetadi. Als xats públics, pot tornar-hi a entrar en qualsevol moment.",    "importNow": "Importa-ho ara",    "pinMessage": "Fixa a la sala",    "invite": "Convida",    "unsupportedAndroidVersionLong": "Aquesta funcionalitat només funciona amb versions d'Android més noves.",    "storeSecurlyOnThisDevice": "Desa de forma segura en aquest dispositiu",    "placeCall": "Truca",    "block": "Bloca",    "blockUsername": "Ignora aquesti usuàrïi",    "blockedUsers": "Usuàrïis blocadis",    "blockListDescription": "Pots bloquejar usuàrïis que et molestin. No rebràs missatges seus ni invitacions de part seva a cap sala.",    "pleaseChooseAStrongPassword": "Tria una contrasenya forta",    "groupName": "Nom del grup",    "createGroupAndInviteUsers": "Crea un grup i convida-hi usuàrïis",    "wrongRecoveryKey": "Malauradament, aquesta clau de recuperació no és la correcta.",    "sendReadReceiptsDescription": "Lis altris participants d'un xat poden veure quan has llegit un missatge.",    "yourGlobalUserIdIs": "La teva ID global és: ",    "commandHint_sendraw": "Envia un json pelat",    "databaseMigrationTitle": "La base de dades ha estat optimitzada",    "pleaseEnterYourCurrentPassword": "Fica la teva contrasenya actual",    "newPassword": "Contrasenya nova",    "restoreSessionBody": "L'aplicació provarà de restaurar la teva sessió des de la còpia de seguretat. Si us plau, comunica aquest error a l'equi pde desenvolupament a {url}. El missatge d'error és {error}",    "@restoreSessionBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },
@@ -1277,7 +1274,7 @@
                 "type": "int"            }
         }
     },
-    "sendingAttachment": "S'està enviant l'adjunt...",    "oneOfYourDevicesIsNotVerified": "Un dels teus dispositius no està verificat",    "blur": "Difumina:",    "opacity": "Opacitat:",    "manageAccount": "Gestiona el compte",    "contactServerAdmin": "Contacta l'admin del servidor",    "contactServerSecurity": "Contacta l'equip de seguretat del servidor",    "version": "Versió",    "website": "Lloc web",    "compress": "Comprimeix",    "pleaseFillOut": "Emplena",    "invalidUrl": "URL invàlida",    "unableToJoinChat": "No s'ha pogut entrar al xat. Pot ser que l'altri participant hagi tancat la conversa.",    "aboutHomeserver": "Quant a {homeserver}",    "@aboutHomeserver": {
+    "oneOfYourDevicesIsNotVerified": "Un dels teus dispositius no està verificat",    "blur": "Difumina:",    "opacity": "Opacitat:",    "manageAccount": "Gestiona el compte",    "contactServerAdmin": "Contacta l'admin del servidor",    "contactServerSecurity": "Contacta l'equip de seguretat del servidor",    "version": "Versió",    "website": "Lloc web",    "compress": "Comprimeix",    "pleaseFillOut": "Emplena",    "invalidUrl": "URL invàlida",    "unableToJoinChat": "No s'ha pogut entrar al xat. Pot ser que l'altri participant hagi tancat la conversa.",    "aboutHomeserver": "Quant a {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

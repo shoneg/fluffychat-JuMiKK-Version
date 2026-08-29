@@ -299,9 +299,6 @@
     "emoteInvalid": "Ugyldig smilefjes-kode!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Smilefjes-innstillinger",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Smilefjes-kode",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -964,7 +961,7 @@
                 "type": "String"            }
         }
     },
-    "unverified": "Ikke verifisert",    "thisDevice": "Denne enheten:",    "sendingAttachment": "Sender vedlegg...",    "removeYourAvatar": "Fjern din avatar",    "@removeYourAvatar": {
+    "unverified": "Ikke verifisert",    "thisDevice": "Denne enheten:",    "removeYourAvatar": "Fjern din avatar",    "@removeYourAvatar": {
         "type": "String",        "placeholders": {}
     },
     "importFromZipFile": "Importer fra .zip-fil",    "select": "Velg",    "databaseMigrationTitle": "Databasen er optimalisert",    "newPassword": "Nytt passord",    "files": "Filer",    "searchIn": "Søk i chatten «{chat}»...",    "@searchIn": {
@@ -1031,7 +1028,7 @@
                 "type": "String"            }
         }
     },
-    "chatDescriptionHasBeenChanged": "Chatbeskrivelsen er endret",    "screenSharingTitle": "skjermdeling",    "screenSharingDetail": "Du deler skjermen din i FuffyChat",    "whyIsThisMessageEncrypted": "Hvorfor er denne meldingen uleselig?",    "yourGlobalUserIdIs": "Din globale bruker-ID er: ",    "searchChatsRooms": "Søk etter #chatter, @brukere...",    "groupName": "Gruppenavn",    "createGroupAndInviteUsers": "Opprett en gruppe og inviter brukere",    "invite": "Inviter",    "wrongPinEntered": "Feil PIN-kode oppgitt! Prøv igjen om {seconds} sekunder...",    "@wrongPinEntered": {
+    "chatDescriptionHasBeenChanged": "Chatbeskrivelsen er endret",    "whyIsThisMessageEncrypted": "Hvorfor er denne meldingen uleselig?",    "yourGlobalUserIdIs": "Din globale bruker-ID er: ",    "searchChatsRooms": "Søk etter #chatter, @brukere...",    "groupName": "Gruppenavn",    "createGroupAndInviteUsers": "Opprett en gruppe og inviter brukere",    "invite": "Inviter",    "wrongPinEntered": "Feil PIN-kode oppgitt! Prøv igjen om {seconds} sekunder...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1264,7 +1261,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Direkte chat",    "redactedByBecause": "Redigert av {username} fordi: «{reason}»",    "@redactedByBecause": {
+    "redactedByBecause": "Redigert av {username} fordi: «{reason}»",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1296,7 +1293,7 @@
                 "type": "String"            }
         }
     },
-    "notificationRuleMessageDescription": "Varsler brukeren om generelle meldinger.",    "notificationRuleSuppressEditsDescription": "Demper varsler for redigerte meldinger.",    "notificationRuleEncryptedDescription": "Varsler brukeren om meldinger i krypterte rom.",    "notificationRuleRoomServerAcl": "Romserverens tilgangskontrolliste",    "notificationRuleRoomOneToOneDescription": "Varsler brukeren om meldinger i én-til-én-rom.",    "notificationRuleJitsiDescription": "Varsler brukeren om hendelser i Jitsi-widgeten.",    "customReaction": "Egendefinert reaksjon",    "pause": "Pause",    "foregroundServiceRunning": "Denne varslingen vises når forgrunnstjenesten kjører.",    "longPressToRecordVoiceMessage": "Langt trykk for å spille inn talemelding.",    "startPoll": "Start avstemning",    "endPoll": "Avslutt avstemning",    "answersVisible": "Svar synlige",    "addAnswerOption": "Legg til svaralternativ",    "answerOption": "Svaralternativ",    "allowMultipleAnswers": "Tillat flere svar",    "pollHasBeenEnded": "Avstemningen er avsluttet",    "roomUpgradeDescription": "Chatten vil deretter bli gjenskapt med den nye romversjonen. Alle deltakere vil bli varslet om at de må bytte til den nye chatten. Du kan finne ut mer om romversjoner på https://spec.matrix.org/latest/rooms/",    "groupCanBeFoundViaSearch": "Gruppen kan finnes via søk",    "commandHint_sendraw": "Send raw json",    "replyInThread": "Svar i tråden",    "sessionLostBody": "Sesjonen din er tapt. Vennligst rapporter denne feilen til utviklerne på {url}. Feilmeldingen er: {error}",    "@sessionLostBody": {
+    "notificationRuleMessageDescription": "Varsler brukeren om generelle meldinger.",    "notificationRuleSuppressEditsDescription": "Demper varsler for redigerte meldinger.",    "notificationRuleEncryptedDescription": "Varsler brukeren om meldinger i krypterte rom.",    "notificationRuleRoomServerAcl": "Romserverens tilgangskontrolliste",    "notificationRuleRoomOneToOneDescription": "Varsler brukeren om meldinger i én-til-én-rom.",    "notificationRuleJitsiDescription": "Varsler brukeren om hendelser i Jitsi-widgeten.",    "customReaction": "Egendefinert reaksjon",    "pause": "Pause",    "longPressToRecordVoiceMessage": "Langt trykk for å spille inn talemelding.",    "startPoll": "Start avstemning",    "endPoll": "Avslutt avstemning",    "answersVisible": "Svar synlige",    "addAnswerOption": "Legg til svaralternativ",    "answerOption": "Svaralternativ",    "allowMultipleAnswers": "Tillat flere svar",    "pollHasBeenEnded": "Avstemningen er avsluttet",    "roomUpgradeDescription": "Chatten vil deretter bli gjenskapt med den nye romversjonen. Alle deltakere vil bli varslet om at de må bytte til den nye chatten. Du kan finne ut mer om romversjoner på https://spec.matrix.org/latest/rooms/",    "groupCanBeFoundViaSearch": "Gruppen kan finnes via søk",    "commandHint_sendraw": "Send raw json",    "replyInThread": "Svar i tråden",    "sessionLostBody": "Sesjonen din er tapt. Vennligst rapporter denne feilen til utviklerne på {url}. Feilmeldingen er: {error}",    "@sessionLostBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },

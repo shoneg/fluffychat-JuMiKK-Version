@@ -313,9 +313,6 @@
     "emoteInvalid": "無效的表情快捷鍵！",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "表情設定",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "表情快捷鍵",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1043,7 +1040,7 @@
                 "type": "int"            }
         }
     },
-    "screenSharingDetail": "您正在 FuffyChat 中分享您的螢幕",    "wrongPinEntered": "輸入的密碼錯誤！ {seconds} 秒後再試一次......",    "@wrongPinEntered": {
+    "wrongPinEntered": "輸入的密碼錯誤！ {seconds} 秒後再試一次......",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1148,7 +1145,7 @@
     "thereAreCountUsersBlocked": "目前有 {count} 名使用者被封鎖。",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "appLockDescription": "未使用時以密碼鎖定應用程式",    "globalChatId": "全球聊天室 ID",    "accessAndVisibility": "訪問權限和可見性",    "accessAndVisibilityDescription": "誰被允許加入此聊天室以及如何發現聊天室。",    "calls": "通話",    "chatDescription": "聊天室描述",    "chatDescriptionHasBeenChanged": "聊天室描述已變更",    "tryAgain": "再試一次",    "directChat": "私訊",    "setAsCanonicalAlias": "設為主要別名",    "@setAsCanonicalAlias": {
+    "appLockDescription": "未使用時以密碼鎖定應用程式",    "globalChatId": "全球聊天室 ID",    "accessAndVisibility": "訪問權限和可見性",    "accessAndVisibilityDescription": "誰被允許加入此聊天室以及如何發現聊天室。",    "calls": "通話",    "chatDescription": "聊天室描述",    "chatDescriptionHasBeenChanged": "聊天室描述已變更",    "tryAgain": "再試一次",    "setAsCanonicalAlias": "設為主要別名",    "@setAsCanonicalAlias": {
         "type": "String",        "placeholders": {}
     },
     "setChatDescription": "設定聊天室描述",    "groupName": "群組名稱",    "searchForUsers": "搜尋 @users...",    "inviteGroupChat": "📨 邀請群組聊天室",    "knocking": "敲門",    "sessionLostBody": "您的會話已丟失。請將此錯誤報告給開發人員，網址為 {url}。錯誤訊息為：{error}",    "@sessionLostBody": {
@@ -1179,7 +1176,7 @@
                 "type": "String"            }
         }
     },
-    "confirmEventUnpin": "您確定要永久取消釘選該事件嗎？",    "noOneCanJoin": "沒有人可以加入",    "storeInAndroidKeystore": "存儲在 Android KeyStore",    "storeInAppleKeyChain": "存儲在 Apple KeyChain",    "foregroundServiceRunning": "當前景服務正在運行時會顯示此通知。",    "screenSharingTitle": "螢幕分享",    "wasDirectChatDisplayName": "空的聊天室（原名稱為 {oldDisplayName} ）",    "@wasDirectChatDisplayName": {
+    "confirmEventUnpin": "您確定要永久取消釘選該事件嗎？",    "noOneCanJoin": "沒有人可以加入",    "storeInAndroidKeystore": "存儲在 Android KeyStore",    "storeInAppleKeyChain": "存儲在 Apple KeyChain",    "wasDirectChatDisplayName": "空的聊天室（原名稱為 {oldDisplayName} ）",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1277,7 +1274,7 @@
                 "type": "String"            }
         }
     },
-    "oneOfYourDevicesIsNotVerified": "你的其中一個裝置尚未驗證",    "chatPermissionsDescription": "定義此聊天中某些操作需要哪個權限等級。 權限等級0、50和100通常代表使用者、版主和管理員，但任何分級都是可能的。",    "changeGeneralChatSettings": "變更一般聊天設定",    "manageAccount": "帳號管理",    "changeTheChatPermissions": "變更聊天室權限",    "changeTheVisibilityOfChatHistory": "變更過往聊天記錄可見度",    "sendingAttachment": "附件傳送中…",    "opacity": "不透明度:",    "aboutHomeserver": "關於{homeserver}",    "@aboutHomeserver": {
+    "oneOfYourDevicesIsNotVerified": "你的其中一個裝置尚未驗證",    "chatPermissionsDescription": "定義此聊天中某些操作需要哪個權限等級。 權限等級0、50和100通常代表使用者、版主和管理員，但任何分級都是可能的。",    "changeGeneralChatSettings": "變更一般聊天設定",    "manageAccount": "帳號管理",    "changeTheChatPermissions": "變更聊天室權限",    "changeTheVisibilityOfChatHistory": "變更過往聊天記錄可見度",    "opacity": "不透明度:",    "aboutHomeserver": "關於{homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

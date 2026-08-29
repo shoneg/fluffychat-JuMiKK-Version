@@ -370,9 +370,6 @@
     "emoteInvalid": "Ongeldige emoticon korte code!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emoticon-instellingen",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Emoticon korte code",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Markeer als privé-chat voor de Matrix-ID",    "commandHint_markasgroup": "Markeer als groep",    "whyIsThisMessageEncrypted": "Waarom is dit bericht onleesbaar?",    "noKeyForThisMessage": "Dit kan gebeuren als het bericht is verzonden voordat je bij je account op dit apparaat hebt aangemeld.\n\nHet is ook mogelijk dat de afzender je apparaat heeft geblokkeerd of dat er iets mis is gegaan met de internetverbinding.\n\nKan je het bericht wel lezen in een andere sessie? Dan kan je het bericht daarvandaan overzetten! Ga naar Instellingen > Apparaten en zorg ervoor dat je apparaten elkaar hebben geverifieerd. Wanneer je de chat de volgende keer opent en beide sessies op de voorgrond staan, zullen de sleutels automatisch worden verzonden.\n\nWil je de sleutels niet verliezen als je uitlogt of van apparaat wisselt? Zorg er dan voor dat je de chatback-up hebt aangezet in de instellingen.",    "foregroundServiceRunning": "Deze melding verschijnt wanneer de voorgronddienst draait.",    "screenSharingTitle": "scherm delen",    "screenSharingDetail": "Je deelt je scherm in FuffyChat",    "newSpace": "Space aanmaken",    "doNotShowAgain": "Niet meer tonen",    "googlyEyesContent": "{senderName} stuurt je wiebelogen",    "@googlyEyesContent": {
+    "commandHint_markasdm": "Markeer als privé-chat voor de Matrix-ID",    "commandHint_markasgroup": "Markeer als groep",    "whyIsThisMessageEncrypted": "Waarom is dit bericht onleesbaar?",    "noKeyForThisMessage": "Dit kan gebeuren als het bericht is verzonden voordat je bij je account op dit apparaat hebt aangemeld.\n\nHet is ook mogelijk dat de afzender je apparaat heeft geblokkeerd of dat er iets mis is gegaan met de internetverbinding.\n\nKan je het bericht wel lezen in een andere sessie? Dan kan je het bericht daarvandaan overzetten! Ga naar Instellingen > Apparaten en zorg ervoor dat je apparaten elkaar hebben geverifieerd. Wanneer je de chat de volgende keer opent en beide sessies op de voorgrond staan, zullen de sleutels automatisch worden verzonden.\n\nWil je de sleutels niet verliezen als je uitlogt of van apparaat wisselt? Zorg er dan voor dat je de chatback-up hebt aangezet in de instellingen.",    "newSpace": "Space aanmaken",    "doNotShowAgain": "Niet meer tonen",    "googlyEyesContent": "{senderName} stuurt je wiebelogen",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Directe chat",    "setChatDescription": "Onderwerp instellen",    "setColorTheme": "Kleurthema instellen:",    "invite": "Uitnodigen",    "inviteGroupChat": "📨 Groeps-chat uitnodiging",    "emoteKeyboardNoRecents": "Recent gebruikte emoticons zullen hier verschijnen...",    "@emoteKeyboardNoRecents": {
+    "setChatDescription": "Onderwerp instellen",    "setColorTheme": "Kleurthema instellen:",    "invite": "Uitnodigen",    "inviteGroupChat": "📨 Groeps-chat uitnodiging",    "emoteKeyboardNoRecents": "Recent gebruikte emoticons zullen hier verschijnen...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "invalidInput": "Ongeldige invoer!",    "wrongPinEntered": "Verkeerde pin ingevoerd! Probeer het nog eens over {seconds} seconden...",    "@wrongPinEntered": {
@@ -1275,7 +1272,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Wijzigingengeschiedenis",    "loginWithMatrixId": "Inloggen met Matrix-ID",    "calculatingFileSize": "Bestandsgrootte berekenen...",    "sendingAttachment": "Bijlage versturen...",    "version": "Versie",    "supportPage": "Supportpagina",    "serverInformation": "Server-informatie:",    "name": "Naam",    "verifyOtherDeviceDescription": "Een geverifieerd ander apparaat zorgt ervoor dat de apparaten sleutels uitwisselen, wat je beveiliging versterkt. 💪 Als je de verificatie start verschijnt er een popup op beide apparaten. Hier staat een reeks emoji's of getallen die je met elkaar moet vergelijken. Het is handig om beide apparaten bij de hand te hebben voordat je de verificatie start. 🤳",    "commandHint_unignore": "Herstel de negeerde Matrix-ID",    "restoreSessionBody": "De app probeert nu je sessie te herstellen van een back-up. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze link {url}. De foutmelding is: {error}",    "@restoreSessionBody": {
+    "changelog": "Wijzigingengeschiedenis",    "loginWithMatrixId": "Inloggen met Matrix-ID",    "calculatingFileSize": "Bestandsgrootte berekenen...",    "version": "Versie",    "supportPage": "Supportpagina",    "serverInformation": "Server-informatie:",    "name": "Naam",    "verifyOtherDeviceDescription": "Een geverifieerd ander apparaat zorgt ervoor dat de apparaten sleutels uitwisselen, wat je beveiliging versterkt. 💪 Als je de verificatie start verschijnt er een popup op beide apparaten. Hier staat een reeks emoji's of getallen die je met elkaar moet vergelijken. Het is handig om beide apparaten bij de hand te hebben voordat je de verificatie start. 🤳",    "commandHint_unignore": "Herstel de negeerde Matrix-ID",    "restoreSessionBody": "De app probeert nu je sessie te herstellen van een back-up. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze link {url}. De foutmelding is: {error}",    "@restoreSessionBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },

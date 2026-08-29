@@ -263,9 +263,6 @@
     "emoteInvalid": "Érvénytelen hangulatjel rövidkód!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Hangulatjel Beállítások",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Hangulatjel rövidkód",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1113,7 +1110,7 @@
     "doNotShowAgain": "Ne mutassa újra",    "report": "jelentés",    "status": "Állapot",    "@status": {
         "type": "String",        "placeholders": {}
     },
-    "unverified": "Hitelesítetlen",    "screenSharingTitle": "képernyő megosztás",    "youBannedUser": "Letitotta {user} felhasználót",    "@youBannedUser": {
+    "unverified": "Hitelesítetlen",    "youBannedUser": "Letitotta {user} felhasználót",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1125,13 +1122,13 @@
                 "type": "String"            }
         }
     },
-    "openLinkInBrowser": "Hivatkozás megnyitása böngészőben",    "messageInfo": "Üzenet információ",    "disableEncryptionWarning": "Biztonsági okokból nem kapcsolható ki egy korábban bekapcsolt csevegés titkosítás.",    "directChat": "Privát csevegés",    "wrongPinEntered": "Hibás pinkódot adott meg! Próbálja újra {seconds} mp múlva...",    "@wrongPinEntered": {
+    "openLinkInBrowser": "Hivatkozás megnyitása böngészőben",    "messageInfo": "Üzenet információ",    "disableEncryptionWarning": "Biztonsági okokból nem kapcsolható ki egy korábban bekapcsolt csevegés titkosítás.",    "wrongPinEntered": "Hibás pinkódot adott meg! Próbálja újra {seconds} mp múlva...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Gépelési értesítés megjelenítése",    "inviteGroupChat": "📨 Meghívó a csoportba",    "foregroundServiceRunning": "Ez az értesítés akkor jelenik meg ha az előtéri szolgáltatás fut.",    "voiceCall": "Hang hívás",    "importEmojis": "Emojik importálása",    "wasDirectChatDisplayName": "Üres csevegés (korábban {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "sendTypingNotifications": "Gépelési értesítés megjelenítése",    "inviteGroupChat": "📨 Meghívó a csoportba",    "voiceCall": "Hang hívás",    "importEmojis": "Emojik importálása",    "wasDirectChatDisplayName": "Üres csevegés (korábban {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1163,7 +1160,7 @@
                 "type": "String"            }
         }
     },
-    "newSpace": "Új tér",    "emojis": "Hangulatjelek",    "createGroup": "Csoport létrehozása",    "time": "Idő",    "custom": "Egyedi",    "noBackupWarning": "Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.",    "kickUserDescription": "A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.",    "importNow": "Importálás most",    "pinMessage": "Kitűzés a szobában",    "invite": "Meghívás",    "unsupportedAndroidVersionLong": "Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.",    "storeSecurlyOnThisDevice": "Biztonságos tárolás az eszközön",    "screenSharingDetail": "Megosztja a képernyőjét a JuMiKK-Chat-ben",    "placeCall": "Tér hívás",    "block": "Blokkolás",    "blockedUsers": "Blokkolt felhasználók",    "blockListDescription": "Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.",    "blockUsername": "Felhasználónév ignorálása",    "yourGlobalUserIdIs": "A globális felhasználó-ID-je: ",    "noUsersFoundWithQuery": "\"{query}\"-vel nem található felhasználó. Ellenőrizze nincs e elírás.",    "@noUsersFoundWithQuery": {
+    "newSpace": "Új tér",    "emojis": "Hangulatjelek",    "createGroup": "Csoport létrehozása",    "time": "Idő",    "custom": "Egyedi",    "noBackupWarning": "Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.",    "kickUserDescription": "A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.",    "importNow": "Importálás most",    "pinMessage": "Kitűzés a szobában",    "invite": "Meghívás",    "unsupportedAndroidVersionLong": "Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.",    "storeSecurlyOnThisDevice": "Biztonságos tárolás az eszközön",    "placeCall": "Tér hívás",    "block": "Blokkolás",    "blockedUsers": "Blokkolt felhasználók",    "blockListDescription": "Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.",    "blockUsername": "Felhasználónév ignorálása",    "yourGlobalUserIdIs": "A globális felhasználó-ID-je: ",    "noUsersFoundWithQuery": "\"{query}\"-vel nem található felhasználó. Ellenőrizze nincs e elírás.",    "@noUsersFoundWithQuery": {
         "type": "String",        "placeholders": {
             "query": {
                 "type": "String"            }
@@ -1295,7 +1292,7 @@
                 "type": "String"            }
         }
     },
-    "calculatingFileSize": "Fájl méret kalkulálása...",    "sendingAttachment": "Csatolmány küldése...",    "contentNotificationSettings": "Tartalom értesítési beállítások",    "generalNotificationSettings": "Átalános értesítési beállítások",    "roomNotificationSettings": "Szoba értesítési beállítások",    "notificationRuleMasterDescription": "Felülír minden más szabályt, és kikapcsolja az összes értesítést.",    "notificationRuleInviteForMe": "Meghívás Számomra",    "notificationRuleMemberEventDescription": "Némítja a tagi események értesítéseit.",    "notificationRuleIsUserMention": "Felhasználó Említése",    "notificationRuleTombstoneDescription": "Értesíti a felhasználót a szoba deaktiválás üzenetekről.",    "notificationRuleCall": "Hívás",    "notificationRuleEncryptedRoomOneToOneDescription": "Értesíti a felhasználót a titkosított négyszemközti szobákban levő üzenetekről.",    "notificationRuleRoomOneToOne": "Négyszemközti Szoba",    "notificationRuleMessage": "Üzenet",    "notificationRuleMessageDescription": "Értesíti a felhasználót az általános üzenetekről.",    "notificationRuleEncrypted": "Titkosított",    "notificationRuleEncryptedDescription": "Értesíti a felhasználót a titkosított szobákban levő üzenetekről.",    "notificationRuleServerAcl": "Némítja a Szerver ACL Eseményeket",    "unknownPushRule": "'{rule}' egy ismeretlen push szabály",    "@unknownPushRule": {
+    "calculatingFileSize": "Fájl méret kalkulálása...",    "contentNotificationSettings": "Tartalom értesítési beállítások",    "generalNotificationSettings": "Átalános értesítési beállítások",    "roomNotificationSettings": "Szoba értesítési beállítások",    "notificationRuleMasterDescription": "Felülír minden más szabályt, és kikapcsolja az összes értesítést.",    "notificationRuleInviteForMe": "Meghívás Számomra",    "notificationRuleMemberEventDescription": "Némítja a tagi események értesítéseit.",    "notificationRuleIsUserMention": "Felhasználó Említése",    "notificationRuleTombstoneDescription": "Értesíti a felhasználót a szoba deaktiválás üzenetekről.",    "notificationRuleCall": "Hívás",    "notificationRuleEncryptedRoomOneToOneDescription": "Értesíti a felhasználót a titkosított négyszemközti szobákban levő üzenetekről.",    "notificationRuleRoomOneToOne": "Négyszemközti Szoba",    "notificationRuleMessage": "Üzenet",    "notificationRuleMessageDescription": "Értesíti a felhasználót az általános üzenetekről.",    "notificationRuleEncrypted": "Titkosított",    "notificationRuleEncryptedDescription": "Értesíti a felhasználót a titkosított szobákban levő üzenetekről.",    "notificationRuleServerAcl": "Némítja a Szerver ACL Eseményeket",    "unknownPushRule": "'{rule}' egy ismeretlen push szabály",    "@unknownPushRule": {
         "type": "String",        "placeholders": {
             "rule": {
                 "type": "String"            }

@@ -292,9 +292,6 @@
     "emoteInvalid": "¡El atajo del emote es inválido!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Configuración de emotes",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Atajo de emote",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1070,7 +1067,7 @@
                 "type": "String"            }
         }
     },
-    "markAsRead": "Marcar como leído",    "replace": "Reemplazar",    "unsupportedAndroidVersionLong": "Esta característica requiere una versión más reciente de Android. Por favor, compruebe las actualizaciones o la compatibilidad de LineageOS.",    "storeSecurlyOnThisDevice": "Almacenar de forma segura en este dispositivo",    "screenSharingDetail": "Usted está compartiendo su pantalla en JuMiKK-Chat",    "unsupportedAndroidVersion": "Versión de Android no compatible",    "commandHint_create": "Crear un chat grupal vacío\nUse --no-encryption para deshabilitar el cifrado",    "@commandHint_create": {
+    "markAsRead": "Marcar como leído",    "replace": "Reemplazar",    "unsupportedAndroidVersionLong": "Esta característica requiere una versión más reciente de Android. Por favor, compruebe las actualizaciones o la compatibilidad de LineageOS.",    "storeSecurlyOnThisDevice": "Almacenar de forma segura en este dispositivo",    "unsupportedAndroidVersion": "Versión de Android no compatible",    "commandHint_create": "Crear un chat grupal vacío\nUse --no-encryption para deshabilitar el cifrado",    "@commandHint_create": {
         "type": "String",        "description": "Usage hint for the command /create"    },
     "user": "Usuario",    "tryAgain": "Inténtelo de nuevo",    "youKickedAndBanned": "🙅 Usted expulsó y prohibió el acceso a {user}",    "@youKickedAndBanned": {
         "placeholders": {
@@ -1104,13 +1101,13 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "El mensaje será censurado para todas las personas participantes en la conversación. Esto no se puede deshacer.",    "doNotShowAgain": "No mostrar de nuevo",    "screenSharingTitle": "Compartir la pantalla",    "youBannedUser": "Usted prohibió el acceso a {user}",    "@youBannedUser": {
+    "redactMessageDescription": "El mensaje será censurado para todas las personas participantes en la conversación. Esto no se puede deshacer.",    "doNotShowAgain": "No mostrar de nuevo",    "youBannedUser": "Usted prohibió el acceso a {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
         }
     },
-    "directChat": "Chat directo",    "foregroundServiceRunning": "Esta notificación aparece cuando el servicio en segundo plano se está ejecutando.",    "wasDirectChatDisplayName": "Chat vacío (era {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "wasDirectChatDisplayName": "Chat vacío (era {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1205,7 +1202,7 @@
                 "type": "String"            }
         }
     },
-    "sendingAttachment": "Enviando adjunto...",    "compress": "Comprimir",    "pleaseFillOut": "Por favor, rellenar",    "newChatRequest": "📩 Nueva petición de chat",    "unbanUserDescription": "El usuario podrá entrar al chat de nuevo si lo intenta.",    "roomUpgradeDescription": "El chat se volverá a crear con la nueva versión de sala. Todos los participantes serán notificados de que tienen que cambiarse al nuevo chat. Puedes encontrar más información sobre versiones de salas en https://spec.matrix.org/latest/rooms/",    "makeAdminDescription": "Una vez hagas que este usuario sea admin, puede que no puedas deshacerlo porque tendrá los mismos permisos que tú.",    "knocking": "Avisando",    "chatCanBeDiscoveredViaSearchOnServer": "El chat se puede descubrir buscando en {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "compress": "Comprimir",    "pleaseFillOut": "Por favor, rellenar",    "newChatRequest": "📩 Nueva petición de chat",    "unbanUserDescription": "El usuario podrá entrar al chat de nuevo si lo intenta.",    "roomUpgradeDescription": "El chat se volverá a crear con la nueva versión de sala. Todos los participantes serán notificados de que tienen que cambiarse al nuevo chat. Puedes encontrar más información sobre versiones de salas en https://spec.matrix.org/latest/rooms/",    "makeAdminDescription": "Una vez hagas que este usuario sea admin, puede que no puedas deshacerlo porque tendrá los mismos permisos que tú.",    "knocking": "Avisando",    "chatCanBeDiscoveredViaSearchOnServer": "El chat se puede descubrir buscando en {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

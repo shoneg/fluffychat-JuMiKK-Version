@@ -370,9 +370,6 @@
     "emoteInvalid": "Atallo do emote non é válido!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Axustes de Emote",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Atallo de Emote",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Marcar como sala de mensaxe directa para o ID Matrix indicado",    "commandHint_markasgroup": "Marcar como grupo",    "whyIsThisMessageEncrypted": "Por que non podo ler esta mensaxe?",    "noKeyForThisMessage": "Pode ser que a mensaxe fose enviada antes de que ti accedeses á túa conta neste dispositivo.\n\nTamén é posible que a remitente non validase o teu dispositivo ou tamén que algo fallase na conexión a internet.\n\nPodes ler a mensaxe noutro dispositivo? Entón podes transferila desde el! Vai a Axustes > Dispositivos e comproba que tes tódolos dispositivos verificados. Entón cando abras a sala a próxima vez a sincronización realizarase e as chaves transmitiranse automáticamente.\n\nNon desexas perder as chaves cando pechas sesión ou cambias de dispositivo? Comproba nos axustes que activaches a copia de apoio das conversas.",    "newSpace": "Novo espazo",    "foregroundServiceRunning": "Esta notificación aparece cando se está a executar o servizo en segundo plano.",    "screenSharingTitle": "compartición da pantalla",    "screenSharingDetail": "Estás a compartir a túa pantalla en JuMiKK-Chat",    "doNotShowAgain": "Non mostrar outra vez",    "commandHint_googly": "Envía uns ollos desos grandes",    "googlyEyesContent": "{senderName} enviouche uns ollos grandes",    "@googlyEyesContent": {
+    "commandHint_markasdm": "Marcar como sala de mensaxe directa para o ID Matrix indicado",    "commandHint_markasgroup": "Marcar como grupo",    "whyIsThisMessageEncrypted": "Por que non podo ler esta mensaxe?",    "noKeyForThisMessage": "Pode ser que a mensaxe fose enviada antes de que ti accedeses á túa conta neste dispositivo.\n\nTamén é posible que a remitente non validase o teu dispositivo ou tamén que algo fallase na conexión a internet.\n\nPodes ler a mensaxe noutro dispositivo? Entón podes transferila desde el! Vai a Axustes > Dispositivos e comproba que tes tódolos dispositivos verificados. Entón cando abras a sala a próxima vez a sincronización realizarase e as chaves transmitiranse automáticamente.\n\nNon desexas perder as chaves cando pechas sesión ou cambias de dispositivo? Comproba nos axustes que activaches a copia de apoio das conversas.",    "newSpace": "Novo espazo",    "doNotShowAgain": "Non mostrar outra vez",    "commandHint_googly": "Envía uns ollos desos grandes",    "googlyEyesContent": "{senderName} enviouche uns ollos grandes",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "A mensaxe vai ser editada para todas as participantes na conversa. Non ten volta atrás.",    "invite": "Convidar",    "chatPermissions": "Permisos da conversa",    "chatDescription": "Descrición da conversa",    "chatDescriptionHasBeenChanged": "Cambiou a descrición da conversa",    "noChatDescriptionYet": "Aínda non se escribeu a descrición da conversa.",    "invalidServerName": "Nome de servidor non válido",    "directChat": "Conversa Directa",    "setChatDescription": "Escribir descrición da conversa",    "inviteGroupChat": "📨 Convidar a conversa en grupo",    "emoteKeyboardNoRecents": "Os emotes usados recentemente aparecerán aquí...",    "@emoteKeyboardNoRecents": {
+    "redactMessageDescription": "A mensaxe vai ser editada para todas as participantes na conversa. Non ten volta atrás.",    "invite": "Convidar",    "chatPermissions": "Permisos da conversa",    "chatDescription": "Descrición da conversa",    "chatDescriptionHasBeenChanged": "Cambiou a descrición da conversa",    "noChatDescriptionYet": "Aínda non se escribeu a descrición da conversa.",    "invalidServerName": "Nome de servidor non válido",    "setChatDescription": "Escribir descrición da conversa",    "inviteGroupChat": "📨 Convidar a conversa en grupo",    "emoteKeyboardNoRecents": "Os emotes usados recentemente aparecerán aquí...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "banUserDescription": "Vaise vetar a usuaria na conversa e non poderá entrar outra vez ata que se retire o veto.",    "removeDevicesDescription": "Vas pechar a sesión neste dispositivo e xa non poderás recibir mensaxes nel.",    "unbanUserDescription": "A usuaria vai poder entrar outra vez na conversa se quere.",    "pushNotificationsNotAvailable": "Non están dispoñibles as notificacións push",    "makeAdminDescription": "Cando convirtas a esta usuaria en admin non poderás desfacer a acción xa que terá os mesmos permisos ca ti.",    "archiveRoomDescription": "Vaise mover a charla ao arquivo. Outras usuarias poderán ver que saíches da conversa.",    "invalidInput": "Contido non válido!",    "hasKnocked": "🚪 {user} petou na porta",    "@hasKnocked": {
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "sendCanceled": "Cancelouse o envío",    "noChatsFoundHere": "Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️",    "loginWithMatrixId": "Acceder co ID-Matrix",    "doesNotSeemToBeAValidHomeserver": "Non semella ser un servidor de inicio compatible. É o URL correcto?",    "calculatingFileSize": "Calculando o tamaño do ficheiro…",    "sendingAttachment": "Enviando o anexo…",    "oneOfYourDevicesIsNotVerified": "Un dos teus dispositivos non está verificado",    "noticeChatBackupDeviceVerification": "Nota: Cando conectas todos os teus dispositivos á copia de apoio da conversa quedan verificados automaticamente.",    "blur": "Néboa:",    "opacity": "Opacidade:",    "contactServerSecurity": "Contacto con Seguridade do servidor",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
+    "sendCanceled": "Cancelouse o envío",    "noChatsFoundHere": "Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️",    "loginWithMatrixId": "Acceder co ID-Matrix",    "doesNotSeemToBeAValidHomeserver": "Non semella ser un servidor de inicio compatible. É o URL correcto?",    "calculatingFileSize": "Calculando o tamaño do ficheiro…",    "oneOfYourDevicesIsNotVerified": "Un dos teus dispositivos non está verificado",    "noticeChatBackupDeviceVerification": "Nota: Cando conectas todos os teus dispositivos á copia de apoio da conversa quedan verificados automaticamente.",    "blur": "Néboa:",    "opacity": "Opacidade:",    "contactServerSecurity": "Contacto con Seguridade do servidor",    "aboutHomeserver": "Sobre {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

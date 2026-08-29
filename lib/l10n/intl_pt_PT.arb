@@ -341,9 +341,6 @@
     "emoteInvalid": "Código de emote inválido!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Configurações de emotes",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Código do emote",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1130,7 +1127,7 @@
     "changedTheChatDescription": "{username} mudou a descrição do chat",    "@verifyStart": {
         "type": "String",        "placeholders": {}
     },
-    "unverified": "Não Verificado",    "screenSharingTitle": "partilha de ecrã",    "@sentCallInformations": {
+    "unverified": "Não Verificado",    "@sentCallInformations": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1186,7 +1183,7 @@
     "sendTypingNotifications": "Enviar notificações de digitação",    "accessAndVisibility": "Acesso e visibilidade",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "foregroundServiceRunning": "Esta notificação aparece quando o serviço em primeiro plano está em execução.",    "unknownEncryptionAlgorithm": "Algoritmo de encriptação desconhecido",    "@unknownEncryptionAlgorithm": {
+    "unknownEncryptionAlgorithm": "Algoritmo de encriptação desconhecido",    "@unknownEncryptionAlgorithm": {
         "type": "String",        "placeholders": {}
     },
     "importEmojis": "Importar Emojis",    "wasDirectChatDisplayName": "Esvaziar chat (era {oldDisplayName})",    "@wasDirectChatDisplayName": {
@@ -1365,7 +1362,7 @@
                 "type": "String"            }
         }
     },
-    "unsupportedAndroidVersionLong": "Esta funcionalidade requer uma versão de Android mais nova. Por favor verifique se há atualização ou suporter do Lineage OS.",    "inviteGroupChat": "📨 Convite para chat em grupo",    "storeSecurlyOnThisDevice": "Armazenado de forma segura neste dispositivo",    "screenSharingDetail": "Está a partilhar o seu ecrã no JuMiKK-Chat",    "discardEdits": "Tem mudanças não guardadas. Descartar as suas edições?",    "@discardEdits": {
+    "unsupportedAndroidVersionLong": "Esta funcionalidade requer uma versão de Android mais nova. Por favor verifique se há atualização ou suporter do Lineage OS.",    "inviteGroupChat": "📨 Convite para chat em grupo",    "storeSecurlyOnThisDevice": "Armazenado de forma segura neste dispositivo",    "discardEdits": "Tem mudanças não guardadas. Descartar as suas edições?",    "@discardEdits": {
         "type": "String",        "placeholders": {}
     }
 }

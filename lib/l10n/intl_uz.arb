@@ -387,9 +387,6 @@
     "directChats": "Shaxsiy suhbatlar",    "@directChats": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emote Sozlamalari",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "globalChatId": "Ommaviy suhbat IDʼsi",    "accessAndVisibility": "Kirish va koʻrinish",    "accessAndVisibilityDescription": "Bu suhbatga kim qoʻshilishi mumkin va suhbatni qanday topish mumkin.",    "calls": "Qoʻngʻiroqlar",    "customEmojisAndStickers": "Maxsus emojilar va stikerlar",    "customEmojisAndStickersBody": "Istalgan suhbatda ishlatilishi mumkin boʻlgan maxsus emojilar yoki stikerlarni qoʻshing yoki ulashing.",    "emoteShortcode": "Emote qisqa kodi",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -762,7 +759,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "Shaxsiy suhbat",    "redactedByBecause": "{username} tomonidan tahrirlandi, sababi: \"{reason}\"",    "@redactedByBecause": {
+    "redactedByBecause": "{username} tomonidan tahrirlandi, sababi: \"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1101,7 +1098,7 @@
                 "type": "int"            }
         }
     },
-    "user": "Foydalanuvchi",    "custom": "Maxsus",    "foregroundServiceRunning": "Bu bildirishnoma old plan xizmati ishlab turgan paytda paydo bo‘ladi.",    "screenSharingTitle": "Ekranni ulashish",    "screenSharingDetail": "Siz ekraningizni FuffyChat’da ulashmoqdasiz",    "whyIsThisMessageEncrypted": "Nima uchun bu xabarni oʻqib boʻlmaydi?",    "noKeyForThisMessage": "Bu xabar siz ushbu qurilmada hisobingizga kirishdan oldin yuborilgan boʻlsa sodir boʻlishi mumkin.\n\nShuningdek, joʻnatuvchi qurilmangizni bloklagan yoki internet ulanishida biron bir muammo yuzaga kelgan boʻlishi mumkin.\n\nXabarni boshqa sessiyada oʻqiy olasizmi? Keyin xabarni undan uzatishingiz mumkin! Sozlamalar > Qurilmalar boʻlimiga oʻting va qurilmalaringiz bir-birini tasdiqlaganligiga ishonch hosil qiling. Keyingi safar xonani ochganingizda va ikkala sessiya ham oldinda boʻlganda, kalitlar avtomatik ravishda uzatiladi.\n\nTizimdan chiqishda yoki qurilmalarni almashtirishda kalitlarni yoʻqotishni xohlamaysizmi? Sozlamalarda suhbatning zaxira nusxasini yoqganingizga ishonch hosil qiling.",    "newSpace": "Yangi maydon",    "doNotShowAgain": "Qaytib koʻrsatilmasin",    "wasDirectChatDisplayName": "Boʻsh suhbat ({oldDisplayName} edi)",    "@wasDirectChatDisplayName": {
+    "user": "Foydalanuvchi",    "custom": "Maxsus",    "whyIsThisMessageEncrypted": "Nima uchun bu xabarni oʻqib boʻlmaydi?",    "noKeyForThisMessage": "Bu xabar siz ushbu qurilmada hisobingizga kirishdan oldin yuborilgan boʻlsa sodir boʻlishi mumkin.\n\nShuningdek, joʻnatuvchi qurilmangizni bloklagan yoki internet ulanishida biron bir muammo yuzaga kelgan boʻlishi mumkin.\n\nXabarni boshqa sessiyada oʻqiy olasizmi? Keyin xabarni undan uzatishingiz mumkin! Sozlamalar > Qurilmalar boʻlimiga oʻting va qurilmalaringiz bir-birini tasdiqlaganligiga ishonch hosil qiling. Keyingi safar xonani ochganingizda va ikkala sessiya ham oldinda boʻlganda, kalitlar avtomatik ravishda uzatiladi.\n\nTizimdan chiqishda yoki qurilmalarni almashtirishda kalitlarni yoʻqotishni xohlamaysizmi? Sozlamalarda suhbatning zaxira nusxasini yoqganingizga ishonch hosil qiling.",    "newSpace": "Yangi maydon",    "doNotShowAgain": "Qaytib koʻrsatilmasin",    "wasDirectChatDisplayName": "Boʻsh suhbat ({oldDisplayName} edi)",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1247,7 +1244,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "O‘zgarishlar jurnali",    "sendCanceled": "Yuborish bekor qilindi",    "loginWithMatrixId": "Matriks-ID bilan kirish",    "doesNotSeemToBeAValidHomeserver": "Uy serveri mos emasga o‘xshaydi. URL xato kiritilganmi?",    "calculatingFileSize": "Fayl hajmi hisoblanmoqda...",    "sendingAttachment": "Biriktirish yuborilmoqda...",    "oneOfYourDevicesIsNotVerified": "Qurilmalaringizdan biri tasdiqlanmagan",    "continueText": "Davom etish",    "blur": "Xiralashtirish:",    "opacity": "Noaniqlik:",    "setWallpaper": "Fon rasmini sozlash",    "manageAccount": "Hisobni boshqarish",    "noContactInformationProvided": "Server hech qanday yaroqli kontakt axborotini taqdim etmaydi",    "contactServerAdmin": "Server administratori bilan bog‘lanish",    "contactServerSecurity": "Aloqa serveri xavfsizligi",    "supportPage": "Yordam sahifasi",    "serverInformation": "Server haqida ma’lumot:",    "name": "Nomi",    "version": "Versiya",    "website": "Sayt",    "compress": "Siqmoq",    "boldText": "Qalin matn",    "italicText": "Qiya matn",    "strikeThrough": "O‘tish joyi",    "pleaseFillOut": "Iltimos, to‘ldiring",    "invalidUrl": "Yaroqsiz url",    "addLink": "Havola kiritish",    "previous": "Avvalgi",    "otherPartyNotLoggedIn": "Narigi tomon hozirda hisobingizga kirmagan va shuning uchun xabarlarni qabul qila olmaydi!",    "appWantsToUseForLogin": "Hisobga kirish '{server}' ishlating",    "@appWantsToUseForLogin": {
+    "changelog": "O‘zgarishlar jurnali",    "sendCanceled": "Yuborish bekor qilindi",    "loginWithMatrixId": "Matriks-ID bilan kirish",    "doesNotSeemToBeAValidHomeserver": "Uy serveri mos emasga o‘xshaydi. URL xato kiritilganmi?",    "calculatingFileSize": "Fayl hajmi hisoblanmoqda...",    "oneOfYourDevicesIsNotVerified": "Qurilmalaringizdan biri tasdiqlanmagan",    "continueText": "Davom etish",    "blur": "Xiralashtirish:",    "opacity": "Noaniqlik:",    "setWallpaper": "Fon rasmini sozlash",    "manageAccount": "Hisobni boshqarish",    "noContactInformationProvided": "Server hech qanday yaroqli kontakt axborotini taqdim etmaydi",    "contactServerAdmin": "Server administratori bilan bog‘lanish",    "contactServerSecurity": "Aloqa serveri xavfsizligi",    "supportPage": "Yordam sahifasi",    "serverInformation": "Server haqida ma’lumot:",    "name": "Nomi",    "version": "Versiya",    "website": "Sayt",    "compress": "Siqmoq",    "boldText": "Qalin matn",    "italicText": "Qiya matn",    "strikeThrough": "O‘tish joyi",    "pleaseFillOut": "Iltimos, to‘ldiring",    "invalidUrl": "Yaroqsiz url",    "addLink": "Havola kiritish",    "previous": "Avvalgi",    "otherPartyNotLoggedIn": "Narigi tomon hozirda hisobingizga kirmagan va shuning uchun xabarlarni qabul qila olmaydi!",    "appWantsToUseForLogin": "Hisobga kirish '{server}' ishlating",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

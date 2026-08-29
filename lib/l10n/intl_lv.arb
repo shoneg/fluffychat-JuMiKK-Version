@@ -603,9 +603,6 @@
     },
     "commandHint_plain": "Nosūtīt neformatētu tekstu",    "@commandHint_plain": {
         "type": "String",        "description": "Usage hint for the command /plain"    },
-    "emoteSettings": "Emociju iestatījumi",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "experimentalVideoCalls": "Izmēģinājuma video zvani",    "openCamera": "Atvērt kameru",    "@openCamera": {
         "type": "String",        "placeholders": {}
     },
@@ -782,7 +779,7 @@
     "joinRoom": "Pievienoties istabai",    "@joinRoom": {
         "type": "String",        "placeholders": {}
     },
-    "unverified": "Neapliecināta",    "screenSharingTitle": "ekrāna kopīgošana",    "sentCallInformations": "{senderName} nosūtīja informāciju par zvanu",    "@sentCallInformations": {
+    "unverified": "Neapliecināta",    "sentCallInformations": "{senderName} nosūtīja informāciju par zvanu",    "@sentCallInformations": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -850,7 +847,7 @@
     "pleaseEnterYourUsername": "Lūgums ievadīt savu lietotājvārdu",    "@pleaseEnterYourUsername": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "Informācija par ziņu",    "disableEncryptionWarning": "Drošības iemeslu dēļ tērzēšanā nevar atspējot šifrēšanu, ja tā ir pirms tam ir bijusi iespējota.",    "directChat": "Tiešā tērzēšana",    "encryptionNotEnabled": "Šifrēšana nav iespējota",    "@encryptionNotEnabled": {
+    "messageInfo": "Informācija par ziņu",    "disableEncryptionWarning": "Drošības iemeslu dēļ tērzēšanā nevar atspējot šifrēšanu, ja tā ir pirms tam ir bijusi iespējota.",    "encryptionNotEnabled": "Šifrēšana nav iespējota",    "@encryptionNotEnabled": {
         "type": "String",        "placeholders": {}
     },
     "wrongPinEntered": "Ievadīts nepareizs PIN. Jāmēģina vēlreiz pēc {seconds} sekundēm...",    "@wrongPinEntered": {
@@ -865,7 +862,7 @@
     "inviteGroupChat": "📨 Uzaicinājums uz kopas tērzēšanu",    "verifyTitle": "Apliecina citu kontu",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "foregroundServiceRunning": "Šis paziņojums parādās, kad darbojas priekšplāna pakalpojums.",    "enterAnEmailAddress": "Jāievada e-pasta adrese",    "@enterAnEmailAddress": {
+    "enterAnEmailAddress": "Jāievada e-pasta adrese",    "@enterAnEmailAddress": {
         "type": "String",        "placeholders": {}
     },
     "voiceCall": "Balss zvans",    "commandHint_kick": "Noņemt norādīto lietotāju no šīs istabas",    "@commandHint_kick": {
@@ -1142,7 +1139,7 @@
     "importNow": "Ievietot tagad",    "deleteAccount": "Izdzēst kontu",    "@deleteAccount": {
         "type": "String",        "placeholders": {}
     },
-    "pinMessage": "Piespraust istabai",    "screenSharingDetail": "Tu kopīgo savu ekrānu JuMiKK-Chat",    "muteChat": "Apklusināt tērzēšanu",    "@muteChat": {
+    "pinMessage": "Piespraust istabai",    "muteChat": "Apklusināt tērzēšanu",    "@muteChat": {
         "type": "String",        "placeholders": {}
     },
     "invite": "Uzaicināt",    "anyoneCanJoin": "Ikviens var pievienoties",    "@anyoneCanJoin": {
@@ -1262,7 +1259,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Izmaiņu žurnāls",    "noMoreChatsFound": "Vairs netika atrasta neviena tērzēšana...",    "unread": "Nelasītas",    "space": "Vieta",    "markAsUnread": "Atzīmēt kā nelasītu",    "sendingAttachment": "Nosūta pielikumu...",    "calculatingFileSize": "Aprēķina datnes lielumu...",    "oneOfYourDevicesIsNotVerified": "Viena no ierīcēm nav apliecināta",    "noticeChatBackupDeviceVerification": "Piezīme: kad visas ierīces tiek savienotas ar tērzēšanu rezerves kopiju, tās tiek automātiski apliecinātas.",    "continueText": "Turpināt",    "blur": "Aizmiglojums:",    "setWallpaper": "Iestatīt ekrāntapeti",    "opacity": "Necaurredzamība:",    "manageAccount": "Pārvaldīt kontu",    "noContactInformationProvided": "Serveris nesniedz nekādu derīgu saziņas informāciju",    "serverInformation": "Informācija par serveri:",    "aboutHomeserver": "Par {homeserver}",    "@aboutHomeserver": {
+    "changelog": "Izmaiņu žurnāls",    "noMoreChatsFound": "Vairs netika atrasta neviena tērzēšana...",    "unread": "Nelasītas",    "space": "Vieta",    "markAsUnread": "Atzīmēt kā nelasītu",    "calculatingFileSize": "Aprēķina datnes lielumu...",    "oneOfYourDevicesIsNotVerified": "Viena no ierīcēm nav apliecināta",    "noticeChatBackupDeviceVerification": "Piezīme: kad visas ierīces tiek savienotas ar tērzēšanu rezerves kopiju, tās tiek automātiski apliecinātas.",    "continueText": "Turpināt",    "blur": "Aizmiglojums:",    "setWallpaper": "Iestatīt ekrāntapeti",    "opacity": "Necaurredzamība:",    "manageAccount": "Pārvaldīt kontu",    "noContactInformationProvided": "Serveris nesniedz nekādu derīgu saziņas informāciju",    "serverInformation": "Informācija par serveri:",    "aboutHomeserver": "Par {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

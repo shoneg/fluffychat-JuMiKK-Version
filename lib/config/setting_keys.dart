@@ -78,7 +78,10 @@ enum AppSettings<T> {
   webNotificationSound<bool>('chat.fluffy.web_notification_sound', true),
   chatFilter<String>('chat.fluffy.chat_filter', 'allChats'),
   hideRoomsInSpaces<bool>('chat.fluffy.hideRoomsInSpaces', false),
-  showThumbnailsInTimeline<bool>('chat.fluffy.showThumbnailsInTimeline', true);
+  showThumbnailsInTimeline<bool>('chat.fluffy.showThumbnailsInTimeline', true),
+  doubleTapToReact<bool>('chat.fluffy.double_tap_to_react', false),
+  doubleTapReaction<String>('chat.fluffy.double_tap_reaction', '❤️'),
+  benchmarksInLogs<bool>('chat.fluffy.benchmarks_in_logs', false);
 
   final String key;
   final T defaultValue;
@@ -113,6 +116,12 @@ enum AppSettings<T> {
 
     if (store.getBool(AppSettings.sendOnEnter.key) == null) {
       await store.setBool(AppSettings.sendOnEnter.key, !PlatformInfos.isMobile);
+    }
+    if (store.getBool(AppSettings.doubleTapToReact.key) == null) {
+      await store.setBool(
+        AppSettings.doubleTapToReact.key,
+        PlatformInfos.isMobile,
+      );
     }
     if (kIsWeb && loadWebConfigFile) {
       try {

@@ -451,9 +451,6 @@
     "directChats": "چت های مستقیم",    "@directChats": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "تنظیمات شکلک",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "کد کوتاه شکلک",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -912,7 +909,7 @@
                 "type": "int"            }
         }
     },
-    "noKeyForThisMessage": "اگر پیام پیش از ورود به حساب در این دستگاه فرستاده شده باشد، این مشکل ممکن است رخ دهد.\n\nهمچنین ممکن است فرستنده دستگاه شما را مسدود کرده باشد یا مشکلی در اتصال اینترنت وجود داشته باشد.\n\nآیا می‌توانید پیام را در نشست دیگری بخوانید؟ در این صورت، می‌توانید آن را منتقل کنید! به تنظیمات > دستگاه‌ها بروید و مطمئن شوید دستگاه‌هایتان یکدیگر را بازبینی کرده‌اند. هنگام باز کردن دوباره اتاق و فعال بودن هر دو نشست، کلیدها به‌صورت خودکار منتقل می‌شوند.\n\nآیا نمی‌خواهید هنگام خروج یا تغییر دستگاه کلیدها را گم کنید؟ مطمئن شوید پشتیبان چت را در تنظیمات فعال کرده‌اید.",    "disableEncryptionWarning": "به دلایل امنیتی نمی‌توانید رمزنگاری را در چتی که فعال شده غیرفعال کنید.",    "foregroundServiceRunning": "این آگاه‌ساز زمانی ظاهر می‌شود که خدمت پیش‌زمینه فعال است.",    "storeSecurlyOnThisDevice": "ذخیره امن در این دستگاه",    "screenSharingDetail": "شما در حال هم‌رسانی صفحه‌نمایش خود در فلافی‌چت هستید",    "newSpace": "فضای جدید",    "storeInAndroidKeystore": "ذخیره در Android KeyStore",    "storeInAppleKeyChain": "ذخیره در Apple KeyChain",    "user": "کاربر",    "custom": "سفارشی",    "screenSharingTitle": "هم‌رسانی صفحه‌نمایش",    "whyIsThisMessageEncrypted": "چرا این پیام خوانا نیست؟",    "reopenChat": "باز کردن دوباره چت",    "unmuteChat": "فعال کردن صدای چت",    "@unmuteChat": {
+    "noKeyForThisMessage": "اگر پیام پیش از ورود به حساب در این دستگاه فرستاده شده باشد، این مشکل ممکن است رخ دهد.\n\nهمچنین ممکن است فرستنده دستگاه شما را مسدود کرده باشد یا مشکلی در اتصال اینترنت وجود داشته باشد.\n\nآیا می‌توانید پیام را در نشست دیگری بخوانید؟ در این صورت، می‌توانید آن را منتقل کنید! به تنظیمات > دستگاه‌ها بروید و مطمئن شوید دستگاه‌هایتان یکدیگر را بازبینی کرده‌اند. هنگام باز کردن دوباره اتاق و فعال بودن هر دو نشست، کلیدها به‌صورت خودکار منتقل می‌شوند.\n\nآیا نمی‌خواهید هنگام خروج یا تغییر دستگاه کلیدها را گم کنید؟ مطمئن شوید پشتیبان چت را در تنظیمات فعال کرده‌اید.",    "disableEncryptionWarning": "به دلایل امنیتی نمی‌توانید رمزنگاری را در چتی که فعال شده غیرفعال کنید.",    "storeSecurlyOnThisDevice": "ذخیره امن در این دستگاه",    "newSpace": "فضای جدید",    "storeInAndroidKeystore": "ذخیره در Android KeyStore",    "storeInAppleKeyChain": "ذخیره در Apple KeyChain",    "user": "کاربر",    "custom": "سفارشی",    "whyIsThisMessageEncrypted": "چرا این پیام خوانا نیست؟",    "reopenChat": "باز کردن دوباره چت",    "unmuteChat": "فعال کردن صدای چت",    "@unmuteChat": {
         "type": "String",        "placeholders": {}
     },
     "share": "هم‌رسانی",    "@share": {
@@ -1155,7 +1152,7 @@
                 "type": "String"            }
         }
     },
-    "directChat": "چت مستقیم",    "redactedByBecause": "ویرایش‌شده به‌دست {username} زیرا: «{reason}»",    "@redactedByBecause": {
+    "redactedByBecause": "ویرایش‌شده به‌دست {username} زیرا: «{reason}»",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1295,7 +1292,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "فهرست تغییرات",    "sendCanceled": "فرستادن رد شد",    "loginWithMatrixId": "ورود با شناسه ماتریکس",    "doesNotSeemToBeAValidHomeserver": "به نظر نمیرسد سرور خانگی سازگاری داشته باشد. نشانی اشتباه است؟",    "calculatingFileSize": "در حال محاسبه اندازه پرونده...",    "sendingAttachment": "در حال فرستادن پیوست...",    "oneOfYourDevicesIsNotVerified": "یکی از دستگاه‌های شما بازبینی نشده است",    "noticeChatBackupDeviceVerification": "توجه: وقتی همه دستگاه‌های خود را به پشتیبان چت متصل کنید، به‌صورت خودکار بازبینی میشوند.",    "continueText": "ادامه",    "blur": "محو کردن:",    "opacity": "شفافیت:",    "setWallpaper": "تنظیم کاغذدیواری",    "manageAccount": "مدیریت حساب",    "noContactInformationProvided": "سرور هیچ اطلاعات تماس معتبری نمیدهد",    "contactServerAdmin": "تماس با مدیر سرور",    "contactServerSecurity": "تماس با امنیت سرور",    "supportPage": "صفحه پشتیبانی",    "serverInformation": "درباره سرور:",    "name": "نام",    "version": "نگارش",    "website": "وبگاه",    "compress": "فشرده‌سازی",    "boldText": "متن درشت",    "italicText": "متن کج",    "strikeThrough": "خط‌خورده",    "pleaseFillOut": "لطفاً پر کنید",    "invalidUrl": "نشانی نامعتبر",    "addLink": "افزودن پیوند",    "unableToJoinChat": "ناتوانی در پیوستن به چت. شاید طرف مقابل گفتگو را بسته است.",    "previous": "پیشین",    "otherPartyNotLoggedIn": "طرف مقابل اکنون وارد نشده است و بنابراین نمیتواند پیام دریافت کند!",    "appWantsToUseForLogin": "برای ورود از '{server}' استفاده کنید",    "@appWantsToUseForLogin": {
+    "changelog": "فهرست تغییرات",    "sendCanceled": "فرستادن رد شد",    "loginWithMatrixId": "ورود با شناسه ماتریکس",    "doesNotSeemToBeAValidHomeserver": "به نظر نمیرسد سرور خانگی سازگاری داشته باشد. نشانی اشتباه است؟",    "calculatingFileSize": "در حال محاسبه اندازه پرونده...",    "oneOfYourDevicesIsNotVerified": "یکی از دستگاه‌های شما بازبینی نشده است",    "noticeChatBackupDeviceVerification": "توجه: وقتی همه دستگاه‌های خود را به پشتیبان چت متصل کنید، به‌صورت خودکار بازبینی میشوند.",    "continueText": "ادامه",    "blur": "محو کردن:",    "opacity": "شفافیت:",    "setWallpaper": "تنظیم کاغذدیواری",    "manageAccount": "مدیریت حساب",    "noContactInformationProvided": "سرور هیچ اطلاعات تماس معتبری نمیدهد",    "contactServerAdmin": "تماس با مدیر سرور",    "contactServerSecurity": "تماس با امنیت سرور",    "supportPage": "صفحه پشتیبانی",    "serverInformation": "درباره سرور:",    "name": "نام",    "version": "نگارش",    "website": "وبگاه",    "compress": "فشرده‌سازی",    "boldText": "متن درشت",    "italicText": "متن کج",    "strikeThrough": "خط‌خورده",    "pleaseFillOut": "لطفاً پر کنید",    "invalidUrl": "نشانی نامعتبر",    "addLink": "افزودن پیوند",    "unableToJoinChat": "ناتوانی در پیوستن به چت. شاید طرف مقابل گفتگو را بسته است.",    "previous": "پیشین",    "otherPartyNotLoggedIn": "طرف مقابل اکنون وارد نشده است و بنابراین نمیتواند پیام دریافت کند!",    "appWantsToUseForLogin": "برای ورود از '{server}' استفاده کنید",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

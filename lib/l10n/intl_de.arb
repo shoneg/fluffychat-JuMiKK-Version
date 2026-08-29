@@ -367,9 +367,6 @@
     "emoteInvalid": "Ungültiges Emoticon-Kürzel!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Emoticon-Einstellungen",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Emoticon-Kürzel",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1104,7 +1101,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_markasdm": "Als Direktnachrichtenraum für die angegebene Matrix-ID markieren",    "commandHint_markasgroup": "Als Gruppe markieren",    "doNotShowAgain": "Nicht mehr anzeigen",    "noKeyForThisMessage": "Dies kann passieren, wenn die Nachricht gesendet wurde, bevor du dich auf diesem Gerät bei deinem Konto angemeldet hast.\n\nEs ist auch möglich, dass der Absender dein Gerät blockiert hat oder etwas mit der Internetverbindung schief gelaufen ist.\n\nKannst du die Nachricht in einer anderen Sitzung lesen? Dann kannst du die Nachricht davon übertragen! Gehe zu den Einstellungen > Geräte und vergewissere dich, dass sich deine Geräte gegenseitig verifiziert haben. Wenn du den Raum das nächste Mal öffnest und beide Sitzungen im Vordergrund sind, werden die Schlüssel automatisch übertragen.\n\nDu möchtest die Schlüssel beim Abmelden oder Gerätewechsel nicht verlieren? Stelle sicher, dass du das Chat-Backup in den Einstellungen aktiviert hast.",    "foregroundServiceRunning": "Diese Benachrichtigung wird angezeigt, wenn der Vordergrunddienst ausgeführt wird.",    "screenSharingTitle": "Bildschirm teilen",    "whyIsThisMessageEncrypted": "Warum ist diese Nachricht nicht lesbar?",    "newSpace": "Neuer Space",    "screenSharingDetail": "Du teilst deinen Bildschirm in FuffyChat",    "newSpaceDescription": "Mit Spaces kannst du deine Chats zusammenfassen und private oder öffentliche Communities aufbauen.",    "wasDirectChatDisplayName": "Leerer Chat (war {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "commandHint_markasdm": "Als Direktnachrichtenraum für die angegebene Matrix-ID markieren",    "commandHint_markasgroup": "Als Gruppe markieren",    "doNotShowAgain": "Nicht mehr anzeigen",    "noKeyForThisMessage": "Dies kann passieren, wenn die Nachricht gesendet wurde, bevor du dich auf diesem Gerät bei deinem Konto angemeldet hast.\n\nEs ist auch möglich, dass der Absender dein Gerät blockiert hat oder etwas mit der Internetverbindung schief gelaufen ist.\n\nKannst du die Nachricht in einer anderen Sitzung lesen? Dann kannst du die Nachricht davon übertragen! Gehe zu den Einstellungen > Geräte und vergewissere dich, dass sich deine Geräte gegenseitig verifiziert haben. Wenn du den Raum das nächste Mal öffnest und beide Sitzungen im Vordergrund sind, werden die Schlüssel automatisch übertragen.\n\nDu möchtest die Schlüssel beim Abmelden oder Gerätewechsel nicht verlieren? Stelle sicher, dass du das Chat-Backup in den Einstellungen aktiviert hast.",    "whyIsThisMessageEncrypted": "Warum ist diese Nachricht nicht lesbar?",    "newSpace": "Neuer Space",    "newSpaceDescription": "Mit Spaces kannst du deine Chats zusammenfassen und private oder öffentliche Communities aufbauen.",    "wasDirectChatDisplayName": "Leerer Chat (war {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "setColorTheme": "Farbdesign einstellen:",    "invite": "Einladen",    "optionalRedactReason": "(Optional) Grund für die Löschung dieser Nachricht...",    "messagesStyle": "Nachrichten:",    "chatPermissions": "Chatberechtigungen",    "chatDescription": "Chatbeschreibung",    "chatDescriptionHasBeenChanged": "Chatbeschreibung geändert",    "noChatDescriptionYet": "Noch keine Chatbeschreibung vorhanden.",    "invalidServerName": "Ungültiger Servername",    "directChat": "Privater Chat",    "setChatDescription": "Chatbeschreibung festlegen",    "inviteGroupChat": "📨 Einladungen zum Gruppenchat",    "invalidInput": "Ungültige Eingabe!",    "hasKnocked": "🚪 {user} hat angeklopft",    "@hasKnocked": {
+    "setColorTheme": "Farbdesign einstellen:",    "invite": "Einladen",    "optionalRedactReason": "(Optional) Grund für die Löschung dieser Nachricht...",    "messagesStyle": "Nachrichten:",    "chatPermissions": "Chatberechtigungen",    "chatDescription": "Chatbeschreibung",    "chatDescriptionHasBeenChanged": "Chatbeschreibung geändert",    "noChatDescriptionYet": "Noch keine Chatbeschreibung vorhanden.",    "invalidServerName": "Ungültiger Servername",    "setChatDescription": "Chatbeschreibung festlegen",    "inviteGroupChat": "📨 Einladungen zum Gruppenchat",    "invalidInput": "Ungültige Eingabe!",    "hasKnocked": "🚪 {user} hat angeklopft",    "@hasKnocked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1271,7 +1268,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Änderungsprotokoll",    "sendCanceled": "Senden abgebrochen",    "noChatsFoundHere": "Hier wurden noch keine Chats gefunden. Starte einen neuen Chat mit jemandem, indem du die Schaltfläche unten verwenden. ⤵️",    "doesNotSeemToBeAValidHomeserver": "Scheint kein kompatibler Homeserver zu sein. Falsche URL?",    "loginWithMatrixId": "Mit Matrix-ID anmelden",    "sendingAttachment": "Anhang wird gesendet ...",    "calculatingFileSize": "Dateigröße wird berechnet ...",    "fileIsTooBigForServer": "Kann nicht gesendet werden! Der Server unterstützt nur Anhänge bis höchstens {max}.",    "@fileIsTooBigForServer": {
+    "changelog": "Änderungsprotokoll",    "sendCanceled": "Senden abgebrochen",    "noChatsFoundHere": "Hier wurden noch keine Chats gefunden. Starte einen neuen Chat mit jemandem, indem du die Schaltfläche unten verwenden. ⤵️",    "doesNotSeemToBeAValidHomeserver": "Scheint kein kompatibler Homeserver zu sein. Falsche URL?",    "loginWithMatrixId": "Mit Matrix-ID anmelden",    "calculatingFileSize": "Dateigröße wird berechnet ...",    "fileIsTooBigForServer": "Kann nicht gesendet werden! Der Server unterstützt nur Anhänge bis höchstens {max}.",    "@fileIsTooBigForServer": {
         "type": "String",        "placeholders": {
             "max": {
                 "type": "String"            }

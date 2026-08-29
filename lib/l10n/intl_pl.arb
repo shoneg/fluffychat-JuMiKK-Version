@@ -334,9 +334,6 @@
     "emoteInvalid": "Nieprawidłowy kod emotikonu!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Ustawienia emotikonów",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Skrócony kod emotikonu",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1060,7 +1057,7 @@
                 "type": "int"            }
         }
     },
-    "noOtherDevicesFound": "Nie znaleziono innych urządzeń",    "encryptThisChat": "Zaszyfruj ten czat",    "disableEncryptionWarning": "Ze względów bezpieczeństwa nie można wyłączyć szyfrowania w czacie, w którym zostało ono wcześniej włączone.",    "screenSharingTitle": "udostępnianie ekranu",    "noKeyForThisMessage": "Może się to zdarzyć, jeśli wiadomość została wysłana przed zalogowaniem się na to konto na tym urządzeniu.\n\nMożliwe jest również, że nadawca zablokował Twoje urządzenie lub coś poszło nie tak z połączeniem internetowym.\n\nJesteś w stanie odczytać wiadomość na innej sesji? W takim razie możesz przenieść z niej wiadomość! Wejdź w Ustawienia > Urządzenia i upewnij się, że Twoje urządzenia zweryfikowały się wzajemnie. Gdy następnym razem otworzysz pokój i obie sesje będą włączone, klucze zostaną przekazane automatycznie.\n\nNie chcesz stracić kluczy podczas wylogowania lub przełączania urządzeń? Upewnij się, że w ustawieniach masz włączoną kopię zapasową czatu.",    "sorryThatsNotPossible": "Przepraszamy... to nie jest możliwe",    "noBackupWarning": "Uwaga! Bez włączenia kopii zapasowej czatu, stracisz dostęp do swoich zaszyfrowanych wiadomości. Zaleca się włączenie kopii zapasowej czatu przed wylogowaniem.",    "commandHint_googly": "Wyślij kręcące się oczka",    "storeInAndroidKeystore": "Przechowaj w Android KeyStore",    "commandHint_cuddle": "Wyślij uścisk",    "googlyEyesContent": "{senderName} wysyła ci kręcące się oczka",    "@googlyEyesContent": {
+    "noOtherDevicesFound": "Nie znaleziono innych urządzeń",    "encryptThisChat": "Zaszyfruj ten czat",    "disableEncryptionWarning": "Ze względów bezpieczeństwa nie można wyłączyć szyfrowania w czacie, w którym zostało ono wcześniej włączone.",    "noKeyForThisMessage": "Może się to zdarzyć, jeśli wiadomość została wysłana przed zalogowaniem się na to konto na tym urządzeniu.\n\nMożliwe jest również, że nadawca zablokował Twoje urządzenie lub coś poszło nie tak z połączeniem internetowym.\n\nJesteś w stanie odczytać wiadomość na innej sesji? W takim razie możesz przenieść z niej wiadomość! Wejdź w Ustawienia > Urządzenia i upewnij się, że Twoje urządzenia zweryfikowały się wzajemnie. Gdy następnym razem otworzysz pokój i obie sesje będą włączone, klucze zostaną przekazane automatycznie.\n\nNie chcesz stracić kluczy podczas wylogowania lub przełączania urządzeń? Upewnij się, że w ustawieniach masz włączoną kopię zapasową czatu.",    "sorryThatsNotPossible": "Przepraszamy... to nie jest możliwe",    "noBackupWarning": "Uwaga! Bez włączenia kopii zapasowej czatu, stracisz dostęp do swoich zaszyfrowanych wiadomości. Zaleca się włączenie kopii zapasowej czatu przed wylogowaniem.",    "commandHint_googly": "Wyślij kręcące się oczka",    "storeInAndroidKeystore": "Przechowaj w Android KeyStore",    "commandHint_cuddle": "Wyślij uścisk",    "googlyEyesContent": "{senderName} wysyła ci kręcące się oczka",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1122,7 +1119,7 @@
                 "type": "String"            }
         }
     },
-    "storeInAppleKeyChain": "Przechowaj w pęku kluczy Apple",    "storeSecurlyOnThisDevice": "Przechowaj bezpiecznie na tym urządzeniu",    "foregroundServiceRunning": "To powiadomienie pojawia się, gdy usługa w tle jest uruchomiona.",    "screenSharingDetail": "Udostępniasz swój ekran w JuMiKK-Chat",    "whyIsThisMessageEncrypted": "Dlaczego nie można odczytać tej wiadomości?",    "doNotShowAgain": "Nie pokazuj ponownie",    "wasDirectChatDisplayName": "Pusty czat (wcześniej {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "storeInAppleKeyChain": "Przechowaj w pęku kluczy Apple",    "storeSecurlyOnThisDevice": "Przechowaj bezpiecznie na tym urządzeniu",    "whyIsThisMessageEncrypted": "Dlaczego nie można odczytać tej wiadomości?",    "doNotShowAgain": "Nie pokazuj ponownie",    "wasDirectChatDisplayName": "Pusty czat (wcześniej {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "Wiadomość zostanie usunięta u wszystkich uczestników tej rozmowy. Tego nie można cofnąć.",    "invalidInput": "Nieprawidłowe dane!",    "report": "zgłoś",    "directChat": "Czat bezpośredni",    "wrongPinEntered": "Wprowadzono nieprawidłowy kod pin! Spróbuj ponownie za {seconds} sekund...",    "@wrongPinEntered": {
+    "redactMessageDescription": "Wiadomość zostanie usunięta u wszystkich uczestników tej rozmowy. Tego nie można cofnąć.",    "invalidInput": "Nieprawidłowe dane!",    "report": "zgłoś",    "wrongPinEntered": "Wprowadzono nieprawidłowy kod pin! Spróbuj ponownie za {seconds} sekund...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1225,7 +1222,7 @@
                 "type": "int"            }
         }
     },
-    "sendRoomNotifications": "Wysyłaj powiadomienia @room",    "chatPermissionsDescription": "Ustal jaki poziom uprawnień jest wymagany dla określonych czynności w czacie. Poziomy uprawnień 0, 50 i 100 zwykle dotyczą odpowiednio użytkowników, moderatorów i administratorów, ale możliwa jest dowolna gradacja.",    "changeTheCanonicalRoomAlias": "Zmień główny publiczny czatu",    "changeTheDescriptionOfTheGroup": "Zmień opis czatu",    "sendCanceled": "Anulowano wysyłanie",    "doesNotSeemToBeAValidHomeserver": "Wydaje się nie być kompatybilnym serwerem domowym. Niepoprawny adres URL?",    "calculatingFileSize": "Obliczanie rozmiaru pliku...",    "sendingAttachment": "Wysyłanie załącznika...",    "blur": "Rozmazanie:",    "opacity": "Przezroczystość:",    "setWallpaper": "Ustaw tapetę",    "manageAccount": "Zarządzaj kontem",    "noContactInformationProvided": "Serwer nie dostarcza żadnych poprawnych danych kontaktowych",    "contactServerAdmin": "Skontaktuj się z administratorem serwera",    "compress": "Skompresuj",    "pleaseFillOut": "Proszę wypełnić",    "invalidUrl": "Niepoprawny adres URL",    "unableToJoinChat": "Nie udało się dołączyć do czatu. Rozmowa mogła zostać zakończona przez drugą stronę.",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
+    "sendRoomNotifications": "Wysyłaj powiadomienia @room",    "chatPermissionsDescription": "Ustal jaki poziom uprawnień jest wymagany dla określonych czynności w czacie. Poziomy uprawnień 0, 50 i 100 zwykle dotyczą odpowiednio użytkowników, moderatorów i administratorów, ale możliwa jest dowolna gradacja.",    "changeTheCanonicalRoomAlias": "Zmień główny publiczny czatu",    "changeTheDescriptionOfTheGroup": "Zmień opis czatu",    "sendCanceled": "Anulowano wysyłanie",    "doesNotSeemToBeAValidHomeserver": "Wydaje się nie być kompatybilnym serwerem domowym. Niepoprawny adres URL?",    "calculatingFileSize": "Obliczanie rozmiaru pliku...",    "blur": "Rozmazanie:",    "opacity": "Przezroczystość:",    "setWallpaper": "Ustaw tapetę",    "manageAccount": "Zarządzaj kontem",    "noContactInformationProvided": "Serwer nie dostarcza żadnych poprawnych danych kontaktowych",    "contactServerAdmin": "Skontaktuj się z administratorem serwera",    "compress": "Skompresuj",    "pleaseFillOut": "Proszę wypełnić",    "invalidUrl": "Niepoprawny adres URL",    "unableToJoinChat": "Nie udało się dołączyć do czatu. Rozmowa mogła zostać zakończona przez drugą stronę.",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1461,4 +1458,4 @@
                 "type": "int"            }
         }
     },
-    "unlockWithBiometrics": "Odblokuj za pomocą uwierzytelniania biometrycznego",    "useAppLock": "Użyj blokady aplikacji",    "biometricsDescription": "Za pomocą biometrycznego uwierzytelniania możesz odblokować aplikację za pomocą swojej twarzy lub odsisku palca. Możliwości zależą od twojego urządzenia."}
+    "unlockWithBiometrics": "Odblokuj za pomocą uwierzytelniania biometrycznego",    "useAppLock": "Użyj blokady aplikacji",    "biometricsDescription": "Za pomocą biometrycznego uwierzytelniania możesz odblokować aplikację za pomocą swojej twarzy lub odsisku palca. Możliwości zależą od twojego urządzenia.",    "doubleTapToReact": "Podwójne dotknięcie, aby zareagować",    "doubleTapToReactDescription": "Podwójne dotknięcie wiadomości reaguje zamiast zaznaczania tekstu",    "doubleTapReaction": "Reakcja podwójnego dotknięcia"}

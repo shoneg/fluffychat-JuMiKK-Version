@@ -367,9 +367,6 @@
     "emoteInvalid": "Neispravna kratica emotikona!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Postavke emotikona",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteShortcode": "Kratica emotikona",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
@@ -1107,13 +1104,13 @@
                 "type": "String"            }
         }
     },
-    "noBackupWarning": "Upozorenje! Bez aktiviranja spremanja sigurnosne kopije chata, izgubit ćeš pristup tvojim šifriranim porukama. Preporučujemo spremanje sigurnosne kopije chata prije odjave.",    "noOtherDevicesFound": "Nijedan drugi uređaj nije pronađen",    "whyIsThisMessageEncrypted": "Zašto nije moguće čitati ovu poruku?",    "jump": "Skoči",    "newSpaceDescription": "Prostori omogućuju konsolidiranje tvojih chatova i izgradnju privatne ili javne zajednice.",    "encryptThisChat": "Šifiraj ovaj chat",    "foregroundServiceRunning": "Ova se obavijest pojavljuje kada se pokreće usluga u prvom planu.",    "commandHint_hug": "Pošalji grljenje",    "commandHint_googly": "Pošalji kotrljajuće oči",    "commandHint_cuddle": "Pošalji maženje",    "confirmMatrixId": "Za brisanje tvog računa potvrdi svoj Matrix ID.",    "supposedMxid": "Trebao bi biti {mxid}",    "@supposedMxid": {
+    "noBackupWarning": "Upozorenje! Bez aktiviranja spremanja sigurnosne kopije chata, izgubit ćeš pristup tvojim šifriranim porukama. Preporučujemo spremanje sigurnosne kopije chata prije odjave.",    "noOtherDevicesFound": "Nijedan drugi uređaj nije pronađen",    "whyIsThisMessageEncrypted": "Zašto nije moguće čitati ovu poruku?",    "jump": "Skoči",    "newSpaceDescription": "Prostori omogućuju konsolidiranje tvojih chatova i izgradnju privatne ili javne zajednice.",    "encryptThisChat": "Šifiraj ovaj chat",    "commandHint_hug": "Pošalji grljenje",    "commandHint_googly": "Pošalji kotrljajuće oči",    "commandHint_cuddle": "Pošalji maženje",    "confirmMatrixId": "Za brisanje tvog računa potvrdi svoj Matrix ID.",    "supposedMxid": "Trebao bi biti {mxid}",    "@supposedMxid": {
         "type": "String",        "placeholders": {
             "mxid": {
                 "type": "String"            }
         }
     },
-    "screenSharingDetail": "Dijeliš svoj ekran u FuffyChatu",    "screenSharingTitle": "dijeljenje ekrana",    "newSpace": "Novi prostor",    "sorryThatsNotPossible": "Žao nam je … to nije moguće",    "disableEncryptionWarning": "Iz sigurnosnih razloga ne možeš deaktivirati šifriranje u chatu u kojem je prije bilo aktivirano.",    "googlyEyesContent": "{senderName} ti šalje kotrljajuće oči",    "@googlyEyesContent": {
+    "newSpace": "Novi prostor",    "sorryThatsNotPossible": "Žao nam je … to nije moguće",    "disableEncryptionWarning": "Iz sigurnosnih razloga ne možeš deaktivirati šifriranje u chatu u kojem je prije bilo aktivirano.",    "googlyEyesContent": "{senderName} ti šalje kotrljajuće oči",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1145,7 +1142,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "Poruka će se redigirati za sve sudionike u ovoj konverzaciji. To je nepovratna radnja.",    "directChat": "Izravni chat",    "inviteGroupChat": "📨 Pozivnica u grupni chat",    "noChatDescriptionYet": "Opis chata još nije stvoren.",    "chatDescriptionHasBeenChanged": "Opis chata je promijenjen",    "shareInviteLink": "Dijeli poveznicu za poziv",    "emoteKeyboardNoRecents": "Ovdje će se pojaviti nedavno korišteni emotikoni …",    "@emoteKeyboardNoRecents": {
+    "redactMessageDescription": "Poruka će se redigirati za sve sudionike u ovoj konverzaciji. To je nepovratna radnja.",    "inviteGroupChat": "📨 Pozivnica u grupni chat",    "noChatDescriptionYet": "Opis chata još nije stvoren.",    "chatDescriptionHasBeenChanged": "Opis chata je promijenjen",    "shareInviteLink": "Dijeli poveznicu za poziv",    "emoteKeyboardNoRecents": "Ovdje će se pojaviti nedavno korišteni emotikoni …",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
     "createGroup": "Stvori grupu",    "invite": "Pozovi",    "invalidInput": "Neispravan unos!",    "wrongPinEntered": "Unesen je pogrešan PIN! Pokušaj ponovo za {seconds} sekunde …",    "@wrongPinEntered": {
@@ -1244,7 +1241,7 @@
     "commandHint_unignore": "Poništi zanemarivanje navedenog matrix ID-a",    "noDatabaseEncryption": "Šifriranje baze podataka nije podržano na ovoj platformi",    "thereAreCountUsersBlocked": "Broj trenutačno blokiranih korisnika: {count}.",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "swipeRightToLeftToReply": "Za odgovaranje povuci prstom zdesna ulijevo",    "sendingAttachment": "Slanje priloga …",    "aboutHomeserver": "Informacije o {homeserver}",    "@aboutHomeserver": {
+    "swipeRightToLeftToReply": "Za odgovaranje povuci prstom zdesna ulijevo",    "aboutHomeserver": "Informacije o {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }

@@ -438,9 +438,6 @@
     "deleteAccount": "Burahin ang account",    "@deleteAccount": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "Mga Setting ng Emote",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "globalChatId": "Global chat ID",    "accessAndVisibility": "Pag-access at visibility",    "accessAndVisibilityDescription": "Sino ang pinapayagang sumali sa chat at paano matutuklas ang chat.",    "enableEncryptionWarning": "Hindi mo madi-disable ang encryption. Sigurado ka ba?",    "@enableEncryptionWarning": {
         "type": "String",        "placeholders": {}
     },

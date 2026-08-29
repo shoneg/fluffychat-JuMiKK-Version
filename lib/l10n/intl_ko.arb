@@ -102,9 +102,6 @@
     "emoteShortcode": "이모트 단축키",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
-    "emoteSettings": "이모트 설정",    "@emoteSettings": {
-        "type": "String",        "placeholders": {}
-    },
     "emoteInvalid": "올바르지 않은 이모트 단축키!",    "@emoteInvalid": {
         "type": "String",        "placeholders": {}
     },
@@ -1118,7 +1115,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessageDescription": "메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.",    "invalidInput": "잘못된 입력!",    "doNotShowAgain": "다시 보지 않기",    "report": "신고",    "screenSharingTitle": "화면 공유",    "youBannedUser": "{user}님을 영구 추방함",    "@youBannedUser": {
+    "redactMessageDescription": "메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.",    "invalidInput": "잘못된 입력!",    "doNotShowAgain": "다시 보지 않기",    "report": "신고",    "youBannedUser": "{user}님을 영구 추방함",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1130,13 +1127,13 @@
                 "type": "String"            }
         }
     },
-    "openLinkInBrowser": "브라우저에서 링크 열기",    "disableEncryptionWarning": "보안상의 이유로 암호화가 활성화된 채팅에서 암호화를 비활성화 할 수 없습니다.",    "directChat": "다이렉트 채팅",    "wrongPinEntered": "잘못된 pin입니다! {seconds}초 후에 다시 시도하세요...",    "@wrongPinEntered": {
+    "openLinkInBrowser": "브라우저에서 링크 열기",    "disableEncryptionWarning": "보안상의 이유로 암호화가 활성화된 채팅에서 암호화를 비활성화 할 수 없습니다.",    "wrongPinEntered": "잘못된 pin입니다! {seconds}초 후에 다시 시도하세요...",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "입력 알림 보내기",    "inviteGroupChat": "📨 그룹 채팅에 초대",    "foregroundServiceRunning": "이 알림은 백그라운드 서비스가 실행중일때 표시됩니다.",    "importEmojis": "이모지 불러오기",    "wasDirectChatDisplayName": "빈 채팅 (전 {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "sendTypingNotifications": "입력 알림 보내기",    "inviteGroupChat": "📨 그룹 채팅에 초대",    "importEmojis": "이모지 불러오기",    "wasDirectChatDisplayName": "빈 채팅 (전 {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1163,7 +1160,7 @@
                 "type": "String"            }
         }
     },
-    "newSpace": "새 스페이스",    "createGroup": "새 그룹 채팅",    "custom": "커스텀",    "noBackupWarning": "경고! 채팅 백업을 켜지 않을경우, 당신은 암호화된 메시지에 대한 접근권한을 잃을것 입니다. 로그아웃 하기 전에 채팅을 백업하는것이 강력히 권장됩니다.",    "kickUserDescription": "유저는 채팅에서 추방되지만 영구 추방되지 않습니다. 공개 채팅의 경우, 언제든 유저가 다시 참가할 수 있습니다.",    "importNow": "지금 불러오기",    "invite": "초대",    "storeSecurlyOnThisDevice": "이 기기에 안전하게 저장",    "screenSharingDetail": "JuMiKK-Chat에 당신의 화면을 공유하는중",    "blockUsername": "유저 이름 무시",    "block": "차단",    "blockedUsers": "차단된 유저",    "groupName": "그룹 채팅 이름",    "commandHint_sendraw": "raw json 전송",    "pleaseChooseAStrongPassword": "강력한 비밀번호를 사용하세요",    "addChatOrSubSpace": "채팅 또는 하위 스페이스 추가",    "databaseMigrationBody": "잠시만 기다리세요. 시간이 걸릴 수 있습니다.",    "select": "선택",    "joinSpace": "스페이스 참가",    "formattedMessagesDescription": "마크다운을 이용한 볼드등의 서식이 있는 메시지를 봅니다.",    "completedKeyVerification": "{sender}가 키 검증을 완료함",    "@completedKeyVerification": {
+    "newSpace": "새 스페이스",    "createGroup": "새 그룹 채팅",    "custom": "커스텀",    "noBackupWarning": "경고! 채팅 백업을 켜지 않을경우, 당신은 암호화된 메시지에 대한 접근권한을 잃을것 입니다. 로그아웃 하기 전에 채팅을 백업하는것이 강력히 권장됩니다.",    "kickUserDescription": "유저는 채팅에서 추방되지만 영구 추방되지 않습니다. 공개 채팅의 경우, 언제든 유저가 다시 참가할 수 있습니다.",    "importNow": "지금 불러오기",    "invite": "초대",    "storeSecurlyOnThisDevice": "이 기기에 안전하게 저장",    "blockUsername": "유저 이름 무시",    "block": "차단",    "blockedUsers": "차단된 유저",    "groupName": "그룹 채팅 이름",    "commandHint_sendraw": "raw json 전송",    "pleaseChooseAStrongPassword": "강력한 비밀번호를 사용하세요",    "addChatOrSubSpace": "채팅 또는 하위 스페이스 추가",    "databaseMigrationBody": "잠시만 기다리세요. 시간이 걸릴 수 있습니다.",    "select": "선택",    "joinSpace": "스페이스 참가",    "formattedMessagesDescription": "마크다운을 이용한 볼드등의 서식이 있는 메시지를 봅니다.",    "completedKeyVerification": "{sender}가 키 검증을 완료함",    "@completedKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1277,7 +1274,7 @@
                 "type": "String"            }
         }
     },
-    "changelog": "변경 기록",    "sendingAttachment": "첨부된 파일 전송 중...",    "blur": "블러:",    "sendImages": "이미지 {count}개 보내기",    "@sendImages": {
+    "changelog": "변경 기록",    "blur": "블러:",    "sendImages": "이미지 {count}개 보내기",    "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
