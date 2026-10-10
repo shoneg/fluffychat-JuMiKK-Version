@@ -196,7 +196,7 @@
     "yourPublicKey": "Cheia voastră publică",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "placeCall": "Faceți apel",    "voiceCall": "Apel vocal",    "unsupportedAndroidVersion": "Versiune de Android nesuportat",    "userIsTyping": "{username} tastează…",    "@userIsTyping": {
+    "unsupportedAndroidVersion": "Versiune de Android nesuportat",    "userIsTyping": "{username} tastează…",    "@userIsTyping": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -302,7 +302,7 @@
     "you": "Voi",    "@you": {
         "type": "String",        "placeholders": {}
     },
-    "videoCallsBetaWarning": "Vă rugăm să luați notă că apeluri video sunt în beta. Se poate că nu funcționează normal sau de loc pe fie care platformă.",    "pinMessage": "Fixați în cameră",    "wasDirectChatDisplayName": "Chat gol (a fost {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "pinMessage": "Fixați în cameră",    "wasDirectChatDisplayName": "Chat gol (a fost {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -326,7 +326,7 @@
     "theyMatch": "Sunt asemănători",    "@theyMatch": {
         "type": "String",        "placeholders": {}
     },
-    "scanQrCode": "Scanați cod QR",    "addAccount": "Adăugați cont",    "experimentalVideoCalls": "Apeluri video experimentale",    "confirmEventUnpin": "Sunteți sigur că doriți să anulați permanent fixarea evenimentului?",    "emojis": "Emoji-uri",    "users": "Utilizatori",    "currentlyActive": "Activ acum",    "@currentlyActive": {
+    "scanQrCode": "Scanați cod QR",    "addAccount": "Adăugați cont",    "confirmEventUnpin": "Sunteți sigur că doriți să anulați permanent fixarea evenimentului?",    "emojis": "Emoji-uri",    "users": "Utilizatori",    "currentlyActive": "Activ acum",    "@currentlyActive": {
         "type": "String",        "placeholders": {}
     },
     "isTyping": "tastează…",    "@isTyping": {
@@ -525,9 +525,6 @@
         "type": "String",        "placeholders": {}
     },
     "verifyStart": "Începeți verificare",    "@verifyStart": {
-        "type": "String",        "placeholders": {}
-    },
-    "videoCall": "Apel video",    "@videoCall": {
         "type": "String",        "placeholders": {}
     },
     "visibilityOfTheChatHistory": "Vizibilitatea istoria chatului",    "@visibilityOfTheChatHistory": {

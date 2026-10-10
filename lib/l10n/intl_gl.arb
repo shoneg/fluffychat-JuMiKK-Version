@@ -499,7 +499,7 @@
                 "type": "String"            }
         }
     },
-    "isTyping": "está escribindo…",    "@isTyping": {
+    "isTyping": "está escribindo",    "@isTyping": {
         "type": "String",        "placeholders": {}
     },
     "joinedTheChat": "👋 {username} uníuse á conversa",    "@joinedTheChat": {
@@ -721,7 +721,7 @@
                 "type": "String"            }
         }
     },
-    "redactMessage": "Eliminar mensaxe",    "@redactMessage": {
+    "redactMessage": "Editar mensaxe",    "@redactMessage": {
         "type": "String",        "placeholders": {}
     },
     "reject": "Rexeitar",    "@reject": {
@@ -971,9 +971,6 @@
     "verifyTitle": "Verificando a outra conta",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Chamada de vídeo",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Visibilidade do historial da conversa",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1039,7 +1036,7 @@
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
     "commandHint_dm": "Iniciar unha charla directa\nUsa --no-encryption para desactivar a cifraxe",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuaria",    "voiceCall": "Chamada de voz",    "emojis": "Emojis",    "placeCall": "Chamar",    "unsupportedAndroidVersionLong": "Esta característica require unha vesión máis recente de Android. Mira se hai actualizacións ou soporte de LineageOS.",    "videoCallsBetaWarning": "Ten en conta que as chamadas de vídeo están en fase beta. Poderían non funcionar correctamente ou non funcionar nalgunhas plataformas.",    "unsupportedAndroidVersion": "Version de Android non soportada",    "reactedWith": "{sender} reaccionou con {reaction}",    "@reactedWith": {
+    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuaria",    "emojis": "Emojis",    "unsupportedAndroidVersionLong": "Esta característica require unha vesión máis recente de Android. Mira se hai actualizacións ou soporte de LineageOS.",    "unsupportedAndroidVersion": "Version de Android non soportada",    "reactedWith": "{sender} reaccionou con {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Fixar na sala",    "confirmEventUnpin": "Tes a certeza de querer desafixar o evento?",    "experimentalVideoCalls": "Chamadas de vídeo en probas",    "bundleName": "Nome do feixe",    "editBundlesForAccount": "Editar os feixes desta conta",    "addToBundle": "Engadir ao feixe",    "removeFromBundle": "Eliminar deste feixe",    "youRejectedTheInvitation": "Rexeitaches o convite",    "youBannedUser": "Vetaches a {user}",    "@youBannedUser": {
+    "pinMessage": "Fixar na sala",    "confirmEventUnpin": "Tes a certeza de querer desafixar o evento?",    "bundleName": "Nome do feixe",    "editBundlesForAccount": "Editar os feixes desta conta",    "addToBundle": "Engadir ao feixe",    "removeFromBundle": "Eliminar deste feixe",    "youRejectedTheInvitation": "Rexeitaches o convite",    "youBannedUser": "Vetaches a {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1226,7 +1223,7 @@
                 "type": "String"            }
         }
     },
-    "noDatabaseEncryption": "Nesta plataforma non temos soporte para cifrar a base de datos",    "accessAndVisibility": "Acceso e Visibilidade",    "accessAndVisibilityDescription": "Quen pode unirse a esta charla e de que xeito e como poden atopala.",    "customEmojisAndStickers": "Emojis personais e adhesivos",    "calls": "Chamadas",    "hideRedactedMessages": "Agochar mensaxes editadas",    "hideRedactedMessagesBody": "Se alguén corrixe unha mensaxe entón esta xa non será visible na charla.",    "hideInvalidOrUnknownMessageFormats": "Agochar formatos de mensaxe non válidos ou descoñecidos",    "usersMustKnock": "As usuarias teñen que pedir entrar",    "knocking": "A solicitar",    "chatCanBeDiscoveredViaSearchOnServer": "A charla pode ser atopada ao buscar en {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "noDatabaseEncryption": "Nesta plataforma non temos soporte para cifrar a base de datos",    "accessAndVisibility": "Acceso e Visibilidade",    "accessAndVisibilityDescription": "Quen pode unirse a esta charla e de que xeito e como poden atopala.",    "customEmojisAndStickers": "Emojis personais e adhesivos",    "hideRedactedMessages": "Agochar mensaxes editadas",    "hideRedactedMessagesBody": "Se alguén corrixe unha mensaxe entón esta xa non será visible na charla.",    "hideInvalidOrUnknownMessageFormats": "Agochar formatos de mensaxe non válidos ou descoñecidos",    "usersMustKnock": "As usuarias teñen que pedir entrar",    "knocking": "A solicitar",    "chatCanBeDiscoveredViaSearchOnServer": "A charla pode ser atopada ao buscar en {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1456,6 +1453,69 @@
         "placeholders": {
             "count": {
                 "type": "int"            }
+        }
+    },
+    "editImage": "Editar imaxe",    "@editImage": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateLeft": "Rotar á esquerda",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateRight": "Rotar á dereita",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
+    },
+    "mirror": "Espello",    "@mirror": {
+        "type": "String",        "placeholders": {}
+    },
+    "save": "Gardar",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "draw": "Debuxar",    "@draw": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "Desfacer",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "Limpar",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "eraser": "Borrar",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "Recortar",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "loadingMessages": "Cargando mensaxes…",    "buildDoesNotSupportFirebase": "Esta versión non é compatible con firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Non se puido rexistrar o dispositivo en firebase cloud messaging.",    "unifiedPushDistributors": "Distribuidores Unified Push:",    "doubleTapToReact": "Doble toque para reaccionar",    "doubleTapToReactDescription": "Fai doble toque nunha mensaxe para engadir reacción no lugar de seleccionar o texto",    "doubleTapReaction": "Reacción con doble toque",    "sendingFilesDoNotExit": "Enviando {count} ficheiros… Non saias!",    "@sendingFilesDoNotExit": {
+        "type": "String",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "compressingVideo": "Comprimindo o vídeo…",    "shareCrashReports": "Compartir informe dos fallos",    "shareCrashReportsDescription": "Compartir automaticamente coas desenvolvedoras os informes dos fallos?",    "countActiveCallMembers": "{count} participantes na chamada activa",    "@countActiveCallMembers": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "enterCall": "Entrar na chamada",    "videoCallsBetaWarning": "As chamadas de vídeo son unha función en probas. Podería haber fallos ou comportamentos non agardados. Apreciamos que nos contes que tal funcionan.",    "noDevicesFound": "Non se atopan dispositivos",    "accountsAndSettings": "Contas e axustes",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
+    "incomingCall": "Chamada entrante",    "videoCall": "Chamada de vídeo",    "voiceCall": "Chamada de voz",    "missedCall": "Chamada perdida",    "callBack": "Devolver chamada",    "hangUp": "Responder",    "waitingForParticipant": "Agardando por participante…",    "decline": "Rexeitar",    "startCall": "Chamar",    "selectCamera": "Seleccionar cámara",    "selectMicrophone": "Seleccionar micrófono",    "selectSpeaker": "Seleccionar altofalante",    "toggleMicrophone": "Activación do micrófono",    "toggleCamera": "Activación da cámara",    "startScreensharing": "Iniciar a compartir pantalla",    "stopScreensharing": "Deixar de compartir pantalla",    "raiseHand": "Erguer a man",    "stopRaiseHand": "Baixar a man",    "preferSpeaker": "Preferir altofalante",    "unexpectedErrorOccurded": "Por desgraza, houbo un fallo co que non contabamos: {msg}",    "@unexpectedErrorOccurded": {
+        "placeholders": {
+            "msg": {
+                "type": "String"            }
+        }
+    },
+    "incomingCallFrom": "Recibindo unha chamada de {user}",    "@incomingCallFrom": {
+        "placeholders": {
+            "user": {
+                "type": "String"            }
+        }
+    },
+    "serverRespondedWithError": "O servidor respondeu cunha mensaxe de erro: {error}",    "@serverRespondedWithError": {
+        "placeholders": {
+            "error": {
+                "type": "String"            }
         }
     }
 }

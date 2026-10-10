@@ -290,7 +290,7 @@
                 "type": "String"            }
         }
     },
-    "countParticipants": "{count} participant(s)",    "@countParticipants": {
+    "countParticipants": "{count, plural, =1{1 participant} other{{count} participants}}",    "@countParticipants": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -499,7 +499,7 @@
                 "type": "String"            }
         }
     },
-    "isTyping": "est en train d'écrire…",    "@isTyping": {
+    "isTyping": "est en train d'écrire",    "@isTyping": {
         "type": "String",        "placeholders": {}
     },
     "joinedTheChat": "👋 {username} a rejoint la discussion",    "@joinedTheChat": {
@@ -971,9 +971,6 @@
     "verifyTitle": "Vérification de l'autre compte",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Appel vidéo",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Visibilité de l'historique de la discussion",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "emojis": "Émojis",    "placeCall": "Passer un appel",    "voiceCall": "Appel vocal",    "unsupportedAndroidVersion": "Version d'Android non prise en charge",    "unsupportedAndroidVersionLong": "Cette fonctionnalité nécessite une nouvelle version d'Android. Veuillez vérifier les mises à jour ou la prise en charge de Lineage OS.",    "pinMessage": "Épingler au salon",    "confirmEventUnpin": "Voulez-vous vraiment désépingler définitivement l'événement ?",    "videoCallsBetaWarning": "Veuillez noter que les appels vidéo sont actuellement en version bêta. Ils peuvent ne pas fonctionner comme prévu ou ne oas fonctionner du tout sur toutes les plateformes.",    "experimentalVideoCalls": "Appels vidéo expérimentaux",    "youRejectedTheInvitation": "Vous avez rejeté l'invitation",    "youJoinedTheChat": "Vous avez rejoint la discussion",    "youHaveWithdrawnTheInvitationFor": "Vous avez retiré l'invitation pour {user}",    "@youHaveWithdrawnTheInvitationFor": {
+    "emojis": "Émojis",    "unsupportedAndroidVersion": "Version d'Android non prise en charge",    "unsupportedAndroidVersionLong": "Cette fonctionnalité nécessite une nouvelle version d'Android. Veuillez vérifier les mises à jour ou la prise en charge de Lineage OS.",    "pinMessage": "Épingler au salon",    "confirmEventUnpin": "Voulez-vous vraiment désépingler définitivement l'événement ?",    "youRejectedTheInvitation": "Vous avez rejeté l'invitation",    "youJoinedTheChat": "Vous avez rejoint la discussion",    "youHaveWithdrawnTheInvitationFor": "Vous avez retiré l'invitation pour {user}",    "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1178,7 +1175,7 @@
                 "type": "String"            }
         }
     },
-    "discover": "Découvrir",    "usersMustKnock": "Les utilisateurs/trices doivent frapper",    "noOneCanJoin": "Personne ne peut rejoindre",    "knock": "Frapper à la porte",    "appLockDescription": "Verrouiller l'application avec un code PIN lorsqu'elle n'est pas utilisée",    "globalChatId": "Identifiant global de la discussion",    "accessAndVisibility": "Accès et visibilité",    "accessAndVisibilityDescription": "Qui est autorisé à rejoindre cette discussion et comment la discussion peut être découverte.",    "calls": "Appels",    "customEmojisAndStickers": "Émoticônes et autocollants personnalisés",    "hideRedactedMessages": "Cacher les messages supprimés",    "pleaseEnterYourCurrentPassword": "Veuillez saisir votre mot de passe actuel",    "swipeRightToLeftToReply": "Glisser de droite à gauche pour répondre",    "hideRedactedMessagesBody": "Si quelqu'un supprime un message, celui-ci ne sera plus visible dans la discussion.",    "customEmojisAndStickersBody": "Ajoutez ou partagez des émoticônes ou autocollants personnalisés qui peuvent être utilisés dans n'importe quelle discussion.",    "blockListDescription": "Vous pouvez bloquer des utilisateurs/trices qui vous dérangent. Vous ne pourrez plus recevoir aucun message ou invitation à un salon d'utilisateurs/trices figurant sur votre liste de blocage personnelle.",    "blockUsername": "Ignorer le nom d'utilisateur/trice",    "hideInvalidOrUnknownMessageFormats": "Masquer les formats de message invalides ou inconnus",    "messagesStyle": "Messages :",    "redactedByBecause": "Supprimé par {username} car : \"{reason}\"",    "@redactedByBecause": {
+    "discover": "Découvrir",    "usersMustKnock": "Les utilisateurs/trices doivent frapper",    "noOneCanJoin": "Personne ne peut rejoindre",    "knock": "Frapper à la porte",    "appLockDescription": "Verrouiller l'application avec un code PIN lorsqu'elle n'est pas utilisée",    "globalChatId": "Identifiant global de la discussion",    "accessAndVisibility": "Accès et visibilité",    "accessAndVisibilityDescription": "Qui est autorisé à rejoindre cette discussion et comment la discussion peut être découverte.",    "customEmojisAndStickers": "Émoticônes et autocollants personnalisés",    "hideRedactedMessages": "Cacher les messages supprimés",    "pleaseEnterYourCurrentPassword": "Veuillez saisir votre mot de passe actuel",    "swipeRightToLeftToReply": "Glisser de droite à gauche pour répondre",    "hideRedactedMessagesBody": "Si quelqu'un supprime un message, celui-ci ne sera plus visible dans la discussion.",    "customEmojisAndStickersBody": "Ajoutez ou partagez des émoticônes ou autocollants personnalisés qui peuvent être utilisés dans n'importe quelle discussion.",    "blockListDescription": "Vous pouvez bloquer des utilisateurs/trices qui vous dérangent. Vous ne pourrez plus recevoir aucun message ou invitation à un salon d'utilisateurs/trices figurant sur votre liste de blocage personnelle.",    "blockUsername": "Ignorer le nom d'utilisateur/trice",    "hideInvalidOrUnknownMessageFormats": "Masquer les formats de message invalides ou inconnus",    "messagesStyle": "Messages :",    "redactedByBecause": "Supprimé par {username} car : \"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1452,10 +1449,79 @@
     "noCurve25519KeyFound": "Aucune clé curve25519 trouvée",    "@noCurve25519KeyFound": {
         "type": "String",        "placeholders": {}
     },
-    "messageNotDecryptable": "Message non-déchiffrable",    "messageCanOnlyBeReadByUser": "Votre message est chiffré de bout en bout et ne peux être lu que par cet utilisateur :",    "messageCanOnlyBeReadByUsers": "Votre message est chiffré de bout en bout et ne peux être lu que par ces utilisateurs :",    "today": "Aujourd'hui",    "sending": "Envoi",    "generatingThumbnail": "Génération d'une miniature",    "encrypting": "Chiffrement",    "uploading": "Téléversement",    "edited": "(édité)",    "couldNotBeSent": "N'a pas pu être envoyé",    "yesterday": "Hier",    "displayNavigationRail": "Afficher la barre de navigation sur mobile",    "resetRecoveryKey": "Réinitialiser la clé de récupération",    "pleaseEnter6Digits": "Veuillez entrer le code à 6 chiffres pour activer le verouillage de l'application.",    "disableAppLock": "Désactiver le verrouillage de l'application",    "disableAppLockAreYouSure": "Êtes vous sûr de vouloir désactiver le verrouillage de l'application ?",    "enableBiometrics": "Activer l'authentification biométrique",    "disableBiometrics": "Désactiver l'authentification biométrique",    "biometricsDescription": "Avec l'authentification biométrique, vous pouvez déverrouillee l'application avec votre visage ou votre empreinte digitale. Les possibilités dépendent de votre appareil.",    "useAppLock": "Utiliser le verrouillage de l'application",    "unlockWithBiometrics": "Déverrouiller avec l'authentification biométrique",    "resetPin": "Réinitialiser le code pin",    "forwardCountMessages": "Avancer de {count, plural, =1{un message} other{{count} messages}} ?",    "@forwardCountMessages": {
+    "messageNotDecryptable": "Message non-déchiffrable",    "messageCanOnlyBeReadByUser": "Votre message est chiffré de bout en bout et ne peux être lu que par cet utilisateur :",    "messageCanOnlyBeReadByUsers": "Votre message est chiffré de bout en bout et ne peux être lu que par ces utilisateurs :",    "today": "Aujourd'hui",    "sending": "Envoi",    "generatingThumbnail": "Génération d'une miniature",    "encrypting": "Chiffrement",    "uploading": "Téléversement",    "edited": "(édité)",    "couldNotBeSent": "N'a pas pu être envoyé",    "yesterday": "Hier",    "displayNavigationRail": "Afficher la barre de navigation sur mobile",    "resetRecoveryKey": "Réinitialiser la clé de récupération",    "pleaseEnter6Digits": "Veuillez entrer le code à 6 chiffres pour activer le verouillage de l'application.",    "disableAppLock": "Désactiver le verrouillage de l'application",    "disableAppLockAreYouSure": "Êtes vous sûr de vouloir désactiver le verrouillage de l'application ?",    "enableBiometrics": "Activer l'authentification biométrique",    "disableBiometrics": "Désactiver l'authentification biométrique",    "biometricsDescription": "Avec l'authentification biométrique, vous pouvez déverrouillee l'application avec votre visage ou votre empreinte digitale. Les possibilités dépendent de votre appareil.",    "useAppLock": "Utiliser le verrouillage de l'application",    "unlockWithBiometrics": "Déverrouiller avec l'authentification biométrique",    "resetPin": "Réinitialiser le code pin",    "forwardCountMessages": "Transférer {count, plural, =1{le message} other{{count}les messages}} ?",    "@forwardCountMessages": {
         "placeholders": {
             "count": {
                 "type": "int"            }
         }
     },
-    "clientWellKnownInformation": "Informations Well-Known du client :",    "attribution": "Attribution",    "support": "Soutenir",    "blur": "Flou :",    "opacity": "Opacité :"}
+    "clientWellKnownInformation": "Informations Well-Known du client :",    "attribution": "Attribution",    "support": "Soutenir",    "blur": "Flou :",    "opacity": "Opacité :",    "editImage": "Éditer l'image",    "@editImage": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateLeft": "Tourner vers la gauche",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateRight": "Tourner vers la droite",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
+    },
+    "mirror": "Mirroir",    "@mirror": {
+        "type": "String",        "placeholders": {}
+    },
+    "save": "Sauvegarder",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "draw": "Dessiner",    "@draw": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "Défaire",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "Effacer",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "eraser": "Gomme",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "Rogner",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "loadingMessages": "Chargement des messages...",    "buildDoesNotSupportFirebase": "Cette version ne supporte pas firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Impossible d'enregistrer l'appareil sur firebase cloud messaging.",    "unifiedPushDistributors": "Distributeurs Unified Push :",    "doubleTapToReact": "Double-tappez pour réagir",    "doubleTapToReactDescription": "Double-tappez sur un message pour réagir au lieu de sélectionner du texte",    "doubleTapReaction": "Réaction du double appuis",    "sendingFilesDoNotExit": "Envoi de {count} fichiers... Veuillez de pas quitter !",    "@sendingFilesDoNotExit": {
+        "type": "String",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "compressingVideo": "Compression de la vidéo...",    "shareCrashReports": "Partager le rapport de crash",    "shareCrashReportsDescription": "Partage automatiquement les rapports de crash avec les developers ?",    "activeCall": "Appel actif",    "countActiveCallMembers": "{count} membres actifs dans l'appel",    "@countActiveCallMembers": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "enterCall": "Entrer dans l'appel",    "videoCallsBetaWarning": "Les appels vidéos sont une fonctionnalité en beta. Il peut y avoir des bugs ou des comportements inattendus. Nous serons heureux d'entendre vos retours.",    "noDevicesFound": "Aucun appareil trouvé",    "incomingCall": "Appel entrant",    "videoCall": "Appel vidéo",    "voiceCall": "Appel vocal",    "missedCall": "Appel manqué",    "callBack": "Rappeler",    "hangUp": "Raccrocher",    "waitingForParticipant": "En attente de participants...",    "decline": "Décliner",    "startCall": "Démarrer l'appel",    "selectCamera": "Sélectionner une caméra",    "selectMicrophone": "Sélectionner un micro",    "selectSpeaker": "Sélectionner une sortie audio",    "toggleMicrophone": "Activer le microphone",    "toggleCamera": "Activer la caméra",    "startScreensharing": "Commencer le partage d'écran",    "stopScreensharing": "Arrêter le partage d'écran",    "raiseHand": "Lever la main",    "stopRaiseHand": "Baisser la main",    "preferSpeaker": "Sortie audio favorite",    "unexpectedErrorOccurded": "Malheuresement, une erreur est survenue : {msg}",    "@unexpectedErrorOccurded": {
+        "placeholders": {
+            "msg": {
+                "type": "String"            }
+        }
+    },
+    "accountsAndSettings": "Comptes et paramètres",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
+    "incomingCallFrom": "Appel entrant de {user}",    "@incomingCallFrom": {
+        "placeholders": {
+            "user": {
+                "type": "String"            }
+        }
+    },
+    "serverRespondedWithError": "Le serveur a répondu avec un message d'erreur : {error}",    "@serverRespondedWithError": {
+        "placeholders": {
+            "error": {
+                "type": "String"            }
+        }
+    },
+    "updateAvailable": "Mise à jour {version} disponible",    "@updateAvailable": {
+        "type": "String",        "placeholders": {
+            "version": {
+                "type": "String"            }
+        }
+    },
+    "download": "Télécharger"}

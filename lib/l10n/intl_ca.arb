@@ -780,9 +780,6 @@
     "verifyTitle": "Verificant un altre compte",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Videotrucada",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Visibilitat de l’historial del xat",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1058,10 +1055,10 @@
                 "type": "String"            }
         }
     },
-    "videoCallsBetaWarning": "Tingues en compte que les trucades de vídeo estan encara en beta. Pot ser que no funcioni bé o que falli en alguna plataforma.",    "participant": "Participant",    "@participant": {
+    "participant": "Participant",    "@participant": {
         "type": "String",        "placeholders": {}
     },
-    "fileIsTooBigForServer": "No s'ha pogut enviar! El servidor només accepta adjunts de fins a {max}.",    "readUpToHere": "Llegit fins aquí",    "optionalRedactReason": "(Opcional) El motiu per estripar el missatge...",    "dehydrate": "Exporta la sessió i neteja el dispositiu",    "archiveRoomDescription": "Aquest xat serà arxivat. Els altres contactes del grup ho veuran com si haguessis abandonat el xat.",    "exportEmotePack": "Exporta com un pack Emote en .zip",    "experimentalVideoCalls": "Trucades de vídeo experimentals",    "openInMaps": "Obre als mapes",    "@openInMaps": {
+    "fileIsTooBigForServer": "No s'ha pogut enviar! El servidor només accepta adjunts de fins a {max}.",    "readUpToHere": "Llegit fins aquí",    "optionalRedactReason": "(Opcional) El motiu per estripar el missatge...",    "dehydrate": "Exporta la sessió i neteja el dispositiu",    "archiveRoomDescription": "Aquest xat serà arxivat. Els altres contactes del grup ho veuran com si haguessis abandonat el xat.",    "exportEmotePack": "Exporta com un pack Emote en .zip",    "openInMaps": "Obre als mapes",    "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
     "redactedByBecause": "Estripat per {username} per: \"{reason}\"",    "@redactedByBecause": {
@@ -1117,7 +1114,7 @@
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Envia notificacions d'escriptura",    "inviteGroupChat": "📨 Invitació de grup",    "voiceCall": "Videotrucada",    "commandHint_unban": "Aixeca el veto a aquesti usuàriï per aquesta sala",    "@commandHint_unban": {
+    "sendTypingNotifications": "Envia notificacions d'escriptura",    "inviteGroupChat": "📨 Invitació de grup",    "commandHint_unban": "Aixeca el veto a aquesti usuàriï per aquesta sala",    "@commandHint_unban": {
         "type": "String",        "description": "Usage hint for the command /unban"    },
     "importEmojis": "Importa emojis",    "wasDirectChatDisplayName": "Xat buit ( era {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
@@ -1160,7 +1157,7 @@
     "newSpace": "Espai nou",    "emojis": "Emojis",    "pleaseEnterYourPin": "Introdueix el teu pin",    "@pleaseEnterYourPin": {
         "type": "String",        "placeholders": {}
     },
-    "commandHint_googly": "Envia uns ulls curiosos",    "createGroup": "Crea un grup",    "time": "Temps",    "custom": "Personalitzat",    "noBackupWarning": "Compte! Si no actives la còpia de seguretat dels xats, perdràs accés als teus missatges xifrats. És molt recomanable activar-ho abans de tancar la sessió.",    "kickUserDescription": "Li usuàrïi ha estat expulsadi però no vetadi. Als xats públics, pot tornar-hi a entrar en qualsevol moment.",    "importNow": "Importa-ho ara",    "pinMessage": "Fixa a la sala",    "invite": "Convida",    "unsupportedAndroidVersionLong": "Aquesta funcionalitat només funciona amb versions d'Android més noves.",    "storeSecurlyOnThisDevice": "Desa de forma segura en aquest dispositiu",    "placeCall": "Truca",    "block": "Bloca",    "blockUsername": "Ignora aquesti usuàrïi",    "blockedUsers": "Usuàrïis blocadis",    "blockListDescription": "Pots bloquejar usuàrïis que et molestin. No rebràs missatges seus ni invitacions de part seva a cap sala.",    "pleaseChooseAStrongPassword": "Tria una contrasenya forta",    "groupName": "Nom del grup",    "createGroupAndInviteUsers": "Crea un grup i convida-hi usuàrïis",    "wrongRecoveryKey": "Malauradament, aquesta clau de recuperació no és la correcta.",    "sendReadReceiptsDescription": "Lis altris participants d'un xat poden veure quan has llegit un missatge.",    "yourGlobalUserIdIs": "La teva ID global és: ",    "commandHint_sendraw": "Envia un json pelat",    "databaseMigrationTitle": "La base de dades ha estat optimitzada",    "pleaseEnterYourCurrentPassword": "Fica la teva contrasenya actual",    "newPassword": "Contrasenya nova",    "restoreSessionBody": "L'aplicació provarà de restaurar la teva sessió des de la còpia de seguretat. Si us plau, comunica aquest error a l'equi pde desenvolupament a {url}. El missatge d'error és {error}",    "@restoreSessionBody": {
+    "commandHint_googly": "Envia uns ulls curiosos",    "createGroup": "Crea un grup",    "time": "Temps",    "custom": "Personalitzat",    "noBackupWarning": "Compte! Si no actives la còpia de seguretat dels xats, perdràs accés als teus missatges xifrats. És molt recomanable activar-ho abans de tancar la sessió.",    "kickUserDescription": "Li usuàrïi ha estat expulsadi però no vetadi. Als xats públics, pot tornar-hi a entrar en qualsevol moment.",    "importNow": "Importa-ho ara",    "pinMessage": "Fixa a la sala",    "invite": "Convida",    "unsupportedAndroidVersionLong": "Aquesta funcionalitat només funciona amb versions d'Android més noves.",    "storeSecurlyOnThisDevice": "Desa de forma segura en aquest dispositiu",    "block": "Bloca",    "blockUsername": "Ignora aquesti usuàrïi",    "blockedUsers": "Usuàrïis blocadis",    "blockListDescription": "Pots bloquejar usuàrïis que et molestin. No rebràs missatges seus ni invitacions de part seva a cap sala.",    "pleaseChooseAStrongPassword": "Tria una contrasenya forta",    "groupName": "Nom del grup",    "createGroupAndInviteUsers": "Crea un grup i convida-hi usuàrïis",    "wrongRecoveryKey": "Malauradament, aquesta clau de recuperació no és la correcta.",    "sendReadReceiptsDescription": "Lis altris participants d'un xat poden veure quan has llegit un missatge.",    "yourGlobalUserIdIs": "La teva ID global és: ",    "commandHint_sendraw": "Envia un json pelat",    "databaseMigrationTitle": "La base de dades ha estat optimitzada",    "pleaseEnterYourCurrentPassword": "Fica la teva contrasenya actual",    "newPassword": "Contrasenya nova",    "restoreSessionBody": "L'aplicació provarà de restaurar la teva sessió des de la còpia de seguretat. Si us plau, comunica aquest error a l'equi pde desenvolupament a {url}. El missatge d'error és {error}",    "@restoreSessionBody": {
         "type": "String",        "placeholders": {
             "url": {
                 "type": "String"            },
@@ -1239,7 +1236,7 @@
                 "type": "int"            }
         }
     },
-    "inviteOtherUsers": "Convida més gent a la conversa",    "changeTheChatPermissions": "Canvia els permisos del xat",    "changeTheVisibilityOfChatHistory": "Canvia la visibilitat de l'historial de conversa",    "changeTheCanonicalRoomAlias": "Canvia l'adreça principal del xat",    "accessAndVisibilityDescription": "Qui pot entrar a aquesta conversa i com pot ser descoberta.",    "customEmojisAndStickers": "Emojis i stickers propis",    "accessAndVisibility": "Accés i visibilitat",    "calls": "Trucades",    "hideRedactedMessages": "Amaga els missatges estripats",    "hideInvalidOrUnknownMessageFormats": "Amaga els missatges que tinguin un format desconegut",    "passwordRecoverySettings": "Recuperació de contrasenya",    "gallery": "Galeria",    "noDatabaseEncryption": "No es pot xifrar la base de dades en aquesta plataforma",    "usersMustKnock": "Lis membres han de picar a la porta",    "noOneCanJoin": "Ningú s'hi pot ficar",    "customEmojisAndStickersBody": "Afegeix o comparteix emojis o stickers. Els podràs fer servir en qualsevol conversa.",    "hideRedactedMessagesBody": "Si algú estripa un missatge, ja no apareixerà a l'historial de la conversa.",    "searchIn": "Cerca al xat \"{chat}\"...",    "@searchIn": {
+    "inviteOtherUsers": "Convida més gent a la conversa",    "changeTheChatPermissions": "Canvia els permisos del xat",    "changeTheVisibilityOfChatHistory": "Canvia la visibilitat de l'historial de conversa",    "changeTheCanonicalRoomAlias": "Canvia l'adreça principal del xat",    "accessAndVisibilityDescription": "Qui pot entrar a aquesta conversa i com pot ser descoberta.",    "customEmojisAndStickers": "Emojis i stickers propis",    "accessAndVisibility": "Accés i visibilitat",    "hideRedactedMessages": "Amaga els missatges estripats",    "hideInvalidOrUnknownMessageFormats": "Amaga els missatges que tinguin un format desconegut",    "passwordRecoverySettings": "Recuperació de contrasenya",    "gallery": "Galeria",    "noDatabaseEncryption": "No es pot xifrar la base de dades en aquesta plataforma",    "usersMustKnock": "Lis membres han de picar a la porta",    "noOneCanJoin": "Ningú s'hi pot ficar",    "customEmojisAndStickersBody": "Afegeix o comparteix emojis o stickers. Els podràs fer servir en qualsevol conversa.",    "hideRedactedMessagesBody": "Si algú estripa un missatge, ja no apareixerà a l'historial de la conversa.",    "searchIn": "Cerca al xat \"{chat}\"...",    "@searchIn": {
         "type": "String",        "placeholders": {
             "chat": {
                 "type": "String"            }

@@ -971,9 +971,6 @@
     "verifyTitle": "Ověřuji druhý účet",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Video hovor",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Viditelnost historie chatu",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "emojis": "Emojis",    "voiceCall": "Hlasový hovor",    "unsupportedAndroidVersion": "Nepodporovaná verze Androidu",    "videoCallsBetaWarning": "Upozorňujeme, že videohovory jsou aktuálně ve verzi beta. Nemusí fungovat podle očekávání nebo fungovat vůbec na všech platformách.",    "placeCall": "Zavolejte",    "experimentalVideoCalls": "Experimentální videohovory",    "unsupportedAndroidVersionLong": "Tato funkce vyžaduje novější verzi Android. Zkontrolujte prosím aktualizace nebo podporu Lineage OS.",    "pinMessage": "Připnout zprávu do místnosti",    "confirmEventUnpin": "Opravdu chcete událost trvale odepnout?",    "youKicked": "Vykopli jste uživatele {user}",    "@youKicked": {
+    "emojis": "Emojis",    "unsupportedAndroidVersion": "Nepodporovaná verze Androidu",    "unsupportedAndroidVersionLong": "Tato funkce vyžaduje novější verzi Android. Zkontrolujte prosím aktualizace nebo podporu Lineage OS.",    "pinMessage": "Připnout zprávu do místnosti",    "confirmEventUnpin": "Opravdu chcete událost trvale odepnout?",    "youKicked": "Vykopli jste uživatele {user}",    "@youKicked": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1148,7 +1145,7 @@
     "emoteKeyboardNoRecents": "Naposledy použité emodži se zobrazí zde...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "appLockDescription": "Zamknout aplikaci pomocí PIN kódu když není používána",    "globalChatId": "Globální ID chatu",    "accessAndVisibility": "Přístup a viditelnost",    "calls": "Volání",    "customEmojisAndStickers": "Vlastní emodži a nálepky",    "accessAndVisibilityDescription": "Kdo se může připojit a najít tuto konverzaci.",    "customEmojisAndStickersBody": "Přidat nebo sdílet vlastní emodži či nálepky, které lze použít v konverzaci.",    "swipeRightToLeftToReply": "Potáhnutím zprava doleva odpovědět na zprávu",    "noMoreChatsFound": "Žádné další konverzace nalezeny...",    "hideRedactedMessages": "Skrýt upravené zprávy",    "hideRedactedMessagesBody": "Pokud někdo zprávu zrediguje, nebude tato zpráva v chatu již viditelná.",    "hideInvalidOrUnknownMessageFormats": "Skrýt nesprávné nebo neznámé formáty zpráv",    "blockUsername": "Ignorovat uživatelské jméno",    "passwordRecoverySettings": "Nastavení obnovení hesla",    "block": "Zablokovat",    "blockListDescription": "Můžete blokovat uživatele, kteří vás obtěžují. Od uživatelů na vašem osobním seznamu blokovaných uživatelů nebudete moci přijímat žádné zprávy ani pozvánky do místnosti.",    "blockedUsers": "Zablokování uživatelé",    "noChatsFoundHere": "Nejsou zde žádné konverzace. Začněte novou konverzaci s někým pomocí tlačítka níže. ⤵️",    "unread": "Nepřečtené",    "space": "Prostor",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
+    "appLockDescription": "Zamknout aplikaci pomocí PIN kódu když není používána",    "globalChatId": "Globální ID chatu",    "accessAndVisibility": "Přístup a viditelnost",    "customEmojisAndStickers": "Vlastní emodži a nálepky",    "accessAndVisibilityDescription": "Kdo se může připojit a najít tuto konverzaci.",    "customEmojisAndStickersBody": "Přidat nebo sdílet vlastní emodži či nálepky, které lze použít v konverzaci.",    "swipeRightToLeftToReply": "Potáhnutím zprava doleva odpovědět na zprávu",    "noMoreChatsFound": "Žádné další konverzace nalezeny...",    "hideRedactedMessages": "Skrýt upravené zprávy",    "hideRedactedMessagesBody": "Pokud někdo zprávu zrediguje, nebude tato zpráva v chatu již viditelná.",    "hideInvalidOrUnknownMessageFormats": "Skrýt nesprávné nebo neznámé formáty zpráv",    "blockUsername": "Ignorovat uživatelské jméno",    "passwordRecoverySettings": "Nastavení obnovení hesla",    "block": "Zablokovat",    "blockListDescription": "Můžete blokovat uživatele, kteří vás obtěžují. Od uživatelů na vašem osobním seznamu blokovaných uživatelů nebudete moci přijímat žádné zprávy ani pozvánky do místnosti.",    "blockedUsers": "Zablokování uživatelé",    "noChatsFoundHere": "Nejsou zde žádné konverzace. Začněte novou konverzaci s někým pomocí tlačítka níže. ⤵️",    "unread": "Nepřečtené",    "space": "Prostor",    "aboutHomeserver": "O {homeserver}",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1292,68 +1289,31 @@
                 "type": "int"            }
         }
     },
-    "commandHint_roomupgrade": "Aktualizovat místnost na danou verzi",    "@goToSpace": {
-        "type": "String",        "space": {}
+    "commandHint_roomupgrade": "Aktualizovat místnost na danou verzi",    "editImage": "Upravit obraz",    "@editImage": {
+        "type": "String",        "placeholders": {}
     },
-    "@countReplies": {
-        "type": "int",        "placeholders": {
-            "count": {
-                "type": "int"            }
-        }
+    "rotateLeft": "Otočit doleva",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
     },
-    "@userLevel": {
-        "type": "String",        "placeholders": {
-            "level": {
-                "type": "int"            }
-        }
+    "rotateRight": "Otočit doprava",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
     },
-    "@updateInstalled": {
-        "type": "String",        "placeholders": {
-            "version": {
-                "type": "String"            }
-        }
+    "mirror": "Zrcadlit",    "@mirror": {
+        "type": "String",        "placeholders": {}
     },
-    "@adminLevel": {
-        "type": "String",        "placeholders": {
-            "level": {
-                "type": "int"            }
-        }
+    "save": "Uložit",    "@save": {
+        "type": "String",        "placeholders": {}
     },
-    "@mute": {
-        "description": "This should be a very short string because there is not much space in the button!"    },
-    "@thereAreCountUsersBlocked": {
-        "type": "String",        "count": {}
+    "draw": "Kreslit",    "@draw": {
+        "type": "String",        "placeholders": {}
     },
-    "@unknownPushRule": {
-        "type": "String",        "placeholders": {
-            "rule": {
-                "type": "String"            }
-        }
+    "undo": "Vrátit",    "@undo": {
+        "type": "String",        "placeholders": {}
     },
-    "@unreadChatsInApp": {
-        "type": "String",        "placeholders": {
-            "appname": {
-                "type": "String"            },
-            "unread": {
-                "type": "String"            }
-        }
+    "clear": "Vymazat",    "@clear": {
+        "type": "String",        "placeholders": {}
     },
-    "@countVotes": {
-        "type": "int",        "placeholders": {
-            "count": {
-                "type": "int"            }
-        }
+    "accountsAndSettings": "Úcty a nastavení",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
     },
-    "@moderatorLevel": {
-        "type": "String",        "placeholders": {
-            "level": {
-                "type": "int"            }
-        }
-    },
-    "@searchIn": {
-        "type": "String",        "placeholders": {
-            "chat": {
-                "type": "String"            }
-        }
-    }
-}
+    "compressingVideo": "Kompresuji video...",    "searchMore": "Vyhledat více...",    "incomingMessages": "Příchozí zprávy",    "stickers": "Samolepky",    "discover": "Objevit"}

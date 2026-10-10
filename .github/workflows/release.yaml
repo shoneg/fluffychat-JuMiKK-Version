@@ -54,10 +54,9 @@ jobs:
       - name: Build website
         working-directory: fluffychat-website
         run: |
-          npm install tailwindcss @tailwindcss/cli
-          npx tailwindcss -i ./src/styles.css -o ./src/assets/tailwind.css --minify
-          npx @11ty/eleventy
-          mv public ../
+          npm ci
+          npm run build
+          mv out ../public
       - name: Copy FluffyChat web into it
         run: |
           mv docs public
@@ -94,7 +93,7 @@ jobs:
           FDROID_KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
           PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
         run: ./scripts/prepare-android-release.sh
-      - run: flutter build apk --release --target-platform android-arm,android-arm64
+      - run: flutter build apk --release
       - name: Upload to release
         uses: actions/upload-release-asset@v1
         env:
@@ -134,6 +133,53 @@ jobs:
           asset_name: jumikkchat-linux-${{ matrix.arch }}.tar.gz
           asset_content_type: application/gzip
 
+  deploy_snapstore:
+    strategy:
+      matrix:
+        arch: [ x64, arm64 ]
+    runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest'}}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Determine Snap channel
+        id: channel
+        run: |
+          if [[ "${{ github.ref_name }}" == rc* ]]; then
+            echo "channel=candidate" >> $GITHUB_OUTPUT
+          else
+            echo "channel=stable" >> $GITHUB_OUTPUT
+          fi
+      - uses: snapcore/action-build@v1
+        id: build
+      - uses: snapcore/action-publish@v1
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+        with:
+          snap: ${{ steps.build.outputs.snap }}
+          release: ${{ steps.channel.outputs.channel }}
+
+  build_windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: .tool_versions.yaml
+          cache: true
+      - uses: dtolnay/rust-toolchain@stable
+      - run: choco install innosetup -y
+      - run: flutter pub get
+      - run: flutter build windows --release
+      - run: ./scripts/package-windows.ps1 -BuildMode Release
+      - name: Upload installer to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: build/windows/installer/fluffychat-windows-x64-setup.exe
+          asset_name: fluffychat-windows-x64-setup.exe
+          asset_content_type: application/vnd.microsoft.portable-executable
+
   deploy_playstore:
     runs-on: ubuntu-latest
     concurrency:
@@ -165,8 +211,11 @@ jobs:
           FDROID_KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
           PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
         run: ./scripts/prepare-android-release.sh
+      # Because of https://ko-fi.com/post/Why-FluffyChat-is-no-longer-available-on-Android-A-A4E426QCYI
+      - name: Remove Android Auto metadata for Play Store
+        run: sed -i '/Android Auto/,/automotive_app_desc/d' android/app/src/main/AndroidManifest.xml
       - name: Build Android Release
-        run: flutter build appbundle --target-platform android-arm,android-arm64
+        run: flutter build appbundle --target-platform android-arm,android-arm64,android-x64
       - name: Get Tag Name
         id: tag_name
         run: echo "::set-output name=tag::$(echo ${GITHUB_REF#refs/tags/})"
@@ -177,7 +226,6 @@ jobs:
           cd android
           bundle install
           bundle update fastlane
-          bundle exec fastlane deploy_internal_test
           if [[ $GITHUB_REF_NAME == rc* ]]; then
               bundle exec fastlane deploy_candidate
           else

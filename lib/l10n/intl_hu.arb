@@ -707,9 +707,6 @@
     "verifyTitle": "Másik fiók hitelesítése",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Videóhívás",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Csevegési előzmény láthatósága",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1061,7 +1058,7 @@
                 "type": "String"            }
         }
     },
-    "videoCallsBetaWarning": "Kérem vegye figyelembe, hogy a videó hívások jelenleg béta fázisban vannak. Nem biztos, hogy megfelelően fognak működni, vagy egyáltalán elindulnak egyes platformokon.",    "fileIsTooBigForServer": "Nem küldhető el! A szerver csak {max} határig enged csatolmányokat.",    "verified": "Hitelesített",    "@verified": {
+    "fileIsTooBigForServer": "Nem küldhető el! A szerver csak {max} határig enged csatolmányokat.",    "verified": "Hitelesített",    "@verified": {
         "type": "String",        "placeholders": {}
     },
     "readUpToHere": "Olvasás idáig",    "optionalRedactReason": "(Választható) A szerkesztés oka...",    "sendAsText": "Küldés szövegként",    "@sendAsText": {
@@ -1072,7 +1069,7 @@
     "whyDoYouWantToReportThis": "Miért kívánja ezt bejelenteni?",    "@whyDoYouWantToReportThis": {
         "type": "String",        "placeholders": {}
     },
-    "experimentalVideoCalls": "Kísérleti videó hívások",    "redactedByBecause": "{username} által szerkesztve, mivel: \"{reason}\"",    "@redactedByBecause": {
+    "redactedByBecause": "{username} által szerkesztve, mivel: \"{reason}\"",    "@redactedByBecause": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            },
@@ -1128,7 +1125,7 @@
                 "type": "int"            }
         }
     },
-    "sendTypingNotifications": "Gépelési értesítés megjelenítése",    "inviteGroupChat": "📨 Meghívó a csoportba",    "voiceCall": "Hang hívás",    "importEmojis": "Emojik importálása",    "wasDirectChatDisplayName": "Üres csevegés (korábban {oldDisplayName})",    "@wasDirectChatDisplayName": {
+    "sendTypingNotifications": "Gépelési értesítés megjelenítése",    "inviteGroupChat": "📨 Meghívó a csoportba",    "importEmojis": "Emojik importálása",    "wasDirectChatDisplayName": "Üres csevegés (korábban {oldDisplayName})",    "@wasDirectChatDisplayName": {
         "type": "String",        "placeholders": {
             "oldDisplayName": {
                 "type": "String"            }
@@ -1160,7 +1157,7 @@
                 "type": "String"            }
         }
     },
-    "newSpace": "Új tér",    "emojis": "Hangulatjelek",    "createGroup": "Csoport létrehozása",    "time": "Idő",    "custom": "Egyedi",    "noBackupWarning": "Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.",    "kickUserDescription": "A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.",    "importNow": "Importálás most",    "pinMessage": "Kitűzés a szobában",    "invite": "Meghívás",    "unsupportedAndroidVersionLong": "Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.",    "storeSecurlyOnThisDevice": "Biztonságos tárolás az eszközön",    "placeCall": "Tér hívás",    "block": "Blokkolás",    "blockedUsers": "Blokkolt felhasználók",    "blockListDescription": "Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.",    "blockUsername": "Felhasználónév ignorálása",    "yourGlobalUserIdIs": "A globális felhasználó-ID-je: ",    "noUsersFoundWithQuery": "\"{query}\"-vel nem található felhasználó. Ellenőrizze nincs e elírás.",    "@noUsersFoundWithQuery": {
+    "newSpace": "Új tér",    "emojis": "Hangulatjelek",    "createGroup": "Csoport létrehozása",    "time": "Idő",    "custom": "Egyedi",    "noBackupWarning": "Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.",    "kickUserDescription": "A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.",    "importNow": "Importálás most",    "pinMessage": "Kitűzés a szobában",    "invite": "Meghívás",    "unsupportedAndroidVersionLong": "Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.",    "storeSecurlyOnThisDevice": "Biztonságos tárolás az eszközön",    "block": "Blokkolás",    "blockedUsers": "Blokkolt felhasználók",    "blockListDescription": "Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.",    "blockUsername": "Felhasználónév ignorálása",    "yourGlobalUserIdIs": "A globális felhasználó-ID-je: ",    "noUsersFoundWithQuery": "\"{query}\"-vel nem található felhasználó. Ellenőrizze nincs e elírás.",    "@noUsersFoundWithQuery": {
         "type": "String",        "placeholders": {
             "query": {
                 "type": "String"            }
@@ -1218,7 +1215,7 @@
                 "type": "String"            }
         }
     },
-    "incomingMessages": "Bejövő üzenetek",    "nothingFound": "Nincs találat...",    "select": "Kiválaszt",    "stickers": "Matricák",    "discover": "Felfedezés",    "groupName": "Csoport név",    "createGroupAndInviteUsers": "Hozzon létre egy csoportot és hívjon meg felhasználókat",    "groupCanBeFoundViaSearch": "A csoportokat kereséssel találhatja meg",    "verifyOtherUserDescription": "Ha megerősít egy másik felhasználót, akkor teljesen biztos lehet abban kivel cseveg. 💪\n\nA megerősítési folyamat kezdetekor megjelenik egy felugró ablak mindkettőjüknél. Ekkor egy hangulatjel vagy szám sor összehasonlítási folyamat veszi kezdetét.\n\nA legpraktikusabb módja ennek, hogy találkozzanak, vagy videó hívás során beszéljék meg. 👭",    "verifyOtherDeviceDescription": "Amikor egy másik eszközt hitelesít, az eszközök kulcsokat cserélnek egymás között, ezáltal növelve az összbiztonságot. 💪 Amikor megkezdődik a folyamat, mind a két eszközön megjelenik egy felugró üzenet. Hangulatjelek és számok sorozata fog megjelenni, amit össze tud hasonlítani a két eszközön. Érdemes tehát mind a két eszközt a közelben tartani. 🤳",    "accessAndVisibility": "Hozzáférés és láthatóság",    "accessAndVisibilityDescription": "Ki számára engedélyezett a csevegéshez való csatlakozás, és hogyan találhatja azt meg.",    "calls": "Hívások",    "hideInvalidOrUnknownMessageFormats": "Érvénytelen vagy ismeretlen üzenetformátum elrejtése",    "passwordRecoverySettings": "Jelszó-helyreállítási beállítások",    "noOneCanJoin": "Senki sem csatlakozhat",    "chatCanBeDiscoveredViaSearchOnServer": "Csevegés felfedezhető a {server} szerveren történő kereséssel",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "incomingMessages": "Bejövő üzenetek",    "nothingFound": "Nincs találat...",    "select": "Kiválaszt",    "stickers": "Matricák",    "discover": "Felfedezés",    "groupName": "Csoport név",    "createGroupAndInviteUsers": "Hozzon létre egy csoportot és hívjon meg felhasználókat",    "groupCanBeFoundViaSearch": "A csoportokat kereséssel találhatja meg",    "verifyOtherUserDescription": "Ha megerősít egy másik felhasználót, akkor teljesen biztos lehet abban kivel cseveg. 💪\n\nA megerősítési folyamat kezdetekor megjelenik egy felugró ablak mindkettőjüknél. Ekkor egy hangulatjel vagy szám sor összehasonlítási folyamat veszi kezdetét.\n\nA legpraktikusabb módja ennek, hogy találkozzanak, vagy videó hívás során beszéljék meg. 👭",    "verifyOtherDeviceDescription": "Amikor egy másik eszközt hitelesít, az eszközök kulcsokat cserélnek egymás között, ezáltal növelve az összbiztonságot. 💪 Amikor megkezdődik a folyamat, mind a két eszközön megjelenik egy felugró üzenet. Hangulatjelek és számok sorozata fog megjelenni, amit össze tud hasonlítani a két eszközön. Érdemes tehát mind a két eszközt a közelben tartani. 🤳",    "accessAndVisibility": "Hozzáférés és láthatóság",    "accessAndVisibilityDescription": "Ki számára engedélyezett a csevegéshez való csatlakozás, és hogyan találhatja azt meg.",    "hideInvalidOrUnknownMessageFormats": "Érvénytelen vagy ismeretlen üzenetformátum elrejtése",    "passwordRecoverySettings": "Jelszó-helyreállítási beállítások",    "noOneCanJoin": "Senki sem csatlakozhat",    "chatCanBeDiscoveredViaSearchOnServer": "Csevegés felfedezhető a {server} szerveren történő kereséssel",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

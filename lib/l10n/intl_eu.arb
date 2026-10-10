@@ -677,9 +677,6 @@
     "verifyTitle": "Beste kontua egiaztatzen",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Bideo-deia",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Txat-historiaren ikusgaitasuna",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -725,7 +722,7 @@
     "chats": "Txatak",    "@chats": {
         "type": "String",        "placeholders": {}
     },
-    "emojis": "Emojiak",    "placeCall": "Egin deia",    "voiceCall": "Ahozko deia",    "unsupportedAndroidVersion": "Android bertsioa ez da bateragarria",    "unsupportedAndroidVersionLong": "Funtzio honek Android bertsio berriago bat behar du. Egiaztatu eguneraketak ote dauden edo begiratu Lineage OS-ek zure gailuarentzat aukerarik eskaintzen duen.",    "commandHint_ban": "Debekatu erabiltzailea gela honetan",    "@commandHint_ban": {
+    "emojis": "Emojiak",    "unsupportedAndroidVersion": "Android bertsioa ez da bateragarria",    "unsupportedAndroidVersionLong": "Funtzio honek Android bertsio berriago bat behar du. Egiaztatu eguneraketak ote dauden edo begiratu Lineage OS-ek zure gailuarentzat aukerarik eskaintzen duen.",    "commandHint_ban": "Debekatu erabiltzailea gela honetan",    "@commandHint_ban": {
         "type": "String",        "description": "Usage hint for the command /ban"    },
     "commandHint_clearcache": "Ezabatu katxea",    "@commandHint_clearcache": {
         "type": "String",        "description": "Usage hint for the command /clearcache"    },
@@ -781,13 +778,13 @@
     "saveFile": "Gorde fitxategia",    "@saveFile": {
         "type": "String",        "placeholders": {}
     },
-    "videoCallsBetaWarning": "Kontuan izan bideo-deiak beta fasean daudela. Litekeena da behar bezala erabili ezin izatea —erabili ahal badira—.",    "all": "Guztia",    "@all": {
+    "all": "Guztia",    "@all": {
         "type": "String",        "placeholders": {}
     },
     "next": "Hurrengoa",    "@next": {
         "type": "String",        "placeholders": {}
     },
-    "experimentalVideoCalls": "Bideo-dei esperimentalak",    "removeFromBundle": "Kendu sorta honetatik",    "or": "Edo",    "@or": {
+    "removeFromBundle": "Kendu sorta honetatik",    "or": "Edo",    "@or": {
         "type": "String",        "placeholders": {}
     },
     "link": "Esteka",    "privacy": "Pribatutasuna",    "@privacy": {
@@ -1235,7 +1232,7 @@
     "thereAreCountUsersBlocked": "Une honetan {count} erabiltzaile daude blokeatuta.",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "appLockDescription": "Blokeatu aplikazioa pin kode batekin erabiltzen ari ez zarenean",    "accessAndVisibility": "Sarbidea eta ikusgaitasuna",    "accessAndVisibilityDescription": "Nork du txat honetara batzeko baimena eta nola aurkitu daiteke txata.",    "customEmojisAndStickers": "Emoji eta pegatina propioak",    "customEmojisAndStickersBody": "Gehitu edo partekatu edozein txatetan erabil daitezkeen emoji edo pegatina propioak.",    "hideRedactedMessages": "Ezkutatu atzera botatako mezuak",    "hideRedactedMessagesBody": "Norbaitek mezuren bat atzera botaz gero, mezua txatetik kenduko da, abisurik gabe.",    "hideInvalidOrUnknownMessageFormats": "Ezkutatu mezuen formatu ezezagun edo baliogabea",    "passwordRecoverySettings": "Pasahitza berreskuratzeko ezarpenak",    "globalChatId": "Txat ID orokorra",    "calls": "Deiak",    "noOneCanJoin": "Ezin da inor batu",    "publicChatAddresses": "Txataren helbide publikoak",    "createNewAddress": "Sortu helbide berria",    "files": "Fitxategiak",    "gallery": "Galeria",    "searchIn": "Bilatu {chat} txatean...",    "@searchIn": {
+    "appLockDescription": "Blokeatu aplikazioa pin kode batekin erabiltzen ari ez zarenean",    "accessAndVisibility": "Sarbidea eta ikusgaitasuna",    "accessAndVisibilityDescription": "Nork du txat honetara batzeko baimena eta nola aurkitu daiteke txata.",    "customEmojisAndStickers": "Emoji eta pegatina propioak",    "customEmojisAndStickersBody": "Gehitu edo partekatu edozein txatetan erabil daitezkeen emoji edo pegatina propioak.",    "hideRedactedMessages": "Ezkutatu atzera botatako mezuak",    "hideRedactedMessagesBody": "Norbaitek mezuren bat atzera botaz gero, mezua txatetik kenduko da, abisurik gabe.",    "hideInvalidOrUnknownMessageFormats": "Ezkutatu mezuen formatu ezezagun edo baliogabea",    "passwordRecoverySettings": "Pasahitza berreskuratzeko ezarpenak",    "globalChatId": "Txat ID orokorra",    "noOneCanJoin": "Ezin da inor batu",    "publicChatAddresses": "Txataren helbide publikoak",    "createNewAddress": "Sortu helbide berria",    "files": "Fitxategiak",    "gallery": "Galeria",    "searchIn": "Bilatu {chat} txatean...",    "@searchIn": {
         "type": "String",        "placeholders": {
             "chat": {
                 "type": "String"            }

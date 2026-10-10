@@ -24,24 +24,27 @@ abstract class AppConfig {
   static const double columnWidth = 360.0;
 
   static const String enablePushTutorial =
-      'https://fluffychat.im/faq/#push_without_google_services';
+      'https://ko-fi.com/post/How-can-I-get-Push-Notifications-without-Google-N7Q825URG6?fromEditor=true';
   static const String encryptionTutorial =
-      'https://fluffychat.im/faq/#how_to_use_end_to_end_encryption';
-  static const String startChatTutorial =
-      'https://fluffychat.im/faq/#how_do_i_find_other_users';
+      'https://ko-fi.com/post/How-to-use-end-to-end-encryption-in-FluffyChat-A5O725WDR5';
   static const String howDoIGetStickersTutorial =
-      'https://fluffy.chat/faq/#how_do_i_get_stickers';
-  static const String appId = 'de.jumikk.chat.JuMiKKChat';
-  static const String appOpenUrlScheme = 'de.jumikk.chat';
-  static const String appSsoUrlScheme = 'de.jumikk.accounts';
+      'https://ko-fi.com/post/How-to-add-a-sticker-pack-to-FluffyChat-N4N01OXATI';
+  static const String appId = 'im.fluffychat.app';
+  static const String appOpenUrlScheme = 'im.fluffychat';
+  static const String appSsoUrlScheme = 'im.fluffychat.auth';
+  // Identifies the notification activation callback on Windows. Never change!
+  static const String windowsNotificationGuid =
+      '4894dfda-c70a-4ebc-b139-acae55f3988d';
 
   static const String sourceCodeUrl =
       'https://github.com/krille-chan/fluffychat';
   static const String supportUrl =
       'https://github.com/krille-chan/fluffychat/issues';
   static const String changelogUrl = 'https://fluffychat.im/changelog/';
+  static const String latestReleaseApiUrl =
+      'https://api.github.com/repos/krille-chan/fluffychat/releases/latest';
   static const String helpUrl =
-      'https://fluffychat.im/faq/#how_can_i_support_fluffychat';
+      'https://ko-fi.com/post/How-can-I-support-FluffyChat-J2G325WE6I';
 
   static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
 
@@ -57,7 +60,14 @@ abstract class AppConfig {
     path: 'krille-chan/fluffychat/refs/heads/main/recommended_homeservers.json',
   );
 
+  static final Uri crashReportEndpoint = Uri(
+    scheme: 'https',
+    host: 'crash.fluffy.chat',
+  );
+
   static const String mainIsolatePortName = 'main_isolate';
   static const String pushIsolatePortName = 'push_isolate';
   static const String pushHelperCrashReportKey = 'push_helper_crash_report';
+
+  static const String vodozemacVersion = '0.8.1';
 }

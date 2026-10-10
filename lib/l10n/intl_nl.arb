@@ -290,7 +290,7 @@
                 "type": "String"            }
         }
     },
-    "countParticipants": "{count} personen",    "@countParticipants": {
+    "countParticipants": "{count, plural, =1{1 persoon} other{{count} personen}}",    "@countParticipants": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -394,7 +394,7 @@
     "encryptionNotEnabled": "Versleuteling is niet ingeschakeld",    "@encryptionNotEnabled": {
         "type": "String",        "placeholders": {}
     },
-    "endedTheCall": "{senderName} heeft het gesprek beëindigd",    "@endedTheCall": {
+    "endedTheCall": "{senderName} heeft de oproep beëindigd",    "@endedTheCall": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -499,7 +499,7 @@
                 "type": "String"            }
         }
     },
-    "isTyping": "is aan het typen…",    "@isTyping": {
+    "isTyping": "is aan het typen",    "@isTyping": {
         "type": "String",        "placeholders": {}
     },
     "joinedTheChat": "👋 {username} is toegetreden tot de chat",    "@joinedTheChat": {
@@ -667,7 +667,7 @@
     "or": "Of",    "@or": {
         "type": "String",        "placeholders": {}
     },
-    "participant": "Personen",    "@participant": {
+    "participant": "Deelnemer",    "@participant": {
         "type": "String",        "placeholders": {}
     },
     "passphraseOrKey": "wachtwoordzin of herstelsleutel",    "@passphraseOrKey": {
@@ -861,7 +861,7 @@
     "spaceName": "Spacenaam",    "@spaceName": {
         "type": "String",        "placeholders": {}
     },
-    "startedACall": "{senderName} heeft een gesprek gestart",    "@startedACall": {
+    "startedACall": "{senderName} heeft een oproep gestart",    "@startedACall": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -971,9 +971,6 @@
     "verifyTitle": "Ander account verifiëren",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Videogesprek",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Chatgeschiedenis zichtbaarheid",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Maak vast aan chat",    "emojis": "Emoji's",    "placeCall": "Bellen",    "unsupportedAndroidVersion": "Niet-ondersteunde Android-versie",    "unsupportedAndroidVersionLong": "Voor deze functie is een nieuwe Android-versie verplicht. Controleer je updates of Lineage OS-ondersteuning.",    "videoCallsBetaWarning": "Houd er rekening mee dat videogesprekken momenteel in bèta zijn. Ze werken misschien niet zoals je verwacht of werken niet op alle platformen.",    "voiceCall": "Spraakgesprek",    "confirmEventUnpin": "Weet je zeker dat je de gebeurtenis definitief wilt losmaken?",    "experimentalVideoCalls": "Videogesprekken (experimenteel)",    "youAcceptedTheInvitation": "👍 Je hebt de uitnodiging geaccepteerd",    "youRejectedTheInvitation": "Je hebt de uitnodiging afgewezen",    "youJoinedTheChat": "Je bent toegetreden tot de chat",    "youBannedUser": "Je hebt {user} verbannen",    "@youBannedUser": {
+    "pinMessage": "Maak vast aan chat",    "emojis": "Emoji's",    "unsupportedAndroidVersion": "Niet-ondersteunde Android-versie",    "unsupportedAndroidVersionLong": "Voor deze functie is een nieuwe Android-versie verplicht. Controleer je updates of Lineage OS-ondersteuning.",    "confirmEventUnpin": "Weet je zeker dat je de gebeurtenis definitief wilt losmaken?",    "youAcceptedTheInvitation": "👍 Je hebt de uitnodiging geaccepteerd",    "youRejectedTheInvitation": "Je hebt de uitnodiging afgewezen",    "youJoinedTheChat": "Je bent toegetreden tot de chat",    "youBannedUser": "Je hebt {user} verbannen",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1160,7 +1157,7 @@
                 "type": "String"            }
         }
     },
-    "learnMore": "Lees meer",    "roomUpgradeDescription": "De chat zal dan opnieuw gemaakt worden met de nieuwe kamerversie. Alle deelnemers worden geïnformeerd dat ze moeten overstappen naar de nieuwe chat. Je kan meer lezen over kamerversies op https://spec.matrix.org/latest/rooms/",    "pleaseEnterANumber": "Vul een getal in groter dan 0",    "kickUserDescription": "De persoon is verwijderd uit de chat, maar is niet verbannen. In publieke chats kan de persoon op elk moment opnieuw deelnemen.",    "joinSpace": "Toetreden tot de space",    "block": "Blokkeren",    "blockedUsers": "Geblokkeerde personen",    "searchChatsRooms": "Zoek #chats, @personen...",    "swipeRightToLeftToReply": "Veeg van rechts naar links om te reageren",    "calls": "Gesprekken",    "customEmojisAndStickers": "Aangepaste emoji's en stickers",    "accessAndVisibilityDescription": "Wie mag toetreden tot deze chat en hoe de chat ontdekt kan worden.",    "customEmojisAndStickersBody": "Voeg toe of deel aangepaste emoji's en stickers die in elke chat gebruikt kunnen worden.",    "hideRedactedMessages": "Verwijderde berichten verbergen",    "hideRedactedMessagesBody": "Als iemand een bericht verwijdert is dit bericht niet meer zichtbaar in de chat.",    "hideInvalidOrUnknownMessageFormats": "Ongeldige of onbekende berichtformaten verbergen",    "passwordRecoverySettings": "Wachtwoordherstel-instellingen",    "knock": "Klop",    "noOneCanJoin": "Niemand kan deelnemen",    "yourGlobalUserIdIs": "Je Matrix-ID is: ",    "appLockDescription": "Vergendel de app wanneer het niet gebruikt wordt met een pincode",    "globalChatId": "Globale chat ID",    "accessAndVisibility": "Toegang en zichtbaarheid",    "publicSpaces": "Publieke spaces",    "blockUsername": "Negeer inlognaam",    "publicChatAddresses": "Publieke chat adressen",    "createNewAddress": "Creëer nieuw adres",    "noMoreChatsFound": "Geen chats gevonden...",    "knocking": "Kloppen",    "space": "Space",    "unread": "Ongelezen",    "groupName": "Groepsnaam",    "changeGeneralChatSettings": "Algemene chat instellingen wijzigen",    "searchForUsers": "Zoek @personen...",    "searchMore": "Zoek meer...",    "groupCanBeFoundViaSearch": "Groep kan gevonden worden via zoeken",    "searchIn": "Zoek in chat \"{chat}\"...",    "@searchIn": {
+    "learnMore": "Lees meer",    "roomUpgradeDescription": "De chat zal dan opnieuw gemaakt worden met de nieuwe kamerversie. Alle deelnemers worden geïnformeerd dat ze moeten overstappen naar de nieuwe chat. Je kan meer lezen over kamerversies op https://spec.matrix.org/latest/rooms/",    "pleaseEnterANumber": "Vul een getal in groter dan 0",    "kickUserDescription": "De persoon is verwijderd uit de chat, maar is niet verbannen. In publieke chats kan de persoon op elk moment opnieuw deelnemen.",    "joinSpace": "Toetreden tot de space",    "block": "Blokkeren",    "blockedUsers": "Geblokkeerde personen",    "searchChatsRooms": "Zoek #chats, @personen...",    "swipeRightToLeftToReply": "Veeg van rechts naar links om te reageren",    "customEmojisAndStickers": "Aangepaste emoji's en stickers",    "accessAndVisibilityDescription": "Wie mag toetreden tot deze chat en hoe de chat ontdekt kan worden.",    "customEmojisAndStickersBody": "Voeg toe of deel aangepaste emoji's en stickers die in elke chat gebruikt kunnen worden.",    "hideRedactedMessages": "Verwijderde berichten verbergen",    "hideRedactedMessagesBody": "Als iemand een bericht verwijdert is dit bericht niet meer zichtbaar in de chat.",    "hideInvalidOrUnknownMessageFormats": "Ongeldige of onbekende berichtformaten verbergen",    "passwordRecoverySettings": "Wachtwoordherstel-instellingen",    "knock": "Klop",    "noOneCanJoin": "Niemand kan deelnemen",    "yourGlobalUserIdIs": "Je Matrix-ID is: ",    "appLockDescription": "Vergendel de app wanneer het niet gebruikt wordt met een pincode",    "globalChatId": "Globale chat ID",    "accessAndVisibility": "Toegang en zichtbaarheid",    "publicSpaces": "Publieke spaces",    "blockUsername": "Negeer inlognaam",    "publicChatAddresses": "Publieke chat adressen",    "createNewAddress": "Creëer nieuw adres",    "noMoreChatsFound": "Geen chats gevonden...",    "knocking": "Kloppen",    "space": "Space",    "unread": "Ongelezen",    "groupName": "Groepsnaam",    "changeGeneralChatSettings": "Algemene chat instellingen wijzigen",    "searchForUsers": "Zoek @personen...",    "searchMore": "Zoek meer...",    "groupCanBeFoundViaSearch": "Groep kan gevonden worden via zoeken",    "searchIn": "Zoek in chat \"{chat}\"...",    "@searchIn": {
         "type": "String",        "placeholders": {
             "chat": {
                 "type": "String"            }
@@ -1239,7 +1236,7 @@
                 "type": "String"            }
         }
     },
-    "sendTypingNotificationsDescription": "Andere deelnemers in de chat kunnen zien wanneer je een bericht aan het typen bent.",    "sendCanceled": "Versturen geannuleerd",    "opacity": "Doorzichtigheid:",    "verifyOtherUserDescription": "Als je een persoon verifieert ben je er zeker van dat je echt met haar contact hebt. 💪\n\nWanneer je een verificatie start ziet de persoon een popup in de app. Hier staat een serie van emoji's of getallen die je met elkaar moet vergelijken.\n\nDe beste manier om dit te doen is in persoon of met een videogesprek. 👭",    "changeTheVisibilityOfChatHistory": "Zichtbaarheid van de chat-geschiedenis wijzigen",    "sendRoomNotifications": "@room-meldingen versturen",    "noticeChatBackupDeviceVerification": "Opmerking: Als al je apparaten zijn verbonden met de chat back-up worden ze automatisch geverifieerd.",    "notificationRuleMemberEvent": "Chat-gebeurtenis uitschakelen",    "notificationRuleSuppressNotices": "Automatische berichten uitschakelen",    "setWallpaper": "Achtergrond instellen",    "oneOfYourDevicesIsNotVerified": "Een van jouw apparaten is niet geverifieerd",    "contactServerAdmin": "Contact opnemen met serverbeheerder",    "manageAccount": "Account beheren",    "noContactInformationProvided": "Server geeft geen geldige contactinformatie",    "waitingForServer": "Wachten op server...",    "generalNotificationSettings": "Algemene melding instellingen",    "notificationRuleInviteForMeDescription": "Stuur een melding wanneer je wordt uitgenodigd voor een chat.",    "notificationRuleSuppressNoticesDescription": "Meldingen van automatische accounts zoals bots uitschakelen.",    "notificationRuleInviteForMe": "Persoonlijke uitnodiging",    "inviteOtherUsers": "Personen voor deze chat uitnodigen",    "changeTheChatPermissions": "Chatrechten wijzigen",    "changeTheCanonicalRoomAlias": "Standaard publiek chat-adres wijzigen",    "blur": "Vervaag:",    "isReadyForKeyVerification": "{sender} is klaar voor de sleutelverificatie",    "@isReadyForKeyVerification": {
+    "sendTypingNotificationsDescription": "Andere deelnemers in de chat kunnen zien wanneer je een bericht aan het typen bent.",    "sendCanceled": "Versturen geannuleerd",    "opacity": "Doorzichtigheid:",    "verifyOtherUserDescription": "Als je een persoon verifieert ben je er zeker van dat je echt met haar contact hebt. 💪\n\nWanneer je een verificatie start ziet de persoon een popup in de app. Hier staat een serie van emoji's of getallen die je met elkaar moet vergelijken.\n\nDe beste manier om dit te doen is in persoon of met een video oproep. 👭",    "changeTheVisibilityOfChatHistory": "Zichtbaarheid van de chat-geschiedenis wijzigen",    "sendRoomNotifications": "@room-meldingen versturen",    "noticeChatBackupDeviceVerification": "Opmerking: Als al je apparaten zijn verbonden met de chat back-up worden ze automatisch geverifieerd.",    "notificationRuleMemberEvent": "Chat-gebeurtenis uitschakelen",    "notificationRuleSuppressNotices": "Automatische berichten uitschakelen",    "setWallpaper": "Achtergrond instellen",    "oneOfYourDevicesIsNotVerified": "Een van jouw apparaten is niet geverifieerd",    "contactServerAdmin": "Contact opnemen met serverbeheerder",    "manageAccount": "Account beheren",    "noContactInformationProvided": "Server geeft geen geldige contactinformatie",    "waitingForServer": "Wachten op server...",    "generalNotificationSettings": "Algemene melding instellingen",    "notificationRuleInviteForMeDescription": "Stuur een melding wanneer je wordt uitgenodigd voor een chat.",    "notificationRuleSuppressNoticesDescription": "Meldingen van automatische accounts zoals bots uitschakelen.",    "notificationRuleInviteForMe": "Persoonlijke uitnodiging",    "inviteOtherUsers": "Personen voor deze chat uitnodigen",    "changeTheChatPermissions": "Chatrechten wijzigen",    "changeTheCanonicalRoomAlias": "Standaard publiek chat-adres wijzigen",    "blur": "Vervaag:",    "isReadyForKeyVerification": "{sender} is klaar voor de sleutelverificatie",    "@isReadyForKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }
@@ -1457,5 +1454,74 @@
             "count": {
                 "type": "int"            }
         }
-    }
-}
+    },
+    "editImage": "Afbeelding wijzigen",    "@editImage": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateLeft": "Linksom draaien",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateRight": "Rechtsom draaien",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
+    },
+    "mirror": "Spiegelen",    "@mirror": {
+        "type": "String",        "placeholders": {}
+    },
+    "save": "Opslaan",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "draw": "Tekenen",    "@draw": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "Herstel",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "Ongedaan maken",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "eraser": "Gummen",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "Bijsnijden",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "loadingMessages": "Berichten laden...",    "buildDoesNotSupportFirebase": "Deze versie ondersteunt geen firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Niet in staat om het apparaat te registreren voor firebase cloud messaging.",    "unifiedPushDistributors": "Unified Push diensten:",    "accountsAndSettings": "Accounts en instellingen",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
+    "sendingFilesDoNotExit": "{count} bestanden sturen... Even geduld ajb!",    "@sendingFilesDoNotExit": {
+        "type": "String",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "compressingVideo": "Video comprimeren...",    "doubleTapToReact": "Dubbele tik om te reageren",    "doubleTapToReactDescription": "Dubbele tik op een bericht om te reageren of tekst te selecteren",    "doubleTapReaction": "Dubbele tik reactie",    "shareCrashReports": "Foutmeldingen delen",    "shareCrashReportsDescription": "Automatisch foutmeldingen delen met de ontwikkelaars?",    "countActiveCallMembers": "{count} actieve oproep deelnemers",    "@countActiveCallMembers": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "enterCall": "Oproep opnemen",    "videoCallsBetaWarning": "Video oproepen zijn een beta functie. Er zijn mogelijk fouten of onverwachte reacties. We horen graag je feedback.",    "noDevicesFound": "Geen apparaten gevonden",    "incomingCall": "Inkomende oproep",    "videoCall": "Video oproepen",    "voiceCall": "Spraakoproep",    "missedCall": "Oproep gemist",    "callBack": "Terugbellen",    "hangUp": "Ophangen",    "waitingForParticipant": "Wachten op deelnemer...",    "decline": "Weigeren",    "startCall": "Start een oproep",    "selectCamera": "Camera selecteren",    "selectMicrophone": "Microfoon selecteren",    "selectSpeaker": "Speaker selecteren",    "toggleMicrophone": "Microfoon aan/uit",    "toggleCamera": "Camera aan/uit",    "startScreensharing": "Schermdelen starten",    "stopScreensharing": "Schermdelen stoppen",    "raiseHand": "Hand opsteken",    "stopRaiseHand": "Hand omlaag",    "preferSpeaker": "Voorkeur aan speaker",    "unexpectedErrorOccurded": "Helaas is er een onverwachte fout opgetreden: {msg}",    "@unexpectedErrorOccurded": {
+        "placeholders": {
+            "msg": {
+                "type": "String"            }
+        }
+    },
+    "incomingCallFrom": "Inkomende oproep van {user}",    "@incomingCallFrom": {
+        "placeholders": {
+            "user": {
+                "type": "String"            }
+        }
+    },
+    "serverRespondedWithError": "De server heeft met een foute boodschap geantwoord: {error}",    "@serverRespondedWithError": {
+        "placeholders": {
+            "error": {
+                "type": "String"            }
+        }
+    },
+    "updateAvailable": "Update {version} beschikbaar",    "@updateAvailable": {
+        "type": "String",        "placeholders": {
+            "version": {
+                "type": "String"            }
+        }
+    },
+    "download": "Downloaden"}

@@ -396,7 +396,7 @@
     "emoteKeyboardNoRecents": "Izamulen uḥulfu yettwasqedcen melmi kan ad banen dagi…",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "globalChatId": "Asulay n udiwenni amatu",    "accessAndVisibility": "Addaf d twalit",    "accessAndVisibilityDescription": "Anwa i yesɛan turagt ad yernu ɣer udiwenni-agi u amek adiwenni yezmer ad yettwaf.",    "calls": "Isawalen",    "customEmojisAndStickers": "Imujiten yugnen akked tcṛeṭ n tesfift",    "customEmojisAndStickersBody": "Rnu neɣ bḍu imujiten yugnen neɣ tcṛeṭ n tesfift i zemren ad ttwasqedcen deg yal adiwenni.",    "emptyChat": "Adiwenni d ilem",    "@emptyChat": {
+    "globalChatId": "Asulay n udiwenni amatu",    "accessAndVisibility": "Addaf d twalit",    "accessAndVisibilityDescription": "Anwa i yesɛan turagt ad yernu ɣer udiwenni-agi u amek adiwenni yezmer ad yettwaf.",    "customEmojisAndStickers": "Imujiten yugnen akked tcṛeṭ n tesfift",    "customEmojisAndStickersBody": "Rnu neɣ bḍu imujiten yugnen neɣ tcṛeṭ n tesfift i zemren ad ttwasqedcen deg yal adiwenni.",    "emptyChat": "Adiwenni d ilem",    "@emptyChat": {
         "type": "String",        "placeholders": {}
     },
     "enableEmotesGlobally": "Sermed akemmus n uzamul uḥulfu s wudem amatu",    "@enableEmotesGlobally": {
@@ -560,9 +560,6 @@
     "verifyTitle": "Aselken n imiḍanen nniḍen",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Asiwel s tvidyut",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Tawalit n uzray n udiwenni",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -628,7 +625,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Senteḍ ɣer texxamt",    "confirmEventUnpin": "Tebɣiḍ ad tekkseḍ s wudem imezgi asenṭed n tadyant-nni?",    "emojis": "Imujiten",    "placeCall": "Sɛeddi Asiwel",    "voiceCall": "Asiwel n taɣect",    "removeAllOtherDevices": "Kkes akk ibenkan-nniḍen",    "@removeAllOtherDevices": {
+    "pinMessage": "Senteḍ ɣer texxamt",    "confirmEventUnpin": "Tebɣiḍ ad tekkseḍ s wudem imezgi asenṭed n tadyant-nni?",    "emojis": "Imujiten",    "removeAllOtherDevices": "Kkes akk ibenkan-nniḍen",    "@removeAllOtherDevices": {
         "type": "String",        "placeholders": {}
     },
     "unbanFromChat": "Kkes agdal seg udiwenni",    "@unbanFromChat": {
@@ -945,7 +942,7 @@
                 "type": "String"            }
         }
     },
-    "experimentalVideoCalls": "Isawalen uvidya s wudem armitan",    "newSpace": "Tallunt tamaynut",    "verifiedDevicesOnly": "Ibenkan yettwasneqden kan",    "optionalMessage": "(D afrayan) izen…",    "notSupportedOnThisDevice": "Ur itteddu ara deg yibenk-agi",    "approve": "Sqbel",    "enterNewChat": "Sekcem adiwenni amaynut",    "pleaseWaitUntilInvited": "Ttxil-k·m, rǧu arma yeɛreḍ-ik-id yiwen seg texxamt.",    "commandHint_logout": "Senser seg yibenk-ik·im amiran",    "commandHint_logoutall": "Senser akk ibenkan urmiden",    "displayNavigationRail": "Sken afeggag n yinig deg uziraz",    "customReaction": "Tasedmirt yugnen",    "backToMainChat": "Uɣal ɣer udiwenni agejdan",    "createSticker": "Snulfu-d ticṛeṭ n tesfift neɣ imujiten",    "useAsSticker": "Seqdec am tcṛeṭ n tesfift",    "useAsEmoji": "Seqdec am imujit",    "stickerPackNameAlreadyExists": "Isem ukemmus n tcṛeṭ n tesfift yella yakan",    "newStickerPack": "Akemmus n tcṛeṭ n tesfift",    "stickerPackName": "Isem ukemmus n tcṛeṭ n tesfift",    "skipChatBackup": "Zgel aḥraz n udiwenni",    "skipChatBackupWarning": "tetḥeqqeḍ? S war armad n weḥraz n udiwenni, tzemreḍ ad tesruḥeḍ anekcum ɣer yiznan-ik·im ma tbeddeleḍ ibenk-ik·im.",    "noMoreResultsFound": "Ulac ugar n igmaḍ yettwafen",    "clientWellKnownInformation": "Talɣut yettwasnen ɣef umsaɣ:",    "advancedConfigs": "Tawila leqqayen",    "advancedConfigurations": "Tawila tinaẓiyin",    "signUpGreeting": "JuMiKK-Chat d araslemmes! Fren aqeddac anda tebɣiḍ ad ternuḍ amiḍan-ik·im, u yyaw ad neddu!",    "signInGreeting": "Tesɛiḍ yakan amiḍan deg Matriks? Anṣuf yes-k·m tikkelt niḍen! Fren aqeddac-ik·im, u tkecmeḍ.",    "theProcessWasCanceled": "Tettwasefsex ukala-nni.",    "searchOrEnterHomeserverAddress": "Nadi neɣ sekcem tansa n uqeddac agejdan",    "setPowerLevel": "Sbadu aswir n tezmert",    "removeAdminRights": "Kkes izerfan n unedbal",    "powerLevel": "Aswir n tezmert",    "help": "Tallelt",    "@help": {
+    "newSpace": "Tallunt tamaynut",    "verifiedDevicesOnly": "Ibenkan yettwasneqden kan",    "optionalMessage": "(D afrayan) izen…",    "notSupportedOnThisDevice": "Ur itteddu ara deg yibenk-agi",    "approve": "Sqbel",    "enterNewChat": "Sekcem adiwenni amaynut",    "pleaseWaitUntilInvited": "Ttxil-k·m, rǧu arma yeɛreḍ-ik-id yiwen seg texxamt.",    "commandHint_logout": "Senser seg yibenk-ik·im amiran",    "commandHint_logoutall": "Senser akk ibenkan urmiden",    "displayNavigationRail": "Sken afeggag n yinig deg uziraz",    "customReaction": "Tasedmirt yugnen",    "backToMainChat": "Uɣal ɣer udiwenni agejdan",    "createSticker": "Snulfu-d ticṛeṭ n tesfift neɣ imujiten",    "useAsSticker": "Seqdec am tcṛeṭ n tesfift",    "useAsEmoji": "Seqdec am imujit",    "stickerPackNameAlreadyExists": "Isem ukemmus n tcṛeṭ n tesfift yella yakan",    "newStickerPack": "Akemmus n tcṛeṭ n tesfift",    "stickerPackName": "Isem ukemmus n tcṛeṭ n tesfift",    "skipChatBackup": "Zgel aḥraz n udiwenni",    "skipChatBackupWarning": "tetḥeqqeḍ? S war armad n weḥraz n udiwenni, tzemreḍ ad tesruḥeḍ anekcum ɣer yiznan-ik·im ma tbeddeleḍ ibenk-ik·im.",    "noMoreResultsFound": "Ulac ugar n igmaḍ yettwafen",    "clientWellKnownInformation": "Talɣut yettwasnen ɣef umsaɣ:",    "advancedConfigs": "Tawila leqqayen",    "advancedConfigurations": "Tawila tinaẓiyin",    "signUpGreeting": "JuMiKK-Chat d araslemmes! Fren aqeddac anda tebɣiḍ ad ternuḍ amiḍan-ik·im, u yyaw ad neddu!",    "signInGreeting": "Tesɛiḍ yakan amiḍan deg Matriks? Anṣuf yes-k·m tikkelt niḍen! Fren aqeddac-ik·im, u tkecmeḍ.",    "theProcessWasCanceled": "Tettwasefsex ukala-nni.",    "searchOrEnterHomeserverAddress": "Nadi neɣ sekcem tansa n uqeddac agejdan",    "setPowerLevel": "Sbadu aswir n tezmert",    "removeAdminRights": "Kkes izerfan n unedbal",    "powerLevel": "Aswir n tezmert",    "help": "Tallelt",    "@help": {
         "type": "String",        "placeholders": {}
     },
     "privacy": "Tabaḍnit",    "@privacy": {

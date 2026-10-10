@@ -47,7 +47,7 @@
     "archive": "アーカイブ",    "@archive": {
         "type": "String",        "placeholders": {}
     },
-    "areGuestsAllowedToJoin": "ゲストユーザーの参加を許可する",    "@areGuestsAllowedToJoin": {
+    "areGuestsAllowedToJoin": "ゲストユーザーの参加は許可されていますか？",    "@areGuestsAllowedToJoin": {
         "type": "String",        "placeholders": {}
     },
     "areYouSure": "これでよろしいですか？",    "@areYouSure": {
@@ -868,9 +868,6 @@
     "verifyTitle": "他のアカウントを確認中",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "音声通話",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "チャット履歴の表示",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -904,7 +901,7 @@
     "whoIsAllowedToJoinThisGroup": "誰がこのチャットに入れますか",    "@whoIsAllowedToJoinThisGroup": {
         "type": "String",        "placeholders": {}
     },
-    "whyDoYouWantToReportThis": "これを通報する理由",    "@whyDoYouWantToReportThis": {
+    "whyDoYouWantToReportThis": "なぜこれを報告したいのですか？",    "@whyDoYouWantToReportThis": {
         "type": "String",        "placeholders": {}
     },
     "withTheseAddressesRecoveryDescription": "これらのアドレスを使用すると、パスワードを回復することができます。",    "@withTheseAddressesRecoveryDescription": {
@@ -964,7 +961,7 @@
                 "type": "String"            }
         },
         "description": "State that {command} is not a valid /command."    },
-    "oneClientLoggedOut": "クライアントの 1つがログアウトしました",    "addAccount": "アカウントを追加",    "editBundlesForAccount": "このアカウントのバンドルを編集",    "unverified": "未検証",    "sender": "送信者",    "placeCall": "電話をかける",    "voiceCall": "音声通話",    "unsupportedAndroidVersionLong": "この機能を利用するには、より新しいAndroidのバージョンが必要です。アップデートまたはLineage OSのサポートをご確認ください。",    "dehydrateWarning": "この操作は元に戻せません。バックアップファイルを安全に保存してください。",    "dehydrate": "セッションのエクスポートとデバイスの消去",    "youBannedUser": "{user} を禁止しました",    "@youBannedUser": {
+    "oneClientLoggedOut": "クライアントの 1つがログアウトしました",    "addAccount": "アカウントを追加",    "editBundlesForAccount": "このアカウントのバンドルを編集",    "unverified": "未検証",    "sender": "送信者",    "unsupportedAndroidVersionLong": "この機能を利用するには、より新しいAndroidのバージョンが必要です。アップデートまたはLineage OSのサポートをご確認ください。",    "dehydrateWarning": "この操作は元に戻せません。バックアップファイルを安全に保存してください。",    "dehydrate": "セッションのエクスポートとデバイスの消去",    "youBannedUser": "{user} を禁止しました",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1002,7 +999,7 @@
     "spaceName": "スペース名",    "@spaceName": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "メッセージの情報",    "openGallery": "ギャラリーを開く",    "removeFromSpace": "スペースから削除",    "experimentalVideoCalls": "実験的なビデオ通話",    "youAcceptedTheInvitation": "👍 招待を承諾しました",    "youUnbannedUser": "{user} の禁止を解除しました",    "@youUnbannedUser": {
+    "messageInfo": "メッセージの情報",    "openGallery": "ギャラリーを開く",    "removeFromSpace": "スペースから削除",    "youAcceptedTheInvitation": "👍 招待を承諾しました",    "youUnbannedUser": "{user} の禁止を解除しました",    "@youUnbannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1032,10 +1029,10 @@
                 "type": "int"            }
         }
     },
-    "storeSecurlyOnThisDevice": "このデバイスに安全に保管する",    "whyIsThisMessageEncrypted": "このメッセージが読めない理由",    "synchronizingPleaseWait": "同期中...お待ちください。",    "@synchronizingPleaseWait": {
+    "storeSecurlyOnThisDevice": "このデバイスに安全に保管する",    "whyIsThisMessageEncrypted": "なぜこのメッセージは読めないのですか？",    "synchronizingPleaseWait": "同期中...お待ちください。",    "@synchronizingPleaseWait": {
         "type": "String",        "placeholders": {}
     },
-    "emojis": "絵文字",    "markAsRead": "既読にする",    "videoCallsBetaWarning": "ビデオ通話は、現在ベータ版であることにご注意ください。すべてのプラットフォームで期待通りに動作しない、あるいはまったく動作しない可能性があります。",    "confirmEventUnpin": "イベントの固定を完全に解除してもよろしいですか？",    "unsupportedAndroidVersion": "サポートされていないAndroidのバージョン",    "user": "ユーザー",    "noBackupWarning": "警告！チャットのバックアップを有効にしないと、暗号化されたメッセージにアクセスできなくなります。ログアウトする前に、まずチャットのバックアップを有効にすることを強くお勧めします。",    "disableEncryptionWarning": "セキュリティ上の理由から、以前は暗号化が有効だったチャットで暗号化を無効にすることはできません。",    "youInvitedUser": "📩 {user} を招待しました",    "@youInvitedUser": {
+    "emojis": "絵文字",    "markAsRead": "既読にする",    "confirmEventUnpin": "イベントの固定を完全に解除してもよろしいですか？",    "unsupportedAndroidVersion": "サポートされていないAndroidのバージョン",    "user": "ユーザー",    "noBackupWarning": "警告！チャットのバックアップを有効にしないと、暗号化されたメッセージにアクセスできなくなります。ログアウトする前に、まずチャットのバックアップを有効にすることを強くお勧めします。",    "disableEncryptionWarning": "セキュリティ上の理由から、以前は暗号化が有効だったチャットで暗号化を無効にすることはできません。",    "youInvitedUser": "📩 {user} を招待しました",    "@youInvitedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1090,7 +1087,7 @@
                 "type": "String"            }
         }
     },
-    "doNotShowAgain": "今後表示しない",    "newSpace": "新しいスペース",    "reopenChat": "チャットを再開する",    "notAnImage": "画像ファイルではありません。",    "aboutHomeserver": "{homeserver} について",    "@aboutHomeserver": {
+    "doNotShowAgain": "今後表示しない",    "newSpace": "新規スペース",    "reopenChat": "チャットを再開する",    "notAnImage": "画像ファイルではありません。",    "aboutHomeserver": "{homeserver} について",    "@aboutHomeserver": {
         "type": "String",        "placeholders": {
             "homeserver": {
                 "type": "String"            }
@@ -1107,7 +1104,7 @@
     "createGroup": "グループを作成する",    "emoteKeyboardNoRecents": "最近使われた絵文字がここに表示されます…",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "globalChatId": "グローバルチャットID",    "calls": "通話",    "chatDescription": "チャットの説明",    "chatDescriptionHasBeenChanged": "チャットの説明が変更された",    "block": "ブロック",    "blockedUsers": "ブロック済みのユーザー",    "blockUsername": "ユーザー名を無視する",    "noChatDescriptionYet": "チャットの説明はまだ作成されていません。",    "tryAgain": "再試行",    "messagesStyle": "メッセージ:",    "shareInviteLink": "招待リンクを共有",    "openInMaps": "マップで開く",    "@openInMaps": {
+    "globalChatId": "グローバルチャットID",    "chatDescription": "チャットの説明",    "chatDescriptionHasBeenChanged": "チャットの説明が変更された",    "block": "ブロック",    "blockedUsers": "ブロック済みのユーザー",    "blockUsername": "ユーザー名を無視する",    "noChatDescriptionYet": "チャットの説明はまだ作成されていません。",    "tryAgain": "再試行",    "messagesStyle": "メッセージ:",    "shareInviteLink": "招待リンクを共有",    "openInMaps": "マップで開く",    "@openInMaps": {
         "type": "String",        "placeholders": {}
     },
     "redactedBy": "{username}によって削除済み",    "@redactedBy": {
@@ -1212,4 +1209,40 @@
                 "type": "String"            }
         }
     },
-    "open": "開く",    "waitingForServer": "サーバーを待機中…",    "newChatRequest": "📩 新しいチャットを要求",    "contentNotificationSettings": "コンテンツ通知設定",    "generalNotificationSettings": "全体通知設定",    "roomNotificationSettings": "部屋通知設定",    "userSpecificNotificationSettings": "ユーザー毎の通知設定",    "otherNotificationSettings": "その他の通知設定",    "notificationRuleContainsUserName": "ユーザー名を含む",    "notificationRuleContainsUserNameDescription": "ユーザー名がメッセージに含まれる場合に通知します。",    "notificationRuleMaster": "すべての通知をミュート",    "notificationRuleSuppressNotices": "自動化されたメッセージを控える",    "notificationRuleSuppressNoticesDescription": "Botのような自動化されたクライアントからの通知を抑制します。",    "notificationRuleInviteForMeDescription": "ユーザーが部屋に招待されたときに通知します。",    "notificationRuleMasterDescription": "全ルールを上書きして通知をすべて無効にします。",    "notificationRuleIsUserMention": "ユーザーの言及",    "notificationRuleIsUserMentionDescription": "ユーザーがメッセージ内で直接言及されたときに通知します。",    "join": "参加",    "today": "今日",    "yesterday": "昨日",    "replyInThread": "スレッドで返信",    "select": "選択"}
+    "open": "開く",    "waitingForServer": "サーバーを待機中…",    "newChatRequest": "📩 新しいチャットを要求",    "contentNotificationSettings": "コンテンツ通知設定",    "generalNotificationSettings": "全体通知設定",    "roomNotificationSettings": "部屋通知設定",    "userSpecificNotificationSettings": "ユーザー毎の通知設定",    "otherNotificationSettings": "その他の通知設定",    "notificationRuleContainsUserName": "ユーザー名を含む",    "notificationRuleContainsUserNameDescription": "ユーザー名がメッセージに含まれる場合に通知します。",    "notificationRuleMaster": "すべての通知をミュート",    "notificationRuleSuppressNotices": "自動化されたメッセージを控える",    "notificationRuleSuppressNoticesDescription": "Botのような自動化されたクライアントからの通知を抑制します。",    "notificationRuleInviteForMeDescription": "ユーザーが部屋に招待されたときに通知します。",    "notificationRuleMasterDescription": "全ルールを上書きして通知をすべて無効にします。",    "notificationRuleIsUserMention": "ユーザーの言及",    "notificationRuleIsUserMentionDescription": "ユーザーがメッセージ内で直接言及されたときに通知します。",    "join": "参加",    "today": "今日",    "yesterday": "昨日",    "replyInThread": "スレッドで返信",    "select": "選択",    "save": "保存",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "取り消し",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "クリア",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "切り抜き",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "discardEdits": "保存されていない変更があります。編集内容を破棄しますか？",    "@discardEdits": {
+        "type": "String",        "placeholders": {}
+    },
+    "wrongRecoveryKey": "申し訳ありません。これは正しい回復キーではないようです。",    "passwordsDoNotMatch": "パスワードが一致しません",    "joinSpace": "スペースに参加する",    "gallery": "ギャラリー",    "files": "ファイル",    "stickers": "ステッカー",    "doesNotSeemToBeAValidHomeserver": "互換性のあるホームサーバーではないようです。正しいURLですか？",    "contactServerAdmin": "サーバー管理者に連絡",    "notificationRuleMessage": "メッセージ",    "allDevices": "すべてのデバイス",    "startPoll": "投票を開始する",    "endPoll": "投票を終了する",    "thread": "スレッド",    "backToMainChat": "メインチャットに戻る",    "saveChanges": "変更を保存",    "theProcessWasCanceled": "処理はキャンセルされました。",    "searchOrEnterHomeserverAddress": "ホームサーバーのアドレスを検索、または入力する",    "tagName": "タグ名",    "createNewTag": "新規タグ",    "showThumbnailsInTimeline": "画像と動画のサムネイルを表示",    "addTag": "タグを追加",    "removeTag": "タグを削除",    "encryptedMessage": "暗号化されたメッセージ",    "unencryptedMessage": "暗号化されていないメッセージ",    "resetAccount": "アカウントをリセット",    "@resetAccount": {
+        "type": "String",        "placeholders": {}
+    },
+    "openFile": "ファイルを開く",    "@openFile": {
+        "type": "String",        "placeholders": {}
+    },
+    "newPassphrase": "新しいパスフレーズ",    "@newPassphrase": {
+        "type": "String",        "placeholders": {}
+    },
+    "repeatPassphrase": "パスフレーズの再入力",    "@repeatPassphrase": {
+        "type": "String",        "placeholders": {}
+    },
+    "saveAsFile": "ファイルを保存",    "@saveAsFile": {
+        "type": "String",        "placeholders": {}
+    },
+    "youAreReadyToStart": "準備完了です！",    "messageNotDecryptable": "メッセージを復号できません",    "sending": "送信中",    "generatingThumbnail": "サムネイル生成中",    "encrypting": "暗号化しています",    "uploading": "アップロード中",    "edited": "（編集済）",    "couldNotBeSent": "送信できませんでした",    "resetRecoveryKey": "回復キーのリセット",    "enableBiometrics": "生体認証を有効にする",    "disableBiometrics": "生体認証を無効にする",    "unlockWithBiometrics": "生体認証でロック解除",    "loadingMessages": "メッセージを読み込み中...",    "noDevicesFound": "デバイスが見つかりません",    "incomingCall": "着信",    "videoCall": "ビデオ通話",    "voiceCall": "音声通話",    "missedCall": "不在着信",    "callBack": "かけ直す",    "startCall": "通話開始",    "selectCamera": "カメラを選択",    "selectMicrophone": "マイクを選択",    "selectSpeaker": "スピーカーを選択",    "raiseHand": "挙手する",    "videoCallsBetaWarning": "ビデオ通話はベータ版の機能です。不具合や予期しない動作を生じる可能性があります。フィードバックをお待ちしております。",    "eraser": "消しゴム",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "accountsAndSettings": "アカウントと設定",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
+    "compressingVideo": "動画を圧縮しています...",    "newSpaceDescription": "スペースを使えば、チャットを集約し、プライベートまたはパブリックなコミュニティを作成できます。",    "report": "レポート",    "signIn": "ログイン",    "createNewAccount": "アカウントを作成",    "signUpGreeting": "JuMiKK-Chatは分散型です！アカウントを作成したいサーバーを選択して、さあ始めましょう！",    "sendReadReceipts": "既読通知を送信"}

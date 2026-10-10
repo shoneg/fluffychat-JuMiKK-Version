@@ -971,9 +971,6 @@
     "verifyTitle": "Verificando outra conta",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Chamada de vídeo",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Visibilidade do histórico da conversa",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1039,7 +1036,7 @@
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
     "commandHint_dm": "Iniciar uma conversa direta\nUse --no-encryption para desativar a criptografia",    "@commandHint_dm": {
         "type": "String",        "description": "Usage hint for the command /dm"    },
-    "scanQrCode": "Ler código QR",    "addToBundle": "Adicionar à coleção",    "removeFromBundle": "Remover desta coleção",    "bundleName": "Nome da coleção",    "time": "Horário",    "openGallery": "Abrir galeria",    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuário",    "emojis": "Emojis",    "placeCall": "Chamar",    "reactedWith": "{sender} reagiu com {reaction}",    "@reactedWith": {
+    "scanQrCode": "Ler código QR",    "addToBundle": "Adicionar à coleção",    "removeFromBundle": "Remover desta coleção",    "bundleName": "Nome da coleção",    "time": "Horário",    "openGallery": "Abrir galeria",    "markAsRead": "Marcar como lido",    "reportUser": "Denunciar usuário",    "emojis": "Emojis",    "reactedWith": "{sender} reagiu com {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "confirmEventUnpin": "Tem certeza que quer desafixar o evento permanentemente?",    "pinMessage": "Fixar na sala",    "voiceCall": "Chamada de voz",    "unsupportedAndroidVersion": "Versão Android sem suporte",    "unsupportedAndroidVersionLong": "Esta funcionalidade requer uma versão mais nova do Android. Verifique se há atualizações ou suporte ao LineageOS.",    "videoCallsBetaWarning": "Observe que chamadas de vídeo estão atualmente em teste. Podem não funcionar como esperado ou sequer funcionar em algumas plataformas.",    "experimentalVideoCalls": "Vídeo chamadas experimentais",    "youRejectedTheInvitation": "Você rejeitou o convite",    "youBannedUser": "Você baniu {user}",    "@youBannedUser": {
+    "confirmEventUnpin": "Tem certeza que quer desafixar o evento permanentemente?",    "pinMessage": "Fixar na sala",    "unsupportedAndroidVersion": "Versão Android sem suporte",    "unsupportedAndroidVersionLong": "Esta funcionalidade requer uma versão mais nova do Android. Verifique se há atualizações ou suporte ao LineageOS.",    "youRejectedTheInvitation": "Você rejeitou o convite",    "youBannedUser": "Você baniu {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1226,7 +1223,7 @@
                 "type": "String"            }
         }
     },
-    "appLockDescription": "Bloquear o app com um código PIN quando não estiver usando",    "accessAndVisibilityDescription": "Quem pode entrar nesta conversa e como a conversa pode ser descoberta.",    "calls": "Chamadas",    "customEmojisAndStickers": "Emojis e stickers customizados",    "customEmojisAndStickersBody": "Adicionar ou compartilhar emojis ou stickers customizados que podem ser usados em qualquer conversa.",    "hideRedactedMessages": "Ocultar mensagens apagadas",    "hideRedactedMessagesBody": "Se alguém apagar uma mensagem, esta mensagem não será mais visível na conversa.",    "hideInvalidOrUnknownMessageFormats": "Ocultar formatos de mensagem inválidos ou desconhecidos",    "usersMustKnock": "Usuários devem bater na porta",    "noOneCanJoin": "Ninguém pode entrar",    "knocking": "Batendo na porta",    "chatCanBeDiscoveredViaSearchOnServer": "A conversa pode ser descoberta por pesquisa em {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "appLockDescription": "Bloquear o app com um código PIN quando não estiver usando",    "accessAndVisibilityDescription": "Quem pode entrar nesta conversa e como a conversa pode ser descoberta.",    "customEmojisAndStickers": "Emojis e stickers customizados",    "customEmojisAndStickersBody": "Adicionar ou compartilhar emojis ou stickers customizados que podem ser usados em qualquer conversa.",    "hideRedactedMessages": "Ocultar mensagens apagadas",    "hideRedactedMessagesBody": "Se alguém apagar uma mensagem, esta mensagem não será mais visível na conversa.",    "hideInvalidOrUnknownMessageFormats": "Ocultar formatos de mensagem inválidos ou desconhecidos",    "usersMustKnock": "Usuários devem bater na porta",    "noOneCanJoin": "Ninguém pode entrar",    "knocking": "Batendo na porta",    "chatCanBeDiscoveredViaSearchOnServer": "A conversa pode ser descoberta por pesquisa em {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

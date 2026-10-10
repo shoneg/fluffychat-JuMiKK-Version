@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/widgets/adaptive_dialogs/dialog_text_field.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../data/environment_constants.dart';
 import '../utils/fluffy_chat_tester.dart';
@@ -57,6 +57,9 @@ extension on FluffyChatTester {
     await enterText(TextField, passphrase1, index: 0);
     await enterText(TextField, passphrase1, index: 1);
     await tapOn('Continue', pumpAndSettle: false);
+    await waitFor('Please enter your password');
+    await enterText(DialogTextField, user1Pw, pumpAndSettle: false);
+    await tapOn('Ok');
     await waitFor('You are ready to start!');
     await tapOn('Continue');
     AuthFlows.userPassphrases[user1Name] = passphrase1;

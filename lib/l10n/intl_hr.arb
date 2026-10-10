@@ -47,7 +47,7 @@
     "archive": "Arhiv",    "@archive": {
         "type": "String",        "placeholders": {}
     },
-    "areGuestsAllowedToJoin": "Smiju li se gosti pridružiti",    "@areGuestsAllowedToJoin": {
+    "areGuestsAllowedToJoin": "Smiju li se gosti pridružiti?",    "@areGuestsAllowedToJoin": {
         "type": "String",        "placeholders": {}
     },
     "areYouSure": "Stvarno to želiš?",    "@areYouSure": {
@@ -287,7 +287,7 @@
                 "type": "String"            }
         }
     },
-    "countParticipants": "Broj sudionika: {count}",    "@countParticipants": {
+    "countParticipants": "{count, plural, =1{1 sudionik} few{{count} sudionika} other{{count} sudionika}}",    "@countParticipants": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -936,9 +936,6 @@
     "verifyTitle": "Potvrđivanje drugog računa",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Video poziv",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Vidljivost povijesti chata",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1056,7 +1053,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Prikvači na sobu",    "confirmEventUnpin": "Stvarno želiš trajno otkvačiti događaj?",    "voiceCall": "Glasovni poziv",    "placeCall": "Nazovi",    "videoCallsBetaWarning": "Napominjemo da se funkcija videopoziva trenutačno nalazi u beta stanju. Možda neće raditi ispravno ili uopće neće raditi na svim platformama.",    "experimentalVideoCalls": "Eksperimentalni videopozivi",    "youRejectedTheInvitation": "Odbio/la si poziv",    "youJoinedTheChat": "Pridružio/la si se chatu",    "youAcceptedTheInvitation": "👍 Prihvatio/la si poziv",    "youHaveWithdrawnTheInvitationFor": "Povukao/la si poziv za korisnika {user}",    "@youHaveWithdrawnTheInvitationFor": {
+    "pinMessage": "Prikvači na sobu",    "confirmEventUnpin": "Stvarno želiš trajno otkvačiti događaj?",    "youRejectedTheInvitation": "Odbio/la si poziv",    "youJoinedTheChat": "Pridružio/la si se chatu",    "youAcceptedTheInvitation": "👍 Prihvatio/la si poziv",    "youHaveWithdrawnTheInvitationFor": "Povukao/la si poziv za korisnika {user}",    "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1145,7 +1142,7 @@
     "redactMessageDescription": "Poruka će se redigirati za sve sudionike u ovoj konverzaciji. To je nepovratna radnja.",    "inviteGroupChat": "📨 Pozivnica u grupni chat",    "noChatDescriptionYet": "Opis chata još nije stvoren.",    "chatDescriptionHasBeenChanged": "Opis chata je promijenjen",    "shareInviteLink": "Dijeli poveznicu za poziv",    "emoteKeyboardNoRecents": "Ovdje će se pojaviti nedavno korišteni emotikoni …",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "createGroup": "Stvori grupu",    "invite": "Pozovi",    "invalidInput": "Neispravan unos!",    "wrongPinEntered": "Unesen je pogrešan PIN! Pokušaj ponovo za {seconds} sekunde …",    "@wrongPinEntered": {
+    "createGroup": "Stvori grupu",    "invite": "Pozovi",    "invalidInput": "Neispravan unos!",    "wrongPinEntered": "Unesen je pogrešan PIN! Pokušaj ponovo za {seconds} s …",    "@wrongPinEntered": {
         "type": "String",        "placeholders": {
             "seconds": {
                 "type": "int"            }
@@ -1157,7 +1154,7 @@
                 "type": "String"            }
         }
     },
-    "pleaseEnterANumber": "Upiši broj veći od 0",    "pushNotificationsNotAvailable": "Automatsko slanje obavijesti nije dostupno",    "learnMore": "Saznaj više",    "createGroupAndInviteUsers": "Stvori grupu i pozovi korisnike",    "blockedUsers": "Blokirani korisnici",    "groupCanBeFoundViaSearch": "Grupa se može pronaći putem pretrage",    "block": "Blokiraj",    "yourGlobalUserIdIs": "Tvoj globalni korisnički ID je: ",    "commandHint_sendraw": "Pošalji neobrađeni json",    "wrongRecoveryKey": "Oprosti … čini se da ovo nije ispravan ključ za obnavljanje.",    "blockUsername": "Zanemari korisničko ime",    "groupName": "Ime grupe",    "databaseMigrationTitle": "Baza podataka je optimirana",    "searchChatsRooms": "Traži #chats, @users …",    "databaseMigrationBody": "Pričekaj. Ovo može potrajati.",    "formattedMessages": "Formatirane poruke",    "incomingMessages": "Dolazne poruke",    "passwordsDoNotMatch": "Lozinke se ne poklapaju",    "accessAndVisibility": "Pristup i vidljivost",    "calls": "Pozivi",    "customEmojisAndStickers": "Prilagođeni emojiji i naljepnice",    "customEmojisAndStickersBody": "Dodaj ili dijeli prilagođene emojije ili naljepnice koje se mogu koristiti u bilo kojem chatu.",    "accessAndVisibilityDescription": "Tko se smije pridružiti ovom chatu i kako se chat može otkriti.",    "stickers": "Naljepnice",    "discover": "Otkrij",    "formattedMessagesDescription": "Prikaži formatirani sadržaj poruke poput podebljanog teksta koristeći markdown.",    "nothingFound": "Ništa nije pronađeno...",    "select": "Odaberi",    "newPassword": "Nova lozinka",    "unbanUserDescription": "Korisnik će se ponovo moći pridružiti chatu ako pokuša.",    "publicSpaces": "Javni prostori",    "thisDevice": "Ovaj uređaj:",    "pleaseEnterYourCurrentPassword": "Upiši svoju trenutačnu lozinku",    "passwordIsWrong": "Tvoja upisana lozinka je kriva",    "initAppError": "Dogodila se greška prilikom inicijaliziranja aplikacije",    "hideRedactedMessagesBody": "Ako netko redigira poruku, ta poruka više neće biti vidljiva u chatu.",    "kickUserDescription": "Korisnik je izbačen iz chata, ali nije isključen. U javnim chatovima se korisnik može ponovo pridružiti u bilo kojem trenutku.",    "addChatOrSubSpace": "Dodaj chat ili podpodručje",    "appLockDescription": "Zaključaj aplikaciju kada je ne koristiš s PIN kodom",    "globalChatId": "Globalni ID chata",    "hideRedactedMessages": "Sakrij redigirane poruke",    "hideInvalidOrUnknownMessageFormats": "Sakrij nevažeće ili nepoznate formate poruka",    "passwordRecoverySettings": "Postavke za obnavljanje lozinke",    "usersMustKnock": "Korisnici moraju pokucati",    "noOneCanJoin": "Nitko se ne može pridružiti",    "knock": "Pokucaj",    "knocking": "Kucanje",    "chatCanBeDiscoveredViaSearchOnServer": "Chat se može otkriti pretraživanjem servera {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "pleaseEnterANumber": "Upiši broj veći od 0",    "pushNotificationsNotAvailable": "Automatsko slanje obavijesti nije dostupno",    "learnMore": "Saznaj više",    "createGroupAndInviteUsers": "Stvori grupu i pozovi korisnike",    "blockedUsers": "Blokirani korisnici",    "groupCanBeFoundViaSearch": "Grupa se može pronaći putem pretrage",    "block": "Blokiraj",    "yourGlobalUserIdIs": "Tvoj globalni korisnički ID je: ",    "commandHint_sendraw": "Pošalji neobrađeni json",    "wrongRecoveryKey": "Oprosti … čini se da ovo nije ispravan ključ za obnavljanje.",    "blockUsername": "Zanemari korisničko ime",    "groupName": "Ime grupe",    "databaseMigrationTitle": "Baza podataka je optimirana",    "searchChatsRooms": "Traži #chats, @users …",    "databaseMigrationBody": "Pričekaj. Ovo može potrajati.",    "formattedMessages": "Formatirane poruke",    "incomingMessages": "Dolazne poruke",    "passwordsDoNotMatch": "Lozinke se ne poklapaju",    "accessAndVisibility": "Pristup i vidljivost",    "customEmojisAndStickers": "Prilagođeni emojiji i naljepnice",    "customEmojisAndStickersBody": "Dodaj ili dijeli prilagođene emojije ili naljepnice koje se mogu koristiti u bilo kojem chatu.",    "accessAndVisibilityDescription": "Tko se smije pridružiti ovom chatu i kako se chat može otkriti.",    "stickers": "Naljepnice",    "discover": "Otkrij",    "formattedMessagesDescription": "Prikaži formatirani sadržaj poruke poput podebljanog teksta koristeći markdown.",    "nothingFound": "Ništa nije pronađeno...",    "select": "Odaberi",    "newPassword": "Nova lozinka",    "unbanUserDescription": "Korisnik će se ponovo moći pridružiti chatu ako pokuša.",    "publicSpaces": "Javni prostori",    "thisDevice": "Ovaj uređaj:",    "pleaseEnterYourCurrentPassword": "Upiši svoju trenutačnu lozinku",    "passwordIsWrong": "Tvoja upisana lozinka je kriva",    "initAppError": "Dogodila se greška prilikom inicijaliziranja aplikacije",    "hideRedactedMessagesBody": "Ako netko redigira poruku, ta poruka više neće biti vidljiva u chatu.",    "kickUserDescription": "Korisnik je izbačen iz chata, ali nije isključen. U javnim chatovima se korisnik može ponovo pridružiti u bilo kojem trenutku.",    "addChatOrSubSpace": "Dodaj chat ili podpodručje",    "appLockDescription": "Kada je ne koristiš, zaključaj aplikaciju s PIN kodom",    "globalChatId": "Globalni ID chata",    "hideRedactedMessages": "Sakrij redigirane poruke",    "hideInvalidOrUnknownMessageFormats": "Sakrij nevažeće ili nepoznate formate poruka",    "passwordRecoverySettings": "Postavke za obnavljanje lozinke",    "usersMustKnock": "Korisnici moraju pokucati",    "noOneCanJoin": "Nitko se ne može pridružiti",    "knock": "Pokucaj",    "knocking": "Kucanje",    "chatCanBeDiscoveredViaSearchOnServer": "Chat se može otkriti pretraživanjem servera {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1354,6 +1351,4 @@
                 "type": "String"            }
         }
     },
-    "logs": "Zapisi",    "advancedConfigs": "Napredne konfiguracije",    "advancedConfigurations": "Napredne konfiguracije",    "@mute": {
-        "description": "This should be a very short string because there is not much space in the button!"    }
-}
+    "logs": "Zapisi",    "advancedConfigs": "Napredne konfiguracije",    "advancedConfigurations": "Napredne konfiguracije",    "matrixId": "Matrix ID"}

@@ -387,7 +387,7 @@
     "directChats": "Shaxsiy suhbatlar",    "@directChats": {
         "type": "String",        "placeholders": {}
     },
-    "globalChatId": "Ommaviy suhbat IDʼsi",    "accessAndVisibility": "Kirish va koʻrinish",    "accessAndVisibilityDescription": "Bu suhbatga kim qoʻshilishi mumkin va suhbatni qanday topish mumkin.",    "calls": "Qoʻngʻiroqlar",    "customEmojisAndStickers": "Maxsus emojilar va stikerlar",    "customEmojisAndStickersBody": "Istalgan suhbatda ishlatilishi mumkin boʻlgan maxsus emojilar yoki stikerlarni qoʻshing yoki ulashing.",    "emoteShortcode": "Emote qisqa kodi",    "@emoteShortcode": {
+    "globalChatId": "Ommaviy suhbat IDʼsi",    "accessAndVisibility": "Kirish va koʻrinish",    "accessAndVisibilityDescription": "Bu suhbatga kim qoʻshilishi mumkin va suhbatni qanday topish mumkin.",    "customEmojisAndStickers": "Maxsus emojilar va stikerlar",    "customEmojisAndStickersBody": "Istalgan suhbatda ishlatilishi mumkin boʻlgan maxsus emojilar yoki stikerlarni qoʻshing yoki ulashing.",    "emoteShortcode": "Emote qisqa kodi",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
     "emptyChat": "Boʻsh suhbat",    "@emptyChat": {
@@ -1032,9 +1032,6 @@
     "verifyTitle": "Boshqa hisob tasdiqlanmoqda",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Video chaqiruv",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Suhbat tarixining ko‘rinishi",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1138,7 +1135,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Xonaga mahkamlash",    "confirmEventUnpin": "Tadbirni butunlay olib tashlashga ishonchingiz komilmi?",    "placeCall": "Qoʻngʻiroq qilish",    "voiceCall": "Ovozli qoʻngʻiroq",    "unsupportedAndroidVersion": "Qoʻllab-quvvatlanmaydigan Android versiyasi",    "unsupportedAndroidVersionLong": "Bu funksiya Androidning yangi versiyasini talab qiladi. Iltimos, yangilanishlar yoki Lineage OS qoʻllab-quvvatlashini tekshiring.",    "videoCallsBetaWarning": "Iltimos, video qoʻngʻiroqlar hozirda beta-versiyada ekanligini unutmang. Ular kutilganidek ishlamasligi yoki barcha platformalarda umuman ishlamasligi mumkin.",    "experimentalVideoCalls": "Tajriba video qoʻngʻiroqlar",    "sorryThatsNotPossible": "Kechirasiz... bu mumkin emas",    "noOtherDevicesFound": "Boshqa qurilma topilmadi",    "fileIsTooBigForServer": "Yuborish imkonsiz! Server faqat {max} hajmgacha bo‘lgan ilovalarni qo‘llab-quvvatlaydi.",    "@fileIsTooBigForServer": {
+    "pinMessage": "Xonaga mahkamlash",    "confirmEventUnpin": "Tadbirni butunlay olib tashlashga ishonchingiz komilmi?",    "unsupportedAndroidVersion": "Qoʻllab-quvvatlanmaydigan Android versiyasi",    "unsupportedAndroidVersionLong": "Bu funksiya Androidning yangi versiyasini talab qiladi. Iltimos, yangilanishlar yoki Lineage OS qoʻllab-quvvatlashini tekshiring.",    "sorryThatsNotPossible": "Kechirasiz... bu mumkin emas",    "noOtherDevicesFound": "Boshqa qurilma topilmadi",    "fileIsTooBigForServer": "Yuborish imkonsiz! Server faqat {max} hajmgacha bo‘lgan ilovalarni qo‘llab-quvvatlaydi.",    "@fileIsTooBigForServer": {
         "type": "String",        "placeholders": {
             "max": {
                 "type": "String"            }

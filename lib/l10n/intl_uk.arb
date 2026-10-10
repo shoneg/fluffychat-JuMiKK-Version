@@ -198,7 +198,7 @@
                 "type": "String"            }
         }
     },
-    "countParticipants": "Учасників: {count}",    "@countParticipants": {
+    "countParticipants": "{count, plural, =1{1 учасник} other{Учасників: {count}}}",    "@countParticipants": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }
@@ -344,7 +344,7 @@
                 "type": "String"            }
         }
     },
-    "isTyping": "пише…",    "@isTyping": {
+    "isTyping": "пише",    "@isTyping": {
         "type": "String",        "placeholders": {}
     },
     "joinedTheChat": "👋 {username} приєднується до бесіди",    "@joinedTheChat": {
@@ -645,9 +645,6 @@
         "type": "String",        "placeholders": {}
     },
     "verifyTitle": "Перевірка іншого облікового запису",    "@verifyTitle": {
-        "type": "String",        "placeholders": {}
-    },
-    "videoCall": "Відеовиклик",    "@videoCall": {
         "type": "String",        "placeholders": {}
     },
     "visibilityOfTheChatHistory": "Видимість історії бесіди",    "@visibilityOfTheChatHistory": {
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "emojis": "Емодзі",    "pinMessage": "Прикріпити в кімнаті",    "confirmEventUnpin": "Ви впевнені, що бажаєте назавжди відкріпити подію?",    "placeCall": "Здійснити виклик",    "unsupportedAndroidVersion": "Непідтримувана версія Android",    "voiceCall": "Голосовий виклик",    "unsupportedAndroidVersionLong": "Для цієї функції потрібна новіша версія Android. Перевірте наявність оновлень або підтримку Lineage OS.",    "videoCallsBetaWarning": "Зауважте, що відеовиклики на ранньому етапі розробки. Вони можуть працювати не так, як очікувалося, або взагалі не працювати на всіх платформах.",    "experimentalVideoCalls": "Експериментальні відеовиклики",    "youInvitedBy": "📩 Ви були запрошені {user}",    "@youInvitedBy": {
+    "emojis": "Емодзі",    "pinMessage": "Прикріпити в кімнаті",    "confirmEventUnpin": "Ви впевнені, що бажаєте назавжди відкріпити подію?",    "unsupportedAndroidVersion": "Непідтримувана версія Android",    "unsupportedAndroidVersionLong": "Для цієї функції потрібна новіша версія Android. Перевірте наявність оновлень або підтримку Lineage OS.",    "youInvitedBy": "📩 Ви були запрошені {user}",    "@youInvitedBy": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1224,7 +1221,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_ignore": "Ігнорувати цей Matrix ID",    "swipeRightToLeftToReply": "Посунути праворуч або ліворуч, щоб відповісти",    "globalChatId": "Глобальний ID бесіди",    "accessAndVisibility": "Доступ і видимість",    "accessAndVisibilityDescription": "Хто може приєднатися до цієї бесіди і як її можна знайти.",    "calls": "Виклики",    "customEmojisAndStickers": "Власні емодзі та наліпки",    "customEmojisAndStickersBody": "Додавайте або діліться власними емодзі або наліпками, які можна використовувати в будь-якій бесіді.",    "createNewAddress": "Створити нову адресу",    "commandHint_unignore": "Не ігнорувати цей Matrix ID",    "appLockDescription": "Блокувати додаток, коли не використовується PIN-код",    "hideRedactedMessages": "Сховати змінені повідомлення",    "hideRedactedMessagesBody": "Якщо хтось змінить повідомлення, його більше не буде видно в бесіді.",    "hideInvalidOrUnknownMessageFormats": "Сховати недійсні або невідомі формати повідомлень",    "passwordRecoverySettings": "Налаштування відновлення пароля",    "knock": "Постукатись",    "knocking": "Стукаються",    "noDatabaseEncryption": "Шифрування бази даних не підтримується на цій платформі",    "usersMustKnock": "Користувачі повинні постукатись",    "noOneCanJoin": "Ніхто не може приєднатись",    "chatCanBeDiscoveredViaSearchOnServer": "Бесіду можна знайти за допомогою пошуку на {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "commandHint_ignore": "Ігнорувати цей Matrix ID",    "swipeRightToLeftToReply": "Посунути праворуч або ліворуч, щоб відповісти",    "globalChatId": "Глобальний ID бесіди",    "accessAndVisibility": "Доступ і видимість",    "accessAndVisibilityDescription": "Хто може приєднатися до цієї бесіди і як її можна знайти.",    "customEmojisAndStickers": "Власні емодзі та наліпки",    "customEmojisAndStickersBody": "Додавайте або діліться власними емодзі або наліпками, які можна використовувати в будь-якій бесіді.",    "createNewAddress": "Створити нову адресу",    "commandHint_unignore": "Не ігнорувати цей Matrix ID",    "appLockDescription": "Блокувати додаток, коли не використовується PIN-код",    "hideRedactedMessages": "Сховати змінені повідомлення",    "hideRedactedMessagesBody": "Якщо хтось змінить повідомлення, його більше не буде видно в бесіді.",    "hideInvalidOrUnknownMessageFormats": "Сховати недійсні або невідомі формати повідомлень",    "passwordRecoverySettings": "Налаштування відновлення пароля",    "knock": "Постукатись",    "knocking": "Стукаються",    "noDatabaseEncryption": "Шифрування бази даних не підтримується на цій платформі",    "usersMustKnock": "Користувачі повинні постукатись",    "noOneCanJoin": "Ніхто не може приєднатись",    "chatCanBeDiscoveredViaSearchOnServer": "Бесіду можна знайти за допомогою пошуку на {server}",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1371,4 +1368,52 @@
                 "type": "String"            }
         }
     },
-    "deviceIdentityKey": "Ключ пристрою",    "showMore": "Показати ще",    "showLess": "Показати менше"}
+    "deviceIdentityKey": "Ключ пристрою",    "showMore": "Показати ще",    "showLess": "Показати менше",    "unexpectedErrorOccurded": "На жаль сталася неочікувана помилка: {msg}",    "@unexpectedErrorOccurded": {
+        "placeholders": {
+            "msg": {
+                "type": "String"            }
+        }
+    },
+    "videoCallsBetaWarning": "Відеовиклики на ранньому етапі розробки. Поведінка може бути непередбачуваною. Будемо раді отримати від вас відгук.",    "editImage": "Змінити зображення",    "@editImage": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateLeft": "Обернути ліворуч",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
+    },
+    "rotateRight": "Обернути праворуч",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
+    },
+    "mirror": "Віддзеркалити",    "@mirror": {
+        "type": "String",        "placeholders": {}
+    },
+    "save": "Зберегти",    "@save": {
+        "type": "String",        "placeholders": {}
+    },
+    "draw": "Малювати",    "@draw": {
+        "type": "String",        "placeholders": {}
+    },
+    "undo": "Скасувати",    "@undo": {
+        "type": "String",        "placeholders": {}
+    },
+    "clear": "Очистити",    "@clear": {
+        "type": "String",        "placeholders": {}
+    },
+    "eraser": "Гумка",    "@eraser": {
+        "type": "String",        "placeholders": {}
+    },
+    "crop": "Обрізати",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "accountsAndSettings": "Облікові записи та налаштування",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
+    "sendingFilesDoNotExit": "Надсилання {count} файлів... Не виходьте!",    "@sendingFilesDoNotExit": {
+        "type": "String",        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "compressingVideo": "Стиснення відео...",    "resetAccount": "Скинути обліковий запис",    "@resetAccount": {
+        "type": "String",        "placeholders": {}
+    }
+}

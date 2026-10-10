@@ -151,7 +151,7 @@
     "voiceMessage": "Voce-missage",    "@voiceMessage": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "Information pri li missage",    "openGallery": "Aperter li galerie",    "reportUser": "Raportar li usator",    "voiceCall": "Telefonada",    "countFiles": "{count} files",    "@countFiles": {
+    "messageInfo": "Information pri li missage",    "openGallery": "Aperter li galerie",    "reportUser": "Raportar li usator",    "countFiles": "{count} files",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -282,9 +282,6 @@
         "type": "String",        "placeholders": {}
     },
     "emptyChat": "Vacui conversation",    "@emptyChat": {
-        "type": "String",        "placeholders": {}
-    },
-    "videoCall": "Videotelefonada",    "@videoCall": {
         "type": "String",        "placeholders": {}
     },
     "reportMessage": "Raportar li missage",    "@reportMessage": {

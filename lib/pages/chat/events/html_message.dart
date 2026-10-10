@@ -4,6 +4,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:collection/collection.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -12,12 +13,11 @@ import 'package:fluffychat/utils/event_checkbox_extension.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:highlight/highlight.dart' show highlight;
 import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
+import 'package:material_ui/material_ui.dart';
 import 'package:matrix/matrix.dart';
 
 import '../../../utils/url_launcher.dart';
@@ -263,7 +263,7 @@ class HtmlMessage extends StatelessWidget {
 
         return WidgetSpan(
           child: Padding(
-            padding: EdgeInsets.only(left: fontSize),
+            padding: EdgeInsetsDirectional.only(start: fontSize),
             child: Text.rich(
               TextSpan(
                 children: [
@@ -322,9 +322,11 @@ class HtmlMessage extends StatelessWidget {
       case 'blockquote':
         return WidgetSpan(
           child: Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            padding: const EdgeInsetsDirectional.only(start: 8.0),
             decoration: BoxDecoration(
-              border: Border(left: BorderSide(color: textColor, width: 5)),
+              border: BorderDirectional(
+                start: BorderSide(color: textColor, width: 5),
+              ),
             ),
             child: Text.rich(
               TextSpan(
@@ -657,7 +659,7 @@ class _CollapsibleTextState extends State<_CollapsibleText> {
         AnimatedSize(
           duration: FluffyThemes.animationDuration,
           curve: FluffyThemes.animationCurve,
-          alignment: Alignment.topLeft,
+          alignment: AlignmentDirectional.topStart,
           child: Text.rich(
             widget.span,
             style: widget.style,
@@ -707,7 +709,7 @@ class MatrixPill extends StatelessWidget {
           children: [
             WidgetSpan(
               child: Padding(
-                padding: const EdgeInsets.only(right: 4.0),
+                padding: const EdgeInsetsDirectional.only(end: 4.0),
                 child: Avatar(mxContent: avatar, name: name, size: 16),
               ),
             ),

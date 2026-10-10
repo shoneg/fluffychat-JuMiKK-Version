@@ -107,7 +107,8 @@ Future<MatrixSdkDatabase> _constructDatabase(String clientName) async {
     options: OpenDatabaseOptions(
       version: 1,
       // most important : apply encryption when opening the DB
-      onConfigure: helper?.applyPragmaKey,
+      onConfigure: (db) =>
+          helper?.applyPragmaKey(db, ensureIncrementalAutoVacuum: true),
     ),
   );
 

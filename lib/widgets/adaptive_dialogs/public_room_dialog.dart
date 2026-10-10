@@ -7,10 +7,10 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/fluffy_share.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:matrix/matrix.dart';
 
 import '../../config/themes.dart';
@@ -227,6 +227,9 @@ class PublicRoomDialog extends StatelessWidget {
                             ).scale(1),
                             textAlign: .start,
                             options: const LinkifyOptions(humanize: false),
+                            style: TextStyle(
+                              color: theme.colorScheme.onSurface,
+                            ),
                             linkStyle: TextStyle(
                               color: theme.colorScheme.primary,
                               decoration: TextDecoration.underline,

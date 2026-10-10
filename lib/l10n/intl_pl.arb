@@ -754,9 +754,6 @@
     "verified": "Zweryfikowane",    "@verified": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Rozmowa wideo",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Widoczność historii czatu",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1083,7 +1080,7 @@
                 "type": "String"            }
         }
     },
-    "emojis": "Emoji",    "placeCall": "Zadzwoń",    "voiceCall": "Połączenie głosowe",    "unsupportedAndroidVersionLong": "Ta funkcja wymaga nowszej wersji systemu Android. Sprawdź aktualizacje lub wsparcie Lineage OS.",    "videoCallsBetaWarning": "Należy pamiętać, że połączenia wideo są obecnie w fazie beta. Mogą nie działać zgodnie z oczekiwaniami lub nie działać w ogóle na wszystkich platformach.",    "experimentalVideoCalls": "Eksperymentalne połączenia wideo",    "youRejectedTheInvitation": "Odrzucono zaproszenie",    "youAcceptedTheInvitation": "👍 Zaakceptowałeś/-aś zaproszenie",    "youHaveWithdrawnTheInvitationFor": "Wycofano zaproszenie dla {user}",    "@youHaveWithdrawnTheInvitationFor": {
+    "emojis": "Emoji",    "unsupportedAndroidVersionLong": "Ta funkcja wymaga nowszej wersji systemu Android. Sprawdź aktualizacje lub wsparcie Lineage OS.",    "youRejectedTheInvitation": "Odrzucono zaproszenie",    "youAcceptedTheInvitation": "👍 Zaakceptowałeś/-aś zaproszenie",    "youHaveWithdrawnTheInvitationFor": "Wycofano zaproszenie dla {user}",    "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1154,7 +1151,7 @@
     "sendTypingNotifications": "Wysyłaj powiadomienie o pisaniu",    "inviteGroupChat": "📨 Zaproszenie do rozmowy grupowej",    "importEmojis": "Zaimportuj emoji",    "noChatDescriptionYet": "Nie utworzono jeszcze opisu czatu.",    "notAnImage": "To nie jest plik obrazu.",    "chatDescriptionHasBeenChanged": "Zmieniono opis czatu",    "shareInviteLink": "Udostępnij link z zaproszeniem",    "emoteKeyboardNoRecents": "Tutaj pojawiają się ostatnio używane emotikony...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "replace": "Zastąp",    "createGroup": "Utwórz grupę",    "importNow": "Zaimportuj teraz",    "invite": "Zaproszenie",    "block": "Zablokuj",    "blockedUsers": "Zablokowani użytkownicy",    "blockUsername": "Ignoruj użytkownika",    "select": "Zaznacz",    "calls": "Połączenia",    "learnMore": "Dowiedz się więcej",    "groupName": "Nazwa grupy",    "newPassword": "Nowe hasło",    "thisDevice": "To urządzenie:",    "gallery": "Galeria",    "files": "Pliki",    "discover": "Odkrywaj",    "nothingFound": "Nic nie odnaleziono...",    "stickers": "Naklejki",    "noChatsFoundHere": "Nie jeszcze ma żadnych czatów. Wciśnij poniższy przycisk, aby rozpocząć nowy czat. ⤵️",    "hideRedactedMessagesBody": "Usunięte wiadomości nie będą widoczne w czacie.",    "passwordRecoverySettings": "Ustawienia odzyskiwania hasła",    "archiveRoomDescription": "Czat zostanie przeniesiony do archiwum. Pozostali użytkownicy będą mogli zobaczyć, że opuściłeś/-aś czat.",    "yourGlobalUserIdIs": "Twój globalny identyfikator to: ",    "canceledKeyVerification": "{sender} anulował/-a weryfikację kluczy",    "@canceledKeyVerification": {
+    "replace": "Zastąp",    "createGroup": "Utwórz grupę",    "importNow": "Zaimportuj teraz",    "invite": "Zaproszenie",    "block": "Zablokuj",    "blockedUsers": "Zablokowani użytkownicy",    "blockUsername": "Ignoruj użytkownika",    "select": "Zaznacz",    "learnMore": "Dowiedz się więcej",    "groupName": "Nazwa grupy",    "newPassword": "Nowe hasło",    "thisDevice": "To urządzenie:",    "gallery": "Galeria",    "files": "Pliki",    "discover": "Odkrywaj",    "nothingFound": "Nic nie odnaleziono...",    "stickers": "Naklejki",    "noChatsFoundHere": "Nie jeszcze ma żadnych czatów. Wciśnij poniższy przycisk, aby rozpocząć nowy czat. ⤵️",    "hideRedactedMessagesBody": "Usunięte wiadomości nie będą widoczne w czacie.",    "passwordRecoverySettings": "Ustawienia odzyskiwania hasła",    "archiveRoomDescription": "Czat zostanie przeniesiony do archiwum. Pozostali użytkownicy będą mogli zobaczyć, że opuściłeś/-aś czat.",    "yourGlobalUserIdIs": "Twój globalny identyfikator to: ",    "canceledKeyVerification": "{sender} anulował/-a weryfikację kluczy",    "@canceledKeyVerification": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            }

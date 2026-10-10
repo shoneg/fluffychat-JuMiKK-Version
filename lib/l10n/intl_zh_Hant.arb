@@ -853,9 +853,6 @@
     "verifyTitle": "正在驗證其他帳號",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "視訊通話",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "聊天室記錄的可見性",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -990,7 +987,7 @@
                 "type": "String"            }
         }
     },
-    "commandHint_hug": "傳送一個擁抱表情",    "replace": "取代",    "commandHint_googly": "傳送一些瞪眼表情",    "importNow": "立即匯入",    "blockListDescription": "你可以封鎖打擾你的使用者。你不會再收到任何從已封鎖使用者發來的訊息或聊天室邀請。",    "blockedUsers": "已封鎖的使用者",    "block": "封鎖",    "discover": "發現",    "sender": "傳送者",    "voiceCall": "語音通話",    "blockUsername": "無視使用者名稱",    "noBackupWarning": "警告！如果不啟用聊天室備份，您將失去對加密訊息的訪問。強烈建議在登出前先啟用聊天室備份。",    "addChatOrSubSpace": "新增聊天室或子空間",    "thisDevice": "這個裝置：",    "commandHint_markasdm": "將給定的 Matrix ID 標示為直接訊息房間",    "commandHint_html": "傳送 HTML 格式的文字",    "@commandHint_html": {
+    "commandHint_hug": "傳送一個擁抱表情",    "replace": "取代",    "commandHint_googly": "傳送一些瞪眼表情",    "importNow": "立即匯入",    "blockListDescription": "你可以封鎖打擾你的使用者。你不會再收到任何從已封鎖使用者發來的訊息或聊天室邀請。",    "blockedUsers": "已封鎖的使用者",    "block": "封鎖",    "discover": "發現",    "sender": "傳送者",    "blockUsername": "無視使用者名稱",    "noBackupWarning": "警告！如果不啟用聊天室備份，您將失去對加密訊息的訪問。強烈建議在登出前先啟用聊天室備份。",    "addChatOrSubSpace": "新增聊天室或子空間",    "thisDevice": "這個裝置：",    "commandHint_markasdm": "將給定的 Matrix ID 標示為直接訊息房間",    "commandHint_html": "傳送 HTML 格式的文字",    "@commandHint_html": {
         "type": "String",        "description": "Usage hint for the command /html"    },
     "commandHint_send": "傳送文字",    "@commandHint_send": {
         "type": "String",        "description": "Usage hint for the command /send"    },
@@ -1034,7 +1031,7 @@
                 "type": "String"            }
         }
     },
-    "dehydrate": "匯出會話並清除裝置",    "reopenChat": "重新開啟聊天室",    "yourGlobalUserIdIs": "您的全域使用者ID是： ",    "experimentalVideoCalls": "實驗性視訊通話",    "youAcceptedTheInvitation": "👍 您接受了邀請",    "storeSecurlyOnThisDevice": "在此裝置上安全存儲",    "countFiles": "{count} 個文件",    "@countFiles": {
+    "dehydrate": "匯出會話並清除裝置",    "reopenChat": "重新開啟聊天室",    "yourGlobalUserIdIs": "您的全域使用者ID是： ",    "youAcceptedTheInvitation": "👍 您接受了邀請",    "storeSecurlyOnThisDevice": "在此裝置上安全存儲",    "countFiles": "{count} 個文件",    "@countFiles": {
         "placeholders": {
             "count": {
                 "type": "int"            }
@@ -1100,7 +1097,7 @@
     "synchronizingPleaseWait": "正在同步... 請稍候。",    "@synchronizingPleaseWait": {
         "type": "String",        "placeholders": {}
     },
-    "messageInfo": "訊息資訊",    "removeFromSpace": "從空間中移除",    "emojis": "表情符號",    "placeCall": "發起通話",    "unsupportedAndroidVersion": "不支持的Android版本",    "videoCallsBetaWarning": "請注意，視訊通話目前處於測試階段。它們可能不會按預期工作，或者在所有平台上都不工作。",    "youJoinedTheChat": "您加入了聊天室",    "youBannedUser": "您封鎖了 {user}",    "@youBannedUser": {
+    "messageInfo": "訊息資訊",    "removeFromSpace": "從空間中移除",    "emojis": "表情符號",    "unsupportedAndroidVersion": "不支持的Android版本",    "youJoinedTheChat": "您加入了聊天室",    "youBannedUser": "您封鎖了 {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1145,7 +1142,7 @@
     "thereAreCountUsersBlocked": "目前有 {count} 名使用者被封鎖。",    "@thereAreCountUsersBlocked": {
         "type": "String",        "count": {}
     },
-    "appLockDescription": "未使用時以密碼鎖定應用程式",    "globalChatId": "全球聊天室 ID",    "accessAndVisibility": "訪問權限和可見性",    "accessAndVisibilityDescription": "誰被允許加入此聊天室以及如何發現聊天室。",    "calls": "通話",    "chatDescription": "聊天室描述",    "chatDescriptionHasBeenChanged": "聊天室描述已變更",    "tryAgain": "再試一次",    "setAsCanonicalAlias": "設為主要別名",    "@setAsCanonicalAlias": {
+    "appLockDescription": "未使用時以密碼鎖定應用程式",    "globalChatId": "全球聊天室 ID",    "accessAndVisibility": "訪問權限和可見性",    "accessAndVisibilityDescription": "誰被允許加入此聊天室以及如何發現聊天室。",    "chatDescription": "聊天室描述",    "chatDescriptionHasBeenChanged": "聊天室描述已變更",    "tryAgain": "再試一次",    "setAsCanonicalAlias": "設為主要別名",    "@setAsCanonicalAlias": {
         "type": "String",        "placeholders": {}
     },
     "setChatDescription": "設定聊天室描述",    "groupName": "群組名稱",    "searchForUsers": "搜尋 @users...",    "inviteGroupChat": "📨 邀請群組聊天室",    "knocking": "敲門",    "sessionLostBody": "您的會話已丟失。請將此錯誤報告給開發人員，網址為 {url}。錯誤訊息為：{error}",    "@sessionLostBody": {

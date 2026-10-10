@@ -7,8 +7,8 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/dialog_text_field.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:material_ui/material_ui.dart';
 
 Future<String?> showTextInputDialog({
   required BuildContext context,
@@ -52,6 +52,9 @@ Future<String?> showTextInputDialog({
                 SelectableLinkify(
                   text: message,
                   textScaleFactor: MediaQuery.textScalerOf(context).scale(1),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                   linkStyle: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
                     decorationColor: Theme.of(context).colorScheme.primary,

@@ -510,9 +510,6 @@
     "visibleForAllParticipants": "모든 참가자에게 보임",    "@visibleForAllParticipants": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "영상 통화",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "verifyTitle": "다른 계정 확인 중",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "confirmEventUnpin": "이벤트를 영구적으로 고정 해제할 것이 확실한가요?",    "pinMessage": "방에 고정",    "emojis": "이모지",    "voiceCall": "음성 통화",    "placeCall": "전화 걸기",    "experimentalVideoCalls": "실험적인 영상 통화",    "unsupportedAndroidVersion": "지원되지 않는 안드로이드 버전",    "unsupportedAndroidVersionLong": "이 기능은 새로운 안드로이드 버전을 요구합니다. Lineage OS 지원이나 업데이트를 확인해주세요.",    "videoCallsBetaWarning": "영상 통화는 베타임을 확인해주세요. 의도한 대로 작동하지 않거나 모든 플랫폼에서 작동하지 않을 수 있습니다.",    "confirmMatrixId": "계정을 삭제하려면 Matrix ID를 입력해 주세요.",    "commandHint_googly": "왕눈이 눈알 보내기",    "googlyEyesContent": "{senderName} 님이 왕눈이 눈알을 보냈습니다",    "@googlyEyesContent": {
+    "confirmEventUnpin": "이벤트를 영구적으로 고정 해제할 것이 확실한가요?",    "pinMessage": "방에 고정",    "emojis": "이모지",    "unsupportedAndroidVersion": "지원되지 않는 안드로이드 버전",    "unsupportedAndroidVersionLong": "이 기능은 새로운 안드로이드 버전을 요구합니다. Lineage OS 지원이나 업데이트를 확인해주세요.",    "confirmMatrixId": "계정을 삭제하려면 Matrix ID를 입력해 주세요.",    "commandHint_googly": "왕눈이 눈알 보내기",    "googlyEyesContent": "{senderName} 님이 왕눈이 눈알을 보냈습니다",    "@googlyEyesContent": {
         "type": "String",        "placeholders": {
             "senderName": {
                 "type": "String"            }
@@ -1226,7 +1223,7 @@
                 "type": "String"            }
         }
     },
-    "appLockDescription": "앱을 사용하지 않을 때 pin으로 잠금",    "calls": "전화",    "globalChatId": "글로벌 채팅 ID",    "customEmojisAndStickers": "커스텀 이모지와 스티커",    "accessAndVisibilityDescription": "채팅에 참가 할 수 있는 사람과 채팅을 볼 수 있는 범위",    "accessAndVisibility": "채팅 가입과 대화 기록",    "customEmojisAndStickersBody": "모든 채팅에서 사용할 수있는 커스텀 이모지와 스티커를 추가하거나 공유합니다.",    "hideRedactedMessages": "삭제된 메시지 숨기기",    "hideRedactedMessagesBody": "누군가가 메시지를 삭제하면 메시지를 더 이상 볼 수 없습니다.",    "hideInvalidOrUnknownMessageFormats": "잘못되거나 알 수 없는 메시지 형식 숨김",    "passwordRecoverySettings": "비밀번호 복구 설정",    "knock": "참가 요청",    "usersMustKnock": "유저들이 참가를 허가받아야함",    "knocking": "참가 요청중",    "chatCanBeDiscoveredViaSearchOnServer": "채팅은 {server} 에서 검색하여 찾을 수 있습니다.",    "@chatCanBeDiscoveredViaSearchOnServer": {
+    "appLockDescription": "앱을 사용하지 않을 때 pin으로 잠금",    "globalChatId": "글로벌 채팅 ID",    "customEmojisAndStickers": "커스텀 이모지와 스티커",    "accessAndVisibilityDescription": "채팅에 참가 할 수 있는 사람과 채팅을 볼 수 있는 범위",    "accessAndVisibility": "채팅 가입과 대화 기록",    "customEmojisAndStickersBody": "모든 채팅에서 사용할 수있는 커스텀 이모지와 스티커를 추가하거나 공유합니다.",    "hideRedactedMessages": "삭제된 메시지 숨기기",    "hideRedactedMessagesBody": "누군가가 메시지를 삭제하면 메시지를 더 이상 볼 수 없습니다.",    "hideInvalidOrUnknownMessageFormats": "잘못되거나 알 수 없는 메시지 형식 숨김",    "passwordRecoverySettings": "비밀번호 복구 설정",    "knock": "참가 요청",    "usersMustKnock": "유저들이 참가를 허가받아야함",    "knocking": "참가 요청중",    "chatCanBeDiscoveredViaSearchOnServer": "채팅은 {server} 에서 검색하여 찾을 수 있습니다.",    "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }

@@ -1001,9 +1001,6 @@
     "statusExampleMessage": "Millainen on vointisi?",    "@statusExampleMessage": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Videopuhelu",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "sender": "Lähettäjä",    "startedACall": "{senderName} aloitti puhelun",    "@startedACall": {
         "type": "String",        "placeholders": {
             "senderName": {
@@ -1039,7 +1036,7 @@
         "type": "String",        "description": "Usage hint for the command /dm"    },
     "commandHint_discardsession": "Hylkää istunto",    "@commandHint_discardsession": {
         "type": "String",        "description": "Usage hint for the command /discardsession"    },
-    "markAsRead": "Merkitse luetuksi",    "emojis": "Hymiöt",    "unsupportedAndroidVersionLong": "Tämä ominaisuus vaatii uudemman Android-version. Tarkistathan päivitykset tai Lineage OS :n tuki.",    "unsupportedAndroidVersion": "Ei tuettu Android-versio",    "reportUser": "Ilmianna käyttäjä",    "voiceCall": "Äänipuhelu",    "videoCallsBetaWarning": "Huomaathan videopuheluiden ovan beta-asteella. Ne eivät ehkä toimi odotetusti tai toimi ollenkaan kaikilla alustoilla.",    "placeCall": "Soita",    "reactedWith": "{sender} reagoi {reaction}",    "@reactedWith": {
+    "markAsRead": "Merkitse luetuksi",    "emojis": "Hymiöt",    "unsupportedAndroidVersionLong": "Tämä ominaisuus vaatii uudemman Android-version. Tarkistathan päivitykset tai Lineage OS :n tuki.",    "unsupportedAndroidVersion": "Ei tuettu Android-versio",    "reportUser": "Ilmianna käyttäjä",    "reactedWith": "{sender} reagoi {reaction}",    "@reactedWith": {
         "type": "String",        "placeholders": {
             "sender": {
                 "type": "String"            },
@@ -1047,7 +1044,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Kiinnitä huoneeseen",    "confirmEventUnpin": "Haluatko varmasti irrottaa tapahtuman pysyvästi?",    "experimentalVideoCalls": "Kokeelliset videopuhelut",    "youRejectedTheInvitation": "Kieltäydyit kutsusta",    "youJoinedTheChat": "Liityit keskusteluun",    "youAcceptedTheInvitation": "👍 Hyväksyit kutsun",    "youBannedUser": "Annoit porttikiellon käyttäjälle {user}",    "@youBannedUser": {
+    "pinMessage": "Kiinnitä huoneeseen",    "confirmEventUnpin": "Haluatko varmasti irrottaa tapahtuman pysyvästi?",    "youRejectedTheInvitation": "Kieltäydyit kutsusta",    "youJoinedTheChat": "Liityit keskusteluun",    "youAcceptedTheInvitation": "👍 Hyväksyit kutsun",    "youBannedUser": "Annoit porttikiellon käyttäjälle {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1172,7 +1169,7 @@
                 "type": "int"            }
         }
     },
-    "globalChatId": "Yleisesti pätevä keskustelutunnus",    "accessAndVisibilityDescription": "Kuka voi liittyä tähän pikakeskusteluun ja miten pikakeskustelun voi löytää.",    "calls": "Puhelut",    "customEmojisAndStickers": "Mukautetut emojit ja tarrat",    "customEmojisAndStickersBody": "Lisää tai jaa mukautettuja emojeja tai tarroja, joita voidaan käyttää missä tahansa pikakeskustelussa.",    "hideInvalidOrUnknownMessageFormats": "Piilota virheelliset tai tuntemattomat viestimuodot",    "block": "Estä",    "blockedUsers": "Estetyt käyttäjät",    "blockListDescription": "Voit estää sinua häiritsevät käyttäjät. Et voi vastaanottaa viestejä tai huonekutsuja henkilökohtaisella estolistallasi olevilta käyttäjiltä.",    "blockUsername": "Jätä käyttäjänimi huomiotta",    "passwordRecoverySettings": "Salasanan palautusasetukset",    "sendImages": "Lähetä {count} kuva",    "@sendImages": {
+    "globalChatId": "Yleisesti pätevä keskustelutunnus",    "accessAndVisibilityDescription": "Kuka voi liittyä tähän pikakeskusteluun ja miten pikakeskustelun voi löytää.",    "customEmojisAndStickers": "Mukautetut emojit ja tarrat",    "customEmojisAndStickersBody": "Lisää tai jaa mukautettuja emojeja tai tarroja, joita voidaan käyttää missä tahansa pikakeskustelussa.",    "hideInvalidOrUnknownMessageFormats": "Piilota virheelliset tai tuntemattomat viestimuodot",    "block": "Estä",    "blockedUsers": "Estetyt käyttäjät",    "blockListDescription": "Voit estää sinua häiritsevät käyttäjät. Et voi vastaanottaa viestejä tai huonekutsuja henkilökohtaisella estolistallasi olevilta käyttäjiltä.",    "blockUsername": "Jätä käyttäjänimi huomiotta",    "passwordRecoverySettings": "Salasanan palautusasetukset",    "sendImages": "Lähetä {count} kuva",    "@sendImages": {
         "type": "String",        "placeholders": {
             "count": {
                 "type": "int"            }

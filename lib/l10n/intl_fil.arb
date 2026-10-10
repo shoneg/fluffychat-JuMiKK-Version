@@ -397,7 +397,7 @@
     "emoteKeyboardNoRecents": "Ang mga kamakailang ginamit na emote ay lalabas dito...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "calls": "Mga Tawag",    "customEmojisAndStickers": "Mga custom emoji at sticker",    "customEmojisAndStickersBody": "Magdagdag o magbahagi ng mga custom emoji o sticker na maaring gamitin sa anumang chat.",    "emoteShortcode": "Shortcode ng emoji",    "@emoteShortcode": {
+    "customEmojisAndStickers": "Mga custom emoji at sticker",    "customEmojisAndStickersBody": "Magdagdag o magbahagi ng mga custom emoji o sticker na maaring gamitin sa anumang chat.",    "emoteShortcode": "Shortcode ng emoji",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
     "enableEmotesGlobally": "I-enable ang emote pack globally",    "@enableEmotesGlobally": {

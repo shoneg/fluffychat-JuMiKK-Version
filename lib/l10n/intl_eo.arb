@@ -947,9 +947,6 @@
     "verifyTitle": "Kontrolante alian konton",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Vidvoko",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Videbleco de historio de la babilo",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },

@@ -50,6 +50,9 @@
     "account": "Account",    "@account": {
         "type": "String",        "placeholders": {}
     },
+    "accountsAndSettings": "Accounts and settings",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
+    },
     "activatedEndToEndEncryption": "🔐 {username} activated end to end encryption",    "@activatedEndToEndEncryption": {
         "type": "String",        "placeholders": {
             "username": {
@@ -450,7 +453,7 @@
     "emoteKeyboardNoRecents": "Recently-used emotes will appear here...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "globalChatId": "Global chat ID",    "accessAndVisibility": "Access and visibility",    "accessAndVisibilityDescription": "Who is allowed to join this chat and how the chat can be discovered.",    "calls": "Calls",    "customEmojisAndStickers": "Custom emojis and stickers",    "customEmojisAndStickersBody": "Add or share custom emojis or stickers which can be used in any chat.",    "emoteShortcode": "Emote shortcode",    "@emoteShortcode": {
+    "globalChatId": "Global chat ID",    "accessAndVisibility": "Access and visibility",    "accessAndVisibilityDescription": "Who is allowed to join this chat and how the chat can be discovered.",    "customEmojisAndStickers": "Custom emojis and stickers",    "customEmojisAndStickersBody": "Add or share custom emojis or stickers which can be used in any chat.",    "emoteShortcode": "Emote shortcode",    "@emoteShortcode": {
         "type": "String",        "placeholders": {}
     },
     "emptyChat": "Empty chat",    "@emptyChat": {
@@ -1071,9 +1074,6 @@
     "verifyTitle": "Verifying other account",    "@verifyTitle": {
         "type": "String",        "placeholders": {}
     },
-    "videoCall": "Video call",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibilityOfTheChatHistory": "Visibility of the chat history",    "@visibilityOfTheChatHistory": {
         "type": "String",        "placeholders": {}
     },
@@ -1139,7 +1139,7 @@
                 "type": "String"            }
         }
     },
-    "pinMessage": "Pin to room",    "confirmEventUnpin": "Are you sure to permanently unpin the event?",    "emojis": "Emojis",    "placeCall": "Place call",    "voiceCall": "Voice call",    "unsupportedAndroidVersion": "Unsupported Android version",    "unsupportedAndroidVersionLong": "This feature requires a newer Android version. Please check for updates or Lineage OS support.",    "videoCallsBetaWarning": "Please note that video calls are currently in beta. They might not work as expected or work at all on all platforms.",    "experimentalVideoCalls": "Experimental video calls",    "youRejectedTheInvitation": "You rejected the invitation",    "youJoinedTheChat": "You joined the chat",    "youAcceptedTheInvitation": "👍 You accepted the invitation",    "youBannedUser": "You banned {user}",    "@youBannedUser": {
+    "pinMessage": "Pin to room",    "confirmEventUnpin": "Are you sure to permanently unpin the event?",    "emojis": "Emojis",    "unsupportedAndroidVersion": "Unsupported Android version",    "unsupportedAndroidVersionLong": "This feature requires a newer Android version. Please check for updates or Lineage OS support.",    "youRejectedTheInvitation": "You rejected the invitation",    "youJoinedTheChat": "You joined the chat",    "youAcceptedTheInvitation": "👍 You accepted the invitation",    "youBannedUser": "You banned {user}",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1325,7 +1325,13 @@
                 "type": "String"            }
         }
     },
-    "changelog": "Changelog",    "sendCanceled": "Sending canceled",    "loginWithMatrixId": "Login with Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Doesn't seem to be a compatible homeserver. Wrong URL?",    "calculatingFileSize": "Calculating file size...",    "oneOfYourDevicesIsNotVerified": "One of your devices is not verified",    "noticeChatBackupDeviceVerification": "Note: When you connect all your devices to the chat backup, they are automatically verified.",    "continueText": "Continue",    "blur": "Blur:",    "opacity": "Opacity:",    "setWallpaper": "Set wallpaper",    "manageAccount": "Manage account",    "noContactInformationProvided": "Server does not provide any valid contact information",    "contactServerAdmin": "Contact server admin",    "contactServerSecurity": "Contact server security",    "supportPage": "Support page",    "serverInformation": "Server information:",    "name": "Name",    "version": "Version",    "website": "Website",    "compress": "Compress",    "boldText": "Bold text",    "italicText": "Italic text",    "strikeThrough": "Strikethrough",    "pleaseFillOut": "Please fill out",    "invalidUrl": "Invalid url",    "addLink": "Add link",    "unableToJoinChat": "Unable to join chat. Maybe the other party has already closed the conversation.",    "previous": "Previous",    "otherPartyNotLoggedIn": "The other party is currently not logged in and therefore cannot receive messages!",    "appWantsToUseForLogin": "Use '{server}' to log in",    "@appWantsToUseForLogin": {
+    "changelog": "Changelog",    "updateAvailable": "Update {version} available",    "@updateAvailable": {
+        "type": "String",        "placeholders": {
+            "version": {
+                "type": "String"            }
+        }
+    },
+    "download": "Download",    "sendCanceled": "Sending canceled",    "loginWithMatrixId": "Login with Matrix-ID",    "doesNotSeemToBeAValidHomeserver": "Doesn't seem to be a compatible homeserver. Wrong URL?",    "calculatingFileSize": "Calculating file size...",    "oneOfYourDevicesIsNotVerified": "One of your devices is not verified",    "noticeChatBackupDeviceVerification": "Note: When you connect all your devices to the chat backup, they are automatically verified.",    "continueText": "Continue",    "blur": "Blur:",    "opacity": "Opacity:",    "setWallpaper": "Set wallpaper",    "manageAccount": "Manage account",    "noContactInformationProvided": "Server does not provide any valid contact information",    "contactServerAdmin": "Contact server admin",    "contactServerSecurity": "Contact server security",    "supportPage": "Support page",    "serverInformation": "Server information:",    "name": "Name",    "version": "Version",    "website": "Website",    "compress": "Compress",    "boldText": "Bold text",    "italicText": "Italic text",    "strikeThrough": "Strikethrough",    "pleaseFillOut": "Please fill out",    "invalidUrl": "Invalid url",    "addLink": "Add link",    "unableToJoinChat": "Unable to join chat. Maybe the other party has already closed the conversation.",    "previous": "Previous",    "otherPartyNotLoggedIn": "The other party is currently not logged in and therefore cannot receive messages!",    "appWantsToUseForLogin": "Use '{server}' to log in",    "@appWantsToUseForLogin": {
         "type": "String",        "placeholders": {
             "server": {
                 "type": "String"            }
@@ -1488,4 +1494,28 @@
                 "type": "int"            }
         }
     },
-    "loadingMessages": "Loading messages...",    "buildDoesNotSupportFirebase": "This build does not support firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Unable to register device for firebase cloud messaging.",    "unifiedPushDistributors": "Unified Push distributors:",    "doubleTapToReact": "Double-tap to react",    "doubleTapToReactDescription": "Double-tap a message to react instead of selecting text",    "doubleTapReaction": "Double-tap reaction"}
+    "loadingMessages": "Loading messages...",    "buildDoesNotSupportFirebase": "This build does not support firebase cloud messaging.",    "unableToRegisterDeviceForFirebase": "Unable to register device for firebase cloud messaging.",    "unifiedPushDistributors": "Unified Push distributors:",    "doubleTapToReact": "Double-tap to react",    "doubleTapToReactDescription": "Double-tap a message to react instead of selecting text",    "doubleTapReaction": "Double-tap reaction",    "shareCrashReports": "Share crash reports",    "shareCrashReportsDescription": "Automatically share crash reports with the developers?",    "countActiveCallMembers": "{count} active call members",    "@countActiveCallMembers": {
+        "placeholders": {
+            "count": {
+                "type": "int"            }
+        }
+    },
+    "enterCall": "Enter call",    "videoCallsBetaWarning": "Video calls are a beta feature. There might be bugs or unexpected behavior. We would be happy to hear about your feedback.",    "noDevicesFound": "No devices found",    "incomingCall": "Incoming call",    "videoCall": "Video call",    "voiceCall": "Voice call",    "missedCall": "Missed call",    "callBack": "Call back",    "hangUp": "Hang up",    "waitingForParticipant": "Waiting for participant...",    "decline": "Decline",    "startCall": "Start call",    "selectCamera": "Select camera",    "selectMicrophone": "Select microphone",    "selectSpeaker": "Select speaker",    "toggleMicrophone": "Toggle microphone",    "toggleCamera": "Toggle camera",    "startScreensharing": "Start screensharing",    "stopScreensharing": "Stop screensharing",    "raiseHand": "Raise hand",    "stopRaiseHand": "Stop raise hand",    "preferSpeaker": "Prefer speaker",    "unexpectedErrorOccurded": "Unfortunately, an unexpected error has occurred: {msg}",    "@unexpectedErrorOccurded": {
+        "placeholders": {
+            "msg": {
+                "type": "String"            }
+        }
+    },
+    "incomingCallFrom": "Incoming call from {user}",    "@incomingCallFrom": {
+        "placeholders": {
+            "user": {
+                "type": "String"            }
+        }
+    },
+    "serverRespondedWithError": "The server has replied with an error message: {error}",    "@serverRespondedWithError": {
+        "placeholders": {
+            "error": {
+                "type": "String"            }
+        }
+    }
+}

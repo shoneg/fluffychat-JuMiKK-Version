@@ -982,9 +982,6 @@
                 "type": "String"            }
         }
     },
-    "videoCall": "تماس تصویری",    "@videoCall": {
-        "type": "String",        "placeholders": {}
-    },
     "visibleForAllParticipants": "قابل‌دید برای همه شرکت‌کنندگان",    "@visibleForAllParticipants": {
         "type": "String",        "placeholders": {}
     },
@@ -1095,7 +1092,7 @@
     "submit": "ارسال",    "@submit": {
         "type": "String",        "placeholders": {}
     },
-    "youRejectedTheInvitation": "شما دعوت را رد کردید",    "youAcceptedTheInvitation": "👍 شما دعوت را پذیرفتید",    "videoCallsBetaWarning": "لطفا توجه داشته باشید که تماس‌های تصویری در حال حاضر آزمایشی هستند. ممکن است طبق انتظار کار نکنند یا روی همه پلتفرم‌ها اصلا کار نکنند.",    "experimentalVideoCalls": "تماس‌های تصویری آزمایشی",    "placeCall": "برقراری تماس",    "unsupportedAndroidVersionLong": "این ویژگی به نسخه تازه‌تری از اندروید نیاز دارد. لطفا به‌روزرسانی یا پشتیبانی لینیج‌اواس(LineageOS) را بررسی کنید.",    "sharedTheLocation": "{username} وضعیت مکانی خود را به اشتراک گذاشت",    "@sharedTheLocation": {
+    "youRejectedTheInvitation": "شما دعوت را رد کردید",    "youAcceptedTheInvitation": "👍 شما دعوت را پذیرفتید",    "unsupportedAndroidVersionLong": "این ویژگی به نسخه تازه‌تری از اندروید نیاز دارد. لطفا به‌روزرسانی یا پشتیبانی لینیج‌اواس(LineageOS) را بررسی کنید.",    "sharedTheLocation": "{username} وضعیت مکانی خود را به اشتراک گذاشت",    "@sharedTheLocation": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -1107,7 +1104,7 @@
     "unknownDevice": "دستگاه ناشناس",    "@unknownDevice": {
         "type": "String",        "placeholders": {}
     },
-    "markAsRead": "علامت‌گذاشتن به عنوان خوانده شده",    "reportUser": "گزارش دادن کاربر",    "pinMessage": "سنجاق کردن به اتاق",    "emojis": "شکلک‌ها",    "voiceCall": "تماس صوتی",    "youJoinedTheChat": "شما به چت پیوستید",    "youBannedUser": "شما {user} را محروم کردید",    "@youBannedUser": {
+    "markAsRead": "علامت‌گذاشتن به عنوان خوانده شده",    "reportUser": "گزارش دادن کاربر",    "pinMessage": "سنجاق کردن به اتاق",    "emojis": "شکلک‌ها",    "youJoinedTheChat": "شما به چت پیوستید",    "youBannedUser": "شما {user} را محروم کردید",    "@youBannedUser": {
         "placeholders": {
             "user": {
                 "type": "String"            }
@@ -1146,7 +1143,7 @@
     "createGroup": "ساختن گروه",    "chatPermissions": "دسترسی‌های چت",    "emoteKeyboardNoRecents": "شکلک‌هایی که به تازگی استفاده‌شده اینجا نمایش داده میشوند...",    "@emoteKeyboardNoRecents": {
         "type": "String",        "placeholders": {}
     },
-    "globalChatId": "شناسه سراسری چت",    "accessAndVisibility": "دسترسی و قابلیت دید",    "accessAndVisibilityDescription": "چه کسی اجازه پیوستن به این چت را دارد و چت چگونه قابل پیدا شدن است.",    "calls": "تماس‌ها",    "customEmojisAndStickers": "شکلک‌ها و برچسب‌های سفارشی",    "customEmojisAndStickersBody": "افزودن یا اشتراک گذاری ایموجی ها یا استیکر های سفارشی که در هر چت قابل استفاده‌اند.",    "chatDescription": "توضیحات چت",    "chatDescriptionHasBeenChanged": "توضیحات چت تغییر کرد",    "hideRedactedMessages": "پنهان کردن پیام‌های ویرایش‌شده",    "hideRedactedMessagesBody": "اگر کسی پیامی را ویرایش کند، دیگر نمیتوان آن پیام را در چت دید.",    "hideInvalidOrUnknownMessageFormats": "پنهان کردن قالب‌های پیام نامعتبر یا ناشناخته",    "block": "مسدود کردن",    "blockedUsers": "کاربران مسدود‌شده",    "blockListDescription": "میتوانید کاربرانی که مزاحم شما هستند را مسدود کنید. از کاربران موجود در فهرست مسدود شخصی، پیام یا دعوت به اتاق دریافت نخواهید کرد.",    "blockUsername": "چشم‌پوشی از نام کاربری",    "noChatDescriptionYet": "هنوز توضیحات چتی نوشته نشده است.",    "tryAgain": "تلاش دوباره",    "invalidServerName": "نام سرور نامعتبر",    "redactMessageDescription": "پیام برای همه شرکت‌کنندگان در این گفتگو ویرایش خواهد شد. این کار برگشت‌ناپذیر است.",    "optionalRedactReason": "(اختیاری) دلیل ویرایش این پیام...",    "messagesStyle": "پیام‌ها:",    "shareInviteLink": "هم‌رسانی پیوند دعوت",    "passwordRecoverySettings": "تنظیمات بازیابی گذرواژه",    "redactedBy": "ویرایش‌شده به‌دست {username}",    "@redactedBy": {
+    "globalChatId": "شناسه سراسری چت",    "accessAndVisibility": "دسترسی و قابلیت دید",    "accessAndVisibilityDescription": "چه کسی اجازه پیوستن به این چت را دارد و چت چگونه قابل پیدا شدن است.",    "customEmojisAndStickers": "شکلک‌ها و برچسب‌های سفارشی",    "customEmojisAndStickersBody": "افزودن یا اشتراک گذاری ایموجی ها یا استیکر های سفارشی که در هر چت قابل استفاده‌اند.",    "chatDescription": "توضیحات چت",    "chatDescriptionHasBeenChanged": "توضیحات چت تغییر کرد",    "hideRedactedMessages": "پنهان کردن پیام‌های ویرایش‌شده",    "hideRedactedMessagesBody": "اگر کسی پیامی را ویرایش کند، دیگر نمیتوان آن پیام را در چت دید.",    "hideInvalidOrUnknownMessageFormats": "پنهان کردن قالب‌های پیام نامعتبر یا ناشناخته",    "block": "مسدود کردن",    "blockedUsers": "کاربران مسدود‌شده",    "blockListDescription": "میتوانید کاربرانی که مزاحم شما هستند را مسدود کنید. از کاربران موجود در فهرست مسدود شخصی، پیام یا دعوت به اتاق دریافت نخواهید کرد.",    "blockUsername": "چشم‌پوشی از نام کاربری",    "noChatDescriptionYet": "هنوز توضیحات چتی نوشته نشده است.",    "tryAgain": "تلاش دوباره",    "invalidServerName": "نام سرور نامعتبر",    "redactMessageDescription": "پیام برای همه شرکت‌کنندگان در این گفتگو ویرایش خواهد شد. این کار برگشت‌ناپذیر است.",    "optionalRedactReason": "(اختیاری) دلیل ویرایش این پیام...",    "messagesStyle": "پیام‌ها:",    "shareInviteLink": "هم‌رسانی پیوند دعوت",    "passwordRecoverySettings": "تنظیمات بازیابی گذرواژه",    "redactedBy": "ویرایش‌شده به‌دست {username}",    "@redactedBy": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
