@@ -81,6 +81,38 @@ git switch custom/main
 git merge --no-ff feature/logo
 ```
 
+## Login configuration
+
+The automatic login and manual sign-in use the same browser login flows. Native
+Matrix OIDC is selected when the homeserver advertises authentication metadata
+and `enableMatrixNativeOIDC` is enabled. Otherwise the client uses Matrix SSO
+(`m.login.sso`). Authentik configured as a Synapse SSO provider continues to work;
+its issuer URL is discovered through the homeserver rather than hardcoded in the
+client.
+
+Android, iOS, and macOS use `de.jumikk.chat.auth:/login` for login callbacks. Keep
+`AppConfig.appSsoUrlScheme` and the platform registrations in sync. The private
+OIDC URI has no host component. Chat links use the separate scheme
+`de.jumikk.chat://chat/`. Linux and Windows use the browser callback at
+`http://localhost:3001/login`.
+
+OIDC client metadata uses the `website`, `logoUrl`, `privacyPolicy`, and `tos`
+settings. The defaults are the JuMiKK website and its public logo. Empty optional
+policy and terms URLs are omitted from client registration. Set these to your
+actual public documents when available. Web deployments can set these same keys
+in `config.json`; mobile deployments can use MDM or the app settings. All metadata
+URLs must use HTTPS and share the website hostname or one of its subdomains.
+
+Production web OIDC deployments must run on HTTPS under `jumikk.de` (or configure
+`website` for their own domain). The authorization response is captured and removed
+from the browser URL before routing, and a shared startup handler finishes both
+first-account and additional-account logins. Pending OIDC state is cleared after
+success or failure. Legacy web SSO continues to use `auth.html`.
+
+For Android testing, verify legacy SSO against `chat.jumikk.de`, cancel and retry
+the browser login, and test native OIDC with a homeserver that offers it. Builds
+and unit tests cannot replace a login against the real identity provider.
+
 ## Release tagging
 
 Use an app release tag based on the upstream version:

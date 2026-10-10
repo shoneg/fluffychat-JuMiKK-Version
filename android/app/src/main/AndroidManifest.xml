@@ -109,7 +109,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="de.jumikk.chat" android:host="login"/>
+                <!-- Native OIDC uses a private URI without a host: de.jumikk.chat.auth:/login -->
+                <data android:scheme="de.jumikk.chat.auth"/>
             </intent-filter>
         </activity>
 

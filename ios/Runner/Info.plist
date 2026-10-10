@@ -35,6 +35,8 @@
 			<array>
 				<string>ShareMedia-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 				<string>im.fluffychat</string>
+				<string>de.jumikk.chat</string>
+				<string>de.jumikk.chat.auth</string>
 				<string>matrix</string>
 			</array>
 		</dict>

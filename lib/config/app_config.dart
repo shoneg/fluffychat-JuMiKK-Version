@@ -30,8 +30,8 @@ abstract class AppConfig {
   static const String howDoIGetStickersTutorial =
       'https://ko-fi.com/post/How-to-add-a-sticker-pack-to-FluffyChat-N4N01OXATI';
   static const String appId = 'im.fluffychat.app';
-  static const String appOpenUrlScheme = 'im.fluffychat';
-  static const String appSsoUrlScheme = 'im.fluffychat.auth';
+  static const String appOpenUrlScheme = 'de.jumikk.chat';
+  static const String appSsoUrlScheme = 'de.jumikk.chat.auth';
   // Identifies the notification activation callback on Windows. Never change!
   static const String windowsNotificationGuid =
       '4894dfda-c70a-4ebc-b139-acae55f3988d';

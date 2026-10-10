@@ -1,7 +1,10 @@
 {
   "applicationName": "JuMiKK-Chat",
   "defaultHomeserver": "chat.jumikk.de",
-  "privacyUrl": "https://github.com/krille-chan/fluffychat/blob/main/PRIVACY.md",
+  "website": "https://jumikk.de",
+  "logoUrl": "https://jumikk.de/wp-content/uploads/2025/10/logo_frei-1-300x300.png",
+  "privacyPolicy": "",
+  "tos": "",
   "audioRecordingNumChannels": 1,
   "audioRecordingAutoGain": true,
   "audioRecordingEchoCancel": false,

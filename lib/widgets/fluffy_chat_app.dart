@@ -12,6 +12,7 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/app_lock.dart';
 import 'package:fluffychat/widgets/layouts/call_overlay.dart';
 import 'package:fluffychat/widgets/theme_builder.dart';
+import 'package:fluffychat/widgets/web_oidc_login.dart';
 import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:matrix/matrix.dart';
@@ -91,8 +92,11 @@ class FluffyChatApp extends StatelessWidget {
           child: Matrix(
             clients: clients,
             store: store,
-            child: CallOverlay(
-              child: testWidget ?? child ?? const SizedBox.shrink(),
+            child: WebOidcLogin(
+              onNavigate: router.go,
+              child: CallOverlay(
+                child: testWidget ?? child ?? const SizedBox.shrink(),
+              ),
             ),
           ),
         ),

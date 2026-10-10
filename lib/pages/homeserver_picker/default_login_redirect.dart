@@ -1,16 +1,13 @@
-import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/sign_in_flows/oidc_login.dart';
+import 'package:fluffychat/utils/sign_in_flows/sso_login.dart';
 import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import 'package:fluffychat/widgets/matrix.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:matrix/matrix.dart';
-import 'package:universal_html/html.dart' as html;
 
 class DefaultLoginRedirect extends StatefulWidget {
   const DefaultLoginRedirect({super.key});
@@ -54,81 +51,49 @@ class _DefaultLoginRedirectState extends State<DefaultLoginRedirect> {
         homeserver = Uri.https(homeserverInput, '');
       }
 
-      final (_, _, loginFlows, _) = await client.checkHomeserver(homeserver);
+      final (_, _, loginFlows, authMetadata) = await client.checkHomeserver(
+        homeserver,
+        fetchAuthMetadata: true,
+      );
       final supportsSso = loginFlows.any((flow) => flow.type == 'm.login.sso');
 
       if (!mounted) return;
-      if (supportsSso) {
-        await _ssoLogin(client);
-        if (!mounted) return;
-        context.go('/rooms');
+      if (authMetadata != null && AppSettings.enableMatrixNativeOIDC.value) {
+        await oidcLoginFlow(client, context, false);
+      } else if (supportsSso) {
+        await ssoLoginFlow(client, context, false, loginFlows);
       } else {
-        final serverLoginTypes = loginFlows.map((flow) => flow.type).join(', ');
+        throw BadServerLoginTypesException(
+          loginFlows.map((flow) => flow.type).toSet(),
+          {'m.login.sso', 'OAuth 2.0 / OIDC'},
+        );
+      }
+
+      // A web OIDC redirect is completed after the app reloads. A canceled
+      // provider selection also must not navigate to a logged-in page.
+      if (!client.isLogged()) {
+        if (!mounted) return;
         setState(() {
-          _error =
-              'The configured homeserver does not provide SSO login '
-              '(m.login.sso).\n\n'
-              'Supported login types: $serverLoginTypes';
+          _error = L10n.of(context).theProcessWasCanceled;
           _loading = false;
         });
+        return;
       }
+      await AppSettings.defaultHomeserver.setItem(homeserverInput);
+      if (mounted) context.go('/backup');
     } catch (e) {
       if (!mounted) return;
-      final l10n = L10n.of(context);
       setState(() {
-        _error =
-            '${l10n.noConnectionToTheServer}\n'
-            '${l10n.tryAgain}\n\n'
-            '${e.toLocalizedString(context, ExceptionContext.checkHomeserver)}';
+        _error = e.toLocalizedString(context, ExceptionContext.checkHomeserver);
         _loading = false;
       });
     }
   }
 
-  Future<void> _ssoLogin(Client client) async {
-    final isDefaultPlatform =
-        PlatformInfos.isMobile || PlatformInfos.isWeb || PlatformInfos.isMacOS;
-    final redirectUrl = kIsWeb
-        ? Uri.parse(
-            html.window.location.href,
-          ).resolveUri(Uri(pathSegments: ['auth.html'])).toString()
-        : isDefaultPlatform
-        ? '${AppConfig.appOpenUrlScheme.toLowerCase()}://login'
-        : 'http://localhost:3001//login';
-
-    final url = client.homeserver!.replace(
-      path: '/_matrix/client/v3/login/sso/redirect',
-      queryParameters: {'redirectUrl': redirectUrl},
-    );
-
-    final callbackUrlScheme = isDefaultPlatform
-        ? Uri.parse(redirectUrl).scheme
-        : 'http://localhost:3001';
-
-    final result = await FlutterWebAuth2.authenticate(
-      url: url.toString(),
-      callbackUrlScheme: callbackUrlScheme,
-      options: FlutterWebAuth2Options(useWebview: PlatformInfos.isMobile),
-    );
-    final token = Uri.parse(result).queryParameters['loginToken'];
-    if (token == null || token.isEmpty) {
-      throw Exception('Missing login token');
-    }
-
-    await client.login(
-      LoginType.mLoginToken,
-      token: token,
-      initialDeviceDisplayName: PlatformInfos.appDisplayName,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return LoginScaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(L10n.of(context).login),
-      ),
+      appBar: AppBar(centerTitle: true, title: Text(L10n.of(context).login)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(24.0),

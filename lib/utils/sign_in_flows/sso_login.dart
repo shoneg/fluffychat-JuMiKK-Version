@@ -36,8 +36,10 @@ Future<void> ssoLoginFlow(
           )
           .toList();
 
-  final provider = ssoProviders == null
+  final provider = ssoProviders == null || ssoProviders.isEmpty
       ? null
+      : ssoProviders.length == 1
+      ? ssoProviders.single
       : await showModalActionPopup(
           context: context,
           title: L10n.of(context).logInTo(client.homeserver!.host),
@@ -48,6 +50,10 @@ Future<void> ssoLoginFlow(
               )
               .toList(),
         );
+  if (!context.mounted) return;
+  if (ssoProviders != null && ssoProviders.length > 1 && provider == null) {
+    return;
+  }
 
   final url = client.homeserver!.replace(
     path:
@@ -64,7 +70,9 @@ Future<void> ssoLoginFlow(
     options: FlutterWebAuth2Options(useWebview: PlatformInfos.isMobile),
   );
   final token = Uri.parse(result).queryParameters['loginToken'];
-  if (token?.isEmpty ?? false) return;
+  if (token == null || token.isEmpty) {
+    throw const FormatException('The server did not return a login token.');
+  }
 
   await client.login(
     LoginType.mLoginToken,

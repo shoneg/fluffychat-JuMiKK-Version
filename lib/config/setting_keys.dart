@@ -53,10 +53,7 @@ enum AppSettings<T> {
   displayChatDetailsColumn('chat.fluffy.display_chat_details_column', false),
   // AppConfig-mirrored settings
   applicationName<String>('chat.fluffy.application_name', 'JuMiKK-Chat'),
-  defaultHomeserver<String>(
-    'chat.fluffy.default_homeserver',
-    'chat.jumikk.de',
-  ),
+  defaultHomeserver<String>('chat.fluffy.default_homeserver', 'chat.jumikk.de'),
   // colorSchemeSeed stored as ARGB int
   colorSchemeSeedInt<int>('chat.fluffy.color_scheme_seed', 0xFFE4362D),
   emojiSuggestionLocale<String>('emoji_suggestion_locale', ''),
@@ -64,16 +61,13 @@ enum AppSettings<T> {
   enableMatrixNativeOIDC<bool>('chat.fluffy.enable_matrix_native_oidc', true),
   presetHomeserver<String>('chat.fluffy.preset_homeserver', ''),
   welcomeText<String>('chat.fluffy.welcome_text', ''),
-  website<String>('chat.fluffy.website_url', 'https://fluffychat.im'),
+  website<String>('chat.fluffy.website_url', 'https://jumikk.de'),
   logoUrl<String>(
     'chat.fluffy.logo_url',
-    'https://fluffychat.im/assets/favicon.png',
+    'https://jumikk.de/wp-content/uploads/2025/10/logo_frei-1-300x300.png',
   ),
-  privacyPolicy<String>(
-    'chat.fluffy.privacy_policy_url',
-    'https://fluffychat.im/privacy',
-  ),
-  tos<String>('chat.fluffy.tos_url', 'https://fluffychat.im/tos'),
+  privacyPolicy<String>('chat.fluffy.privacy_policy_url', ''),
+  tos<String>('chat.fluffy.tos_url', ''),
   sendTimelineEventTimeout<int>('chat.fluffy.send_timeline_event_timeout', 15),
   webNotificationSound<bool>('chat.fluffy.web_notification_sound', true),
   chatFilter<String>('chat.fluffy.chat_filter', 'allChats'),

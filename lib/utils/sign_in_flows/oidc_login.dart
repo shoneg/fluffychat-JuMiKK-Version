@@ -7,8 +7,8 @@ import 'dart:convert';
 
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/oidc_session_json_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/utils/sign_in_flows/calc_redirect_url.dart';
+import 'package:fluffychat/utils/sign_in_flows/oidc_callback.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:material_ui/material_ui.dart';
@@ -27,9 +27,13 @@ Future<void> oidcLoginFlow(
   final clientUri = Uri.parse(AppSettings.website.value);
   final supportWebPlatform =
       kIsWeb &&
-      kReleaseMode &&
       redirectUrl.scheme == 'https' &&
-      redirectUrl.host.contains(clientUri.host);
+      isSameHostOrSubdomain(redirectUrl, clientUri);
+  if (kIsWeb && redirectUrl.scheme == 'https' && !supportWebPlatform) {
+    throw StateError(
+      'The web app must be hosted on ${clientUri.host} or one of its subdomains.',
+    );
+  }
   if (kIsWeb && !supportWebPlatform) {
     Logs().w(
       'OIDC Application Type web is not supported. Using native now. Please use this instance not in production!',
@@ -44,9 +48,9 @@ Future<void> oidcLoginFlow(
     clientInformation: OidcClientInformation(
       clientName: AppSettings.applicationName.value,
       clientUri: clientUri,
-      logoUri: Uri.parse(AppSettings.logoUrl.value),
-      tosUri: Uri.parse(AppSettings.tos.value),
-      policyUri: Uri.parse(AppSettings.privacyPolicy.value),
+      logoUri: _optionalMetadataUri(AppSettings.logoUrl.value),
+      tosUri: _optionalMetadataUri(AppSettings.tos.value),
+      policyUri: _optionalMetadataUri(AppSettings.privacyPolicy.value),
     ),
   );
 
@@ -60,11 +64,11 @@ Future<void> oidcLoginFlow(
 
   if (kIsWeb) {
     final store = await SharedPreferences.getInstance();
-    store.setString(
+    await store.setString(
       OidcSessionJsonExtension.homeserverStoreKey,
       client.homeserver!.toString(),
     );
-    store.setString(
+    await store.setString(
       OidcSessionJsonExtension.storeKey,
       jsonEncode(session.toJson()),
     );
@@ -73,20 +77,20 @@ Future<void> oidcLoginFlow(
   final returnUrlString = await FlutterWebAuth2.authenticate(
     url: session.authenticationUri.toString(),
     callbackUrlScheme: urlScheme,
-    options: FlutterWebAuth2Options(
-      useWebview: PlatformInfos.isMobile,
-      windowName: '_self',
-    ),
+    options: FlutterWebAuth2Options(useWebview: false, windowName: '_self'),
   );
-  if (kIsWeb) return; // On Web we return at intro page when app starts again!
+  if (kIsWeb) return; // WebOidcLogin completes the redirect after app startup.
 
-  final returnUrl = Uri.parse(returnUrlString);
-  final queryParameters = returnUrl.fragment.isNotEmpty
-      ? Uri.parse(returnUrl.fragment).queryParameters
-      : returnUrl.queryParameters;
-
-  final code = queryParameters['code'] as String;
-  final state = queryParameters['state'] as String;
-
-  await client.oidcLogin(session: session, code: code, state: state);
+  final response = parseOidcCallback(
+    Uri.parse(returnUrlString),
+    expectedState: session.state,
+  );
+  await client.oidcLogin(
+    session: session,
+    code: response.code,
+    state: response.state,
+  );
 }
+
+Uri? _optionalMetadataUri(String value) =>
+    value.trim().isEmpty ? null : Uri.parse(value.trim());

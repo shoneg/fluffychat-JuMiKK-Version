@@ -50,7 +50,12 @@ Future<void> connectToHomeserverFlow(
         message: l10n.appWantsToUseForLoginDescription,
         okLabel: l10n.continueText,
       );
-      if (consent != OkCancelResult.ok) return;
+      if (consent != OkCancelResult.ok) {
+        if (context.mounted) {
+          setState(const AsyncSnapshot.withData(ConnectionState.done, false));
+        }
+        return;
+      }
       if (!context.mounted) return;
     }
     if (!context.mounted) return;
@@ -74,6 +79,12 @@ Future<void> connectToHomeserverFlow(
       return;
     }
 
+    if (!client.isLogged()) {
+      if (context.mounted) {
+        setState(const AsyncSnapshot.withData(ConnectionState.done, false));
+      }
+      return;
+    }
     await AppSettings.defaultHomeserver.setItem(homeserverInput);
 
     if (context.mounted) {
