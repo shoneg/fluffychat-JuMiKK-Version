@@ -822,9 +822,6 @@
     "youAreNoLongerParticipatingInThisChat": "Ja no participeu en aquest xat",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "T'han vetat en aquest xat",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "La vostra clau pública",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },

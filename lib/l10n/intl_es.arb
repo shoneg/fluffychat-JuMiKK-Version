@@ -802,9 +802,6 @@
     "youAreNoLongerParticipatingInThisChat": "Ya no estás participando en este chat",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Has sido vetado de este chat",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "autoplayImages": "Reproducir emoticonos y stickers animados automáticamente",    "@autoplayImages": {
         "type": "String",        "placeholder": {}
     },

@@ -563,9 +563,6 @@
     "yourPublicKey": "Kunci publikmu",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Kamu telah dicekal dari obrolan ini",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "youAreNoLongerParticipatingInThisChat": "Kamu tidak berpartisipasi lagi di obrolan ini",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },

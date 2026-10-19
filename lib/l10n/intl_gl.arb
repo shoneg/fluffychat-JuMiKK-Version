@@ -1022,9 +1022,6 @@
     "youAreNoLongerParticipatingInThisChat": "Xa non participas desta conversa",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Foches vetada nesta conversa",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "A túa chave pública",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1515,6 +1512,28 @@
     "serverRespondedWithError": "O servidor respondeu cunha mensaxe de erro: {error}",    "@serverRespondedWithError": {
         "placeholders": {
             "error": {
+                "type": "String"            }
+        }
+    },
+    "updateAvailable": "Versión {version} dispoñible",    "@updateAvailable": {
+        "type": "String",        "placeholders": {
+            "version": {
+                "type": "String"            }
+        }
+    },
+    "download": "Descargar",    "sharedLocation": "Localización compartida",    "pasteImage": "Pegar imaxe",    "noImageInClipboard": "Non hai imaxe no portapapeis",    "doYouAlsoWantToBlock": "Queres tamén bloquear a esta conta?",    "declineAndBlock": "Rexeitar e bloquear",    "senderHasInvitedYouToTheChat": "{sender} convidoute á conversa '{nameOrAlias}'.",    "@senderHasInvitedYouToTheChat": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    },
+    "senderHasInvitedYouToTheSpace": "{sender} convidoute ao espazo '{nameOrAlias}'.",    "@senderHasInvitedYouToTheSpace": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
                 "type": "String"            }
         }
     }

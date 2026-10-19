@@ -1011,9 +1011,6 @@
     "youAreNoLongerParticipatingInThisChat": "Du bist kein Mitglied mehr in diesem Chat",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Du wurdest aus dem Chat verbannt",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Dein öffentlicher Schlüssel",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1529,5 +1526,5 @@
             "version": {
                 "type": "String"            }
         }
-    }
-}
+    },
+    "sharedLocation": "Getilter Standort"}

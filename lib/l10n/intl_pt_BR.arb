@@ -1022,9 +1022,6 @@
     "youAreNoLongerParticipatingInThisChat": "Você não está mais participando desta conversa",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Você foi banido desta conversa",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Sua chave pública",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },

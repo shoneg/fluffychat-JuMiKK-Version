@@ -459,9 +459,6 @@
     "youAreNoLongerParticipatingInThisChat": "Jūs nebedalyvaujate šiame pokalbyje",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Jums buvo uždrausta dalyvauti šiame pokalbyje",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "messageInfo": "Žinutės informacija",    "removeFromSpace": "Pašalinti iš erdvės",    "security": "Apsauga",    "@security": {
         "type": "String",        "placeholders": {}
     },

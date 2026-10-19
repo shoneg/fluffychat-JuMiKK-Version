@@ -708,7 +708,7 @@
     "share": "Del",    "@share": {
         "type": "String",        "placeholders": {}
     },
-    "sharedTheLocation": "{username} delte posisjonen",    "@sharedTheLocation": {
+    "sharedTheLocation": "{username} delte sin lokasjon",    "@sharedTheLocation": {
         "type": "String",        "placeholders": {
             "username": {
                 "type": "String"            }
@@ -867,9 +867,6 @@
         "type": "String",        "placeholders": {}
     },
     "youAreNoLongerParticipatingInThisChat": "Du deltar ikke lenger i denne sludringen",    "@youAreNoLongerParticipatingInThisChat": {
-        "type": "String",        "placeholders": {}
-    },
-    "youHaveBeenBannedFromThisChat": "Du har blitt bannlyst fra denne sludringen",    "@youHaveBeenBannedFromThisChat": {
         "type": "String",        "placeholders": {}
     },
     "yourPublicKey": "Din offentlige nøkkel",    "@yourPublicKey": {
@@ -1042,7 +1039,7 @@
     "accessAndVisibilityDescription": "Hvem som har lov til å bli med i denne chatten og hvordan chatten kan oppdages.",    "customEmojisAndStickers": "Egendefinerte emojier og klistremerker",    "oopsPushError": "Oops! Dessverre oppsto det en feil under oppsettet av push-varsler.",    "@oopsPushError": {
         "type": "String",        "placeholders": {}
     },
-    "obtainingLocation": "Henter sted …",    "@obtainingLocation": {
+    "obtainingLocation": "Henter lokasjon…",    "@obtainingLocation": {
         "type": "String",        "placeholders": {}
     },
     "noDatabaseEncryption": "Databasekryptering støttes ikke på denne plattformen",    "changeGeneralChatSettings": "Endre generelle chatinnstillinger",    "changeTheChatPermissions": "Endre chattillatelsene",    "youInvitedBy": "📩 Du har blitt invitert av {user}",    "@youInvitedBy": {
@@ -1357,7 +1354,7 @@
                 "type": "String"            }
         }
     },
-    "confirmEventUnpin": "Er du sikker på at du vil løsne hendelsen permanent?",    "newSpaceDescription": "Romgrupper lar deg samle chattene dine og bygge private eller offentlige fellesskap.",    "chatPermissionsDescription": "Definer hvilket tilgangsnivå som kreves for bestemte handlinger i denne chatten. Nivåene 0, 50 og 100 representerer vanligvis brukere, moderatorer og administratorer, men alle mellomtrinn er mulige.",    "knocking": "Banker på",    "noKeyForThisMessage": "Dette kan skje hvis meldingen ble sendt før du logget inn på kontoen din på denne enheten.\n\nDet er også mulig at senderen har blokkert enheten din, eller at noe gikk galt med internettforbindelsen.\n\nEr du i stand til å lese meldingen i en annen sesjon? Da kan du overføre meldingen fra den! Gå til Innstillinger > Enheter og sørg for at enhetene dine har verifisert hverandre. Neste gang du åpner rommet og begge sesjonene er i forgrunnen, vil nøklene bli overført automatisk.\n\nVil du unngå å miste nøklene når du logger ut eller bytter enhet? Sørg for at du har aktivert sikkerhetskopiering av chat i innstillingene.",    "report": "rapportere",    "addChatOrSubSpace": "Legg til chat eller under-romgruppe",    "signIn": "Logg på",    "createNewAccount": "Opprett ny konto",    "signUpGreeting": "JuMiKK-Chat er desentralisert! Velg en server der du vil opprette kontoen din, så kjører vi på!",    "signInGreeting": "Har du allerede en Matrix-konto? Velkommen tilbake! Velg hjemmeserveren din og logg inn.",    "theProcessWasCanceled": "Prosessen ble avbrutt.",    "join": "Bli med",    "searchOrEnterHomeserverAddress": "Søk eller angi adresse til hjemmeserver",    "matrixId": "Matrix ID",    "setPowerLevel": "Angi styrkenivå",    "makeModerator": "Gjør til moderator",    "makeAdmin": "Gjør til admin",    "removeModeratorRights": "Fjern moderator-rettigheter",    "removeAdminRights": "Fjern admin-rettigheter",    "powerLevel": "Styrkenivå",    "setPowerLevelDescription": "Styrkenivåer definerer hva et medlem har lov til å gjøre i dette rommet, og varierer vanligvis mellom 0 og 100.",    "owner": "Eier",    "mute": "Demp",    "@mute": {
+    "confirmEventUnpin": "Er du sikker på at du vil løsne hendelsen permanent?",    "newSpaceDescription": "Romgrupper lar deg samle chattene dine og bygge private eller offentlige fellesskap.",    "chatPermissionsDescription": "Definer hvilket tilgangsnivå som kreves for bestemte handlinger i denne chatten. Nivåene 0, 50 og 100 representerer vanligvis brukere, moderatorer og administratorer, men alle mellomtrinn er mulige.",    "knocking": "Banker på",    "noKeyForThisMessage": "Dette kan skje hvis meldingen ble sendt før du logget inn på kontoen din på denne enheten.\n\nDet er også mulig at senderen har blokkert enheten din, eller at noe gikk galt med internettforbindelsen.\n\nEr du i stand til å lese meldingen i en annen sesjon? Da kan du overføre meldingen fra den! Gå til Innstillinger > Enheter og sørg for at enhetene dine har verifisert hverandre. Neste gang du åpner rommet og begge sesjonene er i forgrunnen, vil nøklene bli overført automatisk.\n\nVil du unngå å miste nøklene når du logger ut eller bytter enhet? Sørg for at du har aktivert sikkerhetskopiering av chat i innstillingene.",    "report": "rapportere",    "signIn": "Logg på",    "createNewAccount": "Opprett ny konto",    "signUpGreeting": "JuMiKK-Chat er desentralisert! Velg en server der du vil opprette kontoen din, så kjører vi på!",    "signInGreeting": "Har du allerede en Matrix-konto? Velkommen tilbake! Velg hjemmeserveren din og logg inn.",    "theProcessWasCanceled": "Prosessen ble avbrutt.",    "join": "Bli med",    "searchOrEnterHomeserverAddress": "Søk eller angi adresse til hjemmeserver",    "matrixId": "Matrix ID",    "setPowerLevel": "Angi styrkenivå",    "makeModerator": "Gjør til moderator",    "makeAdmin": "Gjør til admin",    "removeModeratorRights": "Fjern moderator-rettigheter",    "removeAdminRights": "Fjern admin-rettigheter",    "powerLevel": "Styrkenivå",    "setPowerLevelDescription": "Styrkenivåer definerer hva et medlem har lov til å gjøre i dette rommet, og varierer vanligvis mellom 0 og 100.",    "owner": "Eier",    "mute": "Demp",    "@mute": {
         "description": "This should be a very short string because there is not much space in the button!"    },
     "createNewChat": "Opprett ny chat",    "reset": "Nullstill",    "supportFluffyChat": "Støtt JuMiKK-Chat",    "support": "Støtte",    "setLowPriority": "Sett lav prioritet",    "unsetLowPriority": "Fjern lav prioritet",    "playSoundOnNotification": "Spill av lyd ved varsling",    "addTag": "Legg til emneknagg",    "removeTag": "Fjern emneknagg",    "tagName": "Navn på emneknagg",    "createNewTag": "Opprett ny emneknagg",    "discardEdits": "Du har endringer som ikke er lagret. Vil du forkaste endringene?",    "@discardEdits": {
         "type": "String",        "placeholders": {}
@@ -1527,6 +1524,28 @@
     "serverRespondedWithError": "Serveren svarte med en feilmelding: {error}",    "@serverRespondedWithError": {
         "placeholders": {
             "error": {
+                "type": "String"            }
+        }
+    },
+    "download": "Last ned",    "sharedLocation": "Delt lokasjon",    "updateAvailable": "Oppdatering {version} er tilgjengelig",    "@updateAvailable": {
+        "type": "String",        "placeholders": {
+            "version": {
+                "type": "String"            }
+        }
+    },
+    "pasteImage": "Lim inn bilde",    "noImageInClipboard": "Ingen bilder i utklippstavlen",    "doYouAlsoWantToBlock": "Vil du også blokkere denne brukeren?",    "declineAndBlock": "Avslå og blokker",    "senderHasInvitedYouToTheChat": "{sender} har invitert deg til chatten '{nameOrAlias}'.",    "@senderHasInvitedYouToTheChat": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    },
+    "senderHasInvitedYouToTheSpace": "{sender} har invitert deg til romgruppen '{nameOrAlias}'..",    "@senderHasInvitedYouToTheSpace": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
                 "type": "String"            }
         }
     }

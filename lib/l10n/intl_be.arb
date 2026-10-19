@@ -780,9 +780,6 @@
     "youAreNoLongerParticipatingInThisChat": "Вы больш не ўдзельнічаеце ў гэтым чаце",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Вы былі заблакіраваны ў гэтым чаце",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Ваш публічны ключ",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1518,4 +1515,4 @@
                 "type": "String"            }
         }
     },
-    "download": "Спампаваць"}
+    "download": "Спампаваць",    "sharedLocation": "Агульныя геаметкі"}

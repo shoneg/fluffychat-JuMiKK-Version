@@ -957,9 +957,6 @@
     "youAreNoLongerParticipatingInThisChat": "Више не учествујете у овом ћаскању",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Забрањено вам је ово ћаскање",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Ваш јавни кључ",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },

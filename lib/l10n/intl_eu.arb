@@ -713,9 +713,6 @@
     "youAreNoLongerParticipatingInThisChat": "Ez duzu txat honetan parte hartzen honezkero",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Txat honetan debekua ezarri dizute",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "editRoomAliases": "Editatu gelaren aliasak",    "@editRoomAliases": {
         "type": "String",        "placeholders": {}
     },

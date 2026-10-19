@@ -554,9 +554,6 @@
     "withTheseAddressesRecoveryDescription": "Cu acestea adrese puteți să vă recuperați parola.",    "@withTheseAddressesRecoveryDescription": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Ați fost interzis din acest chat",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "messageInfo": "Info mesajului",    "time": "Timp",    "sender": "Trimițător",    "openGallery": "Deschideți galeria",    "removeFromSpace": "Eliminați din spațiu",    "unsupportedAndroidVersionLong": "Această funcție are nevoie de o versiune de Android mai nouă. Vă rugăm să verificați dacă sunt actualizări sau suport de la Lineage OS.",    "youRejectedTheInvitation": "Ați respins invitația",    "youJoinedTheChat": "Va-ți alăturat la chat",    "youAcceptedTheInvitation": "👍Ați acceptat invitația",    "youHaveWithdrawnTheInvitationFor": "Ați retras invitația pentru {user}",    "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
             "user": {

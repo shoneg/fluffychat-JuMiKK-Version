@@ -904,9 +904,6 @@
     "youAreNoLongerParticipatingInThisChat": "您不再參與這個聊天室了",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "您已經被這個聊天室封鎖",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "您的公鑰",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },

@@ -1022,9 +1022,6 @@
     "youAreNoLongerParticipatingInThisChat": "Artık bu sohbette katılımcı değilsiniz",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Bu sohbetten engellendiniz",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Ortak anahtarınız",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1289,68 +1286,37 @@
                 "type": "String"            }
         }
     },
-    "@countReplies": {
-        "type": "int",        "placeholders": {
-            "count": {
-                "type": "int"            }
-        }
+    "editImage": "Görseli düzenle",    "@editImage": {
+        "type": "String",        "placeholders": {}
     },
-    "@versionWithNumber": {
-        "type": "String",        "placeholders": {
-            "version": {
-                "type": "String"            }
-        }
+    "rotateLeft": "Sola döndür",    "@rotateLeft": {
+        "type": "String",        "placeholders": {}
     },
-    "@countChats": {
-        "type": "String",        "placeholders": {
-            "chats": {
-                "type": "int"            }
-        }
+    "rotateRight": "Sağa döndür",    "@rotateRight": {
+        "type": "String",        "placeholders": {}
     },
-    "@sentVoiceMessage": {
-        "type": "String",        "placeholders": {
-            "sender": {
-                "type": "String"            },
-            "duration": {
-                "type": "String"            }
-        }
+    "mirror": "Yansıt",    "@mirror": {
+        "type": "String",        "placeholders": {}
     },
-    "@mute": {
-        "description": "This should be a very short string because there is not much space in the button!"    },
-    "@spaceMemberOfCanKnock": {
-        "type": "String",        "placeholders": {
-            "spaces": {
-                "type": "String"            }
-        }
+    "save": "Kaydet",    "@save": {
+        "type": "String",        "placeholders": {}
     },
-    "@chatSearchedUntil": {
-        "type": "String",        "placeholders": {
-            "time": {
-                "type": "String"            }
-        }
+    "draw": "Çiz",    "@draw": {
+        "type": "String",        "placeholders": {}
     },
-    "@unknownPushRule": {
-        "type": "String",        "placeholders": {
-            "rule": {
-                "type": "String"            }
-        }
+    "undo": "Geri",    "@undo": {
+        "type": "String",        "placeholders": {}
     },
-    "@appWantsToUseForLogin": {
-        "type": "String",        "placeholders": {
-            "server": {
-                "type": "String"            }
-        }
+    "clear": "Sil",    "@clear": {
+        "type": "String",        "placeholders": {}
     },
-    "@countVotes": {
-        "type": "int",        "placeholders": {
-            "count": {
-                "type": "int"            }
-        }
+    "eraser": "Silgi",    "@eraser": {
+        "type": "String",        "placeholders": {}
     },
-    "@spaceMemberOf": {
-        "type": "String",        "placeholders": {
-            "spaces": {
-                "type": "String"            }
-        }
+    "crop": "Kırpmak",    "@crop": {
+        "type": "String",        "placeholders": {}
+    },
+    "accountsAndSettings": "Hesap ve ayarlar",    "@accountsAndSettings": {
+        "type": "String",        "placeholders": {}
     }
 }

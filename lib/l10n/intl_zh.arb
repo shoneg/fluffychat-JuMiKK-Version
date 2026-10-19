@@ -975,9 +975,6 @@
     "youAreNoLongerParticipatingInThisChat": "你已不再参与此聊天",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "你已被此聊天封禁",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "你的公钥",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1524,4 +1521,20 @@
                 "type": "String"            }
         }
     },
-    "download": "下载"}
+    "download": "下载",    "sharedLocation": "分享位置",    "pasteImage": "粘贴图片",    "noImageInClipboard": "剪贴板中无图片",    "doYouAlsoWantToBlock": "你还想封禁该用户吗？",    "declineAndBlock": "拒绝并封禁",    "senderHasInvitedYouToTheChat": "{sender} 已邀请你到名为 '{nameOrAlias}' 的聊天。",    "@senderHasInvitedYouToTheChat": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    },
+    "senderHasInvitedYouToTheSpace": "{sender} 已邀请你到 '{nameOrAlias}'空间。",    "@senderHasInvitedYouToTheSpace": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    }
+}

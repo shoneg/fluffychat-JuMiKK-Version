@@ -1016,9 +1016,6 @@
     "youAreNoLongerParticipatingInThisChat": "Вы больше не участвуете в этом чате",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Вы были заблокированы в этом чате",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Ваш открытый ключ",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1524,4 +1521,4 @@
                 "type": "String"            }
         }
     },
-    "download": "Загрузить",    "unifiedPushDistributors": "Дистрибьюторы Unified Push:"}
+    "download": "Загрузить",    "unifiedPushDistributors": "Дистрибьюторы Unified Push:",    "sharedLocation": "Общие геометки"}

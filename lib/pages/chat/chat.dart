@@ -228,7 +228,46 @@ class ChatController extends State<ChatPageWithRoom>
     );
   }
 
+  Future<void> joinChat() async {
+    final success = await showFutureLoadingDialog(
+      context: context,
+      future: () async {
+        await room.join(waitForSync: true);
+      },
+    );
+    if (!mounted) return;
+    if (success.error != null) return;
+    if (room.isSpace) {
+      context.go('/rooms?spaceId=${room.id}');
+      return;
+    }
+    await _tryLoadTimeline();
+  }
+
   Future<void> leaveChat() async {
+    if (room.membership == .invite) {
+      final blockConsent = await showOkCancelAlertDialog(
+        context: context,
+        title: L10n.of(context).declineInvitation,
+        message: L10n.of(context).doYouAlsoWantToBlock,
+        cancelLabel: L10n.of(context).decline,
+        okLabel: L10n.of(context).declineAndBlock,
+        isDestructive: true,
+      );
+      if (blockConsent == null) return;
+      if (!mounted) return;
+      if (blockConsent == .ok) {
+        final inviteEvent = room.getState(
+          EventTypes.RoomMember,
+          room.client.userID!,
+        );
+        context.go(
+          '/rooms/settings/security/ignorelist',
+          extra: inviteEvent?.senderId,
+        );
+        return;
+      }
+    }
     final success = await showFutureLoadingDialog(
       context: context,
       future: room.leave,
@@ -465,6 +504,8 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   Future<void> _tryLoadTimeline() async {
+    if (room.membership == .invite) return;
+
     final initialEventId = widget.eventId;
     loadTimelineFuture = _getTimeline();
     try {
@@ -944,11 +985,10 @@ class ChatController extends State<ChatPageWithRoom>
     final proceed = await showTrustUserInRoomDialog(context, room);
     if (!mounted || !proceed) return;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
-    final audioFile = XFile(path);
 
     final bytesResult = await showFutureLoadingDialog(
       context: context,
-      future: audioFile.readAsBytes,
+      future: () => XFile(path).readAsBytes(),
     );
     final bytes = bytesResult.result;
     if (bytes == null) return;
@@ -1230,10 +1270,19 @@ class ChatController extends State<ChatPageWithRoom>
   Future<void> scrollToEventId(
     String eventId, {
     bool highlightEvent = true,
+    bool timelineReloaded = false,
   }) async {
     final foundEvent = timeline!.events.firstWhereOrNull(
       (event) => event.eventId == eventId,
     );
+
+    final threadRootId =
+        foundEvent?.relationshipType == RelationshipTypes.thread
+        ? foundEvent?.relationshipEventId
+        : null;
+    if (activeThreadId == null && threadRootId != null) {
+      return scrollToEventId(threadRootId, highlightEvent: highlightEvent);
+    }
 
     final eventIndex = foundEvent == null
         ? -1
@@ -1245,6 +1294,7 @@ class ChatController extends State<ChatPageWithRoom>
               .indexOf(foundEvent);
 
     if (eventIndex == -1) {
+      if (foundEvent != null || timelineReloaded) return;
       setState(() {
         timeline = null;
         _scrolledUp = false;
@@ -1257,7 +1307,11 @@ class ChatController extends State<ChatPageWithRoom>
       });
       await loadTimelineFuture;
       WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-        scrollToEventId(eventId);
+        scrollToEventId(
+          eventId,
+          highlightEvent: highlightEvent,
+          timelineReloaded: true,
+        );
       });
       return;
     }

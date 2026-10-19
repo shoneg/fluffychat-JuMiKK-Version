@@ -1022,9 +1022,6 @@
     "youAreNoLongerParticipatingInThisChat": "Sa enam ei osale selles vestluses",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Sinule on selles vestluses seatud suhtluskeeld",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Sinu avalik võti",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
@@ -1524,4 +1521,20 @@
                 "type": "String"            }
         }
     },
-    "download": "Laadi alla"}
+    "download": "Laadi alla",    "sharedLocation": "Jagatud asukoht",    "pasteImage": "Aseta pilt",    "noImageInClipboard": "Lõikelaual ei leidu pilti",    "doYouAlsoWantToBlock": "Kas sa lisaks tahaksid selle kasutaja ka blokeerida?",    "declineAndBlock": "Keeldu ja blokeeri",    "senderHasInvitedYouToTheChat": "{sender} on saatnud sulle kutse osalemaks vestluses '{nameOrAlias}'.",    "@senderHasInvitedYouToTheChat": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    },
+    "senderHasInvitedYouToTheSpace": "{sender} on saatnud sulle kutse osalemaks kogukonnas '{nameOrAlias}'.",    "@senderHasInvitedYouToTheSpace": {
+        "placeholders": {
+            "sender": {
+                "type": "String"            },
+            "nameOrAlias": {
+                "type": "String"            }
+        }
+    }
+}

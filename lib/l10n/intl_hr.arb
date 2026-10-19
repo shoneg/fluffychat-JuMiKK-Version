@@ -987,9 +987,6 @@
     "youAreNoLongerParticipatingInThisChat": "Više ne sudjeluješ u ovom chatu",    "@youAreNoLongerParticipatingInThisChat": {
         "type": "String",        "placeholders": {}
     },
-    "youHaveBeenBannedFromThisChat": "Isključen/a si iz ovog chata",    "@youHaveBeenBannedFromThisChat": {
-        "type": "String",        "placeholders": {}
-    },
     "yourPublicKey": "Tvoj javni ključ",    "@yourPublicKey": {
         "type": "String",        "placeholders": {}
     },
