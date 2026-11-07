@@ -5,6 +5,24 @@ SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+## v2.11.5
+
+- fix: release iOS from CI and set ubuntu CI version for Linux builds
+
+## v2.11.4
+
+- hotfix: Do not use secure storage (key ring on linux) if not available
+
+## v2.11.3
+
+- build: update Flutter to 3.47.8 (krille-chan)
+
+## v2.11.2
+
+- fix: testserver is accidentally preconfigured as a livekit fallback
+## v2.11.1
+Reverting a keychain setting on iOS and macOS.
+
 ## v2.11.0
 Many fixes under the hood, call improvements and automatic recovery from database corruptions.
 
